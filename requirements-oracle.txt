@@ -1,0 +1,7 @@
+# External oracle only; application runtime does not require Python.
+# All direct/transitive dependencies are pinned for Python 3.13.
+ImageHash==4.3.2
+Pillow==11.3.0
+numpy==2.3.3
+scipy==1.16.2
+PyWavelets==1.9.0
