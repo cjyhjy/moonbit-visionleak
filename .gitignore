@@ -1,0 +1,9 @@
+.toolchain/
+node_modules/
+_build/
+.moon/
+.cache/
+research/.venv-oracle/
+reports/clean-room/
+release/
+.DS_Store
