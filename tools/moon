@@ -1,6 +1,11 @@
 #!/bin/sh
 set -eu
 vl_root=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+if [ -x "$vl_root/.tools/moon/bin/moon" ]; then
+  export MOON_HOME="$vl_root/.tools/moon"
+  export PATH="$MOON_HOME/bin:$PATH"
+  exec "$MOON_HOME/bin/moon" "$@"
+fi
 if [ -x "$vl_root/.toolchain/bin/moon" ]; then
   export MOON_HOME="$vl_root/.toolchain"
   export PATH="$MOON_HOME/bin:$PATH"

@@ -1,4 +1,4 @@
-.toolchain/
+.toolchain
 node_modules/
 _build/
 .moon/
@@ -7,3 +7,12 @@ research/.venv-oracle/
 reports/clean-room/
 release/
 .DS_Store
+
+.tools/
+.ci-artifacts/
+__pycache__/
+*.py[cod]
+output/
+.env
+.env.*
+!.env.example

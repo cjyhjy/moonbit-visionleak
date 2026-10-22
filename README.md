@@ -1,12 +1,14 @@
 # VisionLeak
 
+[![CI](https://github.com/cjyhjy/moonbit-visionleak/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/cjyhjy/moonbit-visionleak/actions/workflows/ci.yml)
+
 以 MoonBit 为核心的本地图像跨集合重复审计工具。输入 `train/`、`validation/`、`test/` 中的真实图片文件，输出成对证据、确定重复分组、带缩略图的本地复核工作台和可导出的人工复核记录。
 
 **感知相似只是候选，不能自动证明数据泄漏。** 工具不删除或移动源文件，不调用云 API。合成评测中主动保留平色图、渐变误报及裁切/镜像漏检，详见 [评测结果](reports/evaluation.md)。
 
 ## 快速使用
 
-需要 Node.js 22 或更新版本。本次实测版本见 [DELIVERY.md](DELIVERY.md)。ZIP 内含从 MoonBit 源码编译的 `dist/visionleak.js`，运行 CLI 无需安装 MoonBit。
+需要 Node.js 22 或更新版本；CI 固定版本见 `.node-version`。仓库内含从 MoonBit 源码编译的 `dist/visionleak.js`，运行 CLI 无需安装 MoonBit。历史本地交付环境见 [DELIVERY.md](DELIVERY.md)。
 
 ```sh
 npm ci
@@ -40,7 +42,8 @@ dataset/
 MoonBit 实现 RGB 规范化、SHA-256、灰度与 dHash、距离、精确分桶、BK-tree 查询、跨 split 筛选、证据分级、确定重复连通分组、预算和核心报告。Node.js + sharp 负责解码、文件 I/O、预览图与本地 HTTP。浏览器负责展示和复核记录，不另算指纹，因而没有浏览器 Canvas 解码漂移。
 
 ```sh
-npm run build                  # 需要 MoonBit：项目 .toolchain 或 PATH 中的 moon
+python3.13 tools/bootstrap.py   # SHA-256 校验的固定 MoonBit，安装到项目 .tools/moon
+npm run build
 ./tools/moon test --target js
 ./tools/moon test --target wasm-gc
 ./tools/moon test --target native
@@ -48,7 +51,11 @@ npm test
 node tools/benchmark.mjs
 ```
 
-外部 ImageHash 对照与 Python 评测环境见 [复现说明](docs/reproducibility.md)。外部 oracle、性能、浏览器验收和干净目录验收分开记录；[verification.json](reports/verification.json) 是交付时的机器可读检查结果。
+外部 ImageHash 对照与 Python 评测环境见 [复现说明](docs/reproducibility.md)。[GitHub Actions](https://github.com/cjyhjy/moonbit-visionleak/actions/workflows/ci.yml) 在 Ubuntu 24.04 从源码执行 JS / wasm-gc / native 的 check、build、test，以及全部 Node CLI/HTTP 测试、ImageHash 对照和独立穷举索引对照。每次新结果以该次运行及其 artifact 为准。
+
+native 构建的是 release 测试可执行文件，并运行 release / debug 测试；当前固定 MoonBit 不支持 native 外部共享库链接，详见复现说明。JS / wasm-gc 构建正常的外部库产物。
+
+`reports/`、`demo/qa/` 与 [DELIVERY.md](DELIVERY.md) 保留 **2026-10-22 首次公开前的 macOS 本地交付快照**，不代表当前提交的 CI 或当前源码的 ZIP 验收；详见 [历史证据范围](reports/README.md)。
 
 ## 阅读入口
 
@@ -59,4 +66,4 @@ node tools/benchmark.mjs
 - [AI 辅助与来源说明](docs/development.md)
 - [许可证和第三方组件](THIRD_PARTY.md)
 
-这是本地候选项目。公开仓库、公开连续开发记录、包发布、身份声明和正式参赛提交均未执行；正式赛事规则与日期冲突由总控目录 `research/contest-rules.md` 管理。
+公开源码仓库：[cjyhjy/moonbit-visionleak](https://github.com/cjyhjy/moonbit-visionleak)。保留了从本地多项目历史提取的 9 条原始开发提交；作者、时间、说明和每次项目文件树已逐项核对，详见 [历史说明](docs/history.md)。这些提交在首次推送之前属于本地历史，不宣称当时已公开。包发布、网站发布、身份声明和正式参赛提交均未执行；项目可运行与赛事受理状态分开判断。

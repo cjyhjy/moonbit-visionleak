@@ -1,0 +1,56 @@
+{
+  "slug": "visionleak",
+  "extractedHead": "d7cc72eae2523b818e6c17b990f824bacbe5d2d4",
+  "commitCount": 9,
+  "metadataAndEveryTreeVerified": true,
+  "mapping": [
+    {
+      "original": "966445d2e8590069da2d1436150630abeaeec83c",
+      "extracted": "b2f224690af4a798a42907f0f4ebd9b749ed75a6",
+      "tree": "4b8969ac175619e4449759ab4ad5415fb0ff2c3f"
+    },
+    {
+      "original": "64445f27236a2ec7e25191cd65c5f3d86990b07c",
+      "extracted": "1622c61e30e77b05b75edbd73a5ee7d89777c7c8",
+      "tree": "865ab4959171a16fbde9f4b2a2c5a7787918640a"
+    },
+    {
+      "original": "f97cca68abcf04f0debb390c3b0cb5ca91e1ff71",
+      "extracted": "006c02ae08f045418a3814910f09959f0b7ebfd3",
+      "tree": "7a235e5f7ae953dc9ba00e255948ed8302c6b3fe"
+    },
+    {
+      "original": "2e702e9d4efe2427606d7a97dbbca2a7976b920c",
+      "extracted": "d145eb268cd27daf164375b85c57927bd626032e",
+      "tree": "05e6b629b3eb5f6c8b98c0911a7555003a92de67"
+    },
+    {
+      "original": "3556b292dacdaa49debd4e3817803c63150c4fba",
+      "extracted": "947b3667d05d677158a050c78c75cfb4020a1901",
+      "tree": "8de993a622b7ed756c2abcdb779863597855b75b"
+    },
+    {
+      "original": "3fcf4a28ccaed4ee14a7ce92672e2ce295ef7ca4",
+      "extracted": "cd9cd4f90576ad222a40af223f5f1fd26f927633",
+      "tree": "c5b1660348125b2117038bf60cf9a82fee843f65"
+    },
+    {
+      "original": "1a4b82bffeacb2cf4e28541138aab3dba2093ca1",
+      "extracted": "48888c06acd8192a53800b2d841aa9840e848303",
+      "tree": "3d30b420d59c2ad3f74c2db1501733a754917343"
+    },
+    {
+      "original": "5f2c059b90c637a66cb52b8415c3537b722c4dde",
+      "extracted": "a89a9ac45f1fd8a7f32c265ef1218b85a5d6b573",
+      "tree": "03f5b06c381ae594db0beec173c06bba1f118336"
+    },
+    {
+      "original": "a0480d54e20c5056f1124cb41f412f66aa5979a0",
+      "extracted": "d7cc72eae2523b818e6c17b990f824bacbe5d2d4",
+      "tree": "01c9a113236f201e921a3b97cac1104ad54af78d"
+    }
+  ],
+  "method": "git subtree split --prefix=projects/visionleak without squash or annotation",
+  "sourceHead": "a0480d54e20c5056f1124cb41f412f66aa5979a0",
+  "sourceRepository": "Original local multi-project development repository; source commit IDs identify that local history, not public GitHub commits."
+}

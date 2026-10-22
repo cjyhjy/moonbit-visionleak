@@ -1,12 +1,13 @@
 {
-  "platform": "darwin-arm64",
-  "moon": "0.1.20261012 (748b63c 2026-10-12)",
-  "moonc": "v0.10.15+943464bfa (2026-10-12)",
-  "source": "Existing user-local MoonBit distribution, copied without credentials or registry state",
-  "binaries": {
-    "moon": "3285bcd630ad68dbec7c74f308d30c5e8af9503b0e4c0ed95a3719e873c35b33",
-    "moonc": "60d8e33110ab7a013a3f23da2013152da64c5f1a9d4c12ca469eec77677160d3",
-    "moonrun": "91f36ac0a5b3c94fd922ceddb4dcb2c1f7622b7157ebd464c6cb8e9e56965a97"
+  "version": "0.10.15+943464bfa",
+  "moon": "0.1.20261012",
+  "archives": {
+    "darwin-aarch64": {
+      "sha256": "563109ff02c6dc77fdc74acd0be423964ef678dfea4d9b948c19d245dc8b0e83"
+    },
+    "linux-x86_64": {
+      "sha256": "24b93a5409d2a4fb8e3d1b84b473f27b63476cef4418094764df96cb26b03c09"
+    }
   },
-  "coreModuleSha256": "a659b36abdc3bf5454f02b1c32afce52087f63d4a65a740b0154eab300a5ad69"
+  "core_sha256": "96d30f4dbcc6a9e1736ef26fbdd0e8fb0e97cb01d50e55d2a0072208b8061ae5"
 }
