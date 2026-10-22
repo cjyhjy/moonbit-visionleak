@@ -8,7 +8,7 @@ const request = JSON.parse(fs.readFileSync(0, 'utf8'));
 const results = [];
 if (request.mode === 'vectors') {
   for (const item of request.items) {
-    results.push({ id: item.id, fingerprint: await fingerprint(item) });
+    results.push({ id: item.id, fingerprint: await fingerprint({ ...item, rgba: Uint8Array.from(item.rgba) }) });
   }
 } else if (request.mode === 'files') {
   for (const relativePath of request.paths) {

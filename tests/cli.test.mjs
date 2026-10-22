@@ -201,6 +201,12 @@ test('loopback server serves only fixed assets and one report, and denies traver
   assert.equal((await request(url, '/report.json', { method: 'POST' })).status, 405);
   assert.equal((await request(url, '/report.json', { headers: { Host: 'attacker.invalid' } })).status, 403);
   assert.equal((await request(url, '/report.json', { headers: { Origin: 'https://attacker.invalid' } })).status, 403);
+  const navigation = { 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-Dest': 'document' };
+  assert.equal((await request(url, '/', { headers: navigation })).status, 200);
+  assert.equal((await request(url, '/index.html', { headers: navigation })).status, 200);
+  assert.equal((await request(url, '/report.json', { headers: navigation })).status, 403);
+  assert.equal((await request(url, `/${report.images[0].thumbnail}`, { headers: navigation })).status, 403);
+  assert.equal((await request(url, '/', { headers: { 'Sec-Fetch-Site': 'cross-site', 'Sec-Fetch-Mode': 'cors', 'Sec-Fetch-Dest': 'empty' } })).status, 403);
   assert.equal((await request(url, '/report.json', { method: 'HEAD' })).body.length, 0);
   assert.match(served.headers['content-security-policy'], /default-src 'none'/);
   const preview = join(f.out, report.images[0].thumbnail);

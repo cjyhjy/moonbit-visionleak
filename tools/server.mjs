@@ -59,8 +59,14 @@ export async function startServer({ report: reportPath, port = 4173 }) {
       response.writeHead(status, { ...HEADERS, 'Content-Type': type, ...extra });
       response.end(request.method === 'HEAD' ? undefined : body);
     };
+    // A user may open the workbench by clicking a link from another site/app.
+    // Only the two public shell documents allow cross-site top-level navigation;
+    // cross-site fetches of reports, images and assets remain rejected.
+    const entryNavigation = request.method === 'GET' && ['/', '/index.html'].includes(request.url.split('?')[0]) &&
+      request.headers['sec-fetch-mode'] === 'navigate' && request.headers['sec-fetch-dest'] === 'document';
     if (request.headers.host !== base.slice('http://'.length) ||
-        (request.headers.origin && request.headers.origin !== base) || request.headers['sec-fetch-site'] === 'cross-site') {
+        (request.headers.origin && request.headers.origin !== base) ||
+        (request.headers['sec-fetch-site'] === 'cross-site' && !entryNavigation)) {
       send(403, 'Local origin required\n'); return;
     }
     if (request.method !== 'GET' && request.method !== 'HEAD') { send(405, 'Read-only server\n', undefined, { Allow: 'GET, HEAD' }); return; }
