@@ -1,0 +1,13 @@
+The generated PNG and JPEG fixture image files in this directory are dedicated
+to the public domain under CC0 1.0 Universal (CC0-1.0).
+
+To the extent possible under law, the project contributors waive all copyright
+and related or neighboring rights to these generated fixture images.
+
+These are entirely procedural synthetic images. No third-party photographs,
+personal data, trademarks, or externally downloaded visual assets are included.
+
+Full CC0 1.0 legal code: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+This dedication applies to generated fixture images only. Source code and
+third-party dependencies retain their separately stated licenses.

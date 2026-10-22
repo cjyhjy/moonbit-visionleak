@@ -1,0 +1,101 @@
+{
+  "checkedAt": "2026-10-22",
+  "scope": "Non-exhaustive public primary-source review; this is not a novelty or contest-eligibility certificate.",
+  "sources": [
+    {
+      "name": "MoonSplit",
+      "version": "0.3.0 (source moon.mod; live registry unverified)",
+      "commit": "b6a161773747f6e6b819e483ddfdb7e228a9fe59",
+      "repository": "https://github.com/AlexenderSokolov/moonsplit",
+      "source": "https://github.com/AlexenderSokolov/moonsplit/blob/b6a161773747f6e6b819e483ddfdb7e228a9fe59/README.md",
+      "license": "Apache-2.0",
+      "execution": "source review only",
+      "findings": [
+        "Declared exact metadata keys, Unicode character q-gram text similarity, same-source interval overlaps, time-forward validation and independent audit.",
+        "The scope explicitly excludes image/audio/video similarity."
+      ]
+    },
+    {
+      "name": "ImageHash",
+      "version": "4.3.2",
+      "commit": "e1941e96898e56422f7df678dd094c8d5b2b46db",
+      "repository": "https://github.com/JohannesBuchner/imagehash",
+      "source": "https://github.com/JohannesBuchner/imagehash/blob/e1941e96898e56422f7df678dd094c8d5b2b46db/imagehash/__init__.py",
+      "license": "BSD-2-Clause",
+      "execution": "installed and executed locally as external oracle",
+      "findings": [
+        "dhash converts to grayscale, LANCZOS-resizes to 9x8 and compares each right pixel > its left neighbour for 64 bits.",
+        "Provides multiple perceptual hashing algorithms; split-specific evidence, review workflow and report packaging require integration."
+      ]
+    },
+    {
+      "name": "FiftyOne",
+      "version": "pinned source commit; docs observed 1.22.0",
+      "commit": "aacfc8182fc5353296b5edd7475e63335fedb5cb",
+      "repository": "https://github.com/voxel51/fiftyone",
+      "source": "https://docs.voxel51.com/api/fiftyone.brain.html",
+      "license": "Apache-2.0",
+      "execution": "source/docs review only, not installed or benchmarked",
+      "findings": [
+        "Already supports image collections, similarity indexes and interactive near-duplicate review."
+      ]
+    },
+    {
+      "name": "FiftyOne Brain",
+      "version": "pinned source commit",
+      "commit": "ba978a12293fda9953b478f601ac8950d2a35aa4",
+      "repository": "https://github.com/voxel51/fiftyone-brain",
+      "source": "https://github.com/voxel51/fiftyone-brain/blob/ba978a12293fda9953b478f601ac8950d2a35aa4/fiftyone/brain/__init__.py",
+      "license": "Apache-2.0",
+      "execution": "source review only",
+      "findings": [
+        "compute_exact_duplicates uses file hashes.",
+        "compute_near_duplicates uses embedding similarity; compute_leaky_splits already supports split metadata and leaks_view/leaks_for_sample/tag_leaks."
+      ]
+    },
+    {
+      "name": "moon-minhash",
+      "version": "0.1.0 (source moon.mod; Mooncakes release not verified)",
+      "commit": "2ed4dd5b1b9e6cfc4653862c4991bdd880f078b3",
+      "repository": "https://github.com/Hjyyutr/moon-minhash",
+      "source": "https://github.com/Hjyyutr/moon-minhash/blob/2ed4dd5b1b9e6cfc4653862c4991bdd880f078b3/README.md",
+      "license": "Apache-2.0",
+      "execution": "source review only",
+      "findings": [
+        "MoonBit MinHash/SimHash, LSH, text tokenization, deduplication and precision/recall evaluation already exist.",
+        "Could support general candidate-search building blocks, but the reviewed entrypoint consumes document features rather than decoded-image canonical RGB evidence."
+      ]
+    }
+  ],
+  "registryCaveat": {
+    "indexedPage": "https://mooncakes.io/docs/AlexenderSokolov/moonsplit@0.1.1",
+    "indexedVersion": "0.1.1",
+    "sourceVersion": "0.3.0",
+    "manifestAttempt": "https://mooncakes.io/api-new/v0/manifest/AlexenderSokolov/moonsplit",
+    "manifestResult": "Direct curl returned HTTP 404 on 2026-10-22. Source README claims 0.3.0 publication, but this run does not independently confirm it.",
+    "latestDocsAttempt": "https://mooncakes.io/docs/AlexenderSokolov/moonsplit@0.3.0",
+    "latestDocsResult": "Web reader could not access this page."
+  },
+  "searches": [
+    {
+      "engine": "GitHub repository search",
+      "query": "moonbit image hash",
+      "result": "No repository returned; not evidence of absence."
+    },
+    {
+      "engine": "web primary-source search",
+      "query": "site:mooncakes.io \"image\" \"hash\"",
+      "result": "No directly verified image-leakage package established in returned results."
+    },
+    {
+      "engine": "web primary-source search",
+      "query": "site:github.com MoonBit \"perceptual\"",
+      "result": "Returned adjacent svgdiff and graphics visual-testing projects; not examined deeply or claimed equivalent."
+    },
+    {
+      "engine": "web primary-source search",
+      "query": "site:github.com MoonBit \"duplicate\" \"image\"",
+      "result": "Returned unrelated and general image dedupe projects; non-exhaustive."
+    }
+  ]
+}
