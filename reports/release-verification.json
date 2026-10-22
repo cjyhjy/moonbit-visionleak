@@ -1,9 +1,9 @@
 {
   "schemaVersion": "visionleak-release-verification-v1",
   "status": "passed",
-  "startedAt": "2026-10-22T15:55:46.525645+00:00",
+  "startedAt": "2026-10-22T15:57:55.835357+00:00",
   "archive": "release/visionleak-0.1.0.zip",
-  "archiveSha256": "d5a29d2aae242d3bba6a6693795242e9f7c4fae8b26a24e82ce6673491d48808",
+  "archiveSha256": "ddc66b151622545abe7e76e41fb6cd679643f5335ea91c6c5bad98500058689b",
   "checks": [
     {
       "name": "sha256sums",
@@ -25,7 +25,7 @@
         "--no-fund"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 0.325346875,
+      "elapsedSeconds": 0.305595084,
       "status": "passed",
       "log": "reports/logs/release-npm-ci.log"
     },
@@ -36,7 +36,7 @@
         "tools/build.mjs"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 1.2288187499999998,
+      "elapsedSeconds": 0.51506575,
       "status": "passed",
       "log": "reports/logs/release-rebuild.log"
     },
@@ -56,7 +56,7 @@
         "tests/runtime.test.mjs"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 2.281950792,
+      "elapsedSeconds": 2.105854583,
       "status": "passed",
       "log": "reports/logs/release-node-tests.log"
     },
@@ -72,7 +72,7 @@
         "acceptance-output"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 0.266431667,
+      "elapsedSeconds": 0.2603615410000004,
       "status": "passed",
       "log": "reports/logs/release-actual-images.log"
     },
@@ -92,12 +92,12 @@
         "import{sourceDigest}from'./tools/source-digest.mjs';console.log(sourceDigest(process.cwd()))"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 0.0373266249999995,
+      "elapsedSeconds": 0.03251337500000018,
       "status": "passed",
       "log": "reports/logs/release-source-digest.log"
     }
   ],
   "sourceDigest": "8158c35635e6a91f54a7be652b838628fb0144c2067e63989c5a9c480219cd4c",
-  "extractedDirectory": "reports/clean-room/d12cb55f-dfe7-4932-9840-9afd117f953a/visionleak",
-  "finishedAt": "2026-10-22T15:55:50.700617+00:00"
+  "extractedDirectory": "reports/clean-room/7a7e50f4-0df1-4cc6-bdbb-b5b1f9a5a732/visionleak",
+  "finishedAt": "2026-10-22T15:57:59.088330+00:00"
 }
