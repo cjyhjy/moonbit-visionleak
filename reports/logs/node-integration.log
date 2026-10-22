@@ -1,0 +1,37 @@
+
+> visionleak@0.1.0 test
+> node --test tests/*.test.mjs
+
+✔ real CLI separates byte equality from decoded pixel equality, preserves input, and binds stable audit IDs (223.667125ms)
+✔ decode plus real core follows EXIF orientation and canonical white alpha semantics (13.438084ms)
+✔ a bad image and a symlink leave reviewable partial evidence and explicit errors (78.944041ms)
+✔ image, pixel, file, total-pixel, comparison, and output budgets are observable (388.5105ms)
+✔ fatal arguments and empty roots return structured errors without creating a report (316.610167ms)
+✔ overwrite is explicit and refuses unrelated files even with --force (249.565333ms)
+✔ exported API merges partial options, validates them, and audit identity includes scan scope and errors (26.443583ms)
+✔ loopback server serves only fixed assets and one report, and denies traversal, symlinks, writes, and foreign hosts (84.453291ms)
+✔ BK-tree matches independent quadratic oracle across thresholds, ties and exact classes (302.8025ms)
+✔ core SHA256 canonical pixels match Node crypto across padding sizes and alpha (30.633458ms)
+✔ budgeted runs never exceed work/output caps and only return true oracle members (9.271708ms)
+✔ typed JSON input rejects malformed, duplicate and out-of-budget data (0.534666ms)
+✔ empty input and same-split duplicates do not claim cross-split findings (0.149542ms)
+✔ pair identity is direction independent and cannot collide through delimiters (0.842125ms)
+✔ thumbnail sources are local and cannot traverse or execute URLs (0.249584ms)
+✔ report requires known evidence, valid references, cross-split and unique pairs (0.451667ms)
+✔ incomplete and unspecified coverage cannot become complete (0.09575ms)
+✔ review import rejects another audit, modified or foreign pair keys, invalid decisions and duplicates (0.237709ms)
+✔ validation is atomic and review export roundtrips without modifying machine evidence (0.506542ms)
+✔ filters compose evidence, human decision, path, split, and maximum distance (0.156208ms)
+✔ nonempty errors override a claimed complete status (0.083834ms)
+✔ 64-bit dHash distance must be within 0..64 (0.24575ms)
+✔ an imported report cannot reuse another audit server thumbnails (0.102333ms)
+✔ public JS pixel adapter rejects inputs that the compiled ABI could coerce (0.543958ms)
+✔ public JS pixel adapter accepts Uint8Array and the Buffer decoder output (4.451209ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1482.978666

@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "visionleak-release-verification-v1",
+  "status": "passed",
+  "startedAt": "2026-10-22T15:55:46.525645+00:00",
+  "archive": "release/visionleak-0.1.0.zip",
+  "archiveSha256": "d5a29d2aae242d3bba6a6693795242e9f7c4fae8b26a24e82ce6673491d48808",
+  "checks": [
+    {
+      "name": "sha256sums",
+      "status": "passed"
+    },
+    {
+      "name": "archive-manifest",
+      "status": "passed",
+      "files": 198
+    },
+    {
+      "name": "npm-ci",
+      "command": [
+        "npm",
+        "ci",
+        "--cache",
+        "<source-project>/.cache/npm-release",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.325346875,
+      "status": "passed",
+      "log": "reports/logs/release-npm-ci.log"
+    },
+    {
+      "name": "rebuild",
+      "command": [
+        "node",
+        "tools/build.mjs"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 1.2288187499999998,
+      "status": "passed",
+      "log": "reports/logs/release-rebuild.log"
+    },
+    {
+      "name": "compiled-artifact-reproducible",
+      "status": "passed",
+      "sha256": "94b042685bb55030f5b44f11545c7b6f19ee28cf5971bb3c4598398c2281f2ab"
+    },
+    {
+      "name": "node-tests",
+      "command": [
+        "node",
+        "--test",
+        "tests/cli.test.mjs",
+        "tests/core.test.mjs",
+        "tests/demo-validation.test.mjs",
+        "tests/runtime.test.mjs"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 2.281950792,
+      "status": "passed",
+      "log": "reports/logs/release-node-tests.log"
+    },
+    {
+      "name": "actual-images",
+      "command": [
+        "node",
+        "tools/cli.mjs",
+        "audit",
+        "--root",
+        "fixtures/benchmark",
+        "--out",
+        "acceptance-output"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.266431667,
+      "status": "passed",
+      "log": "reports/logs/release-actual-images.log"
+    },
+    {
+      "name": "clean-report-parity",
+      "status": "passed",
+      "images": 59,
+      "pairs": 96,
+      "auditId": "dc9fb9efb9db57e2a9e7381181c83d89118cab0b84029a14770177d08c55f2c2"
+    },
+    {
+      "name": "source-digest",
+      "command": [
+        "node",
+        "--input-type=module",
+        "-e",
+        "import{sourceDigest}from'./tools/source-digest.mjs';console.log(sourceDigest(process.cwd()))"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.0373266249999995,
+      "status": "passed",
+      "log": "reports/logs/release-source-digest.log"
+    }
+  ],
+  "sourceDigest": "8158c35635e6a91f54a7be652b838628fb0144c2067e63989c5a9c480219cd4c",
+  "extractedDirectory": "reports/clean-room/d12cb55f-dfe7-4932-9840-9afd117f953a/visionleak",
+  "finishedAt": "2026-10-22T15:55:50.700617+00:00"
+}

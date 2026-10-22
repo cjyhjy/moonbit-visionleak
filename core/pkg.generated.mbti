@@ -1,0 +1,23 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "visionleak/core/core"
+
+// Values
+pub fn audit_json(String) -> String
+
+pub fn fingerprint(Int, Int, Bytes) -> Json
+
+pub fn fingerprint_json(String) -> String
+
+pub fn fingerprint_rgba(Int, Int, Bytes) -> String
+
+pub fn hamming(String, String) -> Int
+
+pub fn sha256(Bytes) -> String
+
+// Errors
+
+// Types and methods
+
+// Type aliases
+
+// Traits

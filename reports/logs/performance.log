@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "visionleak-benchmark-v1",
+  "createdAt": "2026-10-22T15:55:46.271Z",
+  "engineSha256": "94b042685bb55030f5b44f11545c7b6f19ee28cf5971bb3c4598398c2281f2ab",
+  "environment": {
+    "node": "v26.7.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "cpu": "Apple M5 Pro"
+  },
+  "method": "One warmup, five sequential runs in one process. RSS is a post-run sample, not peak memory. JSON conversion is included. Synthetic workloads, not a large real dataset or a cross-tool speed comparison.",
+  "results": [
+    {
+      "name": "fingerprint-32x256x256",
+      "kind": "synthetic-rgba",
+      "images": 32,
+      "pixels": 2097152,
+      "encodedBytes": null,
+      "elapsedMs": [
+        90.33170899999999,
+        90.223667,
+        89.86204200000003,
+        89.68991699999992,
+        90.28708300000005
+      ],
+      "medianMs": 90.223667,
+      "outcome": {
+        "ok": true
+      },
+      "rssAfterBytes": 77250560
+    },
+    {
+      "name": "index-1000-random-threshold6",
+      "kind": "synthetic-fingerprints",
+      "images": 1000,
+      "pixels": null,
+      "encodedBytes": null,
+      "elapsedMs": [
+        191.4781670000001,
+        194.43487500000003,
+        194.34916599999997,
+        189.9984589999999,
+        198.78358400000002
+      ],
+      "medianMs": 194.34916599999997,
+      "outcome": {
+        "complete": true,
+        "stats": {
+          "inputImages": 1000,
+          "processedImages": 1000,
+          "comparisons": 215073,
+          "distanceEvaluations": 215073,
+          "pairChecks": 0,
+          "emittedPairs": 0,
+          "indexNodes": 1000,
+          "reason": ""
+        }
+      },
+      "rssAfterBytes": 110182400
+    },
+    {
+      "name": "dense-1000-pair-budget100",
+      "kind": "synthetic-fingerprints",
+      "images": 1000,
+      "pixels": null,
+      "encodedBytes": null,
+      "elapsedMs": [
+        4.002708999999868,
+        3.484499999999798,
+        3.2987500000001546,
+        3.4523750000000746,
+        3.5455829999998514
+      ],
+      "medianMs": 3.484499999999798,
+      "outcome": {
+        "complete": false,
+        "stats": {
+          "inputImages": 1000,
+          "processedImages": 17,
+          "comparisons": 176,
+          "distanceEvaluations": 33,
+          "pairChecks": 143,
+          "emittedPairs": 100,
+          "indexNodes": 1,
+          "reason": "PairBudget"
+        }
+      },
+      "rssAfterBytes": 111837184
+    }
+  ]
+}
