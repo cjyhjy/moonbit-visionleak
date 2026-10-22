@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="VisionLeak 本地图像数据集证据复核工作台。">
+  <title>VisionLeak · 证据复核</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.mjs"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="VisionLeak 首页"><span class="brand-mark" aria-hidden="true">V<span></span></span><span>VisionLeak<span class="brand-caption">图像数据审计</span></span></a>
+    <span class="local-indicator"><i></i> 本地复核工作台</span>
+    <div class="top-actions"><button id="load-default" class="button quiet" type="button">重新加载报告</button><label class="button outline file-button">导入报告 <span aria-hidden="true">↗</span><input id="report-file" type="file" accept=".json,application/json"></label></div>
+  </header>
+  <main>
+    <section class="page-intro">
+      <div><p class="eyebrow">DATA INTEGRITY / EVIDENCE REVIEW</p><h1>跨集合图像证据复核</h1><p class="intro-copy">查看图像对，区分相同与相似，保留你的复核结论。</p></div>
+      <div class="audit-card"><span class="micro-label">当前审计</span><code id="audit-id">尚未加载报告</code><div id="audit-status" class="status-pill neutral">等待输入</div></div>
+    </section>
+    <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+    <section id="incomplete-banner" class="incomplete-banner" role="status" hidden><span class="warning-icon" aria-hidden="true">!</span><div><strong>本次扫描不完整，当前结果不能排除遗漏。</strong><p id="incomplete-reason">预算或输入限制可能使部分图像或候选未被处理。请结合报告中的统计与错误记录判断覆盖范围。</p></div></section>
+    <section id="empty-state" class="empty-state">
+      <div class="empty-illustration" aria-hidden="true"><div class="paper-card card-back"></div><div class="paper-card card-front"><span class="frame-mountain"></span><span class="frame-dot"></span></div><span class="empty-plus">↔</span></div>
+      <p class="eyebrow">START WITH AN AUDIT</p><h2>从一份真实报告开始</h2><p>运行本地审计后加载 <code>/report.json</code>，<br>或选择已生成的 VisionLeak JSON 报告。</p>
+      <label class="button primary file-button">选择报告文件 <span aria-hidden="true">↗</span><input id="empty-report-file" type="file" accept=".json,application/json"></label>
+      <p class="empty-note">这里没有预填结果。图像对与证据来自你的审计输出。</p>
+    </section>
+    <div id="workspace" hidden>
+      <section class="metrics" aria-label="审计概览">
+        <div class="metric"><span>已载入图像</span><strong id="metric-images">0</strong><small>当前报告中的输入</small></div>
+        <div class="metric"><span><i class="evidence-dot byte"></i> 字节相同</span><strong id="metric-byte">0</strong><small>文件内容一致</small></div>
+        <div class="metric"><span><i class="evidence-dot pixel"></i> 像素相同</span><strong id="metric-pixel">0</strong><small>规范化像素一致</small></div>
+        <div class="metric"><span><i class="evidence-dot candidate"></i> 相似候选</span><strong id="metric-candidate">0</strong><small>待结合来源判断</small></div>
+        <div class="metric progress-metric"><span>人工复核进度 <span id="review-progress">0%</span></span><strong id="metric-reviewed">0 <em>/ 0</em></strong><div class="progress-track"><div id="progress-fill"></div></div></div>
+      </section>
+      <section class="workbench">
+        <div class="section-heading"><div><p class="eyebrow">CROSS-SPLIT PAIRS</p><h2>证据队列 <span id="pair-count">0 对</span></h2></div><div class="review-actions"><label class="button quiet file-button">导入复核<input id="review-file" type="file" accept=".json,application/json"></label><button id="export-review" class="button outline" type="button">导出复核 <span aria-hidden="true">↓</span></button><button id="export-report" class="button primary" type="button">导出完整报告 <span aria-hidden="true">↓</span></button></div></div>
+        <div class="filterbar">
+          <label class="search-field"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索路径或集合名称…" aria-label="搜索图像路径或集合名称"><kbd>/</kbd></label>
+          <label class="select-field"><span>证据</span><select id="evidence-filter"><option value="all">全部等级</option><option value="byte-identical">字节相同</option><option value="pixel-identical">像素相同</option><option value="perceptual-candidate">相似候选</option></select></label>
+          <label class="select-field"><span>复核</span><select id="decision-filter"><option value="all">全部状态</option><option value="pending">未复核</option><option value="confirmed">确认关联</option><option value="rejected">排除关联</option><option value="unsure">暂不确定</option></select></label>
+          <label class="select-field"><span>集合</span><select id="split-filter"><option value="all">全部集合</option></select></label>
+          <label class="distance-field"><span>距离 ≤ <output id="distance-output">64</output></span><input id="distance-filter" type="range" min="0" max="64" value="64" aria-label="最大感知哈希距离"></label>
+        </div>
+        <div class="review-grid">
+          <aside class="queue-panel"><div class="queue-label"><span>图像对</span><span id="queue-total">0 项</span></div><div id="pair-list" class="pair-list" aria-label="证据对列表"></div><div id="queue-empty" class="queue-empty" hidden>当前筛选下没有证据对。<button id="reset-filters" type="button">重置筛选</button></div></aside>
+          <section id="pair-detail" class="detail-panel" aria-label="证据对详情" hidden>
+            <div class="detail-heading"><div><span id="detail-evidence" class="evidence-badge"></span><span id="detail-decision" class="decision-label"></span></div><div class="pair-navigation"><span id="pair-position"></span><button id="previous-pair" class="icon-button" aria-label="上一对" type="button">←</button><button id="next-pair" class="icon-button" aria-label="下一对" type="button">→</button></div></div>
+            <div class="image-pair">
+              <article class="image-card"><div class="image-topline"><span class="image-side">A</span><span id="left-split" class="split-tag"></span></div><div class="image-stage"><img id="left-image" alt="左侧图像缩略图"><span id="left-fallback" class="image-fallback" hidden>缩略图不可用<br><small>请通过对应报告的本地服务打开</small></span></div><div class="image-info"><code id="left-path"></code><span id="left-size"></span></div></article>
+              <div class="pair-connector" aria-hidden="true">↔</div>
+              <article class="image-card"><div class="image-topline"><span class="image-side">B</span><span id="right-split" class="split-tag"></span></div><div class="image-stage"><img id="right-image" alt="右侧图像缩略图"><span id="right-fallback" class="image-fallback" hidden>缩略图不可用<br><small>请通过对应报告的本地服务打开</small></span></div><div class="image-info"><code id="right-path"></code><span id="right-size"></span></div></article>
+            </div>
+            <div class="evidence-explanation"><div><span class="micro-label">证据解释</span><p id="evidence-explanation"></p></div><div class="distance-readout"><span class="micro-label">dHash 距离</span><strong id="detail-distance">0</strong><small>越小越相近 · 非概率</small></div></div>
+            <details class="fingerprints"><summary>查看指纹与审计依据 <span aria-hidden="true">＋</span></summary><dl id="fingerprint-values"></dl></details>
+            <div class="review-form"><div class="review-form-heading"><div><h3>你的复核结论</h3><p>相似候选不会自动判为泄漏。结合数据来源与用途作出判断。</p></div><span id="saved-state" class="saved-state">尚未标记</span></div>
+              <div class="decision-buttons" role="group" aria-label="人工复核结论"><button data-decision="confirmed" class="decision-button confirmed" type="button" aria-pressed="false"><span aria-hidden="true">✓</span> 确认关联</button><button data-decision="rejected" class="decision-button rejected" type="button" aria-pressed="false"><span aria-hidden="true">×</span> 排除关联</button><button data-decision="unsure" class="decision-button unsure" type="button" aria-pressed="false"><span aria-hidden="true">?</span> 暂不确定</button></div>
+              <label class="note-label" for="review-note">复核备注 <span>来源、变换或判断依据</span></label><textarea id="review-note" rows="3" maxlength="20000" placeholder="记录判断依据。先选择结论后，备注随输入自动保存。"></textarea><div class="review-bottom"><span>仅保存在本浏览器，导出 JSON 可留存或移交。</span><span id="note-count">0 / 20000</span></div>
+            </div>
+          </section>
+          <section id="no-selection" class="no-selection"><span aria-hidden="true">◎</span><h3>没有可显示的证据对</h3><p>零个候选不等于数据集一定没有泄漏。<br>请结合阈值、覆盖范围与扫描状态解读。</p></section>
+        </div>
+      </section>
+      <details class="audit-details"><summary><span>运行信息与覆盖范围</span><span id="error-summary">统计 · 选项 · 错误记录</span></summary><div class="audit-detail-grid"><section><h3>统计</h3><pre id="report-stats"></pre></section><section><h3>选项</h3><pre id="report-options"></pre></section><section><h3>错误与跳过</h3><pre id="report-errors"></pre></section></div></details>
+    </div>
+    <footer><span>VISIONLEAK <span class="footer-divider">/</span> 证据优先，人工决策。</span><span>本地处理 · 无自动删除 · 候选不等于泄漏</span></footer>
+  </main>
+</body>
+</html>

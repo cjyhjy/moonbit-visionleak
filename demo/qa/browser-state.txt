@@ -1,0 +1,137 @@
+- banner:
+  - link "VisionLeak 首页":
+    - /url: /
+    - generic: V
+    - text: VisionLeak
+    - generic: 图像数据审计
+  - generic: 本地复核工作台
+  - button "重新加载报告"
+  - text: 导入报告
+  - generic: ↗
+  - button "导入报告"
+- main:
+  - paragraph: DATA INTEGRITY / EVIDENCE REVIEW
+  - heading "跨集合图像证据复核" [level=1]
+  - paragraph: 查看图像对，区分相同与相似，保留你的复核结论。
+  - generic: 当前审计
+  - code: dc9fb9efb9db57e2a9e7381181c83d89118cab0b84029a14770177d08c55f2c2
+  - generic: 扫描完成 · 限本次配置
+  - status: 已加载/report.json：59 张图像、96 对证据，恢复 2 条人工标记。
+  - region "审计概览":
+    - generic: 已载入图像
+    - strong: "59"
+    - generic: 当前报告中的输入
+    - generic: 字节相同
+    - strong: "9"
+    - generic: 文件内容一致
+    - generic: 像素相同
+    - strong: "18"
+    - generic: 规范化像素一致
+    - generic: 相似候选
+    - strong: "69"
+    - generic: 待结合来源判断
+    - text: 人工复核进度
+    - generic: 2%
+    - strong:
+      - text: "2"
+      - emphasis: / 96
+  - paragraph: CROSS-SPLIT PAIRS
+  - heading "证据队列 96 对" [level=2]:
+    - text: 证据队列
+    - generic: 96 对
+  - text: 导入复核
+  - button "导入复核"
+  - button "导出复核":
+    - text: 导出复核
+    - generic: ↓
+  - button "导出完整报告":
+    - text: 导出完整报告
+    - generic: ↓
+  - generic: ⌕
+  - searchbox "搜索图像路径或集合名称" [active]: flat-
+  - generic: /
+  - generic: 证据
+  - combobox "证据":
+    - option "全部等级"
+    - option "字节相同"
+    - option "像素相同"
+    - option "相似候选" [selected]
+  - generic: 复核
+  - combobox "复核":
+    - option "全部状态" [selected]
+    - option "未复核"
+    - option "确认关联"
+    - option "排除关联"
+    - option "暂不确定"
+  - generic: 集合
+  - combobox "集合":
+    - option "全部集合" [selected]
+    - option "test"
+    - option "train"
+    - option "validation"
+  - text: 距离 ≤
+  - status "距离 ≤ 64": "64"
+  - slider "最大感知哈希距离": "64"
+  - complementary:
+    - generic: 图像对
+    - generic: 1 / 96 项
+    - generic "证据对列表":
+      - button "相似候选：test/flat-blue.png 与 train/flat-red.png，排除关联" [pressed]:
+        - generic: 相似候选
+        - generic: d = 0
+        - code: test/flat-blue.png
+        - code: train/flat-red.png
+        - generic: test ↔ train
+        - generic: 排除关联
+  - region "证据对详情":
+    - generic: 相似候选
+    - generic: 人工：排除关联
+    - generic: 1 / 1
+    - button "上一对" [disabled]: ←
+    - button "下一对" [disabled]: →
+    - article:
+      - generic: A
+      - generic: test
+      - img "test：test/flat-blue.png"
+      - code: test/flat-blue.png
+      - generic: 90 × 80 px · 图像 A
+    - generic: ↔
+    - article:
+      - generic: B
+      - generic: train
+      - img "train：train/flat-red.png"
+      - code: train/flat-red.png
+      - generic: 90 × 80 px · 图像 B
+    - generic: 证据解释
+    - paragraph: 感知指纹距离在阈值内，需要结合图像与来源人工判断。 相似度不是泄漏概率；缩放、低对比度或重复纹理都可能造成误报。
+    - generic: dHash 距离
+    - strong: "0"
+    - generic: 越小越相近 · 非概率
+    - generic "查看指纹与审计依据":
+      - text: 查看指纹与审计依据
+      - generic: ＋
+    - heading "你的复核结论" [level=3]
+    - paragraph: 相似候选不会自动判为泄漏。结合数据来源与用途作出判断。
+    - generic: ✓ 已保存在本浏览器
+    - group "人工复核结论":
+      - button "确认关联":
+        - generic: ✓
+        - text: 确认关联
+      - button "排除关联" [pressed]:
+        - generic: ×
+        - text: 排除关联
+      - button "暂不确定":
+        - generic: "?"
+        - text: 暂不确定
+    - text: 复核备注
+    - generic: 来源、变换或判断依据
+    - textbox "复核备注 来源、变换或判断依据":
+      - /placeholder: 记录判断依据。先选择结论后，备注随输入自动保存。
+      - text: 最终界面验收：受控合成负例，纯蓝与纯红发生指纹碰撞。
+    - generic: 仅保存在本浏览器，导出 JSON 可留存或移交。
+    - generic: 26 / 20000
+  - generic "运行信息与覆盖范围 无错误记录 · 统计与选项":
+    - generic: 运行信息与覆盖范围
+    - generic: 无错误记录 · 统计与选项
+  - generic: VISIONLEAK / 证据优先，人工决策。
+  - generic: 本地处理 · 无自动删除 · 候选不等于泄漏

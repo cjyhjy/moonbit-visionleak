@@ -1,0 +1,138 @@
+{
+  "schemaVersion": "visionleak-demo-qa-v1",
+  "status": "passed",
+  "scope": "Only the explicitly observed browser actions and Node validations below are passed. Browser download contents and mobile layouts are not certified.",
+  "verifiedAt": "2026-10-22T15:53:58.393Z",
+  "servedAuditId": "dc9fb9efb9db57e2a9e7381181c83d89118cab0b84029a14770177d08c55f2c2",
+  "sourceHashes": {
+    "demo/index.html": "3cd8c7532faf37d4b9103b971b9c8ae68c0c2461ed5df592c23a09c9a352f0da",
+    "demo/styles.css": "dab5dfa9d564b087488b04901929d39d93280481f2bbc30c8c74efd50d37c964",
+    "demo/app.mjs": "5965a120a109e69c70783a172ddef6f5879a909d44690534d37ff67f1bb12aec",
+    "demo/review-validation.mjs": "db1c9af266715af79d5ac4090d355da0a0eb39235721693d200796ee2c879eaf"
+  },
+  "browser": "Google Chrome via CUA, native file chooser fallback",
+  "service": {
+    "url": "http://127.0.0.1:4177/",
+    "binding": "127.0.0.1",
+    "readOnly": true,
+    "sessionId": 71855
+  },
+  "report": {
+    "path": "reports/demo/report.json",
+    "inputProvenance": "59 controlled synthetic benchmark image files, actual MoonBit/CLI output",
+    "images": 59,
+    "pairs": 96,
+    "byteIdentical": 9,
+    "pixelIdentical": 18,
+    "perceptualCandidates": 69
+  },
+  "checks": [
+    {
+      "name": "default-report-and-thumbnails",
+      "status": "passed",
+      "steps": "Navigate to local server; observe exact auditId, 59 images / 96 pairs and two rendered thumbnails."
+    },
+    {
+      "name": "candidate-and-path-filter",
+      "status": "passed",
+      "steps": "Select perceptual-candidate and search flat-. Observed 1 / 96 pair, test/flat-blue.png vs train/flat-red.png, dHash distance 0."
+    },
+    {
+      "name": "review-save-and-reload",
+      "status": "passed",
+      "steps": "Mark flat-color synthetic negative as rejected, enter QA note, reload page and search flat-. The selected rejection and exact note reappeared; notice restored one record."
+    },
+    {
+      "name": "review-json-import",
+      "status": "passed",
+      "steps": "Click visible import-review label; native macOS chooser selected demo/qa/review-import-test.json. UI reported one validated merged record. Reload later restored two total records.",
+      "fixture": "demo/qa/review-import-test.json"
+    },
+    {
+      "name": "external-report-image-isolation",
+      "status": "passed",
+      "steps": "Import demo/qa/external-report-test.json through native file chooser. Both image src attributes became null; UI warned that the auditId differs and thumbnails are disabled.",
+      "fixture": "demo/qa/external-report-test.json",
+      "expectedReportAuditId": "qa-external-report-not-served"
+    },
+    {
+      "name": "nonempty-errors-override-complete",
+      "status": "passed",
+      "steps": "Same test fixture deliberately claims complete=true/status=complete but has one QA_INJECTED_ERROR. UI displayed incomplete status and prominent coverage warning."
+    },
+    {
+      "name": "export-buttons",
+      "status": "passed",
+      "steps": "Clicked Export review and Export full report controls. Chrome native UI later showed review.json 516 B completed. No download event waiter was used in final run; file contents and second file completion were not inspected."
+    },
+    {
+      "name": "restore-served-report",
+      "status": "passed",
+      "steps": "Click reload report. Original served auditId and thumbnails returned, both imported and manually entered QA marks restored."
+    },
+    {
+      "name": "browser-console",
+      "status": "passed",
+      "steps": "Chrome tab dev.logs warn/error query returned an empty array after final actions."
+    },
+    {
+      "name": "node-validation-and-roundtrip",
+      "status": "passed",
+      "command": "node --test tests/demo-validation.test.mjs",
+      "passed": 10,
+      "failed": 0
+    },
+    {
+      "name": "javascript-syntax",
+      "status": "passed",
+      "command": "node --check demo/app.mjs"
+    }
+  ],
+  "notTested": [
+    {
+      "name": "browser-downloaded-json-content",
+      "status": "notTested",
+      "reason": "The IAB download event tooling stalled and was interrupted. Final Chrome run verifies button clicks and review.json completed indicator only; no claim of downloaded file byte validation."
+    },
+    {
+      "name": "browser-complete-report-download",
+      "status": "notTested",
+      "reason": "Control clicked, final download completion and bytes not inspected."
+    },
+    {
+      "name": "mobile-viewport",
+      "status": "notTested",
+      "reason": "Responsive CSS exists but final real-device/mobile viewport testing was outside the bounded verification."
+    },
+    {
+      "name": "missing-default-report-empty-state",
+      "status": "notTested",
+      "reason": "Code implements explicit empty state but final server always supplied a valid report."
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "demo/qa/workbench-current.jpg",
+      "status": "current",
+      "auditId": "dc9fb9efb9db57e2a9e7381181c83d89118cab0b84029a14770177d08c55f2c2",
+      "description": "Actual final source, synthetic flat-color candidate rejected with a persisted QA note."
+    },
+    {
+      "path": "demo/qa/report-isolation.jpg",
+      "status": "current",
+      "auditId": "qa-external-report-not-served",
+      "description": "Deliberately modified QA fixture: different auditId and injected error; no thumbnails and prominent incomplete warning."
+    },
+    {
+      "path": "demo/qa/workbench-desktop.jpg",
+      "status": "historical-layout-only",
+      "auditId": "750098d7448d80a7c5b3dc6c51af426107d8a2f1b07366d637e7ce907f8059d8",
+      "description": "Earlier layout snapshot before final report identity and UI hardening; not evidence for current source."
+    }
+  ],
+  "notes": [
+    "All manual marks in these browser sessions are labeled QA observations on controlled synthetic fixtures, not a human audit of a real dataset.",
+    "External-report fixture intentionally modifies auditId and errors and is not an authentic CLI output.",
+    "File chooser event failed for the visually hidden file input; clicking its visible label and using the native chooser succeeded without changing browser permissions."
+  ]
+}
