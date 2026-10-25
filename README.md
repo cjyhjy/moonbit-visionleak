@@ -1,5 +1,7 @@
 # VisionLeak
 
+[![CI](https://github.com/cjyhjy/moonbit-visionleak/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/cjyhjy/moonbit-visionleak/actions/workflows/ci.yml)
+
 以 MoonBit 为核心的本地图像跨集合重复审计工具。输入 `train/`、`validation/`、`test/` 中的真实图片文件，输出成对证据、确定重复分组、带缩略图的本地复核工作台和可导出的人工复核记录。
 
 **感知相似只是候选，不能自动证明数据泄漏。** 工具不删除或移动源文件，不调用云 API。合成评测中主动保留平色图、渐变误报及裁切/镜像漏检，详见 [评测结果](reports/evaluation.md)。
@@ -71,4 +73,4 @@ node tools/benchmark.mjs
 - [AI 辅助与来源说明](docs/development.md)
 - [许可证和第三方组件](THIRD_PARTY.md)
 
-本目录提供本地源码与版本化交付包；独立公开仓库及远端 CI 由总控另行维护，本次本地报告不证明远端已同步 0.4.0。包发布、身份声明与正式参赛提交分别管理，赛事规则与日期冲突见总控目录 `research/contest-rules.md`。
+公开仓库：[cjyhjy/moonbit-visionleak](https://github.com/cjyhjy/moonbit-visionleak)。2026-10-25 分批同步了 0.2–0.4 累积改动及 0.5.0 计划第 0–2 阶段，版本号仍为 0.4.0；0.5.0 尚未冻结。提交映射和验证记录见 [本次同步记录](reports/plan-0.5.0/git-sync-2026-10-25.json)，历次源码与 CI 的对应关系见 [历史说明](docs/history.md)。Mooncakes 核心包尚未正式发布；Node CLI 和工作台目前通过克隆仓库运行。

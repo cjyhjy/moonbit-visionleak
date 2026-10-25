@@ -9,3 +9,11 @@ The original local commits span **2026-10-22 11:28:15–11:58:50 America/New_Yor
 No historical commits were rewritten to create a longer development timeline. The mapping's original IDs refer to the local source repository and are not presented as public GitHub links.
 
 The committed reports, browser screenshots, source digests and release checksum predate the public CI setup. Their scope is documented in [reports/README.md](../reports/README.md). Fresh Linux CI evidence is attached to each [Actions run](https://github.com/cjyhjy/moonbit-visionleak/actions/workflows/ci.yml), with its actual commit SHA and platform. A successful run is automated verification, not human review, package publication, or formal contest submission.
+
+## 2026-10-25 follow-up synchronization
+
+Nine additional commits from the original project's local history were synchronized in two batches, after the existing public commit `f77a531`. Original author and committer identities, dates, and complete messages were preserved. For each published tree, every path outside the three retained standalone history files (`docs/history-extraction.json`, `docs/history.md`, and `reports/README.md`) matches the original project subtree exactly. The following documentation commit reconciles the current report index with the retained history documents. The existing public ancestry was retained; there was no force push or rewrite.
+
+The first batch contains five commits for cumulative 0.2–0.4 work and phase 0–1 remediation; the second contains four phase 2 commits. Earlier 0.2 and 0.3 changes did not have separate original commit boundaries, so this synchronization does not fabricate historical version tags or separate release dates. Version metadata remains 0.4.0 while the 0.5.0 plan is in progress.
+
+[git-sync-2026-10-25.json](../reports/plan-0.5.0/git-sync-2026-10-25.json) records the original-to-public commit mapping, both batch heads, source digests, local checks and Linux CI runs. A following documentation commit records this synchronization and restores the CI badge. Package registries were not published by this operation.

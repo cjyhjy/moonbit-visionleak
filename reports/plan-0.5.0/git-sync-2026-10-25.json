@@ -1,0 +1,419 @@
+{
+  "repository": "cjyhjy/moonbit-visionleak",
+  "previousPublicHead": "f77a5316bd83abed09288152a3bf3f4ab0b585ef",
+  "sourceHead": "580faac7d150a557e9dc47ba8e335b509adad97b",
+  "method": "Replay nine existing project subtree snapshots onto the existing public head, preserving original author/committer identities, dates and complete messages. Keep three independent-repository history documents. No existing public commits rewritten.",
+  "mapping": [
+    {
+      "original": "e9b3a061e36911374b1e97541a9a2d8f3cf96ce2",
+      "subtreeSplit": "57402f2b20ba32fb22813a9b3005289ab99629d0",
+      "published": "07aabf671df4e4e2377eb3e9efa6e1437d545f76",
+      "sourceTree": "342c55a73a451de7e79f6ffbcb1a8eedc97f375c",
+      "publishedTree": "a4cc4ed1185e8817dbee4b29632f0e9805cbd1aa",
+      "subject": "feat(visionleak): migrate audit contracts and support full-resolution images"
+    },
+    {
+      "original": "4ae5222c8075613736aa08af1b5e199b9e032c2a",
+      "subtreeSplit": "9260b3e5dd2d0763eab2ceb903e4a00854608361",
+      "published": "8eba642aadc6e163234e459ec50dff900d22da49",
+      "sourceTree": "31362b7a636e7afde6e72e3f15a8e24c1d52bb49",
+      "publishedTree": "c8521a7eb5ff57501c98950747b9aeaca3d66530",
+      "subject": "test(visionleak): preserve photo baselines and phase acceptance evidence"
+    },
+    {
+      "original": "94257ae01b0839a8b2f42a38dfaf16e5ee3d8da2",
+      "subtreeSplit": "ccc5e28184df771e3be885f9e536c3816eafaef5",
+      "published": "365277a07c85c7b01aa0d865e8cb46264e9f6c5f",
+      "sourceTree": "a957621345b22ce01e01710601ff41695b4bc8d2",
+      "publishedTree": "81ef57c44bdd959fc604b511e2049cd6f19f9b7b",
+      "subject": "fix(visionleak): cross-check metrics with an independent Python oracle"
+    },
+    {
+      "original": "12799e94c91bf916636cfd27d2150edddd297d8b",
+      "subtreeSplit": "c70f3d889299696b6c72bcdd36719fa27f4f40e1",
+      "published": "f6f021ac88b4b57cb68efbc8233795adfe39c99d",
+      "sourceTree": "b8a44d891fd9c265f2d5e5fb245ea5fc78db60e1",
+      "publishedTree": "c203d455e8fe68dd6f348a7eab115a2f77564e29",
+      "subject": "build(visionleak): restrict Mooncakes package to the reusable core"
+    },
+    {
+      "original": "f7f75af62edb2e99d0e8d8c5d74ed9fd38892088",
+      "subtreeSplit": "3beb651315201f8dea5573fcce3c2495966c2b43",
+      "published": "e6d4d0aa4cf8d21714c93be5ce97a56a426fbe53",
+      "sourceTree": "21d888acd4aa9ffa2e308f82f9201593457f5487",
+      "publishedTree": "882eaf55a96004fefd00352a9f16536114515cd7",
+      "subject": "docs(visionleak): record phase zero remediation and acceptance"
+    },
+    {
+      "original": "4b3e5eca49c46309ab8145f2b3253e3f825cc4d9",
+      "subtreeSplit": "ff8b98f414eda7a9832977edb924142a884d1620",
+      "published": "3bf86412fcac543e87390c83d039620af744c444",
+      "sourceTree": "1f96c0f15f2526e342ea671c07c56bb990cca171",
+      "publishedTree": "ecd1c962aca0eb52486176e0cfb0ea7c4256e059",
+      "subject": "feat(visionleak): add core policies for gates verification and handoff"
+    },
+    {
+      "original": "dfe981b906413abb64b45c2989b191ece719119e",
+      "subtreeSplit": "db3e66888ae5b1ab99fabcd84d78396bb406b3e0",
+      "published": "8c21ce9abb3ee49c92a363cee68ebd47ce96a048",
+      "sourceTree": "22bdbf330314b6cfb1886ba668b8dee1ea34bcf2",
+      "publishedTree": "204d8dc198e73c5ce2c45ac11e362cadc655923a",
+      "subject": "feat(visionleak): expose CI gates and portable evidence review"
+    },
+    {
+      "original": "b71f26d5d71e948893ee0355ee98664f0edc3031",
+      "subtreeSplit": "4d0ac5e01104f684acc7fe50cee97e81037448d7",
+      "published": "879a337f936e0c7381bbb2d51315c2c2ccbaa2ef",
+      "sourceTree": "91b568314bbb6fbb64697c4224effc71e6635e17",
+      "publishedTree": "9aa51ab7ea62f02ac810faa4cd3eb9977fbaca09",
+      "subject": "fix(visionleak): preserve boolean metadata in independent metric diagnostics"
+    },
+    {
+      "original": "580faac7d150a557e9dc47ba8e335b509adad97b",
+      "subtreeSplit": "f00902fd177307775a980668097875d2d58eeb83",
+      "published": "ec705b92f935dd43a7b66e137566066d492b591b",
+      "sourceTree": "46ad3e0ffe7ec04863c1de7bcd39403df70055a7",
+      "publishedTree": "efd96c0fb82e4c572dd58042c051ef4475f289fd",
+      "subject": "docs(visionleak): record phase two validation and handoff evidence"
+    }
+  ],
+  "batches": [
+    {
+      "name": "phase01-and-history",
+      "branch": "codex/sync-phase01-20261025",
+      "head": "e6d4d0aa4cf8d21714c93be5ce97a56a426fbe53",
+      "commits": 5,
+      "localAcceptance": {
+        "status": "passed",
+        "checks": 24,
+        "startedAt": "2026-10-25T15:49:55.750Z",
+        "finishedAt": "2026-10-25T15:50:44.269Z",
+        "sourceDigest": "7a77c4e01c72755622e4b40025bc222bc4dd347f62c91c2d3248a1bb3e2f503b",
+        "compiledArtifact": {
+          "sha256": "4225b58ecbeab1e4fa42087a601ca77c0f89080c79ca14523f4ac36f9875fb63",
+          "matchesCommitted": true
+        },
+        "checksById": [
+          {
+            "id": "toolchain",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "format",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "check-js",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "build-js",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "test-js",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "check-wasm-gc",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "build-wasm-gc",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "test-wasm-gc",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "check-native",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "build-native-test-executable",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "test-native-release",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "test-native",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "runtime-build",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "node-integration",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "mooncakes-compatibility",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "mooncakes-package",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "release-contract",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "evaluation-compatibility",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "report-history",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "metric-regression",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "imagehash-oracle",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "mirror-oracle",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "photo-development",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "photo-holdout",
+            "status": "passed",
+            "exitCode": 0
+          }
+        ]
+      },
+      "remoteAcceptance": {
+        "id": 40208904656,
+        "status": "completed",
+        "conclusion": "success",
+        "headSha": "e6d4d0aa4cf8d21714c93be5ce97a56a426fbe53",
+        "url": "https://github.com/cjyhjy/moonbit-visionleak/actions/runs/40208904656",
+        "startedAt": "2026-10-25T15:51:16Z",
+        "updatedAt": "2026-10-25T15:53:48Z"
+      },
+      "pushed": true,
+      "publicCommitUrl": "https://github.com/cjyhjy/moonbit-visionleak/commit/e6d4d0aa4cf8d21714c93be5ce97a56a426fbe53"
+    },
+    {
+      "name": "phase2",
+      "branch": "codex/sync-phase2-20261025",
+      "head": "ec705b92f935dd43a7b66e137566066d492b591b",
+      "commits": 4,
+      "localAcceptance": {
+        "status": "passed",
+        "checks": 24,
+        "startedAt": "2026-10-25T15:51:33.969Z",
+        "finishedAt": "2026-10-25T15:52:30.441Z",
+        "sourceDigest": "dabe011b7bec042c202b1c2e67d15a0d141b4b5aee2cdcad2d24bd355fbc94a1",
+        "compiledArtifact": {
+          "sha256": "73f480fb1b015576e44c187f4de22066fb2e29292f42db77f398dac07afb33ed",
+          "matchesCommitted": true
+        },
+        "checksById": [
+          {
+            "id": "toolchain",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "format",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "check-js",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "build-js",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "test-js",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "check-wasm-gc",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "build-wasm-gc",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "test-wasm-gc",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "check-native",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "build-native-test-executable",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "test-native-release",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "test-native",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "runtime-build",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "node-integration",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "mooncakes-compatibility",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "mooncakes-package",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "release-contract",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "evaluation-compatibility",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "report-history",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "metric-regression",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "imagehash-oracle",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "mirror-oracle",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "photo-development",
+            "status": "passed",
+            "exitCode": 0
+          },
+          {
+            "id": "photo-holdout",
+            "status": "passed",
+            "exitCode": 0
+          }
+        ]
+      },
+      "remoteAcceptance": {
+        "id": 40209190194,
+        "status": "completed",
+        "conclusion": "success",
+        "headSha": "ec705b92f935dd43a7b66e137566066d492b591b",
+        "url": "https://github.com/cjyhjy/moonbit-visionleak/actions/runs/40209190194",
+        "startedAt": "2026-10-25T15:55:01Z",
+        "updatedAt": "2026-10-25T15:57:09Z"
+      },
+      "pushed": true,
+      "publicCommitUrl": "https://github.com/cjyhjy/moonbit-visionleak/commit/ec705b92f935dd43a7b66e137566066d492b591b"
+    }
+  ],
+  "schemaVersion": "visionleak-git-sync-v1",
+  "date": "2026-10-25",
+  "authorization": "User explicitly requested pushing previous work in batches; package publication was not requested.",
+  "packageVersion": "0.4.0",
+  "plan050CompletedPhases": [
+    0,
+    1,
+    2
+  ],
+  "phase2IndependentReview": "not performed",
+  "phase3Started": false,
+  "formal050Release": false,
+  "npmPublishedByThisOperation": false,
+  "mooncakesPublishedByThisOperation": false,
+  "publicHistoryRewritten": false,
+  "forcePush": false,
+  "preservedStandaloneHistoryFiles": [
+    "docs/history-extraction.json",
+    "docs/history.md",
+    "reports/README.md"
+  ],
+  "treeVerification": "For all nine commits, original subtree and published tree differ only at the three preserved standalone history files; every implementation, test, asset and other report path is byte-identical.",
+  "remoteLanguages": {
+    "source": "GitHub languages API through gh api",
+    "observedAfterPublicHead": "ec705b92f935dd43a7b66e137566066d492b591b",
+    "bytes": {
+      "MoonBit": 162122,
+      "JavaScript": 121583,
+      "Python": 113457,
+      "Shell": 778,
+      "AMPL": 344
+    },
+    "primaryLanguage": "MoonBit"
+  },
+  "status": "both batches pushed and both Linux CI runs passed",
+  "finalImplementationHead": "ec705b92f935dd43a7b66e137566066d492b591b",
+  "documentationFollowup": "Following commit updates README, preserves the standalone history map and records this synchronization. It changes no files covered by the source digest."
+}
