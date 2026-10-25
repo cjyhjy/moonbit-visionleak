@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "visionleak-review-v1",
+  "auditId": "7d6378c0f9a4a43d374326deff73223c77fd2dc28e8d0fee8d47b312ba013d83",
+  "reviews": [
+    {
+      "pairKey": "[\"test/astronaut-byte-copy.png\",\"train/astronaut-original.png\"]",
+      "left": "test/astronaut-byte-copy.png",
+      "right": "train/astronaut-original.png",
+      "decision": "confirmed",
+      "note": "QA fixture: offline review preservation",
+      "updatedAt": "2026-10-25T10:29:36.034Z"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "status": "local-implementation-and-acceptance-complete-awaiting-Claude-review",
+  "preconditions": "M0-1 to M0-3 completed and recorded in phase-0.md before phase 2; review-1.md passed.",
+  "ci": {
+    "status": "passed",
+    "checks": 24,
+    "sourceDigest": "dabe011b7bec042c202b1c2e67d15a0d141b4b5aee2cdcad2d24bd355fbc94a1",
+    "compiledArtifact": {
+      "sha256": "73f480fb1b015576e44c187f4de22066fb2e29292f42db77f398dac07afb33ed",
+      "matchesCommitted": true
+    }
+  },
+  "tests": {
+    "moonbitPerBackend": 77,
+    "nativeRelease": 77,
+    "node": 43,
+    "independentMetricCases": 8,
+    "frozenModesUnchanged": 8
+  },
+  "browser": "phase2-browser.json",
+  "cleanPhotoVerification": {
+    "valid": 15,
+    "invalid": 0,
+    "missing": 0,
+    "skippedCandidates": 42
+  },
+  "workflowExample": {
+    "localExitCode": 3,
+    "remoteWorkflowExecuted": false,
+    "evidence": "phase2-action-example.json"
+  },
+  "package": {
+    "bytes": 30589,
+    "entries": [
+      "moon.mod",
+      "core/moon.pkg",
+      "core/sha256.mbt",
+      "core/offline.mbt",
+      "core/cli_options.mbt",
+      "core/audit.mbt",
+      "core/sampling.mbt",
+      "core/pkg.generated.mbti",
+      "core/pixel_stream.mbt",
+      "core/review_validation.mbt",
+      "core/workflow.mbt",
+      "core/json_helpers.mbt",
+      "core/report_identity.mbt",
+      "core/metrics.mbt",
+      "core/fingerprint.mbt",
+      "LICENSE",
+      "README.md"
+    ]
+  },
+  "commits": [
+    {
+      "hash": "4b3e5eca49c46309ab8145f2b3253e3f825cc4d9",
+      "title": "feat(visionleak): add core policies for gates verification and handoff"
+    },
+    {
+      "hash": "dfe981b906413abb64b45c2989b191ece719119e",
+      "title": "feat(visionleak): expose CI gates and portable evidence review"
+    },
+    {
+      "hash": "b71f26d5d71e948893ee0355ee98664f0edc3031",
+      "title": "fix(visionleak): preserve boolean metadata in independent metric diagnostics"
+    }
+  ],
+  "languageStatistics": "languages-phase2-final.json",
+  "formalPublicationOrPushPerformed": false,
+  "phase3Started": false
+}

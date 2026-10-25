@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "browser": "154.0.8037.58",
+  "checks": [
+    {
+      "reportImages": 50,
+      "reportPairs": 57,
+      "review": {
+        "right": "train/astronaut-original.png",
+        "decision": "confirmed",
+        "updatedAt": "2026-10-25T10:29:36.034Z",
+        "note": "QA fixture: offline review preservation",
+        "pairKey": "[\"test/astronaut-byte-copy.png\",\"train/astronaut-original.png\"]",
+        "left": "test/astronaut-byte-copy.png"
+      },
+      "navigatorOnline": false,
+      "passed": true,
+      "rows": 57,
+      "allImagesEmbedded": true,
+      "images": 114,
+      "externalScripts": 0,
+      "auditId": "7d6378c0f9a4a43d374326deff73223c77fd2dc28e8d0fee8d47b312ba013d83",
+      "name": "offline-html-rendered-with-page-network-disabled",
+      "reportTruncated": false
+    },
+    {
+      "passed": true,
+      "selectedGroupPairs": 8,
+      "name": "workbench-candidate-groups-and-coverage",
+      "groups": 5
+    },
+    {
+      "passed": true,
+      "totalPairs": 96,
+      "collapsedPairs": 95,
+      "name": "low-contrast-collapse-and-expand",
+      "lowContrastPairs": 1
+    },
+    {
+      "passed": true,
+      "name": "mobile-review-controls-layout",
+      "width": 390,
+      "scrollWidth": 375
+    },
+    {
+      "passed": true,
+      "omittedPairs": 57,
+      "reportSchema": "visionleak-report-snapshot-v1",
+      "limit": 4096,
+      "bytes": 3515,
+      "includedPairs": 0,
+      "name": "bounded-offline-snapshot-discloses-truncation"
+    }
+  ],
+  "offlineMethod": "Read exact artifact bytes over loopback, then disable network only for the owned test page via CDP and render unchanged bytes with page.setContent. navigator.onLine=false; network restored and CDP detached after checks.",
+  "testedArtifactDigest": "78cc8249dd2781f19914481fc32bc23a72ea84e9787720d23f67c8f0c9dd389e",
+  "scope": "Offline export and workbench group/coverage/low-contrast policies. A subsequent backend-only change moved verification input selection into MoonBit; these UI/export policies were unchanged.",
+  "screenshots": [
+    "demo/qa/phase2-offline-desktop.png",
+    "demo/qa/phase2-workbench-desktop.png",
+    "demo/qa/phase2-workbench-mobile.png"
+  ]
+}

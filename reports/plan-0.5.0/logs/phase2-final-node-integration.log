@@ -1,0 +1,55 @@
+
+> visionleak@0.4.0 test
+> node --test tests/*.test.mjs
+
+✔ real CLI separates byte equality from decoded pixel equality, preserves input, and binds stable audit IDs (247.202333ms)
+✔ decode plus real core follows EXIF orientation and canonical white alpha semantics (9.4605ms)
+✔ a bad image and a symlink leave reviewable partial evidence and explicit errors (72.474375ms)
+✔ image, pixel, file, total-pixel, comparison, and output budgets are observable (401.002875ms)
+✔ fatal arguments and empty roots return structured errors without creating a report (335.643917ms)
+✔ overwrite is explicit and refuses unrelated files even with --force (256.925125ms)
+✔ exported API merges partial options, validates them, and audit identity includes scan scope and errors (31.466292ms)
+✔ loopback server serves only fixed assets and one report, and denies traversal, symlinks, writes, and foreign hosts (88.323458ms)
+✔ symlinked output ancestry is rejected before creating directories in the dataset (2.487458ms)
+✔ server rejects altered stable report fields even when the old auditId is retained (8.460459ms)
+✔ opt-in mirror CLI emits review candidates from actual reflected files and binds mode to identity (81.313958ms)
+✔ opt-in rotations audit physical rotated and rotated-reflected files without making exact groups (87.843833ms)
+✔ compiled JSON and bytes exports preserve the host protocol (3.419333ms)
+✔ incremental SHA-256 opaque JS state accepts Buffer chunks and matches Node crypto (5.5845ms)
+✔ thumbnail sources are local and cannot traverse or execute URLs (0.649375ms)
+✔ validation is atomic and review export roundtrips without modifying machine evidence (4.355541ms)
+✔ filters compose evidence, human decision, path, split, and maximum distance (2.484917ms)
+✔ an imported report cannot reuse another audit server thumbnails (0.642375ms)
+✔ progress distinguishes unreviewed and unsure pairs inside the current scope (0.619375ms)
+✔ next pending navigation wraps inside the filtered queue and skips reviewed/current pairs (2.109042ms)
+✔ marking a filtered pair continues after its old position instead of returning to the beginning (3.212166ms)
+✔ one-step undo removes a new mark and restores an earlier decision including its note (0.805916ms)
+✔ undo cannot erase later notes, imported changes, another audit, or unrelated pair reviews (1.048292ms)
+✔ 12MP JPEG byte copy and lossless reencoding keep full-resolution pixel identity (2564.4375ms)
+✔ sampling budget changes perception size while source decode and total budgets remain hard bounds (20.736541ms)
+✔ mirror host adapter routes to the compiled optional export (7.863083ms)
+✔ orientation host adapter routes booleans and bytes to the optional core export (8.258667ms)
+✔ legacy mirror mode preserves complete 0.3.0 evidence and work counts on the real development photos (11.932875ms)
+✔ fail-on implements fatal > hit > incomplete > complete and preserves default behavior (644.284583ms)
+✔ fail-on exact ignores pixel-only pairs and pixel ignores candidate-only pairs (213.105625ms)
+✔ verify detects changed and missing evidence and refuses a tampered report before dataset access (276.503208ms)
+✔ verify never follows a report traversal or a symlink to a file outside the dataset (139.840458ms)
+✔ coverage binds canonical splits, rejected codes, ignored files, and budget exhaustion (19.484583ms)
+✔ CSV matches the manually enumerated exact-group keep/remove plan (131.212083ms)
+✔ candidate suggestions require a validated confirmed review and HTML safely includes current review (253.908958ms)
+✔ the committed GitHub Action leak fixture fails the actual local audit command (69.068ms)
+✔ content identity accepts v0.1.0 reports and reviewed exports without rebinding evidence (6.801208ms)
+✔ v2 canonical identity survives object-key reorder but binds array order and unknown fields (1.517ms)
+✔ MoonBit identity matches an independent ECMAScript canonicalization oracle for extension fields (10.596167ms)
+✔ public JS pixel adapter rejects inputs that the compiled ABI could coerce (0.76275ms)
+✔ public JS pixel adapter accepts Uint8Array and the Buffer decoder output (7.036291ms)
+✔ all split alias combinations normalize splits while preserving actual paths and directory scope (148.106083ms)
+✔ simultaneous aliases are fatal before output creation instead of merging dataset splits (8.561709ms)
+ℹ tests 43
+ℹ suites 0
+ℹ pass 43
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2698.5145

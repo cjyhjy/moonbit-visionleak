@@ -84,3 +84,8 @@
 MoonBit 最大。其中 `.mbt` 为 127,740 B，生成的 `.mbti` 为 1,374 B；即使不计接口文件，MoonBit 仍大于 JavaScript。方法与完整文件表见 languages-m0-remediation.json，不冒充远端 GitHub 语言统计。
 
 当前源码摘要：`7a77c4e01c72755622e4b40025bc222bc4dd347f62c91c2d3248a1bb3e2f503b`。M0 条件满足，第 2 阶段按修订计划开始；本记录不冒充新的 Claude 验收结论。
+
+
+## 第 2 阶段前置记录提交与指标边界补充
+
+上述 M0 必改完成记录已在 `f7f75af`（docs(visionleak): record phase zero remediation and acceptance）落地，之后才开始第 2 阶段。第 2 阶段又用 `b71f26d` 补充嵌套布尔诊断字段的独立指标核对边界，指标测试由 7 项增至 8 项；每次评测逐字段交叉验证的约束继续保持。详见 phase-2.md。Mooncakes 登录复用授权来自本对话负责人明确回复“授权 dry-run 及其所需包内容传输”，没有复制或输出凭据。

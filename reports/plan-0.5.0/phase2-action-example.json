@@ -1,0 +1,70 @@
+{
+  "command": [
+    "node",
+    "tools/cli.mjs",
+    "audit",
+    "--root",
+    "examples/github-action/dataset",
+    "--out",
+    "reports/plan-0.5.0/phase2-action-audit",
+    "--fail-on",
+    "pixel"
+  ],
+  "exitCode": 3,
+  "stdout": {
+    "ok": true,
+    "complete": true,
+    "status": "complete",
+    "auditId": "d009d86c90dd1c4f006cebaa0fea07a1646d25c3def64c9ef71abaef2b0bbde2",
+    "report": "/Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak/reports/plan-0.5.0/phase2-action-audit/report.json",
+    "images": 2,
+    "pairs": 1,
+    "errors": 0,
+    "coverage": {
+      "splits": {
+        "train": {
+          "audited": 1,
+          "fingerprinted": 1,
+          "rejectedByCode": {},
+          "ignored": 0,
+          "unprocessed": 0
+        },
+        "validation": {
+          "audited": 0,
+          "fingerprinted": 0,
+          "rejectedByCode": {},
+          "ignored": 0,
+          "unprocessed": 0
+        },
+        "test": {
+          "audited": 1,
+          "fingerprinted": 1,
+          "rejectedByCode": {},
+          "ignored": 0,
+          "unprocessed": 0
+        },
+        "unknown": {
+          "audited": 0,
+          "fingerprinted": 0,
+          "rejectedByCode": {},
+          "ignored": 0,
+          "unprocessed": 0
+        }
+      },
+      "budgetExhaustion": [],
+      "enumerationComplete": true,
+      "rejectedOrErrorCount": 0,
+      "ignoredFiles": 0,
+      "unprocessedKnownFiles": 0,
+      "summary": "已审计 train 1 / validation 0 / test 1；拒收/错误 0；忽略 0；已发现但未审计 0；结论只覆盖已审计输入与已完成比较。"
+    },
+    "failOn": "pixel",
+    "matched": 1,
+    "evidenceCounts": {
+      "exact": 1,
+      "pixel": 0,
+      "candidate": 0
+    }
+  },
+  "remoteWorkflowExecuted": false
+}

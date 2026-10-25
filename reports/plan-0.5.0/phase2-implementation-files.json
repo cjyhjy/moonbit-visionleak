@@ -1,0 +1,112 @@
+[
+  {
+    "path": ".gitignore",
+    "bytes": 414,
+    "sha256": "d7ecc66562b81229efd33dd75357995bef6fafe09668b6e8ebf88dd64eb400d2"
+  },
+  {
+    "path": "core/cli_options.mbt",
+    "bytes": 9322,
+    "sha256": "e97eeef7eea33adc5a5f6442d59ee60916f579681b9e43031c26ae6cfdf308e6"
+  },
+  {
+    "path": "core/offline.mbt",
+    "bytes": 2333,
+    "sha256": "b0d9fd714b48c690a00966f29bbd66692fa63402bfd2237511f52f98c6e3c6a1"
+  },
+  {
+    "path": "core/pkg.generated.mbti",
+    "bytes": 1414,
+    "sha256": "477873d1c6080cf0b8110b7cd5db441ab3af7d25ca50ac3ec7ce750c2fadb29b"
+  },
+  {
+    "path": "core/workflow.mbt",
+    "bytes": 16528,
+    "sha256": "678bd063009e7717d14cd343739fda0c7cc8f1f8806ecb23815dd322ea4d7cfe"
+  },
+  {
+    "path": "core/workflow_wbtest.mbt",
+    "bytes": 13407,
+    "sha256": "d7cd7347a6ef239ee338e39b9251d35cc31e6ff4ac24815b07520510e59f00fd"
+  },
+  {
+    "path": "demo/app.mjs",
+    "bytes": 21590,
+    "sha256": "f03dab590889a8bae3e80878234a75b61aba4f3d80f27196c47b505a3b4414b4"
+  },
+  {
+    "path": "demo/index.html",
+    "bytes": 11658,
+    "sha256": "7fbc9ba91935c3067b2d0eea6c26b84a279a400db0860fa75f10ae8bc8a15dfa"
+  },
+  {
+    "path": "demo/review-validation.mjs",
+    "bytes": 5006,
+    "sha256": "a6a02a84da3eed7f0b47a67d65232e1ec4667f34af78137d3b62eb66c4b24522"
+  },
+  {
+    "path": "dist/visionleak.js",
+    "bytes": 484730,
+    "sha256": "73f480fb1b015576e44c187f4de22066fb2e29292f42db77f398dac07afb33ed"
+  },
+  {
+    "path": "examples/github-action/README.md",
+    "bytes": 985,
+    "sha256": "12d7038dca368492cdafdca9b1be1a3a9aaa94923b31b5e0b2cbdaf473a474ee"
+  },
+  {
+    "path": "examples/github-action/dataset/test/leaked.png",
+    "bytes": 102,
+    "sha256": "3ab2fe11874075fd8029d1a9d606d340f63ddab987be40b120aed721926c35ac"
+  },
+  {
+    "path": "examples/github-action/dataset/train/source.png",
+    "bytes": 102,
+    "sha256": "3ab2fe11874075fd8029d1a9d606d340f63ddab987be40b120aed721926c35ac"
+  },
+  {
+    "path": "examples/github-action/visionleak.yml",
+    "bytes": 895,
+    "sha256": "966f4252962484653f7c7326bba886707ce30394434a74786d8c0f9e8bbcc950"
+  },
+  {
+    "path": "tests/metric_reference.py",
+    "bytes": 3406,
+    "sha256": "8bc1101019ca9f79a261f6037fb583f10bf73ed033106e803a5fa1db2d327fc2"
+  },
+  {
+    "path": "tests/oracle-metrics.py",
+    "bytes": 4596,
+    "sha256": "4b156936e0f46eeeddb3e9cfb6d861f79a6ac390eab2a349d46026ade27740ec"
+  },
+  {
+    "path": "tests/phase2.test.mjs",
+    "bytes": 11520,
+    "sha256": "1b8e24a654bf4c129560385d616cfcdc85c4736d83d4958ca6d202f007992bad"
+  },
+  {
+    "path": "tools/cli.mjs",
+    "bytes": 17051,
+    "sha256": "6d8827afa4d72e0d44c6775a1b6a89134b7081b5b35fe67f36e3ac8a92d5b018"
+  },
+  {
+    "path": "tools/package.py",
+    "bytes": 5374,
+    "sha256": "02630d9cbedfa882cab483cc39d76a6c39757c9bf9a7db01c802507f70ae497c"
+  },
+  {
+    "path": "tools/report-tools.mjs",
+    "bytes": 11722,
+    "sha256": "e23aeb6751191c99fa67e9a06f29e2ead4181a12dac0b3bb78481d231fe9ff07"
+  },
+  {
+    "path": "tools/source-digest.mjs",
+    "bytes": 1310,
+    "sha256": "0f05caf02b7420b64dc336187f1b4ef47b72912e6163041d6b1e351ee3b30f05"
+  },
+  {
+    "path": "tools/workflow.mjs",
+    "bytes": 314,
+    "sha256": "31791582fd565f407b258908790b02da3ead141feb449fa5a33c56f44fabe89e"
+  }
+]

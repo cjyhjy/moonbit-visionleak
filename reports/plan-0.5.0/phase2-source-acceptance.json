@@ -1,0 +1,353 @@
+{
+  "schemaVersion": "visionleak-ci-v1",
+  "startedAt": "2026-10-25T10:38:34.072Z",
+  "status": "passed",
+  "environment": {
+    "node": "v26.7.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "moon": "moon 0.1.20261012 (748b63c 2026-10-12) ~/Documents/ChatGPT/黑客松新项目/projects/visionleak/.toolchain/bin/moon\nmoonc v0.10.15+943464bfa (2026-10-12) ~/Documents/ChatGPT/黑客松新项目/projects/visionleak/.toolchain/bin/moonc\nmoonrun 0.1.20261012 (748b63c 2026-10-12) ~/Documents/ChatGPT/黑客松新项目/projects/visionleak/.toolchain/bin/moonrun\n\nFeature flags enabled: rr_moon_mod,rr_moon_pkg"
+  },
+  "commit": null,
+  "runUrl": null,
+  "checks": [
+    {
+      "id": "toolchain",
+      "command": [
+        "./tools/moon",
+        "version",
+        "--all"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 24,
+      "log": "toolchain.log",
+      "archivedLog": "logs/phase2-final-toolchain.log"
+    },
+    {
+      "id": "format",
+      "command": [
+        "./tools/moon",
+        "fmt",
+        "--check"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 59,
+      "log": "format.log",
+      "archivedLog": "logs/phase2-final-format.log"
+    },
+    {
+      "id": "check-js",
+      "command": [
+        "./tools/moon",
+        "check",
+        "--target",
+        "js"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 63,
+      "log": "check-js.log",
+      "archivedLog": "logs/phase2-final-check-js.log"
+    },
+    {
+      "id": "build-js",
+      "command": [
+        "./tools/moon",
+        "build",
+        "--target",
+        "js",
+        "--release"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 18,
+      "log": "build-js.log",
+      "archivedLog": "logs/phase2-final-build-js.log"
+    },
+    {
+      "id": "test-js",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "js"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 1215,
+      "log": "test-js.log",
+      "archivedLog": "logs/phase2-final-test-js.log"
+    },
+    {
+      "id": "check-wasm-gc",
+      "command": [
+        "./tools/moon",
+        "check",
+        "--target",
+        "wasm-gc"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 74,
+      "log": "check-wasm-gc.log",
+      "archivedLog": "logs/phase2-final-check-wasm-gc.log"
+    },
+    {
+      "id": "build-wasm-gc",
+      "command": [
+        "./tools/moon",
+        "build",
+        "--target",
+        "wasm-gc",
+        "--release"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 127,
+      "log": "build-wasm-gc.log",
+      "archivedLog": "logs/phase2-final-build-wasm-gc.log"
+    },
+    {
+      "id": "test-wasm-gc",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "wasm-gc"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 1010,
+      "log": "test-wasm-gc.log",
+      "archivedLog": "logs/phase2-final-test-wasm-gc.log"
+    },
+    {
+      "id": "check-native",
+      "command": [
+        "./tools/moon",
+        "check",
+        "--target",
+        "native"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 74,
+      "log": "check-native.log",
+      "archivedLog": "logs/phase2-final-check-native.log"
+    },
+    {
+      "id": "build-native-test-executable",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "native",
+        "--release",
+        "--build-only"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 3010,
+      "log": "build-native-test-executable.log",
+      "archivedLog": "logs/phase2-final-build-native-test-executable.log"
+    },
+    {
+      "id": "test-native-release",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "native",
+        "--release"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 2207,
+      "log": "test-native-release.log",
+      "archivedLog": "logs/phase2-final-test-native-release.log"
+    },
+    {
+      "id": "test-native",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "native"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 2477,
+      "log": "test-native.log",
+      "archivedLog": "logs/phase2-final-test-native.log"
+    },
+    {
+      "id": "runtime-build",
+      "command": [
+        "node",
+        "tools/build.mjs"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 49,
+      "log": "runtime-build.log",
+      "archivedLog": "logs/phase2-final-runtime-build.log"
+    },
+    {
+      "id": "node-integration",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 2794,
+      "log": "node-integration.log",
+      "archivedLog": "logs/phase2-final-node-integration.log"
+    },
+    {
+      "id": "mooncakes-compatibility",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tests/mooncakes-dry-run.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 62,
+      "log": "mooncakes-compatibility.log",
+      "archivedLog": "logs/phase2-final-mooncakes-compatibility.log"
+    },
+    {
+      "id": "mooncakes-package",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tests/mooncakes-package.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 71,
+      "log": "mooncakes-package.log",
+      "archivedLog": "logs/phase2-final-mooncakes-package.log"
+    },
+    {
+      "id": "release-contract",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tests/release-contract.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 69,
+      "log": "release-contract.log",
+      "archivedLog": "logs/phase2-final-release-contract.log"
+    },
+    {
+      "id": "evaluation-compatibility",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tests/evaluation-compatibility.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 51,
+      "log": "evaluation-compatibility.log",
+      "archivedLog": "logs/phase2-final-evaluation-compatibility.log"
+    },
+    {
+      "id": "report-history",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tests/report-history.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 197,
+      "log": "report-history.log",
+      "archivedLog": "logs/phase2-final-report-history.log"
+    },
+    {
+      "id": "metric-regression",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tests/oracle-metrics.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 1025,
+      "log": "metric-regression.log",
+      "archivedLog": "logs/phase2-final-metric-regression.log"
+    },
+    {
+      "id": "imagehash-oracle",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tools/evaluate.py",
+        "--out",
+        ".ci-artifacts/evaluation.json"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 3185,
+      "log": "imagehash-oracle.log",
+      "archivedLog": "logs/phase2-final-imagehash-oracle.log"
+    },
+    {
+      "id": "mirror-oracle",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tools/evaluate-mirrors.py",
+        "--out",
+        ".ci-artifacts/mirror-evaluation.json"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 1617,
+      "log": "mirror-oracle.log",
+      "archivedLog": "logs/phase2-final-mirror-oracle.log"
+    },
+    {
+      "id": "photo-development",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tools/evaluate-photos.py",
+        "--partition",
+        "development",
+        "--out",
+        ".ci-artifacts/photos-development",
+        "--include-orientations",
+        "--replace"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 14717,
+      "log": "photo-development.log",
+      "archivedLog": "logs/phase2-final-photo-development.log"
+    },
+    {
+      "id": "photo-holdout",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tools/evaluate-photos.py",
+        "--partition",
+        "holdout",
+        "--out",
+        ".ci-artifacts/photos-holdout",
+        "--include-orientations",
+        "--replace"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 14033,
+      "log": "photo-holdout.log",
+      "archivedLog": "logs/phase2-final-photo-holdout.log"
+    }
+  ],
+  "scope": "Fresh source build, three MoonBit backends, Node CLI/HTTP, independent ImageHash and exhaustive index oracle. Browser screenshots and ZIP reports remain historical.",
+  "sourceDigest": "dabe011b7bec042c202b1c2e67d15a0d141b4b5aee2cdcad2d24bd355fbc94a1",
+  "compiledArtifact": {
+    "sha256": "73f480fb1b015576e44c187f4de22066fb2e29292f42db77f398dac07afb33ed",
+    "matchesCommitted": true
+  },
+  "finishedAt": "2026-10-25T10:39:22.379Z"
+}

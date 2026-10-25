@@ -1,0 +1,44 @@
+[
+  {
+    "path": "demo/qa/phase2-offline.html",
+    "bytes": 3598264,
+    "sha256": "e1f62b284f22a63aa493bb37474b96a822bfa3625d438eb6db233e4731ca30ab",
+    "gitTracked": false
+  },
+  {
+    "path": "demo/qa/phase2-offline-bounded.html",
+    "bytes": 3515,
+    "sha256": "e063b33a7529cf2a1057fa601f7968af51b04d039bd1ee8595c153852e5935d4",
+    "gitTracked": false
+  },
+  {
+    "path": "demo/qa/phase2-offline-desktop.png",
+    "bytes": 297434,
+    "sha256": "2766c6a6a5f035870a18d0ab4915f1cbf2eb4ee4d03ff27009278c834ec18a31",
+    "gitTracked": true
+  },
+  {
+    "path": "demo/qa/phase2-workbench-desktop.png",
+    "bytes": 241209,
+    "sha256": "f1a4dcd33dccd70f405191ee0f9ee191396ff502e4695d72afeef2f7a2be5fe7",
+    "gitTracked": true
+  },
+  {
+    "path": "demo/qa/phase2-workbench-mobile.png",
+    "bytes": 203784,
+    "sha256": "9c73ceaa196b64406b225b8576440f55b294b05650f9c9f7e2e1c438bff85fb0",
+    "gitTracked": true
+  },
+  {
+    "path": "demo/qa/phase2-review.json",
+    "bytes": 474,
+    "sha256": "e1b730c6b6683e30cbc61c22878a9e479d5c4204ce0a346887f3e0654dd11076",
+    "gitTracked": true
+  },
+  {
+    "path": "demo/qa/phase2-fixes.csv",
+    "bytes": 2439,
+    "sha256": "f13ba2bc6b8c50a7a04e63adb950aeb9a93cf7cbc77b726371c204d79ae92db8",
+    "gitTracked": true
+  }
+]
