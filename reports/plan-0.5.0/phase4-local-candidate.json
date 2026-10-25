@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "visionleak-local-release-candidate-v1",
+  "createdAt": "2026-10-25T17:23:31.864796+00:00",
+  "version": "0.5.0",
+  "status": "local-ready-publication-pending-approval",
+  "sourceDigest": "ca9a67ea34841a9467665ff0d699bf6300e98e74b1f221f7befc76e4d1ae8d56",
+  "sourceVerification": {
+    "status": "passed",
+    "checks": 23,
+    "path": "reports/verification.json"
+  },
+  "archive": {
+    "path": "release/visionleak-0.5.0.zip",
+    "sha256": "a00973bd6324090c32535cda65bd00d124a5fe4201da6f19eba2e914f8f0c820",
+    "bytes": 24978689,
+    "files": 955
+  },
+  "cleanAcceptance": {
+    "status": "passed",
+    "checks": 23,
+    "path": "reports/release-verification.json"
+  },
+  "mooncakesCore": "reports/plan-0.5.0/phase4-core-package.json",
+  "primaryLanguage": "MoonBit",
+  "publication": {
+    "pushed": false,
+    "formallyPublished": false,
+    "npmPrivate": true,
+    "approvalRequirement": "docs/plan-0.5.0.md phase 4 items 3 and 4"
+  },
+  "review": "Codex implementation self-review; not independent Claude review",
+  "localCommits": [
+    "c3dee59e90247d97f026fe1b6dfcdc8cde6cc47d feat(visionleak): add bounded local crop candidates in MoonBit",
+    "7dc1da1e6ed5f32c7f750f23990ffe7943fda10d test(visionleak): freeze licensed crop evaluation and resource evidence",
+    "2a10683c3cf6584ac339e31dfc57b5945f815515 docs(visionleak): document crop evidence limits and phase three acceptance",
+    "293667def7f9901a56c912c46820998c32ec7167 fix(visionleak): resolve frozen baselines from immutable archives",
+    "07e2817a9f23cad094a159b4f89876584c093a4d build(visionleak): prepare verified 0.5.0 local delivery candidate"
+  ]
+}
