@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "requiredChanges": [
+    "M0-1",
+    "M0-2",
+    "M0-3"
+  ],
+  "ciChecks": 24,
+  "sourceDigest": "7a77c4e01c72755622e4b40025bc222bc4dd347f62c91c2d3248a1bb3e2f503b",
+  "package": {
+    "bytes": 24490,
+    "sha256": "f61ba82c5f5033e2c6252b027b8e031bca277bece53cfc531e7ddc24e90c74e1",
+    "entries": [
+      "moon.mod",
+      "core/moon.pkg",
+      "core/sha256.mbt",
+      "core/cli_options.mbt",
+      "core/audit.mbt",
+      "core/sampling.mbt",
+      "core/pkg.generated.mbti",
+      "core/pixel_stream.mbt",
+      "core/review_validation.mbt",
+      "core/json_helpers.mbt",
+      "core/report_identity.mbt",
+      "core/metrics.mbt",
+      "core/fingerprint.mbt",
+      "LICENSE",
+      "README.md"
+    ],
+    "dryRunExitCode": 0,
+    "dryRunLog": "logs/m0-small-package-dry-run-final.log"
+  },
+  "metrics": "Every tools/evaluate.score call compares every field of MoonBit product metrics with tests/metric_reference.py independent set arithmetic. All evaluation modes import this shared entry.",
+  "packagingDeviation": "Pinned new-format moon.mod rejects include/exclude keys. Uses the officially supported .moonignore whitelist; negative parser logs retained.",
+  "commitScope": "Only projects/visionleak paths; local commits, no push or history rewrite."
+}

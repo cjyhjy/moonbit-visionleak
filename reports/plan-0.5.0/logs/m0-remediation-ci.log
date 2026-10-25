@@ -1,0 +1,22 @@
+
+> visionleak@0.4.0 verify:ci
+> node tools/ci.mjs
+
+moon 0.1.20261012 (748b63c 2026-10-12) ~/Documents/ChatGPT/黑客松新项目/projects/visionleak/.toolchain/bin/moon
+moonc v0.10.15+943464bfa (2026-10-12) ~/Documents/ChatGPT/黑客松新项目/projects/visionleak/.toolchain/bin/moonc
+moonrun 0.1.20261012 (748b63c 2026-10-12) ~/Documents/ChatGPT/黑客松新项目/projects/visionleak/.toolchain/bin/moonrun
+
+Feature flags enabled: rr_moon_mod,rr_moon_pkg
+[1mdiff --git "a/Users/cjy/Documents/ChatGPT/\351\273\221\345\256\242\346\235\276\346\226\260\351\241\271\347\233\256/projects/visionleak/moon.mod" "b/Users/cjy/Documents/ChatGPT/\351\273\221\345\256\242\346\235\276\346\226\260\351\241\271\347\233\256/projects/visionleak/_build/wasm-gc/release/format/moon.mod"[m
+[1mindex a17f88a..f3ba6c9 100644[m
+[1m--- "a/Users/cjy/Documents/ChatGPT/\351\273\221\345\256\242\346\235\276\346\226\260\351\241\271\347\233\256/projects/visionleak/moon.mod"[m
+[1m+++ "b/Users/cjy/Documents/ChatGPT/\351\273\221\345\256\242\346\235\276\346\226\260\351\241\271\347\233\256/projects/visionleak/_build/wasm-gc/release/format/moon.mod"[m
+[36m@@ -15,4 +15,3 @@[m [mrepository = "https://github.com/cjyhjy/moonbit-visionleak"[m
+ readme = "README.md"[m
+ [m
+ keywords = [ "image", "dataset", "audit", "duplicate" ][m
+[31m-[m
+failed to execute `git --no-pager diff --color=always --no-index ./moon.mod ./_build/wasm-gc/release/format/moon.mod`
+Failed with 0 warnings, 0 errors.
+Error: failed when formatting project
+CI acceptance: failed; .ci-artifacts/verification.json

@@ -51,3 +51,36 @@
 ## 2026-10-25 dry-run 退出码修复追加
 
 固定发布器只接受 HTTP 200，已用本地模拟证实成功 202 响应被误判为失败。项目入口增加针对已知版本和明确成功预演响应的兼容处理；真实服务复验退出 0，401/500 继续退出 255。新增错误边界测试纳入 CI，23 项完整检查通过。详见 mooncakes-exit-fix.md、mooncakes-exit-fix.json 和 mooncakes-fix-ci.json。新源码摘要为 6180b1f71f6f250dd6ccc48c92d2c4cb09ec9cfdc7c5c59802ca36be97bbf4a9，编译产物与核心检测行为未变。此追加不代表 Claude 验收。
+
+
+## 2026-10-25 验收必改 M0-1–M0-3 完成追加
+
+依据 review-0.md 的本地提交授权与 review-1.md 的通过结论，三项必改均已完成，以下记录追加后才进入第 2 阶段。没有推送或改写历史；每笔提交前均检查 `git diff --cached --stat`，暂存路径全部限定在 `projects/visionleak/`。
+
+- **M0-1**：现有实现与历史交付/证据分组落地为本地提交；未伪造逐版本开发时间线。既有未提交改动形成两笔可复核快照，两项修复分别独立提交。探测脚本保留为 `.txt` 附件，原 `.py` 留本地且不进入 Git。
+- **M0-2**：新增 `tests/metric_reference.py`，只用 Python 集合计算，不调用 MoonBit。每次 `tools/evaluate.py::score()` 调用都将 MoonBit 产品输出与其逐字段、逐配对列表比对，任一不同立即失败。合成、镜像、照片及阈值扫描共用该入口。7 个指标测试覆盖空分母、挑战组、反向配对、重复预测和逐字段损坏。
+- **M0-3**：`.moonignore` 使用默认排除的白名单，包缩为 **24,490 B、15 项**，仅 MoonBit 核心、接口/包元数据、README、LICENSE；小于 1 MB。精简包真实 dry-run 退出 **0**。固定新版 `moon.mod` 实测不支持 include/exclude 字段，因此采用其支持的 `.moonignore`，失败解析日志保留，未更换工具链。
+
+完整 `npm run verify:ci` **24 项通过**，三后端及 native release 各 65/65、Node 35/35；新增包检查、独立指标核对及原有历史/图像回归均通过。核心编译产物未变。证据：m0-remediation.json、m0-remediation-ci.json、logs/m0-final-*、logs/m0-small-package-dry-run-final.log。此前格式检查发现多余空行，修正后完整重跑通过；失败日志保留。
+
+### 本次实现与修复 commit 列表（本追加前）
+
+- `e9b3a061e36911374b1e97541a9a2d8f3cf96ce2` — feat(visionleak): migrate audit contracts and support full-resolution images
+- `4ae5222c8075613736aa08af1b5e199b9e032c2a` — test(visionleak): preserve photo baselines and phase acceptance evidence
+- `94257ae01b0839a8b2f42a38dfaf16e5ee3d8da2` — fix(visionleak): cross-check metrics with an independent Python oracle
+- `12799e94c91bf916636cfd27d2150edddd297d8b` — build(visionleak): restrict Mooncakes package to the reusable core
+
+### 语言统计
+
+| 语言 | 字节 |
+|---|---:|
+| MoonBit | 129,114 |
+| JavaScript | 125,378 |
+| Python | 113,076 |
+| CSS | 23,299 |
+| HTML | 11,238 |
+| Shell | 778 |
+
+MoonBit 最大。其中 `.mbt` 为 127,740 B，生成的 `.mbti` 为 1,374 B；即使不计接口文件，MoonBit 仍大于 JavaScript。方法与完整文件表见 languages-m0-remediation.json，不冒充远端 GitHub 语言统计。
+
+当前源码摘要：`7a77c4e01c72755622e4b40025bc222bc4dd347f62c91c2d3248a1bb3e2f503b`。M0 条件满足，第 2 阶段按修订计划开始；本记录不冒充新的 Claude 验收结论。
