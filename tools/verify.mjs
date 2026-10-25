@@ -34,6 +34,11 @@ try{
   const py='research/.venv-oracle/bin/python';
   if(!existsSync(new URL('../'+py,import.meta.url)))throw new Error('Oracle venv absent; see docs/reproducibility.md');
   run('metric-regression',py,['tests/oracle-metrics.py']);
+  run('crop-reference',py,['tests/crop-reference.py']);
+  run('mooncakes-package',py,['tests/mooncakes-package.py']);
+  run('mooncakes-compatibility',py,['tests/mooncakes-dry-run.py']);
+  run('report-history',py,['tests/report-history.py']);
+  run('evaluation-compatibility',py,['tests/evaluation-compatibility.py']);
   run('imagehash-oracle',py,['tools/evaluate.py']);
   run('mirror-oracle',py,['tools/evaluate-mirrors.py']);
   for(const partition of ['development','holdout']) run(`photo-${partition}`,py,['tools/evaluate-photos.py','--partition',partition,'--out',`reports/photos-v1/current-${partition}`,'--include-orientations','--replace']);
@@ -48,6 +53,7 @@ try{
   if(!existsSync(demoQa))throw new Error('Browser QA record missing: demo/qa/verification.json');
   report.browser=JSON.parse(readFileSync(demoQa,'utf8'));
   if(report.browser.status!=='passed')throw new Error('Browser QA must be passed before release verification');
+  if(report.browser.coreArtifactSha256!==createHash('sha256').update(readFileSync(new URL('../dist/visionleak.js',import.meta.url))).digest('hex'))throw new Error('Browser-tested core artifact changed');
   for(const name of ['demo/index.html','demo/styles.css','demo/app.mjs','demo/review-validation.mjs','demo/report-identity.mjs','demo/review-workflow.mjs']){
     const actual=createHash('sha256').update(readFileSync(new URL('../'+name,import.meta.url))).digest('hex');
     if(report.browser.sourceHashes?.[name]!==actual)throw new Error(`Browser-tested source changed: ${name}`);
@@ -61,14 +67,19 @@ try{
   const photoReport=JSON.parse(readFileSync(new URL('../reports/photos-demo/report.json',import.meta.url)));
   const photoEval=JSON.parse(readFileSync(new URL('../reports/photos-v1/current-holdout/evaluation.json',import.meta.url)));
   if(report.browser.photoAuditId!==photoReport.auditId||photoReport.auditId!==photoEval.modes.orientations.auditId) throw new Error('Photo browser/demo/evaluation identity differs');
+  report.cropEvaluation={development:'reports/plan-0.5.0/crops-development/evaluation.json',holdout:'reports/plan-0.5.0/crops-holdout/evaluation.json',scale:'reports/plan-0.5.0/scale-phase3-final/results.json',freeze:'research/photos-v2/freeze-0.5.0.json'};
   report.photos={summary:'reports/photos-v1/summary.json',development:'reports/photos-v1/current-development/evaluation.json',holdout:'reports/photos-v1/current-holdout/evaluation.json',scope:'Ten licensed photos with controlled transforms; natural contamination untested.'};
   report.evidenceDigests={};
   for(const name of ['reports/evaluation.json','reports/evaluation.md','reports/evaluation-audit.json','reports/evaluation-oracle.json','reports/performance.json','reports/demo/report.json','demo/qa/verification.json','reports/core-optimization.json','reports/mirror-evaluation.json','reports/mirror-evaluation-audit.json','reports/mirror-demo/report.json','research/baselines/visionleak-0.1.0.mjs','research/baselines/visionleak-0.3.0.mjs','reports/photos-demo/report.json','reports/photos-v1/summary.json','reports/photos-v1/summary.md',...['baseline-development','baseline-holdout','current-development','current-holdout'].flatMap(folder=>['evaluation.json','default-audit.json','mirrors-audit.json',...(folder.startsWith('current')?['orientations-audit.json']:[])].map(name=>`reports/photos-v1/${folder}/${name}`))]){
     report.evidenceDigests[name]=createHash('sha256').update(readFileSync(new URL('../'+name,import.meta.url))).digest('hex');
   }
+  for(const name of ['reports/plan-0.5.0/crops-development/evaluation.json','reports/plan-0.5.0/crops-development/ground-truth.json','reports/plan-0.5.0/crops-development/crops-audit.json','reports/plan-0.5.0/crops-development/default-audit.json','reports/plan-0.5.0/crops-holdout/evaluation.json','reports/plan-0.5.0/crops-holdout/ground-truth.json','reports/plan-0.5.0/crops-holdout/crops-audit.json','reports/plan-0.5.0/crops-holdout/default-audit.json','reports/plan-0.5.0/scale-phase3-final/results.json','reports/plan-0.5.0/phase3-browser.json','research/photos-v2/freeze-0.5.0.json']) report.evidenceDigests[name]=createHash('sha256').update(readFileSync(new URL('../'+name,import.meta.url))).digest('hex');
+  for(const shot of report.browser.screenshots||[]){const actual=createHash('sha256').update(readFileSync(new URL('../'+shot.path,import.meta.url))).digest('hex');if(actual!==shot.sha256)throw new Error('Browser screenshot changed: '+shot.path);report.evidenceDigests[shot.path]=actual;}
+  const archivedBaselines=JSON.parse(readFileSync(new URL('../research/photos-v1/freeze/archive-locations.json',import.meta.url)));
+  for(const name of Object.values(archivedBaselines).flatMap(version=>Object.values(version))) report.evidenceDigests[name]=createHash('sha256').update(readFileSync(new URL('../'+name,import.meta.url))).digest('hex');
   report.sourceDigest=sourceDigest(root);
   if(report.sourceDigest!==initialSourceDigest)throw new Error('Behavioral source changed during verification; rerun after edits finish');
-  report.sourceDigestScope='core/tools/tests/demo/fixtures and research/photos-v1 except demo/qa and caches, plus module/package/oracle/toolchain lock files, pinned runtime versions and .github workflows';
+  report.sourceDigestScope='core/tools/tests/demo/fixtures and research/photos-v1, research/photos-v2, examples except demo/qa and caches, plus module/package/oracle/toolchain lock files, pinned runtime versions and .github workflows';
   report.compiledArtifact={path:'dist/visionleak.js',sha256:createHash('sha256').update(readFileSync(new URL('../dist/visionleak.js',import.meta.url))).digest('hex')};
   report.cleanCopy={status:'see-release-attestation',path:'reports/release-verification.json',note:'The final ZIP checksum and extracted-copy execution are recorded outside the archive to avoid a self-referential checksum.'};
   report.status='passed';

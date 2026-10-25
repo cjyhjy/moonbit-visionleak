@@ -1,0 +1,273 @@
+{
+  "schemaVersion": "visionleak-verification-v1",
+  "status": "failed",
+  "startedAt": "2026-10-25T17:10:46.393Z",
+  "dateTimezone": "America/New_York",
+  "checks": [
+    {
+      "id": "toolchain",
+      "command": [
+        "./tools/moon",
+        "version",
+        "--all"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 56,
+      "log": "reports/logs/toolchain.log"
+    },
+    {
+      "id": "build",
+      "command": [
+        "node",
+        "tools/build.mjs"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 70,
+      "log": "reports/logs/build.log"
+    },
+    {
+      "id": "moon-js",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "js"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 1049,
+      "log": "reports/logs/moon-js.log"
+    },
+    {
+      "id": "moon-wasm-gc",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "wasm-gc"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 770,
+      "log": "reports/logs/moon-wasm-gc.log"
+    },
+    {
+      "id": "moon-native",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "native"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 1613,
+      "log": "reports/logs/moon-native.log"
+    },
+    {
+      "id": "native-release-build",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "native",
+        "--release",
+        "--build-only"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 35,
+      "log": "reports/logs/native-release-build.log"
+    },
+    {
+      "id": "native-release-run",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "native",
+        "--release"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 316,
+      "log": "reports/logs/native-release-run.log"
+    },
+    {
+      "id": "format",
+      "command": [
+        "./tools/moon",
+        "fmt",
+        "--check"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 32,
+      "log": "reports/logs/format.log"
+    },
+    {
+      "id": "node-integration",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 2834,
+      "log": "reports/logs/node-integration.log"
+    },
+    {
+      "id": "metric-regression",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tests/oracle-metrics.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 1018,
+      "log": "reports/logs/metric-regression.log"
+    },
+    {
+      "id": "crop-reference",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tests/crop-reference.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 296,
+      "log": "reports/logs/crop-reference.log"
+    },
+    {
+      "id": "mooncakes-package",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tests/mooncakes-package.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 66,
+      "log": "reports/logs/mooncakes-package.log"
+    },
+    {
+      "id": "mooncakes-compatibility",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tests/mooncakes-dry-run.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 32,
+      "log": "reports/logs/mooncakes-compatibility.log"
+    },
+    {
+      "id": "report-history",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tests/report-history.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 253,
+      "log": "reports/logs/report-history.log"
+    },
+    {
+      "id": "evaluation-compatibility",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tests/evaluation-compatibility.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 49,
+      "log": "reports/logs/evaluation-compatibility.log"
+    },
+    {
+      "id": "imagehash-oracle",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tools/evaluate.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 3137,
+      "log": "reports/logs/imagehash-oracle.log"
+    },
+    {
+      "id": "mirror-oracle",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tools/evaluate-mirrors.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 1622,
+      "log": "reports/logs/mirror-oracle.log"
+    },
+    {
+      "id": "photo-development",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tools/evaluate-photos.py",
+        "--partition",
+        "development",
+        "--out",
+        "reports/photos-v1/current-development",
+        "--include-orientations",
+        "--replace"
+      ],
+      "status": "failed",
+      "exitCode": 1,
+      "elapsedMs": 14336,
+      "log": "reports/logs/photo-development.log"
+    }
+  ],
+  "keyFiles": [
+    "DELIVERY.md",
+    "README.md",
+    "core/audit.mbt",
+    "core/fingerprint.mbt",
+    "core/sha256.mbt",
+    "dist/visionleak.js",
+    "tools/cli.mjs",
+    "demo/index.html",
+    "reports/evaluation.json",
+    "research/comparison.md"
+  ],
+  "release": {
+    "archive": "release/visionleak-0.5.0.zip",
+    "checksumFile": "release/SHA256SUMS",
+    "attestation": "reports/release-verification.json",
+    "commands": [
+      [
+        "python3",
+        "tools/package.py"
+      ],
+      [
+        "python3",
+        "tools/accept-release.py"
+      ]
+    ],
+    "status": "read-final-attestation",
+    "note": "Final archive checksum and acceptance status are outside the ZIP to avoid self-reference."
+  },
+  "notTested": [
+    "Naturally occurring contamination in a real licensed image dataset",
+    "Windows/Linux runtime acceptance",
+    "FiftyOne or MoonSplit runtime/performance comparison",
+    "Public hosting, publication and formal contest submission"
+  ],
+  "publication": {
+    "scope": "This local verification does not query or change external publication or contest submission status."
+  },
+  "environment": {
+    "node": "v26.7.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "moon": "moon 0.1.20261012 (748b63c 2026-10-12) ./.toolchain/bin/moon\nmoonc v0.10.15+943464bfa (2026-10-12) ./.toolchain/bin/moonc\nmoonrun 0.1.20261012 (748b63c 2026-10-12) ./.toolchain/bin/moonrun\n\nFeature flags enabled: rr_moon_mod,rr_moon_pkg"
+  },
+  "error": "photo-development failed; see reports/logs/photo-development.log",
+  "finishedAt": "2026-10-25T17:11:14.040Z"
+}

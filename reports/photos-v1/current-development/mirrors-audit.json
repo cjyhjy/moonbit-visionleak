@@ -9,7 +9,7 @@
   },
   "engine": {
     "name": "visionleak-moonbit",
-    "artifactDigest": "86a74558178474cc22591e1e4da38cc8a0b547c7c39ec3b9d9282d9736093bcb"
+    "artifactDigest": "505893ee6fc69a95446826cefc4c7941ab44098a982d33a979cf245b7b135e73"
   },
   "ok": true,
   "complete": true,
@@ -902,13 +902,15 @@
   "options": {
     "threshold": 6,
     "maxImages": 1000,
+    "maxDecodePixels": 64000000,
     "maxPixels": 4194304,
     "maxTotalPixels": 100000000,
     "maxFileBytes": 33554432,
     "maxComparisons": 1000000,
     "maxPairs": 10000,
     "includeMirrors": true,
-    "includeRotations": false
+    "includeRotations": false,
+    "includeCrops": false
   },
   "stats": {
     "inputImages": 50,
@@ -927,6 +929,12 @@
       "split": "test",
       "byteDigest": "4dc606b6e2ac44d2e205464b04f88d9e8f776c055f52d7d549f8d69f93d71c0f",
       "pixelDigest": "601bdee6dc057ee49827a8d0f30bf516bbf8a4aaecb3d6021d68b514a916bbb0",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "1101110110001101101111010000110110011101001100101001010110100110",
       "dhashMirror": "0100010001001110010000100100111101100110101100110101011010011010",
       "width": 256,
@@ -942,6 +950,12 @@
       "split": "test",
       "byteDigest": "35104b000dbc1b242d19203de6c8be1077cafe367723a8bca39e7f21657d9122",
       "pixelDigest": "ef4a363df04a0422275160d7070a985b5b4160be607465956cd6c5333033b6a7",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "1101110110001101101111010000110110011101001100101001010110100110",
       "dhashMirror": "0100010001001110010000100100111101100110101100110101011010011010",
       "width": 256,
@@ -957,6 +971,12 @@
       "split": "test",
       "byteDigest": "21c420598344fe1012d5e28c55b3d13d6b4a026e5d045697999ad1b457500c60",
       "pixelDigest": "b94d4b72a804fa8abc77e1ce5bc4642eb64d795e10c9be368f11edeb0760687f",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "1000110110101101101110010000110110011101010100100101000110010100",
       "dhashMirror": "0100111001001010011000100100011101000110101101010111010111010110",
       "width": 256,
@@ -972,6 +992,12 @@
       "split": "test",
       "byteDigest": "ee6b0fa7791c22b93f322a96d71ad3514a760be1f03285ffc63ddc89e8a4e1c8",
       "pixelDigest": "17658c3c976555a6d59a4ee9b5995a20c7dd33de143f25c6771532c5a508b07a",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "1101110110001101101111010000110110011101001100101001010110100110",
       "dhashMirror": "0100010001001110010000100100111101100110101100110101011010011010",
       "width": 256,
@@ -987,6 +1013,12 @@
       "split": "test",
       "byteDigest": "aba62428e86e913b9c24c23a88d4371fea00d7bf585abff22037447983f03db4",
       "pixelDigest": "d504e6c553b3b2e8856d885e243f904c16e00948654df3c1ad7a56501d6ab9b1",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "1100010000100100011000000100110001011100010110010101000101101100",
       "dhashMirror": "1101110011011011111110011100110111000100011001010111010111001001",
       "width": 256,
@@ -1002,6 +1034,12 @@
       "split": "test",
       "byteDigest": "af3b735b8877bdd969b87d71cec709e159e37892c3c6907f4e78769ffe852b1c",
       "pixelDigest": "ad29774c541b5172fbb24d1a1c300466a1430fc2509de4e61f7ce0fcd71767b2",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "0100010111101111010010100110110110101010101010101010101000101101",
       "dhashMirror": "0101000000001000101011010000100110101010101010101010101101001011",
       "width": 256,
@@ -1017,6 +1055,12 @@
       "split": "test",
       "byteDigest": "c6c455db838960a2ca63f8dd3ec7370f768482b040e78829db83795f559cd27f",
       "pixelDigest": "1114b19f21ddc60758f9643ff44e421f2107c8ad678ca57366aeef3f7a25daa1",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "0101010111101101010010100110110110101010101010101010101000101101",
       "dhashMirror": "0001000000001000100011010000100100101010101010101010101101001011",
       "width": 256,
@@ -1032,6 +1076,12 @@
       "split": "test",
       "byteDigest": "cb67c35fe5a0616408ef1bf511e05e6fde714d71466fcf7f69be99af03b1e04e",
       "pixelDigest": "af1b59a7b68dab3d246224113ac2bc8d111d0fb711e1492605d9f37fdae47c4c",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "0110100010101101101010101010101000101010001011010010110101001100",
       "dhashMirror": "1000101001001010001010101010101010101011010010010100101001001101",
       "width": 256,
@@ -1047,6 +1097,12 @@
       "split": "test",
       "byteDigest": "aa992f1cdeaeb8820a5286f82d7a74376f4d6196fec4578d2d12057a907c127b",
       "pixelDigest": "384c4d18b1bb94b211c948db0d3e827b5f3f96863ef97cdda304b3e7fd1a68da",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "0100011111101101010010100110110110101010101010101010101000101101",
       "dhashMirror": "0001000000001000100011010000100100101010101010101010101101001011",
       "width": 256,
@@ -1062,6 +1118,12 @@
       "split": "test",
       "byteDigest": "59daf2b2d209a59ce862625fd772ed1e4e7b3667105fec0534a337575d1740fd",
       "pixelDigest": "f50c5009b97f52b8585d4d09d98410675c8e5dbfbc20be5b663831097049245f",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "0010001000101000010101011000111111010101001010011010100111000010",
       "dhashMirror": "0101001001101010010101000000111001010100001010011010001010010100",
       "width": 256,
@@ -1077,6 +1139,12 @@
       "split": "test",
       "byteDigest": "d9ed6d60cc7d4040af3a1d6487c5e3213ac4f77cacd4235ef5d7b71a916ae579",
       "pixelDigest": "d3a2cca355547d1b2f98126dbb4214ae7893b3fb2e7f16a90346966861c32139",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 170,
+        "downsampled": false
+      },
       "dhash": "0101010000010100010110101001101010101001010010111000011110000111",
       "dhashMirror": "1101010111010111101001011010011001101010001011010001111000001110",
       "width": 256,
@@ -1092,6 +1160,12 @@
       "split": "test",
       "byteDigest": "7c68be3d803c53395704d786525cc61f273ee75040eb680bd6740b937015b41b",
       "pixelDigest": "bc678b6d8bfedea4b166680c4e1a1fb9f7347eeddfb0ca63017f2ffdd8bc0e6d",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 170,
+        "downsampled": false
+      },
       "dhash": "0101010000010100010110101001101010101001010010111000011110000111",
       "dhashMirror": "1101010111010111101001011010011001101010001011010001111000001110",
       "width": 256,
@@ -1107,6 +1181,12 @@
       "split": "test",
       "byteDigest": "e33c0e38470e712a6d5384313a7165af91c37c27beaafa5e37faf38bcd9e4ead",
       "pixelDigest": "c09d9548c2219522d5d9caec1c0dea4fe2ecde66003a455bdcef4941c82abcd3",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 170,
+        "downsampled": false
+      },
       "dhash": "1001011000010100010110101001101010101010010010110100011110000110",
       "dhashMirror": "1001011011010101101001011010011010101010001011010001110100011110",
       "width": 256,
@@ -1122,6 +1202,12 @@
       "split": "test",
       "byteDigest": "3f4df0fa4ce8455d0c5014884921195779ca38d89cdf6b90ba2c82176476a516",
       "pixelDigest": "b3416d1e9ee32300bc63fed24e7a6fa1d7452224778084798732c3a9170fd040",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 170,
+        "downsampled": false
+      },
       "dhash": "0101010000010100010110101001101010101001010010111000011110000111",
       "dhashMirror": "1101010111010111101001011010011001101010001011010001111000001110",
       "width": 256,
@@ -1137,6 +1223,12 @@
       "split": "test",
       "byteDigest": "d45f6115a7d63dc1c47b4b6230f9f1dd1e15206a8e8d6ff50d5afbf23a0fcdff",
       "pixelDigest": "e5cf3eba3a5c335220593f70d80cb53b52516d022216f9f030697b2ad8bc1d93",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 170,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "1101010001110101010010111111000100011110010001011011011111001101",
       "dhashMirror": "1101010001010001001011000111000010000110010001010001001001001100",
       "width": 170,
@@ -1152,6 +1244,12 @@
       "split": "test",
       "byteDigest": "85abb11066dc8cf7bcb7c46ebcc1260f4a61f34949a4b4c0f14fdb1539cbc317",
       "pixelDigest": "b22982e4ee5962a8cc8a3f145761cd99210400ea9fdea7797dbae676bf2c2a86",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 171,
+        "downsampled": false
+      },
       "dhash": "1111001111111001010110010011001100010110001010110000111100010110",
       "dhashMirror": "0011000001100000001001010011001110010111000010110000111110010011",
       "width": 256,
@@ -1167,6 +1265,12 @@
       "split": "test",
       "byteDigest": "cf41a81efbd79898d0b66c9d9616ecb046aa16353d280b41bcbf71f95e477897",
       "pixelDigest": "ca626d71e0495598e2b34f7f124ea3217c368edc690366998a1a1321b15fa118",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 171,
+        "downsampled": false
+      },
       "dhash": "1111001111101001010110010011001100010110001010110000111100010110",
       "dhashMirror": "0011000001100000001001010011001110010111000010110000111110010111",
       "width": 256,
@@ -1182,6 +1286,12 @@
       "split": "test",
       "byteDigest": "8cc7b187cf4c23e5dccb73269f50baff65952decfb02a2a5c67fc2f4c394bbba",
       "pixelDigest": "b87431c65e77a6c14286b4b32ae66f71ca9609cde968cc353d260f8a8c971686",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 171,
+        "downsampled": false
+      },
       "dhash": "1111001111001001010110010110001100010110001010110000111100011011",
       "dhashMirror": "0011000001100100011001010011100110010111001010110000111100100111",
       "width": 256,
@@ -1197,6 +1307,12 @@
       "split": "test",
       "byteDigest": "4c09b4fb476d382df04a4b67f1835b58139e513fae492b08a545b896e0506698",
       "pixelDigest": "0f06cafa8843e1d63559bd4a6c0b16b96c8ca744866fe0ce3ff61176f85e40da",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 171,
+        "downsampled": false
+      },
       "dhash": "1111001111101001010110010011001100010110001010110000111100010110",
       "dhashMirror": "0011000001100000001001010011001110010111000010110000111110010011",
       "width": 256,
@@ -1212,6 +1328,12 @@
       "split": "test",
       "byteDigest": "a6678c1b53f1f3cb9e804d4de21ba08631dc440f56e62e650d8886f48e833b6f",
       "pixelDigest": "0d5cd2d086b4eb6418095c017398999177c7db55a2639b1e2fe517ad4a4a7ee3",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 171,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "0100010100100011110000001010010100100001100000101000001111110111",
       "dhashMirror": "0101110100111011111111000101101001111010101111100010111000010000",
       "width": 171,
@@ -1227,6 +1349,12 @@
       "split": "test",
       "byteDigest": "c93833efda459bdfdfd542647a02dd5ba430a3227c860c13e0c8f0df72ccf62d",
       "pixelDigest": "9af8a934cb18893ecce2f492000c2c95e60bfac5fbf7071b9053bf7f39b49051",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "1101110110010101101010000110110110110101111011011111000110101010",
       "dhashMirror": "0100010001010010111010100100100100010010010010000111000010001010",
       "width": 256,
@@ -1242,6 +1370,12 @@
       "split": "test",
       "byteDigest": "7ae9bcc61d6418c8c9a25dcbd1dbe1e3554415065800414e8dacfc455a714163",
       "pixelDigest": "3310416948db5732fb3d52c586a0e429bdf0e191f071d294588a9ce0be3023f9",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "1101110110010101101010000110110110110101111011011111000110101010",
       "dhashMirror": "0100010001010010111010100100100100010010010010000101000010001010",
       "width": 256,
@@ -1257,6 +1391,12 @@
       "split": "test",
       "byteDigest": "2e597d5d3bd7f974e5704461b17a259b91bb2aee5f3ef4812db58e82b2fb53e2",
       "pixelDigest": "77adb88fac9b94c81d8d05738946e1148f4a3b33db7daad0aaccaa4cc37180c5",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "1010010110010100101010100110110010110101111011001011001011001010",
       "dhashMirror": "0100101011010110101010100100100101010010010010000011000000101100",
       "width": 256,
@@ -1272,6 +1412,12 @@
       "split": "test",
       "byteDigest": "c2debdef89dd377828e49f8583cb85ccb3132778f2eea39814bd3189d9c87a69",
       "pixelDigest": "d55a9401ee9a1e88f63e88a9feb0ff805cf33a0e9f6833f3f55c283ea085f187",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "1101110110010101101010000110110110110101111011011111000110101010",
       "dhashMirror": "0100010001010010111010100100100100010010010010000101000010001010",
       "width": 256,
@@ -1287,6 +1433,12 @@
       "split": "test",
       "byteDigest": "2227cee3c09a292574e2aea734858e263f865489c48d55fb1340fe3ba1518090",
       "pixelDigest": "0051cbee57146d53b9a02ca5f9cbb5b426aa61c4221d16ea31fadeb8e14304ad",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "1011001110011011101001010001011010010011001011101001010110101001",
       "dhashMirror": "0011001000100110010110101001010100110110100010110011011001101010",
       "width": 256,
@@ -1302,6 +1454,12 @@
       "split": "train",
       "byteDigest": "35104b000dbc1b242d19203de6c8be1077cafe367723a8bca39e7f21657d9122",
       "pixelDigest": "ef4a363df04a0422275160d7070a985b5b4160be607465956cd6c5333033b6a7",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "1101110110001101101111010000110110011101001100101001010110100110",
       "dhashMirror": "0100010001001110010000100100111101100110101100110101011010011010",
       "width": 256,
@@ -1317,6 +1475,12 @@
       "split": "train",
       "byteDigest": "c6c455db838960a2ca63f8dd3ec7370f768482b040e78829db83795f559cd27f",
       "pixelDigest": "1114b19f21ddc60758f9643ff44e421f2107c8ad678ca57366aeef3f7a25daa1",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "0101010111101101010010100110110110101010101010101010101000101101",
       "dhashMirror": "0001000000001000100011010000100100101010101010101010101101001011",
       "width": 256,
@@ -1332,6 +1496,12 @@
       "split": "train",
       "byteDigest": "7c68be3d803c53395704d786525cc61f273ee75040eb680bd6740b937015b41b",
       "pixelDigest": "bc678b6d8bfedea4b166680c4e1a1fb9f7347eeddfb0ca63017f2ffdd8bc0e6d",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 170,
+        "downsampled": false
+      },
       "dhash": "0101010000010100010110101001101010101001010010111000011110000111",
       "dhashMirror": "1101010111010111101001011010011001101010001011010001111000001110",
       "width": 256,
@@ -1347,6 +1517,12 @@
       "split": "train",
       "byteDigest": "cf41a81efbd79898d0b66c9d9616ecb046aa16353d280b41bcbf71f95e477897",
       "pixelDigest": "ca626d71e0495598e2b34f7f124ea3217c368edc690366998a1a1321b15fa118",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 171,
+        "downsampled": false
+      },
       "dhash": "1111001111101001010110010011001100010110001010110000111100010110",
       "dhashMirror": "0011000001100000001001010011001110010111000010110000111110010111",
       "width": 256,
@@ -1362,6 +1538,12 @@
       "split": "train",
       "byteDigest": "7ae9bcc61d6418c8c9a25dcbd1dbe1e3554415065800414e8dacfc455a714163",
       "pixelDigest": "3310416948db5732fb3d52c586a0e429bdf0e191f071d294588a9ce0be3023f9",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "1101110110010101101010000110110110110101111011011111000110101010",
       "dhashMirror": "0100010001010010111010100100100100010010010010000101000010001010",
       "width": 256,
@@ -1377,6 +1559,12 @@
       "split": "validation",
       "byteDigest": "e244a2c66cb9418898ee534a62940c7c16d2d988f797fd44e4178b468081fd1a",
       "pixelDigest": "1b4191ad140cb8a2d4353a50b20eeb9244f1cc0576884e9419c2aa6e968da4cf",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "0100010001001110010000100100111101100110101100110101011010011010",
       "dhashMirror": "1101110110001101101111010000110110011101001100101001010110100110",
       "width": 256,
@@ -1392,6 +1580,12 @@
       "split": "validation",
       "byteDigest": "182d54db4800859e5f14e43c8a440981c6c8dfa3f6acfd86c8daafcb4ab1d63a",
       "pixelDigest": "59f6cd45143e87307da9d4fa265875834704dbb7cc92afaf08c580cc7e8d6963",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "0100010001001110010000100100111101100110101100110101011010011010",
       "dhashMirror": "1101110110001101101111010000110110011101001100101001010110100110",
       "width": 256,
@@ -1407,6 +1601,12 @@
       "split": "validation",
       "byteDigest": "ed8876197d678b393f3caf24f6191be08b9163315e3be9fcedb2a10918e448ae",
       "pixelDigest": "ef4a363df04a0422275160d7070a985b5b4160be607465956cd6c5333033b6a7",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "1101110110001101101111010000110110011101001100101001010110100110",
       "dhashMirror": "0100010001001110010000100100111101100110101100110101011010011010",
       "width": 256,
@@ -1422,6 +1622,12 @@
       "split": "validation",
       "byteDigest": "12f8991dbd269534124b810cf9d38f6a9a6353a9cd200f0e1fbb854702ef644d",
       "pixelDigest": "99e22f0290f425f7d496c86f1bf662c84b1e19c1e82bfcf8e2afd67a75539fbd",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 186,
+        "height": 186,
+        "downsampled": false
+      },
       "dhash": "1101110110001101101111010000110110011101001100101001010110100110",
       "dhashMirror": "0100010001001110010000100100011101000110101100110101011010011010",
       "width": 186,
@@ -1437,6 +1643,12 @@
       "split": "validation",
       "byteDigest": "cd7bddc5819836be13f2f2b56e7f77bd8765e92732298b553f31cc56c64c787c",
       "pixelDigest": "c3c88bdb7226897436627db2c8b6d9ab3bb00b07fcc784ef0ccde1dce6b98ce2",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "0001000000001000100011010000100100101010101010101010101101001011",
       "dhashMirror": "0101010111101101010010100110110110101010101010101010101000101101",
       "width": 256,
@@ -1452,6 +1664,12 @@
       "split": "validation",
       "byteDigest": "f12be528a00df930e6fcc9992461d4005c8e9efa06cab6bc7a7a12efbbf5fac1",
       "pixelDigest": "831a4931357de936b589c620695c793412c4432ef2a66d206e0edfe4788596db",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "0001000000001000100011010000100100101010101010101010101101001011",
       "dhashMirror": "0100011111101101010010100110110110101010101010101010101000101101",
       "width": 256,
@@ -1467,6 +1685,12 @@
       "split": "validation",
       "byteDigest": "bc34bd700756e7a631a952c477d1ae550c1df76e422b70ba21970e28cb1574a4",
       "pixelDigest": "1114b19f21ddc60758f9643ff44e421f2107c8ad678ca57366aeef3f7a25daa1",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "0101010111101101010010100110110110101010101010101010101000101101",
       "dhashMirror": "0001000000001000100011010000100100101010101010101010101101001011",
       "width": 256,
@@ -1482,6 +1706,12 @@
       "split": "validation",
       "byteDigest": "533e9fe55efd2d325b330d96ec4199210dfbc7ec4eeeac3e64b3966fa9dfb2f5",
       "pixelDigest": "61262a184cd46581726af3f48d14004f5f57916001224213cf02a36c7fd57fc1",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 186,
+        "height": 186,
+        "downsampled": false
+      },
       "dhash": "0100011111101101010010000110110110101010101010101010101010101101",
       "dhashMirror": "0001010000001000100011010000101010101010101010101010101101001001",
       "width": 186,
@@ -1497,6 +1727,12 @@
       "split": "validation",
       "byteDigest": "f75a9665717ddf065a23b029c13a70ca9f768f7ab64ec22e1b629a2d5de17b35",
       "pixelDigest": "244b2186804f9c2ffd3a192b58a378a3228da4bd73f5e635057fa2134669170e",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 170,
+        "downsampled": false
+      },
       "dhash": "1101010111010111101001011010011001101010001011010001111000001110",
       "dhashMirror": "0101010000010100010110101001101010101001010010111000011110000111",
       "width": 256,
@@ -1512,6 +1748,12 @@
       "split": "validation",
       "byteDigest": "800f492b63df19d50165fa4aa792bebee46c9784bc738bedd1a5570ed3e3a68d",
       "pixelDigest": "9fdc22c0542daaf7cf4fcda68f7c1926eb85c9f376da113f14b9ff87cb54664f",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 170,
+        "downsampled": false
+      },
       "dhash": "1101010111010111101001011010011001101010001011010001111000001110",
       "dhashMirror": "0101010000010100010110101001101010101001010010111000011110000111",
       "width": 256,
@@ -1527,6 +1769,12 @@
       "split": "validation",
       "byteDigest": "00db4675142687c6a8e7f7c67427cdd125b2e9afe5d056a0243956594c725098",
       "pixelDigest": "bc678b6d8bfedea4b166680c4e1a1fb9f7347eeddfb0ca63017f2ffdd8bc0e6d",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 170,
+        "downsampled": false
+      },
       "dhash": "0101010000010100010110101001101010101001010010111000011110000111",
       "dhashMirror": "1101010111010111101001011010011001101010001011010001111000001110",
       "width": 256,
@@ -1542,6 +1790,12 @@
       "split": "validation",
       "byteDigest": "473f63e5f8d22ab354eac369913178f6129cc2c463781f4785b9c240075bf24b",
       "pixelDigest": "bbb10ea41ea7925829fdf10147cbde068ded7bc3315d611f0480ab66be33c48a",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 186,
+        "height": 124,
+        "downsampled": false
+      },
       "dhash": "0101010000010100010110101001101010101001010010111000011110000111",
       "dhashMirror": "1101010111010111101001011010011001101010001011010001111000001110",
       "width": 186,
@@ -1557,6 +1811,12 @@
       "split": "validation",
       "byteDigest": "8e459c80e78a4fc9df47b61c11776e6d57e69b0898408feae1773d9c707d2eff",
       "pixelDigest": "f707f569bd390063c210927df93db7e28992ac6b289ec94f5f7f82bf8a30d205",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 171,
+        "downsampled": false
+      },
       "dhash": "0011000001100000001001010011001110010111000010110000111110010111",
       "dhashMirror": "1111001111101001010110010011001100010110001010110000111100010110",
       "width": 256,
@@ -1572,6 +1832,12 @@
       "split": "validation",
       "byteDigest": "6393d5c533af026e9eac1db39f46cee74ebc95745779aac5de9d76ef2967a85b",
       "pixelDigest": "f83a61179393ce0968bd8cdebbf79d33a19499f894c23c1ad854a890d60905bd",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 171,
+        "downsampled": false
+      },
       "dhash": "0011000001100000001001010011001110010111000010110000111110010011",
       "dhashMirror": "1111001111101001010110010011001100010110001010110000111100010110",
       "width": 256,
@@ -1587,6 +1853,12 @@
       "split": "validation",
       "byteDigest": "e62f52831660ecc4bee749b193fbd402d898511c95e3776275994e2984363c6e",
       "pixelDigest": "ca626d71e0495598e2b34f7f124ea3217c368edc690366998a1a1321b15fa118",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 171,
+        "downsampled": false
+      },
       "dhash": "1111001111101001010110010011001100010110001010110000111100010110",
       "dhashMirror": "0011000001100000001001010011001110010111000010110000111110010111",
       "width": 256,
@@ -1602,6 +1874,12 @@
       "split": "validation",
       "byteDigest": "7f2eb83725cd4c24f6f27e7b82b15788ecc2a6e52215175617d5c97a57768054",
       "pixelDigest": "a5e1f1c0a2cf522e586d7bec35d9e72ba0123353955537a911aa1d4ceaf91e40",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 186,
+        "height": 124,
+        "downsampled": false
+      },
       "dhash": "1111001111101001010110010011001100011110001010110000111100010110",
       "dhashMirror": "0011000001100000001001010011001110000111000010110000111110010011",
       "width": 186,
@@ -1617,6 +1895,12 @@
       "split": "validation",
       "byteDigest": "4c08809a92c8046e8f58ea5f72725c4045c6f0f8a393fd6eafe533667adcbb24",
       "pixelDigest": "9da9bdab5c22c327a9aeb7a0980c4b99eda9bf77a70f05884ccd99d060121b15",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "0100010001010010111010100100100100010010010010000101000010001010",
       "dhashMirror": "1101110110010101101010000110110110110101111011011111000110101010",
       "width": 256,
@@ -1632,6 +1916,12 @@
       "split": "validation",
       "byteDigest": "95ea60db5ca97170b3ad3f7414d8a0661016b510048c113136eb7a105d322cf0",
       "pixelDigest": "b3e2aa11c91e109d439c2a8f9ae989971ec443331c2ec64edb03046460ba7d46",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "0100010001010010111010100100100100010010010010000101000010001010",
       "dhashMirror": "1101110110010101101010000110110110110101111011011111000110101010",
       "width": 256,
@@ -1647,6 +1937,12 @@
       "split": "validation",
       "byteDigest": "b475b6ca716000cbba2b40255761e4f552e99e66f667e03beb7bf934f7441820",
       "pixelDigest": "3310416948db5732fb3d52c586a0e429bdf0e191f071d294588a9ce0be3023f9",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 256,
+        "height": 256,
+        "downsampled": false
+      },
       "dhash": "1101110110010101101010000110110110110101111011011111000110101010",
       "dhashMirror": "0100010001010010111010100100100100010010010010000101000010001010",
       "width": 256,
@@ -1662,6 +1958,12 @@
       "split": "validation",
       "byteDigest": "152e3c39812884245527427da65e7be0d8bfe9d7d530b16551386038f3997cae",
       "pixelDigest": "c76bf0a92297855059145403c2a521c5b16711875e31585e0ec459f73b2031bc",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 186,
+        "height": 186,
+        "downsampled": false
+      },
       "dhash": "1101110110010101101010000110110110110111011011001111000110101010",
       "dhashMirror": "0100010001010010111010100100100100010010010010000101000010001010",
       "width": 186,
@@ -1679,6 +1981,11 @@
       "validation",
       "test"
     ],
+    "splitDirectories": {
+      "train": "train",
+      "validation": "validation",
+      "test": "test"
+    },
     "missingSplits": [],
     "supportedExtensions": [
       ".png",
@@ -1700,9 +2007,120 @@
     "allPairsAreCrossSplit": true,
     "perceptualMatchesRequireReview": true
   },
-  "auditId": "39313f285d8ccf3c2762118129f80655c81bdbdbc3f58c865050f979469e938d",
-  "createdAt": "2026-10-23T16:01:11.053Z",
+  "coverage": {
+    "splits": {
+      "train": {
+        "audited": 5,
+        "fingerprinted": 5,
+        "rejectedByCode": {},
+        "ignored": 0,
+        "unprocessed": 0
+      },
+      "validation": {
+        "audited": 20,
+        "fingerprinted": 20,
+        "rejectedByCode": {},
+        "ignored": 0,
+        "unprocessed": 0
+      },
+      "test": {
+        "audited": 25,
+        "fingerprinted": 25,
+        "rejectedByCode": {},
+        "ignored": 0,
+        "unprocessed": 0
+      },
+      "unknown": {
+        "audited": 0,
+        "fingerprinted": 0,
+        "rejectedByCode": {},
+        "ignored": 0,
+        "unprocessed": 0
+      }
+    },
+    "budgetExhaustion": [],
+    "enumerationComplete": true,
+    "rejectedOrErrorCount": 0,
+    "ignoredFiles": 0,
+    "unprocessedKnownFiles": 0,
+    "summary": "\u5df2\u5ba1\u8ba1 train 5 / validation 20 / test 25\uff1b\u62d2\u6536/\u9519\u8bef 0\uff1b\u5ffd\u7565 0\uff1b\u5df2\u53d1\u73b0\u4f46\u672a\u5ba1\u8ba1 0\uff1b\u7ed3\u8bba\u53ea\u8986\u76d6\u5df2\u5ba1\u8ba1\u8f93\u5165\u4e0e\u5df2\u5b8c\u6210\u6bd4\u8f83\u3002"
+  },
+  "candidateGroups": [
+    {
+      "id": "candidate-2775933255cb54d09a6bfc4e49657a5d607a65d2c3d973364c6db36f210444aa",
+      "members": [
+        "test/astronaut-brightness-1.15.png",
+        "test/astronaut-byte-copy.png",
+        "test/astronaut-jpeg-quality70.jpg",
+        "train/astronaut-original.png",
+        "validation/astronaut-horizontal-mirror.png",
+        "validation/astronaut-mirror-jpeg-quality70.jpg",
+        "validation/astronaut-png-repack.png",
+        "validation/astronaut-resize-73percent.png"
+      ],
+      "evidence": "perceptual-component"
+    },
+    {
+      "id": "candidate-53e222fd4e5c041b2b9fed2e3defb2b51e25707e758503b072f986f18aedb294",
+      "members": [
+        "test/coffee-brightness-1.15.png",
+        "test/coffee-byte-copy.png",
+        "test/coffee-center-crop-90percent.png",
+        "test/coffee-jpeg-quality70.jpg",
+        "train/coffee-original.png",
+        "validation/coffee-horizontal-mirror.png",
+        "validation/coffee-mirror-jpeg-quality70.jpg",
+        "validation/coffee-png-repack.png",
+        "validation/coffee-resize-73percent.png"
+      ],
+      "evidence": "perceptual-component"
+    },
+    {
+      "id": "candidate-6e25e6d8a7e49e6fe8ad46a82e421ad833d628c00d417cc13fbaf1dfcac9e92a",
+      "members": [
+        "test/brick-brightness-1.15.png",
+        "test/brick-byte-copy.png",
+        "test/brick-jpeg-quality70.jpg",
+        "train/brick-original.png",
+        "validation/brick-horizontal-mirror.png",
+        "validation/brick-mirror-jpeg-quality70.jpg",
+        "validation/brick-png-repack.png",
+        "validation/brick-resize-73percent.png"
+      ],
+      "evidence": "perceptual-component"
+    },
+    {
+      "id": "candidate-a59cd89ec8b2ab039cc7941c981a4a01a98ba1a76a110124c7fa1d202ba295fa",
+      "members": [
+        "test/chelsea-brightness-1.15.png",
+        "test/chelsea-byte-copy.png",
+        "test/chelsea-jpeg-quality70.jpg",
+        "train/chelsea-original.png",
+        "validation/chelsea-horizontal-mirror.png",
+        "validation/chelsea-mirror-jpeg-quality70.jpg",
+        "validation/chelsea-png-repack.png",
+        "validation/chelsea-resize-73percent.png"
+      ],
+      "evidence": "perceptual-component"
+    },
+    {
+      "id": "candidate-f70aa06adf7400b64e2ac81c3d3b4da877437ceadcdb728a6165fc20637440d4",
+      "members": [
+        "test/grass-brightness-1.15.png",
+        "test/grass-byte-copy.png",
+        "test/grass-jpeg-quality70.jpg",
+        "train/grass-original.png",
+        "validation/grass-horizontal-mirror.png",
+        "validation/grass-mirror-jpeg-quality70.jpg",
+        "validation/grass-png-repack.png",
+        "validation/grass-resize-73percent.png"
+      ],
+      "evidence": "perceptual-component"
+    }
+  ],
+  "auditId": "d524569065bb1f51f9872836ab3a71f47c24b0e3840b02f28232ef8a8b743471",
+  "createdAt": "2026-10-25T17:17:19.388Z",
   "timing": {
-    "elapsedMs": 347
+    "elapsedMs": 308
   }
 }

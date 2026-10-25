@@ -1,0 +1,57 @@
+{
+  "results": [
+    {
+      "auditId": "655c8e4c89f25201be0ee67dfbe48ea5907dfc7cc64aefe5f42c31482ad1a523",
+      "localCount": "0",
+      "pairs": "96",
+      "coverage": "已审计 train 12 / validation 18 / test 29；拒收/错误 0；忽略 0；已发现但未审计 0；结论只覆盖已审计输入与已完成比较。",
+      "images": [
+        {
+          "loaded": true,
+          "transform": "none"
+        },
+        {
+          "loaded": true,
+          "transform": "none"
+        }
+      ],
+      "port": 4181
+    },
+    {
+      "auditId": "b55583134c3f58fc35255b9916171b6498ea0ec54f16128f4eff62a19265a3b5",
+      "localCount": "0",
+      "pairs": "107",
+      "coverage": "已审计 train 12 / validation 18 / test 29；拒收/错误 0；忽略 0；已发现但未审计 0；结论只覆盖已审计输入与已完成比较。",
+      "images": [
+        {
+          "loaded": true,
+          "transform": "none"
+        },
+        {
+          "loaded": true,
+          "transform": "none"
+        }
+      ],
+      "port": 4182
+    },
+    {
+      "auditId": "b7868a4da4d61dc0d044046a8ebd4cc1c151a3124f9dc31a87252e4d1afa0b5f",
+      "localCount": "0",
+      "pairs": "131",
+      "coverage": "已审计 train 5 / validation 20 / test 25；拒收/错误 0；忽略 0；已发现但未审计 0；结论只覆盖已审计输入与已完成比较。",
+      "images": [
+        {
+          "loaded": true,
+          "transform": "none"
+        },
+        {
+          "loaded": true,
+          "transform": "none"
+        }
+      ],
+      "port": 4183
+    }
+  ],
+  "rotationExplanation": "感知指纹距离在阈值内，需要结合图像与来源人工判断。 相似度不是泄漏概率；缩放、低对比度或重复纹理都可能造成误报。 匹配依据：图像 A：顺时针旋转 90°；图像 B：原方向。预览图保持原方向；距离为已启用方向组合的最小值，旋转发生在 EXIF 校正之后。",
+  "filterSummary": "当前筛选 5 对 · 未复核 5 · 暂不确定 0"
+}

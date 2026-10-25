@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-23T16:01:05.769859+00:00",
+  "generatedAt": "2026-10-25T17:17:14.155960+00:00",
   "dataset": {
     "name": "visionleak-synthetic-v1",
     "images": 59,
@@ -39,7 +39,7 @@
       "6"
     ],
     "exitCode": 0,
-    "wallSeconds": 0.23201258340850472,
+    "wallSeconds": 0.24431745801120996,
     "complete": true,
     "stats": {
       "inputImages": 59,
@@ -54,15 +54,17 @@
     "options": {
       "threshold": 6,
       "maxImages": 1000,
+      "maxDecodePixels": 64000000,
       "maxPixels": 4194304,
       "maxTotalPixels": 100000000,
       "maxFileBytes": 33554432,
       "maxComparisons": 1000000,
       "maxPairs": 10000,
       "includeMirrors": false,
-      "includeRotations": false
+      "includeRotations": false,
+      "includeCrops": false
     },
-    "reportSha256": "8cd0d294caa79db04e55e73f1a13ece3ee69ee037036e3ef92cda0a681acba74"
+    "reportSha256": "aeae1f5b798898c910df8b79eb7bb2d072ce2379fb586b139f6356eef45e60e9"
   },
   "scores": {
     "exact": {
@@ -70,9 +72,9 @@
       "fp": 0,
       "fn": 0,
       "tn": 1059,
-      "precision": 1.0,
-      "recall": 1.0,
-      "falsePositiveRate": 0.0,
+      "precision": 1,
+      "recall": 1,
+      "falsePositiveRate": 0,
       "falsePositives": [],
       "falseNegatives": []
     },
@@ -175,7 +177,7 @@
       "fn": 0,
       "tn": 852,
       "precision": 0.9710144927536232,
-      "recall": 1.0,
+      "recall": 1,
       "falsePositiveRate": 0.00234192037470726,
       "falsePositives": [
         [
@@ -195,8 +197,8 @@
       "fn": 18,
       "tn": 120,
       "precision": null,
-      "recall": 0.0,
-      "falsePositiveRate": 0.0,
+      "recall": 0,
+      "falsePositiveRate": 0,
       "falsePositives": [],
       "falseNegatives": [
         [
@@ -3819,10 +3821,82 @@
     "passed": true
   },
   "implementationSha256": {
-    "dist/visionleak.js": "86a74558178474cc22591e1e4da38cc8a0b547c7c39ec3b9d9282d9736093bcb",
-    "tools/cli.mjs": "951afcfef002af6f2298b49a0e19b043a9c70efa54e35ab7c1b063f0465f52d6",
-    "tools/decode.mjs": "fbcc0c9debed95f5513174538573142c8cc5a9b8f2cbe36f709f5b5e64958300",
-    "tools/evaluate.py": "30c2e43b398ef6de4f06bd8b413bed9c55991920eeb3b197e3c3504477a73b05",
+    "dist/visionleak.js": "505893ee6fc69a95446826cefc4c7941ab44098a982d33a979cf245b7b135e73",
+    "tools/cli.mjs": "b42b080fe1738107da68b201c519832918bcabe237f706a65c134c1eca40edaf",
+    "tools/decode.mjs": "ad6fad8a5b5019a5e8fb4767f40b82f1e86faad9e93192f275c3179cb1bfc10d",
+    "tools/evaluate.py": "956c617e0be5111c7d9f1ede457234f8c1d18fedd77fd587d5bf15831bde9987",
     "tools/generate-fixtures.py": "996951ed8346ce8e6eba1fc57b01b5b132d22a32819de390847fe7002c50d072"
+  },
+  "baselineComparison": {
+    "default": {
+      "version": "0.4.0",
+      "key": "synthetic/default",
+      "baselinePath": "reports/history/pre-0.5.0-20261025/reports/evaluation-audit.json",
+      "baselineReportSha256": "8cd0d294caa79db04e55e73f1a13ece3ee69ee037036e3ef92cda0a681acba74",
+      "freezeSha256": "19bd6f8517416dcf820057b184972d6929f470eaf9d2b2ea615875df6d57d011",
+      "detectionUnchanged": true,
+      "detectionDifferences": [],
+      "allowedChangeReason": null,
+      "passed": true,
+      "workComparison": [
+        {
+          "field": "comparisons",
+          "before": 740,
+          "after": 740,
+          "delta": 0
+        },
+        {
+          "field": "distanceEvaluations",
+          "before": 611,
+          "after": 611,
+          "delta": 0
+        },
+        {
+          "field": "emittedPairs",
+          "before": 96,
+          "after": 96,
+          "delta": 0
+        },
+        {
+          "field": "indexNodes",
+          "before": 18,
+          "after": 18,
+          "delta": 0
+        },
+        {
+          "field": "inputImages",
+          "before": 59,
+          "after": 59,
+          "delta": 0
+        },
+        {
+          "field": "pairChecks",
+          "before": 129,
+          "after": 129,
+          "delta": 0
+        },
+        {
+          "field": "processedImages",
+          "before": 59,
+          "after": 59,
+          "delta": 0
+        },
+        {
+          "field": "reason",
+          "before": "",
+          "after": "",
+          "delta": null
+        }
+      ],
+      "timingComparison": {
+        "before": {
+          "elapsedMs": 183
+        },
+        "after": {
+          "elapsedMs": 192
+        },
+        "note": "Observational; never a regression failure condition."
+      }
+    }
   }
 }

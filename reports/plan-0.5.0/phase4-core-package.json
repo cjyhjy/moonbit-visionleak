@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "visionleak-core-package-receipt-v1",
+  "checkedAt": "2026-10-25T17:17:53.670791+00:00",
+  "module": "cjyhjy/visionleak",
+  "version": "0.5.0",
+  "path": "_build/publish/cjyhjy-visionleak-0.5.0.zip",
+  "bytes": 32775,
+  "limitBytesExclusive": 1000000,
+  "sha256": "f2825550e0b5e4d658746da4651e7f57fc93c8061650b3835b1e817ee65ee8ab",
+  "entries": [
+    "moon.mod",
+    "core/moon.pkg",
+    "core/sha256.mbt",
+    "core/offline.mbt",
+    "core/crops.mbt",
+    "core/cli_options.mbt",
+    "core/audit.mbt",
+    "core/sampling.mbt",
+    "core/pkg.generated.mbti",
+    "core/pixel_stream.mbt",
+    "core/review_validation.mbt",
+    "core/workflow.mbt",
+    "core/json_helpers.mbt",
+    "core/report_identity.mbt",
+    "core/metrics.mbt",
+    "core/fingerprint.mbt",
+    "LICENSE",
+    "README.md"
+  ],
+  "sizeAndWhitelistTest": "reports/logs/mooncakes-package.log",
+  "liveDryRun": {
+    "status": "passed",
+    "httpStatus": 202,
+    "upstreamExitCode": 255,
+    "effectiveExitCode": 0,
+    "noChangesMade": true,
+    "log": "reports/plan-0.5.0/logs/phase4-mooncakes-dry-run.log"
+  },
+  "formallyPublished": false
+}

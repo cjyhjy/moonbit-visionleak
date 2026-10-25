@@ -4,7 +4,7 @@
       "tp": 42,
       "fp": 0,
       "fn": 88,
-      "precision": 1.0,
+      "precision": 1,
       "recall": 0.3230769230769231
     },
     "anchors": {
@@ -84,7 +84,7 @@
       "tp": 84,
       "fp": 0,
       "fn": 46,
-      "precision": 1.0,
+      "precision": 1,
       "recall": 0.6461538461538462
     },
     "anchors": {
@@ -152,7 +152,7 @@
       "tp": 109,
       "fp": 0,
       "fn": 21,
-      "precision": 1.0,
+      "precision": 1,
       "recall": 0.8384615384615385
     },
     "anchors": {

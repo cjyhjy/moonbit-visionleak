@@ -1,0 +1,531 @@
+{
+  "method": "Git tracked plus nonignored untracked files in this project; extension/shebang byte count, including tests and comments; excludes only compiled dist and compiled historical engine baselines per .gitattributes. This is a transparent estimate, not the full github-linguist classifier or a remote languages API result.",
+  "primaryLanguage": "MoonBit",
+  "moonbitIsLargest": true,
+  "languages": {
+    "MoonBit": {
+      "bytes": 176625,
+      "testBytes": 84958,
+      "files": 25
+    },
+    "JavaScript": {
+      "bytes": 160153,
+      "testBytes": 61544,
+      "files": 28
+    },
+    "HTML": {
+      "bytes": 11882,
+      "testBytes": 0,
+      "files": 1
+    },
+    "CSS": {
+      "bytes": 23299,
+      "testBytes": 0,
+      "files": 1
+    },
+    "Python": {
+      "bytes": 134073,
+      "testBytes": 31236,
+      "files": 25
+    },
+    "Shell": {
+      "bytes": 778,
+      "testBytes": 0,
+      "files": 1
+    }
+  },
+  "excludedGenerated": [
+    "dist/visionleak.js",
+    "research/baselines/README.md",
+    "research/baselines/visionleak-0.1.0.mjs",
+    "research/baselines/visionleak-0.3.0.mjs"
+  ],
+  "files": [
+    {
+      "path": "core/audit.mbt",
+      "language": "MoonBit",
+      "bytes": 18064,
+      "test": false
+    },
+    {
+      "path": "core/audit_regression_wbtest.mbt",
+      "language": "MoonBit",
+      "bytes": 11620,
+      "test": true
+    },
+    {
+      "path": "core/cli_contract_wbtest.mbt",
+      "language": "MoonBit",
+      "bytes": 8469,
+      "test": true
+    },
+    {
+      "path": "core/cli_options.mbt",
+      "language": "MoonBit",
+      "bytes": 9475,
+      "test": false
+    },
+    {
+      "path": "core/contracts_wbtest.mbt",
+      "language": "MoonBit",
+      "bytes": 16039,
+      "test": true
+    },
+    {
+      "path": "core/core_wbtest.mbt",
+      "language": "MoonBit",
+      "bytes": 11640,
+      "test": true
+    },
+    {
+      "path": "core/crops.mbt",
+      "language": "MoonBit",
+      "bytes": 5604,
+      "test": false
+    },
+    {
+      "path": "core/crops_wbtest.mbt",
+      "language": "MoonBit",
+      "bytes": 3147,
+      "test": true
+    },
+    {
+      "path": "core/fingerprint.mbt",
+      "language": "MoonBit",
+      "bytes": 6976,
+      "test": false
+    },
+    {
+      "path": "core/identity_contract_wbtest.mbt",
+      "language": "MoonBit",
+      "bytes": 4335,
+      "test": true
+    },
+    {
+      "path": "core/json_helpers.mbt",
+      "language": "MoonBit",
+      "bytes": 1728,
+      "test": false
+    },
+    {
+      "path": "core/metrics.mbt",
+      "language": "MoonBit",
+      "bytes": 6000,
+      "test": false
+    },
+    {
+      "path": "core/metrics_contract_wbtest.mbt",
+      "language": "MoonBit",
+      "bytes": 6811,
+      "test": true
+    },
+    {
+      "path": "core/offline.mbt",
+      "language": "MoonBit",
+      "bytes": 2333,
+      "test": false
+    },
+    {
+      "path": "core/physical_views_wbtest.mbt",
+      "language": "MoonBit",
+      "bytes": 2925,
+      "test": true
+    },
+    {
+      "path": "core/pixel_stream.mbt",
+      "language": "MoonBit",
+      "bytes": 2979,
+      "test": false
+    },
+    {
+      "path": "core/pkg.generated.mbti",
+      "language": "MoonBit",
+      "bytes": 1472,
+      "test": false
+    },
+    {
+      "path": "core/report_identity.mbt",
+      "language": "MoonBit",
+      "bytes": 3220,
+      "test": false
+    },
+    {
+      "path": "core/review_validation.mbt",
+      "language": "MoonBit",
+      "bytes": 10669,
+      "test": false
+    },
+    {
+      "path": "core/sampling.mbt",
+      "language": "MoonBit",
+      "bytes": 1249,
+      "test": false
+    },
+    {
+      "path": "core/sampling_wbtest.mbt",
+      "language": "MoonBit",
+      "bytes": 1786,
+      "test": true
+    },
+    {
+      "path": "core/sha256.mbt",
+      "language": "MoonBit",
+      "bytes": 4404,
+      "test": false
+    },
+    {
+      "path": "core/stream_wbtest.mbt",
+      "language": "MoonBit",
+      "bytes": 4779,
+      "test": true
+    },
+    {
+      "path": "core/workflow.mbt",
+      "language": "MoonBit",
+      "bytes": 17494,
+      "test": false
+    },
+    {
+      "path": "core/workflow_wbtest.mbt",
+      "language": "MoonBit",
+      "bytes": 13407,
+      "test": true
+    },
+    {
+      "path": "demo/app.mjs",
+      "language": "JavaScript",
+      "bytes": 21878,
+      "test": false
+    },
+    {
+      "path": "demo/index.html",
+      "language": "HTML",
+      "bytes": 11882,
+      "test": false
+    },
+    {
+      "path": "demo/report-identity.mjs",
+      "language": "JavaScript",
+      "bytes": 981,
+      "test": false
+    },
+    {
+      "path": "demo/review-validation.mjs",
+      "language": "JavaScript",
+      "bytes": 5195,
+      "test": false
+    },
+    {
+      "path": "demo/review-workflow.mjs",
+      "language": "JavaScript",
+      "bytes": 2650,
+      "test": false
+    },
+    {
+      "path": "demo/styles.css",
+      "language": "CSS",
+      "bytes": 23299,
+      "test": false
+    },
+    {
+      "path": "tests/cli.test.mjs",
+      "language": "JavaScript",
+      "bytes": 16807,
+      "test": true
+    },
+    {
+      "path": "tests/core-performance.mjs",
+      "language": "JavaScript",
+      "bytes": 4264,
+      "test": true
+    },
+    {
+      "path": "tests/core.test.mjs",
+      "language": "JavaScript",
+      "bytes": 1414,
+      "test": true
+    },
+    {
+      "path": "tests/crop-reference.py",
+      "language": "Python",
+      "bytes": 2543,
+      "test": true
+    },
+    {
+      "path": "tests/crops.test.mjs",
+      "language": "JavaScript",
+      "bytes": 5061,
+      "test": true
+    },
+    {
+      "path": "tests/demo-validation.test.mjs",
+      "language": "JavaScript",
+      "bytes": 8516,
+      "test": true
+    },
+    {
+      "path": "tests/evaluation-compatibility.py",
+      "language": "Python",
+      "bytes": 4451,
+      "test": true
+    },
+    {
+      "path": "tests/large-images.test.mjs",
+      "language": "JavaScript",
+      "bytes": 4011,
+      "test": true
+    },
+    {
+      "path": "tests/metric_reference.py",
+      "language": "Python",
+      "bytes": 3406,
+      "test": true
+    },
+    {
+      "path": "tests/mirror.test.mjs",
+      "language": "JavaScript",
+      "bytes": 736,
+      "test": true
+    },
+    {
+      "path": "tests/mooncakes-dry-run.py",
+      "language": "Python",
+      "bytes": 2828,
+      "test": true
+    },
+    {
+      "path": "tests/mooncakes-package.py",
+      "language": "Python",
+      "bytes": 1315,
+      "test": true
+    },
+    {
+      "path": "tests/oracle-metrics.py",
+      "language": "Python",
+      "bytes": 4596,
+      "test": true
+    },
+    {
+      "path": "tests/oracle-runner.mjs",
+      "language": "JavaScript",
+      "bytes": 1390,
+      "test": true
+    },
+    {
+      "path": "tests/orientation.test.mjs",
+      "language": "JavaScript",
+      "bytes": 1001,
+      "test": true
+    },
+    {
+      "path": "tests/phase2.test.mjs",
+      "language": "JavaScript",
+      "bytes": 11520,
+      "test": true
+    },
+    {
+      "path": "tests/release-contract.py",
+      "language": "Python",
+      "bytes": 9822,
+      "test": true
+    },
+    {
+      "path": "tests/report-history.py",
+      "language": "Python",
+      "bytes": 2275,
+      "test": true
+    },
+    {
+      "path": "tests/report-identity.test.mjs",
+      "language": "JavaScript",
+      "bytes": 3442,
+      "test": true
+    },
+    {
+      "path": "tests/runtime.test.mjs",
+      "language": "JavaScript",
+      "bytes": 1136,
+      "test": true
+    },
+    {
+      "path": "tests/split-aliases.test.mjs",
+      "language": "JavaScript",
+      "bytes": 2246,
+      "test": true
+    },
+    {
+      "path": "tools/accept-release.py",
+      "language": "Python",
+      "bytes": 8114,
+      "test": false
+    },
+    {
+      "path": "tools/benchmark.mjs",
+      "language": "JavaScript",
+      "bytes": 2664,
+      "test": false
+    },
+    {
+      "path": "tools/bootstrap.py",
+      "language": "Python",
+      "bytes": 4065,
+      "test": false
+    },
+    {
+      "path": "tools/build.mjs",
+      "language": "JavaScript",
+      "bytes": 566,
+      "test": false
+    },
+    {
+      "path": "tools/ci.mjs",
+      "language": "JavaScript",
+      "bytes": 4686,
+      "test": false
+    },
+    {
+      "path": "tools/cli.mjs",
+      "language": "JavaScript",
+      "bytes": 17409,
+      "test": false
+    },
+    {
+      "path": "tools/decode.mjs",
+      "language": "JavaScript",
+      "bytes": 6211,
+      "test": false
+    },
+    {
+      "path": "tools/evaluate-crops.py",
+      "language": "Python",
+      "bytes": 8918,
+      "test": false
+    },
+    {
+      "path": "tools/evaluate-mirrors.py",
+      "language": "Python",
+      "bytes": 5668,
+      "test": false
+    },
+    {
+      "path": "tools/evaluate-photos.py",
+      "language": "Python",
+      "bytes": 13050,
+      "test": false
+    },
+    {
+      "path": "tools/evaluate.py",
+      "language": "Python",
+      "bytes": 19161,
+      "test": false
+    },
+    {
+      "path": "tools/evaluation_compatibility.py",
+      "language": "Python",
+      "bytes": 2462,
+      "test": false
+    },
+    {
+      "path": "tools/fetch-photo-sources.py",
+      "language": "Python",
+      "bytes": 1440,
+      "test": false
+    },
+    {
+      "path": "tools/generate-fixtures.py",
+      "language": "Python",
+      "bytes": 7698,
+      "test": false
+    },
+    {
+      "path": "tools/generate-photo-fixtures.py",
+      "language": "Python",
+      "bytes": 5592,
+      "test": false
+    },
+    {
+      "path": "tools/inspect-languages.py",
+      "language": "Python",
+      "bytes": 1963,
+      "test": false
+    },
+    {
+      "path": "tools/moon",
+      "language": "Shell",
+      "bytes": 778,
+      "test": false
+    },
+    {
+      "path": "tools/mooncakes_dry_run.py",
+      "language": "Python",
+      "bytes": 3995,
+      "test": false
+    },
+    {
+      "path": "tools/package.py",
+      "language": "Python",
+      "bytes": 5700,
+      "test": false
+    },
+    {
+      "path": "tools/prepare-photos-v2.py",
+      "language": "Python",
+      "bytes": 3524,
+      "test": false
+    },
+    {
+      "path": "tools/release_metadata.py",
+      "language": "Python",
+      "bytes": 1210,
+      "test": false
+    },
+    {
+      "path": "tools/report-tools.mjs",
+      "language": "JavaScript",
+      "bytes": 11722,
+      "test": false
+    },
+    {
+      "path": "tools/runtime.mjs",
+      "language": "JavaScript",
+      "bytes": 4040,
+      "test": false
+    },
+    {
+      "path": "tools/scale-benchmark.py",
+      "language": "Python",
+      "bytes": 3780,
+      "test": false
+    },
+    {
+      "path": "tools/server.mjs",
+      "language": "JavaScript",
+      "bytes": 8011,
+      "test": false
+    },
+    {
+      "path": "tools/source-digest.mjs",
+      "language": "JavaScript",
+      "bytes": 1331,
+      "test": false
+    },
+    {
+      "path": "tools/summarize-photos.py",
+      "language": "Python",
+      "bytes": 6497,
+      "test": false
+    },
+    {
+      "path": "tools/verify.mjs",
+      "language": "JavaScript",
+      "bytes": 10951,
+      "test": false
+    },
+    {
+      "path": "tools/workflow.mjs",
+      "language": "JavaScript",
+      "bytes": 314,
+      "test": false
+    }
+  ]
+}

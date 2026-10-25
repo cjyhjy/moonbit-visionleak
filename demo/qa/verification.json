@@ -1,78 +1,51 @@
 {
   "schemaVersion": "visionleak-demo-qa-v1",
   "status": "passed",
-  "scope": "Explicit 0.4.0 browser checks on controlled derivatives of licensed photographs and legacy synthetic reports. No natural contamination claim.",
-  "verifiedAt": "2026-10-23T16:00:55.026980+00:00",
-  "servedAuditId": "10f740be2630e3ea2941339b4360900eec93cf5751b038ddd585d310d2ed1b43",
-  "mirrorAuditId": "e9dfa748b17b41f8f08cd430af8d219a5de5a3179a3fc1e3bdb7689a79ca67bb",
-  "photoAuditId": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078",
+  "version": "0.5.0",
+  "scope": "Actual final UI and artifact: default/mirror/photo regression plus local crop review, persistence, mobile and network-disabled original offline HTML.",
+  "verifiedAt": "2026-10-25T17:09:23.419109+00:00",
+  "servedAuditId": "655c8e4c89f25201be0ee67dfbe48ea5907dfc7cc64aefe5f42c31482ad1a523",
+  "mirrorAuditId": "b55583134c3f58fc35255b9916171b6498ea0ec54f16128f4eff62a19265a3b5",
+  "photoAuditId": "b7868a4da4d61dc0d044046a8ebd4cc1c151a3124f9dc31a87252e4d1afa0b5f",
+  "localAuditId": "67c5328dbddd2e329ead596ba55270afcd57f39ca4a566669b2e768125ff254f",
   "sourceHashes": {
-    "demo/index.html": "f5c10c6dd2c5b83089307e75d252cbcaaa4639d93d8fcaf8fa2cf6f4113658c7",
-    "demo/styles.css": "87aefe99aa8e1793892f4868216e34315543e84b6755665228f84faa1563513b",
-    "demo/app.mjs": "4bfa5b1c0b4527a553e2397b1dbe7b7b4c59d44f114d23fa3cf87c8b6cc538be",
-    "demo/review-validation.mjs": "c92a0f618085264ae91512df4cf0488cf6e71ae92ba5d60942549c2f0d22297a",
-    "demo/report-identity.mjs": "05f4970df51b6e81f66b1a66050d2efce2f691d5b2f0f6300a8e3fa0851ab6b1",
+    "demo/index.html": "c0d0aae4eeb42265eb0b1e70e54a1b90c5f53e4062ec49a36ad2462fadd9dcf5",
+    "demo/styles.css": "3a77e33a296edce40eb4d16c512adcbbc70c56203b2044b333a8afae9bc23791",
+    "demo/app.mjs": "1840d32ed1108008ea6933e65fccacc1c6dbbdbcfebcd0360f75ace40f4a1761",
+    "demo/review-validation.mjs": "b69b57c9af39a640a573b5c65c84bef5841ecb27c3ec696e6f27a25df8692034",
+    "demo/report-identity.mjs": "559039cb991ad6f22e508fd230871721774f19398c6b86b2005e2fd34e7d3cdc",
     "demo/review-workflow.mjs": "53a0ce4173b681d55fd247b536ce3ae13d974b08938cd9c811b2ceb428475628"
   },
-  "browser": "Tabbit through installed CLI",
+  "coreArtifactSha256": "505893ee6fc69a95446826cefc4c7941ab44098a982d33a979cf245b7b135e73",
+  "browser": "Tabbit 154.0.8037.58",
   "checks": [
     {
-      "name": "legacy-default-and-mirror",
+      "name": "default-mirror-photo-regression",
       "status": "passed",
-      "steps": "Loaded actual 59-image default (96 pairs) and mirror (107 pairs) reports; mirror-only search still explains four-distance matching."
+      "evidence": "reports/plan-0.5.0/logs/phase4-browser-legacy.json"
     },
     {
-      "name": "real-photo-orientation",
+      "name": "local-review-desktop-mobile-offline",
       "status": "passed",
-      "steps": "Loaded 50 held-out-source derivatives / 131 pairs. Search camera-rotate90 gives 5 pairs. First is rotate90/original at distance 0; both unchanged-orientation previews decode to 256x256 with CSS transform none."
-    },
-    {
-      "name": "undo-and-reload",
-      "status": "passed",
-      "steps": "Set unsure, undo to pending, set confirmed and Chinese QA note, reload and recover note/decision on selected pair."
-    },
-    {
-      "name": "desktop-layout",
-      "status": "passed",
-      "steps": "1440x1000 browser viewport; inspected full-page screenshot."
-    },
-    {
-      "name": "mobile-layout",
-      "status": "passed",
-      "steps": "390x844 viewport; inspected full-page screenshot. Document/body scrollWidth 375, no page overflow."
-    }
-  ],
-  "notTested": [
-    {
-      "name": "downloaded-export-bytes",
-      "reason": "No saved export files inspected this round."
-    },
-    {
-      "name": "real-mobile-device",
-      "reason": "Viewport emulation only."
-    },
-    {
-      "name": "complete-browser-import-regression",
-      "reason": "Imports and empty report paths not repeated; Node validation tests run separately."
+      "evidence": "reports/plan-0.5.0/phase3-browser.json"
     }
   ],
   "screenshots": [
     {
-      "path": "demo/qa/workbench-photos-v040.png",
-      "status": "current",
-      "auditId": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078",
-      "sha256": "c1c221a8c94dc0e23d85efb75dba9e42ec99ae47f71cad93fb0ad463f1accf0c"
+      "path": "demo/qa/workbench-v050.png",
+      "sha256": "6ea4d2af666b8e99ac7cd503f86a20ea1af3a08afb59891d8488494a69875127"
     },
     {
-      "path": "demo/qa/workbench-photos-mobile-v040.png",
-      "status": "current",
-      "auditId": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078",
-      "sha256": "39133eabf4012123705cca22db6e953d97c11ec39be38d07c6f8e308014a7256"
+      "path": "demo/qa/workbench-mobile-v050.png",
+      "sha256": "2d422d5c687df9e9495547af538eee884e56417fbe72fcf172e1212e67fd682e"
+    },
+    {
+      "path": "demo/qa/offline-v050.png",
+      "sha256": "e41e0ad1379ba339b2cf3fb7ba6e0ce3557ddcbfd09e644166dd581cd57bdec1"
     }
   ],
-  "notes": [
-    "QA marks only identify known controlled source transforms.",
-    "A broad text selector matched hidden fingerprint details as well as the paragraph; a specific observed paragraph selector passed.",
-    "Historical 0.2.0 and 0.3.0 screenshots/records are not counted as current checks."
+  "notTested": [
+    "Physical mobile device; viewport emulation was used.",
+    "Standalone GitHub Action example workflow; its actual CLI gate is covered by integration tests."
   ]
 }

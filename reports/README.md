@@ -17,4 +17,12 @@ The `photos-v1/` reports are controlled transformations of ten actual licensed p
 
 Reports in `plan-0.5.0/` record phase 0–2 implementation, local acceptance, independent metric checks and browser evidence. Each report's recorded source digest, platform and phase define its scope. `plan-0.5.0/git-sync-2026-10-25.json` maps the local commits to public history and links fresh Linux acceptance for the synchronization batches.
 
-The package version is still 0.4.0, phase 3 has not started, and phase 2 implementation evidence does not constitute an independent Claude review or a finished 0.5.0 release. Historical reports remain unchanged.
+At that synchronization the package version was 0.4.0 and phase 3 had not started. Phase 2 implementation evidence did not constitute an independent Claude review or a finished 0.5.0 release.
+
+## 0.5.0 local candidate
+
+Version metadata is now 0.5.0. Phase 3 is complete; phase 4 local verification, packaging and clean extraction acceptance are recorded in `plan-0.5.0/phase-4.md` and the current verification reports. New public synchronization and formal Mooncakes publication still require the owner's approval. Phase reviews by Codex are implementation self-review, not independent Claude review.
+
+`photos-v1/current-*` are refreshed regression reports. Their previous bytes are preserved in `history/pre-0.5.0-20261025/`; `research/photos-v1/freeze/archive-locations.json` resolves the eight 0.4.0 baselines to those immutable files and enforces the original frozen SHA-256 values. Original freeze records and historical ZIPs remain unchanged.
+
+`plan-0.5.0/crops-development/` and `crops-holdout/` report controlled transformations of 32 newly licensed file sources. Source and scene partitioning, freeze chronology, oracle comparisons, resource results and their limits are recorded in `plan-0.5.0/phase-3.md`. The old photos-v1 holdout is a regression set for this version.

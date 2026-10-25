@@ -114,7 +114,7 @@ python3 tools/package.py
 python3 tools/accept-release.py
 ```
 
-打包前核对行为源码摘要、JS 产物、浏览器 QA 与评测证据摘要，归档名按版本生成：当前为 `release/visionleak-0.4.0.zip`。已有 `release/visionleak-0.1.0.zip` 保留，`release/SHA256SUMS` 保留各版本条目。同版本、不同归档内容会被拒绝覆盖，需要使用新版本；同样的版本号不代表任意两份文件内容相同。核心旧引擎基线随源码包进入 `research/baselines/`，无需依赖工作目录里的旧 ZIP 才能运行前后对照。
+打包前核对行为源码摘要、JS 产物、浏览器 QA 与评测证据摘要，归档名按版本生成：当前为 `release/visionleak-0.5.0.zip`。已有历史 ZIP 保留，`release/SHA256SUMS` 保留各版本条目。同版本、不同归档内容会被拒绝覆盖，需要使用新版本；同样的版本号不代表任意两份文件内容相同。核心旧引擎基线随源码包进入 `research/baselines/`，无需依赖工作目录里的旧 ZIP 才能运行前后对照。
 
 `accept-release.py` 首先把包外 `reports/release-verification.json` 写为 `running`，再读取当前版本 ZIP 与校验和，核对归档成员和逐文件摘要，在新目录安装依赖、重新编译、运行 Node 测试及真实随包图像审计，并比对报告和源码摘要。ZIP 缺失也会更新为 `failed`，不会继续展示旧的成功状态。成功时自动删除本轮临时解包副本并保留日志；失败时保留已经创建的副本，在报告中记录位置供排错。
 

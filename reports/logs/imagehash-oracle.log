@@ -6,9 +6,9 @@
     "fp": 0,
     "fn": 0,
     "tn": 1059,
-    "precision": 1.0,
-    "recall": 1.0,
-    "falsePositiveRate": 0.0,
+    "precision": 1,
+    "recall": 1,
+    "falsePositiveRate": 0,
     "falsePositives": [],
     "falseNegatives": []
   },

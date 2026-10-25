@@ -14,8 +14,8 @@
   "groundTruthSha256": "5c2f1bdc1241dd0c4b15bbdb5ffe8a83c973b56e49b84fa12f77301f83d72575",
   "sourcesSha256": "7b59138a6358d1f25c205b2e5d8fb8803ab101c8d980ef0991bd6f6c3ad8248a",
   "protocolSha256": "027bc300e5b46eb18b5f9afb6871678b1d880de91a120a9ea2c21c0b017c1847",
-  "engineSha256": "86a74558178474cc22591e1e4da38cc8a0b547c7c39ec3b9d9282d9736093bcb",
-  "evaluatorSha256": "106706c67c196669ba249314ac3cd21551d95787a30cc404c2678afeb1da37e7",
+  "engineSha256": "505893ee6fc69a95446826cefc4c7941ab44098a982d33a979cf245b7b135e73",
+  "evaluatorSha256": "fbad0dcd229758fc39877377f07a17acc3e4c818a64ae4ffc9e53796c3e3c7e4",
   "environment": {
     "python": "3.13.15",
     "node": "v26.7.0",
@@ -235,9 +235,9 @@
           "fp": 0,
           "fn": 0,
           "tn": 710,
-          "precision": 1.0,
-          "recall": 1.0,
-          "falsePositiveRate": 0.0,
+          "precision": 1,
+          "recall": 1,
+          "falsePositiveRate": 0,
           "falsePositives": [],
           "falseNegatives": []
         },
@@ -246,9 +246,9 @@
           "fp": 0,
           "fn": 83,
           "tn": 580,
-          "precision": 1.0,
+          "precision": 1,
           "recall": 0.36153846153846153,
-          "falsePositiveRate": 0.0,
+          "falsePositiveRate": 0,
           "falsePositives": [],
           "falseNegatives": [
             [
@@ -1741,7 +1741,7 @@
           "prediction": null
         }
       ],
-      "auditId": "15b8158fdfeb0e7c951ceee33eb923a559d0507681b641f964eb96737cb90449",
+      "auditId": "6e4585d60aebdcd0e75575967b1f82a74b54800f99f1ca31158c43ae942a1c19",
       "stats": {
         "inputImages": 50,
         "processedImages": 50,
@@ -1755,13 +1755,15 @@
       "options": {
         "threshold": 6,
         "maxImages": 1000,
+        "maxDecodePixels": 64000000,
         "maxPixels": 4194304,
         "maxTotalPixels": 100000000,
         "maxFileBytes": 33554432,
         "maxComparisons": 1000000,
         "maxPairs": 10000,
         "includeMirrors": false,
-        "includeRotations": false
+        "includeRotations": false,
+        "includeCrops": false
       },
       "command": [
         "node",
@@ -1775,11 +1777,11 @@
         "6"
       ],
       "wallSeconds": [
-        0.31721791671589017,
-        0.31883162492886186,
-        0.3074298747815192
+        0.3083213339559734,
+        0.30827749986201525,
+        0.3200355409644544
       ],
-      "medianWallSeconds": 0.31721791671589017
+      "medianWallSeconds": 0.3083213339559734
     },
     "mirrors": {
       "scores": {
@@ -1788,9 +1790,9 @@
           "fp": 0,
           "fn": 0,
           "tn": 710,
-          "precision": 1.0,
-          "recall": 1.0,
-          "falsePositiveRate": 0.0,
+          "precision": 1,
+          "recall": 1,
+          "falsePositiveRate": 0,
           "falsePositives": [],
           "falseNegatives": []
         },
@@ -1799,9 +1801,9 @@
           "fp": 0,
           "fn": 39,
           "tn": 580,
-          "precision": 1.0,
+          "precision": 1,
           "recall": 0.7,
-          "falsePositiveRate": 0.0,
+          "falsePositiveRate": 0,
           "falsePositives": [],
           "falseNegatives": [
             [
@@ -2534,7 +2536,7 @@
           "prediction": null
         }
       ],
-      "auditId": "fb4dfbedca92aaae2c7948b8fa1668b8913b0823519b63abc9a439ecbf51f6db",
+      "auditId": "39b39942b93f307d8556ae55f85c434eacfc64b180459b714ae23c7c293d8c5e",
       "stats": {
         "inputImages": 50,
         "processedImages": 50,
@@ -2548,13 +2550,15 @@
       "options": {
         "threshold": 6,
         "maxImages": 1000,
+        "maxDecodePixels": 64000000,
         "maxPixels": 4194304,
         "maxTotalPixels": 100000000,
         "maxFileBytes": 33554432,
         "maxComparisons": 1000000,
         "maxPairs": 10000,
         "includeMirrors": true,
-        "includeRotations": false
+        "includeRotations": false,
+        "includeCrops": false
       },
       "command": [
         "node",
@@ -2569,11 +2573,11 @@
         "--include-mirrors"
       ],
       "wallSeconds": [
-        0.3709027087315917,
-        0.43057195795699954,
-        0.377316040918231
+        0.35874591674655676,
+        0.35996062494814396,
+        0.37488516699522734
       ],
-      "medianWallSeconds": 0.377316040918231
+      "medianWallSeconds": 0.35996062494814396
     },
     "orientations": {
       "scores": {
@@ -2582,9 +2586,9 @@
           "fp": 0,
           "fn": 0,
           "tn": 710,
-          "precision": 1.0,
-          "recall": 1.0,
-          "falsePositiveRate": 0.0,
+          "precision": 1,
+          "recall": 1,
+          "falsePositiveRate": 0,
           "falsePositives": [],
           "falseNegatives": []
         },
@@ -2593,9 +2597,9 @@
           "fp": 0,
           "fn": 14,
           "tn": 580,
-          "precision": 1.0,
+          "precision": 1,
           "recall": 0.8923076923076924,
-          "falsePositiveRate": 0.0,
+          "falsePositiveRate": 0,
           "falsePositives": [],
           "falseNegatives": [
             [
@@ -2897,7 +2901,7 @@
           "prediction": null
         }
       ],
-      "auditId": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078",
+      "auditId": "b7868a4da4d61dc0d044046a8ebd4cc1c151a3124f9dc31a87252e4d1afa0b5f",
       "stats": {
         "inputImages": 50,
         "processedImages": 50,
@@ -2911,13 +2915,15 @@
       "options": {
         "threshold": 6,
         "maxImages": 1000,
+        "maxDecodePixels": 64000000,
         "maxPixels": 4194304,
         "maxTotalPixels": 100000000,
         "maxFileBytes": 33554432,
         "maxComparisons": 1000000,
         "maxPairs": 10000,
         "includeMirrors": true,
-        "includeRotations": true
+        "includeRotations": true,
+        "includeCrops": false
       },
       "command": [
         "node",
@@ -2933,20 +2939,224 @@
         "--include-rotations"
       ],
       "wallSeconds": [
-        0.5647735837846994,
-        0.619633125141263,
-        0.5698417923413217
+        0.5622702920809388,
+        0.5280266250483692,
+        0.5385345830582082
       ],
-      "medianWallSeconds": 0.5698417923413217
+      "medianWallSeconds": 0.5385345830582082
     }
   },
   "baselineComparison": {
-    "unchangedModes": [
-      "default",
-      "mirrors"
-    ],
-    "baselineEvaluationSha256": "22a4270bb817e0205064240ebd8e73d4c02b4b87c882b69bdf273c76014741c6",
-    "implementationFreezeSha256": "93ffad949ec069539de6d871872aa204584311ba1d7e48817294e3e263416382"
+    "default": {
+      "version": "0.4.0",
+      "key": "holdout/default",
+      "baselinePath": "reports/history/pre-0.5.0-20261025/reports/photos-v1/current-holdout/default-audit.json",
+      "baselineReportSha256": "617bc438dba790ac3dc1504ac3f796ea077bfc0724e2f5914a37831b03bfd41b",
+      "freezeSha256": "19bd6f8517416dcf820057b184972d6929f470eaf9d2b2ea615875df6d57d011",
+      "detectionUnchanged": true,
+      "detectionDifferences": [],
+      "allowedChangeReason": null,
+      "passed": true,
+      "workComparison": [
+        {
+          "field": "comparisons",
+          "before": 584,
+          "after": 584,
+          "delta": 0
+        },
+        {
+          "field": "distanceEvaluations",
+          "before": 491,
+          "after": 491,
+          "delta": 0
+        },
+        {
+          "field": "emittedPairs",
+          "before": 62,
+          "after": 62,
+          "delta": 0
+        },
+        {
+          "field": "indexNodes",
+          "before": 28,
+          "after": 28,
+          "delta": 0
+        },
+        {
+          "field": "inputImages",
+          "before": 50,
+          "after": 50,
+          "delta": 0
+        },
+        {
+          "field": "pairChecks",
+          "before": 93,
+          "after": 93,
+          "delta": 0
+        },
+        {
+          "field": "processedImages",
+          "before": 50,
+          "after": 50,
+          "delta": 0
+        },
+        {
+          "field": "reason",
+          "before": "",
+          "after": "",
+          "delta": null
+        }
+      ],
+      "timingComparison": {
+        "before": {
+          "elapsedMs": 258
+        },
+        "after": {
+          "elapsedMs": 267
+        },
+        "note": "Observational; never a regression failure condition."
+      }
+    },
+    "mirrors": {
+      "version": "0.4.0",
+      "key": "holdout/mirrors",
+      "baselinePath": "reports/history/pre-0.5.0-20261025/reports/photos-v1/current-holdout/mirrors-audit.json",
+      "baselineReportSha256": "d053225364b8d8bdf752cb9b1c48c72b3560043f916f785f052e9a8ed3ad08b6",
+      "freezeSha256": "19bd6f8517416dcf820057b184972d6929f470eaf9d2b2ea615875df6d57d011",
+      "detectionUnchanged": true,
+      "detectionDifferences": [],
+      "allowedChangeReason": null,
+      "passed": true,
+      "workComparison": [
+        {
+          "field": "comparisons",
+          "before": 2382,
+          "after": 2382,
+          "delta": 0
+        },
+        {
+          "field": "distanceEvaluations",
+          "before": 2225,
+          "after": 2225,
+          "delta": 0
+        },
+        {
+          "field": "emittedPairs",
+          "before": 106,
+          "after": 106,
+          "delta": 0
+        },
+        {
+          "field": "indexNodes",
+          "before": 47,
+          "after": 47,
+          "delta": 0
+        },
+        {
+          "field": "inputImages",
+          "before": 50,
+          "after": 50,
+          "delta": 0
+        },
+        {
+          "field": "pairChecks",
+          "before": 157,
+          "after": 157,
+          "delta": 0
+        },
+        {
+          "field": "processedImages",
+          "before": 50,
+          "after": 50,
+          "delta": 0
+        },
+        {
+          "field": "reason",
+          "before": "",
+          "after": "",
+          "delta": null
+        }
+      ],
+      "timingComparison": {
+        "before": {
+          "elapsedMs": 327
+        },
+        "after": {
+          "elapsedMs": 321
+        },
+        "note": "Observational; never a regression failure condition."
+      }
+    },
+    "orientations": {
+      "version": "0.4.0",
+      "key": "holdout/orientations",
+      "baselinePath": "reports/history/pre-0.5.0-20261025/reports/photos-v1/current-holdout/orientations-audit.json",
+      "baselineReportSha256": "834dac1e96ed2ebc12a431024d6a32e2722ee03f1a8541502eb08a30a8bfee1b",
+      "freezeSha256": "19bd6f8517416dcf820057b184972d6929f470eaf9d2b2ea615875df6d57d011",
+      "detectionUnchanged": true,
+      "detectionDifferences": [],
+      "allowedChangeReason": null,
+      "passed": true,
+      "workComparison": [
+        {
+          "field": "comparisons",
+          "before": 19396,
+          "after": 19396,
+          "delta": 0
+        },
+        {
+          "field": "distanceEvaluations",
+          "before": 19197,
+          "after": 19197,
+          "delta": 0
+        },
+        {
+          "field": "emittedPairs",
+          "before": 131,
+          "after": 131,
+          "delta": 0
+        },
+        {
+          "field": "indexNodes",
+          "before": 143,
+          "after": 143,
+          "delta": 0
+        },
+        {
+          "field": "inputImages",
+          "before": 50,
+          "after": 50,
+          "delta": 0
+        },
+        {
+          "field": "pairChecks",
+          "before": 199,
+          "after": 199,
+          "delta": 0
+        },
+        {
+          "field": "processedImages",
+          "before": 50,
+          "after": 50,
+          "delta": 0
+        },
+        {
+          "field": "reason",
+          "before": "",
+          "after": "",
+          "delta": null
+        }
+      ],
+      "timingComparison": {
+        "before": {
+          "elapsedMs": 522
+        },
+        "after": {
+          "elapsedMs": 482
+        },
+        "note": "Observational; never a regression failure condition."
+      }
+    }
   },
   "mirrorAddedPairs": [
     {

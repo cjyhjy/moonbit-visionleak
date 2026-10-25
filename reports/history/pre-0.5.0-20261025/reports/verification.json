@@ -1,0 +1,522 @@
+{
+  "schemaVersion": "visionleak-verification-v1",
+  "status": "passed",
+  "startedAt": "2026-10-23T16:00:57.668Z",
+  "dateTimezone": "America/New_York",
+  "checks": [
+    {
+      "id": "toolchain",
+      "command": [
+        "./tools/moon",
+        "version",
+        "--all"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 53,
+      "log": "reports/logs/toolchain.log"
+    },
+    {
+      "id": "build",
+      "command": [
+        "node",
+        "tools/build.mjs"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 66,
+      "log": "reports/logs/build.log"
+    },
+    {
+      "id": "moon-js",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "js"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 183,
+      "log": "reports/logs/moon-js.log"
+    },
+    {
+      "id": "moon-wasm-gc",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "wasm-gc"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 201,
+      "log": "reports/logs/moon-wasm-gc.log"
+    },
+    {
+      "id": "moon-native",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "native"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 114,
+      "log": "reports/logs/moon-native.log"
+    },
+    {
+      "id": "native-release-build",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "native",
+        "--release",
+        "--build-only"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 1467,
+      "log": "reports/logs/native-release-build.log"
+    },
+    {
+      "id": "native-release-run",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "native",
+        "--release"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 2336,
+      "log": "reports/logs/native-release-run.log"
+    },
+    {
+      "id": "format",
+      "command": [
+        "./tools/moon",
+        "fmt",
+        "--check"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 53,
+      "log": "reports/logs/format.log"
+    },
+    {
+      "id": "node-integration",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 1619,
+      "log": "reports/logs/node-integration.log"
+    },
+    {
+      "id": "metric-regression",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tests/oracle-metrics.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 128,
+      "log": "reports/logs/metric-regression.log"
+    },
+    {
+      "id": "imagehash-oracle",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tools/evaluate.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 1889,
+      "log": "reports/logs/imagehash-oracle.log"
+    },
+    {
+      "id": "mirror-oracle",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tools/evaluate-mirrors.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 1550,
+      "log": "reports/logs/mirror-oracle.log"
+    },
+    {
+      "id": "photo-development",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tools/evaluate-photos.py",
+        "--partition",
+        "development",
+        "--out",
+        "reports/photos-v1/current-development",
+        "--include-orientations",
+        "--replace"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 15083,
+      "log": "reports/logs/photo-development.log"
+    },
+    {
+      "id": "photo-holdout",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tools/evaluate-photos.py",
+        "--partition",
+        "holdout",
+        "--out",
+        "reports/photos-v1/current-holdout",
+        "--include-orientations",
+        "--replace"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 15065,
+      "log": "reports/logs/photo-holdout.log"
+    },
+    {
+      "id": "photo-summary",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tools/summarize-photos.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 50,
+      "log": "reports/logs/photo-summary.log"
+    },
+    {
+      "id": "performance",
+      "command": [
+        "node",
+        "tools/benchmark.mjs"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 815,
+      "log": "reports/logs/performance.log"
+    },
+    {
+      "id": "core-comparison",
+      "command": [
+        "node",
+        "tests/core-performance.mjs"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 3045,
+      "log": "reports/logs/core-comparison.log"
+    },
+    {
+      "id": "release-contract",
+      "command": [
+        "python3",
+        "tests/release-contract.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 95,
+      "log": "reports/logs/release-contract.log"
+    }
+  ],
+  "keyFiles": [
+    "DELIVERY.md",
+    "README.md",
+    "core/audit.mbt",
+    "core/fingerprint.mbt",
+    "core/sha256.mbt",
+    "dist/visionleak.js",
+    "tools/cli.mjs",
+    "demo/index.html",
+    "reports/evaluation.json",
+    "research/comparison.md"
+  ],
+  "release": {
+    "archive": "release/visionleak-0.4.0.zip",
+    "checksumFile": "release/SHA256SUMS",
+    "attestation": "reports/release-verification.json",
+    "commands": [
+      [
+        "python3",
+        "tools/package.py"
+      ],
+      [
+        "python3",
+        "tools/accept-release.py"
+      ]
+    ],
+    "status": "read-final-attestation",
+    "note": "Final archive checksum and acceptance status are outside the ZIP to avoid self-reference."
+  },
+  "notTested": [
+    "Naturally occurring contamination in a real licensed image dataset",
+    "Windows/Linux runtime acceptance",
+    "FiftyOne or MoonSplit runtime/performance comparison",
+    "Public hosting, publication and formal contest submission"
+  ],
+  "publication": {
+    "scope": "This local verification does not query or change external publication or contest submission status."
+  },
+  "environment": {
+    "node": "v26.7.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "moon": "moon 0.1.20261012 (748b63c 2026-10-12) ./.toolchain/bin/moon\nmoonc v0.10.15+943464bfa (2026-10-12) ./.toolchain/bin/moonc\nmoonrun 0.1.20261012 (748b63c 2026-10-12) ./.toolchain/bin/moonrun\n\nFeature flags enabled: rr_moon_mod,rr_moon_pkg"
+  },
+  "evaluation": {
+    "file": "reports/evaluation.json",
+    "images": 59,
+    "exact": {
+      "tp": 27,
+      "fp": 0,
+      "fn": 0,
+      "tn": 1059,
+      "precision": 1,
+      "recall": 1,
+      "falsePositiveRate": 0,
+      "falsePositives": [],
+      "falseNegatives": []
+    },
+    "nearOnly": {
+      "tp": 67,
+      "fp": 2,
+      "fn": 18,
+      "tn": 972,
+      "precision": 0.9710144927536232,
+      "recall": 0.788235294117647,
+      "falsePositiveRate": 0.002053388090349076,
+      "falsePositives": [
+        [
+          "test/flat-blue.png",
+          "train/flat-red.png"
+        ],
+        [
+          "test/lookalike-ramp-1.png",
+          "train/lookalike-ramp-0.png"
+        ]
+      ],
+      "falseNegatives": [
+        [
+          "test/brighter-00.png",
+          "validation/mirrored-00.png"
+        ],
+        [
+          "test/brighter-01.png",
+          "validation/mirrored-01.png"
+        ],
+        [
+          "test/cropped-00.png",
+          "train/local-copy.png"
+        ],
+        [
+          "test/cropped-00.png",
+          "train/scene-00.png"
+        ],
+        [
+          "test/cropped-00.png",
+          "validation/mirrored-00.png"
+        ],
+        [
+          "test/cropped-00.png",
+          "validation/repacked-00.png"
+        ],
+        [
+          "test/cropped-00.png",
+          "validation/resized-00.png"
+        ],
+        [
+          "test/cropped-01.png",
+          "train/scene-01.png"
+        ],
+        [
+          "test/cropped-01.png",
+          "validation/mirrored-01.png"
+        ],
+        [
+          "test/cropped-01.png",
+          "validation/repacked-01.png"
+        ],
+        [
+          "test/cropped-01.png",
+          "validation/resized-01.png"
+        ],
+        [
+          "test/quality72-00.jpg",
+          "validation/mirrored-00.png"
+        ],
+        [
+          "test/quality72-01.jpg",
+          "validation/mirrored-01.png"
+        ],
+        [
+          "test/renamed-00.png",
+          "validation/mirrored-00.png"
+        ],
+        [
+          "test/renamed-01.png",
+          "validation/mirrored-01.png"
+        ],
+        [
+          "train/local-copy.png",
+          "validation/mirrored-00.png"
+        ],
+        [
+          "train/scene-00.png",
+          "validation/mirrored-00.png"
+        ],
+        [
+          "train/scene-01.png",
+          "validation/mirrored-01.png"
+        ]
+      ]
+    },
+    "indexParity": {
+      "expectedPairs": 96,
+      "actualPairs": 96,
+      "missingPairs": [],
+      "unexpectedPairs": [],
+      "duplicatePairs": 0,
+      "passed": true
+    },
+    "summary": "Deterministic synthetic files; near-only metrics exclude exact positives. See evaluation.md for false positives and false negatives."
+  },
+  "browser": {
+    "schemaVersion": "visionleak-demo-qa-v1",
+    "status": "passed",
+    "scope": "Explicit 0.4.0 browser checks on controlled derivatives of licensed photographs and legacy synthetic reports. No natural contamination claim.",
+    "verifiedAt": "2026-10-23T16:00:55.026980+00:00",
+    "servedAuditId": "10f740be2630e3ea2941339b4360900eec93cf5751b038ddd585d310d2ed1b43",
+    "mirrorAuditId": "e9dfa748b17b41f8f08cd430af8d219a5de5a3179a3fc1e3bdb7689a79ca67bb",
+    "photoAuditId": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078",
+    "sourceHashes": {
+      "demo/index.html": "f5c10c6dd2c5b83089307e75d252cbcaaa4639d93d8fcaf8fa2cf6f4113658c7",
+      "demo/styles.css": "87aefe99aa8e1793892f4868216e34315543e84b6755665228f84faa1563513b",
+      "demo/app.mjs": "4bfa5b1c0b4527a553e2397b1dbe7b7b4c59d44f114d23fa3cf87c8b6cc538be",
+      "demo/review-validation.mjs": "c92a0f618085264ae91512df4cf0488cf6e71ae92ba5d60942549c2f0d22297a",
+      "demo/report-identity.mjs": "05f4970df51b6e81f66b1a66050d2efce2f691d5b2f0f6300a8e3fa0851ab6b1",
+      "demo/review-workflow.mjs": "53a0ce4173b681d55fd247b536ce3ae13d974b08938cd9c811b2ceb428475628"
+    },
+    "browser": "Tabbit through installed CLI",
+    "checks": [
+      {
+        "name": "legacy-default-and-mirror",
+        "status": "passed",
+        "steps": "Loaded actual 59-image default (96 pairs) and mirror (107 pairs) reports; mirror-only search still explains four-distance matching."
+      },
+      {
+        "name": "real-photo-orientation",
+        "status": "passed",
+        "steps": "Loaded 50 held-out-source derivatives / 131 pairs. Search camera-rotate90 gives 5 pairs. First is rotate90/original at distance 0; both unchanged-orientation previews decode to 256x256 with CSS transform none."
+      },
+      {
+        "name": "undo-and-reload",
+        "status": "passed",
+        "steps": "Set unsure, undo to pending, set confirmed and Chinese QA note, reload and recover note/decision on selected pair."
+      },
+      {
+        "name": "desktop-layout",
+        "status": "passed",
+        "steps": "1440x1000 browser viewport; inspected full-page screenshot."
+      },
+      {
+        "name": "mobile-layout",
+        "status": "passed",
+        "steps": "390x844 viewport; inspected full-page screenshot. Document/body scrollWidth 375, no page overflow."
+      }
+    ],
+    "notTested": [
+      {
+        "name": "downloaded-export-bytes",
+        "reason": "No saved export files inspected this round."
+      },
+      {
+        "name": "real-mobile-device",
+        "reason": "Viewport emulation only."
+      },
+      {
+        "name": "complete-browser-import-regression",
+        "reason": "Imports and empty report paths not repeated; Node validation tests run separately."
+      }
+    ],
+    "screenshots": [
+      {
+        "path": "demo/qa/workbench-photos-v040.png",
+        "status": "current",
+        "auditId": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078",
+        "sha256": "c1c221a8c94dc0e23d85efb75dba9e42ec99ae47f71cad93fb0ad463f1accf0c"
+      },
+      {
+        "path": "demo/qa/workbench-photos-mobile-v040.png",
+        "status": "current",
+        "auditId": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078",
+        "sha256": "39133eabf4012123705cca22db6e953d97c11ec39be38d07c6f8e308014a7256"
+      }
+    ],
+    "notes": [
+      "QA marks only identify known controlled source transforms.",
+      "A broad text selector matched hidden fingerprint details as well as the paragraph; a specific observed paragraph selector passed.",
+      "Historical 0.2.0 and 0.3.0 screenshots/records are not counted as current checks."
+    ]
+  },
+  "photos": {
+    "summary": "reports/photos-v1/summary.json",
+    "development": "reports/photos-v1/current-development/evaluation.json",
+    "holdout": "reports/photos-v1/current-holdout/evaluation.json",
+    "scope": "Ten licensed photos with controlled transforms; natural contamination untested."
+  },
+  "evidenceDigests": {
+    "reports/evaluation.json": "d6d25f6c585b92799883b3b9beb88fbbe748629aeb68cf51996eed9ff1fc2cc6",
+    "reports/evaluation.md": "defab06728be6382aa1a9c50a98f8b37cb3891af96e5677a20106bc067fbe037",
+    "reports/evaluation-audit.json": "8cd0d294caa79db04e55e73f1a13ece3ee69ee037036e3ef92cda0a681acba74",
+    "reports/evaluation-oracle.json": "65eb7b1d7f3289f37ae9f37d3f1da6d5210f92270e59934755a8ad001564ebff",
+    "reports/performance.json": "85171400f1904c31c024aef3b4f7bae45c92252c18c7a4046ad0553a35000724",
+    "reports/demo/report.json": "ab61e945291a886c499ff90f416209320d409a71c8c4036b449396f00e0e63fd",
+    "demo/qa/verification.json": "d76c02fe00e64620cf4dc5ce2923c2ec2e5e2f54ae86a250e35b43e8e82016b8",
+    "reports/core-optimization.json": "267e521679a1ce640267092a1aa4fd7b6f6e4f79eaec2e88f81346d480be6d6a",
+    "reports/mirror-evaluation.json": "02957d3c2ae298cc754fa4fb0f715d90704be5cbbebd9e06863b0fc9fa74bb06",
+    "reports/mirror-evaluation-audit.json": "94f3729a377e4e900d58b86ae705e4347a8801f5053cc3c57c8d5f307a1d3d33",
+    "reports/mirror-demo/report.json": "a917f2451b16e91f6d947e1aa737a36edeb56e5fc156e9803da6f90abfde2b36",
+    "research/baselines/visionleak-0.1.0.mjs": "94b042685bb55030f5b44f11545c7b6f19ee28cf5971bb3c4598398c2281f2ab",
+    "research/baselines/visionleak-0.3.0.mjs": "859248e6d31ea6101138dcd7c54244e3e67f2bc9ec938451118f56599897788a",
+    "reports/photos-demo/report.json": "e98cad92d50e9ed334da1c91ad9ea1e268c2ae218efab8c1e075844f900c1a4b",
+    "reports/photos-v1/summary.json": "dc4b0c0355e0db7947f89261066e2daff7a79c0f46ff16e8683242d728086459",
+    "reports/photos-v1/summary.md": "1746a3a6f436a80edcc0dc1aeacf7c44f2812cd72ce6773c071ad311ce5414a7",
+    "reports/photos-v1/baseline-development/evaluation.json": "459276e6b9435e9ac0e5754cbf3548deae2043a71bcc3b734761e2225a3464d1",
+    "reports/photos-v1/baseline-development/default-audit.json": "4cdaadeba9325a6af69d33e57d19ea5001c28b9f7f07f45183a19c38d88167e0",
+    "reports/photos-v1/baseline-development/mirrors-audit.json": "90353dc1e5369ba1cdd85e2c49f451763031881d178a71d2f3217dbdf56dce89",
+    "reports/photos-v1/baseline-holdout/evaluation.json": "22a4270bb817e0205064240ebd8e73d4c02b4b87c882b69bdf273c76014741c6",
+    "reports/photos-v1/baseline-holdout/default-audit.json": "ff5b4bef1fffb4051b1f0bc06bc7f72126ba64e5b56c105b37f9618c989636c0",
+    "reports/photos-v1/baseline-holdout/mirrors-audit.json": "291c50c8f564e01b746e5193243685dac2756a79014796bc48c1fd1d4984a7e2",
+    "reports/photos-v1/current-development/evaluation.json": "b4b157573c5932fc3ae1b4e85127b423015509aee9a30d798c10215f7481d1e4",
+    "reports/photos-v1/current-development/default-audit.json": "459636b95f552731ee4d8211fd820d507b15120a35018ccff61c2cd3ec5f655a",
+    "reports/photos-v1/current-development/mirrors-audit.json": "a98871671168893cef88154033276c46c24175adb6fb61bba07380004a5f2489",
+    "reports/photos-v1/current-development/orientations-audit.json": "786a38f9a8ee8756061fafce9058f13d2e4f86261fda695a24be2593b3f2daee",
+    "reports/photos-v1/current-holdout/evaluation.json": "5107890e98bab735a2a4697f76e8ad2fceda0dda785363b6aad813c3298e9112",
+    "reports/photos-v1/current-holdout/default-audit.json": "617bc438dba790ac3dc1504ac3f796ea077bfc0724e2f5914a37831b03bfd41b",
+    "reports/photos-v1/current-holdout/mirrors-audit.json": "d053225364b8d8bdf752cb9b1c48c72b3560043f916f785f052e9a8ed3ad08b6",
+    "reports/photos-v1/current-holdout/orientations-audit.json": "834dac1e96ed2ebc12a431024d6a32e2722ee03f1a8541502eb08a30a8bfee1b"
+  },
+  "sourceDigest": "f77b2d5d26a253729913594a31bcbc5d6fa867875544e12b835979485ec30e84",
+  "sourceDigestScope": "core/tools/tests/demo/fixtures and research/photos-v1 except demo/qa and caches, plus module/package/oracle/toolchain lock files, pinned runtime versions and .github workflows",
+  "compiledArtifact": {
+    "path": "dist/visionleak.js",
+    "sha256": "86a74558178474cc22591e1e4da38cc8a0b547c7c39ec3b9d9282d9736093bcb"
+  },
+  "cleanCopy": {
+    "status": "see-release-attestation",
+    "path": "reports/release-verification.json",
+    "note": "The final ZIP checksum and extracted-copy execution are recorded outside the archive to avoid a self-referential checksum."
+  },
+  "finishedAt": "2026-10-23T16:01:41.563Z"
+}

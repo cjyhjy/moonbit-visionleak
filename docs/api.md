@@ -60,7 +60,7 @@ CLI 增加 `--include-mirrors`；JS `fingerprint({width,height,rgba,includeMirro
 
 ## 0.5.0 开发中的核心迁移与大图合同（待阶段验收）
 
-模块名已按负责人决定改为 `cjyhjy/visionleak`，版本暂保留 0.4.0，统一升版在计划第 4 阶段。新增导出：
+模块名已按负责人决定改为 `cjyhjy/visionleak`，第 4 阶段已统一升版为 0.5.0。新增导出：
 
 - `report_identity_json(source)`：返回 `ok,payload,digest`，处理旧版属性顺序与 v2 字典序；主机先执行标准 JSON 序列化，保留数值拼写。对象数字索引键按 ECMAScript 数字顺序排列。最大 64 Mi 字符、深度 128。标准解析器要求有效 Unicode，拒绝孤立 UTF-16 surrogate；实际历史样例均兼容，任意手工构造 JSON 的完全兼容仍需注意此边界。内容摘要仍非签名。
 - `review_validation_json(source)`：`operation` 为 `report`、`review`、`pairKey`。报告与复核的身份、引用、证据等级、方向、距离、重复键、备注等规则在核心校验；主机仅适配 Map、展示文本与 `Date.parse` 日历解析。最大 64 Mi 字符、深度 128。

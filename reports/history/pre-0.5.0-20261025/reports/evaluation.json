@@ -1,0 +1,3828 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-23T16:01:05.769859+00:00",
+  "dataset": {
+    "name": "visionleak-synthetic-v1",
+    "images": 59,
+    "totalBytes": 1940489,
+    "counts": {
+      "byte-identical": 9,
+      "pixel-identical": 18,
+      "near-source": 85,
+      "negative": 974
+    },
+    "groundTruthSha256": "046a6009b6d4c3090c2262dcf614efe818ec490e15cd4dae39b77c4f032e32ba"
+  },
+  "threshold": 6,
+  "environment": {
+    "python": "3.13.15",
+    "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+    "packages": {
+      "ImageHash": "4.3.2",
+      "Pillow": "11.3.0",
+      "numpy": "2.3.3",
+      "scipy": "1.16.2",
+      "PyWavelets": "1.9.0"
+    },
+    "node": "v26.7.0"
+  },
+  "audit": {
+    "command": [
+      "node",
+      "tools/cli.mjs",
+      "audit",
+      "--root",
+      "fixtures/benchmark",
+      "--out",
+      "<fresh-output>",
+      "--threshold",
+      "6"
+    ],
+    "exitCode": 0,
+    "wallSeconds": 0.23201258340850472,
+    "complete": true,
+    "stats": {
+      "inputImages": 59,
+      "processedImages": 59,
+      "comparisons": 740,
+      "distanceEvaluations": 611,
+      "pairChecks": 129,
+      "emittedPairs": 96,
+      "indexNodes": 18,
+      "reason": ""
+    },
+    "options": {
+      "threshold": 6,
+      "maxImages": 1000,
+      "maxPixels": 4194304,
+      "maxTotalPixels": 100000000,
+      "maxFileBytes": 33554432,
+      "maxComparisons": 1000000,
+      "maxPairs": 10000,
+      "includeMirrors": false,
+      "includeRotations": false
+    },
+    "reportSha256": "8cd0d294caa79db04e55e73f1a13ece3ee69ee037036e3ef92cda0a681acba74"
+  },
+  "scores": {
+    "exact": {
+      "tp": 27,
+      "fp": 0,
+      "fn": 0,
+      "tn": 1059,
+      "precision": 1.0,
+      "recall": 1.0,
+      "falsePositiveRate": 0.0,
+      "falsePositives": [],
+      "falseNegatives": []
+    },
+    "nearOnly": {
+      "tp": 67,
+      "fp": 2,
+      "fn": 18,
+      "tn": 972,
+      "precision": 0.9710144927536232,
+      "recall": 0.788235294117647,
+      "falsePositiveRate": 0.002053388090349076,
+      "falsePositives": [
+        [
+          "test/flat-blue.png",
+          "train/flat-red.png"
+        ],
+        [
+          "test/lookalike-ramp-1.png",
+          "train/lookalike-ramp-0.png"
+        ]
+      ],
+      "falseNegatives": [
+        [
+          "test/brighter-00.png",
+          "validation/mirrored-00.png"
+        ],
+        [
+          "test/brighter-01.png",
+          "validation/mirrored-01.png"
+        ],
+        [
+          "test/cropped-00.png",
+          "train/local-copy.png"
+        ],
+        [
+          "test/cropped-00.png",
+          "train/scene-00.png"
+        ],
+        [
+          "test/cropped-00.png",
+          "validation/mirrored-00.png"
+        ],
+        [
+          "test/cropped-00.png",
+          "validation/repacked-00.png"
+        ],
+        [
+          "test/cropped-00.png",
+          "validation/resized-00.png"
+        ],
+        [
+          "test/cropped-01.png",
+          "train/scene-01.png"
+        ],
+        [
+          "test/cropped-01.png",
+          "validation/mirrored-01.png"
+        ],
+        [
+          "test/cropped-01.png",
+          "validation/repacked-01.png"
+        ],
+        [
+          "test/cropped-01.png",
+          "validation/resized-01.png"
+        ],
+        [
+          "test/quality72-00.jpg",
+          "validation/mirrored-00.png"
+        ],
+        [
+          "test/quality72-01.jpg",
+          "validation/mirrored-01.png"
+        ],
+        [
+          "test/renamed-00.png",
+          "validation/mirrored-00.png"
+        ],
+        [
+          "test/renamed-01.png",
+          "validation/mirrored-01.png"
+        ],
+        [
+          "train/local-copy.png",
+          "validation/mirrored-00.png"
+        ],
+        [
+          "train/scene-00.png",
+          "validation/mirrored-00.png"
+        ],
+        [
+          "train/scene-01.png",
+          "validation/mirrored-01.png"
+        ]
+      ]
+    },
+    "nearCommonTransforms": {
+      "tp": 67,
+      "fp": 2,
+      "fn": 0,
+      "tn": 852,
+      "precision": 0.9710144927536232,
+      "recall": 1.0,
+      "falsePositiveRate": 0.00234192037470726,
+      "falsePositives": [
+        [
+          "test/flat-blue.png",
+          "train/flat-red.png"
+        ],
+        [
+          "test/lookalike-ramp-1.png",
+          "train/lookalike-ramp-0.png"
+        ]
+      ],
+      "falseNegatives": []
+    },
+    "nearChallengeTransforms": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 18,
+      "tn": 120,
+      "precision": null,
+      "recall": 0.0,
+      "falsePositiveRate": 0.0,
+      "falsePositives": [],
+      "falseNegatives": [
+        [
+          "test/brighter-00.png",
+          "validation/mirrored-00.png"
+        ],
+        [
+          "test/brighter-01.png",
+          "validation/mirrored-01.png"
+        ],
+        [
+          "test/cropped-00.png",
+          "train/local-copy.png"
+        ],
+        [
+          "test/cropped-00.png",
+          "train/scene-00.png"
+        ],
+        [
+          "test/cropped-00.png",
+          "validation/mirrored-00.png"
+        ],
+        [
+          "test/cropped-00.png",
+          "validation/repacked-00.png"
+        ],
+        [
+          "test/cropped-00.png",
+          "validation/resized-00.png"
+        ],
+        [
+          "test/cropped-01.png",
+          "train/scene-01.png"
+        ],
+        [
+          "test/cropped-01.png",
+          "validation/mirrored-01.png"
+        ],
+        [
+          "test/cropped-01.png",
+          "validation/repacked-01.png"
+        ],
+        [
+          "test/cropped-01.png",
+          "validation/resized-01.png"
+        ],
+        [
+          "test/quality72-00.jpg",
+          "validation/mirrored-00.png"
+        ],
+        [
+          "test/quality72-01.jpg",
+          "validation/mirrored-01.png"
+        ],
+        [
+          "test/renamed-00.png",
+          "validation/mirrored-00.png"
+        ],
+        [
+          "test/renamed-01.png",
+          "validation/mirrored-01.png"
+        ],
+        [
+          "train/local-copy.png",
+          "validation/mirrored-00.png"
+        ],
+        [
+          "train/scene-00.png",
+          "validation/mirrored-00.png"
+        ],
+        [
+          "train/scene-01.png",
+          "validation/mirrored-01.png"
+        ]
+      ]
+    },
+    "exactEvidenceTierMismatches": [],
+    "exactPairsEmittedAsCandidates": 0,
+    "pairUniverse": 1086,
+    "nearOnlyUniverse": 1059
+  },
+  "oracle": {
+    "oracle": "ImageHash.dhash(hash_size=8) on explicitly canonical 9x8 L-mode pixels",
+    "oracleSourceSha256": "658f09971d30495a2bda6a25e7f56a0875a62b4d0b8ee7566998a63c9c57cff8",
+    "claimBoundary": "Parity tests hash direction/order, canonicalization, sampling and pixel digest. Pillow-default LANCZOS dHash is a separate baseline, not a promised bit-identical algorithm.",
+    "vectorPassed": 11,
+    "vectorTotal": 11,
+    "imagePassed": 59,
+    "imageTotal": 59,
+    "vectors": [
+      {
+        "id": "seeded-rgba-1x1",
+        "expected": {
+          "width": 1,
+          "height": 1,
+          "pixelDigest": "abcb23cbbc945ae76ebec34df7d0a49b21b82a4e868a66d4cb2e34f3b9efd9b8",
+          "dhash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "contrast": 0
+        },
+        "actual": {
+          "ok": true,
+          "width": 1,
+          "height": 1,
+          "pixelDigest": "abcb23cbbc945ae76ebec34df7d0a49b21b82a4e868a66d4cb2e34f3b9efd9b8",
+          "dhash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "contrast": 0,
+          "normalization": "vl-rgb-v1"
+        },
+        "canonical9x8Gray": [
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230,
+          230
+        ],
+        "passed": true
+      },
+      {
+        "id": "seeded-rgba-1x13",
+        "expected": {
+          "width": 1,
+          "height": 13,
+          "pixelDigest": "914d535ef630505c6b096da55921ab9aaff42317fb22da21cb7801d0ca239c94",
+          "dhash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "contrast": 137
+        },
+        "actual": {
+          "ok": true,
+          "width": 1,
+          "height": 13,
+          "pixelDigest": "914d535ef630505c6b096da55921ab9aaff42317fb22da21cb7801d0ca239c94",
+          "dhash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "contrast": 137,
+          "normalization": "vl-rgb-v1"
+        },
+        "canonical9x8Gray": [
+          101,
+          101,
+          101,
+          101,
+          101,
+          101,
+          101,
+          101,
+          101,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          170,
+          215,
+          215,
+          215,
+          215,
+          215,
+          215,
+          215,
+          215,
+          215,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          187,
+          213,
+          213,
+          213,
+          213,
+          213,
+          213,
+          213,
+          213,
+          213,
+          173,
+          173,
+          173,
+          173,
+          173,
+          173,
+          173,
+          173,
+          173,
+          210,
+          210,
+          210,
+          210,
+          210,
+          210,
+          210,
+          210,
+          210,
+          231,
+          231,
+          231,
+          231,
+          231,
+          231,
+          231,
+          231,
+          231
+        ],
+        "passed": true
+      },
+      {
+        "id": "seeded-rgba-13x1",
+        "expected": {
+          "width": 13,
+          "height": 1,
+          "pixelDigest": "4afedcf3dc34b63301caa065a9fd570867cdc3d5925d1b1074de802dae7c0722",
+          "dhash": "0101001001010010010100100101001001010010010100100101001001010010",
+          "contrast": 163
+        },
+        "actual": {
+          "ok": true,
+          "width": 13,
+          "height": 1,
+          "pixelDigest": "4afedcf3dc34b63301caa065a9fd570867cdc3d5925d1b1074de802dae7c0722",
+          "dhash": "0101001001010010010100100101001001010010010100100101001001010010",
+          "contrast": 163,
+          "normalization": "vl-rgb-v1"
+        },
+        "canonical9x8Gray": [
+          204,
+          101,
+          234,
+          160,
+          229,
+          194,
+          133,
+          219,
+          177,
+          204,
+          101,
+          234,
+          160,
+          229,
+          194,
+          133,
+          219,
+          177,
+          204,
+          101,
+          234,
+          160,
+          229,
+          194,
+          133,
+          219,
+          177,
+          204,
+          101,
+          234,
+          160,
+          229,
+          194,
+          133,
+          219,
+          177,
+          204,
+          101,
+          234,
+          160,
+          229,
+          194,
+          133,
+          219,
+          177,
+          204,
+          101,
+          234,
+          160,
+          229,
+          194,
+          133,
+          219,
+          177,
+          204,
+          101,
+          234,
+          160,
+          229,
+          194,
+          133,
+          219,
+          177,
+          204,
+          101,
+          234,
+          160,
+          229,
+          194,
+          133,
+          219,
+          177
+        ],
+        "passed": true
+      },
+      {
+        "id": "seeded-rgba-2x3",
+        "expected": {
+          "width": 2,
+          "height": 3,
+          "pixelDigest": "31c6ab0e774560153382cc64a19bfa4916eae14c01afa9eb0581070631302980",
+          "dhash": "0000100000001000000010000000100000001000000010000000000000000000",
+          "contrast": 98
+        },
+        "actual": {
+          "ok": true,
+          "width": 2,
+          "height": 3,
+          "pixelDigest": "31c6ab0e774560153382cc64a19bfa4916eae14c01afa9eb0581070631302980",
+          "dhash": "0000100000001000000010000000100000001000000010000000000000000000",
+          "contrast": 98,
+          "normalization": "vl-rgb-v1"
+        },
+        "canonical9x8Gray": [
+          191,
+          191,
+          191,
+          191,
+          191,
+          192,
+          192,
+          192,
+          192,
+          191,
+          191,
+          191,
+          191,
+          191,
+          192,
+          192,
+          192,
+          192,
+          191,
+          191,
+          191,
+          191,
+          191,
+          192,
+          192,
+          192,
+          192,
+          202,
+          202,
+          202,
+          202,
+          202,
+          254,
+          254,
+          254,
+          254,
+          202,
+          202,
+          202,
+          202,
+          202,
+          254,
+          254,
+          254,
+          254,
+          202,
+          202,
+          202,
+          202,
+          202,
+          254,
+          254,
+          254,
+          254,
+          189,
+          189,
+          189,
+          189,
+          189,
+          156,
+          156,
+          156,
+          156,
+          189,
+          189,
+          189,
+          189,
+          189,
+          156,
+          156,
+          156,
+          156
+        ],
+        "passed": true
+      },
+      {
+        "id": "seeded-rgba-9x8",
+        "expected": {
+          "width": 9,
+          "height": 8,
+          "pixelDigest": "f94169eefa5fe5e27624d7854ff26c7f8621176993c317470544b38e2c5f4141",
+          "dhash": "1010100110010010100100011001000110101001111011100101010101110001",
+          "contrast": 189
+        },
+        "actual": {
+          "ok": true,
+          "width": 9,
+          "height": 8,
+          "pixelDigest": "f94169eefa5fe5e27624d7854ff26c7f8621176993c317470544b38e2c5f4141",
+          "dhash": "1010100110010010100100011001000110101001111011100101010101110001",
+          "contrast": 189,
+          "normalization": "vl-rgb-v1"
+        },
+        "canonical9x8Gray": [
+          138,
+          207,
+          66,
+          160,
+          137,
+          250,
+          246,
+          187,
+          255,
+          114,
+          246,
+          246,
+          138,
+          251,
+          246,
+          238,
+          249,
+          192,
+          169,
+          250,
+          218,
+          136,
+          247,
+          232,
+          195,
+          175,
+          236,
+          155,
+          193,
+          187,
+          94,
+          243,
+          196,
+          171,
+          126,
+          227,
+          163,
+          202,
+          201,
+          235,
+          164,
+          234,
+          232,
+          189,
+          204,
+          116,
+          173,
+          191,
+          194,
+          120,
+          219,
+          234,
+          237,
+          229,
+          216,
+          215,
+          221,
+          156,
+          250,
+          157,
+          182,
+          152,
+          213,
+          244,
+          213,
+          221,
+          240,
+          244,
+          178,
+          173,
+          79,
+          176
+        ],
+        "passed": true
+      },
+      {
+        "id": "seeded-rgba-17x13",
+        "expected": {
+          "width": 17,
+          "height": 13,
+          "pixelDigest": "f704dc12f2a512c8c05288432960477f9bda1befcd4260b9f9b6f084fdd6b559",
+          "dhash": "1110100110110011000101101011010101011101101010110110101100111001",
+          "contrast": 217
+        },
+        "actual": {
+          "ok": true,
+          "width": 17,
+          "height": 13,
+          "pixelDigest": "f704dc12f2a512c8c05288432960477f9bda1befcd4260b9f9b6f084fdd6b559",
+          "dhash": "1110100110110011000101101011010101011101101010110110101100111001",
+          "contrast": 217,
+          "normalization": "vl-rgb-v1"
+        },
+        "canonical9x8Gray": [
+          203,
+          212,
+          229,
+          239,
+          208,
+          237,
+          192,
+          174,
+          229,
+          177,
+          201,
+          165,
+          198,
+          203,
+          196,
+          170,
+          194,
+          197,
+          240,
+          192,
+          169,
+          115,
+          146,
+          105,
+          167,
+          223,
+          219,
+          163,
+          180,
+          153,
+          224,
+          225,
+          176,
+          203,
+          168,
+          197,
+          184,
+          149,
+          189,
+          166,
+          167,
+          184,
+          212,
+          177,
+          195,
+          179,
+          219,
+          125,
+          243,
+          188,
+          236,
+          171,
+          183,
+          206,
+          210,
+          161,
+          171,
+          219,
+          166,
+          192,
+          165,
+          167,
+          193,
+          245,
+          206,
+          162,
+          200,
+          211,
+          226,
+          165,
+          149,
+          226
+        ],
+        "passed": true
+      },
+      {
+        "id": "seeded-rgba-31x27",
+        "expected": {
+          "width": 31,
+          "height": 27,
+          "pixelDigest": "be1c41fc7c26c25b1207f5934e875a35a00a029a74b01f6bfa41ddb8aee21d33",
+          "dhash": "1101010000100100001101101000100100011110101000101010111000110101",
+          "contrast": 222
+        },
+        "actual": {
+          "ok": true,
+          "width": 31,
+          "height": 27,
+          "pixelDigest": "be1c41fc7c26c25b1207f5934e875a35a00a029a74b01f6bfa41ddb8aee21d33",
+          "dhash": "1101010000100100001101101000100100011110101000101010111000110101",
+          "contrast": 222,
+          "normalization": "vl-rgb-v1"
+        },
+        "canonical9x8Gray": [
+          169,
+          186,
+          209,
+          203,
+          207,
+          182,
+          188,
+          184,
+          170,
+          182,
+          182,
+          155,
+          204,
+          196,
+          188,
+          205,
+          199,
+          187,
+          200,
+          186,
+          179,
+          185,
+          188,
+          182,
+          189,
+          194,
+          191,
+          193,
+          201,
+          195,
+          180,
+          168,
+          191,
+          189,
+          161,
+          208,
+          207,
+          201,
+          192,
+          157,
+          180,
+          194,
+          197,
+          212,
+          198,
+          149,
+          210,
+          194,
+          199,
+          192,
+          190,
+          185,
+          203,
+          180,
+          193,
+          198,
+          178,
+          206,
+          187,
+          193,
+          213,
+          228,
+          194,
+          199,
+          188,
+          186,
+          199,
+          203,
+          172,
+          208,
+          182,
+          185
+        ],
+        "passed": true
+      },
+      {
+        "id": "rising",
+        "expected": {
+          "width": 9,
+          "height": 8,
+          "pixelDigest": "9ab57d883586f1bc5ba178121f161b721cf61338322940800c5e45061011d70b",
+          "dhash": "1111111111111111111111111111111111111111111111111111111111111111",
+          "contrast": 200
+        },
+        "actual": {
+          "ok": true,
+          "width": 9,
+          "height": 8,
+          "pixelDigest": "9ab57d883586f1bc5ba178121f161b721cf61338322940800c5e45061011d70b",
+          "dhash": "1111111111111111111111111111111111111111111111111111111111111111",
+          "contrast": 200,
+          "normalization": "vl-rgb-v1"
+        },
+        "canonical9x8Gray": [
+          0,
+          25,
+          50,
+          75,
+          100,
+          125,
+          150,
+          175,
+          200,
+          0,
+          25,
+          50,
+          75,
+          100,
+          125,
+          150,
+          175,
+          200,
+          0,
+          25,
+          50,
+          75,
+          100,
+          125,
+          150,
+          175,
+          200,
+          0,
+          25,
+          50,
+          75,
+          100,
+          125,
+          150,
+          175,
+          200,
+          0,
+          25,
+          50,
+          75,
+          100,
+          125,
+          150,
+          175,
+          200,
+          0,
+          25,
+          50,
+          75,
+          100,
+          125,
+          150,
+          175,
+          200,
+          0,
+          25,
+          50,
+          75,
+          100,
+          125,
+          150,
+          175,
+          200,
+          0,
+          25,
+          50,
+          75,
+          100,
+          125,
+          150,
+          175,
+          200
+        ],
+        "passed": true
+      },
+      {
+        "id": "falling",
+        "expected": {
+          "width": 9,
+          "height": 8,
+          "pixelDigest": "4191a6005617a502ac252f7382c5647d1881a1b3ee07ed02590183c61ca717dd",
+          "dhash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "contrast": 200
+        },
+        "actual": {
+          "ok": true,
+          "width": 9,
+          "height": 8,
+          "pixelDigest": "4191a6005617a502ac252f7382c5647d1881a1b3ee07ed02590183c61ca717dd",
+          "dhash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "contrast": 200,
+          "normalization": "vl-rgb-v1"
+        },
+        "canonical9x8Gray": [
+          250,
+          225,
+          200,
+          175,
+          150,
+          125,
+          100,
+          75,
+          50,
+          250,
+          225,
+          200,
+          175,
+          150,
+          125,
+          100,
+          75,
+          50,
+          250,
+          225,
+          200,
+          175,
+          150,
+          125,
+          100,
+          75,
+          50,
+          250,
+          225,
+          200,
+          175,
+          150,
+          125,
+          100,
+          75,
+          50,
+          250,
+          225,
+          200,
+          175,
+          150,
+          125,
+          100,
+          75,
+          50,
+          250,
+          225,
+          200,
+          175,
+          150,
+          125,
+          100,
+          75,
+          50,
+          250,
+          225,
+          200,
+          175,
+          150,
+          125,
+          100,
+          75,
+          50,
+          250,
+          225,
+          200,
+          175,
+          150,
+          125,
+          100,
+          75,
+          50
+        ],
+        "passed": true
+      },
+      {
+        "id": "fully-transparent",
+        "expected": {
+          "width": 9,
+          "height": 8,
+          "pixelDigest": "fd5f50aa74d14592a6b7c3d415f0ba8a9e456a740a7753648fdba98bd155f3b9",
+          "dhash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "contrast": 0
+        },
+        "actual": {
+          "ok": true,
+          "width": 9,
+          "height": 8,
+          "pixelDigest": "fd5f50aa74d14592a6b7c3d415f0ba8a9e456a740a7753648fdba98bd155f3b9",
+          "dhash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "contrast": 0,
+          "normalization": "vl-rgb-v1"
+        },
+        "canonical9x8Gray": [
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255
+        ],
+        "passed": true
+      },
+      {
+        "id": "flat",
+        "expected": {
+          "width": 9,
+          "height": 8,
+          "pixelDigest": "63dbd695e6782bcd85f12830bf3c6da69adc76626808862e83573509190cae31",
+          "dhash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "contrast": 0
+        },
+        "actual": {
+          "ok": true,
+          "width": 9,
+          "height": 8,
+          "pixelDigest": "63dbd695e6782bcd85f12830bf3c6da69adc76626808862e83573509190cae31",
+          "dhash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "contrast": 0,
+          "normalization": "vl-rgb-v1"
+        },
+        "canonical9x8Gray": [
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128,
+          128
+        ],
+        "passed": true
+      }
+    ],
+    "images": [
+      {
+        "path": "test/alpha-white.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 3
+      },
+      {
+        "path": "test/brighter-00.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 2
+      },
+      {
+        "path": "test/brighter-01.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 4
+      },
+      {
+        "path": "test/brighter-02.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 12
+      },
+      {
+        "path": "test/brighter-03.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 6
+      },
+      {
+        "path": "test/brighter-04.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 8
+      },
+      {
+        "path": "test/brighter-05.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 5
+      },
+      {
+        "path": "test/brighter-06.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 8
+      },
+      {
+        "path": "test/brighter-07.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 4
+      },
+      {
+        "path": "test/cropped-00.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 5
+      },
+      {
+        "path": "test/cropped-01.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 3
+      },
+      {
+        "path": "test/flat-blue.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 0
+      },
+      {
+        "path": "test/lookalike-ramp-1.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 0
+      },
+      {
+        "path": "test/quality72-00.jpg",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 2
+      },
+      {
+        "path": "test/quality72-01.jpg",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 5
+      },
+      {
+        "path": "test/quality72-02.jpg",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 10
+      },
+      {
+        "path": "test/quality72-03.jpg",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 6
+      },
+      {
+        "path": "test/quality72-04.jpg",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 8
+      },
+      {
+        "path": "test/quality72-05.jpg",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 5
+      },
+      {
+        "path": "test/quality72-06.jpg",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 8
+      },
+      {
+        "path": "test/quality72-07.jpg",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 5
+      },
+      {
+        "path": "test/renamed-00.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 2
+      },
+      {
+        "path": "test/renamed-01.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 4
+      },
+      {
+        "path": "test/renamed-02.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 12
+      },
+      {
+        "path": "test/renamed-03.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 6
+      },
+      {
+        "path": "test/renamed-04.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 8
+      },
+      {
+        "path": "test/renamed-05.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 5
+      },
+      {
+        "path": "test/renamed-06.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 8
+      },
+      {
+        "path": "test/renamed-07.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 4
+      },
+      {
+        "path": "train/alpha-source.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 3
+      },
+      {
+        "path": "train/flat-red.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 0
+      },
+      {
+        "path": "train/local-copy.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 2
+      },
+      {
+        "path": "train/lookalike-ramp-0.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 0
+      },
+      {
+        "path": "train/scene-00.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 2
+      },
+      {
+        "path": "train/scene-01.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 4
+      },
+      {
+        "path": "train/scene-02.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 12
+      },
+      {
+        "path": "train/scene-03.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 6
+      },
+      {
+        "path": "train/scene-04.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 8
+      },
+      {
+        "path": "train/scene-05.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 5
+      },
+      {
+        "path": "train/scene-06.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 8
+      },
+      {
+        "path": "train/scene-07.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 4
+      },
+      {
+        "path": "validation/mirrored-00.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 2
+      },
+      {
+        "path": "validation/mirrored-01.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 5
+      },
+      {
+        "path": "validation/repacked-00.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 2
+      },
+      {
+        "path": "validation/repacked-01.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 4
+      },
+      {
+        "path": "validation/repacked-02.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 12
+      },
+      {
+        "path": "validation/repacked-03.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 6
+      },
+      {
+        "path": "validation/repacked-04.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 8
+      },
+      {
+        "path": "validation/repacked-05.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 5
+      },
+      {
+        "path": "validation/repacked-06.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 8
+      },
+      {
+        "path": "validation/repacked-07.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 4
+      },
+      {
+        "path": "validation/resized-00.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 2
+      },
+      {
+        "path": "validation/resized-01.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 4
+      },
+      {
+        "path": "validation/resized-02.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 12
+      },
+      {
+        "path": "validation/resized-03.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 6
+      },
+      {
+        "path": "validation/resized-04.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 9
+      },
+      {
+        "path": "validation/resized-05.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 5
+      },
+      {
+        "path": "validation/resized-06.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 8
+      },
+      {
+        "path": "validation/resized-07.png",
+        "coreMatchesImageHashOnCanonicalGrid": true,
+        "nodeAndPillowCanonicalPixelsMatch": true,
+        "nodeAndPillowCanonicalHashDistance": 0,
+        "imageHashDefaultVsVisionLeakDistance": 4
+      }
+    ]
+  },
+  "thresholdSweep": [
+    {
+      "threshold": 0,
+      "visionLeakFingerprintReference": {
+        "tp": 58,
+        "fp": 2,
+        "fn": 27,
+        "tn": 972,
+        "precision": 0.9666666666666667,
+        "recall": 0.6823529411764706,
+        "falsePositiveRate": 0.002053388090349076,
+        "falsePositives": [
+          [
+            "test/flat-blue.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/lookalike-ramp-0.png"
+          ]
+        ],
+        "falseNegatives": [
+          [
+            "test/brighter-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/brighter-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/local-copy.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/scene-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/repacked-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/resized-00.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "train/scene-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/resized-01.png"
+          ],
+          [
+            "test/quality72-00.jpg",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "train/scene-01.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/resized-01.png"
+          ],
+          [
+            "test/quality72-02.jpg",
+            "train/scene-02.png"
+          ],
+          [
+            "test/quality72-02.jpg",
+            "validation/repacked-02.png"
+          ],
+          [
+            "test/quality72-02.jpg",
+            "validation/resized-02.png"
+          ],
+          [
+            "test/quality72-07.jpg",
+            "train/scene-07.png"
+          ],
+          [
+            "test/quality72-07.jpg",
+            "validation/repacked-07.png"
+          ],
+          [
+            "test/quality72-07.jpg",
+            "validation/resized-07.png"
+          ],
+          [
+            "test/renamed-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/renamed-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "train/local-copy.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-01.png",
+            "validation/mirrored-01.png"
+          ]
+        ]
+      },
+      "imageHashCanonicalGrid": {
+        "tp": 58,
+        "fp": 2,
+        "fn": 27,
+        "tn": 972,
+        "precision": 0.9666666666666667,
+        "recall": 0.6823529411764706,
+        "falsePositiveRate": 0.002053388090349076,
+        "falsePositives": [
+          [
+            "test/flat-blue.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/lookalike-ramp-0.png"
+          ]
+        ],
+        "falseNegatives": [
+          [
+            "test/brighter-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/brighter-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/local-copy.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/scene-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/repacked-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/resized-00.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "train/scene-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/resized-01.png"
+          ],
+          [
+            "test/quality72-00.jpg",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "train/scene-01.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/resized-01.png"
+          ],
+          [
+            "test/quality72-02.jpg",
+            "train/scene-02.png"
+          ],
+          [
+            "test/quality72-02.jpg",
+            "validation/repacked-02.png"
+          ],
+          [
+            "test/quality72-02.jpg",
+            "validation/resized-02.png"
+          ],
+          [
+            "test/quality72-07.jpg",
+            "train/scene-07.png"
+          ],
+          [
+            "test/quality72-07.jpg",
+            "validation/repacked-07.png"
+          ],
+          [
+            "test/quality72-07.jpg",
+            "validation/resized-07.png"
+          ],
+          [
+            "test/renamed-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/renamed-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "train/local-copy.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-01.png",
+            "validation/mirrored-01.png"
+          ]
+        ]
+      },
+      "imageHashDefault": {
+        "tp": 63,
+        "fp": 2,
+        "fn": 22,
+        "tn": 972,
+        "precision": 0.9692307692307692,
+        "recall": 0.7411764705882353,
+        "falsePositiveRate": 0.002053388090349076,
+        "falsePositives": [
+          [
+            "test/flat-blue.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/lookalike-ramp-0.png"
+          ]
+        ],
+        "falseNegatives": [
+          [
+            "test/brighter-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/brighter-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/brighter-04.png",
+            "validation/resized-04.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/local-copy.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/scene-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/repacked-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/resized-00.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "train/scene-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/resized-01.png"
+          ],
+          [
+            "test/quality72-00.jpg",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/quality72-04.jpg",
+            "validation/resized-04.png"
+          ],
+          [
+            "test/renamed-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/renamed-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/renamed-04.png",
+            "validation/resized-04.png"
+          ],
+          [
+            "train/local-copy.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "train/scene-04.png",
+            "validation/resized-04.png"
+          ]
+        ]
+      }
+    },
+    {
+      "threshold": 2,
+      "visionLeakFingerprintReference": {
+        "tp": 67,
+        "fp": 2,
+        "fn": 18,
+        "tn": 972,
+        "precision": 0.9710144927536232,
+        "recall": 0.788235294117647,
+        "falsePositiveRate": 0.002053388090349076,
+        "falsePositives": [
+          [
+            "test/flat-blue.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/lookalike-ramp-0.png"
+          ]
+        ],
+        "falseNegatives": [
+          [
+            "test/brighter-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/brighter-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/local-copy.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/scene-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/repacked-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/resized-00.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "train/scene-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/resized-01.png"
+          ],
+          [
+            "test/quality72-00.jpg",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/renamed-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/renamed-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "train/local-copy.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-01.png",
+            "validation/mirrored-01.png"
+          ]
+        ]
+      },
+      "imageHashCanonicalGrid": {
+        "tp": 67,
+        "fp": 2,
+        "fn": 18,
+        "tn": 972,
+        "precision": 0.9710144927536232,
+        "recall": 0.788235294117647,
+        "falsePositiveRate": 0.002053388090349076,
+        "falsePositives": [
+          [
+            "test/flat-blue.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/lookalike-ramp-0.png"
+          ]
+        ],
+        "falseNegatives": [
+          [
+            "test/brighter-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/brighter-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/local-copy.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/scene-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/repacked-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/resized-00.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "train/scene-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/resized-01.png"
+          ],
+          [
+            "test/quality72-00.jpg",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/renamed-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/renamed-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "train/local-copy.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-01.png",
+            "validation/mirrored-01.png"
+          ]
+        ]
+      },
+      "imageHashDefault": {
+        "tp": 67,
+        "fp": 2,
+        "fn": 18,
+        "tn": 972,
+        "precision": 0.9710144927536232,
+        "recall": 0.788235294117647,
+        "falsePositiveRate": 0.002053388090349076,
+        "falsePositives": [
+          [
+            "test/flat-blue.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/lookalike-ramp-0.png"
+          ]
+        ],
+        "falseNegatives": [
+          [
+            "test/brighter-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/brighter-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/local-copy.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/scene-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/repacked-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/resized-00.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "train/scene-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/resized-01.png"
+          ],
+          [
+            "test/quality72-00.jpg",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/renamed-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/renamed-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "train/local-copy.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-01.png",
+            "validation/mirrored-01.png"
+          ]
+        ]
+      }
+    },
+    {
+      "threshold": 4,
+      "visionLeakFingerprintReference": {
+        "tp": 67,
+        "fp": 2,
+        "fn": 18,
+        "tn": 972,
+        "precision": 0.9710144927536232,
+        "recall": 0.788235294117647,
+        "falsePositiveRate": 0.002053388090349076,
+        "falsePositives": [
+          [
+            "test/flat-blue.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/lookalike-ramp-0.png"
+          ]
+        ],
+        "falseNegatives": [
+          [
+            "test/brighter-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/brighter-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/local-copy.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/scene-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/repacked-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/resized-00.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "train/scene-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/resized-01.png"
+          ],
+          [
+            "test/quality72-00.jpg",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/renamed-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/renamed-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "train/local-copy.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-01.png",
+            "validation/mirrored-01.png"
+          ]
+        ]
+      },
+      "imageHashCanonicalGrid": {
+        "tp": 67,
+        "fp": 2,
+        "fn": 18,
+        "tn": 972,
+        "precision": 0.9710144927536232,
+        "recall": 0.788235294117647,
+        "falsePositiveRate": 0.002053388090349076,
+        "falsePositives": [
+          [
+            "test/flat-blue.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/lookalike-ramp-0.png"
+          ]
+        ],
+        "falseNegatives": [
+          [
+            "test/brighter-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/brighter-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/local-copy.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/scene-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/repacked-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/resized-00.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "train/scene-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/resized-01.png"
+          ],
+          [
+            "test/quality72-00.jpg",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/renamed-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/renamed-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "train/local-copy.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-01.png",
+            "validation/mirrored-01.png"
+          ]
+        ]
+      },
+      "imageHashDefault": {
+        "tp": 67,
+        "fp": 2,
+        "fn": 18,
+        "tn": 972,
+        "precision": 0.9710144927536232,
+        "recall": 0.788235294117647,
+        "falsePositiveRate": 0.002053388090349076,
+        "falsePositives": [
+          [
+            "test/flat-blue.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/lookalike-ramp-0.png"
+          ]
+        ],
+        "falseNegatives": [
+          [
+            "test/brighter-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/brighter-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/local-copy.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/scene-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/repacked-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/resized-00.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "train/scene-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/resized-01.png"
+          ],
+          [
+            "test/quality72-00.jpg",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/renamed-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/renamed-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "train/local-copy.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-01.png",
+            "validation/mirrored-01.png"
+          ]
+        ]
+      }
+    },
+    {
+      "threshold": 6,
+      "visionLeakFingerprintReference": {
+        "tp": 67,
+        "fp": 2,
+        "fn": 18,
+        "tn": 972,
+        "precision": 0.9710144927536232,
+        "recall": 0.788235294117647,
+        "falsePositiveRate": 0.002053388090349076,
+        "falsePositives": [
+          [
+            "test/flat-blue.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/lookalike-ramp-0.png"
+          ]
+        ],
+        "falseNegatives": [
+          [
+            "test/brighter-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/brighter-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/local-copy.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/scene-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/repacked-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/resized-00.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "train/scene-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/resized-01.png"
+          ],
+          [
+            "test/quality72-00.jpg",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/renamed-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/renamed-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "train/local-copy.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-01.png",
+            "validation/mirrored-01.png"
+          ]
+        ]
+      },
+      "imageHashCanonicalGrid": {
+        "tp": 67,
+        "fp": 2,
+        "fn": 18,
+        "tn": 972,
+        "precision": 0.9710144927536232,
+        "recall": 0.788235294117647,
+        "falsePositiveRate": 0.002053388090349076,
+        "falsePositives": [
+          [
+            "test/flat-blue.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/lookalike-ramp-0.png"
+          ]
+        ],
+        "falseNegatives": [
+          [
+            "test/brighter-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/brighter-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/local-copy.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/scene-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/repacked-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/resized-00.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "train/scene-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/resized-01.png"
+          ],
+          [
+            "test/quality72-00.jpg",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/renamed-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/renamed-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "train/local-copy.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-01.png",
+            "validation/mirrored-01.png"
+          ]
+        ]
+      },
+      "imageHashDefault": {
+        "tp": 67,
+        "fp": 2,
+        "fn": 18,
+        "tn": 972,
+        "precision": 0.9710144927536232,
+        "recall": 0.788235294117647,
+        "falsePositiveRate": 0.002053388090349076,
+        "falsePositives": [
+          [
+            "test/flat-blue.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/lookalike-ramp-0.png"
+          ]
+        ],
+        "falseNegatives": [
+          [
+            "test/brighter-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/brighter-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/local-copy.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/scene-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/repacked-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/resized-00.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "train/scene-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/resized-01.png"
+          ],
+          [
+            "test/quality72-00.jpg",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/renamed-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/renamed-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "train/local-copy.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-01.png",
+            "validation/mirrored-01.png"
+          ]
+        ]
+      }
+    },
+    {
+      "threshold": 8,
+      "visionLeakFingerprintReference": {
+        "tp": 67,
+        "fp": 2,
+        "fn": 18,
+        "tn": 972,
+        "precision": 0.9710144927536232,
+        "recall": 0.788235294117647,
+        "falsePositiveRate": 0.002053388090349076,
+        "falsePositives": [
+          [
+            "test/flat-blue.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/lookalike-ramp-0.png"
+          ]
+        ],
+        "falseNegatives": [
+          [
+            "test/brighter-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/brighter-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/local-copy.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/scene-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/repacked-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/resized-00.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "train/scene-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/resized-01.png"
+          ],
+          [
+            "test/quality72-00.jpg",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/renamed-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/renamed-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "train/local-copy.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-01.png",
+            "validation/mirrored-01.png"
+          ]
+        ]
+      },
+      "imageHashCanonicalGrid": {
+        "tp": 67,
+        "fp": 2,
+        "fn": 18,
+        "tn": 972,
+        "precision": 0.9710144927536232,
+        "recall": 0.788235294117647,
+        "falsePositiveRate": 0.002053388090349076,
+        "falsePositives": [
+          [
+            "test/flat-blue.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/lookalike-ramp-0.png"
+          ]
+        ],
+        "falseNegatives": [
+          [
+            "test/brighter-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/brighter-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/local-copy.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/scene-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/repacked-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/resized-00.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "train/scene-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/resized-01.png"
+          ],
+          [
+            "test/quality72-00.jpg",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/renamed-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/renamed-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "train/local-copy.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-01.png",
+            "validation/mirrored-01.png"
+          ]
+        ]
+      },
+      "imageHashDefault": {
+        "tp": 67,
+        "fp": 2,
+        "fn": 18,
+        "tn": 972,
+        "precision": 0.9710144927536232,
+        "recall": 0.788235294117647,
+        "falsePositiveRate": 0.002053388090349076,
+        "falsePositives": [
+          [
+            "test/flat-blue.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/lookalike-ramp-0.png"
+          ]
+        ],
+        "falseNegatives": [
+          [
+            "test/brighter-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/brighter-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/local-copy.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/scene-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/repacked-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/resized-00.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "train/scene-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/resized-01.png"
+          ],
+          [
+            "test/quality72-00.jpg",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/renamed-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/renamed-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "train/local-copy.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-01.png",
+            "validation/mirrored-01.png"
+          ]
+        ]
+      }
+    },
+    {
+      "threshold": 10,
+      "visionLeakFingerprintReference": {
+        "tp": 67,
+        "fp": 2,
+        "fn": 18,
+        "tn": 972,
+        "precision": 0.9710144927536232,
+        "recall": 0.788235294117647,
+        "falsePositiveRate": 0.002053388090349076,
+        "falsePositives": [
+          [
+            "test/flat-blue.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/lookalike-ramp-0.png"
+          ]
+        ],
+        "falseNegatives": [
+          [
+            "test/brighter-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/brighter-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/local-copy.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/scene-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/repacked-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/resized-00.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "train/scene-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/resized-01.png"
+          ],
+          [
+            "test/quality72-00.jpg",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/renamed-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/renamed-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "train/local-copy.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-01.png",
+            "validation/mirrored-01.png"
+          ]
+        ]
+      },
+      "imageHashCanonicalGrid": {
+        "tp": 67,
+        "fp": 2,
+        "fn": 18,
+        "tn": 972,
+        "precision": 0.9710144927536232,
+        "recall": 0.788235294117647,
+        "falsePositiveRate": 0.002053388090349076,
+        "falsePositives": [
+          [
+            "test/flat-blue.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/lookalike-ramp-0.png"
+          ]
+        ],
+        "falseNegatives": [
+          [
+            "test/brighter-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/brighter-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/local-copy.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/scene-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/repacked-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/resized-00.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "train/scene-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/resized-01.png"
+          ],
+          [
+            "test/quality72-00.jpg",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/renamed-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/renamed-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "train/local-copy.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-01.png",
+            "validation/mirrored-01.png"
+          ]
+        ]
+      },
+      "imageHashDefault": {
+        "tp": 67,
+        "fp": 2,
+        "fn": 18,
+        "tn": 972,
+        "precision": 0.9710144927536232,
+        "recall": 0.788235294117647,
+        "falsePositiveRate": 0.002053388090349076,
+        "falsePositives": [
+          [
+            "test/flat-blue.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/lookalike-ramp-0.png"
+          ]
+        ],
+        "falseNegatives": [
+          [
+            "test/brighter-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/brighter-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/local-copy.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/scene-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/repacked-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/resized-00.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "train/scene-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/resized-01.png"
+          ],
+          [
+            "test/quality72-00.jpg",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/renamed-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/renamed-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "train/local-copy.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-01.png",
+            "validation/mirrored-01.png"
+          ]
+        ]
+      }
+    },
+    {
+      "threshold": 16,
+      "visionLeakFingerprintReference": {
+        "tp": 67,
+        "fp": 2,
+        "fn": 18,
+        "tn": 972,
+        "precision": 0.9710144927536232,
+        "recall": 0.788235294117647,
+        "falsePositiveRate": 0.002053388090349076,
+        "falsePositives": [
+          [
+            "test/flat-blue.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/lookalike-ramp-0.png"
+          ]
+        ],
+        "falseNegatives": [
+          [
+            "test/brighter-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/brighter-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/local-copy.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/scene-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/repacked-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/resized-00.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "train/scene-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/resized-01.png"
+          ],
+          [
+            "test/quality72-00.jpg",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/renamed-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/renamed-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "train/local-copy.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-01.png",
+            "validation/mirrored-01.png"
+          ]
+        ]
+      },
+      "imageHashCanonicalGrid": {
+        "tp": 67,
+        "fp": 2,
+        "fn": 18,
+        "tn": 972,
+        "precision": 0.9710144927536232,
+        "recall": 0.788235294117647,
+        "falsePositiveRate": 0.002053388090349076,
+        "falsePositives": [
+          [
+            "test/flat-blue.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/lookalike-ramp-0.png"
+          ]
+        ],
+        "falseNegatives": [
+          [
+            "test/brighter-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/brighter-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/local-copy.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/scene-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/repacked-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/resized-00.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "train/scene-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/resized-01.png"
+          ],
+          [
+            "test/quality72-00.jpg",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/renamed-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/renamed-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "train/local-copy.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-01.png",
+            "validation/mirrored-01.png"
+          ]
+        ]
+      },
+      "imageHashDefault": {
+        "tp": 67,
+        "fp": 2,
+        "fn": 18,
+        "tn": 972,
+        "precision": 0.9710144927536232,
+        "recall": 0.788235294117647,
+        "falsePositiveRate": 0.002053388090349076,
+        "falsePositives": [
+          [
+            "test/flat-blue.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/lookalike-ramp-0.png"
+          ]
+        ],
+        "falseNegatives": [
+          [
+            "test/brighter-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/brighter-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/local-copy.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/scene-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/repacked-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/resized-00.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "train/scene-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/resized-01.png"
+          ],
+          [
+            "test/quality72-00.jpg",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/renamed-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/renamed-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "train/local-copy.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-01.png",
+            "validation/mirrored-01.png"
+          ]
+        ]
+      }
+    }
+  ],
+  "indexParity": {
+    "expectedPairs": 96,
+    "actualPairs": 96,
+    "missingPairs": [],
+    "unexpectedPairs": [],
+    "duplicatePairs": 0,
+    "passed": true
+  },
+  "imageCoverage": {
+    "expectedImages": 59,
+    "actualImages": 59,
+    "missingImages": [],
+    "unexpectedImages": [],
+    "duplicateIds": 0,
+    "passed": true
+  },
+  "implementationSha256": {
+    "dist/visionleak.js": "86a74558178474cc22591e1e4da38cc8a0b547c7c39ec3b9d9282d9736093bcb",
+    "tools/cli.mjs": "951afcfef002af6f2298b49a0e19b043a9c70efa54e35ab7c1b063f0465f52d6",
+    "tools/decode.mjs": "fbcc0c9debed95f5513174538573142c8cc5a9b8f2cbe36f709f5b5e64958300",
+    "tools/evaluate.py": "30c2e43b398ef6de4f06bd8b413bed9c55991920eeb3b197e3c3504477a73b05",
+    "tools/generate-fixtures.py": "996951ed8346ce8e6eba1fc57b01b5b132d22a32819de390847fe7002c50d072"
+  }
+}

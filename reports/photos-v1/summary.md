@@ -8,12 +8,12 @@
 
 | 来源组 | 模式 | TP | FP | FN | Recall | 核心工作计数 | CLI 中位秒 |
 |---|---|---:|---:|---:|---:|---:|---:|
-| development | default | 42 | 0 | 88 | 32.31% | 569 | 0.342 |
-| development | mirrors | 84 | 0 | 46 | 64.62% | 2250 | 0.395 |
-| development | orientations | 109 | 0 | 21 | 83.85% | 21539 | 0.647 |
-| holdout | default | 47 | 0 | 83 | 36.15% | 584 | 0.317 |
-| holdout | mirrors | 91 | 0 | 39 | 70.00% | 2382 | 0.377 |
-| holdout | orientations | 116 | 0 | 14 | 89.23% | 19396 | 0.570 |
+| development | default | 42 | 0 | 88 | 32.31% | 569 | 0.346 |
+| development | mirrors | 84 | 0 | 46 | 64.62% | 2250 | 0.362 |
+| development | orientations | 109 | 0 | 21 | 83.85% | 21539 | 0.586 |
+| holdout | default | 47 | 0 | 83 | 36.15% | 584 | 0.308 |
+| holdout | mirrors | 91 | 0 | 39 | 70.00% | 2382 | 0.360 |
+| holdout | orientations | 116 | 0 | 14 | 89.23% | 19396 | 0.539 |
 
 近似任务排除了所有精确真值对；两组合计有 1160 个跨来源负例，本次三种模式均未产生误报。这不证明生产环境零误报，尤其只有 10 个来源，且同源衍生对高度相关。精确证据在每组均为 TP15 / FP0 / FN0。
 
