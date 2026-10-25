@@ -65,5 +65,5 @@ def compare(actual, expected, path="scores"):
             raise AssertionError(f"Independent metric oracle mismatch at {path}: list length")
         for index, value in enumerate(expected):
             compare(actual[index], value, f"{path}[{index}]")
-    elif actual != expected or type(actual) is bool or (expected is None and actual is not None):
+    elif actual != expected or isinstance(actual, bool) != isinstance(expected, bool):
         raise AssertionError(f"Independent metric oracle mismatch at {path}: {actual!r} != {expected!r}")

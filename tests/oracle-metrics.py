@@ -37,6 +37,12 @@ class MetricSemantics(unittest.TestCase):
         scores = evaluate.score(self.truth, [{"left": "a", "right": "b", "evidence": "pixel-identical"}])
         self.assertEqual(len(scores["exactEvidenceTierMismatches"]), 1)
 
+    def test_wrong_tier_diagnostics_preserve_nested_boolean_metadata(self):
+        row = {"left": "a", "right": "b", "evidence": "pixel-identical", "lowContrast": False,
+               "diagnostic": {"flag": True, "values": [None, "detail"]}}
+        scores = evaluate.score(self.truth, [row])
+        self.assertEqual(scores["exactEvidenceTierMismatches"], [row])
+
     def test_unknown_pair_is_error_not_silently_ignored(self):
         with self.assertRaises(RuntimeError):
             evaluate.score(self.truth, [{"left": "a", "right": "unknown", "evidence": "byte-identical"}])
