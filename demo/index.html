@@ -33,6 +33,7 @@
         <div class="metric"><span>已载入图像</span><strong id="metric-images">0</strong><small>当前报告中的输入</small></div>
         <div class="metric"><span><i class="evidence-dot byte"></i> 字节相同</span><strong id="metric-byte">0</strong><small>文件内容一致</small></div>
         <div class="metric"><span><i class="evidence-dot pixel"></i> 像素相同</span><strong id="metric-pixel">0</strong><small>规范化像素一致</small></div>
+        <div class="metric"><span><i class="evidence-dot candidate"></i> 局部候选</span><strong id="metric-local">0</strong><small>实验性裁切线索</small></div>
         <div class="metric"><span><i class="evidence-dot candidate"></i> 相似候选</span><strong id="metric-candidate">0</strong><small>待结合来源判断</small></div>
         <div class="metric progress-metric"><span>人工标记进度 <span id="review-progress">0%</span></span><strong id="metric-reviewed">0 <em>/ 0</em></strong><div class="progress-track"><div id="progress-fill"></div></div><small id="review-summary">未复核 0 · 暂不确定 0</small></div>
       </section>
@@ -41,7 +42,7 @@
         <div class="section-heading"><div><p class="eyebrow">CROSS-SPLIT PAIRS</p><h2>证据队列 <span id="pair-count">0 对</span></h2></div><div class="review-actions"><label class="button quiet file-button">导入复核<input id="review-file" type="file" accept=".json,application/json"></label><button id="export-review" class="button outline" type="button">导出复核 <span aria-hidden="true">↓</span></button><button id="export-report" class="button primary" type="button">导出完整报告 <span aria-hidden="true">↓</span></button></div></div>
         <div class="filterbar">
           <label class="search-field"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索路径或集合名称…" aria-label="搜索图像路径或集合名称"><kbd>/</kbd></label>
-          <label class="select-field"><span>证据</span><select id="evidence-filter"><option value="all">全部等级</option><option value="byte-identical">字节相同</option><option value="pixel-identical">像素相同</option><option value="perceptual-candidate">相似候选</option></select></label>
+          <label class="select-field"><span>证据</span><select id="evidence-filter"><option value="all">全部等级</option><option value="byte-identical">字节相同</option><option value="pixel-identical">像素相同</option><option value="perceptual-candidate">相似候选</option><option value="local-candidate">局部候选</option></select></label>
           <label class="select-field"><span>复核</span><select id="decision-filter"><option value="all">全部状态</option><option value="pending">未复核</option><option value="confirmed">确认关联</option><option value="rejected">排除关联</option><option value="unsure">暂不确定</option></select></label>
           <label class="select-field"><span>集合</span><select id="split-filter"><option value="all">全部集合</option></select></label>
           <label class="distance-field"><span>距离 ≤ <output id="distance-output">64</output></span><input id="distance-filter" type="range" min="0" max="64" value="64" aria-label="最大感知哈希距离"></label>

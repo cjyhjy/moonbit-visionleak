@@ -19,3 +19,4 @@ output/
 reports/plan-0.5.0/mooncakes-probe-*.py
 # Generated handoff samples are reproducible from the committed QA inputs.
 demo/qa/phase2-offline*.html
+demo/qa/offline-v050*.html

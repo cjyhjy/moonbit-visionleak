@@ -20,6 +20,7 @@ fn cli_defaults() -> Json {
   }
   options["includeMirrors"] = Json(false)
   options["includeRotations"] = Json(false)
+  options["includeCrops"] = Json(false)
   Json::object(options)
 }
 
@@ -36,7 +37,7 @@ fn cli_validate_options(overrides : Json) -> Json {
     }
     merged[key] = value
   }
-  for key in ["includeMirrors", "includeRotations"] {
+  for key in ["includeMirrors", "includeRotations", "includeCrops"] {
     let value = merged[key]
     if !(value is True || value is False) {
       return error_json("ARGUMENT_ERROR", key + " must be boolean")
@@ -118,6 +119,10 @@ fn cli_parse(argv : Array[Json]) -> Json {
     }
     if arg == "--force" {
       force = true
+      continue
+    }
+    if arg == "--include-crops" {
+      values["includeCrops"] = Json(true)
       continue
     }
     if arg == "--include-mirrors" {

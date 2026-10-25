@@ -21,22 +21,24 @@ fn workflow_gate(report : Json, level : String) -> Json {
   let mut bytes = 0
   let mut pixels = 0
   let mut candidates = 0
+  let mut locals = 0
   for pair in workflow_rows(report, "pairs") {
     match text(field(pair, "evidence")) {
       "byte-identical" => bytes = bytes + 1
       "pixel-identical" => pixels = pixels + 1
       "perceptual-candidate" => candidates = candidates + 1
+      "local-candidate" => locals = locals + 1
       _ => ()
     }
   }
   let matched = match level {
     "exact" => bytes
     "pixel" => bytes + pixels
-    "candidate" => bytes + pixels + candidates
+    "candidate" => bytes + pixels + candidates + locals
     _ => 0
   }
   let complete = field(report, "complete") == Json(true)
-  {
+  let result : Json = {
     "ok": true,
     "exitCode": Json(if matched > 0 { 3 } else if complete { 0 } else { 2 }),
     "failOn": Json(level),
@@ -48,6 +50,12 @@ fn workflow_gate(report : Json, level : String) -> Json {
       "candidate": Json(candidates),
     },
   }
+  if field(field(report, "options"), "includeCrops") == Json(true) {
+    if field(result, "counts") is Object(fields) {
+      fields["localCandidate"] = Json(locals)
+    }
+  }
+  result
 }
 
 ///|
@@ -161,7 +169,7 @@ fn workflow_components(
   let parents = Array::makei(images.length(), i => i)
   let touched : Map[Int32, Bool] = Map([])
   for pair in workflow_rows(report, "pairs") {
-    if field(pair, "evidence") != Json("perceptual-candidate") {
+    if !candidate_evidence(text(field(pair, "evidence"))) {
       continue
     }
     if confirmed is Some(keys) && !keys.contains(workflow_key(pair)) {
@@ -199,7 +207,13 @@ fn workflow_components(
     groups.push({
       "id": Json(workflow_component_key(prefix, members)),
       "members": Json(members),
-      "evidence": "perceptual-component",
+      "evidence": Json(
+        if field(field(report, "options"), "includeCrops") == Json(true) {
+          "candidate-component"
+        } else {
+          "perceptual-component"
+        },
+      ),
     })
   }
   groups.sort_by((a, b) => {
@@ -231,7 +245,7 @@ fn workflow_view(report : Json, show_low : Bool, group_id : String) -> Json {
     }
     if group_id != "" &&
       (
-        field(pair, "evidence") != Json("perceptual-candidate") ||
+        !candidate_evidence(text(field(pair, "evidence"))) ||
         !members.contains(text(field(pair, "left"))) ||
         !members.contains(text(field(pair, "right")))
       ) {
@@ -293,9 +307,20 @@ fn workflow_fixes(report : Json, reviews : Array[Json]) -> Json {
     components.push({ "members": field(group, "members"), "kind": "exact" })
   }
   for group in workflow_components(report, Some(confirmed)) {
+    let ids = workflow_rows(group, "members").map(v => text(v))
+    let mut has_local = false
+    for pair in workflow_rows(report, "pairs") {
+      if field(pair, "evidence") == Json("local-candidate") &&
+        confirmed.contains(workflow_key(pair)) &&
+        ids.contains(text(field(pair, "left"))) &&
+        ids.contains(text(field(pair, "right"))) {
+        has_local = true
+      }
+    }
     components.push({
       "members": field(group, "members"),
       "kind": "reviewed-candidate",
+      "local": Json(has_local),
     })
   }
   let rows : Array[Json] = []
@@ -326,7 +351,11 @@ fn workflow_fixes(report : Json, reviews : Array[Json]) -> Json {
     for i, image_id in ids {
       let image = images.get(image_id).unwrap_or(Json::null())
       let evidence = if kind == "reviewed-candidate" {
-        "perceptual-candidate"
+        if field(group, "local") == Json(true) {
+          "local-candidate"
+        } else {
+          "perceptual-candidate"
+        }
       } else if field(image, "byteDigest") == field(keeper, "byteDigest") &&
         hex64(text(field(image, "byteDigest"))) {
         "byte-identical"

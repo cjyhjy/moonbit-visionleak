@@ -40,6 +40,7 @@ Options (all budgets are finite):
   --max-file-bytes N     Per encoded file (default 33554432)
   --max-comparisons N    Core budget, 0..10000000 (default 1000000)
   --max-pairs N          Output-pair budget, 0..100000 (default 10000)
+  --include-crops       Experimental local-window candidates (default off)
   --include-rotations   Also search clockwise 90/180/270-degree orientations (default off)
   --include-mirrors     Also search horizontal-reflection candidates (default off)
   --fail-on LEVEL       Exit 3 for exact, pixel, or candidate evidence (default off)
@@ -190,13 +191,14 @@ export async function runAudit({ root: inputRoot, out: inputOut, options: overri
       try {
         const decoded = await decodeImage(entry.absolute, { maxPixels: options.maxPixels, maxDecodePixels: Math.min(options.maxDecodePixels, remaining), maxFileBytes: options.maxFileBytes });
         totalPixels += decoded.pixelCount;
-        const fp = await fingerprint({ ...decoded, includeMirrors: options.includeMirrors, includeRotations: options.includeRotations });
+        const fp = await fingerprint({ ...decoded, includeMirrors: options.includeMirrors, includeRotations: options.includeRotations, includeCrops: options.includeCrops });
         const previewPath = `thumbnails/${sha256(entry.path)}.jpg`;
         const preview = await thumbnail(decoded);
         await writeFile(join(stage, previewPath), preview, { flag: 'wx' });
         images.push({ id: entry.path, path: entry.path, split: entry.split, byteDigest: decoded.byteDigest,
           pixelDigest: decoded.fullIdentity?.pixelDigest ?? fp.pixelDigest, pixelDigestBasis: 'full',
           dhashBasis: { width: fp.width, height: fp.height, downsampled: decoded.downsampled }, dhash: fp.dhash, ...(options.includeMirrors ? { dhashMirror: fp.dhashMirror } : {}), ...(options.includeRotations ? { dhashRotations: fp.dhashRotations, ...(options.includeMirrors ? { dhashMirrorRotations: fp.dhashMirrorRotations } : {}) } : {}), width: decoded.sourceWidth, height: decoded.sourceHeight, contrast: decoded.fullIdentity?.contrast ?? fp.contrast,
+          ...(options.includeCrops ? { localHashes: fp.localHashes, localContrasts: fp.localContrasts, localHashVersion: fp.localHashVersion } : {}),
           thumbnail: previewPath, thumbnailDigest: sha256(preview), format: decoded.format });
       } catch (error) {
         if (error.code === 'CORE_UNAVAILABLE' || error.code === 'CORE_PROTOCOL' || error.code === 'CORE_REJECTED') throw error;
@@ -207,12 +209,13 @@ export async function runAudit({ root: inputRoot, out: inputOut, options: overri
         errors.push(errorRecord(error, entry.path));
       }
     }
-    const coreOptions = Object.fromEntries(['threshold', 'maxComparisons', 'maxPairs', 'maxImages', 'includeMirrors', 'includeRotations'].map((key) => [key, options[key]]));
+    const coreOptions = Object.fromEntries(['threshold', 'maxComparisons', 'maxPairs', 'maxImages', 'includeMirrors', 'includeRotations', 'includeCrops'].map((key) => [key, options[key]]));
     const computed = images.length > 0 ? await audit(images, coreOptions) : {
       ok: false, complete: false, status: 'incomplete', pairs: [], groups: [], stats: { reason: 'no-decodable-images', processedImages: 0 },
     };
     const complete = computed.complete === true && errors.length === 0;
     const report = {
+      ...(computed.localProfile ? { localProfile: computed.localProfile } : {}),
       schemaVersion: 'visionleak-report-v1',
       identityVersion: IDENTITY_VERSION,
       normalization: 'vl-rgb-v1', decoder: DECODER,

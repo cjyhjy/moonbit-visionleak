@@ -17,7 +17,9 @@ fn null_default(value : Json, fallback : Json) -> Json {
 
 ///|
 fn evidence_known(value : String) -> Bool {
-  ["byte-identical", "pixel-identical", "perceptual-candidate"].contains(value)
+  [
+    "byte-identical", "pixel-identical", "perceptual-candidate", "local-candidate",
+  ].contains(value)
 }
 
 ///|
@@ -118,6 +120,21 @@ fn validate_report_value(value : Json) -> Json {
     if !evidence_known(evidence) {
       return error_json("InvalidReport", "未知证据等级：" + evidence)
     }
+    if evidence == "local-candidate" {
+      let witness = field(raw, "matchLocal")
+      let a = integer(field(witness, "leftWindow"))
+      let b = integer(field(witness, "rightWindow"))
+      if field(options, "includeCrops") != Json(true) ||
+        field(witness, "profile") != Json("vl-local-dhash-v1") ||
+        a < 0 ||
+        a >= 20 ||
+        b < 0 ||
+        b >= 20 {
+        return error_json(
+          "InvalidReport", "局部候选必须记录有效的裁切窗口与审计配置。",
+        )
+      }
+    }
     let transform = field(raw, "matchTransform")
     if !(transform is Null) {
       if !mirrors ||
@@ -146,7 +163,7 @@ fn validate_report_value(value : Json) -> Json {
     }
     let distance = null_default(
       field(raw, "distance"),
-      if evidence == "perceptual-candidate" {
+      if candidate_evidence(evidence) {
         Json::null()
       } else {
         Json(0)
@@ -309,4 +326,9 @@ pub fn review_validation_json(source : String) -> String {
     ).stringify()
   }
   error_json("InvalidOperation", "未知复核操作。").stringify()
+}
+
+///|
+fn candidate_evidence(value : String) -> Bool {
+  value == "perceptual-candidate" || value == "local-candidate"
 }

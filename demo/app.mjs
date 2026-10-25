@@ -65,7 +65,7 @@ async function installReport(raw, source, served = false, sequence = state.loadS
   $('incomplete-banner').hidden = report.complete;
   $('incomplete-reason').textContent = `报告状态：${typeof raw.status === 'string' ? raw.status : '未声明'}。预算或输入限制可能使部分图像或候选未被处理；请展开「运行信息与覆盖范围」检查统计与错误。已完成的人工标记仍可独立导出。`;
   $('metric-images').textContent = formatCount(report.images.size);
-  for (const [id, evidence] of [['byte', 'byte-identical'], ['pixel', 'pixel-identical'], ['candidate', 'perceptual-candidate']]) {
+  for (const [id, evidence] of [['byte', 'byte-identical'], ['pixel', 'pixel-identical'], ['candidate', 'perceptual-candidate'], ['local', 'local-candidate']]) {
     $(`metric-${id}`).textContent = formatCount(report.pairs.filter(pair => pair.evidence === evidence).length);
   }
   $('pair-count').textContent = `${formatCount(report.pairs.length)} 对`;
@@ -170,8 +170,9 @@ function renderDetail() {
   $('detail-evidence').textContent = evidence.label;
   $('detail-decision').textContent = review ? `人工：${DECISIONS[review.decision]}` : '等待人工复核';
   $('detail-distance').textContent = pair.distance;
-  $('evidence-explanation').textContent = `${evidence.description} ${pair.evidence === 'perceptual-candidate' ? '相似度不是泄漏概率；缩放、低对比度或重复纹理都可能造成误报。' : '相同证据说明内容重合；是否影响评测，还取决于数据来源、分组方式和任务定义。'}`;
+  $('evidence-explanation').textContent = `${evidence.description} ${['perceptual-candidate','local-candidate'].includes(pair.evidence) ? '相似度不是泄漏概率；缩放、低对比度或重复纹理都可能造成误报。' : '相同证据说明内容重合；是否影响评测，还取决于数据来源、分组方式和任务定义。'}`;
   if (pair.lowContrast) $('evidence-explanation').textContent += ' 此配对包含低对比度图像，请谨慎解释感知距离。';
+  if (pair.matchLocal) $('evidence-explanation').textContent += ` 局部窗口 A=${pair.matchLocal.leftWindow} / B=${pair.matchLocal.rightWindow}；这是首个满足阈值的窗口证据，距离不是全部窗口的最小值。`;
   if (pair.matchTransform) $('evidence-explanation').textContent += ` 匹配依据：${TRANSFORMS[pair.matchTransform]}；预览图保持原方向，距离取四种方向组合的最小值。`;
   if (pair.matchOrientation) $('evidence-explanation').textContent += ` 匹配依据：${orientationDescription(pair.matchOrientation)}。预览图保持原方向；距离为已启用方向组合的最小值，旋转发生在 EXIF 校正之后。`;
   setImage('left', left);

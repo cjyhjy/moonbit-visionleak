@@ -10,6 +10,8 @@ pub fn fingerprint(Int, Int, Bytes) -> Json
 
 pub fn fingerprint_json(String) -> String
 
+pub fn fingerprint_local_rgba(Int, Int, Bytes) -> String
+
 pub fn fingerprint_mirrored_rgba(Int, Int, Bytes) -> String
 
 pub fn fingerprint_oriented_rgba(Int, Int, Bytes, Bool) -> String

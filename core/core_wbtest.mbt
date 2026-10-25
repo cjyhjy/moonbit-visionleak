@@ -64,6 +64,8 @@ fn fixture_item(
     hash: pack_validated_hash(hash),
     mirror_hash: pack_validated_hash(hash),
     orientation_hashes: [],
+    local_hashes: [],
+    local_contrasts: [],
     contrast: 200,
   }
 }
@@ -110,7 +112,7 @@ test "cross split evidence prioritizes bytes then pixels and does not transitive
     fixture_item("c", "validation", b, a, z),
     fixture_item("candidate", "test", c, c, z),
   ]
-  let result = run_audit(images, 0, 10000, 100, 100, false, false)
+  let result = run_audit(images, 0, 10000, 100, 100, false, false, false)
   assert_eq(field(result, "complete"), Json(true))
   guard field(result, "pairs") is Array(pairs) else { fail("missing pairs") }
   assert_eq(pairs.length(), 8)
@@ -130,7 +132,7 @@ test "exact buckets remain complete even with inconsistent supplied perceptual h
     fixture_item("a", "train", a, a, String::make(64, '0')),
     fixture_item("b", "test", a, a, String::make(64, '1')),
   ]
-  let r = run_audit(items, 0, 100, 10, 10, false, false)
+  let r = run_audit(items, 0, 100, 10, 10, false, false, false)
   guard field(r, "pairs") is Array(pairs) else { fail("missing pairs") }
   assert_eq(pairs.length(), 1)
   assert_eq(field(pairs[0], "distance"), Json(64))
@@ -144,11 +146,11 @@ test "work and output budgets expose incompleteness" {
     fixture_item("a", "train", a, a, z),
     fixture_item("b", "test", a, a, z),
   ]
-  let work = run_audit(items, 6, 0, 10, 10, false, false)
+  let work = run_audit(items, 6, 0, 10, 10, false, false, false)
   assert_eq(field(work, "complete"), Json(false))
   assert_eq(field(field(work, "stats"), "reason"), Json("ComparisonBudget"))
   assert_eq(field(field(work, "stats"), "comparisons"), Json(0))
-  let output = run_audit(items, 6, 100, 0, 10, false, false)
+  let output = run_audit(items, 6, 100, 0, 10, false, false, false)
   assert_eq(field(output, "complete"), Json(false))
   assert_eq(field(field(output, "stats"), "reason"), Json("PairBudget"))
 }
@@ -210,6 +212,8 @@ test "mirror-only evidence stays a candidate and consumes bounded work" {
     hash: pack_validated_hash(z),
     mirror_hash: pack_validated_hash(o),
     orientation_hashes: [],
+    local_hashes: [],
+    local_contrasts: [],
     contrast: 200,
   }
   let b : Item = {
@@ -220,15 +224,17 @@ test "mirror-only evidence stays a candidate and consumes bounded work" {
     hash: pack_validated_hash(o),
     mirror_hash: pack_validated_hash(z),
     orientation_hashes: [],
+    local_hashes: [],
+    local_contrasts: [],
     contrast: 200,
   }
-  let r = run_audit([a, b], 0, 100, 10, 10, true, false)
+  let r = run_audit([a, b], 0, 100, 10, 10, true, false, false)
   guard field(r, "pairs") is Array(pairs) else { fail("missing pairs") }
   assert_eq(pairs.length(), 1)
   assert_eq(field(pairs[0], "evidence"), Json("perceptual-candidate"))
   assert_eq(field(pairs[0], "matchTransform"), Json("mirror-left"))
   assert_eq(field(r, "groups").stringify(), "[]")
-  let limited = run_audit([a, b], 0, 3, 10, 10, true, false)
+  let limited = run_audit([a, b], 0, 3, 10, 10, true, false, false)
   assert_eq(field(limited, "complete"), Json(false))
   assert_true(integer(field(field(limited, "stats"), "comparisons")) <= 3)
 }

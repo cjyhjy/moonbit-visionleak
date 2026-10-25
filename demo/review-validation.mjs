@@ -4,6 +4,7 @@ export const REVIEW_SCHEMA = 'visionleak-review-v1';
 export const EVIDENCE = Object.freeze({
   'byte-identical': { label: '字节相同', short: '字节', description: '文件字节完全相同，包括编码与元数据。', tone: 'byte' },
   'pixel-identical': { label: '像素相同', short: '像素', description: '解码、规范化后的像素相同；文件编码可以不同。', tone: 'pixel' },
+  'local-candidate': { label: '局部候选', short: '局部', description: '固定多尺度窗口的局部 dHash 匹配，仅是裁切线索，需要人工核对。', tone: 'candidate' },
   'perceptual-candidate': { label: '相似候选', short: '候选', description: '感知指纹距离在阈值内，需要结合图像与来源人工判断。', tone: 'candidate' },
 });
 export const TRANSFORMS = Object.freeze({original:'原图对比', 'mirror-left':'图像 A 水平镜像后对比', 'mirror-right':'图像 B 水平镜像后对比', 'mirror-both':'两图分别水平镜像后对比'});

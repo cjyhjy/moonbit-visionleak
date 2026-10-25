@@ -32,17 +32,19 @@ function result(raw, operation) {
 }
 
 /** The compiled MoonBit Bytes ABI accepts a Uint8Array, including a Buffer. */
-export async function fingerprint({ width, height, rgba, includeMirrors = false, includeRotations = false }) {
+export async function fingerprint({ width, height, rgba, includeMirrors = false, includeRotations = false, includeCrops = false }) {
   if (!Number.isSafeInteger(width) || !Number.isSafeInteger(height) || width < 1 || height < 1 || width > 65535 || height > 65535 || width * height > 4_194_304 || !(rgba instanceof Uint8Array)) {
     throw new VisionLeakError('INVALID_PIXELS', 'Pixel dimensions must be safe integers and RGBA must be a Uint8Array');
   }
-  if (typeof includeMirrors !== 'boolean' || typeof includeRotations !== 'boolean') throw new VisionLeakError('INVALID_PIXELS', 'includeMirrors must be boolean');
+  if (typeof includeMirrors !== 'boolean' || typeof includeRotations !== 'boolean' || typeof includeCrops !== 'boolean') throw new VisionLeakError('INVALID_PIXELS', 'includeMirrors must be boolean');
   const core = await loadCore();
   const method = includeRotations ? 'fingerprint_oriented_rgba' : includeMirrors ? 'fingerprint_mirrored_rgba' : 'fingerprint_rgba';
   if (typeof core[method] !== 'function') {
     throw new VisionLeakError('CORE_PROTOCOL', 'Missing fingerprint_rgba export');
   }
-  return result(core[method](width, height, rgba, includeMirrors), 'fingerprint');
+  const value = result(core[method](width, height, rgba, includeMirrors), 'fingerprint');
+  if (includeCrops) Object.assign(value, result(core.fingerprint_local_rgba(width,height,rgba), 'local fingerprint'));
+  return value;
 }
 
 export async function audit(images, options) {

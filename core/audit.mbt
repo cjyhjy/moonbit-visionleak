@@ -32,6 +32,8 @@ priv struct Item {
   mirror_hash : Hash64
   orientation_hashes : Array[Hash64]
   contrast : Int32
+  local_hashes : Array[Hash64]
+  local_contrasts : Array[Int32]
 }
 
 ///|
@@ -152,9 +154,12 @@ fn run_audit(
   max_images : Int32,
   include_mirrors : Bool,
   include_rotations : Bool,
+  include_crops : Bool,
 ) -> Json {
   let pairs : Array[Json] = []
   let nodes : Array[BkNode] = []
+  let local_nodes : Array[LocalNode] = []
+  let mut local_work = 0
   let by_bytes : Map[String, Array[Int32]] = Map([])
   let by_pixels : Map[String, Array[Int32]] = Map([])
   let parents = Array::makei(items.length(), i => i)
@@ -266,6 +271,19 @@ fn run_audit(
     if budget.reason != "" {
       break
     }
+    if include_crops {
+      let before = budget.work
+      local_query(
+        items, i, local_nodes, seen, pairs, budget, threshold, max_pairs,
+      )
+      if budget.reason == "" {
+        local_insert(item, i, local_nodes, budget)
+      }
+      local_work = local_work + budget.work - before
+      if budget.reason != "" {
+        break
+      }
+    }
     for insert_hash in variants {
       if nodes.is_empty() {
         nodes.push({ hash: insert_hash, members: [i], children: Map([]), })
@@ -357,6 +375,23 @@ fn run_audit(
       fields["includeRotations"] = Json(true)
     }
   }
+  if include_crops {
+    if field(result, "options") is Object(fields) {
+      fields["includeCrops"] = Json(true)
+    }
+    if field(result, "stats") is Object(fields) {
+      fields["localComparisons"] = Json(local_work)
+      fields["localIndexNodes"] = Json(local_nodes.length())
+    }
+    if result is Object(fields) {
+      fields["localProfile"] = {
+        "version": "vl-local-dhash-v1",
+        "windows": Json(crop_windows()),
+        "minimumGridContrast": 16,
+        "distanceSemantics": "first deterministic window witness within threshold; not a minimum over all windows",
+      }
+    }
+  }
   result
 }
 
@@ -402,6 +437,11 @@ pub fn audit_json(source : String) -> String {
     return error_json("InvalidOptions", "includeRotations must be a boolean").stringify()
   }
   let include_rotations = rotation_option == Json(true)
+  let crop_option = field(opts, "includeCrops")
+  if !(crop_option is True || crop_option is False || crop_option is Null) {
+    return error_json("InvalidOptions", "includeCrops must be boolean").stringify()
+  }
+  let include_crops = crop_option == Json(true)
   let threshold = option(opts, "threshold", 6)
   let max_work = option(opts, "maxComparisons", 1000000)
   let max_pairs = option(opts, "maxPairs", 10000)
@@ -498,6 +538,29 @@ pub fn audit_json(source : String) -> String {
         }
       }
     }
+    let local_hashes : Array[Hash64] = []
+    let local_contrasts : Array[Int32] = []
+    if include_crops {
+      guard field(value, "localHashes") is Array(hs) && hs.length() == 20 else {
+        return error_json(
+          "InvalidImage", "localHashes must contain twenty hashes",
+        ).stringify()
+      }
+      guard field(value, "localContrasts") is Array(cs) && cs.length() == 20 else {
+        return error_json(
+          "InvalidImage", "localContrasts must contain twenty contrasts",
+        ).stringify()
+      }
+      for k = 0; k < 20; k = k + 1 {
+        let h = text(hs[k])
+        let c = integer(cs[k])
+        if !bits64(h) || c < 0 || c > 255 {
+          return error_json("InvalidImage", "invalid local hash or contrast").stringify()
+        }
+        local_hashes.push(pack_validated_hash(h))
+        local_contrasts.push(c)
+      }
+    }
     ids[id] = true
     items.push({
       id,
@@ -508,10 +571,13 @@ pub fn audit_json(source : String) -> String {
       mirror_hash: pack_validated_hash(mirror_hash),
       orientation_hashes,
       contrast,
+      local_hashes,
+      local_contrasts,
     })
   }
   run_audit(
     items, threshold, max_work, max_pairs, max_images, include_mirrors, include_rotations,
+    include_crops,
   ).stringify()
 }
 
