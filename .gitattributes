@@ -1,0 +1,3 @@
+# Actual compiler outputs; hand-written source and independent oracles count.
+dist/** linguist-generated=true
+research/baselines/*.mjs linguist-generated=true

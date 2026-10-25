@@ -1,4 +1,4 @@
-.toolchain
+.toolchain/
 node_modules/
 _build/
 .moon/
@@ -7,7 +7,6 @@ research/.venv-oracle/
 reports/clean-room/
 release/
 .DS_Store
-
 .tools/
 .ci-artifacts/
 __pycache__/
@@ -16,3 +15,5 @@ output/
 .env
 .env.*
 !.env.example
+# Preserve investigative programs as text attachments, not maintained sources.
+reports/plan-0.5.0/mooncakes-probe-*.py

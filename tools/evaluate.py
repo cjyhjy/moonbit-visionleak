@@ -17,6 +17,8 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
+from evaluation_compatibility import compare_baseline, enforce_baselines
+
 import imagehash
 from PIL import Image
 
@@ -52,45 +54,9 @@ def pair_key(left, right):
     return tuple(sorted((left, right)))
 
 
-def metrics(positive, predicted, universe):
-    predicted = predicted & universe
-    tp = positive & predicted
-    fp = predicted - positive
-    fn = positive - predicted
-    tn = universe - positive - predicted
-    return {"tp": len(tp), "fp": len(fp), "fn": len(fn), "tn": len(tn),
-            "precision": len(tp) / len(predicted) if predicted else None,
-            "recall": len(tp) / len(positive) if positive else None,
-            "falsePositiveRate": len(fp) / (len(fp) + len(tn)) if fp or tn else None,
-            "falsePositives": [list(p) for p in sorted(fp)],
-            "falseNegatives": [list(p) for p in sorted(fn)]}
-
-
 def score(truth, pairs):
-    labels = {pair_key(p["left"], p["right"]): p["relation"] for p in truth["pairs"]}
-    universe = set(labels)
-    exact_truth = {p for p in universe if labels[p] in EXACT}
-    near_truth = {p for p in universe if labels[p] == "near-source"}
-    exact_predictions = {pair_key(p["left"], p["right"]) for p in pairs if p["evidence"] in EXACT}
-    near_predictions = {pair_key(p["left"], p["right"]) for p in pairs
-                        if p["evidence"] == "perceptual-candidate"}
-    unknown = (exact_predictions | near_predictions) - universe
-    if unknown:
-        raise ValueError(f"Audit emitted unknown or same-split pairs: {sorted(unknown)}")
-    wrong_tier = [p for p in pairs if p["evidence"] in EXACT and
-                  labels[pair_key(p["left"], p["right"])] != p["evidence"]]
-    challenge_images = {r["id"] for r in truth.get("images", [])
-                        if r.get("transform", "").startswith("challenge-")}
-    challenge_universe = {p for p in universe - exact_truth if set(p) & challenge_images}
-    common_universe = universe - exact_truth - challenge_universe
-    return {"exact": metrics(exact_truth, exact_predictions, universe),
-            # Exact ground truth pairs are EXCLUDED, not added as easy positives.
-            "nearOnly": metrics(near_truth, near_predictions, universe - exact_truth),
-            "nearCommonTransforms": metrics(near_truth & common_universe, near_predictions, common_universe),
-            "nearChallengeTransforms": metrics(near_truth & challenge_universe, near_predictions, challenge_universe),
-            "exactEvidenceTierMismatches": wrong_tier,
-            "exactPairsEmittedAsCandidates": len(near_predictions & exact_truth),
-            "pairUniverse": len(universe), "nearOnlyUniverse": len(universe - exact_truth)}
+    """MoonBit owns metric accounting; independent pixel/index oracles remain here."""
+    return run_bridge({"mode": "score", "truth": truth, "pairs": pairs})
 
 
 def vectors():
@@ -236,6 +202,8 @@ def main():
     parser.add_argument("--threshold", type=int, default=6)
     parser.add_argument("--out", type=Path, default=PROJECT / "reports" / "evaluation.json")
     parser.add_argument("--report", type=Path, help="Score an existing audit report instead of invoking CLI")
+    parser.add_argument("--baseline-version", default="0.4.0", choices=["0.4.0"])
+    parser.add_argument("--allow-detection-change", metavar="REASON")
     args = parser.parse_args()
     root = args.root.resolve()
     truth_raw = (root / "ground-truth.json").read_bytes()
@@ -297,6 +265,7 @@ def main():
               "indexParity": index_parity(report), "imageCoverage": image_coverage,
               "implementationSha256": {name: hashlib.sha256((PROJECT / name).read_bytes()).hexdigest()
                                        for name in ("dist/visionleak.js", "tools/cli.mjs", "tools/decode.mjs", "tools/evaluate.py", "tools/generate-fixtures.py")}}
+    result["baselineComparison"] = {"default": compare_baseline(report, "synthetic/default", args.baseline_version, args.allow_detection_change)}
     args.out.write_text(json.dumps(result, indent=2) + "\n")
     args.out.with_suffix(".md").write_text(markdown(result))
     args.out.with_name(args.out.stem + "-audit.json").write_bytes(report_raw)
@@ -305,6 +274,7 @@ def main():
                       "exact": result["scores"]["exact"], "nearOnly": result["scores"]["nearOnly"],
                       "oracleVectors": [oracle["vectorPassed"], oracle["vectorTotal"]],
                       "oracleImages": [oracle["imagePassed"], oracle["imageTotal"]]}, indent=2))
+    enforce_baselines(result["baselineComparison"])
     if oracle["vectorPassed"] != oracle["vectorTotal"] or oracle["imagePassed"] != oracle["imageTotal"]:
         raise SystemExit("FAIL: external oracle mismatch")
     if not report.get("complete"):

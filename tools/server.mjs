@@ -4,6 +4,7 @@ import { lstat, readFile, realpath } from 'node:fs/promises';
 import { resolve, join, dirname, basename, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { VisionLeakError, errorRecord, sha256 } from './runtime.mjs';
+import { verifyReportIdentity } from '../demo/report-identity.mjs';
 
 const DEMO = fileURLToPath(new URL('../demo/', import.meta.url));
 const ASSETS = new Map([
@@ -12,6 +13,8 @@ const ASSETS = new Map([
   ['/styles.css', ['styles.css', 'text/css; charset=utf-8']],
   ['/app.mjs', ['app.mjs', 'text/javascript; charset=utf-8']],
   ['/review-validation.mjs', ['review-validation.mjs', 'text/javascript; charset=utf-8']],
+  ['/review-workflow.mjs', ['review-workflow.mjs', 'text/javascript; charset=utf-8']],
+  ['/report-identity.mjs', ['report-identity.mjs', 'text/javascript; charset=utf-8']],
 ]);
 const HEADERS = {
   'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff',
@@ -46,6 +49,8 @@ export async function startServer({ report: reportPath, port = 4173 }) {
   if (report.schemaVersion !== 'visionleak-report-v1' || !/^[a-f0-9]{64}$/.test(report.auditId) || !Array.isArray(report.images) || report.images.length > 10_000) {
     throw new VisionLeakError('INVALID_REPORT', 'Not a supported VisionLeak report');
   }
+  try { await verifyReportIdentity(report); }
+  catch { throw new VisionLeakError('INVALID_REPORT', 'Report content does not match its auditId'); }
   const thumbnails = new Map();
   for (const image of report.images) {
     if (typeof image.thumbnail !== 'string' || !/^thumbnails\/[a-f0-9]{64}\.jpg$/.test(image.thumbnail) || !/^[a-f0-9]{64}$/.test(image.thumbnailDigest)) {
@@ -78,6 +83,10 @@ export async function startServer({ report: reportPath, port = 4173 }) {
     } catch { send(400, 'Invalid path\n'); return; }
     try {
       if (pathname === '/report.json') { send(200, reportBytes, 'application/json; charset=utf-8'); return; }
+      if (pathname === '/dist/visionleak.js') {
+        const root = fileURLToPath(new URL('../dist/', import.meta.url));
+        send(200, await regularFile(join(root, 'visionleak.js'), root, 4 * 1024 * 1024), 'text/javascript; charset=utf-8'); return;
+      }
       if (ASSETS.has(pathname)) {
         const [filename, type] = ASSETS.get(pathname);
         send(200, await regularFile(join(DEMO, filename), DEMO, 2 * 1024 * 1024), type); return;

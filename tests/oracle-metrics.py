@@ -3,6 +3,8 @@
 import importlib.util
 from pathlib import Path
 import unittest
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
 
 spec = importlib.util.spec_from_file_location("evaluate", Path(__file__).resolve().parents[1] / "tools/evaluate.py")
 evaluate = importlib.util.module_from_spec(spec)
@@ -32,7 +34,7 @@ class MetricSemantics(unittest.TestCase):
         self.assertEqual(len(scores["exactEvidenceTierMismatches"]), 1)
 
     def test_unknown_pair_is_error_not_silently_ignored(self):
-        with self.assertRaises(ValueError):
+        with self.assertRaises(RuntimeError):
             evaluate.score(self.truth, [{"left": "a", "right": "unknown", "evidence": "byte-identical"}])
 
     def test_candidate_on_exact_pair_is_excluded_from_near_denominator(self):

@@ -5,6 +5,7 @@ import { fingerprint } from '../tools/runtime.mjs';
 test('public JS pixel adapter rejects inputs that the compiled ABI could coerce', async () => {
   const invalid = [
     {width:0.5,height:2,rgba:new Uint8Array(0)},
+    {width:4294967297,height:1,rgba:new Uint8Array(4)},
     {width:NaN,height:1,rgba:new Uint8Array(4)},
     {width:1,height:Infinity,rgba:new Uint8Array(4)},
     {width:'1',height:1,rgba:new Uint8Array(4)},

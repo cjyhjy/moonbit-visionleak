@@ -1,6 +1,12 @@
 ///|
 // Core hard limit also bounds arithmetic and allocations, independent of the host.
-pub fn fingerprint(width : Int32, height : Int32, rgba : Bytes) -> Json {
+fn fingerprint_impl(
+  width : Int32,
+  height : Int32,
+  rgba : Bytes,
+  mirrors : Bool,
+  rotations : Bool,
+) -> Json {
   if width <= 0 ||
     height <= 0 ||
     width > 65535 ||
@@ -46,6 +52,7 @@ pub fn fingerprint(width : Int32, height : Int32, rgba : Bytes) -> Json {
     }
   }
   let grid = Array::make(72, 0)
+  let mirror_grid = if mirrors { Array::make(72, 0) } else { [] }
   for y = 0; y < 8; y = y + 1 {
     let y0 = y * height / 8
     let y1 = Int32::max(y0 + 1, (y + 1) * height / 8)
@@ -53,35 +60,50 @@ pub fn fingerprint(width : Int32, height : Int32, rgba : Bytes) -> Json {
       let x0 = x * width / 9
       let x1 = Int32::max(x0 + 1, (x + 1) * width / 9)
       let mut sum : Int64 = 0
+      let mut mirror_sum : Int64 = 0
       for yy = y0; yy < y1; yy = yy + 1 {
         for xx = x0; xx < x1; xx = xx + 1 {
           sum = sum + gray[yy * width + xx].to_int64()
+          if mirrors {
+            mirror_sum = mirror_sum +
+              gray[yy * width + width - 1 - xx].to_int64()
+          }
         }
       }
       grid[y * 9 + x] = (sum / ((x1 - x0) * (y1 - y0)).to_int64()).to_int()
+      if mirrors {
+        mirror_grid[y * 9 + x] = (mirror_sum /
+        ((x1 - x0) * (y1 - y0)).to_int64()).to_int()
+      }
     }
   }
-  let bits = StringBuilder()
-  for y = 0; y < 8; y = y + 1 {
-    for x = 0; x < 8; x = x + 1 {
-      bits.write_string(
-        if grid[y * 9 + x + 1] > grid[y * 9 + x] {
-          "1"
-        } else {
-          "0"
-        },
-      )
-    }
-  }
-  {
+  let result : Json = {
     "ok": true,
     "width": Json(width),
     "height": Json(height),
     "pixelDigest": Json(sha256(Bytes::from_array(rgb[:]))),
-    "dhash": Json(bits.to_string()),
+    "dhash": Json(grid_hash(grid)),
     "contrast": Json(hi - lo),
     "normalization": "vl-rgb-v1",
   }
+  if mirrors {
+    if result is Object(fields) {
+      fields["dhashMirror"] = Json(grid_hash(mirror_grid))
+    }
+  }
+  if rotations {
+    if result is Object(fields) {
+      fields["dhashRotations"] = Json(
+        Array::makei(3, i => oriented_hash(gray, width, height, i + 1, false)),
+      )
+      if mirrors {
+        fields["dhashMirrorRotations"] = Json(
+          Array::makei(3, i => oriented_hash(gray, width, height, i + 1, true)),
+        )
+      }
+    }
+  }
+  result
 }
 
 ///|
@@ -127,4 +149,84 @@ pub fn fingerprint_json(source : String) -> String {
     rgba[i] = v.to_byte()
   }
   fingerprint(w, h, Bytes::from_array(rgba[:])).stringify()
+}
+
+///|
+fn grid_hash(grid : Array[Int32]) -> String {
+  let bits = StringBuilder()
+  for y = 0; y < 8; y = y + 1 {
+    for x = 0; x < 8; x = x + 1 {
+      bits.write_string(
+        if grid[y * 9 + x + 1] > grid[y * 9 + x] {
+          "1"
+        } else {
+          "0"
+        },
+      )
+    }
+  }
+  bits.to_string()
+}
+
+///|
+pub fn fingerprint(width : Int32, height : Int32, rgba : Bytes) -> Json {
+  fingerprint_impl(width, height, rgba, false, false)
+}
+
+///|
+#export_name("fingerprint_mirrored_rgba")
+pub fn fingerprint_mirrored_rgba(
+  width : Int32,
+  height : Int32,
+  rgba : Bytes,
+) -> String {
+  fingerprint_impl(width, height, rgba, true, false).stringify()
+}
+
+///|
+// Rotate clockwise in full pixel coordinates, then optionally reflect the
+// rotated image horizontally. Sampling after the transform preserves uneven bins.
+fn oriented_hash(
+  gray : FixedArray[Byte],
+  width : Int32,
+  height : Int32,
+  turns : Int32,
+  mirror : Bool,
+) -> String {
+  let w = if turns == 2 { width } else { height }
+  let h = if turns == 2 { height } else { width }
+  let grid = Array::make(72, 0)
+  for y = 0; y < 8; y = y + 1 {
+    let y0 = y * h / 8
+    let y1 = Int32::max(y0 + 1, (y + 1) * h / 8)
+    for x = 0; x < 9; x = x + 1 {
+      let x0 = x * w / 9
+      let x1 = Int32::max(x0 + 1, (x + 1) * w / 9)
+      let mut sum : Int64 = 0
+      for yy = y0; yy < y1; yy = yy + 1 {
+        for xx = x0; xx < x1; xx = xx + 1 {
+          let rx = if mirror { w - 1 - xx } else { xx }
+          let (sx, sy) = match turns {
+            1 => (yy, height - 1 - rx)
+            2 => (width - 1 - rx, height - 1 - yy)
+            _ => (width - 1 - yy, rx)
+          }
+          sum = sum + gray[sy * width + sx].to_int64()
+        }
+      }
+      grid[y * 9 + x] = (sum / ((x1 - x0) * (y1 - y0)).to_int64()).to_int()
+    }
+  }
+  grid_hash(grid)
+}
+
+///|
+#export_name("fingerprint_oriented_rgba")
+pub fn fingerprint_oriented_rgba(
+  width : Int32,
+  height : Int32,
+  rgba : Bytes,
+  mirrors : Bool,
+) -> String {
+  fingerprint_impl(width, height, rgba, mirrors, true).stringify()
 }

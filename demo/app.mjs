@@ -1,8 +1,10 @@
-import { EVIDENCE, DECISIONS, validateReport, validateReview, thumbnailURL, reviewDocument, filterPairs, canShowThumbnails } from './review-validation.mjs';
+import { EVIDENCE, DECISIONS, TRANSFORMS, orientationDescription, validateReport, validateReview, thumbnailURL, reviewDocument, filterPairs, canShowThumbnails } from './review-validation.mjs';
+import { verifyReportIdentity } from './report-identity.mjs';
+import { reviewProgress, nextPendingPair, selectionAfterFilter, changeDecision, undoDecision } from './review-workflow.mjs';
 
 const $ = id => document.getElementById(id);
 const MAX_FILE_BYTES = 32 * 1024 * 1024;
-const state = { report: null, servedAuditId: null, reviews: new Map(), selected: null, filtered: [], visibleLimit: 100, loadSequence: 0, storageOK: true };
+const state = { report: null, servedAuditId: null, reviews: new Map(), selected: null, filtered: [], visibleLimit: 100, loadSequence: 0, storageOK: true, undo: null };
 const formatCount = number => number.toLocaleString('zh-CN');
 const storageKey = report => `visionleak:reviews:v1:${encodeURIComponent(report.auditId)}`;
 
@@ -31,9 +33,11 @@ function mergeReviews(base, incoming) {
   }
   return merged;
 }
-function installReport(raw, source, served = false) {
+async function installReport(raw, source, served = false, sequence = state.loadSequence) {
   const report = validateReport(raw);
   let reviews = raw.review == null ? new Map() : validateReview(raw.review, report);
+  await verifyReportIdentity(raw);
+  if (sequence !== state.loadSequence) return;
   let warning = '';
   state.storageOK = true;
   try {
@@ -48,6 +52,8 @@ function installReport(raw, source, served = false) {
   state.report = report;
   state.reviews = reviews;
   state.selected = null;
+  state.filtered = [];
+  state.undo = null;
   $('workspace').hidden = false;
   $('empty-state').hidden = true;
   $('audit-id').textContent = report.auditId;
@@ -76,8 +82,7 @@ function installReport(raw, source, served = false) {
   notice(`已加载${source}：${formatCount(report.images.size)} 张图像、${formatCount(report.pairs.length)} 对证据${reviews.size ? `，恢复 ${formatCount(reviews.size)} 条人工标记` : ''}。${warning}`, Boolean(warning));
 }
 function renderMetrics() {
-  const total = state.report.pairs.length;
-  const reviewed = state.reviews.size;
+  const { total, reviewed, pending, unsure } = reviewProgress(state.report.pairs, state.reviews);
   $('metric-reviewed').replaceChildren(document.createTextNode(`${formatCount(reviewed)} `));
   const denominator = document.createElement('em');
   denominator.textContent = `/ ${formatCount(total)}`;
@@ -85,6 +90,13 @@ function renderMetrics() {
   const percent = total ? Math.round(reviewed / total * 100) : 0;
   $('review-progress').textContent = `${percent}%`;
   $('progress-fill').style.width = `${percent}%`;
+  $('review-summary').textContent = `未复核 ${formatCount(pending)} · 暂不确定 ${formatCount(unsure)}`;
+}
+function renderWorkflow() {
+  const counts = reviewProgress(state.filtered, state.reviews);
+  $('queue-progress').textContent = `当前筛选 ${formatCount(counts.total)} 对 · 未复核 ${formatCount(counts.pending)} · 暂不确定 ${formatCount(counts.unsure)}`;
+  $('next-pending').disabled = !nextPendingPair(state.filtered, state.reviews, state.selected);
+  $('undo-review').disabled = !state.undo;
 }
 function element(tag, className, content) {
   const node = document.createElement(tag);
@@ -111,7 +123,7 @@ function renderQueue() {
     const bottom = element('div', 'queue-item-bottom');
     bottom.append(element('span', '', `${left.split} ↔ ${right.split}`), element('span', `queue-review${review ? '' : ' pending'}`, review ? DECISIONS[review.decision] : '○ 未复核'));
     button.append(top, element('code', 'queue-path', left.path), element('code', 'queue-path', right.path), bottom);
-    button.addEventListener('click', () => { state.selected = pair.key; renderQueue(); renderDetail(); });
+    button.addEventListener('click', () => selectPair(pair.key));
     fragment.append(button);
   }
   if (state.filtered.length > state.visibleLimit) {
@@ -152,6 +164,8 @@ function renderDetail() {
   $('detail-decision').textContent = review ? `人工：${DECISIONS[review.decision]}` : '等待人工复核';
   $('detail-distance').textContent = pair.distance;
   $('evidence-explanation').textContent = `${evidence.description} ${pair.evidence === 'perceptual-candidate' ? '相似度不是泄漏概率；缩放、低对比度或重复纹理都可能造成误报。' : '相同证据说明内容重合；是否影响评测，还取决于数据来源、分组方式和任务定义。'}`;
+  if (pair.matchTransform) $('evidence-explanation').textContent += ` 匹配依据：${TRANSFORMS[pair.matchTransform]}；预览图保持原方向，距离取四种方向组合的最小值。`;
+  if (pair.matchOrientation) $('evidence-explanation').textContent += ` 匹配依据：${orientationDescription(pair.matchOrientation)}。预览图保持原方向；距离为已启用方向组合的最小值，旋转发生在 EXIF 校正之后。`;
   setImage('left', left);
   setImage('right', right);
   const index = state.filtered.findIndex(item => item.key === pair.key);
@@ -164,6 +178,8 @@ function renderDetail() {
     ['A · byte', left.byteDigest], ['B · byte', right.byteDigest],
     ['A · pixel', left.pixelDigest], ['B · pixel', right.pixelDigest],
     ['A · dHash', left.dhash], ['B · dHash', right.dhash],
+    ...(state.report.raw.options?.includeMirrors ? [['A · mirror dHash', left.dhashMirror], ['B · mirror dHash', right.dhashMirror], ['匹配方向', pair.matchOrientation ? orientationDescription(pair.matchOrientation) : TRANSFORMS[pair.matchTransform ?? 'original']]] : []),
+    ...(state.report.raw.options?.includeRotations ? [['A · 90/180/270° dHash', left.dhashRotations?.join(' / ')], ['B · 90/180/270° dHash', right.dhashRotations?.join(' / ')], ['旋转匹配方向', pair.matchOrientation ? orientationDescription(pair.matchOrientation) : '精确证据保持原方向']] : []),
     ['A · contrast', left.contrast], ['B · contrast', right.contrast],
     ['pair key', pair.key],
   ]) fingerprints.append(element('dt', '', label), element('dd', '', value == null ? '未提供' : String(value)));
@@ -179,9 +195,12 @@ function renderSavedState(review) {
 }
 function render() {
   if (!state.report) return;
+  const previous = state.filtered;
   state.filtered = filterPairs(state.report, state.reviews, filters());
-  if (!state.filtered.some(pair => pair.key === state.selected)) state.selected = state.filtered[0]?.key ?? null;
+  state.selected = selectionAfterFilter(state.filtered, state.selected, previous);
+  ensureSelectionVisible();
   renderMetrics();
+  renderWorkflow();
   renderQueue();
   renderDetail();
 }
@@ -195,21 +214,50 @@ function saveReviews() {
   }
 }
 function setDecision(decision) {
-  const pair = state.report?.pairMap.get(state.selected);
-  if (!pair) return;
-  state.reviews.set(pair.key, { pairKey: pair.key, left: pair.left, right: pair.right, decision, note: state.reviews.get(pair.key)?.note ?? '', updatedAt: new Date().toISOString() });
+  if (!state.report) return;
+  const change = changeDecision(state.report, state.reviews, state.selected, decision);
+  if (!change) return;
+  state.reviews = change.reviews;
+  state.undo = change.undo;
   saveReviews();
   render();
+}
+function undoLastDecision() {
+  if (!state.report) return;
+  const undo = state.undo;
+  const restored = undoDecision(state.report, state.reviews, undo);
+  state.undo = null;
+  if (!restored) { renderWorkflow(); return; }
+  state.reviews = restored;
+  state.selected = undo.key;
+  saveReviews();
+  render();
+  if (state.storageOK) notice(`已撤销上次标记，恢复为「${undo.previous ? DECISIONS[undo.previous.decision] : '未复核'}」。`);
+}
+function ensureSelectionVisible() {
+  const index = state.filtered.findIndex(pair => pair.key === state.selected);
+  state.visibleLimit = Math.max(state.visibleLimit, Math.ceil((index + 1) / 100) * 100);
+}
+function selectPair(key) {
+  const focusQueue = $('pair-list').contains(document.activeElement);
+  state.selected = key;
+  ensureSelectionVisible();
+  renderQueue();
+  renderDetail();
+  renderWorkflow();
+  const selected = $('pair-list').querySelector('.selected');
+  if (focusQueue) selected?.focus({ preventScroll: true });
+  selected?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
 }
 function navigatePair(step) {
   const index = state.filtered.findIndex(pair => pair.key === state.selected);
   const next = state.filtered[index + step];
   if (!next) return;
-  state.selected = next.key;
-  state.visibleLimit = Math.max(state.visibleLimit, Math.ceil((index + step + 1) / 100) * 100);
-  renderQueue();
-  renderDetail();
-  $('pair-list').querySelector('.selected')?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+  selectPair(next.key);
+}
+function navigatePending() {
+  const next = nextPendingPair(state.filtered, state.reviews, state.selected);
+  if (next) selectPair(next.key);
 }
 function downloadJSON(value, filename) {
   const blob = new Blob([JSON.stringify(value, null, 2) + '\n'], { type: 'application/json' });
@@ -237,7 +285,7 @@ async function loadDefault() {
     const raw = await response.text();
     if (raw.length > MAX_FILE_BYTES) throw new Error('报告超过浏览器读取上限。');
     if (sequence !== state.loadSequence) return;
-    installReport(JSON.parse(raw), '/report.json', true);
+    await installReport(JSON.parse(raw), '/report.json', true, sequence);
   } catch (error) {
     if (sequence === state.loadSequence) notice(error.message, Boolean(state.report) || !error.message.startsWith('未发现'));
   }
@@ -246,9 +294,10 @@ for (const id of ['report-file', 'empty-report-file']) $(id).addEventListener('c
   const file = event.target.files[0];
   if (!file) return;
   const sequence = ++state.loadSequence;
+  notice('正在读取并校验报告身份…');
   try {
     const value = await parseFile(file);
-    if (sequence === state.loadSequence) installReport(value, `文件 ${file.name}`);
+    if (sequence === state.loadSequence) await installReport(value, `文件 ${file.name}`, false, sequence);
   } catch (error) { if (sequence === state.loadSequence) notice(error.message, true); }
   finally { event.target.value = ''; }
 });
@@ -259,6 +308,7 @@ $('review-file').addEventListener('change', async event => {
     const incoming = validateReview(await parseFile(file), report);
     if (report !== state.report) throw new Error('导入过程中报告已切换，请重新选择复核文件。');
     state.reviews = mergeReviews(state.reviews, incoming);
+    state.undo = null;
     saveReviews();
     render();
     if (state.storageOK) notice(`已校验并合并 ${incoming.size} 条复核记录；同一图像对保留时间较新的结论。`);
@@ -276,20 +326,28 @@ for (const id of ['search', 'evidence-filter', 'decision-filter', 'split-filter'
 $('reset-filters').addEventListener('click', () => { resetFilters(); render(); });
 $('previous-pair').addEventListener('click', () => navigatePair(-1));
 $('next-pair').addEventListener('click', () => navigatePair(1));
+$('next-pending').addEventListener('click', navigatePending);
+$('undo-review').addEventListener('click', undoLastDecision);
 for (const button of document.querySelectorAll('[data-decision]')) button.addEventListener('click', () => setDecision(button.dataset.decision));
 $('review-note').addEventListener('input', event => {
   const review = state.reviews.get(state.selected);
   if (!review) return;
   review.note = event.target.value;
   review.updatedAt = new Date().toISOString();
+  state.undo = null;
+  $('undo-review').disabled = true;
   $('note-count').textContent = `${review.note.length} / 20000`;
   saveReviews();
   renderSavedState(review);
 });
 document.addEventListener('keydown', event => {
-  if (event.key === '/' && !event.metaKey && !event.ctrlKey && !event.altKey && !['INPUT', 'TEXTAREA', 'SELECT', 'BUTTON'].includes(document.activeElement?.tagName) && state.report) {
-    event.preventDefault();
-    $('search').focus();
-  }
+  if (!state.report || event.defaultPrevented || event.repeat || event.isComposing || event.metaKey || event.ctrlKey || event.altKey) return;
+  const active = document.activeElement;
+  if (['INPUT', 'TEXTAREA', 'SELECT'].includes(active?.tagName) || active?.isContentEditable) return;
+  const shortcuts = { '/': () => $('search').focus(), j: () => navigatePair(1), k: () => navigatePair(-1), n: navigatePending };
+  const key = event.key.toLowerCase();
+  if (!Object.hasOwn(shortcuts, key)) return;
+  event.preventDefault();
+  shortcuts[key]();
 });
 loadDefault();

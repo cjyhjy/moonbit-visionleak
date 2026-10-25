@@ -1,22 +1,66 @@
 // Generated using `moon info`, DON'T EDIT IT
-package "visionleak/core/core"
+package "cjyhjy/visionleak/core"
 
 // Values
 pub fn audit_json(String) -> String
+
+pub fn cli_options_json(String) -> String
 
 pub fn fingerprint(Int, Int, Bytes) -> Json
 
 pub fn fingerprint_json(String) -> String
 
+pub fn fingerprint_mirrored_rgba(Int, Int, Bytes) -> String
+
+pub fn fingerprint_oriented_rgba(Int, Int, Bytes, Bool) -> String
+
 pub fn fingerprint_rgba(Int, Int, Bytes) -> String
 
 pub fn hamming(String, String) -> Int
 
+pub fn pixel_digest_final(PixelDigestState) -> String
+
+pub fn pixel_digest_new(Int, Int) -> PixelDigestState
+
+pub fn pixel_digest_update_rgba(PixelDigestState, Bytes) -> Bool
+
+pub fn report_identity_json(String) -> String
+
+pub fn review_validation_json(String) -> String
+
+pub fn sampling_plan_json(Int, Int, Int) -> String
+
+pub fn score_json(String) -> String
+
 pub fn sha256(Bytes) -> String
+
+pub fn sha256_final(Sha256State) -> String
+
+pub fn sha256_new() -> Sha256State
+
+pub fn sha256_update(Sha256State, Bytes) -> Bool
 
 // Errors
 
 // Types and methods
+pub struct PixelDigestState {
+  hash : Sha256State
+  width : Int
+  height : Int
+  expected : Int64
+  mut pixels : Int64
+  mut low : Int
+  mut high : Int
+  mut valid : Bool
+}
+
+pub struct Sha256State {
+  state : Array[UInt]
+  pending : FixedArray[Byte]
+  mut used : Int
+  mut bytes : UInt64
+  mut digest : String?
+}
 
 // Type aliases
 

@@ -1,6 +1,6 @@
 # 复现图像基准与外部对照
 
-所有命令从 VisionLeak 仓库或解包后的项目根目录执行。先检查目标目录；生成器和审计 CLI 默认拒绝覆盖已有目录。下面只会安装项目内依赖、写本项目报告，不调用模型或付费 API。
+所有命令从解包后的 VisionLeak 项目根目录执行。先检查目标目录；生成器和审计 CLI 默认拒绝覆盖已有目录。下面只会安装项目内依赖、写本项目报告，不调用模型或付费 API。
 
 ## 运行随包图像
 
@@ -16,15 +16,11 @@ npm test
 
 ## 重建 MoonBit 核心
 
-固定 `moon 0.1.20261012 (748b63c)`、`moonc v0.10.15+943464bfa`。`tools/bootstrap.py` 从 MoonBit 官方地址下载 macOS arm64 / Linux x86_64 编译器与标准库，分别核对 `toolchain.lock.json` 中的 SHA-256，再安装到 `.tools/moon`。需要 Python 3.13；不会修改全局工具链或已有 `.toolchain`。`tools/moon` 优先使用 `.tools/moon`，再兼容旧 `.toolchain` / PATH。
+本次使用 `moon 0.1.20261012 (748b63c)`、`moonc v0.10.15+943464bfa`。`tools/moon` 使用项目局部工具链或已安装的 MoonBit；便携包不包含完整编译器。对源码复验应先准备相容的 MoonBit 工具链，再执行：
 
 ```sh
-python3.13 tools/bootstrap.py
-npm ci
 npm run build
 ./tools/moon test --target js
-./tools/moon test --target wasm-gc
-./tools/moon test --target native
 npm test
 ```
 
@@ -41,7 +37,7 @@ research/.venv-oracle/bin/python tests/oracle-metrics.py
 research/.venv-oracle/bin/python tools/evaluate.py
 ```
 
-CI 通过 `.node-version` / `.python-version` 固定 Node 22.22.0 / Python 3.13.7，pip 固定 25.2；本地其他补丁版本的运行环境会单独记录。固定全部 Python 包版本：ImageHash 4.3.2、Pillow 11.3.0、NumPy 2.3.3、SciPy 1.16.2、PyWavelets 1.9.0。具体实测平台/Python/Node 版本见 `reports/evaluation.json` 的 `environment`。Python venv、编译器和本地缓存均不应进入发布 ZIP。
+固定全部 Python 包版本：ImageHash 4.3.2、Pillow 11.3.0、NumPy 2.3.3、SciPy 1.16.2、PyWavelets 1.9.0。具体实测平台/Python/Node 版本见 `reports/evaluation.json` 的 `environment`。Python venv、编译器和本地缓存均不应进入发布 ZIP。
 
 `evaluate.py` 完成下列实际工作：
 
@@ -83,15 +79,3 @@ research/.venv-oracle/bin/python tools/evaluate.py --root fixtures/reproduced-a 
 ## 未测试或不能由成绩推出的内容
 
 没有使用自然照片、私有训练集或公开真实泄漏集；所有真值是合成来源。没有运行 FiftyOne/MoonSplit 的工具性能对比，没有测分布外语义相似、对抗图像、所有裁切/旋转、ICC/高位深格式的完整召回，也没有做百万图规模测试。本项目不能证明数据集完全无泄漏，不能把 `perceptual-candidate` 当作确定副本。查重规则与参赛资格由组织者判断，来源调查不替代该判断。
-
-## 与 GitHub CI 相同的源码验收
-
-在以上 MoonBit、Node 与 Python oracle 依赖就绪后运行：
-
-```sh
-npm run verify:ci
-```
-
-脚本运行三个后端的 check / release build / test、格式检查、提交内 JS 构建产物一致性、全部 Node 集成测试（含真正的 CLI 与 HTTP 服务）、指标回归、59 图 ImageHash 和独立索引 oracle。使用其他 Python 可设置 `VISIONLEAK_ORACLE_PYTHON`。新日志和 JSON 写入忽略的 `.ci-artifacts/`，不覆盖历史 `reports/`。CI 将该目录作为绑定提交 SHA 的 artifact 上传。此流程不重跑浏览器截图或 ZIP 验收，不把历史材料算成新的通过项。
-
-**native 构建范围：** 固定编译器的 `foreign_library` 不支持 native 共享库链接，直接 `moon build --target native` 会缺少 `main`；这是 [MoonBit FFI 文档](https://docs.moonbitlang.com/en/latest/language/ffi.html#export-functions) 列出的限制。CI 使用 `moon test --target native --release --build-only` 真实编译 release 测试可执行文件，再运行 release 和原有 debug 测试。JS / wasm-gc 则执行普通 release build。这里验证 native 核心编译和执行，不宣称发布 native `.so` / `.dylib`。

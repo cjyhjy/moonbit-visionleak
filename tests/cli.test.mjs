@@ -107,7 +107,7 @@ test('a bad image and a symlink leave reviewable partial evidence and explicit e
 test('image, pixel, file, total-pixel, comparison, and output budgets are observable', async (t) => {
   const f = await fixture(t);
   const cases = [
-    ['--max-images', '2', 'IMAGE_BUDGET'], ['--max-pixels', '1', 'PIXEL_BUDGET'],
+    ['--max-images', '2', 'IMAGE_BUDGET'], ['--max-decode-pixels', '1', 'PIXEL_BUDGET'],
     ['--max-file-bytes', '1', 'FILE_BYTE_BUDGET'], ['--max-total-pixels', String(f.width * f.height), 'TOTAL_PIXEL_BUDGET'],
     ['--max-comparisons', '0', null], ['--max-pairs', '0', null],
   ];
@@ -195,6 +195,10 @@ test('loopback server serves only fixed assets and one report, and denies traver
   assert.equal(served.status, 200);
   const report = JSON.parse(served.body);
   assert.equal((await request(url, '/')).status, 200);
+  const compiled = await request(url, '/dist/visionleak.js');
+  assert.equal(compiled.status, 200);
+  assert.match(compiled.headers['content-type'], /javascript/);
+  assert.deepEqual(compiled.body, await readFile(join(PROJECT, 'dist/visionleak.js')));
   assert.equal((await request(url, `/${report.images[0].thumbnail}`)).status, 200);
   assert.equal((await request(url, '/package.json')).status, 404);
   assert.equal((await request(url, '/%2e%2e/package.json')).status, 400);
@@ -216,4 +220,60 @@ test('loopback server serves only fixed assets and one report, and denies traver
   await rm(preview);
   await symlink(join(f.root, 'train', 'original.png'), preview);
   assert.equal((await request(url, `/${report.images[0].thumbnail}`)).status, 404);
+});
+
+test('symlinked output ancestry is rejected before creating directories in the dataset', async (t) => {
+  const f = await fixture(t);
+  const alias = join(f.temp, 'dataset-alias');
+  await symlink(f.root, alias, 'dir');
+  const before = await readdir(f.root);
+  await assert.rejects(runAudit({root:f.root,out:join(alias,'new','nested','output')}), {code:'UNSAFE_OUTPUT'});
+  assert.deepEqual(await readdir(f.root), before);
+});
+
+test('server rejects altered stable report fields even when the old auditId is retained', async (t) => {
+  const f = await fixture(t);
+  const { report } = await runAudit({root:f.root,out:f.out});
+  report.pairs[0].evidence = 'perceptual-candidate';
+  await writeFile(join(f.out,'report.json'), JSON.stringify(report));
+  await assert.rejects(startServer({report:join(f.out,'report.json'),port:0}), {code:'INVALID_REPORT'});
+});
+
+test('opt-in mirror CLI emits review candidates from actual reflected files and binds mode to identity', async (t) => {
+  const f = await fixture(t);
+  const reflected = await sharp(f.original).flop().png().toBuffer();
+  await writeFile(join(f.root,'test','mirrored.png'),reflected);
+  const plain=await runAudit({root:f.root,out:f.out,options:{threshold:0}});
+  const result=run('audit','--root',f.root,'--out',join(f.temp,'mirrors'),'--threshold','0','--include-mirrors');
+  assert.equal(result.status,0,result.stderr);
+  const report=JSON.parse(await readFile(join(f.temp,'mirrors','report.json')));
+  const matches=p=>[p.left,p.right].includes('test/mirrored.png')&&[p.left,p.right].includes('train/original.png');
+  assert.equal(plain.report.pairs.some(matches),false);
+  const pair=report.pairs.find(matches);assert.equal(pair.evidence,'perceptual-candidate');assert.equal(pair.distance,0);assert.match(pair.matchTransform,/mirror/);
+  assert.equal(report.options.includeMirrors,true);assert.notEqual(report.auditId,plain.report.auditId);
+  assert.ok(report.images.every(i=>/^[01]{64}$/.test(i.dhashMirror)));
+  assert.ok(!report.groups.some(g=>g.members.includes('test/mirrored.png')));
+  await assert.rejects(runAudit({root:f.root,out:join(f.temp,'bad'),options:{includeMirrors:'yes'}}),{code:'ARGUMENT_ERROR'});
+  assert.deepEqual(await readFile(join(f.root,'test','mirrored.png')),reflected);
+});
+
+test('opt-in rotations audit physical rotated and rotated-reflected files without making exact groups', async(t)=>{
+  const f=await fixture(t);
+  const rotated=await sharp(f.original).rotate(90).png().toBuffer();
+  const reflected=await sharp(rotated).flop().png().toBuffer();
+  await writeFile(join(f.root,'test','rotated.png'),rotated);
+  await writeFile(join(f.root,'test','rotated-mirror.png'),reflected);
+  const legacy=await runAudit({root:f.root,out:f.out,options:{threshold:0,includeMirrors:true}});
+  const result=run('audit','--root',f.root,'--out',join(f.temp,'orientations'),'--threshold','0','--include-rotations','--include-mirrors');
+  assert.equal(result.status,0,result.stderr);
+  const report=JSON.parse(await readFile(join(f.temp,'orientations','report.json')));
+  for(const id of ['test/rotated.png','test/rotated-mirror.png']){
+    const matches=p=>[p.left,p.right].includes(id)&&[p.left,p.right].includes('train/original.png');
+    assert.equal(legacy.report.pairs.some(matches),false);
+    const pair=report.pairs.find(matches);assert.equal(pair.evidence,'perceptual-candidate');assert.equal(pair.distance,0);assert.match(pair.matchOrientation,/rotate/);
+    assert.ok(!report.groups.some(g=>g.members.includes(id)));
+  }
+  assert.equal(report.options.includeRotations,true);assert.notEqual(report.auditId,legacy.report.auditId);
+  await assert.rejects(runAudit({root:f.root,out:join(f.temp,'bad'),options:{includeRotations:1}}),{code:'ARGUMENT_ERROR'});
+  assert.deepEqual(await readFile(join(f.root,'test','rotated.png')),rotated);
 });

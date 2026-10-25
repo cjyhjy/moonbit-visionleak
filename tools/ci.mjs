@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { join } from 'node:path';
+import { sourceDigest } from './source-digest.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const output = join(root, '.ci-artifacts');
@@ -38,6 +39,7 @@ function run(id, command, args) {
 }
 const digest = () => createHash('sha256').update(readFileSync(join(root, 'dist/visionleak.js'))).digest('hex');
 try {
+  report.sourceDigest = sourceDigest(root);
   report.environment.moon = run('toolchain', './tools/moon', ['version', '--all']);
   run('format', './tools/moon', ['fmt', '--check']);
   const committedArtifact = digest();
@@ -57,8 +59,15 @@ try {
   report.compiledArtifact = { sha256: digest(), matchesCommitted: digest() === committedArtifact };
   if (!report.compiledArtifact.matchesCommitted) throw new Error('Committed dist/visionleak.js differs from the fresh pinned build');
   run('node-integration', 'npm', ['test']);
+  run('mooncakes-compatibility', python, ['tests/mooncakes-dry-run.py']);
+  run('release-contract', python, ['tests/release-contract.py']);
+  run('evaluation-compatibility', python, ['tests/evaluation-compatibility.py']);
+  run('report-history', python, ['tests/report-history.py']);
   run('metric-regression', python, ['tests/oracle-metrics.py']);
   run('imagehash-oracle', python, ['tools/evaluate.py', '--out', '.ci-artifacts/evaluation.json']);
+  run('mirror-oracle', python, ['tools/evaluate-mirrors.py','--out','.ci-artifacts/mirror-evaluation.json']);
+  for (const partition of ['development','holdout']) run(`photo-${partition}`,python,['tools/evaluate-photos.py','--partition',partition,'--out',`.ci-artifacts/photos-${partition}`,'--include-orientations','--replace']);
+  if (sourceDigest(root) !== report.sourceDigest) throw new Error('Behavioral sources changed during CI acceptance');
   report.status = 'passed';
 } catch (error) {
   report.status = 'failed';

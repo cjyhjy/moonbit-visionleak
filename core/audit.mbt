@@ -1,16 +1,42 @@
 ///|
+// Pack once after input validation. Two 32-bit words keep the JS backend on
+// native bitwise operations while preserving all 64 bits on every target.
+priv struct Hash64 {
+  high : UInt32
+  low : UInt32
+}
+
+///|
+fn pack_validated_hash(bits : String) -> Hash64 {
+  let mut high : UInt32 = 0
+  let mut low : UInt32 = 0
+  for i = 0; i < 32; i = i + 1 {
+    high = (high << 1) | (if bits[i] == '1' { 1U } else { 0U })
+    low = (low << 1) | (if bits[i + 32] == '1' { 1U } else { 0U })
+  }
+  { high, low, }
+}
+
+///|
+fn hash_distance(left : Hash64, right : Hash64) -> Int32 {
+  (left.high ^ right.high).popcnt() + (left.low ^ right.low).popcnt()
+}
+
+///|
 priv struct Item {
   id : String
   split : String
   bytes : String
   pixels : String
-  hash : String
+  hash : Hash64
+  mirror_hash : Hash64
+  orientation_hashes : Array[Hash64]
   contrast : Int32
 }
 
 ///|
 priv struct BkNode {
-  hash : String
+  hash : Hash64
   members : Array[Int32]
   children : Map[Int32, Int32]
 }
@@ -74,6 +100,8 @@ fn append_pair(
   parents : Array[Int32],
   budget : Budget,
   max_pairs : Int32,
+  transform : String,
+  rotations : Bool,
 ) -> Bool {
   let a = items[left]
   let b = items[right]
@@ -96,14 +124,22 @@ fn append_pair(
     let rb = root(parents, right)
     parents[rb] = ra
   }
-  pairs.push({
+  let pair : Json = {
     "left": Json(a.id),
     "right": Json(b.id),
     "evidence": Json(kind),
     "distance": Json(distance),
     "lowContrast": Json(a.contrast < 16 || b.contrast < 16),
     "review": "unreviewed",
-  })
+  }
+  if transform != "original" && kind == "perceptual-candidate" {
+    if pair is Object(fields) {
+      fields[if rotations { "matchOrientation" } else { "matchTransform" }] = Json(
+        transform,
+      )
+    }
+  }
+  pairs.push(pair)
   true
 }
 
@@ -114,6 +150,8 @@ fn run_audit(
   max_work : Int32,
   max_pairs : Int32,
   max_images : Int32,
+  include_mirrors : Bool,
+  include_rotations : Bool,
 ) -> Json {
   let pairs : Array[Json] = []
   let nodes : Array[BkNode] = []
@@ -149,11 +187,13 @@ fn run_audit(
             items,
             j,
             i,
-            hamming(items[j].hash, item.hash),
+            hash_distance(items[j].hash, item.hash),
             pairs,
             parents,
             budget,
             max_pairs,
+            "original",
+            include_rotations,
           ) {
           break
         }
@@ -166,62 +206,93 @@ fn run_audit(
       break
     }
     // Iterative metric-tree query. No recursion; each visit/pair consumes budget.
-    let pending : Array[Int32] = if nodes.is_empty() { [] } else { [0] }
-    while !pending.is_empty() {
-      let n = nodes[pending.pop().unwrap()]
-      if !budget.take(true) {
-        break
-      }
-      let d = hamming(item.hash, n.hash)
-      if d <= threshold {
-        for j in n.members {
-          if seen.contains(j) {
-            continue
+    let variants = if include_rotations {
+      item.orientation_hashes
+    } else if include_mirrors {
+      [item.hash, item.mirror_hash]
+    } else {
+      [item.hash]
+    }
+    for query_hash in variants {
+      let pending : Array[Int32] = if nodes.is_empty() { [] } else { [0] }
+      while !pending.is_empty() {
+        let n = nodes[pending.pop().unwrap()]
+        if !budget.take(true) {
+          break
+        }
+        let d = hash_distance(query_hash, n.hash)
+        if d <= threshold {
+          for j in n.members {
+            if seen.contains(j) {
+              continue
+            }
+            if !budget.take(false) {
+              break
+            }
+            let (pair_d, transform) = if include_rotations {
+              orientation_distance(items[j], item, budget, include_mirrors)
+            } else if include_mirrors {
+              mirror_distance(items[j], item, budget)
+            } else {
+              (d, "original")
+            }
+            if budget.reason != "" {
+              break
+            }
+            seen[j] = true
+            if !append_pair(
+                items, j, i, pair_d, pairs, parents, budget, max_pairs, transform,
+                include_rotations,
+              ) {
+              break
+            }
           }
-          if !budget.take(false) {
-            break
-          }
-          if !append_pair(items, j, i, d, pairs, parents, budget, max_pairs) {
-            break
+        }
+        if budget.reason != "" {
+          break
+        }
+        for edge = Int32::max(0, d - threshold)
+            edge <= Int32::min(64, d + threshold)
+            edge = edge + 1 {
+          if n.children.get(edge) is Some(child) {
+            pending.push(child)
           }
         }
       }
       if budget.reason != "" {
         break
       }
-      for edge = Int32::max(0, d - threshold)
-          edge <= Int32::min(64, d + threshold)
-          edge = edge + 1 {
-        if n.children.get(edge) is Some(child) {
-          pending.push(child)
-        }
-      }
     }
     if budget.reason != "" {
       break
     }
-    if nodes.is_empty() {
-      nodes.push({ hash: item.hash, members: [i], children: Map([]), })
-    } else {
-      let mut cursor = 0
-      while true {
-        if !budget.take(true) {
-          break
-        }
-        let n = nodes[cursor]
-        let d = hamming(item.hash, n.hash)
-        if d == 0 {
-          n.members.push(i)
-          break
-        }
-        match n.children.get(d) {
-          Some(child) => cursor = child
-          None => {
-            n.children[d] = nodes.length()
-            nodes.push({ hash: item.hash, members: [i], children: Map([]), })
+    for insert_hash in variants {
+      if nodes.is_empty() {
+        nodes.push({ hash: insert_hash, members: [i], children: Map([]), })
+      } else {
+        let mut cursor = 0
+        while true {
+          if !budget.take(true) {
             break
           }
+          let n = nodes[cursor]
+          let d = hash_distance(insert_hash, n.hash)
+          if d == 0 {
+            n.members.push(i)
+            break
+          }
+          match n.children.get(d) {
+            Some(child) => cursor = child
+            None => {
+              n.children[d] = nodes.length()
+              nodes.push({ hash: insert_hash, members: [i], children: Map([]), })
+              break
+            }
+          }
         }
+      }
+      if budget.reason != "" {
+        break
       }
     }
     if budget.reason != "" {
@@ -252,7 +323,7 @@ fn run_audit(
     }
   }
   let complete = budget.reason == ""
-  {
+  let result : Json = {
     "ok": true,
     "complete": Json(complete),
     "status": Json(if complete { "complete" } else { "incomplete" }),
@@ -276,6 +347,17 @@ fn run_audit(
       "reason": Json(budget.reason),
     },
   }
+  if include_mirrors {
+    if field(result, "options") is Object(fields) {
+      fields["includeMirrors"] = Json(true)
+    }
+  }
+  if include_rotations {
+    if field(result, "options") is Object(fields) {
+      fields["includeRotations"] = Json(true)
+    }
+  }
+  result
 }
 
 ///|
@@ -308,6 +390,18 @@ pub fn audit_json(source : String) -> String {
   if !(opts is Object(_) || opts is Null) {
     return error_json("InvalidOptions", "options must be an object").stringify()
   }
+  let mirror_option = field(opts, "includeMirrors")
+  if !(mirror_option is True || mirror_option is False || mirror_option is Null) {
+    return error_json("InvalidOptions", "includeMirrors must be a boolean").stringify()
+  }
+  let include_mirrors = mirror_option == Json(true)
+  let rotation_option = field(opts, "includeRotations")
+  if !(rotation_option is True ||
+    rotation_option is False ||
+    rotation_option is Null) {
+    return error_json("InvalidOptions", "includeRotations must be a boolean").stringify()
+  }
+  let include_rotations = rotation_option == Json(true)
   let threshold = option(opts, "threshold", 6)
   let max_work = option(opts, "maxComparisons", 1000000)
   let max_pairs = option(opts, "maxPairs", 10000)
@@ -338,6 +432,11 @@ pub fn audit_json(source : String) -> String {
     let bytes = text(field(value, "byteDigest"))
     let pixels = text(field(value, "pixelDigest"))
     let hash = text(field(value, "dhash"))
+    let mirror_hash = if include_mirrors {
+      text(field(value, "dhashMirror"))
+    } else {
+      hash
+    }
     let contrast = integer(field(value, "contrast"))
     if id == "" ||
       id.length() > 4096 ||
@@ -346,6 +445,7 @@ pub fn audit_json(source : String) -> String {
       !hex64(bytes) ||
       !hex64(pixels) ||
       !bits64(hash) ||
+      !bits64(mirror_hash) ||
       contrast < 0 ||
       contrast > 255 {
       return error_json(
@@ -355,8 +455,126 @@ pub fn audit_json(source : String) -> String {
     if ids.contains(id) {
       return error_json("DuplicateId", "image IDs must be unique").stringify()
     }
+    let orientation_hashes : Array[Hash64] = []
+    if include_rotations {
+      guard field(value, "dhashRotations") is Array(rotated) else {
+        return error_json(
+          "InvalidImage", "dhashRotations must contain three hashes",
+        ).stringify()
+      }
+      if rotated.length() != 3 {
+        return error_json(
+          "InvalidImage", "dhashRotations must contain three hashes",
+        ).stringify()
+      }
+      let mirrored = field(value, "dhashMirrorRotations")
+      if include_mirrors {
+        guard mirrored is Array(a) && a.length() == 3 else {
+          return error_json(
+            "InvalidImage", "dhashMirrorRotations must contain three hashes",
+          ).stringify()
+        }
+      }
+      orientation_hashes.push(pack_validated_hash(hash))
+      if include_mirrors {
+        orientation_hashes.push(pack_validated_hash(mirror_hash))
+      }
+      for i = 0; i < 3; i = i + 1 {
+        let h = text(rotated[i])
+        if !bits64(h) {
+          return error_json("InvalidImage", "invalid rotated hash").stringify()
+        }
+        orientation_hashes.push(pack_validated_hash(h))
+        if include_mirrors {
+          if mirrored is Array(a) {
+            let mh = text(a[i])
+            if !bits64(mh) {
+              return error_json(
+                "InvalidImage", "invalid reflected rotated hash",
+              ).stringify()
+            }
+            orientation_hashes.push(pack_validated_hash(mh))
+          }
+        }
+      }
+    }
     ids[id] = true
-    items.push({ id, split, bytes, pixels, hash, contrast, })
+    items.push({
+      id,
+      split,
+      bytes,
+      pixels,
+      hash: pack_validated_hash(hash),
+      mirror_hash: pack_validated_hash(mirror_hash),
+      orientation_hashes,
+      contrast,
+    })
   }
-  run_audit(items, threshold, max_work, max_pairs, max_images).stringify()
+  run_audit(
+    items, threshold, max_work, max_pairs, max_images, include_mirrors, include_rotations,
+  ).stringify()
+}
+
+///|
+// Four ordinary Hamming metrics: never use the minimum as a BK-tree metric.
+// Reflection and uneven integer sampling need not preserve original distances.
+fn mirror_distance(a : Item, b : Item, budget : Budget) -> (Int32, String) {
+  let mut best = 65
+  let mut transform = "original"
+  let labels = ["original", "mirror-left", "mirror-right", "mirror-both"]
+  for k = 0; k < 4; k = k + 1 {
+    if !budget.take(true) {
+      return (-1, "")
+    }
+    let left = if k == 1 || k == 3 { a.mirror_hash } else { a.hash }
+    let right = if k == 2 || k == 3 { b.mirror_hash } else { b.hash }
+    let d = hash_distance(left, right)
+    if d < best {
+      best = d
+      transform = labels[k]
+    }
+  }
+  (best, transform)
+}
+
+///|
+fn orientation_labels(mirrors : Bool) -> Array[String] {
+  let names = ["original", "rotate90", "rotate180", "rotate270"]
+  let labels : Array[String] = []
+  for name in names {
+    labels.push(name)
+    if mirrors {
+      labels.push(if name == "original" { "mirror" } else { name + "-mirror" })
+    }
+  }
+  labels
+}
+
+///|
+fn orientation_distance(
+  a : Item,
+  b : Item,
+  budget : Budget,
+  mirrors : Bool,
+) -> (Int32, String) {
+  let labels = orientation_labels(mirrors)
+  let mut best = 65
+  let mut transform = ""
+  for j = 0; j < b.orientation_hashes.length(); j = j + 1 {
+    for i = 0; i < a.orientation_hashes.length(); i = i + 1 {
+      if !budget.take(true) {
+        return (-1, "")
+      }
+      let d = hash_distance(a.orientation_hashes[i], b.orientation_hashes[j])
+      if d < best {
+        best = d
+        transform = labels[i] + "/" + labels[j]
+        // Zero proves the minimum; ties deliberately use the first combination.
+        if best == 0 {
+          return (best, transform)
+        }
+      }
+    }
+  }
+  (best, transform)
 }
