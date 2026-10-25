@@ -1,0 +1,5 @@
+group_id,evidence_level,split,path,review_status,suggestion
+"exact-4b1fbb953edf8f89fb9b405b4b308e77e9a89da54c3fb3df41a24749a2b76c57","byte-identical","train","train/source.png","pending","keep"
+"exact-4b1fbb953edf8f89fb9b405b4b308e77e9a89da54c3fb3df41a24749a2b76c57","byte-identical","validation","validation/source-copy.png","pending","remove-from-validation"
+"reviewed-candidate-646cfc1a035b801c6336d38a1c7101ca0a1879af367605e8a1a161d3f24f8494","local-candidate","train","train/source.png","confirmed","keep"
+"reviewed-candidate-646cfc1a035b801c6336d38a1c7101ca0a1879af367605e8a1a161d3f24f8494","local-candidate","test","test/crop.png","confirmed","remove-from-test"

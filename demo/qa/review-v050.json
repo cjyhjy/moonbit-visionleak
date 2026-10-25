@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "visionleak-review-v1",
+  "exportedAt": "2026-10-25T16:51:03.015Z",
+  "reviews": [
+    {
+      "right": "train/source.png",
+      "decision": "confirmed",
+      "updatedAt": "2026-10-25T16:50:31.962Z",
+      "note": "QA only: controlled 75% aspect crop",
+      "pairKey": "[\"test/crop.png\",\"train/source.png\"]",
+      "left": "test/crop.png"
+    }
+  ],
+  "auditId": "67c5328dbddd2e329ead596ba55270afcd57f39ca4a566669b2e768125ff254f"
+}

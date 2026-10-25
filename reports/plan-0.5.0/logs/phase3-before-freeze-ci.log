@@ -1,0 +1,1030 @@
+
+> visionleak@0.4.0 verify:ci
+> node tools/ci.mjs
+
+moon 0.1.20261012 (748b63c 2026-10-12) ~/Documents/ChatGPT/黑客松新项目/projects/visionleak/.toolchain/bin/moon
+moonc v0.10.15+943464bfa (2026-10-12) ~/Documents/ChatGPT/黑客松新项目/projects/visionleak/.toolchain/bin/moonc
+moonrun 0.1.20261012 (748b63c 2026-10-12) ~/Documents/ChatGPT/黑客松新项目/projects/visionleak/.toolchain/bin/moonrun
+
+Feature flags enabled: rr_moon_mod,rr_moon_pkg
+Finished. moon: ran 26 tasks, now up to date
+Finished. moon: no work to do
+Finished. moon: no work to do
+Total tests: 80, passed: 80, failed: 0.
+Finished. moon: ran 3 tasks, now up to date
+Finished. moon: ran 2 tasks, now up to date
+Total tests: 80, passed: 80, failed: 0.
+Finished. moon: ran 3 tasks, now up to date
+{"artifacts_path":["./_build/native/release/test/core/core.whitebox_test.exe"]}
+Total tests: 80, passed: 80, failed: 0.
+Total tests: 80, passed: 80, failed: 0.
+Built dist/visionleak.js from MoonBit.
+Finished. moon: no work to do
+
+> visionleak@0.4.0 test
+> node --test tests/*.test.mjs
+
+✔ real CLI separates byte equality from decoded pixel equality, preserves input, and binds stable audit IDs (261.435333ms)
+✔ decode plus real core follows EXIF orientation and canonical white alpha semantics (9.902917ms)
+✔ a bad image and a symlink leave reviewable partial evidence and explicit errors (77.070875ms)
+✔ image, pixel, file, total-pixel, comparison, and output budgets are observable (424.145917ms)
+✔ fatal arguments and empty roots return structured errors without creating a report (365.768458ms)
+✔ overwrite is explicit and refuses unrelated files even with --force (261.923041ms)
+✔ exported API merges partial options, validates them, and audit identity includes scan scope and errors (33.1755ms)
+✔ loopback server serves only fixed assets and one report, and denies traversal, symlinks, writes, and foreign hosts (88.78325ms)
+✔ symlinked output ancestry is rejected before creating directories in the dataset (3.208542ms)
+✔ server rejects altered stable report fields even when the old auditId is retained (9.841916ms)
+✔ opt-in mirror CLI emits review candidates from actual reflected files and binds mode to identity (84.279833ms)
+✔ opt-in rotations audit physical rotated and rotated-reflected files without making exact groups (92.544208ms)
+✔ compiled JSON and bytes exports preserve the host protocol (3.549666ms)
+✔ incremental SHA-256 opaque JS state accepts Buffer chunks and matches Node crypto (4.382584ms)
+✔ 20 local integral-image fingerprints match independent direct pixel box sums (10.804416ms)
+✔ actual CLI offset/aspect crops remain candidates, enter gate, validate and never form exact groups (210.927875ms)
+✔ local-only evidence is skipped by deterministic verify and cannot trigger the pixel gate (2.562959ms)
+✔ thumbnail sources are local and cannot traverse or execute URLs (0.821958ms)
+✔ validation is atomic and review export roundtrips without modifying machine evidence (4.340833ms)
+✔ filters compose evidence, human decision, path, split, and maximum distance (2.207ms)
+✔ an imported report cannot reuse another audit server thumbnails (0.287625ms)
+✔ progress distinguishes unreviewed and unsure pairs inside the current scope (0.541583ms)
+✔ next pending navigation wraps inside the filtered queue and skips reviewed/current pairs (2.281708ms)
+✔ marking a filtered pair continues after its old position instead of returning to the beginning (1.438917ms)
+✔ one-step undo removes a new mark and restores an earlier decision including its note (0.553666ms)
+✔ undo cannot erase later notes, imported changes, another audit, or unrelated pair reviews (0.510667ms)
+✔ 12MP JPEG byte copy and lossless reencoding keep full-resolution pixel identity (2599.897416ms)
+✔ sampling budget changes perception size while source decode and total budgets remain hard bounds (22.875125ms)
+✔ mirror host adapter routes to the compiled optional export (7.786083ms)
+✔ orientation host adapter routes booleans and bytes to the optional core export (8.053083ms)
+✔ legacy mirror mode preserves complete 0.3.0 evidence and work counts on the real development photos (12.422584ms)
+✔ fail-on implements fatal > hit > incomplete > complete and preserves default behavior (679.569333ms)
+✔ fail-on exact ignores pixel-only pairs and pixel ignores candidate-only pairs (242.309875ms)
+✔ verify detects changed and missing evidence and refuses a tampered report before dataset access (293.5445ms)
+✔ verify never follows a report traversal or a symlink to a file outside the dataset (143.315375ms)
+✔ coverage binds canonical splits, rejected codes, ignored files, and budget exhaustion (20.238833ms)
+✔ CSV matches the manually enumerated exact-group keep/remove plan (128.453ms)
+✔ candidate suggestions require a validated confirmed review and HTML safely includes current review (259.43775ms)
+✔ the committed GitHub Action leak fixture fails the actual local audit command (69.693042ms)
+✔ content identity accepts v0.1.0 reports and reviewed exports without rebinding evidence (7.031292ms)
+✔ v2 canonical identity survives object-key reorder but binds array order and unknown fields (1.09075ms)
+✔ MoonBit identity matches an independent ECMAScript canonicalization oracle for extension fields (10.377416ms)
+✔ public JS pixel adapter rejects inputs that the compiled ABI could coerce (0.795958ms)
+✔ public JS pixel adapter accepts Uint8Array and the Buffer decoder output (8.001292ms)
+✔ all split alias combinations normalize splits while preserving actual paths and directory scope (182.720375ms)
+✔ simultaneous aliases are fatal before output creation instead of merging dataset splits (7.957583ms)
+ℹ tests 46
+ℹ suites 0
+ℹ pass 46
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2717.495541
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.032s
+
+OK
+test_archive_manifest_cannot_mislabel_an_old_version_or_unknown_schema (__main__.ReleaseContractTests.test_archive_manifest_cannot_mislabel_an_old_version_or_unknown_schema) ... ok
+test_archive_payload_version_must_match_the_selected_release (__main__.ReleaseContractTests.test_archive_payload_version_must_match_the_selected_release) ... ok
+test_checksums_preserve_multiple_releases_and_allow_absent_file (__main__.ReleaseContractTests.test_checksums_preserve_multiple_releases_and_allow_absent_file) ... ok
+test_checksums_reject_duplicate_names_even_with_identical_digests (__main__.ReleaseContractTests.test_checksums_reject_duplicate_names_even_with_identical_digests) ... ok
+test_checksums_reject_malformed_or_unsafe_entries (__main__.ReleaseContractTests.test_checksums_reject_malformed_or_unsafe_entries) ... ok
+test_missing_current_archive_replaces_old_passed_attestation_with_failure (__main__.ReleaseContractTests.test_missing_current_archive_replaces_old_passed_attestation_with_failure) ... ok
+test_release_version_agrees_across_all_manifests (__main__.ReleaseContractTests.test_release_version_agrees_across_all_manifests) ... ok
+test_release_version_rejects_each_independent_manifest_mismatch (__main__.ReleaseContractTests.test_release_version_rejects_each_independent_manifest_mismatch) ... ok
+test_release_version_rejects_missing_lock_root_or_moon_version (__main__.ReleaseContractTests.test_release_version_rejects_missing_lock_root_or_moon_version) ... ok
+test_release_version_rejects_paths_control_characters_and_non_ascii_digits (__main__.ReleaseContractTests.test_release_version_rejects_paths_control_characters_and_non_ascii_digits) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.012s
+
+OK
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.003s
+
+OK
+{
+  "status": "passed",
+  "reports": 42,
+  "scope": "Valid report samples in reports/ and available original 0.1.0\u20130.4.0 ZIPs; excludes intentionally tampered QA inputs and old failed clean-room copies.",
+  "results": [
+    {
+      "path": "reports/cli-smoke/report.json",
+      "auditId": "dc9fb9efb9db57e2a9e7381181c83d89118cab0b84029a14770177d08c55f2c2",
+      "actual": "dc9fb9efb9db57e2a9e7381181c83d89118cab0b84029a14770177d08c55f2c2"
+    },
+    {
+      "path": "reports/demo/report.json",
+      "auditId": "10f740be2630e3ea2941339b4360900eec93cf5751b038ddd585d310d2ed1b43",
+      "actual": "10f740be2630e3ea2941339b4360900eec93cf5751b038ddd585d310d2ed1b43"
+    },
+    {
+      "path": "reports/evaluation-audit.json",
+      "auditId": "10f740be2630e3ea2941339b4360900eec93cf5751b038ddd585d310d2ed1b43",
+      "actual": "10f740be2630e3ea2941339b4360900eec93cf5751b038ddd585d310d2ed1b43"
+    },
+    {
+      "path": "reports/mirror-demo/report.json",
+      "auditId": "e9dfa748b17b41f8f08cd430af8d219a5de5a3179a3fc1e3bdb7689a79ca67bb",
+      "actual": "e9dfa748b17b41f8f08cd430af8d219a5de5a3179a3fc1e3bdb7689a79ca67bb"
+    },
+    {
+      "path": "reports/mirror-evaluation-audit.json",
+      "auditId": "e9dfa748b17b41f8f08cd430af8d219a5de5a3179a3fc1e3bdb7689a79ca67bb",
+      "actual": "e9dfa748b17b41f8f08cd430af8d219a5de5a3179a3fc1e3bdb7689a79ca67bb"
+    },
+    {
+      "path": "reports/photos-demo/report.json",
+      "auditId": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078",
+      "actual": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078"
+    },
+    {
+      "path": "reports/photos-v1/baseline-development/default-audit.json",
+      "auditId": "294c3231225da1645db5cc09456f2dfb5d8a8d5b40120eec8d40ac1460b2f849",
+      "actual": "294c3231225da1645db5cc09456f2dfb5d8a8d5b40120eec8d40ac1460b2f849"
+    },
+    {
+      "path": "reports/photos-v1/baseline-development/mirrors-audit.json",
+      "auditId": "fca2db62f56f26474ae9f1fad0e0d548e9affa625897f03935a55e2043ca46f1",
+      "actual": "fca2db62f56f26474ae9f1fad0e0d548e9affa625897f03935a55e2043ca46f1"
+    },
+    {
+      "path": "reports/photos-v1/baseline-holdout/default-audit.json",
+      "auditId": "e1fd16f25d65faee82a5257ea962cf58668adcecf2f75702e518908f27d8f1e2",
+      "actual": "e1fd16f25d65faee82a5257ea962cf58668adcecf2f75702e518908f27d8f1e2"
+    },
+    {
+      "path": "reports/photos-v1/baseline-holdout/mirrors-audit.json",
+      "auditId": "9a3f2fef2ef3eaf4336af2b5c199a677bb6068e54ce20283a1679484de66b8d1",
+      "actual": "9a3f2fef2ef3eaf4336af2b5c199a677bb6068e54ce20283a1679484de66b8d1"
+    },
+    {
+      "path": "reports/photos-v1/current-development/default-audit.json",
+      "auditId": "ee53feb13ac994bd153f2a391092aa7485fd1a734f66e97f4741dbced536fdb1",
+      "actual": "ee53feb13ac994bd153f2a391092aa7485fd1a734f66e97f4741dbced536fdb1"
+    },
+    {
+      "path": "reports/photos-v1/current-development/mirrors-audit.json",
+      "auditId": "39313f285d8ccf3c2762118129f80655c81bdbdbc3f58c865050f979469e938d",
+      "actual": "39313f285d8ccf3c2762118129f80655c81bdbdbc3f58c865050f979469e938d"
+    },
+    {
+      "path": "reports/photos-v1/current-development/orientations-audit.json",
+      "auditId": "6b40c9010d6e1564c1b43b99056cb0a50e2f007987806da45a03eb3547f2f4d0",
+      "actual": "6b40c9010d6e1564c1b43b99056cb0a50e2f007987806da45a03eb3547f2f4d0"
+    },
+    {
+      "path": "reports/photos-v1/current-holdout/default-audit.json",
+      "auditId": "15b8158fdfeb0e7c951ceee33eb923a559d0507681b641f964eb96737cb90449",
+      "actual": "15b8158fdfeb0e7c951ceee33eb923a559d0507681b641f964eb96737cb90449"
+    },
+    {
+      "path": "reports/photos-v1/current-holdout/mirrors-audit.json",
+      "auditId": "fb4dfbedca92aaae2c7948b8fa1668b8913b0823519b63abc9a439ecbf51f6db",
+      "actual": "fb4dfbedca92aaae2c7948b8fa1668b8913b0823519b63abc9a439ecbf51f6db"
+    },
+    {
+      "path": "reports/photos-v1/current-holdout/orientations-audit.json",
+      "auditId": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078",
+      "actual": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078"
+    },
+    {
+      "path": "reports/plan-0.5.0/phase2-action-audit/report.json",
+      "auditId": "d009d86c90dd1c4f006cebaa0fea07a1646d25c3def64c9ef71abaef2b0bbde2",
+      "actual": "d009d86c90dd1c4f006cebaa0fea07a1646d25c3def64c9ef71abaef2b0bbde2"
+    },
+    {
+      "path": "reports/plan-0.5.0/phase2-demo/report.json",
+      "auditId": "7d6378c0f9a4a43d374326deff73223c77fd2dc28e8d0fee8d47b312ba013d83",
+      "actual": "7d6378c0f9a4a43d374326deff73223c77fd2dc28e8d0fee8d47b312ba013d83"
+    },
+    {
+      "path": "reports/plan-0.5.0/phase2-synthetic/report.json",
+      "auditId": "444b54ae13ba96720255586b4dce3c0096328cdff14e88d20bbcff3a6c43ced5",
+      "actual": "444b54ae13ba96720255586b4dce3c0096328cdff14e88d20bbcff3a6c43ced5"
+    },
+    {
+      "path": "release/visionleak-0.1.0.zip:visionleak/reports/demo/report.json",
+      "auditId": "dc9fb9efb9db57e2a9e7381181c83d89118cab0b84029a14770177d08c55f2c2",
+      "actual": "dc9fb9efb9db57e2a9e7381181c83d89118cab0b84029a14770177d08c55f2c2"
+    },
+    {
+      "path": "release/visionleak-0.1.0.zip:visionleak/reports/evaluation-audit.json",
+      "auditId": "dc9fb9efb9db57e2a9e7381181c83d89118cab0b84029a14770177d08c55f2c2",
+      "actual": "dc9fb9efb9db57e2a9e7381181c83d89118cab0b84029a14770177d08c55f2c2"
+    },
+    {
+      "path": "release/visionleak-0.2.0.zip:visionleak/reports/demo/report.json",
+      "auditId": "e42687baf8bbb30662aedd69e1b909bbdbf6b5aeef85ea7a6d64d90a55a41f10",
+      "actual": "e42687baf8bbb30662aedd69e1b909bbdbf6b5aeef85ea7a6d64d90a55a41f10"
+    },
+    {
+      "path": "release/visionleak-0.2.0.zip:visionleak/reports/evaluation-audit.json",
+      "auditId": "e42687baf8bbb30662aedd69e1b909bbdbf6b5aeef85ea7a6d64d90a55a41f10",
+      "actual": "e42687baf8bbb30662aedd69e1b909bbdbf6b5aeef85ea7a6d64d90a55a41f10"
+    },
+    {
+      "path": "release/visionleak-0.3.0.zip:visionleak/reports/demo/report.json",
+      "auditId": "92ab9ca54a6b6932d76fc8f1080796cbe5c8486f96109b7007323bb44d01893a",
+      "actual": "92ab9ca54a6b6932d76fc8f1080796cbe5c8486f96109b7007323bb44d01893a"
+    },
+    {
+      "path": "release/visionleak-0.3.0.zip:visionleak/reports/evaluation-audit.json",
+      "auditId": "92ab9ca54a6b6932d76fc8f1080796cbe5c8486f96109b7007323bb44d01893a",
+      "actual": "92ab9ca54a6b6932d76fc8f1080796cbe5c8486f96109b7007323bb44d01893a"
+    },
+    {
+      "path": "release/visionleak-0.3.0.zip:visionleak/reports/mirror-demo/report.json",
+      "auditId": "3afc97dd6d0d8fe66667862548cfa280f27441127703493a3e2f9b625ebfc7b3",
+      "actual": "3afc97dd6d0d8fe66667862548cfa280f27441127703493a3e2f9b625ebfc7b3"
+    },
+    {
+      "path": "release/visionleak-0.3.0.zip:visionleak/reports/mirror-evaluation-audit.json",
+      "auditId": "3afc97dd6d0d8fe66667862548cfa280f27441127703493a3e2f9b625ebfc7b3",
+      "actual": "3afc97dd6d0d8fe66667862548cfa280f27441127703493a3e2f9b625ebfc7b3"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/demo/report.json",
+      "auditId": "10f740be2630e3ea2941339b4360900eec93cf5751b038ddd585d310d2ed1b43",
+      "actual": "10f740be2630e3ea2941339b4360900eec93cf5751b038ddd585d310d2ed1b43"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/evaluation-audit.json",
+      "auditId": "10f740be2630e3ea2941339b4360900eec93cf5751b038ddd585d310d2ed1b43",
+      "actual": "10f740be2630e3ea2941339b4360900eec93cf5751b038ddd585d310d2ed1b43"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/mirror-demo/report.json",
+      "auditId": "e9dfa748b17b41f8f08cd430af8d219a5de5a3179a3fc1e3bdb7689a79ca67bb",
+      "actual": "e9dfa748b17b41f8f08cd430af8d219a5de5a3179a3fc1e3bdb7689a79ca67bb"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/mirror-evaluation-audit.json",
+      "auditId": "e9dfa748b17b41f8f08cd430af8d219a5de5a3179a3fc1e3bdb7689a79ca67bb",
+      "actual": "e9dfa748b17b41f8f08cd430af8d219a5de5a3179a3fc1e3bdb7689a79ca67bb"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-demo/report.json",
+      "auditId": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078",
+      "actual": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/baseline-development/default-audit.json",
+      "auditId": "294c3231225da1645db5cc09456f2dfb5d8a8d5b40120eec8d40ac1460b2f849",
+      "actual": "294c3231225da1645db5cc09456f2dfb5d8a8d5b40120eec8d40ac1460b2f849"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/baseline-development/mirrors-audit.json",
+      "auditId": "fca2db62f56f26474ae9f1fad0e0d548e9affa625897f03935a55e2043ca46f1",
+      "actual": "fca2db62f56f26474ae9f1fad0e0d548e9affa625897f03935a55e2043ca46f1"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/baseline-holdout/default-audit.json",
+      "auditId": "e1fd16f25d65faee82a5257ea962cf58668adcecf2f75702e518908f27d8f1e2",
+      "actual": "e1fd16f25d65faee82a5257ea962cf58668adcecf2f75702e518908f27d8f1e2"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/baseline-holdout/mirrors-audit.json",
+      "auditId": "9a3f2fef2ef3eaf4336af2b5c199a677bb6068e54ce20283a1679484de66b8d1",
+      "actual": "9a3f2fef2ef3eaf4336af2b5c199a677bb6068e54ce20283a1679484de66b8d1"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/current-development/default-audit.json",
+      "auditId": "ee53feb13ac994bd153f2a391092aa7485fd1a734f66e97f4741dbced536fdb1",
+      "actual": "ee53feb13ac994bd153f2a391092aa7485fd1a734f66e97f4741dbced536fdb1"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/current-development/mirrors-audit.json",
+      "auditId": "39313f285d8ccf3c2762118129f80655c81bdbdbc3f58c865050f979469e938d",
+      "actual": "39313f285d8ccf3c2762118129f80655c81bdbdbc3f58c865050f979469e938d"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/current-development/orientations-audit.json",
+      "auditId": "6b40c9010d6e1564c1b43b99056cb0a50e2f007987806da45a03eb3547f2f4d0",
+      "actual": "6b40c9010d6e1564c1b43b99056cb0a50e2f007987806da45a03eb3547f2f4d0"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/current-holdout/default-audit.json",
+      "auditId": "15b8158fdfeb0e7c951ceee33eb923a559d0507681b641f964eb96737cb90449",
+      "actual": "15b8158fdfeb0e7c951ceee33eb923a559d0507681b641f964eb96737cb90449"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/current-holdout/mirrors-audit.json",
+      "auditId": "fb4dfbedca92aaae2c7948b8fa1668b8913b0823519b63abc9a439ecbf51f6db",
+      "actual": "fb4dfbedca92aaae2c7948b8fa1668b8913b0823519b63abc9a439ecbf51f6db"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/current-holdout/orientations-audit.json",
+      "auditId": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078",
+      "actual": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078"
+    }
+  ]
+}
+........
+----------------------------------------------------------------------
+Ran 8 tests in 0.952s
+
+OK
+{
+  "images": 59,
+  "complete": true,
+  "exact": {
+    "tp": 27,
+    "fp": 0,
+    "fn": 0,
+    "tn": 1059,
+    "precision": 1,
+    "recall": 1,
+    "falsePositiveRate": 0,
+    "falsePositives": [],
+    "falseNegatives": []
+  },
+  "nearOnly": {
+    "tp": 67,
+    "fp": 2,
+    "fn": 18,
+    "tn": 972,
+    "precision": 0.9710144927536232,
+    "recall": 0.788235294117647,
+    "falsePositiveRate": 0.002053388090349076,
+    "falsePositives": [
+      [
+        "test/flat-blue.png",
+        "train/flat-red.png"
+      ],
+      [
+        "test/lookalike-ramp-1.png",
+        "train/lookalike-ramp-0.png"
+      ]
+    ],
+    "falseNegatives": [
+      [
+        "test/brighter-00.png",
+        "validation/mirrored-00.png"
+      ],
+      [
+        "test/brighter-01.png",
+        "validation/mirrored-01.png"
+      ],
+      [
+        "test/cropped-00.png",
+        "train/local-copy.png"
+      ],
+      [
+        "test/cropped-00.png",
+        "train/scene-00.png"
+      ],
+      [
+        "test/cropped-00.png",
+        "validation/mirrored-00.png"
+      ],
+      [
+        "test/cropped-00.png",
+        "validation/repacked-00.png"
+      ],
+      [
+        "test/cropped-00.png",
+        "validation/resized-00.png"
+      ],
+      [
+        "test/cropped-01.png",
+        "train/scene-01.png"
+      ],
+      [
+        "test/cropped-01.png",
+        "validation/mirrored-01.png"
+      ],
+      [
+        "test/cropped-01.png",
+        "validation/repacked-01.png"
+      ],
+      [
+        "test/cropped-01.png",
+        "validation/resized-01.png"
+      ],
+      [
+        "test/quality72-00.jpg",
+        "validation/mirrored-00.png"
+      ],
+      [
+        "test/quality72-01.jpg",
+        "validation/mirrored-01.png"
+      ],
+      [
+        "test/renamed-00.png",
+        "validation/mirrored-00.png"
+      ],
+      [
+        "test/renamed-01.png",
+        "validation/mirrored-01.png"
+      ],
+      [
+        "train/local-copy.png",
+        "validation/mirrored-00.png"
+      ],
+      [
+        "train/scene-00.png",
+        "validation/mirrored-00.png"
+      ],
+      [
+        "train/scene-01.png",
+        "validation/mirrored-01.png"
+      ]
+    ]
+  },
+  "oracleVectors": [
+    11,
+    11
+  ],
+  "oracleImages": [
+    59,
+    59
+  ]
+}
+{
+  "default": {
+    "tp": 67,
+    "fp": 2,
+    "fn": 18,
+    "tn": 972,
+    "precision": 0.9710144927536232,
+    "recall": 0.788235294117647,
+    "falsePositiveRate": 0.002053388090349076,
+    "falsePositives": [
+      [
+        "test/flat-blue.png",
+        "train/flat-red.png"
+      ],
+      [
+        "test/lookalike-ramp-1.png",
+        "train/lookalike-ramp-0.png"
+      ]
+    ],
+    "falseNegatives": [
+      [
+        "test/brighter-00.png",
+        "validation/mirrored-00.png"
+      ],
+      [
+        "test/brighter-01.png",
+        "validation/mirrored-01.png"
+      ],
+      [
+        "test/cropped-00.png",
+        "train/local-copy.png"
+      ],
+      [
+        "test/cropped-00.png",
+        "train/scene-00.png"
+      ],
+      [
+        "test/cropped-00.png",
+        "validation/mirrored-00.png"
+      ],
+      [
+        "test/cropped-00.png",
+        "validation/repacked-00.png"
+      ],
+      [
+        "test/cropped-00.png",
+        "validation/resized-00.png"
+      ],
+      [
+        "test/cropped-01.png",
+        "train/scene-01.png"
+      ],
+      [
+        "test/cropped-01.png",
+        "validation/mirrored-01.png"
+      ],
+      [
+        "test/cropped-01.png",
+        "validation/repacked-01.png"
+      ],
+      [
+        "test/cropped-01.png",
+        "validation/resized-01.png"
+      ],
+      [
+        "test/quality72-00.jpg",
+        "validation/mirrored-00.png"
+      ],
+      [
+        "test/quality72-01.jpg",
+        "validation/mirrored-01.png"
+      ],
+      [
+        "test/renamed-00.png",
+        "validation/mirrored-00.png"
+      ],
+      [
+        "test/renamed-01.png",
+        "validation/mirrored-01.png"
+      ],
+      [
+        "train/local-copy.png",
+        "validation/mirrored-00.png"
+      ],
+      [
+        "train/scene-00.png",
+        "validation/mirrored-00.png"
+      ],
+      [
+        "train/scene-01.png",
+        "validation/mirrored-01.png"
+      ]
+    ]
+  },
+  "mirrors": {
+    "tp": 76,
+    "fp": 4,
+    "fn": 9,
+    "tn": 970,
+    "precision": 0.95,
+    "recall": 0.8941176470588236,
+    "falsePositiveRate": 0.004106776180698152,
+    "falsePositives": [
+      [
+        "test/flat-blue.png",
+        "train/flat-red.png"
+      ],
+      [
+        "test/flat-blue.png",
+        "train/lookalike-ramp-0.png"
+      ],
+      [
+        "test/lookalike-ramp-1.png",
+        "train/flat-red.png"
+      ],
+      [
+        "test/lookalike-ramp-1.png",
+        "train/lookalike-ramp-0.png"
+      ]
+    ],
+    "falseNegatives": [
+      [
+        "test/cropped-00.png",
+        "train/local-copy.png"
+      ],
+      [
+        "test/cropped-00.png",
+        "train/scene-00.png"
+      ],
+      [
+        "test/cropped-00.png",
+        "validation/mirrored-00.png"
+      ],
+      [
+        "test/cropped-00.png",
+        "validation/repacked-00.png"
+      ],
+      [
+        "test/cropped-00.png",
+        "validation/resized-00.png"
+      ],
+      [
+        "test/cropped-01.png",
+        "train/scene-01.png"
+      ],
+      [
+        "test/cropped-01.png",
+        "validation/mirrored-01.png"
+      ],
+      [
+        "test/cropped-01.png",
+        "validation/repacked-01.png"
+      ],
+      [
+        "test/cropped-01.png",
+        "validation/resized-01.png"
+      ]
+    ]
+  }
+}
+{
+  "default": {
+    "near": {
+      "tp": 42,
+      "fp": 0,
+      "fn": 88,
+      "precision": 1,
+      "recall": 0.3230769230769231
+    },
+    "anchors": {
+      "brightness-1.15": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "byte-copy": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "center-crop-90percent": {
+        "detected": 1,
+        "total": 5,
+        "missedSources": [
+          "astronaut",
+          "brick",
+          "chelsea",
+          "grass"
+        ]
+      },
+      "jpeg-quality70": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "rotate90": {
+        "detected": 0,
+        "total": 5,
+        "missedSources": [
+          "astronaut",
+          "brick",
+          "chelsea",
+          "coffee",
+          "grass"
+        ]
+      },
+      "horizontal-mirror": {
+        "detected": 0,
+        "total": 5,
+        "missedSources": [
+          "astronaut",
+          "brick",
+          "chelsea",
+          "coffee",
+          "grass"
+        ]
+      },
+      "mirror-jpeg-quality70": {
+        "detected": 0,
+        "total": 5,
+        "missedSources": [
+          "astronaut",
+          "brick",
+          "chelsea",
+          "coffee",
+          "grass"
+        ]
+      },
+      "png-repack": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "resize-73percent": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      }
+    },
+    "work": 569
+  },
+  "mirrors": {
+    "near": {
+      "tp": 84,
+      "fp": 0,
+      "fn": 46,
+      "precision": 1,
+      "recall": 0.6461538461538462
+    },
+    "anchors": {
+      "brightness-1.15": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "byte-copy": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "center-crop-90percent": {
+        "detected": 1,
+        "total": 5,
+        "missedSources": [
+          "astronaut",
+          "brick",
+          "chelsea",
+          "grass"
+        ]
+      },
+      "jpeg-quality70": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "rotate90": {
+        "detected": 0,
+        "total": 5,
+        "missedSources": [
+          "astronaut",
+          "brick",
+          "chelsea",
+          "coffee",
+          "grass"
+        ]
+      },
+      "horizontal-mirror": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "mirror-jpeg-quality70": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "png-repack": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "resize-73percent": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      }
+    },
+    "work": 2250
+  },
+  "orientations": {
+    "near": {
+      "tp": 109,
+      "fp": 0,
+      "fn": 21,
+      "precision": 1,
+      "recall": 0.8384615384615385
+    },
+    "anchors": {
+      "brightness-1.15": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "byte-copy": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "center-crop-90percent": {
+        "detected": 1,
+        "total": 5,
+        "missedSources": [
+          "astronaut",
+          "brick",
+          "chelsea",
+          "grass"
+        ]
+      },
+      "jpeg-quality70": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "rotate90": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "horizontal-mirror": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "mirror-jpeg-quality70": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "png-repack": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "resize-73percent": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      }
+    },
+    "work": 21539
+  }
+}
+{
+  "default": {
+    "near": {
+      "tp": 47,
+      "fp": 0,
+      "fn": 83,
+      "precision": 1,
+      "recall": 0.36153846153846153
+    },
+    "anchors": {
+      "brightness-1.15": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "byte-copy": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "center-crop-90percent": {
+        "detected": 2,
+        "total": 5,
+        "missedSources": [
+          "camera",
+          "eagle",
+          "gravel"
+        ]
+      },
+      "jpeg-quality70": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "rotate90": {
+        "detected": 0,
+        "total": 5,
+        "missedSources": [
+          "camera",
+          "clock",
+          "eagle",
+          "gravel",
+          "rocket"
+        ]
+      },
+      "horizontal-mirror": {
+        "detected": 0,
+        "total": 5,
+        "missedSources": [
+          "camera",
+          "clock",
+          "eagle",
+          "gravel",
+          "rocket"
+        ]
+      },
+      "mirror-jpeg-quality70": {
+        "detected": 0,
+        "total": 5,
+        "missedSources": [
+          "camera",
+          "clock",
+          "eagle",
+          "gravel",
+          "rocket"
+        ]
+      },
+      "png-repack": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "resize-73percent": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      }
+    },
+    "work": 584
+  },
+  "mirrors": {
+    "near": {
+      "tp": 91,
+      "fp": 0,
+      "fn": 39,
+      "precision": 1,
+      "recall": 0.7
+    },
+    "anchors": {
+      "brightness-1.15": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "byte-copy": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "center-crop-90percent": {
+        "detected": 2,
+        "total": 5,
+        "missedSources": [
+          "camera",
+          "eagle",
+          "gravel"
+        ]
+      },
+      "jpeg-quality70": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "rotate90": {
+        "detected": 0,
+        "total": 5,
+        "missedSources": [
+          "camera",
+          "clock",
+          "eagle",
+          "gravel",
+          "rocket"
+        ]
+      },
+      "horizontal-mirror": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "mirror-jpeg-quality70": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "png-repack": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "resize-73percent": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      }
+    },
+    "work": 2382
+  },
+  "orientations": {
+    "near": {
+      "tp": 116,
+      "fp": 0,
+      "fn": 14,
+      "precision": 1,
+      "recall": 0.8923076923076924
+    },
+    "anchors": {
+      "brightness-1.15": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "byte-copy": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "center-crop-90percent": {
+        "detected": 2,
+        "total": 5,
+        "missedSources": [
+          "camera",
+          "eagle",
+          "gravel"
+        ]
+      },
+      "jpeg-quality70": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "rotate90": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "horizontal-mirror": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "mirror-jpeg-quality70": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "png-repack": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "resize-73percent": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      }
+    },
+    "work": 19396
+  }
+}
+CI acceptance: passed; .ci-artifacts/verification.json

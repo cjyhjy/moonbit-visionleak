@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "visionleak-local-freeze-v1",
+  "frozenAt": "2026-10-25T16:35:37.322725+00:00",
+  "cropImplementationSha256": "14159b9169eeb5f6ee21b4c71bdd43484065dee51218f98cc24eeb7e5edc9515",
+  "implementationFiles": {
+    "core/crops.mbt": "14159b9169eeb5f6ee21b4c71bdd43484065dee51218f98cc24eeb7e5edc9515",
+    "core/audit.mbt": "5af5ec5917efdfc90910e1cf3edc9abf29ea7a6e88a1e7178dd17293ee486d55",
+    "core/fingerprint.mbt": "b5bb1100ae186d6025968ead981d29d8da16bfc09118536711f1ef7316fc6bc8",
+    "core/cli_options.mbt": "daf49c1ce47f2c137546fde6811f4a2a70f92baddca7441f99aa11f5937e9781",
+    "core/review_validation.mbt": "a5ca872862c492472cd8a6c4f754dd391a58e55f9e0a5ac96f05879629de053f",
+    "core/workflow.mbt": "e0114a54d0bd2a1681191fbe059a136e88b79abc7c8aad5f125f3603be8973c6",
+    "tools/runtime.mjs": "bca33cf5c785310b26a96584a751407f814de34c525ebd3fa736a2e999cbc12c",
+    "tools/cli.mjs": "b42b080fe1738107da68b201c519832918bcabe237f706a65c134c1eca40edaf",
+    "tools/decode.mjs": "ad6fad8a5b5019a5e8fb4767f40b82f1e86faad9e93192f275c3179cb1bfc10d",
+    "tools/evaluate-crops.py": "725940dce4e5e92ad5a192245ad8e94faf3221c7cab8bce78f171c00abb92c8f",
+    "tools/prepare-photos-v2.py": "075c620959527fa1d1bb90e00021e68171e76fbbad4d3e91cab765fdfc37c9dd",
+    "tests/crops.test.mjs": "1d166e54e147f4801e47b2c3a3f253868389ab2bdb9f7fce78dc715f57bc6598",
+    "tests/metric_reference.py": "8bc1101019ca9f79a261f6037fb583f10bf73ed033106e803a5fa1db2d327fc2",
+    "dist/visionleak.js": "505893ee6fc69a95446826cefc4c7941ab44098a982d33a979cf245b7b135e73"
+  },
+  "threshold": 6,
+  "localProfile": "vl-local-dhash-v1",
+  "minimumGridContrast": 16,
+  "imageHashBaseline": {
+    "function": "crop_resistant_hash",
+    "segmentation_image_size": 300,
+    "min_segment_size": 500,
+    "matches_region_cutoff": 1,
+    "hamming_cutoff": 6
+  },
+  "holdoutDownloadedOrViewed": false,
+  "policy": "No tuning after freeze; holdout original images have not been downloaded or viewed. Metadata and source/scene partition assigned before development image metrics."
+}

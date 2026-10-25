@@ -1,0 +1,1 @@
+CC0 controlled fixture from Commons file 145082531. Source and license: ../../research/photos-v2/ATTRIBUTION.md. Includes a byte copy and an aspect-ratio crop; generated for demonstration, not naturally occurring contamination.

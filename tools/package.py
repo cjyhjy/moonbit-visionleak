@@ -14,7 +14,7 @@ import os
 from release_metadata import release_version, read_checksums
 
 ROOT=Path(__file__).resolve().parents[1]
-ROOT_FILES=['README.md','DELIVERY.md','LICENSE','THIRD_PARTY.md','moon.mod','package.json','package-lock.json','requirements-oracle.txt','toolchain.lock.json','.gitignore','.gitattributes','.moonignore','.node-version','.python-version']
+ROOT_FILES=['README.md','CHANGELOG.md','DELIVERY.md','LICENSE','THIRD_PARTY.md','moon.mod','package.json','package-lock.json','requirements-oracle.txt','toolchain.lock.json','.gitignore','.gitattributes','.moonignore','.node-version','.python-version']
 TREES=['.github','core','tools','tests','demo','examples','docs','fixtures','LICENSES','dist','research']
 REPORTS=['mirror-evaluation.json','mirror-evaluation-audit.json','README.md','core-optimization.json','verification.json','performance.json','evaluation.json','evaluation.md','evaluation-audit.json','evaluation-oracle.json','npm-dependencies.json']
 
@@ -46,6 +46,7 @@ def main():
     candidates.extend(p for p in (ROOT/'reports/mirror-demo').rglob('*') if p.is_file() and not p.name.startswith('.'))
     for folder in ['reports/photos-v1','reports/photos-demo']:
         candidates.extend(p for p in (ROOT/folder).rglob('*') if p.is_file() and not p.name.startswith('.'))
+    candidates.extend(p for p in (ROOT/'reports/plan-0.5.0').rglob('*') if p.is_file() and not p.name.startswith('.'))
     payload={}
     for path in sorted(set(candidates)):
         if path.is_symlink(): raise SystemExit(f'Symlink not allowed: {path}')

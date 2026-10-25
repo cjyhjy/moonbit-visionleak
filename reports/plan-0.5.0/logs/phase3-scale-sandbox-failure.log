@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak/tools/scale-benchmark.py", line 32, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak/tools/scale-benchmark.py", line 27, in main
+    log=args.out/f'{count}-{mode}-time.log';row=run_case(data,temp/f'out-{count}-{mode}',extra,count,log);row.update({'count':count,'mode':mode});result['runs'].append(row)
+                                                ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak/tools/scale-benchmark.py", line 10, in run_case
+    assert run.returncode in (0,2),(run.returncode,run.stderr)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: (1, 'time: sysctl kern.clockrate: Operation not permitted\n')

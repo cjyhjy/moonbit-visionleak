@@ -65,6 +65,7 @@ try {
   run('evaluation-compatibility', python, ['tests/evaluation-compatibility.py']);
   run('report-history', python, ['tests/report-history.py']);
   run('metric-regression', python, ['tests/oracle-metrics.py']);
+  run('crop-reference', python, ['tests/crop-reference.py']);
   run('imagehash-oracle', python, ['tools/evaluate.py', '--out', '.ci-artifacts/evaluation.json']);
   run('mirror-oracle', python, ['tools/evaluate-mirrors.py','--out','.ci-artifacts/mirror-evaluation.json']);
   for (const partition of ['development','holdout']) run(`photo-${partition}`,python,['tools/evaluate-photos.py','--partition',partition,'--out',`.ci-artifacts/photos-${partition}`,'--include-orientations','--replace']);

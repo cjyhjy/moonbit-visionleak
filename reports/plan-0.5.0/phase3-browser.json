@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "visionleak-browser-phase3-v1",
+  "status": "passed",
+  "checkedAt": "2026-10-25T16:56:24.543991+00:00",
+  "browser": "Tabbit 154.0.8037.58",
+  "auditId": "67c5328dbddd2e329ead596ba55270afcd57f39ca4a566669b2e768125ff254f",
+  "coreArtifactSha256": "505893ee6fc69a95446826cefc4c7941ab44098a982d33a979cf245b7b135e73",
+  "sourceHashes": {
+    "demo/index.html": "c0d0aae4eeb42265eb0b1e70e54a1b90c5f53e4062ec49a36ad2462fadd9dcf5",
+    "demo/styles.css": "3a77e33a296edce40eb4d16c512adcbbc70c56203b2044b333a8afae9bc23791",
+    "demo/app.mjs": "1840d32ed1108008ea6933e65fccacc1c6dbbdbcfebcd0360f75ace40f4a1761",
+    "demo/review-validation.mjs": "b69b57c9af39a640a573b5c65c84bef5841ecb27c3ec696e6f27a25df8692034",
+    "demo/report-identity.mjs": "559039cb991ad6f22e508fd230871721774f19398c6b86b2005e2fd34e7d3cdc",
+    "demo/review-workflow.mjs": "53a0ce4173b681d55fd247b536ce3ae13d974b08938cd9c811b2ceb428475628"
+  },
+  "checks": [
+    "local count=2; separate filter and witness explanation",
+    "undo, confirm, edit QA note, reload and restore",
+    "desktop 1440x1000, mobile 390x844: no horizontal overflow",
+    "offline original HTML bytes 350710; navigator.onLine=false; 3 pairs including 2 local; 6 data images; persisted QA review; zero external scripts"
+  ],
+  "screenshots": [
+    "demo/qa/workbench-v050.png",
+    "demo/qa/workbench-mobile-v050.png",
+    "demo/qa/offline-v050.png"
+  ],
+  "notes": "QA record on a controlled fixture, not independent user adoption. Network restored and CDP detached after offline render."
+}

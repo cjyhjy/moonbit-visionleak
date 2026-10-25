@@ -1,0 +1,15 @@
+{
+  "mobile": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "overflow": false
+  },
+  "persistedNote": "QA only: controlled 75% aspect crop",
+  "auditId": "67c5328dbddd2e329ead596ba55270afcd57f39ca4a566669b2e768125ff254f",
+  "desktopOverflow": false,
+  "localCount": "2",
+  "evidence": "固定多尺度窗口的局部 dHash 匹配，仅是裁切线索，需要人工核对。 相似度不是泄漏概率；缩放、低对比度或重复纹理都可能造成误报。 局部窗口 A=18 / B=6；这是首个满足阈值的窗口证据，距离不是全部窗口的最小值。",
+  "browserVersion": "154.0.8037.58"
+}

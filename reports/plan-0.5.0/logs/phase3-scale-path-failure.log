@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak/tools/scale-benchmark.py", line 32, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak/tools/scale-benchmark.py", line 27, in main
+    log=args.out/f'{count}-{mode}-time.log';row=run_case(data,temp/f'out-{count}-{mode}',extra,count,log);row.update({'count':count,'mode':mode});result['runs'].append(row)
+                                                ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak/tools/scale-benchmark.py", line 14, in run_case
+    return {'command':command[0:4]+['<generated-dataset>','--out','<temporary-output>',*command[8:]],'exitCode':run.returncode,'wallSeconds':wall,'peakRssBytes':rss,'complete':report['complete'],'images':len(report['images']),'stats':report['stats'],'errors':report['errors'],'timeLog':str(log.relative_to(ROOT)),'options':report['options']}
+                                                                                                                                                                                                                                                                                                  ~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.15/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 385, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: 'reports/plan-0.5.0/scale-phase3-real/1000-default-time.log' is not in the subpath of '/Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak'

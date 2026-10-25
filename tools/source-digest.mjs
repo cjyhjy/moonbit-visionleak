@@ -1,7 +1,7 @@
 import {readdirSync,readFileSync,lstatSync} from 'node:fs';
 import {join} from 'node:path';
 import {createHash} from 'node:crypto';
-export const sourceRoots=['core','tools','tests','demo','examples','fixtures','research/photos-v1','moon.mod','package.json','package-lock.json','requirements-oracle.txt','toolchain.lock.json','.node-version','.python-version','.gitattributes','.moonignore','.github'];
+export const sourceRoots=['core','tools','tests','demo','examples','fixtures','research/photos-v1','research/photos-v2','moon.mod','package.json','package-lock.json','requirements-oracle.txt','toolchain.lock.json','.node-version','.python-version','.gitattributes','.moonignore','.github'];
 export function sourceFiles(root){
   const files=[];
   function visit(relative){

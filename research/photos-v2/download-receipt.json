@@ -1,0 +1,8 @@
+{
+  "completedAt": "2026-10-25T16:42:13.120399+00:00",
+  "freezeSha256": "0705b658d7df908f18c32cd1e6250e547ad88b1ad80a7aa3dbac822c79c2bd04",
+  "sources": 32,
+  "storedBytes": 1432507,
+  "allStoredHashesVerified": true,
+  "holdoutDownloadedAfterFreeze": true
+}
