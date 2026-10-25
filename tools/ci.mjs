@@ -60,6 +60,7 @@ try {
   if (!report.compiledArtifact.matchesCommitted) throw new Error('Committed dist/visionleak.js differs from the fresh pinned build');
   run('node-integration', 'npm', ['test']);
   run('mooncakes-compatibility', python, ['tests/mooncakes-dry-run.py']);
+  run('mooncakes-package', python, ['tests/mooncakes-package.py']);
   run('release-contract', python, ['tests/release-contract.py']);
   run('evaluation-compatibility', python, ['tests/evaluation-compatibility.py']);
   run('report-history', python, ['tests/report-history.py']);

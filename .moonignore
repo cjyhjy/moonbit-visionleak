@@ -1,0 +1,12 @@
+# Publish the reusable library, with a deny-by-default file list.
+/*
+!/moon.mod
+!/README.md
+!/LICENSE
+!/core/
+/core/*
+!/core/moon.pkg
+!/core/*.mbt
+!/core/*.mbti
+/core/*_wbtest.mbt
+/core/*_test.mbt
