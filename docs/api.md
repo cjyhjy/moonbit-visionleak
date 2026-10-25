@@ -71,3 +71,11 @@ CLI 增加 `--include-mirrors`；JS `fingerprint({width,height,rgba,includeMirro
 - `sampling_plan_json(width,height,maximum)`：感知取样尺寸规划，maximum 仍不超过 4,194,304，极窄长图也受总取样像素数约束。
 
 原 `fingerprint_rgba` 的 4,194,304 像素上限保留。CLI 允许大图在独立的解码预算内进入全分辨率摘要路径；送到 fingerprint 的只是有界采样图。每张报告图像新增 `pixelDigestBasis: "full"`、`dhashBasis: {width,height,downsampled}`；报告的 width/height 是完整规范化源图尺寸。精确分桶使用完整像素摘要，绝不使用降采样摘要替代。
+
+## 0.5.0 局部候选接口
+
+新增 `fingerprint_local_rgba(width, height, rgba) -> String`，输入与既有 RGBA ABI 相同，上限 4,194,304 像素；返回 JSON 中的 localHashes/localContrasts 各含 20 项，localHashVersion 为 vl-local-dhash-v1。完整公开签名见 core/pkg.generated.mbti。
+
+`audit_json` 的 options 可设 includeCrops=true；此时每个输入图像须有上述 20 个哈希和对比度，缺失或无效会拒绝。局部证据为 local-candidate，matchLocal 含 leftWindow/rightWindow/profile，localProfile 给出千分比矩形。所有新增检索和插入距离共用 maxComparisons，预算耗尽 complete=false。
+
+局部候选不进入确定性 groups。workflow_json 的 candidate 关卡覆盖局部候选，counts.localCandidate 单独计数；复核和导出同样保持候选身份。局部报告的结构校验要求 includeCrops=true 和有效窗口见证。

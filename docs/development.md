@@ -26,3 +26,11 @@
 Python 的 `canonical`、ImageHash、物理图像变换和穷举索引参考保持独立；它们不调用 MoonBit 的像素或距离实现。指标统计是产品核心的一部分，不能再把 MoonBit score 的包装测试称为独立算法 oracle。迁移后的算法与信任边界测试在三个 MoonBit 后端执行，Node 保留 ABI、文件系统、解码、HTTP 和 UI 工作流集成测试。
 
 语言统计采用公开方法的本地字节估计，完整列出测试字节数；仅 dist 和历史编译引擎基线标为 generated，没有隐藏手写源码、Python oracle 或测试。它不是远端 GitHub languages API 的替代证据。阶段执行、未测项与审批边界见 `reports/plan-0.5.0/phase-0.md` 和 `phase-1.md`，不据此声明 Claude 已验收、已经发布或已经提交参赛。
+
+## 0.5.0 评测与交接
+
+阶段复核由 Codex 接手，明确标记为原实现者自查；不把自动测试称为独立 Claude 评审。原评审和历史冻结记录保留。
+
+裁切实现冻结见 research/photos-v2/freeze-0.5.0.json；新保留组图片在冻结后首次下载。32 个 Commons 文件来源均有 CC0 许可页面、作者、下载和缩小后 SHA-256，按场景和来源分组。旧 photos-v1 的保留组对本版本只承担回归用途。
+
+独立性分为三层：tests/crops.test.mjs 逐像素直接求和核对积分图窗口；tools/evaluate-crops.py 对局部索引做穷举汉明核对，并运行外部 ImageHash crop_resistant_hash；tests/metric_reference.py 用 Python 集合独立核对产品指标。tests/crop-reference.py 重放当前编译核心，逐项核对原始配对、组、预算计数和局部见证。

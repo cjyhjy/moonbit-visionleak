@@ -139,3 +139,15 @@ CLI 增加 `--include-mirrors`；JS `fingerprint({width,height,rgba,includeMirro
 ## 0.5.0 阶段执行说明
 
 以上大图与别名更新为计划第 0、1 阶段的实现，待 Claude 阶段验收。12MP JPEG、复制件和无损 PNG 重编码的现场验证、峰值 RSS 及默认检测兼容结果见 `reports/plan-0.5.0/phase-1.md`。Node/sharp 仍会分配完整 RGBA 解码缓冲；增量 SHA-256 不等于整个解码流程零拷贝或固定 RSS。
+
+## 0.5.0：关卡、复核与局部候选
+
+`audit --fail-on exact|pixel|candidate` 按累积等级返回 3；致命错误为 1，未命中但不完整为 2，完整未命中为 0。candidate 包含全图和实验性局部候选。不指定该参数保留旧退出规则。
+
+`verify --report REPORT --root DATASET` 重新计算确定性证据，逐对输出 valid/invalid/missing；失效或缺失退出 4。候选只会跳过，不升级证据。
+
+`export-html --report REPORT --out FILE [--review REVIEW] [--max-bytes N]` 生成只读离线文件，默认 20 MiB、最小 4096 B、最大 64 MiB；省略项及报告裁剪会明确标注。
+
+`export-fixes --report REPORT --out FILE [--review REVIEW]` 输出 group_id,evidence_level,split,path,review_status,suggestion。确定性组按 train、validation、test 顺序保留一份；候选必须 confirmed 后才给建议，工具不执行删除。
+
+`--include-crops` 默认关闭：20 个固定窗口、网格对比度至少 16、共享比较预算，新增 local-candidate。报告 localProfile 解释窗口，matchLocal 记录首个匹配窗口见证；其距离不是全部窗口最小值。窗口基于 dHash 取样图，完整像素摘要不变。详情和不兼容预算迁移见 [0.5.0 变更](changes-0.5.0.md)。

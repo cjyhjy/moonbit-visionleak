@@ -244,3 +244,9 @@ Claude 同时负责修订本计划书与面向用户的文档（README、`docs/`
 |---|---|---|
 | 2026-10-25 | 初版 | 合并两轮评审意见 |
 | 2026-10-25 | 第 0 阶段验收后修订：指标须保留独立 Python 核对；Mooncakes 包限定核心内容；提交只暂存本项目路径且按阶段提交；第 2 阶段增加进入条件与"判定逻辑在 MoonBit"约束；第 4 阶段 changes 须列出 `--max-pixels` 语义变化 | 见 `reports/plan-0.5.0/review-0.md`、`review-1.md` |
+
+## 2026-10-25 执行交接追加
+
+负责人已说明 Claude 账号无法继续使用，并要求 Codex 继续按本计划推进。后续方向落实、文档和阶段复核由 Codex 接手，记录实际复核者及证据，不冒充 Claude 或独立评审。原评审记录保留。
+
+D4 已决定：移除 release ZIP 的 Git 跟踪，保留本地文件和已有历史，正式发布后使用 GitHub Releases。当前 `git ls-files release` 没有跟踪的 ZIP，已有 release 忽略规则；无需删除历史或执行 git rm。

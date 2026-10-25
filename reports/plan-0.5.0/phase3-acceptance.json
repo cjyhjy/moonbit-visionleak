@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "visionleak-phase3-v1",
+  "status": "local-complete-self-reviewed",
+  "reviewer": "Codex self-review, not independent Claude review",
+  "sourceFiles": 32,
+  "evaluationImagesPerPartition": 112,
+  "hardNegativePairsPerPartition": 672,
+  "freezeSha256": "0705b658d7df908f18c32cd1e6250e547ad88b1ad80a7aa3dbac822c79c2bd04",
+  "evaluations": {
+    "development": {
+      "localCandidate": {
+        "tp": 113,
+        "fp": 1,
+        "fn": 63,
+        "precision": 0.9912280701754386,
+        "recall": 0.6420454545454546
+      },
+      "combinedCandidates": {
+        "tp": 145,
+        "fp": 1,
+        "fn": 31,
+        "precision": 0.9931506849315068,
+        "recall": 0.8238636363636364
+      },
+      "imageHashCropBaseline": {
+        "tp": 118,
+        "fp": 16,
+        "fn": 58,
+        "precision": 0.8805970149253731,
+        "recall": 0.6704545454545454
+      }
+    },
+    "holdout": {
+      "localCandidate": {
+        "tp": 117,
+        "fp": 44,
+        "fn": 59,
+        "precision": 0.7267080745341615,
+        "recall": 0.6647727272727273
+      },
+      "combinedCandidates": {
+        "tp": 149,
+        "fp": 54,
+        "fn": 27,
+        "precision": 0.7339901477832512,
+        "recall": 0.8465909090909091
+      },
+      "imageHashCropBaseline": {
+        "tp": 101,
+        "fp": 35,
+        "fn": 75,
+        "precision": 0.7426470588235294,
+        "recall": 0.5738636363636364
+      }
+    }
+  },
+  "scale": "scale-phase3-final/results.json",
+  "browser": "phase3-browser.json",
+  "languageStatistics": "languages-phase3-final.json",
+  "releaseZipTracking": "No tracked release ZIPs; originals remain locally, history retained.",
+  "publication": "Not performed in this phase.",
+  "ci": {
+    "status": "passed",
+    "checks": 25,
+    "sourceDigest": "f9c50a6f00a898ff84e249e87f06dbd5959a1c79a0ae428a0d105d8ad68d10bf",
+    "compiledArtifact": {
+      "sha256": "505893ee6fc69a95446826cefc4c7941ab44098a982d33a979cf245b7b135e73",
+      "matchesCommitted": true
+    }
+  },
+  "moonbitTestsPerBackend": 80,
+  "nodeTests": 46,
+  "mooncakesPackageBytes": 32775,
+  "commits": [
+    {
+      "hash": "c3dee59e90247d97f026fe1b6dfcdc8cde6cc47d",
+      "title": "feat(visionleak): add bounded local crop candidates in MoonBit"
+    },
+    {
+      "hash": "7dc1da1e6ed5f32c7f750f23990ffe7943fda10d",
+      "title": "test(visionleak): freeze licensed crop evaluation and resource evidence"
+    }
+  ]
+}
