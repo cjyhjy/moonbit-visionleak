@@ -1,0 +1,1765 @@
+{
+  "schemaVersion": "visionleak-report-v1",
+  "identityVersion": "vl-report-sha256-v2",
+  "normalization": "vl-rgb-v1",
+  "decoder": {
+    "name": "sharp",
+    "version": "0.35.5",
+    "libvips": "8.18.7"
+  },
+  "engine": {
+    "name": "visionleak-moonbit",
+    "artifactDigest": "86a74558178474cc22591e1e4da38cc8a0b547c7c39ec3b9d9282d9736093bcb"
+  },
+  "ok": true,
+  "complete": true,
+  "status": "complete",
+  "pairs": [
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "train/camera-original.png",
+      "evidence": "byte-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "train/camera-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "train/camera-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "train/clock-original.png",
+      "evidence": "byte-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "train/clock-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 5,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "train/clock-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "train/clock-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "train/eagle-original.png",
+      "evidence": "byte-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "train/eagle-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "train/eagle-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "train/gravel-original.png",
+      "evidence": "byte-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "train/gravel-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "train/gravel-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "train/rocket-original.png",
+      "evidence": "byte-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "train/rocket-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "train/rocket-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "train/rocket-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 2,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-both"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "validation/camera-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "train/camera-original.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "train/camera-original.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "validation/camera-png-repack.png",
+      "evidence": "pixel-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "train/camera-original.png",
+      "right": "validation/camera-png-repack.png",
+      "evidence": "pixel-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "validation/camera-png-repack.png",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "validation/camera-png-repack.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "validation/camera-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "validation/camera-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "validation/camera-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "train/camera-original.png",
+      "right": "validation/camera-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "train/clock-original.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "validation/clock-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 5,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "train/clock-original.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "validation/clock-png-repack.png",
+      "evidence": "pixel-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "train/clock-original.png",
+      "right": "validation/clock-png-repack.png",
+      "evidence": "pixel-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "validation/clock-png-repack.png",
+      "evidence": "perceptual-candidate",
+      "distance": 5,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "validation/clock-png-repack.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "validation/clock-png-repack.png",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "validation/clock-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 5,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "validation/clock-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "validation/clock-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "train/clock-original.png",
+      "right": "validation/clock-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "validation/clock-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "train/eagle-original.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "train/eagle-original.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "validation/eagle-png-repack.png",
+      "evidence": "pixel-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "train/eagle-original.png",
+      "right": "validation/eagle-png-repack.png",
+      "evidence": "pixel-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "validation/eagle-png-repack.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "validation/eagle-png-repack.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-both"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 3,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "validation/eagle-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 3,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "train/eagle-original.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 3,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "train/gravel-original.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "train/gravel-original.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "validation/gravel-png-repack.png",
+      "evidence": "pixel-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "train/gravel-original.png",
+      "right": "validation/gravel-png-repack.png",
+      "evidence": "pixel-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "validation/gravel-png-repack.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "validation/gravel-png-repack.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "validation/gravel-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "train/gravel-original.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 2,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "train/rocket-original.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 2,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "train/rocket-original.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "validation/rocket-png-repack.png",
+      "evidence": "pixel-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "train/rocket-original.png",
+      "right": "validation/rocket-png-repack.png",
+      "evidence": "pixel-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "validation/rocket-png-repack.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "validation/rocket-png-repack.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "validation/rocket-png-repack.png",
+      "evidence": "perceptual-candidate",
+      "distance": 2,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-both"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-both"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "validation/rocket-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "train/rocket-original.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-both"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 2,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-both"
+    }
+  ],
+  "groups": [
+    {
+      "members": [
+        "test/camera-byte-copy.png",
+        "train/camera-original.png",
+        "validation/camera-png-repack.png"
+      ],
+      "evidence": "exact-component"
+    },
+    {
+      "members": [
+        "test/clock-byte-copy.png",
+        "train/clock-original.png",
+        "validation/clock-png-repack.png"
+      ],
+      "evidence": "exact-component"
+    },
+    {
+      "members": [
+        "test/eagle-byte-copy.png",
+        "train/eagle-original.png",
+        "validation/eagle-png-repack.png"
+      ],
+      "evidence": "exact-component"
+    },
+    {
+      "members": [
+        "test/gravel-byte-copy.png",
+        "train/gravel-original.png",
+        "validation/gravel-png-repack.png"
+      ],
+      "evidence": "exact-component"
+    },
+    {
+      "members": [
+        "test/rocket-byte-copy.png",
+        "train/rocket-original.png",
+        "validation/rocket-png-repack.png"
+      ],
+      "evidence": "exact-component"
+    }
+  ],
+  "options": {
+    "threshold": 6,
+    "maxImages": 1000,
+    "maxPixels": 4194304,
+    "maxTotalPixels": 100000000,
+    "maxFileBytes": 33554432,
+    "maxComparisons": 1000000,
+    "maxPairs": 10000,
+    "includeMirrors": true,
+    "includeRotations": false
+  },
+  "stats": {
+    "inputImages": 50,
+    "processedImages": 50,
+    "comparisons": 2382,
+    "distanceEvaluations": 2225,
+    "pairChecks": 157,
+    "emittedPairs": 106,
+    "indexNodes": 47,
+    "reason": ""
+  },
+  "images": [
+    {
+      "id": "test/camera-brightness-1.15.png",
+      "path": "test/camera-brightness-1.15.png",
+      "split": "test",
+      "byteDigest": "09edb38ca82da7dc3a3c10b708f624264675eaa8d2d506f487f0ccf132f2683b",
+      "pixelDigest": "e1b2dd5f34aac13aed5f24ca826051a474c2c5ef52ebcd7100a32f5f5569fcc9",
+      "dhash": "0000000000011000001111100111111110101100011101000110110011101010",
+      "dhashMirror": "1111111111100111100000110000000110000000110100011100100110101000",
+      "width": 256,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/c742383b3a7a7ad3e65743f2f445201b6a67e6d6b38f8aab46aba593c9939695.jpg",
+      "thumbnailDigest": "44d825454cf897b170b91e72e9343a2123e0c034ad88ccdc5dba8489259ca3ef",
+      "format": "png"
+    },
+    {
+      "id": "test/camera-byte-copy.png",
+      "path": "test/camera-byte-copy.png",
+      "split": "test",
+      "byteDigest": "e4c80431766897c3883fc85b481d95126e26a06c127c0da2e5ec7c31aa1947e9",
+      "pixelDigest": "ee04cc48f047d86999b7db5fb5f15d323431fc4f0e8bbebb87e3b4293741cf81",
+      "dhash": "0000000000011000001111100111111110101110011101000110110011101010",
+      "dhashMirror": "1111111110100111100000110000000110001000010100011100100110101000",
+      "width": 256,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/a699f00434a6d8bffd16fc892e1638b71bc04c14a499a393ba31f08c7ece1cf5.jpg",
+      "thumbnailDigest": "404b05bc416252a393152257054c6a5e857e32ea213e03b3edd2fb5a71ea4218",
+      "format": "png"
+    },
+    {
+      "id": "test/camera-center-crop-90percent.png",
+      "path": "test/camera-center-crop-90percent.png",
+      "split": "test",
+      "byteDigest": "c434368ab27496fac888a094874cad1c8c03db74323e1f78f3866b0855a96c3d",
+      "pixelDigest": "06ae9dd64ee57f9f000e8ca85460c4b2d4113337c71ef9260b5430a85d384214",
+      "dhash": "0001100000011010011101100111111110101110011101010110110011101101",
+      "dhashMirror": "0110011110100111100100010000000110001010010100001100100101001000",
+      "width": 256,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/e310d1f2a1886814d5d7011a194ac31f145f094897e76a1e250356b4a418f720.jpg",
+      "thumbnailDigest": "eab3d4f1f620530bbfbc99e7cfe1c16e7e2be33f6cf2d0d636207a18c6be7386",
+      "format": "png"
+    },
+    {
+      "id": "test/camera-jpeg-quality70.jpg",
+      "path": "test/camera-jpeg-quality70.jpg",
+      "split": "test",
+      "byteDigest": "89a62fe0736bb8b718dee300f98d2390c11ce4106f1f33cd3f3559d1051a9ea8",
+      "pixelDigest": "102721744e4f21499c823713aedb9876896f383bb7f26dd9ff9e1a76581585e0",
+      "dhash": "0000000000011000001111100111111110101110011101000110110011101010",
+      "dhashMirror": "1111111110100111100000110000000110000000010100011100100110101000",
+      "width": 256,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/5e83d88b9c060f20769ab6bd9b70ff6736cfe6cc528104cd2838f2665756b6e5.jpg",
+      "thumbnailDigest": "5f2d08688c089446858cabffeec86c9ada86f06a9d950275cec3d7e47c364729",
+      "format": "jpeg"
+    },
+    {
+      "id": "test/camera-rotate90.png",
+      "path": "test/camera-rotate90.png",
+      "split": "test",
+      "byteDigest": "6c3767804dba4b6eaaba14f37290ed52b351132ba311ef974b3003e4e386cad8",
+      "pixelDigest": "86c158780d4befb2831f8d8a0a62265058439afbf88dc025e9e84c6f2a5f0eea",
+      "dhash": "1100000011000000110101010000110001001100001001111000011111000110",
+      "dhashMirror": "0111110001101100010101001100011111001101000110110001011010011100",
+      "width": 256,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/29272b2e4cc0238565cdb6185bf2ed162d4d22c5e1fe573b1ebd3e7fb787b321.jpg",
+      "thumbnailDigest": "53c35a00560b5b565ec69c28eff91966446f2e774d8d68490d6ec5fc73b9a9c7",
+      "format": "png"
+    },
+    {
+      "id": "test/clock-brightness-1.15.png",
+      "path": "test/clock-brightness-1.15.png",
+      "split": "test",
+      "byteDigest": "75691c24506174c5e94aa4eb74a38b4344270c2e8bae37510c12567709ed15cc",
+      "pixelDigest": "40351a17ce10aa81634b9c8215a1ae48e41d01cfc4d45fbf876bebe36373a83b",
+      "dhash": "0000000000000010000100110011001100110011000100110000001100000011",
+      "dhashMirror": "1011111110111111001101110011001100110011001101110011111100011111",
+      "width": 256,
+      "height": 192,
+      "contrast": 139,
+      "thumbnail": "thumbnails/7b3b7264217ee866c9e5ebbdf0fad6f0cb73e9a97c7501596e252940a44156da.jpg",
+      "thumbnailDigest": "e8449c093ba428510613187639117ce8022bba42da6522e94cc0598fcbbc278d",
+      "format": "png"
+    },
+    {
+      "id": "test/clock-byte-copy.png",
+      "path": "test/clock-byte-copy.png",
+      "split": "test",
+      "byteDigest": "cb20aa7e001814a7952e2361ceab5e4e3d952488b8a383bda55a949274421b2f",
+      "pixelDigest": "edd12c966f8610b5dc111815d5ffb7cc38f409b67ee0bfb88bca7424f9347179",
+      "dhash": "0000000000000010000100110011001100110011000100110000001100000011",
+      "dhashMirror": "1001111110111111001101110011001100110011001101110011111100011111",
+      "width": 256,
+      "height": 192,
+      "contrast": 146,
+      "thumbnail": "thumbnails/59b0e08708dd2e23a1d2684d02fcbd674b8fc3ab20c4224e93b4669b0f9b9357.jpg",
+      "thumbnailDigest": "ae3fd88e41a0524f9f8e8f2caeae56bd2e286f4c7bb455b0fa467ca4af8b7cc3",
+      "format": "png"
+    },
+    {
+      "id": "test/clock-center-crop-90percent.png",
+      "path": "test/clock-center-crop-90percent.png",
+      "split": "test",
+      "byteDigest": "be57fc0b686230514a168166dece64e51b25a581e50bd64a93d072448e935e45",
+      "pixelDigest": "2487952083215a36b6f018485d464f0a9ec5714d409049703e89b4eea1943f24",
+      "dhash": "0000001000000011000100110011000100110001001100110000001100000011",
+      "dhashMirror": "1001111100111111001101110111001101110011001100110011111100111111",
+      "width": 256,
+      "height": 192,
+      "contrast": 145,
+      "thumbnail": "thumbnails/3fbcb2659afe6abff9317fe4b4ec2e06d55818843e06bf7dbdddd2955406bfd4.jpg",
+      "thumbnailDigest": "2e35756dee85efbcba67638d890bca2b2bb39ec29ad8299a97f55d9819871dbf",
+      "format": "png"
+    },
+    {
+      "id": "test/clock-jpeg-quality70.jpg",
+      "path": "test/clock-jpeg-quality70.jpg",
+      "split": "test",
+      "byteDigest": "02529d395152a879d9553aaad2330f2817f8cc6b045898f45b655752564ba209",
+      "pixelDigest": "4d40d245697781c40ef39579f4af2a2fc15180642b4bc34afbcd8f3aa17bb15c",
+      "dhash": "0000000000000010000100100011001100110011000100110000001100000011",
+      "dhashMirror": "1101111110011111001101110011001100110011001101110011111100011111",
+      "width": 256,
+      "height": 192,
+      "contrast": 153,
+      "thumbnail": "thumbnails/fbac5b896cb580bc83342147ade59120be1b327dbbe2f52e971fe2d50768f033.jpg",
+      "thumbnailDigest": "4bcbc2c1ad1edadbeb0db7a640e07d13d302d85aa5f65bb8a367e140d8c479cd",
+      "format": "jpeg"
+    },
+    {
+      "id": "test/clock-rotate90.png",
+      "path": "test/clock-rotate90.png",
+      "split": "test",
+      "byteDigest": "74673a3e343ebe1edfac420c7947f254d846200c78c0799d8f0d36d903e2208b",
+      "pixelDigest": "121eab785cf59067e0c85a1f32af46846659fefe55f2e8200c2cdab5f86d8e41",
+      "dhash": "1100000000000000000100000011000010110000000000000000000000001000",
+      "dhashMirror": "1101110011011111111100111111001111110010111111001110110111101111",
+      "width": 192,
+      "height": 256,
+      "contrast": 146,
+      "thumbnail": "thumbnails/e7bad854cfa80877ec9d41af95f2c5379ff6b237d7af874bd26bacf4c7924b3c.jpg",
+      "thumbnailDigest": "b8b36b5c39d462d18a1b23644c5311b12b2a8b9db33f54aea24eb61ea1cd01a9",
+      "format": "png"
+    },
+    {
+      "id": "test/eagle-brightness-1.15.png",
+      "path": "test/eagle-brightness-1.15.png",
+      "split": "test",
+      "byteDigest": "9457262c45611133755e81c0a159016545db115eb26cf3fcb7a35d9d96e7d9a9",
+      "pixelDigest": "e78547ce89337d7831d3b112658fdc8d29d82f3196366f4e6a67ff2fbce55fab",
+      "dhash": "1111100111000001110010100000111001001110100011101001111010110000",
+      "dhashMirror": "0110000001111100101011001000111110001101100001101000011010100010",
+      "width": 232,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/6d1c0906e464ffe28f747f44d77b8ccc085364679ae05fa28ddc9b32046e89e6.jpg",
+      "thumbnailDigest": "4caf880d4a068026c79e56dd6608af3b250fc8158d1f3cbf4d8542e3adf83ece",
+      "format": "png"
+    },
+    {
+      "id": "test/eagle-byte-copy.png",
+      "path": "test/eagle-byte-copy.png",
+      "split": "test",
+      "byteDigest": "675ace461ec5cd9ea6ac1532a724edf2df7dd34039a266616bc47aeb2213b40e",
+      "pixelDigest": "e0ba5c613f3b471b8294d72705ca647588e1b3b203f4d11a1c2cbe0db2935a4d",
+      "dhash": "1111100111000001110010100000111001001110100011101001111010110000",
+      "dhashMirror": "0110000001111100101011001000111110001101100001101000011001100010",
+      "width": 232,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/eaf0829db04b21beb34c6c8f13ac5d0ec2a9b1274d787cf32259029b57b60546.jpg",
+      "thumbnailDigest": "b7d3c2e4723cae27dbab4c64be3aaf4e783b87760059255d5eaa72728eafc2a6",
+      "format": "png"
+    },
+    {
+      "id": "test/eagle-center-crop-90percent.png",
+      "path": "test/eagle-center-crop-90percent.png",
+      "split": "test",
+      "byteDigest": "dcb636d627557b9191f077760d391f4328f2dcee8dd809aedf762e5e9e9133d2",
+      "pixelDigest": "e8a7a7315b0edbc67bd251beb0691da929905843895e257747f34c3823ed4158",
+      "dhash": "1111000111001010110010100000111001001110100111111001111110111010",
+      "dhashMirror": "0111000010101100101011001000011110001101000001100000011010000010",
+      "width": 232,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/3576686aff093637d4cce3a45928115cb62f52bb8739820d81dcd7c82b9a32bc.jpg",
+      "thumbnailDigest": "8be148d61c9ea8395ab133e766ea35fc8d32046b8958bfa9fd760d50fda175be",
+      "format": "png"
+    },
+    {
+      "id": "test/eagle-jpeg-quality70.jpg",
+      "path": "test/eagle-jpeg-quality70.jpg",
+      "split": "test",
+      "byteDigest": "a8dbf287107253231d9186b7bd0febe0b7bb421990a0670ee3b748905e3032dc",
+      "pixelDigest": "12e839782ba6a95aacfa2d253759f4a0f3cb911e1a91d9dc74b861daf25c6923",
+      "dhash": "1111100111000001110010100000111001001110100011101001111010110000",
+      "dhashMirror": "0110000001111100101011001000111110001101100001101000011001100010",
+      "width": 232,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/d61bdc9705b0f39c60ccae946447fb227b554461a7f523aecc185ffe7995f619.jpg",
+      "thumbnailDigest": "1d372e2e46e792caea5691a00ac27307177fea88d18544a0a455e5408ef9ab4c",
+      "format": "jpeg"
+    },
+    {
+      "id": "test/eagle-rotate90.png",
+      "path": "test/eagle-rotate90.png",
+      "split": "test",
+      "byteDigest": "02ee78082a175e9783f42e5657359888961e6fd1ff7e720e96bf0dfae9415bba",
+      "pixelDigest": "54204f20cc4065981f1b8f0848606a126e269eec1630281e7cb146e11b7d98de",
+      "dhash": "0011101001101000000110101001110110001111110000011100000111000000",
+      "dhashMirror": "1010001111101101101101111100011000001110011111000111110011111100",
+      "width": 256,
+      "height": 232,
+      "contrast": 255,
+      "thumbnail": "thumbnails/af422744ae534a799e48e1777d26546ce4db8c9df75ca1900b3936fc22744d18.jpg",
+      "thumbnailDigest": "803e373ea8418f7f4c506bbf4312bc207e33723ba822d1af67f58dfb20a4da87",
+      "format": "png"
+    },
+    {
+      "id": "test/gravel-brightness-1.15.png",
+      "path": "test/gravel-brightness-1.15.png",
+      "split": "test",
+      "byteDigest": "3e34cacb15d8abf281613863aed5bd170d8feb2da4a1f4e77da26bcae2d277ae",
+      "pixelDigest": "ce7b2b49b002ab18ba4dbc7b0f35a93ff920aa335b4f5782b340c4b6126600dc",
+      "dhash": "0010011001010010110011011000101010110101110101011010100110110010",
+      "dhashMirror": "1000101010110101010011001010111001000010010101000110101010010000",
+      "width": 256,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/2cc6ebb36b7980cb53b33b1cb7866d89da56e1c7dfddda04e0d04f0641388294.jpg",
+      "thumbnailDigest": "c9f0656f174052eee299c4b54c66df4e1f241cffac9f29ba0802150e02d15407",
+      "format": "png"
+    },
+    {
+      "id": "test/gravel-byte-copy.png",
+      "path": "test/gravel-byte-copy.png",
+      "split": "test",
+      "byteDigest": "b0e27c185d122df50d8f31f745b7736cc9095e97a07fad9385b31ae1cf35a790",
+      "pixelDigest": "4e0e6e0d0ee0c26abdfb28080d164a58fd5679b81bbf98083f15871b134c7852",
+      "dhash": "0010011001010010110011011000101010110101110101011010100110110010",
+      "dhashMirror": "1000101010110101010011001010111001000000010101000110101010010000",
+      "width": 256,
+      "height": 256,
+      "contrast": 240,
+      "thumbnail": "thumbnails/17b10944f7049415e5b72c0dcf8c807752cd78a6b20044e382496d0c069d2d0c.jpg",
+      "thumbnailDigest": "61e3212dc23ad8de36ae2c634fda94e84119d461214502dd791919117364793b",
+      "format": "png"
+    },
+    {
+      "id": "test/gravel-center-crop-90percent.png",
+      "path": "test/gravel-center-crop-90percent.png",
+      "split": "test",
+      "byteDigest": "b21a80d852f43a99d48a01ff3726da501df651626d20637fb80fc86f69aa69eb",
+      "pixelDigest": "f71fa0697eca112f5633f062103423015ea31615fabba37a3ff73dc26eea6675",
+      "dhash": "0011000101010100100011010100100101011101010101000110000110100010",
+      "dhashMirror": "0111001111010101010011100110110101000101100101010111100110111010",
+      "width": 256,
+      "height": 256,
+      "contrast": 242,
+      "thumbnail": "thumbnails/d0d66d201378aad8c6324cab643c3023b5c919830ada82ac722fb0909eef8df8.jpg",
+      "thumbnailDigest": "e817add8237bab3128e9d0d8473707d28cd6f1b2b29f42cdcba44661b0e4345c",
+      "format": "png"
+    },
+    {
+      "id": "test/gravel-jpeg-quality70.jpg",
+      "path": "test/gravel-jpeg-quality70.jpg",
+      "split": "test",
+      "byteDigest": "3826ee438cc1fe0ea2655ced2776f8dcd99d9a5c37e65d087c5a1e74876e7009",
+      "pixelDigest": "12b4ee6eed65bb597c0094552b99b0ae42781c383b5090138f01afbabf753348",
+      "dhash": "0010011001010010110011011000101010110101110101011010100110110010",
+      "dhashMirror": "1000101010110101010011001010111001000000010101000110101010010000",
+      "width": 256,
+      "height": 256,
+      "contrast": 243,
+      "thumbnail": "thumbnails/4df697e33de3d78833aa33b495f571d65f5769ad335b6ea1e1fb1bcbaf9c8585.jpg",
+      "thumbnailDigest": "d02d8ea5da3928d896bab2bbd262fb68cbd28e842e557a037afeb0b8bd8ebd4c",
+      "format": "jpeg"
+    },
+    {
+      "id": "test/gravel-rotate90.png",
+      "path": "test/gravel-rotate90.png",
+      "split": "test",
+      "byteDigest": "d0464b2cac1a45cb8018948c097f8d8ee12657257d4b29f647020b870ac4ba2b",
+      "pixelDigest": "461f44e593d1194a64f1218d9dce9f7a356d216fb8b2c852b05552ea152c7344",
+      "dhash": "0101010001101101110110001001011010010110110110000110001010010000",
+      "dhashMirror": "1100010101001001011001001001011010010111111001001011000011110010",
+      "width": 256,
+      "height": 256,
+      "contrast": 240,
+      "thumbnail": "thumbnails/f0eefd237de4798ddd7cadf701e7feb776a8034879cae2af484c184c81991e06.jpg",
+      "thumbnailDigest": "33a40fcc64721babd921f155904a637caf45c2c64fc6155a955c7f630118afa1",
+      "format": "png"
+    },
+    {
+      "id": "test/rocket-brightness-1.15.png",
+      "path": "test/rocket-brightness-1.15.png",
+      "split": "test",
+      "byteDigest": "52f5b6f4a54aa193fd6b6dd71f4fed7b0b7b2d7fe1a0d3618147ab63b769a322",
+      "pixelDigest": "7a52a840767c31a212ab562bd50bcab8e4b729f4d17c30f0250ac4b8e02c0466",
+      "dhash": "1110000011000000110000001101000010010000100100001001000011010001",
+      "dhashMirror": "1111100011111000111111001111010011110010111100101111011001110100",
+      "width": 256,
+      "height": 171,
+      "contrast": 251,
+      "thumbnail": "thumbnails/0976203314ecac5c43bc41e87fbad512672431cc9754facb37d100e2affdc44c.jpg",
+      "thumbnailDigest": "da1cefb0c2b83e44a0614dd3ecf0eb26071d10fc831d2b4cdbba68b03400f11f",
+      "format": "png"
+    },
+    {
+      "id": "test/rocket-byte-copy.png",
+      "path": "test/rocket-byte-copy.png",
+      "split": "test",
+      "byteDigest": "3cb9dc94df7dc3a07f14dbe1666bb18291fffa9953baad45f6adc0f73bf3cde7",
+      "pixelDigest": "5d109cefab83027ba83be9d6d072b9f05aff4f7654e45fcbebc4d4e9c399ce3d",
+      "dhash": "1110000011000000110000001101000010010000100100001001000011010001",
+      "dhashMirror": "1111100011111000111101001111010011110010111100101111011001110100",
+      "width": 256,
+      "height": 171,
+      "contrast": 255,
+      "thumbnail": "thumbnails/de979e74570737597dd978642cf269ed34f62fb63c6743653c132e4c4aa26b1d.jpg",
+      "thumbnailDigest": "d0b58d26efc2914e846b0821697316c52c56270d5cc9ae2de089acaebe06d3c9",
+      "format": "png"
+    },
+    {
+      "id": "test/rocket-center-crop-90percent.png",
+      "path": "test/rocket-center-crop-90percent.png",
+      "split": "test",
+      "byteDigest": "71c858b5532cf2e9c548eea9780e45cab08cb8e7bcb578392c95d3e2e333ad02",
+      "pixelDigest": "e5debb42082cb062d73e7439627971effbf59c3e218752ce2485e76e77f02c8d",
+      "dhash": "1100000011000000110100001001000010110000101100001001000011010000",
+      "dhashMirror": "1111100011111100111101001111011011110010111100101111011001110100",
+      "width": 256,
+      "height": 171,
+      "contrast": 253,
+      "thumbnail": "thumbnails/d2824173048fb01e51c0689cfeb6970cdef9ba2fe943efdd2aa022b7afa8445b.jpg",
+      "thumbnailDigest": "5d75d9829f1e01a40bc5e04e6a1cc18f5f3fe2b01333de146d9dc6ac1d00630a",
+      "format": "png"
+    },
+    {
+      "id": "test/rocket-jpeg-quality70.jpg",
+      "path": "test/rocket-jpeg-quality70.jpg",
+      "split": "test",
+      "byteDigest": "ac863170340064b05e071c1039f738f1d158a3917b3e10aaa66bce043afbc309",
+      "pixelDigest": "cd6e4c11d361f0d234b9235659a8326f5286e31f0898fad94d001f71d2e9d650",
+      "dhash": "1110000011000000110000001101000010010000100100001001000011010001",
+      "dhashMirror": "1111100011111100111111001111010011110010111100101111011001110100",
+      "width": 256,
+      "height": 171,
+      "contrast": 252,
+      "thumbnail": "thumbnails/36e0c62614ef1db1be165919369a87291fa3ff0562588b6085402378dd3ba25a.jpg",
+      "thumbnailDigest": "f0f13b8485ebf6d5a73f13c4b96c0eb87faaf589b58d3e2687c2ec4ff7adb443",
+      "format": "jpeg"
+    },
+    {
+      "id": "test/rocket-rotate90.png",
+      "path": "test/rocket-rotate90.png",
+      "split": "test",
+      "byteDigest": "7442f256ff52411b32a4650ae200a852059f2f6be46c8fcda50df1d0b68b1131",
+      "pixelDigest": "7256c3da3deadd110f9c908c3e0181c6ae7a912ff57396d4a58dd3b83e36882d",
+      "dhash": "1111111011111100111111111111111111111110111111101111111011111100",
+      "dhashMirror": "1000000011000000000000000000000010000000100000001000000010000000",
+      "width": 171,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/f157ab2dcc274b846da0d008dbdee59a84daa12ff0919dac4b6faee3bd076abb.jpg",
+      "thumbnailDigest": "2f20dc37ead7de86c39efc43d4f9fcf506845cb1b708c490f9f2934ef723e264",
+      "format": "png"
+    },
+    {
+      "id": "train/camera-original.png",
+      "path": "train/camera-original.png",
+      "split": "train",
+      "byteDigest": "e4c80431766897c3883fc85b481d95126e26a06c127c0da2e5ec7c31aa1947e9",
+      "pixelDigest": "ee04cc48f047d86999b7db5fb5f15d323431fc4f0e8bbebb87e3b4293741cf81",
+      "dhash": "0000000000011000001111100111111110101110011101000110110011101010",
+      "dhashMirror": "1111111110100111100000110000000110001000010100011100100110101000",
+      "width": 256,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/5d9fd116500a56f2f4bf85bda4a30d80854db982ef7b2884ff6736a98f603bd4.jpg",
+      "thumbnailDigest": "404b05bc416252a393152257054c6a5e857e32ea213e03b3edd2fb5a71ea4218",
+      "format": "png"
+    },
+    {
+      "id": "train/clock-original.png",
+      "path": "train/clock-original.png",
+      "split": "train",
+      "byteDigest": "cb20aa7e001814a7952e2361ceab5e4e3d952488b8a383bda55a949274421b2f",
+      "pixelDigest": "edd12c966f8610b5dc111815d5ffb7cc38f409b67ee0bfb88bca7424f9347179",
+      "dhash": "0000000000000010000100110011001100110011000100110000001100000011",
+      "dhashMirror": "1001111110111111001101110011001100110011001101110011111100011111",
+      "width": 256,
+      "height": 192,
+      "contrast": 146,
+      "thumbnail": "thumbnails/b108368a25ef2d391f14a2ef2fdb7b0ffceea432183e0190320dde24040098f2.jpg",
+      "thumbnailDigest": "ae3fd88e41a0524f9f8e8f2caeae56bd2e286f4c7bb455b0fa467ca4af8b7cc3",
+      "format": "png"
+    },
+    {
+      "id": "train/eagle-original.png",
+      "path": "train/eagle-original.png",
+      "split": "train",
+      "byteDigest": "675ace461ec5cd9ea6ac1532a724edf2df7dd34039a266616bc47aeb2213b40e",
+      "pixelDigest": "e0ba5c613f3b471b8294d72705ca647588e1b3b203f4d11a1c2cbe0db2935a4d",
+      "dhash": "1111100111000001110010100000111001001110100011101001111010110000",
+      "dhashMirror": "0110000001111100101011001000111110001101100001101000011001100010",
+      "width": 232,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/fb72839c2cfff021ac7f5181852bc22d673335ce3559591fd3003cb8e11db91d.jpg",
+      "thumbnailDigest": "b7d3c2e4723cae27dbab4c64be3aaf4e783b87760059255d5eaa72728eafc2a6",
+      "format": "png"
+    },
+    {
+      "id": "train/gravel-original.png",
+      "path": "train/gravel-original.png",
+      "split": "train",
+      "byteDigest": "b0e27c185d122df50d8f31f745b7736cc9095e97a07fad9385b31ae1cf35a790",
+      "pixelDigest": "4e0e6e0d0ee0c26abdfb28080d164a58fd5679b81bbf98083f15871b134c7852",
+      "dhash": "0010011001010010110011011000101010110101110101011010100110110010",
+      "dhashMirror": "1000101010110101010011001010111001000000010101000110101010010000",
+      "width": 256,
+      "height": 256,
+      "contrast": 240,
+      "thumbnail": "thumbnails/1435689e8e27c5485480a808f172401d3a32e5c2913238931c931127fd68c953.jpg",
+      "thumbnailDigest": "61e3212dc23ad8de36ae2c634fda94e84119d461214502dd791919117364793b",
+      "format": "png"
+    },
+    {
+      "id": "train/rocket-original.png",
+      "path": "train/rocket-original.png",
+      "split": "train",
+      "byteDigest": "3cb9dc94df7dc3a07f14dbe1666bb18291fffa9953baad45f6adc0f73bf3cde7",
+      "pixelDigest": "5d109cefab83027ba83be9d6d072b9f05aff4f7654e45fcbebc4d4e9c399ce3d",
+      "dhash": "1110000011000000110000001101000010010000100100001001000011010001",
+      "dhashMirror": "1111100011111000111101001111010011110010111100101111011001110100",
+      "width": 256,
+      "height": 171,
+      "contrast": 255,
+      "thumbnail": "thumbnails/93eadfb482f5aea978f30866184333ecbd2abff8590eb325f9899ff5e18e66ec.jpg",
+      "thumbnailDigest": "d0b58d26efc2914e846b0821697316c52c56270d5cc9ae2de089acaebe06d3c9",
+      "format": "png"
+    },
+    {
+      "id": "validation/camera-horizontal-mirror.png",
+      "path": "validation/camera-horizontal-mirror.png",
+      "split": "validation",
+      "byteDigest": "9ddc99ba2e6576b69e214e41635f18a7924ec6108c378f7ac4fd43375a07b044",
+      "pixelDigest": "4a67bd6f94579b10e30709124e942dedb92a0fb08eadde3a69684e9587fbb2f2",
+      "dhash": "1111111110100111100000110000000110001000010100011100100110101000",
+      "dhashMirror": "0000000000011000001111100111111110101110011101000110110011101010",
+      "width": 256,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/a83695fee8e67323e54d94d013a00cd34288586d12757b98b63cb8cfb79dfc7c.jpg",
+      "thumbnailDigest": "219ed0c752a1b8c99d5974488574743a3da31548ff21cbcc06cf3cc144789348",
+      "format": "png"
+    },
+    {
+      "id": "validation/camera-mirror-jpeg-quality70.jpg",
+      "path": "validation/camera-mirror-jpeg-quality70.jpg",
+      "split": "validation",
+      "byteDigest": "8749486c532000c438c2ca535a2e6337f8d4f5045b68d67d99d34cdfa43bc176",
+      "pixelDigest": "582a388a9a76bda6b12fb7c1f87840e7cef1470e3247527fb2665057f4fc7bc0",
+      "dhash": "1111111110100111100000110000000110000000010100011100100110101000",
+      "dhashMirror": "0000000000011000001111100111111110101110011101000110110011101010",
+      "width": 256,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/f32061bb5af1e4a3cff2cefcfd0e0809b237fa7ab8afdb093ecf736ac238d3df.jpg",
+      "thumbnailDigest": "8cab15bd2741e6a088ddabc1bfb4b205a237a32302316ab2541d0258f66ab577",
+      "format": "jpeg"
+    },
+    {
+      "id": "validation/camera-png-repack.png",
+      "path": "validation/camera-png-repack.png",
+      "split": "validation",
+      "byteDigest": "7a9abae8706a0602b0b6e4329e72cea773d91c790392dcf7706beb6be4c79a72",
+      "pixelDigest": "ee04cc48f047d86999b7db5fb5f15d323431fc4f0e8bbebb87e3b4293741cf81",
+      "dhash": "0000000000011000001111100111111110101110011101000110110011101010",
+      "dhashMirror": "1111111110100111100000110000000110001000010100011100100110101000",
+      "width": 256,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/a3bcd085b169adb3664fea255d5fd2e75e7430ed618a03586775ba1b0e74cd76.jpg",
+      "thumbnailDigest": "404b05bc416252a393152257054c6a5e857e32ea213e03b3edd2fb5a71ea4218",
+      "format": "png"
+    },
+    {
+      "id": "validation/camera-resize-73percent.png",
+      "path": "validation/camera-resize-73percent.png",
+      "split": "validation",
+      "byteDigest": "a5f27428d38580f2591769d4eb5f21b64777cd443242701d0a421ace8ad4f430",
+      "pixelDigest": "bb4f3081011a0ae8754c525dcd205c4c76306f830358d27f0dcf32ce95930e5a",
+      "dhash": "0000000000011000001111100111111110101110011101000110110011101010",
+      "dhashMirror": "1111111110100110100000110000000110000000010100011100100110101000",
+      "width": 186,
+      "height": 186,
+      "contrast": 255,
+      "thumbnail": "thumbnails/7b8a0300ffbcbf1436b7f98acc4abc2869f26d3b097649cb3087803ff21c1c72.jpg",
+      "thumbnailDigest": "b4dd4e8972ffd4ba3f77e90eceda6184a265ba077e5a13af678ca3cb55543338",
+      "format": "png"
+    },
+    {
+      "id": "validation/clock-horizontal-mirror.png",
+      "path": "validation/clock-horizontal-mirror.png",
+      "split": "validation",
+      "byteDigest": "d1d14a19358050b0ef2f8a0b0e32fb7509014fe5e73a77658e9ee50443fd2e52",
+      "pixelDigest": "408edf595036fa152b5fcf6338e0055142af28e913a85a0c98f0a803f82d4bf4",
+      "dhash": "1001111110111111001101110011001100110011001101110011111100011111",
+      "dhashMirror": "0000000000000010000100110011001100110011000100110000001100000011",
+      "width": 256,
+      "height": 192,
+      "contrast": 146,
+      "thumbnail": "thumbnails/b7c5c6f45d6bd15fa385582f72eb56a3c4e3ed02653e1166ffcff9a22ab2caf1.jpg",
+      "thumbnailDigest": "5949a73f8a0ed39ceb99c1d17f13a01ae44f56b4226f2565e6d151abb87adb62",
+      "format": "png"
+    },
+    {
+      "id": "validation/clock-mirror-jpeg-quality70.jpg",
+      "path": "validation/clock-mirror-jpeg-quality70.jpg",
+      "split": "validation",
+      "byteDigest": "db208bac343aea121335c9879eebdb02d4d238586ef9975c2076ce6b94506322",
+      "pixelDigest": "6e72f3e040ea3b3490f8d4e3d556e4e105bb0a6c15aa331a82c68b6f39b63db1",
+      "dhash": "1101111110111111001101110011001100110011001101110011111100011111",
+      "dhashMirror": "0000000000000010000100100011001100110011000100110000001100000011",
+      "width": 256,
+      "height": 192,
+      "contrast": 153,
+      "thumbnail": "thumbnails/821d638795332ab8951fd0f5cfe26a62e6770e2ad7761dca619c5d1f5eeff79f.jpg",
+      "thumbnailDigest": "63a71ba86f454ff59ce07d2907e0862f7e7ed03937b8b0673486c7ce73aa14ad",
+      "format": "jpeg"
+    },
+    {
+      "id": "validation/clock-png-repack.png",
+      "path": "validation/clock-png-repack.png",
+      "split": "validation",
+      "byteDigest": "352aa17bf78fdefe3c36bcbfb9ba25160741717ba5b80e022f5d9fd88eeaf274",
+      "pixelDigest": "edd12c966f8610b5dc111815d5ffb7cc38f409b67ee0bfb88bca7424f9347179",
+      "dhash": "0000000000000010000100110011001100110011000100110000001100000011",
+      "dhashMirror": "1001111110111111001101110011001100110011001101110011111100011111",
+      "width": 256,
+      "height": 192,
+      "contrast": 146,
+      "thumbnail": "thumbnails/edb1717e49605e1fcf6b3512950b0d69c07a01509676d34f1a4bd938408a5a62.jpg",
+      "thumbnailDigest": "ae3fd88e41a0524f9f8e8f2caeae56bd2e286f4c7bb455b0fa467ca4af8b7cc3",
+      "format": "png"
+    },
+    {
+      "id": "validation/clock-resize-73percent.png",
+      "path": "validation/clock-resize-73percent.png",
+      "split": "validation",
+      "byteDigest": "e1a95f6eb22aed5d873abba720b0635d47c37b84c948a32b7314b5d616540a70",
+      "pixelDigest": "bbd47bb376173e210ba1c865e60dcf9c2f2e3d025e690ae36cddebeae6d4e56c",
+      "dhash": "0000000000000010000100110011001100110011000100110000001100000011",
+      "dhashMirror": "1101111110111111001101110011001100110011001101110011111100011111",
+      "width": 186,
+      "height": 140,
+      "contrast": 144,
+      "thumbnail": "thumbnails/6f4e6271e954da2f272859d687af11e3af04336c6884c109f4e355710dba1205.jpg",
+      "thumbnailDigest": "1fd700ac217462edd535dbc80588f4674dc26f6019aeb85944fe7c693915ea6f",
+      "format": "png"
+    },
+    {
+      "id": "validation/eagle-horizontal-mirror.png",
+      "path": "validation/eagle-horizontal-mirror.png",
+      "split": "validation",
+      "byteDigest": "7e19b0eb77ed8ad6a33699037dcb49bfae5951ea663edbe5c2258830dcffd771",
+      "pixelDigest": "750e37caa2ef6e4fd8630b4fb8f3d5e09dd8f8b3ac9a83d5e14fc8620dbb5aaa",
+      "dhash": "0110000001111100101011001000111110001101100001101000011001100010",
+      "dhashMirror": "1111100111000001110010100000111001001110100011101001111010110000",
+      "width": 232,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/66fee675353b871dfe3adebe8ea8b167e930dda1d81654508118d82811104793.jpg",
+      "thumbnailDigest": "2aa9bed9ce5b0c04ffa40931bdb4e9f878a37e97d9ea5cfdb4df0a292c174f4d",
+      "format": "png"
+    },
+    {
+      "id": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "path": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "split": "validation",
+      "byteDigest": "3686fcc33066db00e819a17d4a5f0a2c6d87e2ed96a368e6af7d7c83adf725b5",
+      "pixelDigest": "c8ecbbd646b88c0bb38c9275ebd4faa1b979c02cd8287db94b4ee880b5c4b4c3",
+      "dhash": "0110000001111100101011001000111110001101100001101000011001100010",
+      "dhashMirror": "1111100111000001110010100000111001001110100011101001111010110000",
+      "width": 232,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/50e51749ac55cfba6977ae36a12ec5eb063d38a8f5fac6575f78299177a1eeb9.jpg",
+      "thumbnailDigest": "1761bb3cd9909abe950cf201b99c8ec343bd3823b5a58eaaf724fed65a50efa7",
+      "format": "jpeg"
+    },
+    {
+      "id": "validation/eagle-png-repack.png",
+      "path": "validation/eagle-png-repack.png",
+      "split": "validation",
+      "byteDigest": "daf23772415a45ac0de5d5c9191343a92c36fc74e717caf0b62c76740f2cae60",
+      "pixelDigest": "e0ba5c613f3b471b8294d72705ca647588e1b3b203f4d11a1c2cbe0db2935a4d",
+      "dhash": "1111100111000001110010100000111001001110100011101001111010110000",
+      "dhashMirror": "0110000001111100101011001000111110001101100001101000011001100010",
+      "width": 232,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/c31b932771d79f4939b69c19123a57b68551cbb2a0a1608f410534f6ab227b26.jpg",
+      "thumbnailDigest": "b7d3c2e4723cae27dbab4c64be3aaf4e783b87760059255d5eaa72728eafc2a6",
+      "format": "png"
+    },
+    {
+      "id": "validation/eagle-resize-73percent.png",
+      "path": "validation/eagle-resize-73percent.png",
+      "split": "validation",
+      "byteDigest": "782a93e8de37ec5f5cc5e022b97c13b2cddbe8d452e1d94b4939e287f99bb4d2",
+      "pixelDigest": "8e47e146ea0ca347cdf4d05bd55b2bc8970c9ad2a547409b2964fb14e8d66633",
+      "dhash": "1111100111000001110010100000111001001110100011101001111110111010",
+      "dhashMirror": "0110000001111100101011001000111110001101100001100000011010100010",
+      "width": 169,
+      "height": 186,
+      "contrast": 255,
+      "thumbnail": "thumbnails/b9b30d8e7eb14cba39afb792fd3c5a786453c1d786e6fe90a5fc15d6e38a547d.jpg",
+      "thumbnailDigest": "9183cf98fb8eba4433758d78f1ef194e13b25f374b3f96c1605d8163d6a81987",
+      "format": "png"
+    },
+    {
+      "id": "validation/gravel-horizontal-mirror.png",
+      "path": "validation/gravel-horizontal-mirror.png",
+      "split": "validation",
+      "byteDigest": "a078d3587498b703c04a055908c8342c97f07193492a9934d9aaa49c1bd5cf6d",
+      "pixelDigest": "7c8d60df4517ba0e7fcf48c80a0c3a881316d664bb369cb28af4c37f663f096a",
+      "dhash": "1000101010110101010011001010111001000000010101000110101010010000",
+      "dhashMirror": "0010011001010010110011011000101010110101110101011010100110110010",
+      "width": 256,
+      "height": 256,
+      "contrast": 240,
+      "thumbnail": "thumbnails/68900c84a600b47acb41698220211d67c59d582c6994bf1754f120a21ff8b6c1.jpg",
+      "thumbnailDigest": "132452eb4539375271c565e5049a247373e08c01ae18051a964c97f3e057ac41",
+      "format": "png"
+    },
+    {
+      "id": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "path": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "split": "validation",
+      "byteDigest": "6e205159f38f7df49707fea0ef99af18325aacc83a7d4fbe3cb602901062adea",
+      "pixelDigest": "8056a8df14fdc7853c41a51a79040ae734f5b03746edc5464b61cbb626d9fb67",
+      "dhash": "1000101010110101010011001010111001000000010101000110101010010000",
+      "dhashMirror": "0010011001010010110011011000101010110101110101011010100110110010",
+      "width": 256,
+      "height": 256,
+      "contrast": 243,
+      "thumbnail": "thumbnails/8c50e5ea539fb8ca26948ce0748e59d3e0e5b097373189e2a52a77030aee6a67.jpg",
+      "thumbnailDigest": "88e9311e91f101f1e85f5917a1c9f311f74c49727264d678dd978c63f46eea88",
+      "format": "jpeg"
+    },
+    {
+      "id": "validation/gravel-png-repack.png",
+      "path": "validation/gravel-png-repack.png",
+      "split": "validation",
+      "byteDigest": "e5699c765670f710fae88cb4848b4c438bf653b64748206a40c891e4bed6c5b9",
+      "pixelDigest": "4e0e6e0d0ee0c26abdfb28080d164a58fd5679b81bbf98083f15871b134c7852",
+      "dhash": "0010011001010010110011011000101010110101110101011010100110110010",
+      "dhashMirror": "1000101010110101010011001010111001000000010101000110101010010000",
+      "width": 256,
+      "height": 256,
+      "contrast": 240,
+      "thumbnail": "thumbnails/2124cee7709b37cf74f2de011ab9658344cb36d0be2befc62f153d823ea0c2dc.jpg",
+      "thumbnailDigest": "61e3212dc23ad8de36ae2c634fda94e84119d461214502dd791919117364793b",
+      "format": "png"
+    },
+    {
+      "id": "validation/gravel-resize-73percent.png",
+      "path": "validation/gravel-resize-73percent.png",
+      "split": "validation",
+      "byteDigest": "caccb2948871872ceb3941a61628d0798b8148b38d26cfe3a4f204da6a583d05",
+      "pixelDigest": "8559f7b9a6321cbec242eb19b155ea387e2a157fd526fea410ae2fe1dd6c6d53",
+      "dhash": "0010111001010010110011011000101010110101110101011010100110110010",
+      "dhashMirror": "1000101010110101010010001010111001000001010101000110101010010000",
+      "width": 186,
+      "height": 186,
+      "contrast": 238,
+      "thumbnail": "thumbnails/3f2fe83f96c48a67a29aca32f6c4774cd2f35b542533823c440dff874a0c9fa9.jpg",
+      "thumbnailDigest": "0c0b84b73530a71b2b31da80fd3828abdba9e2856abc9772580b93544a48dfb5",
+      "format": "png"
+    },
+    {
+      "id": "validation/rocket-horizontal-mirror.png",
+      "path": "validation/rocket-horizontal-mirror.png",
+      "split": "validation",
+      "byteDigest": "c7445c099e7f8cf4cb2105c96e71f0fa42d4e60b422db39677febb027f472323",
+      "pixelDigest": "7f9f19767d068b4dc9af0fa8375840ff76b67c04ad251bc3d6c047f5dcce7bd2",
+      "dhash": "1111100011111000111101001111010011110010111100101111011001110100",
+      "dhashMirror": "1110000011000000110000001101000010010000100100001001000011010001",
+      "width": 256,
+      "height": 171,
+      "contrast": 255,
+      "thumbnail": "thumbnails/e22ac641f75c01f9bdebca6d7eb5ec8a2e4f97dab9926a03cdab67f7be2cec4e.jpg",
+      "thumbnailDigest": "dd8cf2ea912f647a8fa705dc444da2f808bee3e6d35a03f1403649199ebde6da",
+      "format": "png"
+    },
+    {
+      "id": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "path": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "split": "validation",
+      "byteDigest": "f3e37e4e03b6232e126ce6d40cdaabfe2fc20c0a173c551ec0dfa13573122bc9",
+      "pixelDigest": "a11b59ac02043ba2e1e0aab3f683fe045bccacb0e1fb6181830773eaaa4f25e1",
+      "dhash": "1111100011111100111111001111010011110010111100101111011001110100",
+      "dhashMirror": "1110000011000000110000001101000010010000100100001001000011010001",
+      "width": 256,
+      "height": 171,
+      "contrast": 252,
+      "thumbnail": "thumbnails/025e2a76fb0491f85f09fd5651e4ea740a19b285fb1ffd165d0ffa68e84732b6.jpg",
+      "thumbnailDigest": "8abce827471dc982b0a23a96c69b47f99f95d8477e4527e112164093b5659bee",
+      "format": "jpeg"
+    },
+    {
+      "id": "validation/rocket-png-repack.png",
+      "path": "validation/rocket-png-repack.png",
+      "split": "validation",
+      "byteDigest": "b04c25318642ad808551e4d7edf4f6266c8a9bbf37607271ec1d00d02520d58c",
+      "pixelDigest": "5d109cefab83027ba83be9d6d072b9f05aff4f7654e45fcbebc4d4e9c399ce3d",
+      "dhash": "1110000011000000110000001101000010010000100100001001000011010001",
+      "dhashMirror": "1111100011111000111101001111010011110010111100101111011001110100",
+      "width": 256,
+      "height": 171,
+      "contrast": 255,
+      "thumbnail": "thumbnails/0d0e5fd8fa8b229c43514c6842f8cab404b73332a217f8c689edaeeca1691ee9.jpg",
+      "thumbnailDigest": "d0b58d26efc2914e846b0821697316c52c56270d5cc9ae2de089acaebe06d3c9",
+      "format": "png"
+    },
+    {
+      "id": "validation/rocket-resize-73percent.png",
+      "path": "validation/rocket-resize-73percent.png",
+      "split": "validation",
+      "byteDigest": "b23857e2b77439103fed33d6245a1af78abb94da09e7b0b4d46109a5ee53b68a",
+      "pixelDigest": "b2b644fed23b6ef425a5ccd333a73dbba660cd6ac48ab68f036684961386e638",
+      "dhash": "1110000011000000110000001101000010110000100100001001000011010001",
+      "dhashMirror": "1111100011111000111101001111010011110010111100101111011001110100",
+      "width": 186,
+      "height": 124,
+      "contrast": 254,
+      "thumbnail": "thumbnails/18d0517db1f623bd9feaa2745265689baa8510cc8100d67c5291bb53b1401425.jpg",
+      "thumbnailDigest": "23c37115e46b05021ec81513e6f9f93dfef8f5a6e7aa0e387e9e347056d5dcc1",
+      "format": "png"
+    }
+  ],
+  "errors": [],
+  "scope": {
+    "splits": [
+      "train",
+      "validation",
+      "test"
+    ],
+    "missingSplits": [],
+    "supportedExtensions": [
+      ".png",
+      ".jpg",
+      ".jpeg",
+      ".webp",
+      ".avif",
+      ".tif",
+      ".tiff",
+      ".gif"
+    ],
+    "ignoredFiles": 0,
+    "entriesScanned": 50,
+    "discoveredAtLeast": 50,
+    "acceptedImages": 50,
+    "totalDecodedPixels": 2700258,
+    "maxDirectoryEntries": 100000,
+    "source": "local-files",
+    "allPairsAreCrossSplit": true,
+    "perceptualMatchesRequireReview": true
+  },
+  "auditId": "fb4dfbedca92aaae2c7948b8fa1668b8913b0823519b63abc9a439ecbf51f6db",
+  "createdAt": "2026-10-23T16:01:26.040Z",
+  "timing": {
+    "elapsedMs": 327
+  }
+}

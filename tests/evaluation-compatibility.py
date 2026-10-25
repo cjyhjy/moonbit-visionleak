@@ -64,5 +64,26 @@ class EvaluationCompatibility(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'Historical baseline'):
             compatibility.compare_baseline(self.old,'test',reason='does not bypass checksum')
 
+    def archive_baseline(self):
+        archive = self.root/'reports/history/report.json'
+        archive.parent.mkdir(parents=True)
+        (self.root/'report.json').rename(archive)
+        registry = self.root/'research/photos-v1/freeze/archive-locations.json'
+        registry.write_text(json.dumps({'0.4.0': {'report.json': 'reports/history/report.json'}}))
+        return archive
+
+    def test_explicit_archive_survives_current_report_replacement(self):
+        self.archive_baseline()
+        row = compatibility.compare_baseline(self.old, 'test')
+        self.assertTrue(row['passed'])
+        self.assertEqual(row['baselinePath'], 'reports/history/report.json')
+        (self.root/'report.json').write_text('{}')
+        self.assertTrue(compatibility.compare_baseline(self.old, 'test')['passed'])
+
+    def test_archived_baseline_still_requires_original_frozen_checksum(self):
+        self.archive_baseline().write_text('{}')
+        with self.assertRaisesRegex(ValueError, 'Historical baseline'):
+            compatibility.compare_baseline(self.old, 'test', reason='cannot bypass archive checksum')
+
 
 if __name__=='__main__': unittest.main()
