@@ -40,6 +40,8 @@ pub fn sha256_new() -> Sha256State
 
 pub fn sha256_update(Sha256State, Bytes) -> Bool
 
+pub fn workflow_json(String) -> String
+
 // Errors
 
 // Types and methods

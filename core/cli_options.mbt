@@ -88,7 +88,7 @@ fn cli_parse(argv : Array[Json]) -> Json {
     return { "ok": true, "args": { "help": true } }
   }
   if args[0] != "audit" {
-    return error_json("ARGUMENT_ERROR", "Expected the audit command")
+    return cli_parse_report_command(args)
   }
   let seen : Map[String, Bool] = Map([])
   let options = cli_defaults()
@@ -96,6 +96,7 @@ fn cli_parse(argv : Array[Json]) -> Json {
   let mut force = false
   let mut root = ""
   let mut out = ""
+  let mut fail_on = ""
   let mut i = 1
   while i < args.length() {
     let arg = args[i]
@@ -104,6 +105,17 @@ fn cli_parse(argv : Array[Json]) -> Json {
       return error_json("ARGUMENT_ERROR", "Duplicate option: " + arg)
     }
     seen[arg] = true
+    if arg == "--fail-on" {
+      if i >= args.length() ||
+        !["exact", "pixel", "candidate"].contains(args[i]) {
+        return error_json(
+          "ARGUMENT_ERROR", "--fail-on requires exact, pixel, or candidate",
+        )
+      }
+      fail_on = args[i]
+      i = i + 1
+      continue
+    }
     if arg == "--force" {
       force = true
       continue
@@ -164,8 +176,67 @@ fn cli_parse(argv : Array[Json]) -> Json {
       "force": Json(force),
       "root": Json(root),
       "out": Json(out),
+      "failOn": Json(fail_on),
     },
   }
+}
+
+///|
+fn cli_parse_report_command(args : Array[String]) -> Json {
+  let command = args[0]
+  if !["verify", "export-html", "export-fixes"].contains(command) {
+    return error_json("ARGUMENT_ERROR", "Unknown command")
+  }
+  let values : Map[String, Json] = Map([
+    ("command", Json(command)),
+    ("maxBytes", Json(20971520)),
+  ])
+  let seen : Map[String, Bool] = Map([])
+  let mut i = 1
+  while i < args.length() {
+    let flag = args[i]
+    i = i + 1
+    if seen.contains(flag) {
+      return error_json("ARGUMENT_ERROR", "Duplicate option: " + flag)
+    }
+    seen[flag] = true
+    let allowed = flag == "--report" ||
+      (command == "verify" && flag == "--root") ||
+      (command != "verify" && ["--out", "--review"].contains(flag)) ||
+      (command == "export-html" && flag == "--max-bytes")
+    if !allowed {
+      return error_json("ARGUMENT_ERROR", "Unknown option: " + flag)
+    }
+    if i >= args.length() || args[i] == "" || args[i].has_prefix("--") {
+      return error_json("ARGUMENT_ERROR", "Missing value: " + flag)
+    }
+    let key = match flag {
+      "--report" => "report"
+      "--root" => "root"
+      "--out" => "out"
+      "--review" => "review"
+      _ => "maxBytes"
+    }
+    if flag == "--max-bytes" {
+      let size = cli_unsigned(args[i], 67108864)
+      if size < 4096 {
+        return error_json(
+          "ARGUMENT_ERROR", "--max-bytes must be 4096..67108864",
+        )
+      }
+      values[key] = Json(size)
+    } else {
+      values[key] = Json(args[i])
+    }
+    i = i + 1
+  }
+  if !values.contains("report") ||
+    !values.contains(if command == "verify" { "root" } else { "out" }) {
+    return error_json(
+      "ARGUMENT_ERROR", "--report and a root or output path are required",
+    )
+  }
+  { "ok": true, "args": Json::object(values) }
 }
 
 ///|
