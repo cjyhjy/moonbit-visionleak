@@ -1,0 +1,219 @@
+{
+  "sourceDigest": "90e357d79d6c85b17cabd41cd833f61522d433ce870e8d735fe4ca193cc68a40",
+  "compiledArtifact": {
+    "sha256": "4225b58ecbeab1e4fa42087a601ca77c0f89080c79ca14523f4ac36f9875fb63",
+    "matchesCommitted": true
+  },
+  "files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "630bfabed2b1daca8ee90c6dc8be7f125532a5ff49387a698907f2ebf0059330"
+    },
+    {
+      "path": "moon.mod",
+      "sha256": "83c6decafa0333d3db469a6bda66ae5475f15905d2dc02477347afef9883ac6a"
+    },
+    {
+      "path": "core/moon.pkg",
+      "sha256": "119da56038e3680d53d90cdd8b88e23d8602ff94b482df64c6ae69936daafb1d"
+    },
+    {
+      "path": "core/pkg.generated.mbti",
+      "sha256": "13e30f6e59fd93c83d01916e5a8c2ddf6478c89e73dac2622cdcb199a68742d4"
+    },
+    {
+      "path": "core/sha256.mbt",
+      "sha256": "f6afe36c0373b044f2e37471e06ccc8bbf31d8f94a0ca16fa2881757fc2c352a"
+    },
+    {
+      "path": "core/report_identity.mbt",
+      "sha256": "b606b45e67b9d14c7dab49705322c0e2a7fda0bdfb1ceda839e02e6545684a04"
+    },
+    {
+      "path": "core/review_validation.mbt",
+      "sha256": "b014f140dd14471b7ee24c518afaf68b4f63969818ca1bdb1b5ccb1907f09f05"
+    },
+    {
+      "path": "core/cli_options.mbt",
+      "sha256": "f47c4526f427c73f1d8a87b61d31e62fe13399d0423034edfe10d905816750e7"
+    },
+    {
+      "path": "core/metrics.mbt",
+      "sha256": "b2731c3c40fb9b66e94e7a62c1e4991afa43782ad80669e853bdf1defe7065b7"
+    },
+    {
+      "path": "core/pixel_stream.mbt",
+      "sha256": "af2948a9cad08d936473b1d2d5f4d6b089cf6cff279983f6e380a30c480ee230"
+    },
+    {
+      "path": "core/sampling.mbt",
+      "sha256": "90854de65d99ba745bca5da02dee30fe9fd0fcc589885937806578847821eff6"
+    },
+    {
+      "path": "core/audit_regression_wbtest.mbt",
+      "sha256": "cc7a12d4a8ce17d1aba8634dd6c9d65e1a49d427caae2294a2cb8e9247b19583"
+    },
+    {
+      "path": "core/contracts_wbtest.mbt",
+      "sha256": "2d54709ae883a507b3bc955db3571654f53f70acbd1477627693c51cdc227e1d"
+    },
+    {
+      "path": "core/cli_contract_wbtest.mbt",
+      "sha256": "65e919a2d11818f4d25b010de0b10175d6f6c7f9795f099c75c7646b12d25638"
+    },
+    {
+      "path": "core/identity_contract_wbtest.mbt",
+      "sha256": "dc17a98765bda40b214e2cb9fec8e6fb1e273908e4f0a0849f47c83bf79dcfc1"
+    },
+    {
+      "path": "core/metrics_contract_wbtest.mbt",
+      "sha256": "95721883996706fb3ab4ff78349db3b87e2b8bda46cf818b279806feca79b7df"
+    },
+    {
+      "path": "core/stream_wbtest.mbt",
+      "sha256": "32a5b1405e4cc9b14667e17794b397453f702e5e3e0ae9d1a5f7c970d640e61b"
+    },
+    {
+      "path": "core/sampling_wbtest.mbt",
+      "sha256": "84ba6891d0a03fad99282fa4ce13f913f1021d3a004e13576cc8d6c4d7f4050a"
+    },
+    {
+      "path": "core/physical_views_wbtest.mbt",
+      "sha256": "1571a9ffee5f31904d46154e968b4307b0e80fbf4d6b218be7adb07f80be0a49"
+    },
+    {
+      "path": "demo/report-identity.mjs",
+      "sha256": "559039cb991ad6f22e508fd230871721774f19398c6b86b2005e2fd34e7d3cdc"
+    },
+    {
+      "path": "demo/review-validation.mjs",
+      "sha256": "1bb35af1b0ba43c0564ef5f4d1215a2fa4db8bcd911431f00e6afe17aa9014ad"
+    },
+    {
+      "path": "dist/visionleak.js",
+      "sha256": "4225b58ecbeab1e4fa42087a601ca77c0f89080c79ca14523f4ac36f9875fb63"
+    },
+    {
+      "path": "tools/cli.mjs",
+      "sha256": "3e295426ef15a3c0585c120b27a50d9dc671bce78b363d7de32a51c409e463b7"
+    },
+    {
+      "path": "tools/runtime.mjs",
+      "sha256": "add521b87f3b890dfd73dd47b2f4f0b1108c94cc5a64e7ccbe2ff9992376892c"
+    },
+    {
+      "path": "tools/decode.mjs",
+      "sha256": "ad6fad8a5b5019a5e8fb4767f40b82f1e86faad9e93192f275c3179cb1bfc10d"
+    },
+    {
+      "path": "tools/server.mjs",
+      "sha256": "e60b03488d1081cfe230ad6f4983b697d3bb081605e07bf01ce755230f58fe0c"
+    },
+    {
+      "path": "tools/evaluate.py",
+      "sha256": "704db71073bf3dd4e1934db8b7e1972e6d055dae62c2f3df01b7341fbfad0b76"
+    },
+    {
+      "path": "tools/evaluate-photos.py",
+      "sha256": "fbad0dcd229758fc39877377f07a17acc3e4c818a64ae4ffc9e53796c3e3c7e4"
+    },
+    {
+      "path": "tools/evaluation_compatibility.py",
+      "sha256": "77291d0c1ca60c92c36498001419635c46f79859f17fc7b6cacd7ba873b47d48"
+    },
+    {
+      "path": "tools/inspect-languages.py",
+      "sha256": "c85df758b7aab4aed08122d66c10449364b344d69fe04e152b5a8e9ee7284ac1"
+    },
+    {
+      "path": "tools/ci.mjs",
+      "sha256": "e61cf7a6bece9837637b359cf49533f34d6c5e5d267b49c65019dc48b4e15357"
+    },
+    {
+      "path": "tools/source-digest.mjs",
+      "sha256": "8f595873d23b6d7d53ccd6ec595cbf855943016c4401a2dcb08273018bc89fdd"
+    },
+    {
+      "path": "tools/package.py",
+      "sha256": "0b577f628b163575d82a2e0a3b1b801634520e9c43634abca337e341a3c6f541"
+    },
+    {
+      "path": "tests/core.test.mjs",
+      "sha256": "30c547f9bd3da78789ab9303c3ead485d42bb74b5fb30b6dc7e157e2810e2c70"
+    },
+    {
+      "path": "tests/mirror.test.mjs",
+      "sha256": "b546d2f87f5e43d4988c497f43e1ad064fc7a7dad3b2b24aa1d0125d840baf34"
+    },
+    {
+      "path": "tests/orientation.test.mjs",
+      "sha256": "68936f5c20254f909e3a48d655b152514c8708f2aa1fcd0424f6559f0d75274d"
+    },
+    {
+      "path": "tests/demo-validation.test.mjs",
+      "sha256": "babb4d33cfd07b54c281209402f41d18675b382e041a08c57744d71234c1d453"
+    },
+    {
+      "path": "tests/runtime.test.mjs",
+      "sha256": "24e2d49d7b16624bbe6ac227e8b6164028a8c272ecb9b7d8e5387d1d846c9cdc"
+    },
+    {
+      "path": "tests/cli.test.mjs",
+      "sha256": "3197e34b9f63ba414282aa9fca689a7e7ff5871c96db2e00ef30d9ba3e269c6c"
+    },
+    {
+      "path": "tests/report-identity.test.mjs",
+      "sha256": "7623a9bbf7769a401d51ebd7154d5731b72a8b3098d1a926d95268b98f76d19c"
+    },
+    {
+      "path": "tests/oracle-runner.mjs",
+      "sha256": "e095537caaa3bce57ee8551de7c1830e7b457b41ff48a42071110177c24d17b3"
+    },
+    {
+      "path": "tests/oracle-metrics.py",
+      "sha256": "cc825e259141c8731982a88c047a0f7e183e70cf76f9e00fd27251b83b510ecf"
+    },
+    {
+      "path": "tests/report-history.py",
+      "sha256": "21abbbbf1c0f6c706bd94b83816f58ca0cf75c23e762d962f05e568cb2ef7414"
+    },
+    {
+      "path": "tests/large-images.test.mjs",
+      "sha256": "18e356da6114bded4db2472fb26882c359575882c9e71ee1a1e382b0aadee24c"
+    },
+    {
+      "path": "tests/split-aliases.test.mjs",
+      "sha256": "bc2371d234eb56872682377e59ebfc43cf432e5b17798ff6e4532bd31f26593e"
+    },
+    {
+      "path": "tests/evaluation-compatibility.py",
+      "sha256": "07ee87831cc2a455b06f144228806e5e7b27f155fdc94c718df62b81780fcd4a"
+    },
+    {
+      "path": "research/photos-v1/freeze/0.4.0.json",
+      "sha256": "19bd6f8517416dcf820057b184972d6929f470eaf9d2b2ea615875df6d57d011"
+    },
+    {
+      "path": "docs/api.md",
+      "sha256": "d41629b0807d8e24f094ce830e7c37cfeb918cc6354a289a089d7e14b5bb87d0"
+    },
+    {
+      "path": "docs/cli.md",
+      "sha256": "9e3177d9ba604fc18caa8559880e7f27b8714bdc9d7472f1351a3f848a0779ed"
+    },
+    {
+      "path": "docs/development.md",
+      "sha256": "bbef0685e6d978655179c1f7cdc01b0a65be44f9367df08d9ac19eadf510b1f8"
+    },
+    {
+      "path": "docs/architecture.md",
+      "sha256": "b88e549d125a1df91d689d4864cbc584b3ac4ec129d541233114978c02b2d8d2"
+    },
+    {
+      "path": "docs/publication-checklist.md",
+      "sha256": "a2d8c355ed11b2202fdb09f378af472885cf5041b2226c13cd7781bc7cd85b93"
+    }
+  ],
+  "commits": [],
+  "note": "Inherited shared parent repository contains pre-existing changes; no branch/index/history mutation or mixed commit was made in this execution."
+}

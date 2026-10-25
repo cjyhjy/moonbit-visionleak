@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "sourceDimensions": [
+    4000,
+    3000
+  ],
+  "sourceImages": 3,
+  "sourcePixels": 36000000,
+  "maximumResidentSetBytes": 255574016,
+  "rawTimeLog": "large-memory-time.log",
+  "stdout": {
+    "ok": true,
+    "complete": true,
+    "status": "complete",
+    "auditId": "3e63a956036da9b403d88ac0aca3eae35dfd764e02f232c5b2d3f47cffd0d907",
+    "report": "/Users/cjy/Documents/ChatGPT/\u9ed1\u5ba2\u677e\u65b0\u9879\u76ee/projects/visionleak/.ci-artifacts/plan-0.5.0/large-memory-measured/report.json",
+    "images": 3,
+    "pairs": 3,
+    "errors": 0
+  },
+  "method": "macOS /usr/bin/time -l on the CLI process only; fixture generation ran in a separate process. Current full raw decoding remains in sharp/Node; canonical RGB is hashed in bounded MoonBit chunks."
+}

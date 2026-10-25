@@ -1,0 +1,42 @@
+
+> visionleak@0.4.0 test
+> node --test tests/*.test.mjs
+
+✔ real CLI separates byte equality from decoded pixel equality, preserves input, and binds stable audit IDs (209.993959ms)
+✔ decode plus real core follows EXIF orientation and canonical white alpha semantics (10.349333ms)
+✔ a bad image and a symlink leave reviewable partial evidence and explicit errors (74.775375ms)
+✔ image, pixel, file, total-pixel, comparison, and output budgets are observable (398.095041ms)
+✔ fatal arguments and empty roots return structured errors without creating a report (314.572583ms)
+✔ overwrite is explicit and refuses unrelated files even with --force (252.474958ms)
+✔ exported API merges partial options, validates them, and audit identity includes scan scope and errors (27.802958ms)
+✔ loopback server serves only fixed assets and one report, and denies traversal, symlinks, writes, and foreign hosts (88.962709ms)
+✔ symlinked output ancestry is rejected before creating directories in the dataset (2.516375ms)
+✔ server rejects altered stable report fields even when the old auditId is retained (10.325833ms)
+✔ opt-in mirror CLI emits review candidates from actual reflected files and binds mode to identity (78.884042ms)
+✔ opt-in rotations audit physical rotated and rotated-reflected files without making exact groups (88.795167ms)
+✔ compiled JSON and bytes exports preserve the host protocol (3.14725ms)
+✔ incremental SHA-256 opaque JS state accepts Buffer chunks and matches Node crypto (4.578666ms)
+✔ thumbnail sources are local and cannot traverse or execute URLs (0.478ms)
+✔ validation is atomic and review export roundtrips without modifying machine evidence (4.079208ms)
+✔ filters compose evidence, human decision, path, split, and maximum distance (0.453333ms)
+✔ an imported report cannot reuse another audit server thumbnails (0.230542ms)
+✔ progress distinguishes unreviewed and unsure pairs inside the current scope (0.432958ms)
+✔ next pending navigation wraps inside the filtered queue and skips reviewed/current pairs (0.548416ms)
+✔ marking a filtered pair continues after its old position instead of returning to the beginning (1.215ms)
+✔ one-step undo removes a new mark and restores an earlier decision including its note (0.678583ms)
+✔ undo cannot erase later notes, imported changes, another audit, or unrelated pair reviews (1.158334ms)
+✔ mirror host adapter routes to the compiled optional export (6.522875ms)
+✔ orientation host adapter routes booleans and bytes to the optional core export (6.2075ms)
+✔ legacy mirror mode preserves complete 0.3.0 evidence and work counts on the real development photos (9.659833ms)
+✔ content identity accepts v0.1.0 reports and reviewed exports without rebinding evidence (6.190417ms)
+✔ v2 canonical identity survives object-key reorder but binds array order and unknown fields (0.88075ms)
+✔ public JS pixel adapter rejects inputs that the compiled ABI could coerce (0.513667ms)
+✔ public JS pixel adapter accepts Uint8Array and the Buffer decoder output (5.856458ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1658.704958

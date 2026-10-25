@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "visionleak-photo-candidate-freeze-v1",
+  "purpose": "Candidate detection behavior frozen before examining holdout metrics; documentation and verification integration may still change.",
+  "files": {
+    "core/audit.mbt": "512c05272df6ad2d26810769baadbffd74856f57db068c305f65c7aebff4d6bd",
+    "core/core_wbtest.mbt": "2089dd62087314a0fd5d4884abe3f672b72214434f6355d3b7cfb800548ce760",
+    "core/fingerprint.mbt": "b5bb1100ae186d6025968ead981d29d8da16bfc09118536711f1ef7316fc6bc8",
+    "core/json_helpers.mbt": "a96a4a33e2816a5ae513b6bc4e70e65cd732684db9a974fb6e568ed988562ea4",
+    "core/sha256.mbt": "7964c0dda68c4b8260f4ac4681118f095f074cee7d395ddb6ef2702f9304d513",
+    "tools/cli.mjs": "951afcfef002af6f2298b49a0e19b043a9c70efa54e35ab7c1b063f0465f52d6",
+    "tools/runtime.mjs": "1d07720af56c3ac757a3f189567179d8dca68d4ce1672c2c0918b0668f242ddf",
+    "tools/decode.mjs": "fbcc0c9debed95f5513174538573142c8cc5a9b8f2cbe36f709f5b5e64958300",
+    "dist/visionleak.js": "86a74558178474cc22591e1e4da38cc8a0b547c7c39ec3b9d9282d9736093bcb"
+  }
+}

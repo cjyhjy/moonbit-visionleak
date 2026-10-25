@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "visionleak-mooncakes-dry-run-v1",
+  "testedAt": "2026-10-25T09:26:15.221348+00:00",
+  "status": "server-accepted-cli-nonzero",
+  "module": "cjyhjy/visionleak",
+  "version": "0.4.0",
+  "command": "env MOON_HOME=<existing cjyhjy toolchain home> ./.toolchain/bin/moon publish --dry-run --frozen",
+  "authorization": "Owner explicitly authorized using the existing cjyhjy login and possible package transmission to mooncakes.io for this dry-run only.",
+  "moonVersion": "0.1.20261012 (748b63c)",
+  "mooncakeVersion": "0.1.20260911 (7344121)",
+  "exitCode": 255,
+  "sourceCheck": "passed",
+  "extractedPackageCheck": "passed",
+  "serverStatus": 202,
+  "serverDetail": "Dry run completed successfully. No changes were made. The dry-run was made for package cjyhjy/visionleak version 0.4.0.",
+  "actualPublicationPerformed": false,
+  "credentialCopiedOrExposed": false,
+  "package": {
+    "path": "_build/publish/cjyhjy-visionleak-0.4.0.zip",
+    "bytes": 16012913,
+    "sha256": "c4efb189f60c711d4e69de4bb8e751e3ac9c40f4ad5ba5e12eea17bfb8a8d402",
+    "entries": 632,
+    "manifest": "mooncakes-followup-package-files.json"
+  },
+  "log": "logs/mooncakes-followup-dry-run.log",
+  "limitation": "The server accepted the dry-run, but the pinned client exits 255 and prints `moon publish failed`. Do not claim a zero-exit CLI success. No claim is made about the cause without owning client source. The final 0.5.0 package still needs a fresh dry-run after versioning and all phase acceptance."
+}

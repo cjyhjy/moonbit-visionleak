@@ -1,0 +1,1 @@
+{"status": "passed", "combinedNearOnly": {"default": {"tp": 89, "fp": 0, "fn": 171, "tn": 1160, "precision": 1.0, "recall": 0.3423076923076923}, "mirrors": {"tp": 175, "fp": 0, "fn": 85, "tn": 1160, "precision": 1.0, "recall": 0.6730769230769231}, "orientations": {"tp": 225, "fp": 0, "fn": 35, "tn": 1160, "precision": 1.0, "recall": 0.8653846153846154}}, "negativePairs": 1160}

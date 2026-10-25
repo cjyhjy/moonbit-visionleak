@@ -1,0 +1,71 @@
+{
+  "status": "passed",
+  "browser": "154.0.8037.58",
+  "url": "http://127.0.0.1:64680/",
+  "checks": [
+    {
+      "passed": true,
+      "images": 50,
+      "auditId": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078",
+      "overflow": false,
+      "pairs": 131,
+      "name": "desktop-core-report-and-review-persistence",
+      "compiledCoreLoaded": true
+    },
+    {
+      "wrongAuditNotice": "auditId 不匹配：复核记录属于另一份审计，未导入任何标记。",
+      "passed": true,
+      "name": "review-note-persistence-and-atomic-import",
+      "invalidPairRejected": true,
+      "newerReviewMerged": true
+    },
+    {
+      "name": "tampered-report-rejection-preserves-state",
+      "passed": true,
+      "message": "报告内容与 auditId 不匹配，未加载报告或复核记录。请重新运行审计生成完整报告。"
+    },
+    {
+      "passed": true,
+      "message": "已加载文件 phase01-followup-legacy-report.json：59 张图像、96 对证据。 当前报告与本地服务的 auditId 不同或服务报告尚未加载，已禁用缩略图，防止误显示另一份报告的图片。请使用这份报告重新启动本地服务。",
+      "imagesVisible": false,
+      "name": "legacy-010-report-import-and-thumbnail-isolation",
+      "originalReviewRestored": true,
+      "auditId": "dc9fb9efb9db57e2a9e7381181c83d89118cab0b84029a14770177d08c55f2c2"
+    },
+    {
+      "name": "desktop-layout-and-thumbnails",
+      "passed": true,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "passed": true,
+      "innerWidth": 390,
+      "name": "mobile-layout",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollWidth": 375
+    },
+    {
+      "passed": true,
+      "name": "filters-search-and-keyboard-navigation",
+      "bytePairs": 5,
+      "searchResults": 5
+    }
+  ],
+  "schemaVersion": "visionleak-browser-followup-v1",
+  "testedAt": "2026-10-25T09:26:15.218163+00:00",
+  "backend": "Tabbit stable launcher",
+  "sourceDigest": "90e357d79d6c85b17cabd41cd833f61522d433ce870e8d735fe4ca193cc68a40",
+  "supersedesUnavailableAttempt": "browser-migration.json",
+  "downloadVerification": "browser-downloads-followup.json",
+  "screenshots": [
+    "demo/qa/phase01-followup-desktop.png",
+    "demo/qa/phase01-followup-mobile.png"
+  ],
+  "scope": "Live desktop and mobile workbench interactions with the compiled MoonBit core; native JSON downloads verified from disk. Browser automation exercises a 0.4.0 photo report and a legacy 0.1.0 report. No production code was changed."
+}

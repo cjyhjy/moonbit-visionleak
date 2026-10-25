@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "sourceDimensions": [
+    4000,
+    3000
+  ],
+  "sourceImages": 3,
+  "sourcePixels": 36000000,
+  "maximumResidentSetBytes": 236109824,
+  "maximumResidentSetMiB": 225.171875,
+  "engineSha256": "4225b58ecbeab1e4fa42087a601ca77c0f89080c79ca14523f4ac36f9875fb63",
+  "auditId": "d65513820468c0fe4e884408abb3fced844bd568944409ed0144188a4a9147a6",
+  "elapsedSeconds": 2.5,
+  "report": ".ci-artifacts/plan-0.5.0/large-memory-final/report.json",
+  "stdout": {
+    "ok": true,
+    "complete": true,
+    "status": "complete",
+    "auditId": "d65513820468c0fe4e884408abb3fced844bd568944409ed0144188a4a9147a6",
+    "report": "/Users/cjy/Documents/ChatGPT/\u9ed1\u5ba2\u677e\u65b0\u9879\u76ee/projects/visionleak/.ci-artifacts/plan-0.5.0/large-memory-final/report.json",
+    "images": 3,
+    "pairs": 3,
+    "errors": 0
+  },
+  "method": "macOS /usr/bin/time -l; CLI process only, fixture generation in a separate process. Node/sharp retains a full RGBA decode; MoonBit canonical RGB hashing is chunked. This is one local run, not a universal memory bound."
+}

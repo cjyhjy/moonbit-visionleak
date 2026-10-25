@@ -1,0 +1,11 @@
+Running moon check ...
+Finished. moon: no work to do
+Check passed
+validating packaged zip: /Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak/_build/publish/cjyhjy-visionleak-0.4.0.zip
+extracting packaged zip to /Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak/_build/publish/verify/mooncake_publish_check8iAPmw
+running moon check on extracted package
+Running moon check ...
+Finished. moon: ran 3 tasks, now up to date
+Check passed
+Server status: 202 Accepted, detail: Dry run completed successfully. No changes were made. The dry-run was made for package cjyhjy/visionleak version 0.4.0.
+Error: `moon publish` failed

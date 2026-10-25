@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "visionleak-mooncakes-exit-fix-v1",
+  "status": "passed",
+  "testedAt": "2026-10-25T09:43:02.230356+00:00",
+  "rootCause": "mooncake 7344121 accepts only HTTP 200 for publishing; successful preview HTTP 202 falls into the error branch. moon adapter bails on the child failure, runtime returns -1, which is observed as 255 on POSIX.",
+  "publisherSha256": "439b2cf3c9c6ea87f4788b3fc79f4b2c2e35c9e6f5ddbf9c89fdccf294cdebbe",
+  "binaryEvidence": "mooncake-publish-status-disassembly.txt",
+  "comparisonAddress": "0x100009424: cmp w8, #0xc8 (200); b.ne error branch at 0x1000094a4",
+  "officialSources": [
+    "https://github.com/moonbitlang/moon/blob/748b63c/crates/moon/src/cli/mooncake_adapter.rs",
+    "https://github.com/moonbitlang/moon/blob/748b63c/crates/moon/src/cli/runtime.rs"
+  ],
+  "fix": "tools/moon routes only explicit publish --dry-run through tools/mooncakes_dry_run.py. The adapter accepts only the affected publisher, two passed checks, one exact 202 no-change confirmation bound to current module/version, and the expected generic final error. Other results keep their original failure.",
+  "localResponseTests": [
+    {
+      "http": 200,
+      "rawExit": 0,
+      "fixedExit": 0
+    },
+    {
+      "http": 202,
+      "rawExit": 255,
+      "fixedExit": 0
+    },
+    {
+      "http": 401,
+      "rawExit": 255,
+      "fixedExit": 255
+    },
+    {
+      "http": 500,
+      "rawExit": 255,
+      "fixedExit": 255
+    }
+  ],
+  "live": {
+    "command": "VISIONLEAK_MOONCAKES_HOME=<existing cjyhjy home> ./tools/moon publish --dry-run --frozen",
+    "serverStatus": 202,
+    "upstreamExitCode": 255,
+    "effectiveExitCode": 0,
+    "actualPublicationPerformed": false,
+    "log": "logs/mooncakes-fixed-live-dry-run.log",
+    "packageSha256": "e8b62a632e24fcb097ab26e906117305537e864b2540563cd14bc0f8eeeccfb0",
+    "packageBytes": 16358886
+  },
+  "ci": {
+    "checks": 23,
+    "status": "passed",
+    "report": "mooncakes-fix-ci.json",
+    "sourceDigest": "6180b1f71f6f250dd6ccc48c92d2c4cb09ec9cfdc7c5c59802ca36be97bbf4a9",
+    "compiledArtifactUnchanged": true
+  },
+  "scope": "Project preview entry point is fixed. Official binaries and compiler pins remain unchanged; invoking the raw official binary still exhibits the bug. Final 0.5.0 publication remains subject to phase acceptance and separate authorization."
+}

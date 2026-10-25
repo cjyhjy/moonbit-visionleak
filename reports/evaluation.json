@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T15:55:44.408365+00:00",
+  "generatedAt": "2026-10-23T16:01:05.769859+00:00",
   "dataset": {
     "name": "visionleak-synthetic-v1",
     "images": 59,
@@ -39,7 +39,7 @@
       "6"
     ],
     "exitCode": 0,
-    "wallSeconds": 0.283349999692291,
+    "wallSeconds": 0.23201258340850472,
     "complete": true,
     "stats": {
       "inputImages": 59,
@@ -58,9 +58,11 @@
       "maxTotalPixels": 100000000,
       "maxFileBytes": 33554432,
       "maxComparisons": 1000000,
-      "maxPairs": 10000
+      "maxPairs": 10000,
+      "includeMirrors": false,
+      "includeRotations": false
     },
-    "reportSha256": "e8a51870f445f733370975058154a77e91449c8c2114bccbd2401ff4752e76fa"
+    "reportSha256": "8cd0d294caa79db04e55e73f1a13ece3ee69ee037036e3ef92cda0a681acba74"
   },
   "scores": {
     "exact": {
@@ -3817,8 +3819,8 @@
     "passed": true
   },
   "implementationSha256": {
-    "dist/visionleak.js": "94b042685bb55030f5b44f11545c7b6f19ee28cf5971bb3c4598398c2281f2ab",
-    "tools/cli.mjs": "e2fd09b3cc621da176541741436005c01634875487350aff4a1fcdd20a67e160",
+    "dist/visionleak.js": "86a74558178474cc22591e1e4da38cc8a0b547c7c39ec3b9d9282d9736093bcb",
+    "tools/cli.mjs": "951afcfef002af6f2298b49a0e19b043a9c70efa54e35ab7c1b063f0465f52d6",
     "tools/decode.mjs": "fbcc0c9debed95f5513174538573142c8cc5a9b8f2cbe36f709f5b5e64958300",
     "tools/evaluate.py": "30c2e43b398ef6de4f06bd8b413bed9c55991920eeb3b197e3c3504477a73b05",
     "tools/generate-fixtures.py": "996951ed8346ce8e6eba1fc57b01b5b132d22a32819de390847fe7002c50d072"

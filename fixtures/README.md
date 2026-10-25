@@ -21,3 +21,7 @@ research/.venv-oracle/bin/python tools/generate-fixtures.py --out fixtures/repro
 生成器要求输出目录不存在，拒绝覆盖已有内容。在本次锁定 Pillow 11.3.0 的 macOS ARM64 环境中，两个全新目录独立生成的所有文件逐字节相同。平台或图像编码库构建不同可能改变文件编码字节；本包随附固定文件和摘要，以包内文件作为本次成绩的依据。
 
 生成图像由本项目以 CC0-1.0 释出；生成器源码沿用项目源码许可证。参见 [LICENSE.txt](LICENSE.txt)。Pillow、ImageHash 及依赖的许可证不因此改变。
+
+## 真实照片受控样本
+
+`photos-v1/` 含 5 个开发来源与 5 个保留来源，各 50 张受控变换照片。每组的 train/validation/test 是审计目录，不是模型训练安排。来源与许可证见 `research/photos-v1/ATTRIBUTION.md`；不能用合成图像的许可覆盖第三方照片。

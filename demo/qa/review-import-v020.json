@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "visionleak-review-v1",
+  "auditId": "e42687baf8bbb30662aedd69e1b909bbdbf6b5aeef85ea7a6d64d90a55a41f10",
+  "reviews": [
+    {
+      "pairKey": "[\"test/alpha-white.png\",\"train/alpha-source.png\"]",
+      "left": "test/alpha-white.png",
+      "right": "train/alpha-source.png",
+      "decision": "confirmed",
+      "note": "QA：0.2.0 导入复核测试，合成白底像素等同。",
+      "updatedAt": "2026-10-22T16:22:37.313Z"
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "default": {
+    "near": {
+      "tp": 47,
+      "fp": 0,
+      "fn": 83,
+      "precision": 1.0,
+      "recall": 0.36153846153846153
+    },
+    "anchors": {
+      "brightness-1.15": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "byte-copy": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "center-crop-90percent": {
+        "detected": 2,
+        "total": 5,
+        "missedSources": [
+          "camera",
+          "eagle",
+          "gravel"
+        ]
+      },
+      "jpeg-quality70": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "rotate90": {
+        "detected": 0,
+        "total": 5,
+        "missedSources": [
+          "camera",
+          "clock",
+          "eagle",
+          "gravel",
+          "rocket"
+        ]
+      },
+      "horizontal-mirror": {
+        "detected": 0,
+        "total": 5,
+        "missedSources": [
+          "camera",
+          "clock",
+          "eagle",
+          "gravel",
+          "rocket"
+        ]
+      },
+      "mirror-jpeg-quality70": {
+        "detected": 0,
+        "total": 5,
+        "missedSources": [
+          "camera",
+          "clock",
+          "eagle",
+          "gravel",
+          "rocket"
+        ]
+      },
+      "png-repack": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "resize-73percent": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      }
+    },
+    "work": 584
+  },
+  "mirrors": {
+    "near": {
+      "tp": 91,
+      "fp": 0,
+      "fn": 39,
+      "precision": 1.0,
+      "recall": 0.7
+    },
+    "anchors": {
+      "brightness-1.15": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "byte-copy": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "center-crop-90percent": {
+        "detected": 2,
+        "total": 5,
+        "missedSources": [
+          "camera",
+          "eagle",
+          "gravel"
+        ]
+      },
+      "jpeg-quality70": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "rotate90": {
+        "detected": 0,
+        "total": 5,
+        "missedSources": [
+          "camera",
+          "clock",
+          "eagle",
+          "gravel",
+          "rocket"
+        ]
+      },
+      "horizontal-mirror": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "mirror-jpeg-quality70": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "png-repack": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "resize-73percent": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      }
+    },
+    "work": 2382
+  },
+  "orientations": {
+    "near": {
+      "tp": 116,
+      "fp": 0,
+      "fn": 14,
+      "precision": 1.0,
+      "recall": 0.8923076923076924
+    },
+    "anchors": {
+      "brightness-1.15": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "byte-copy": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "center-crop-90percent": {
+        "detected": 2,
+        "total": 5,
+        "missedSources": [
+          "camera",
+          "eagle",
+          "gravel"
+        ]
+      },
+      "jpeg-quality70": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "rotate90": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "horizontal-mirror": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "mirror-jpeg-quality70": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "png-repack": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      },
+      "resize-73percent": {
+        "detected": 5,
+        "total": 5,
+        "missedSources": []
+      }
+    },
+    "work": 19396
+  }
+}

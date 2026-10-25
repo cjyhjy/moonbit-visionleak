@@ -1,0 +1,4343 @@
+{
+  "schemaVersion": "visionleak-photo-truth-v1",
+  "name": "licensed-photos-v1-holdout",
+  "partition": "holdout",
+  "images": [
+    {
+      "id": "test/camera-brightness-1.15.png",
+      "path": "test/camera-brightness-1.15.png",
+      "split": "test",
+      "sourceId": "camera",
+      "partition": "holdout",
+      "transform": "brightness-1.15",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "09edb38ca82da7dc3a3c10b708f624264675eaa8d2d506f487f0ccf132f2683b",
+      "canonicalPixelDigest": "d02400a653c8b3a14c074e345e86b3fecac2434b79719ae3280b5370c2012e6a",
+      "bytes": 61486,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/camera-byte-copy.png",
+      "path": "test/camera-byte-copy.png",
+      "split": "test",
+      "sourceId": "camera",
+      "partition": "holdout",
+      "transform": "byte-copy",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "e4c80431766897c3883fc85b481d95126e26a06c127c0da2e5ec7c31aa1947e9",
+      "canonicalPixelDigest": "20ee1993bfcde1d3395a49ce389d72b4240ed171291696704f95f4ae9630dd46",
+      "bytes": 59285,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/camera-center-crop-90percent.png",
+      "path": "test/camera-center-crop-90percent.png",
+      "split": "test",
+      "sourceId": "camera",
+      "partition": "holdout",
+      "transform": "center-crop-90percent",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "c434368ab27496fac888a094874cad1c8c03db74323e1f78f3866b0855a96c3d",
+      "canonicalPixelDigest": "ea53fdfedbdc646918cee13c5cf59f59fcff1e1f05deba81d2de8e278b4ac21e",
+      "bytes": 57421,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/camera-jpeg-quality70.jpg",
+      "path": "test/camera-jpeg-quality70.jpg",
+      "split": "test",
+      "sourceId": "camera",
+      "partition": "holdout",
+      "transform": "jpeg-quality70",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "89a62fe0736bb8b718dee300f98d2390c11ce4106f1f33cd3f3559d1051a9ea8",
+      "canonicalPixelDigest": "3ffde0d64409f76695210225519f9dffed431dfbd3513be6598636231fbf2984",
+      "bytes": 9365,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/camera-rotate90.png",
+      "path": "test/camera-rotate90.png",
+      "split": "test",
+      "sourceId": "camera",
+      "partition": "holdout",
+      "transform": "rotate90",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "6c3767804dba4b6eaaba14f37290ed52b351132ba311ef974b3003e4e386cad8",
+      "canonicalPixelDigest": "5507783faf5cf78995d87dd345238c102d3e3279c2e82a8e4138a0a7ffce3bae",
+      "bytes": 59448,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/clock-brightness-1.15.png",
+      "path": "test/clock-brightness-1.15.png",
+      "split": "test",
+      "sourceId": "clock",
+      "partition": "holdout",
+      "transform": "brightness-1.15",
+      "width": 256,
+      "height": 192,
+      "byteDigest": "75691c24506174c5e94aa4eb74a38b4344270c2e8bae37510c12567709ed15cc",
+      "canonicalPixelDigest": "fe6f7122840fcbb96632baa6895971f0b6fe501d2da3999d8c93a5ac8ee333ab",
+      "bytes": 23306,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/clock-byte-copy.png",
+      "path": "test/clock-byte-copy.png",
+      "split": "test",
+      "sourceId": "clock",
+      "partition": "holdout",
+      "transform": "byte-copy",
+      "width": 256,
+      "height": 192,
+      "byteDigest": "cb20aa7e001814a7952e2361ceab5e4e3d952488b8a383bda55a949274421b2f",
+      "canonicalPixelDigest": "97f313ab199852a327115d9028644f4bc61523f4afe8c07cf359aae021704891",
+      "bytes": 21417,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/clock-center-crop-90percent.png",
+      "path": "test/clock-center-crop-90percent.png",
+      "split": "test",
+      "sourceId": "clock",
+      "partition": "holdout",
+      "transform": "center-crop-90percent",
+      "width": 256,
+      "height": 192,
+      "byteDigest": "be57fc0b686230514a168166dece64e51b25a581e50bd64a93d072448e935e45",
+      "canonicalPixelDigest": "7df8ae416b9372c90ff1261a8520805eec671544284d9f6679ba484e74f1a289",
+      "bytes": 20447,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/clock-jpeg-quality70.jpg",
+      "path": "test/clock-jpeg-quality70.jpg",
+      "split": "test",
+      "sourceId": "clock",
+      "partition": "holdout",
+      "transform": "jpeg-quality70",
+      "width": 256,
+      "height": 192,
+      "byteDigest": "02529d395152a879d9553aaad2330f2817f8cc6b045898f45b655752564ba209",
+      "canonicalPixelDigest": "2082fe617f7181b6e0689f85395ac3cbab68c8af3d7c470ced7cceed97eda6a5",
+      "bytes": 2313,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/clock-rotate90.png",
+      "path": "test/clock-rotate90.png",
+      "split": "test",
+      "sourceId": "clock",
+      "partition": "holdout",
+      "transform": "rotate90",
+      "width": 192,
+      "height": 256,
+      "byteDigest": "74673a3e343ebe1edfac420c7947f254d846200c78c0799d8f0d36d903e2208b",
+      "canonicalPixelDigest": "3c24ea6404b78d9275fe1caae8e685ea82ae16ef7a62f248dfd54dbf6c17de05",
+      "bytes": 21690,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/eagle-brightness-1.15.png",
+      "path": "test/eagle-brightness-1.15.png",
+      "split": "test",
+      "sourceId": "eagle",
+      "partition": "holdout",
+      "transform": "brightness-1.15",
+      "width": 232,
+      "height": 256,
+      "byteDigest": "9457262c45611133755e81c0a159016545db115eb26cf3fcb7a35d9d96e7d9a9",
+      "canonicalPixelDigest": "664582be4d4ee79d7b9b41680d2797a6934bb7d3226f58d01d77459ab4c41d83",
+      "bytes": 58583,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/eagle-byte-copy.png",
+      "path": "test/eagle-byte-copy.png",
+      "split": "test",
+      "sourceId": "eagle",
+      "partition": "holdout",
+      "transform": "byte-copy",
+      "width": 232,
+      "height": 256,
+      "byteDigest": "675ace461ec5cd9ea6ac1532a724edf2df7dd34039a266616bc47aeb2213b40e",
+      "canonicalPixelDigest": "c574453fb7d4269549b5322f3fc36d93e2020f43c6353a60ec62ccd6f307ecc0",
+      "bytes": 56646,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/eagle-center-crop-90percent.png",
+      "path": "test/eagle-center-crop-90percent.png",
+      "split": "test",
+      "sourceId": "eagle",
+      "partition": "holdout",
+      "transform": "center-crop-90percent",
+      "width": 232,
+      "height": 256,
+      "byteDigest": "dcb636d627557b9191f077760d391f4328f2dcee8dd809aedf762e5e9e9133d2",
+      "canonicalPixelDigest": "32d6ca2870475649d4815c12c32e45373fd1e2a9bfc2fd7acc5400dbba34a235",
+      "bytes": 53302,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/eagle-jpeg-quality70.jpg",
+      "path": "test/eagle-jpeg-quality70.jpg",
+      "split": "test",
+      "sourceId": "eagle",
+      "partition": "holdout",
+      "transform": "jpeg-quality70",
+      "width": 232,
+      "height": 256,
+      "byteDigest": "a8dbf287107253231d9186b7bd0febe0b7bb421990a0670ee3b748905e3032dc",
+      "canonicalPixelDigest": "a78e543c0d8e720c4a5104d2deed7d94c67da266cc2014b11022d0aea408137b",
+      "bytes": 9486,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/eagle-rotate90.png",
+      "path": "test/eagle-rotate90.png",
+      "split": "test",
+      "sourceId": "eagle",
+      "partition": "holdout",
+      "transform": "rotate90",
+      "width": 256,
+      "height": 232,
+      "byteDigest": "02ee78082a175e9783f42e5657359888961e6fd1ff7e720e96bf0dfae9415bba",
+      "canonicalPixelDigest": "cb560b3b19fe68c207df44fc68ad10b9d350382f6bfeed40fc748346107a4fe8",
+      "bytes": 57827,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/gravel-brightness-1.15.png",
+      "path": "test/gravel-brightness-1.15.png",
+      "split": "test",
+      "sourceId": "gravel",
+      "partition": "holdout",
+      "transform": "brightness-1.15",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "3e34cacb15d8abf281613863aed5bd170d8feb2da4a1f4e77da26bcae2d277ae",
+      "canonicalPixelDigest": "88c91c0bb93173eb98350ceb073bde40d85af7c4eb85a862bdc33e859efdd1bb",
+      "bytes": 106154,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/gravel-byte-copy.png",
+      "path": "test/gravel-byte-copy.png",
+      "split": "test",
+      "sourceId": "gravel",
+      "partition": "holdout",
+      "transform": "byte-copy",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "b0e27c185d122df50d8f31f745b7736cc9095e97a07fad9385b31ae1cf35a790",
+      "canonicalPixelDigest": "a2ce2879e91e766d5ce6cc6fbccca00bb8a5bec7d90e486c9e3bf4af7598c24b",
+      "bytes": 98863,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/gravel-center-crop-90percent.png",
+      "path": "test/gravel-center-crop-90percent.png",
+      "split": "test",
+      "sourceId": "gravel",
+      "partition": "holdout",
+      "transform": "center-crop-90percent",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "b21a80d852f43a99d48a01ff3726da501df651626d20637fb80fc86f69aa69eb",
+      "canonicalPixelDigest": "4239962a3ea41f5b8d8004f961163b07f3e2329c37baa18b8bb2fbbb426161de",
+      "bytes": 91664,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/gravel-jpeg-quality70.jpg",
+      "path": "test/gravel-jpeg-quality70.jpg",
+      "split": "test",
+      "sourceId": "gravel",
+      "partition": "holdout",
+      "transform": "jpeg-quality70",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "3826ee438cc1fe0ea2655ced2776f8dcd99d9a5c37e65d087c5a1e74876e7009",
+      "canonicalPixelDigest": "0528054f0b9ddedc08b8605c9b0dd1cd9bd03685eb3f0103ece8eedf505d71a6",
+      "bytes": 20465,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/gravel-rotate90.png",
+      "path": "test/gravel-rotate90.png",
+      "split": "test",
+      "sourceId": "gravel",
+      "partition": "holdout",
+      "transform": "rotate90",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "d0464b2cac1a45cb8018948c097f8d8ee12657257d4b29f647020b870ac4ba2b",
+      "canonicalPixelDigest": "30e9e73910299d6feb9bdaff32e2524b90a1c23ce18dd19683d55da8d49f4898",
+      "bytes": 98769,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/rocket-brightness-1.15.png",
+      "path": "test/rocket-brightness-1.15.png",
+      "split": "test",
+      "sourceId": "rocket",
+      "partition": "holdout",
+      "transform": "brightness-1.15",
+      "width": 256,
+      "height": 171,
+      "byteDigest": "52f5b6f4a54aa193fd6b6dd71f4fed7b0b7b2d7fe1a0d3618147ab63b769a322",
+      "canonicalPixelDigest": "dd3dc23bc61304e8101cf8d2414d868eed9a0b6d065e2bd49ffae7dde46d81d5",
+      "bytes": 62407,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/rocket-byte-copy.png",
+      "path": "test/rocket-byte-copy.png",
+      "split": "test",
+      "sourceId": "rocket",
+      "partition": "holdout",
+      "transform": "byte-copy",
+      "width": 256,
+      "height": 171,
+      "byteDigest": "3cb9dc94df7dc3a07f14dbe1666bb18291fffa9953baad45f6adc0f73bf3cde7",
+      "canonicalPixelDigest": "8f704bab9f3cee91b7ceed93aa0eaa42f50e05a03df74a4fec57265eaa1fc771",
+      "bytes": 58875,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/rocket-center-crop-90percent.png",
+      "path": "test/rocket-center-crop-90percent.png",
+      "split": "test",
+      "sourceId": "rocket",
+      "partition": "holdout",
+      "transform": "center-crop-90percent",
+      "width": 256,
+      "height": 171,
+      "byteDigest": "71c858b5532cf2e9c548eea9780e45cab08cb8e7bcb578392c95d3e2e333ad02",
+      "canonicalPixelDigest": "d8df791b920f79f90a51c6e76e5e0f04d0654f9360af2f7f3319e54b6f8e3e06",
+      "bytes": 55320,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/rocket-jpeg-quality70.jpg",
+      "path": "test/rocket-jpeg-quality70.jpg",
+      "split": "test",
+      "sourceId": "rocket",
+      "partition": "holdout",
+      "transform": "jpeg-quality70",
+      "width": 256,
+      "height": 171,
+      "byteDigest": "ac863170340064b05e071c1039f738f1d158a3917b3e10aaa66bce043afbc309",
+      "canonicalPixelDigest": "4848ecef92b835c8fce35bed933ad8c5b1ab808f8d52bda7a55da9383ff29121",
+      "bytes": 5302,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/rocket-rotate90.png",
+      "path": "test/rocket-rotate90.png",
+      "split": "test",
+      "sourceId": "rocket",
+      "partition": "holdout",
+      "transform": "rotate90",
+      "width": 171,
+      "height": 256,
+      "byteDigest": "7442f256ff52411b32a4650ae200a852059f2f6be46c8fcda50df1d0b68b1131",
+      "canonicalPixelDigest": "15c9d265d5cc88082052ad0551eea654ede396443254f00a65518202cb9f30a5",
+      "bytes": 59128,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "train/camera-original.png",
+      "path": "train/camera-original.png",
+      "split": "train",
+      "sourceId": "camera",
+      "partition": "holdout",
+      "transform": "original",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "e4c80431766897c3883fc85b481d95126e26a06c127c0da2e5ec7c31aa1947e9",
+      "canonicalPixelDigest": "20ee1993bfcde1d3395a49ce389d72b4240ed171291696704f95f4ae9630dd46",
+      "bytes": 59285,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "train/clock-original.png",
+      "path": "train/clock-original.png",
+      "split": "train",
+      "sourceId": "clock",
+      "partition": "holdout",
+      "transform": "original",
+      "width": 256,
+      "height": 192,
+      "byteDigest": "cb20aa7e001814a7952e2361ceab5e4e3d952488b8a383bda55a949274421b2f",
+      "canonicalPixelDigest": "97f313ab199852a327115d9028644f4bc61523f4afe8c07cf359aae021704891",
+      "bytes": 21417,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "train/eagle-original.png",
+      "path": "train/eagle-original.png",
+      "split": "train",
+      "sourceId": "eagle",
+      "partition": "holdout",
+      "transform": "original",
+      "width": 232,
+      "height": 256,
+      "byteDigest": "675ace461ec5cd9ea6ac1532a724edf2df7dd34039a266616bc47aeb2213b40e",
+      "canonicalPixelDigest": "c574453fb7d4269549b5322f3fc36d93e2020f43c6353a60ec62ccd6f307ecc0",
+      "bytes": 56646,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "train/gravel-original.png",
+      "path": "train/gravel-original.png",
+      "split": "train",
+      "sourceId": "gravel",
+      "partition": "holdout",
+      "transform": "original",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "b0e27c185d122df50d8f31f745b7736cc9095e97a07fad9385b31ae1cf35a790",
+      "canonicalPixelDigest": "a2ce2879e91e766d5ce6cc6fbccca00bb8a5bec7d90e486c9e3bf4af7598c24b",
+      "bytes": 98863,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "train/rocket-original.png",
+      "path": "train/rocket-original.png",
+      "split": "train",
+      "sourceId": "rocket",
+      "partition": "holdout",
+      "transform": "original",
+      "width": 256,
+      "height": 171,
+      "byteDigest": "3cb9dc94df7dc3a07f14dbe1666bb18291fffa9953baad45f6adc0f73bf3cde7",
+      "canonicalPixelDigest": "8f704bab9f3cee91b7ceed93aa0eaa42f50e05a03df74a4fec57265eaa1fc771",
+      "bytes": 58875,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/camera-horizontal-mirror.png",
+      "path": "validation/camera-horizontal-mirror.png",
+      "split": "validation",
+      "sourceId": "camera",
+      "partition": "holdout",
+      "transform": "horizontal-mirror",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "9ddc99ba2e6576b69e214e41635f18a7924ec6108c378f7ac4fd43375a07b044",
+      "canonicalPixelDigest": "d2684550ec775c225fe89e3d7d4d515e29a8640a52e4289ee82a4a838db123a5",
+      "bytes": 59280,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/camera-mirror-jpeg-quality70.jpg",
+      "path": "validation/camera-mirror-jpeg-quality70.jpg",
+      "split": "validation",
+      "sourceId": "camera",
+      "partition": "holdout",
+      "transform": "mirror-jpeg-quality70",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "8749486c532000c438c2ca535a2e6337f8d4f5045b68d67d99d34cdfa43bc176",
+      "canonicalPixelDigest": "8d88e5f650b25c5fde5e97b0e0403fd18d195bc9cdc7dbb1dc30cb4f8d86977b",
+      "bytes": 9353,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/camera-png-repack.png",
+      "path": "validation/camera-png-repack.png",
+      "split": "validation",
+      "sourceId": "camera",
+      "partition": "holdout",
+      "transform": "png-repack",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "7a9abae8706a0602b0b6e4329e72cea773d91c790392dcf7706beb6be4c79a72",
+      "canonicalPixelDigest": "20ee1993bfcde1d3395a49ce389d72b4240ed171291696704f95f4ae9630dd46",
+      "bytes": 86742,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/camera-resize-73percent.png",
+      "path": "validation/camera-resize-73percent.png",
+      "split": "validation",
+      "sourceId": "camera",
+      "partition": "holdout",
+      "transform": "resize-73percent",
+      "width": 186,
+      "height": 186,
+      "byteDigest": "a5f27428d38580f2591769d4eb5f21b64777cd443242701d0a421ace8ad4f430",
+      "canonicalPixelDigest": "052c3ac711f979f2aa217f400da569e705a31aa8fc213e8a646d11c61bea2f4a",
+      "bytes": 33726,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/clock-horizontal-mirror.png",
+      "path": "validation/clock-horizontal-mirror.png",
+      "split": "validation",
+      "sourceId": "clock",
+      "partition": "holdout",
+      "transform": "horizontal-mirror",
+      "width": 256,
+      "height": 192,
+      "byteDigest": "d1d14a19358050b0ef2f8a0b0e32fb7509014fe5e73a77658e9ee50443fd2e52",
+      "canonicalPixelDigest": "9ddc6669ac8c220f3691f0a7a9b98aa8659d566bdfd2ebe5d3b7c250468bf5c2",
+      "bytes": 21397,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/clock-mirror-jpeg-quality70.jpg",
+      "path": "validation/clock-mirror-jpeg-quality70.jpg",
+      "split": "validation",
+      "sourceId": "clock",
+      "partition": "holdout",
+      "transform": "mirror-jpeg-quality70",
+      "width": 256,
+      "height": 192,
+      "byteDigest": "db208bac343aea121335c9879eebdb02d4d238586ef9975c2076ce6b94506322",
+      "canonicalPixelDigest": "1c81102b40f053a637bc9aae5ed5f020f05e2287fa5c02cfa3061d9211d578df",
+      "bytes": 2321,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/clock-png-repack.png",
+      "path": "validation/clock-png-repack.png",
+      "split": "validation",
+      "sourceId": "clock",
+      "partition": "holdout",
+      "transform": "png-repack",
+      "width": 256,
+      "height": 192,
+      "byteDigest": "352aa17bf78fdefe3c36bcbfb9ba25160741717ba5b80e022f5d9fd88eeaf274",
+      "canonicalPixelDigest": "97f313ab199852a327115d9028644f4bc61523f4afe8c07cf359aae021704891",
+      "bytes": 44417,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/clock-resize-73percent.png",
+      "path": "validation/clock-resize-73percent.png",
+      "split": "validation",
+      "sourceId": "clock",
+      "partition": "holdout",
+      "transform": "resize-73percent",
+      "width": 186,
+      "height": 140,
+      "byteDigest": "e1a95f6eb22aed5d873abba720b0635d47c37b84c948a32b7314b5d616540a70",
+      "canonicalPixelDigest": "be0a5305f97d24eeeea9312a03fc2b1f611ec095bcef1497f1101c5e6af85835",
+      "bytes": 11811,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/eagle-horizontal-mirror.png",
+      "path": "validation/eagle-horizontal-mirror.png",
+      "split": "validation",
+      "sourceId": "eagle",
+      "partition": "holdout",
+      "transform": "horizontal-mirror",
+      "width": 232,
+      "height": 256,
+      "byteDigest": "7e19b0eb77ed8ad6a33699037dcb49bfae5951ea663edbe5c2258830dcffd771",
+      "canonicalPixelDigest": "bc9a8ba55623d536580b3078f93f3465b72e98f0fb5c76aa81c473a5f67159ea",
+      "bytes": 56770,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "path": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "split": "validation",
+      "sourceId": "eagle",
+      "partition": "holdout",
+      "transform": "mirror-jpeg-quality70",
+      "width": 232,
+      "height": 256,
+      "byteDigest": "3686fcc33066db00e819a17d4a5f0a2c6d87e2ed96a368e6af7d7c83adf725b5",
+      "canonicalPixelDigest": "30f9229c04adedd863bbbc76e25deb91bd6301ee20fe3c9fbe7a675fe813fb37",
+      "bytes": 9492,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/eagle-png-repack.png",
+      "path": "validation/eagle-png-repack.png",
+      "split": "validation",
+      "sourceId": "eagle",
+      "partition": "holdout",
+      "transform": "png-repack",
+      "width": 232,
+      "height": 256,
+      "byteDigest": "daf23772415a45ac0de5d5c9191343a92c36fc74e717caf0b62c76740f2cae60",
+      "canonicalPixelDigest": "c574453fb7d4269549b5322f3fc36d93e2020f43c6353a60ec62ccd6f307ecc0",
+      "bytes": 84047,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/eagle-resize-73percent.png",
+      "path": "validation/eagle-resize-73percent.png",
+      "split": "validation",
+      "sourceId": "eagle",
+      "partition": "holdout",
+      "transform": "resize-73percent",
+      "width": 169,
+      "height": 186,
+      "byteDigest": "782a93e8de37ec5f5cc5e022b97c13b2cddbe8d452e1d94b4939e287f99bb4d2",
+      "canonicalPixelDigest": "af193b95307354151f6874b2759c648ca2374b6ccdd6b185285a4f45dca60b0d",
+      "bytes": 31902,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/gravel-horizontal-mirror.png",
+      "path": "validation/gravel-horizontal-mirror.png",
+      "split": "validation",
+      "sourceId": "gravel",
+      "partition": "holdout",
+      "transform": "horizontal-mirror",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "a078d3587498b703c04a055908c8342c97f07193492a9934d9aaa49c1bd5cf6d",
+      "canonicalPixelDigest": "8ab5221a220649858b78e79de446976fe3d7225f78a5bcb155123dcf883cfc4a",
+      "bytes": 98383,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "path": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "split": "validation",
+      "sourceId": "gravel",
+      "partition": "holdout",
+      "transform": "mirror-jpeg-quality70",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "6e205159f38f7df49707fea0ef99af18325aacc83a7d4fbe3cb602901062adea",
+      "canonicalPixelDigest": "33b8fd93c09e4090b67c431f3bdfda1038a15a5064da33a19f0e903eaac7a362",
+      "bytes": 20452,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/gravel-png-repack.png",
+      "path": "validation/gravel-png-repack.png",
+      "split": "validation",
+      "sourceId": "gravel",
+      "partition": "holdout",
+      "transform": "png-repack",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "e5699c765670f710fae88cb4848b4c438bf653b64748206a40c891e4bed6c5b9",
+      "canonicalPixelDigest": "a2ce2879e91e766d5ce6cc6fbccca00bb8a5bec7d90e486c9e3bf4af7598c24b",
+      "bytes": 131863,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/gravel-resize-73percent.png",
+      "path": "validation/gravel-resize-73percent.png",
+      "split": "validation",
+      "sourceId": "gravel",
+      "partition": "holdout",
+      "transform": "resize-73percent",
+      "width": 186,
+      "height": 186,
+      "byteDigest": "caccb2948871872ceb3941a61628d0798b8148b38d26cfe3a4f204da6a583d05",
+      "canonicalPixelDigest": "ffc4c284b5b650d4b494a1e38a75e2107e12d5bad322d1cf1d91dd6a34b356c2",
+      "bytes": 58172,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/rocket-horizontal-mirror.png",
+      "path": "validation/rocket-horizontal-mirror.png",
+      "split": "validation",
+      "sourceId": "rocket",
+      "partition": "holdout",
+      "transform": "horizontal-mirror",
+      "width": 256,
+      "height": 171,
+      "byteDigest": "c7445c099e7f8cf4cb2105c96e71f0fa42d4e60b422db39677febb027f472323",
+      "canonicalPixelDigest": "146e23d29393df50abe98782768e3525087e1519f47b5ca3a9c18f306aab9393",
+      "bytes": 58727,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "path": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "split": "validation",
+      "sourceId": "rocket",
+      "partition": "holdout",
+      "transform": "mirror-jpeg-quality70",
+      "width": 256,
+      "height": 171,
+      "byteDigest": "f3e37e4e03b6232e126ce6d40cdaabfe2fc20c0a173c551ec0dfa13573122bc9",
+      "canonicalPixelDigest": "34636195de0f756a7acdb4ed7f4eaeff25145740cc382d20cb703f93010db5b2",
+      "bytes": 5288,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/rocket-png-repack.png",
+      "path": "validation/rocket-png-repack.png",
+      "split": "validation",
+      "sourceId": "rocket",
+      "partition": "holdout",
+      "transform": "png-repack",
+      "width": 256,
+      "height": 171,
+      "byteDigest": "b04c25318642ad808551e4d7edf4f6266c8a9bbf37607271ec1d00d02520d58c",
+      "canonicalPixelDigest": "8f704bab9f3cee91b7ceed93aa0eaa42f50e05a03df74a4fec57265eaa1fc771",
+      "bytes": 87620,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/rocket-resize-73percent.png",
+      "path": "validation/rocket-resize-73percent.png",
+      "split": "validation",
+      "sourceId": "rocket",
+      "partition": "holdout",
+      "transform": "resize-73percent",
+      "width": 186,
+      "height": 124,
+      "byteDigest": "b23857e2b77439103fed33d6245a1af78abb94da09e7b0b4d46109a5ee53b68a",
+      "canonicalPixelDigest": "53e9e0320dde586e2e3eb6ef00f45a48d1c91e7110108f5cad690883675b098b",
+      "bytes": 33066,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    }
+  ],
+  "pairs": [
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "train/camera-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "train/clock-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "train/eagle-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "train/gravel-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "train/rocket-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "validation/camera-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "validation/clock-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-brightness-1.15.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "train/camera-original.png",
+      "relation": "byte-identical"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "train/clock-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "train/eagle-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "train/gravel-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "train/rocket-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "validation/camera-png-repack.png",
+      "relation": "pixel-identical"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "validation/clock-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-byte-copy.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-center-crop-90percent.png",
+      "right": "train/camera-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/camera-center-crop-90percent.png",
+      "right": "train/clock-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-center-crop-90percent.png",
+      "right": "train/eagle-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-center-crop-90percent.png",
+      "right": "train/gravel-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-center-crop-90percent.png",
+      "right": "train/rocket-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-center-crop-90percent.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/camera-center-crop-90percent.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/camera-center-crop-90percent.png",
+      "right": "validation/camera-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/camera-center-crop-90percent.png",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/camera-center-crop-90percent.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-center-crop-90percent.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-center-crop-90percent.png",
+      "right": "validation/clock-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-center-crop-90percent.png",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-center-crop-90percent.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-center-crop-90percent.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-center-crop-90percent.png",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-center-crop-90percent.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-center-crop-90percent.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-center-crop-90percent.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-center-crop-90percent.png",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-center-crop-90percent.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-center-crop-90percent.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-center-crop-90percent.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-center-crop-90percent.png",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-center-crop-90percent.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "train/camera-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "train/clock-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "train/eagle-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "train/gravel-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "train/rocket-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "validation/camera-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "validation/clock-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-jpeg-quality70.jpg",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-rotate90.png",
+      "right": "train/camera-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/camera-rotate90.png",
+      "right": "train/clock-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-rotate90.png",
+      "right": "train/eagle-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-rotate90.png",
+      "right": "train/gravel-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-rotate90.png",
+      "right": "train/rocket-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-rotate90.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/camera-rotate90.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/camera-rotate90.png",
+      "right": "validation/camera-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/camera-rotate90.png",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/camera-rotate90.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-rotate90.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-rotate90.png",
+      "right": "validation/clock-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-rotate90.png",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-rotate90.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-rotate90.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-rotate90.png",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-rotate90.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-rotate90.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-rotate90.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-rotate90.png",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-rotate90.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-rotate90.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-rotate90.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-rotate90.png",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/camera-rotate90.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "train/camera-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "train/clock-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "train/eagle-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "train/gravel-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "train/rocket-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "validation/camera-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "validation/clock-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-brightness-1.15.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "train/camera-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "train/clock-original.png",
+      "relation": "byte-identical"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "train/eagle-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "train/gravel-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "train/rocket-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "validation/camera-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "validation/clock-png-repack.png",
+      "relation": "pixel-identical"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-byte-copy.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "train/camera-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "train/clock-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "train/eagle-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "train/gravel-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "train/rocket-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "validation/camera-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "validation/clock-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-center-crop-90percent.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "train/camera-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "train/clock-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "train/eagle-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "train/gravel-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "train/rocket-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "validation/camera-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "validation/clock-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-jpeg-quality70.jpg",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-rotate90.png",
+      "right": "train/camera-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-rotate90.png",
+      "right": "train/clock-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/clock-rotate90.png",
+      "right": "train/eagle-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-rotate90.png",
+      "right": "train/gravel-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-rotate90.png",
+      "right": "train/rocket-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-rotate90.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-rotate90.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-rotate90.png",
+      "right": "validation/camera-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-rotate90.png",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-rotate90.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/clock-rotate90.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/clock-rotate90.png",
+      "right": "validation/clock-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/clock-rotate90.png",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/clock-rotate90.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-rotate90.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-rotate90.png",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-rotate90.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-rotate90.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-rotate90.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-rotate90.png",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-rotate90.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-rotate90.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-rotate90.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-rotate90.png",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/clock-rotate90.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "train/camera-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "train/clock-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "train/eagle-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "train/gravel-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "train/rocket-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "validation/camera-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "validation/clock-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-brightness-1.15.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "train/camera-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "train/clock-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "train/eagle-original.png",
+      "relation": "byte-identical"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "train/gravel-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "train/rocket-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "validation/camera-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "validation/clock-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "pixel-identical"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-byte-copy.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "train/camera-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "train/clock-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "train/eagle-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "train/gravel-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "train/rocket-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "validation/camera-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "validation/clock-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-center-crop-90percent.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "train/camera-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "train/clock-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "train/eagle-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "train/gravel-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "train/rocket-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "validation/camera-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "validation/clock-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-jpeg-quality70.jpg",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-rotate90.png",
+      "right": "train/camera-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-rotate90.png",
+      "right": "train/clock-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-rotate90.png",
+      "right": "train/eagle-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/eagle-rotate90.png",
+      "right": "train/gravel-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-rotate90.png",
+      "right": "train/rocket-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-rotate90.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-rotate90.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-rotate90.png",
+      "right": "validation/camera-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-rotate90.png",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-rotate90.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-rotate90.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-rotate90.png",
+      "right": "validation/clock-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-rotate90.png",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-rotate90.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/eagle-rotate90.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/eagle-rotate90.png",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/eagle-rotate90.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/eagle-rotate90.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-rotate90.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-rotate90.png",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-rotate90.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-rotate90.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-rotate90.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-rotate90.png",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/eagle-rotate90.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "train/camera-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "train/clock-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "train/eagle-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "train/gravel-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "train/rocket-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "validation/camera-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "validation/clock-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-brightness-1.15.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "train/camera-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "train/clock-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "train/eagle-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "train/gravel-original.png",
+      "relation": "byte-identical"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "train/rocket-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "validation/camera-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "validation/clock-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "pixel-identical"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-byte-copy.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-center-crop-90percent.png",
+      "right": "train/camera-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-center-crop-90percent.png",
+      "right": "train/clock-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-center-crop-90percent.png",
+      "right": "train/eagle-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-center-crop-90percent.png",
+      "right": "train/gravel-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/gravel-center-crop-90percent.png",
+      "right": "train/rocket-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-center-crop-90percent.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-center-crop-90percent.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-center-crop-90percent.png",
+      "right": "validation/camera-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-center-crop-90percent.png",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-center-crop-90percent.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-center-crop-90percent.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-center-crop-90percent.png",
+      "right": "validation/clock-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-center-crop-90percent.png",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-center-crop-90percent.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-center-crop-90percent.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-center-crop-90percent.png",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-center-crop-90percent.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-center-crop-90percent.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/gravel-center-crop-90percent.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/gravel-center-crop-90percent.png",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/gravel-center-crop-90percent.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/gravel-center-crop-90percent.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-center-crop-90percent.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-center-crop-90percent.png",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-center-crop-90percent.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "train/camera-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "train/clock-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "train/eagle-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "train/gravel-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "train/rocket-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "validation/camera-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "validation/clock-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-jpeg-quality70.jpg",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-rotate90.png",
+      "right": "train/camera-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-rotate90.png",
+      "right": "train/clock-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-rotate90.png",
+      "right": "train/eagle-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-rotate90.png",
+      "right": "train/gravel-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/gravel-rotate90.png",
+      "right": "train/rocket-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-rotate90.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-rotate90.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-rotate90.png",
+      "right": "validation/camera-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-rotate90.png",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-rotate90.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-rotate90.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-rotate90.png",
+      "right": "validation/clock-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-rotate90.png",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-rotate90.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-rotate90.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-rotate90.png",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-rotate90.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-rotate90.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/gravel-rotate90.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/gravel-rotate90.png",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/gravel-rotate90.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/gravel-rotate90.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-rotate90.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-rotate90.png",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/gravel-rotate90.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "train/camera-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "train/clock-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "train/eagle-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "train/gravel-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "train/rocket-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "validation/camera-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "validation/clock-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/rocket-brightness-1.15.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "train/camera-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "train/clock-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "train/eagle-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "train/gravel-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "train/rocket-original.png",
+      "relation": "byte-identical"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "validation/camera-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "validation/clock-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "pixel-identical"
+    },
+    {
+      "left": "test/rocket-byte-copy.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "train/camera-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "train/clock-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "train/eagle-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "train/gravel-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "train/rocket-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "validation/camera-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "validation/clock-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/rocket-center-crop-90percent.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "train/camera-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "train/clock-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "train/eagle-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "train/gravel-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "train/rocket-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "validation/camera-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "validation/clock-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/rocket-jpeg-quality70.jpg",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/rocket-rotate90.png",
+      "right": "train/camera-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-rotate90.png",
+      "right": "train/clock-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-rotate90.png",
+      "right": "train/eagle-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-rotate90.png",
+      "right": "train/gravel-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-rotate90.png",
+      "right": "train/rocket-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/rocket-rotate90.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-rotate90.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-rotate90.png",
+      "right": "validation/camera-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-rotate90.png",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-rotate90.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-rotate90.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-rotate90.png",
+      "right": "validation/clock-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-rotate90.png",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-rotate90.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-rotate90.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-rotate90.png",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-rotate90.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-rotate90.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-rotate90.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-rotate90.png",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-rotate90.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/rocket-rotate90.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/rocket-rotate90.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/rocket-rotate90.png",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/rocket-rotate90.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/camera-original.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/camera-original.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/camera-original.png",
+      "right": "validation/camera-png-repack.png",
+      "relation": "pixel-identical"
+    },
+    {
+      "left": "train/camera-original.png",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/camera-original.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/camera-original.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/camera-original.png",
+      "right": "validation/clock-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/camera-original.png",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/camera-original.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/camera-original.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/camera-original.png",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/camera-original.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/camera-original.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/camera-original.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/camera-original.png",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/camera-original.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/camera-original.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/camera-original.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/camera-original.png",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/camera-original.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/clock-original.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/clock-original.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/clock-original.png",
+      "right": "validation/camera-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/clock-original.png",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/clock-original.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/clock-original.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/clock-original.png",
+      "right": "validation/clock-png-repack.png",
+      "relation": "pixel-identical"
+    },
+    {
+      "left": "train/clock-original.png",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/clock-original.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/clock-original.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/clock-original.png",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/clock-original.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/clock-original.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/clock-original.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/clock-original.png",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/clock-original.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/clock-original.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/clock-original.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/clock-original.png",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/clock-original.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/eagle-original.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/eagle-original.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/eagle-original.png",
+      "right": "validation/camera-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/eagle-original.png",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/eagle-original.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/eagle-original.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/eagle-original.png",
+      "right": "validation/clock-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/eagle-original.png",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/eagle-original.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/eagle-original.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/eagle-original.png",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "pixel-identical"
+    },
+    {
+      "left": "train/eagle-original.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/eagle-original.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/eagle-original.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/eagle-original.png",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/eagle-original.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/eagle-original.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/eagle-original.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/eagle-original.png",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/eagle-original.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/gravel-original.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/gravel-original.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/gravel-original.png",
+      "right": "validation/camera-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/gravel-original.png",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/gravel-original.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/gravel-original.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/gravel-original.png",
+      "right": "validation/clock-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/gravel-original.png",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/gravel-original.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/gravel-original.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/gravel-original.png",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/gravel-original.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/gravel-original.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/gravel-original.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/gravel-original.png",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "pixel-identical"
+    },
+    {
+      "left": "train/gravel-original.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/gravel-original.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/gravel-original.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/gravel-original.png",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/gravel-original.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/rocket-original.png",
+      "right": "validation/camera-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/rocket-original.png",
+      "right": "validation/camera-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/rocket-original.png",
+      "right": "validation/camera-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/rocket-original.png",
+      "right": "validation/camera-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/rocket-original.png",
+      "right": "validation/clock-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/rocket-original.png",
+      "right": "validation/clock-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/rocket-original.png",
+      "right": "validation/clock-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/rocket-original.png",
+      "right": "validation/clock-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/rocket-original.png",
+      "right": "validation/eagle-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/rocket-original.png",
+      "right": "validation/eagle-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/rocket-original.png",
+      "right": "validation/eagle-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/rocket-original.png",
+      "right": "validation/eagle-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/rocket-original.png",
+      "right": "validation/gravel-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/rocket-original.png",
+      "right": "validation/gravel-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/rocket-original.png",
+      "right": "validation/gravel-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/rocket-original.png",
+      "right": "validation/gravel-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/rocket-original.png",
+      "right": "validation/rocket-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/rocket-original.png",
+      "right": "validation/rocket-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/rocket-original.png",
+      "right": "validation/rocket-png-repack.png",
+      "relation": "pixel-identical"
+    },
+    {
+      "left": "train/rocket-original.png",
+      "right": "validation/rocket-resize-73percent.png",
+      "relation": "near-source"
+    }
+  ],
+  "counts": {
+    "near-source": 130,
+    "negative": 580,
+    "byte-identical": 5,
+    "pixel-identical": 10
+  },
+  "totalBytes": 2468884,
+  "sourcesSha256": "7b59138a6358d1f25c205b2e5d8fb8803ab101c8d980ef0991bd6f6c3ad8248a",
+  "protocolSha256": "027bc300e5b46eb18b5f9afb6871678b1d880de91a120a9ea2c21c0b017c1847"
+}

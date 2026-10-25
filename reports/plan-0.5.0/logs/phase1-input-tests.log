@@ -1,0 +1,12 @@
+✔ 12MP JPEG byte copy and lossless reencoding keep full-resolution pixel identity (2528.488042ms)
+✔ sampling budget changes perception size while source decode and total budgets remain hard bounds (21.280292ms)
+✔ all split alias combinations normalize splits while preserving actual paths and directory scope (112.983625ms)
+✔ simultaneous aliases are fatal before output creation instead of merging dataset splits (5.705333ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2642.20825

@@ -1,0 +1,15 @@
+test_archive_manifest_cannot_mislabel_an_old_version_or_unknown_schema (__main__.ReleaseContractTests.test_archive_manifest_cannot_mislabel_an_old_version_or_unknown_schema) ... ok
+test_archive_payload_version_must_match_the_selected_release (__main__.ReleaseContractTests.test_archive_payload_version_must_match_the_selected_release) ... ok
+test_checksums_preserve_multiple_releases_and_allow_absent_file (__main__.ReleaseContractTests.test_checksums_preserve_multiple_releases_and_allow_absent_file) ... ok
+test_checksums_reject_duplicate_names_even_with_identical_digests (__main__.ReleaseContractTests.test_checksums_reject_duplicate_names_even_with_identical_digests) ... ok
+test_checksums_reject_malformed_or_unsafe_entries (__main__.ReleaseContractTests.test_checksums_reject_malformed_or_unsafe_entries) ... ok
+test_missing_current_archive_replaces_old_passed_attestation_with_failure (__main__.ReleaseContractTests.test_missing_current_archive_replaces_old_passed_attestation_with_failure) ... ok
+test_release_version_agrees_across_all_manifests (__main__.ReleaseContractTests.test_release_version_agrees_across_all_manifests) ... ok
+test_release_version_rejects_each_independent_manifest_mismatch (__main__.ReleaseContractTests.test_release_version_rejects_each_independent_manifest_mismatch) ... ok
+test_release_version_rejects_missing_lock_root_or_moon_version (__main__.ReleaseContractTests.test_release_version_rejects_missing_lock_root_or_moon_version) ... ok
+test_release_version_rejects_paths_control_characters_and_non_ascii_digits (__main__.ReleaseContractTests.test_release_version_rejects_paths_control_characters_and_non_ascii_digits) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.013s
+
+OK

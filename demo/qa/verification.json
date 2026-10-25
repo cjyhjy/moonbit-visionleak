@@ -1,138 +1,78 @@
 {
   "schemaVersion": "visionleak-demo-qa-v1",
   "status": "passed",
-  "scope": "Only the explicitly observed browser actions and Node validations below are passed. Browser download contents and mobile layouts are not certified.",
-  "verifiedAt": "2026-10-22T15:53:58.393Z",
-  "servedAuditId": "dc9fb9efb9db57e2a9e7381181c83d89118cab0b84029a14770177d08c55f2c2",
+  "scope": "Explicit 0.4.0 browser checks on controlled derivatives of licensed photographs and legacy synthetic reports. No natural contamination claim.",
+  "verifiedAt": "2026-10-23T16:00:55.026980+00:00",
+  "servedAuditId": "10f740be2630e3ea2941339b4360900eec93cf5751b038ddd585d310d2ed1b43",
+  "mirrorAuditId": "e9dfa748b17b41f8f08cd430af8d219a5de5a3179a3fc1e3bdb7689a79ca67bb",
+  "photoAuditId": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078",
   "sourceHashes": {
-    "demo/index.html": "3cd8c7532faf37d4b9103b971b9c8ae68c0c2461ed5df592c23a09c9a352f0da",
-    "demo/styles.css": "dab5dfa9d564b087488b04901929d39d93280481f2bbc30c8c74efd50d37c964",
-    "demo/app.mjs": "5965a120a109e69c70783a172ddef6f5879a909d44690534d37ff67f1bb12aec",
-    "demo/review-validation.mjs": "db1c9af266715af79d5ac4090d355da0a0eb39235721693d200796ee2c879eaf"
+    "demo/index.html": "f5c10c6dd2c5b83089307e75d252cbcaaa4639d93d8fcaf8fa2cf6f4113658c7",
+    "demo/styles.css": "87aefe99aa8e1793892f4868216e34315543e84b6755665228f84faa1563513b",
+    "demo/app.mjs": "4bfa5b1c0b4527a553e2397b1dbe7b7b4c59d44f114d23fa3cf87c8b6cc538be",
+    "demo/review-validation.mjs": "c92a0f618085264ae91512df4cf0488cf6e71ae92ba5d60942549c2f0d22297a",
+    "demo/report-identity.mjs": "05f4970df51b6e81f66b1a66050d2efce2f691d5b2f0f6300a8e3fa0851ab6b1",
+    "demo/review-workflow.mjs": "53a0ce4173b681d55fd247b536ce3ae13d974b08938cd9c811b2ceb428475628"
   },
-  "browser": "Google Chrome via CUA, native file chooser fallback",
-  "service": {
-    "url": "http://127.0.0.1:4177/",
-    "binding": "127.0.0.1",
-    "readOnly": true,
-    "sessionId": 71855
-  },
-  "report": {
-    "path": "reports/demo/report.json",
-    "inputProvenance": "59 controlled synthetic benchmark image files, actual MoonBit/CLI output",
-    "images": 59,
-    "pairs": 96,
-    "byteIdentical": 9,
-    "pixelIdentical": 18,
-    "perceptualCandidates": 69
-  },
+  "browser": "Tabbit through installed CLI",
   "checks": [
     {
-      "name": "default-report-and-thumbnails",
+      "name": "legacy-default-and-mirror",
       "status": "passed",
-      "steps": "Navigate to local server; observe exact auditId, 59 images / 96 pairs and two rendered thumbnails."
+      "steps": "Loaded actual 59-image default (96 pairs) and mirror (107 pairs) reports; mirror-only search still explains four-distance matching."
     },
     {
-      "name": "candidate-and-path-filter",
+      "name": "real-photo-orientation",
       "status": "passed",
-      "steps": "Select perceptual-candidate and search flat-. Observed 1 / 96 pair, test/flat-blue.png vs train/flat-red.png, dHash distance 0."
+      "steps": "Loaded 50 held-out-source derivatives / 131 pairs. Search camera-rotate90 gives 5 pairs. First is rotate90/original at distance 0; both unchanged-orientation previews decode to 256x256 with CSS transform none."
     },
     {
-      "name": "review-save-and-reload",
+      "name": "undo-and-reload",
       "status": "passed",
-      "steps": "Mark flat-color synthetic negative as rejected, enter QA note, reload page and search flat-. The selected rejection and exact note reappeared; notice restored one record."
+      "steps": "Set unsure, undo to pending, set confirmed and Chinese QA note, reload and recover note/decision on selected pair."
     },
     {
-      "name": "review-json-import",
+      "name": "desktop-layout",
       "status": "passed",
-      "steps": "Click visible import-review label; native macOS chooser selected demo/qa/review-import-test.json. UI reported one validated merged record. Reload later restored two total records.",
-      "fixture": "demo/qa/review-import-test.json"
+      "steps": "1440x1000 browser viewport; inspected full-page screenshot."
     },
     {
-      "name": "external-report-image-isolation",
+      "name": "mobile-layout",
       "status": "passed",
-      "steps": "Import demo/qa/external-report-test.json through native file chooser. Both image src attributes became null; UI warned that the auditId differs and thumbnails are disabled.",
-      "fixture": "demo/qa/external-report-test.json",
-      "expectedReportAuditId": "qa-external-report-not-served"
-    },
-    {
-      "name": "nonempty-errors-override-complete",
-      "status": "passed",
-      "steps": "Same test fixture deliberately claims complete=true/status=complete but has one QA_INJECTED_ERROR. UI displayed incomplete status and prominent coverage warning."
-    },
-    {
-      "name": "export-buttons",
-      "status": "passed",
-      "steps": "Clicked Export review and Export full report controls. Chrome native UI later showed review.json 516 B completed. No download event waiter was used in final run; file contents and second file completion were not inspected."
-    },
-    {
-      "name": "restore-served-report",
-      "status": "passed",
-      "steps": "Click reload report. Original served auditId and thumbnails returned, both imported and manually entered QA marks restored."
-    },
-    {
-      "name": "browser-console",
-      "status": "passed",
-      "steps": "Chrome tab dev.logs warn/error query returned an empty array after final actions."
-    },
-    {
-      "name": "node-validation-and-roundtrip",
-      "status": "passed",
-      "command": "node --test tests/demo-validation.test.mjs",
-      "passed": 10,
-      "failed": 0
-    },
-    {
-      "name": "javascript-syntax",
-      "status": "passed",
-      "command": "node --check demo/app.mjs"
+      "steps": "390x844 viewport; inspected full-page screenshot. Document/body scrollWidth 375, no page overflow."
     }
   ],
   "notTested": [
     {
-      "name": "browser-downloaded-json-content",
-      "status": "notTested",
-      "reason": "The IAB download event tooling stalled and was interrupted. Final Chrome run verifies button clicks and review.json completed indicator only; no claim of downloaded file byte validation."
+      "name": "downloaded-export-bytes",
+      "reason": "No saved export files inspected this round."
     },
     {
-      "name": "browser-complete-report-download",
-      "status": "notTested",
-      "reason": "Control clicked, final download completion and bytes not inspected."
+      "name": "real-mobile-device",
+      "reason": "Viewport emulation only."
     },
     {
-      "name": "mobile-viewport",
-      "status": "notTested",
-      "reason": "Responsive CSS exists but final real-device/mobile viewport testing was outside the bounded verification."
-    },
-    {
-      "name": "missing-default-report-empty-state",
-      "status": "notTested",
-      "reason": "Code implements explicit empty state but final server always supplied a valid report."
+      "name": "complete-browser-import-regression",
+      "reason": "Imports and empty report paths not repeated; Node validation tests run separately."
     }
   ],
   "screenshots": [
     {
-      "path": "demo/qa/workbench-current.jpg",
+      "path": "demo/qa/workbench-photos-v040.png",
       "status": "current",
-      "auditId": "dc9fb9efb9db57e2a9e7381181c83d89118cab0b84029a14770177d08c55f2c2",
-      "description": "Actual final source, synthetic flat-color candidate rejected with a persisted QA note."
+      "auditId": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078",
+      "sha256": "c1c221a8c94dc0e23d85efb75dba9e42ec99ae47f71cad93fb0ad463f1accf0c"
     },
     {
-      "path": "demo/qa/report-isolation.jpg",
+      "path": "demo/qa/workbench-photos-mobile-v040.png",
       "status": "current",
-      "auditId": "qa-external-report-not-served",
-      "description": "Deliberately modified QA fixture: different auditId and injected error; no thumbnails and prominent incomplete warning."
-    },
-    {
-      "path": "demo/qa/workbench-desktop.jpg",
-      "status": "historical-layout-only",
-      "auditId": "750098d7448d80a7c5b3dc6c51af426107d8a2f1b07366d637e7ce907f8059d8",
-      "description": "Earlier layout snapshot before final report identity and UI hardening; not evidence for current source."
+      "auditId": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078",
+      "sha256": "39133eabf4012123705cca22db6e953d97c11ec39be38d07c6f8e308014a7256"
     }
   ],
   "notes": [
-    "All manual marks in these browser sessions are labeled QA observations on controlled synthetic fixtures, not a human audit of a real dataset.",
-    "External-report fixture intentionally modifies auditId and errors and is not an authentic CLI output.",
-    "File chooser event failed for the visually hidden file input; clicking its visible label and using the native chooser succeeded without changing browser permissions."
+    "QA marks only identify known controlled source transforms.",
+    "A broad text selector matched hidden fingerprint details as well as the paragraph; a specific observed paragraph selector passed.",
+    "Historical 0.2.0 and 0.3.0 screenshots/records are not counted as current checks."
   ]
 }

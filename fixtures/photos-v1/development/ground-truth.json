@@ -1,0 +1,4343 @@
+{
+  "schemaVersion": "visionleak-photo-truth-v1",
+  "name": "licensed-photos-v1-development",
+  "partition": "development",
+  "images": [
+    {
+      "id": "test/astronaut-brightness-1.15.png",
+      "path": "test/astronaut-brightness-1.15.png",
+      "split": "test",
+      "sourceId": "astronaut",
+      "partition": "development",
+      "transform": "brightness-1.15",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "4dc606b6e2ac44d2e205464b04f88d9e8f776c055f52d7d549f8d69f93d71c0f",
+      "canonicalPixelDigest": "88d867be201ca48d65eec3e5f0188b2290bc9a3e10dbe96a384c021616f29952",
+      "bytes": 117119,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/astronaut-byte-copy.png",
+      "path": "test/astronaut-byte-copy.png",
+      "split": "test",
+      "sourceId": "astronaut",
+      "partition": "development",
+      "transform": "byte-copy",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "35104b000dbc1b242d19203de6c8be1077cafe367723a8bca39e7f21657d9122",
+      "canonicalPixelDigest": "f12c4ee1d753e7b9049303ec527a1442e318c2823fb0a65daee1e25536775977",
+      "bytes": 117804,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/astronaut-center-crop-90percent.png",
+      "path": "test/astronaut-center-crop-90percent.png",
+      "split": "test",
+      "sourceId": "astronaut",
+      "partition": "development",
+      "transform": "center-crop-90percent",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "21c420598344fe1012d5e28c55b3d13d6b4a026e5d045697999ad1b457500c60",
+      "canonicalPixelDigest": "153d3845a57b1805927fb1a0147904e0a20d74ed802b5a2c40c94b793eb4599e",
+      "bytes": 116952,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/astronaut-jpeg-quality70.jpg",
+      "path": "test/astronaut-jpeg-quality70.jpg",
+      "split": "test",
+      "sourceId": "astronaut",
+      "partition": "development",
+      "transform": "jpeg-quality70",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "ee6b0fa7791c22b93f322a96d71ad3514a760be1f03285ffc63ddc89e8a4e1c8",
+      "canonicalPixelDigest": "5e623301544481ed3a5adae1fc0ce844648d2998da0f35b3d873ca3e383c5980",
+      "bytes": 13290,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/astronaut-rotate90.png",
+      "path": "test/astronaut-rotate90.png",
+      "split": "test",
+      "sourceId": "astronaut",
+      "partition": "development",
+      "transform": "rotate90",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "aba62428e86e913b9c24c23a88d4371fea00d7bf585abff22037447983f03db4",
+      "canonicalPixelDigest": "36541b74910e1e984c67d2ef6133b9183017c1a162aa1416b3b8e7f4670c2546",
+      "bytes": 117527,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/brick-brightness-1.15.png",
+      "path": "test/brick-brightness-1.15.png",
+      "split": "test",
+      "sourceId": "brick",
+      "partition": "development",
+      "transform": "brightness-1.15",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "af3b735b8877bdd969b87d71cec709e159e37892c3c6907f4e78769ffe852b1c",
+      "canonicalPixelDigest": "0238451c457c09b6285a2f707608e531db8e4887397aab65f9bad05348543375",
+      "bytes": 48594,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/brick-byte-copy.png",
+      "path": "test/brick-byte-copy.png",
+      "split": "test",
+      "sourceId": "brick",
+      "partition": "development",
+      "transform": "byte-copy",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "c6c455db838960a2ca63f8dd3ec7370f768482b040e78829db83795f559cd27f",
+      "canonicalPixelDigest": "d22a9a61148efd5f42d463e6aadaa2278c931bd883ddf543b438682303534378",
+      "bytes": 45731,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/brick-center-crop-90percent.png",
+      "path": "test/brick-center-crop-90percent.png",
+      "split": "test",
+      "sourceId": "brick",
+      "partition": "development",
+      "transform": "center-crop-90percent",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "cb67c35fe5a0616408ef1bf511e05e6fde714d71466fcf7f69be99af03b1e04e",
+      "canonicalPixelDigest": "eff6ec1d19a8330298724645f508a3ea1ce1098e8f64448c14824e956fe367c4",
+      "bytes": 43154,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/brick-jpeg-quality70.jpg",
+      "path": "test/brick-jpeg-quality70.jpg",
+      "split": "test",
+      "sourceId": "brick",
+      "partition": "development",
+      "transform": "jpeg-quality70",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "aa992f1cdeaeb8820a5286f82d7a74376f4d6196fec4578d2d12057a907c127b",
+      "canonicalPixelDigest": "04403011638b65923ac93e9cf6594717981e9051e56f54dbd0ee7368997c2cea",
+      "bytes": 9642,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/brick-rotate90.png",
+      "path": "test/brick-rotate90.png",
+      "split": "test",
+      "sourceId": "brick",
+      "partition": "development",
+      "transform": "rotate90",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "59daf2b2d209a59ce862625fd772ed1e4e7b3667105fec0534a337575d1740fd",
+      "canonicalPixelDigest": "3d74291d8b049586cfba0924664a0dcd36bcb26abfb71eb08a55a5a6401aa608",
+      "bytes": 43994,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/chelsea-brightness-1.15.png",
+      "path": "test/chelsea-brightness-1.15.png",
+      "split": "test",
+      "sourceId": "chelsea",
+      "partition": "development",
+      "transform": "brightness-1.15",
+      "width": 256,
+      "height": 170,
+      "byteDigest": "d9ed6d60cc7d4040af3a1d6487c5e3213ac4f77cacd4235ef5d7b71a916ae579",
+      "canonicalPixelDigest": "f2cf6bd7c2f6770a7afc045432abe2683611f9ab81814ee50d42d4908131425d",
+      "bytes": 83205,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/chelsea-byte-copy.png",
+      "path": "test/chelsea-byte-copy.png",
+      "split": "test",
+      "sourceId": "chelsea",
+      "partition": "development",
+      "transform": "byte-copy",
+      "width": 256,
+      "height": 170,
+      "byteDigest": "7c68be3d803c53395704d786525cc61f273ee75040eb680bd6740b937015b41b",
+      "canonicalPixelDigest": "6fa61430884e446594b40ec4f649b9e7e242277813c1ba2e0e60e4cf2582be7a",
+      "bytes": 82269,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/chelsea-center-crop-90percent.png",
+      "path": "test/chelsea-center-crop-90percent.png",
+      "split": "test",
+      "sourceId": "chelsea",
+      "partition": "development",
+      "transform": "center-crop-90percent",
+      "width": 256,
+      "height": 170,
+      "byteDigest": "e33c0e38470e712a6d5384313a7165af91c37c27beaafa5e37faf38bcd9e4ead",
+      "canonicalPixelDigest": "31f3eb391aa93396cd1a0e69d69198dc6c13596e1ed8019f1a29b32bfbcb0014",
+      "bytes": 80851,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/chelsea-jpeg-quality70.jpg",
+      "path": "test/chelsea-jpeg-quality70.jpg",
+      "split": "test",
+      "sourceId": "chelsea",
+      "partition": "development",
+      "transform": "jpeg-quality70",
+      "width": 256,
+      "height": 170,
+      "byteDigest": "3f4df0fa4ce8455d0c5014884921195779ca38d89cdf6b90ba2c82176476a516",
+      "canonicalPixelDigest": "3d465ce8ce204b590141a7503c9fc2f635897127acb4eb0643889c8225852f49",
+      "bytes": 7532,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/chelsea-rotate90.png",
+      "path": "test/chelsea-rotate90.png",
+      "split": "test",
+      "sourceId": "chelsea",
+      "partition": "development",
+      "transform": "rotate90",
+      "width": 170,
+      "height": 256,
+      "byteDigest": "d45f6115a7d63dc1c47b4b6230f9f1dd1e15206a8e8d6ff50d5afbf23a0fcdff",
+      "canonicalPixelDigest": "39f9e7d82b03b820be811ae1ea7b84548d20c3d3692e76802ec86d23aba1e02c",
+      "bytes": 81412,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/coffee-brightness-1.15.png",
+      "path": "test/coffee-brightness-1.15.png",
+      "split": "test",
+      "sourceId": "coffee",
+      "partition": "development",
+      "transform": "brightness-1.15",
+      "width": 256,
+      "height": 171,
+      "byteDigest": "85abb11066dc8cf7bcb7c46ebcc1260f4a61f34949a4b4c0f14fdb1539cbc317",
+      "canonicalPixelDigest": "058da1d3eec6e26a3e93153e54985ab9ae32a45d4f18b37d203021e38504a473",
+      "bytes": 87986,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/coffee-byte-copy.png",
+      "path": "test/coffee-byte-copy.png",
+      "split": "test",
+      "sourceId": "coffee",
+      "partition": "development",
+      "transform": "byte-copy",
+      "width": 256,
+      "height": 171,
+      "byteDigest": "cf41a81efbd79898d0b66c9d9616ecb046aa16353d280b41bcbf71f95e477897",
+      "canonicalPixelDigest": "ac4416881f5ebf8019aeaa79febff4a8064f2dc7e0c9bb04b4e2277cc9aca2b2",
+      "bytes": 86197,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/coffee-center-crop-90percent.png",
+      "path": "test/coffee-center-crop-90percent.png",
+      "split": "test",
+      "sourceId": "coffee",
+      "partition": "development",
+      "transform": "center-crop-90percent",
+      "width": 256,
+      "height": 171,
+      "byteDigest": "8cc7b187cf4c23e5dccb73269f50baff65952decfb02a2a5c67fc2f4c394bbba",
+      "canonicalPixelDigest": "7671af2ab32e05ce1946bd5ee6b88898e4a18ec0d32c603de890967aa14237a4",
+      "bytes": 82511,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/coffee-jpeg-quality70.jpg",
+      "path": "test/coffee-jpeg-quality70.jpg",
+      "split": "test",
+      "sourceId": "coffee",
+      "partition": "development",
+      "transform": "jpeg-quality70",
+      "width": 256,
+      "height": 171,
+      "byteDigest": "4c09b4fb476d382df04a4b67f1835b58139e513fae492b08a545b896e0506698",
+      "canonicalPixelDigest": "93faaef0c0179b61549994e901a00ae14f24762cf92d8e47b4cbf34fa9d59fe4",
+      "bytes": 9180,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/coffee-rotate90.png",
+      "path": "test/coffee-rotate90.png",
+      "split": "test",
+      "sourceId": "coffee",
+      "partition": "development",
+      "transform": "rotate90",
+      "width": 171,
+      "height": 256,
+      "byteDigest": "a6678c1b53f1f3cb9e804d4de21ba08631dc440f56e62e650d8886f48e833b6f",
+      "canonicalPixelDigest": "85a3f490e6626395b13bd8434933c88dcad87c64726c0d2fe4d4b4e9c9ce9352",
+      "bytes": 85107,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/grass-brightness-1.15.png",
+      "path": "test/grass-brightness-1.15.png",
+      "split": "test",
+      "sourceId": "grass",
+      "partition": "development",
+      "transform": "brightness-1.15",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "c93833efda459bdfdfd542647a02dd5ba430a3227c860c13e0c8f0df72ccf62d",
+      "canonicalPixelDigest": "9d392b650a83e7c381550dc574926b3e8c11ffadb994a560a9561f2013248706",
+      "bytes": 114929,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/grass-byte-copy.png",
+      "path": "test/grass-byte-copy.png",
+      "split": "test",
+      "sourceId": "grass",
+      "partition": "development",
+      "transform": "byte-copy",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "7ae9bcc61d6418c8c9a25dcbd1dbe1e3554415065800414e8dacfc455a714163",
+      "canonicalPixelDigest": "7b88bfccaf10772053905f1fc8c75b42d9bb874cd24cb8cf7a21b69d718fbe49",
+      "bytes": 106582,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/grass-center-crop-90percent.png",
+      "path": "test/grass-center-crop-90percent.png",
+      "split": "test",
+      "sourceId": "grass",
+      "partition": "development",
+      "transform": "center-crop-90percent",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "2e597d5d3bd7f974e5704461b17a259b91bb2aee5f3ef4812db58e82b2fb53e2",
+      "canonicalPixelDigest": "4009729d72533fbde14b3ad25959534b99d158e145b55965e73eb7487af08a93",
+      "bytes": 96949,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/grass-jpeg-quality70.jpg",
+      "path": "test/grass-jpeg-quality70.jpg",
+      "split": "test",
+      "sourceId": "grass",
+      "partition": "development",
+      "transform": "jpeg-quality70",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "c2debdef89dd377828e49f8583cb85ccb3132778f2eea39814bd3189d9c87a69",
+      "canonicalPixelDigest": "68163168b14646a780050067db5e90d27cebdc011fb69a84d3c6926eba6e9755",
+      "bytes": 21240,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "test/grass-rotate90.png",
+      "path": "test/grass-rotate90.png",
+      "split": "test",
+      "sourceId": "grass",
+      "partition": "development",
+      "transform": "rotate90",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "2227cee3c09a292574e2aea734858e263f865489c48d55fb1340fe3ba1518090",
+      "canonicalPixelDigest": "5efe52d5cd7e425ceaea9963e8238357ef56340c70b2f1aa45f29724d843a9a4",
+      "bytes": 107086,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "train/astronaut-original.png",
+      "path": "train/astronaut-original.png",
+      "split": "train",
+      "sourceId": "astronaut",
+      "partition": "development",
+      "transform": "original",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "35104b000dbc1b242d19203de6c8be1077cafe367723a8bca39e7f21657d9122",
+      "canonicalPixelDigest": "f12c4ee1d753e7b9049303ec527a1442e318c2823fb0a65daee1e25536775977",
+      "bytes": 117804,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "train/brick-original.png",
+      "path": "train/brick-original.png",
+      "split": "train",
+      "sourceId": "brick",
+      "partition": "development",
+      "transform": "original",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "c6c455db838960a2ca63f8dd3ec7370f768482b040e78829db83795f559cd27f",
+      "canonicalPixelDigest": "d22a9a61148efd5f42d463e6aadaa2278c931bd883ddf543b438682303534378",
+      "bytes": 45731,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "train/chelsea-original.png",
+      "path": "train/chelsea-original.png",
+      "split": "train",
+      "sourceId": "chelsea",
+      "partition": "development",
+      "transform": "original",
+      "width": 256,
+      "height": 170,
+      "byteDigest": "7c68be3d803c53395704d786525cc61f273ee75040eb680bd6740b937015b41b",
+      "canonicalPixelDigest": "6fa61430884e446594b40ec4f649b9e7e242277813c1ba2e0e60e4cf2582be7a",
+      "bytes": 82269,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "train/coffee-original.png",
+      "path": "train/coffee-original.png",
+      "split": "train",
+      "sourceId": "coffee",
+      "partition": "development",
+      "transform": "original",
+      "width": 256,
+      "height": 171,
+      "byteDigest": "cf41a81efbd79898d0b66c9d9616ecb046aa16353d280b41bcbf71f95e477897",
+      "canonicalPixelDigest": "ac4416881f5ebf8019aeaa79febff4a8064f2dc7e0c9bb04b4e2277cc9aca2b2",
+      "bytes": 86197,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "train/grass-original.png",
+      "path": "train/grass-original.png",
+      "split": "train",
+      "sourceId": "grass",
+      "partition": "development",
+      "transform": "original",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "7ae9bcc61d6418c8c9a25dcbd1dbe1e3554415065800414e8dacfc455a714163",
+      "canonicalPixelDigest": "7b88bfccaf10772053905f1fc8c75b42d9bb874cd24cb8cf7a21b69d718fbe49",
+      "bytes": 106582,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/astronaut-horizontal-mirror.png",
+      "path": "validation/astronaut-horizontal-mirror.png",
+      "split": "validation",
+      "sourceId": "astronaut",
+      "partition": "development",
+      "transform": "horizontal-mirror",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "e244a2c66cb9418898ee534a62940c7c16d2d988f797fd44e4178b468081fd1a",
+      "canonicalPixelDigest": "d94d2a7fe5d2d55d9e889809732c36ab3826cb5bed1d93d7aa610bd7f7776bc0",
+      "bytes": 117526,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "path": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "split": "validation",
+      "sourceId": "astronaut",
+      "partition": "development",
+      "transform": "mirror-jpeg-quality70",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "182d54db4800859e5f14e43c8a440981c6c8dfa3f6acfd86c8daafcb4ab1d63a",
+      "canonicalPixelDigest": "4f51a5735bd90a9b53eb2b23cda95b09e28edcc8d92b8935f4347d3a216a0cfe",
+      "bytes": 13288,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/astronaut-png-repack.png",
+      "path": "validation/astronaut-png-repack.png",
+      "split": "validation",
+      "sourceId": "astronaut",
+      "partition": "development",
+      "transform": "png-repack",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "ed8876197d678b393f3caf24f6191be08b9163315e3be9fcedb2a10918e448ae",
+      "canonicalPixelDigest": "f12c4ee1d753e7b9049303ec527a1442e318c2823fb0a65daee1e25536775977",
+      "bytes": 157885,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/astronaut-resize-73percent.png",
+      "path": "validation/astronaut-resize-73percent.png",
+      "split": "validation",
+      "sourceId": "astronaut",
+      "partition": "development",
+      "transform": "resize-73percent",
+      "width": 186,
+      "height": 186,
+      "byteDigest": "12f8991dbd269534124b810cf9d38f6a9a6353a9cd200f0e1fbb854702ef644d",
+      "canonicalPixelDigest": "c01fc179a8231e9185a670c94434c7485248eceddfed453c94419839586e520e",
+      "bytes": 67127,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/brick-horizontal-mirror.png",
+      "path": "validation/brick-horizontal-mirror.png",
+      "split": "validation",
+      "sourceId": "brick",
+      "partition": "development",
+      "transform": "horizontal-mirror",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "cd7bddc5819836be13f2f2b56e7f77bd8765e92732298b553f31cc56c64c787c",
+      "canonicalPixelDigest": "43cf5ea34bb175e357c83956789537f817ebfda0081b29581a70b45e79ffe43e",
+      "bytes": 45487,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/brick-mirror-jpeg-quality70.jpg",
+      "path": "validation/brick-mirror-jpeg-quality70.jpg",
+      "split": "validation",
+      "sourceId": "brick",
+      "partition": "development",
+      "transform": "mirror-jpeg-quality70",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "f12be528a00df930e6fcc9992461d4005c8e9efa06cab6bc7a7a12efbbf5fac1",
+      "canonicalPixelDigest": "c9e6985dc2fe392e41fd24f66bafddf4370e312071627bdc8b509d1adb72c4f4",
+      "bytes": 9622,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/brick-png-repack.png",
+      "path": "validation/brick-png-repack.png",
+      "split": "validation",
+      "sourceId": "brick",
+      "partition": "development",
+      "transform": "png-repack",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "bc34bd700756e7a631a952c477d1ae550c1df76e422b70ba21970e28cb1574a4",
+      "canonicalPixelDigest": "d22a9a61148efd5f42d463e6aadaa2278c931bd883ddf543b438682303534378",
+      "bytes": 75689,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/brick-resize-73percent.png",
+      "path": "validation/brick-resize-73percent.png",
+      "split": "validation",
+      "sourceId": "brick",
+      "partition": "development",
+      "transform": "resize-73percent",
+      "width": 186,
+      "height": 186,
+      "byteDigest": "533e9fe55efd2d325b330d96ec4199210dfbc7ec4eeeac3e64b3966fa9dfb2f5",
+      "canonicalPixelDigest": "bf48d51d40ae2bdfc0680d61fc21eb7720d4c5d4bb5805971f7027fae7bf97d0",
+      "bytes": 27559,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/chelsea-horizontal-mirror.png",
+      "path": "validation/chelsea-horizontal-mirror.png",
+      "split": "validation",
+      "sourceId": "chelsea",
+      "partition": "development",
+      "transform": "horizontal-mirror",
+      "width": 256,
+      "height": 170,
+      "byteDigest": "f75a9665717ddf065a23b029c13a70ca9f768f7ab64ec22e1b629a2d5de17b35",
+      "canonicalPixelDigest": "4745164c149c67abcb2d2209f3a1ade18a4a8e78caa6f1565011784c929d5979",
+      "bytes": 82165,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "path": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "split": "validation",
+      "sourceId": "chelsea",
+      "partition": "development",
+      "transform": "mirror-jpeg-quality70",
+      "width": 256,
+      "height": 170,
+      "byteDigest": "800f492b63df19d50165fa4aa792bebee46c9784bc738bedd1a5570ed3e3a68d",
+      "canonicalPixelDigest": "9d6fdfcf3f89821ce1251a2b6ad00450ba41ff1c2a94b8ba0febff0f1cd25a2a",
+      "bytes": 7535,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/chelsea-png-repack.png",
+      "path": "validation/chelsea-png-repack.png",
+      "split": "validation",
+      "sourceId": "chelsea",
+      "partition": "development",
+      "transform": "png-repack",
+      "width": 256,
+      "height": 170,
+      "byteDigest": "00db4675142687c6a8e7f7c67427cdd125b2e9afe5d056a0243956594c725098",
+      "canonicalPixelDigest": "6fa61430884e446594b40ec4f649b9e7e242277813c1ba2e0e60e4cf2582be7a",
+      "bytes": 116790,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/chelsea-resize-73percent.png",
+      "path": "validation/chelsea-resize-73percent.png",
+      "split": "validation",
+      "sourceId": "chelsea",
+      "partition": "development",
+      "transform": "resize-73percent",
+      "width": 186,
+      "height": 124,
+      "byteDigest": "473f63e5f8d22ab354eac369913178f6129cc2c463781f4785b9c240075bf24b",
+      "canonicalPixelDigest": "d89f1fd20937cdaaf326bf64e841fbc8600c87425df19f08fb4550a400f33d5f",
+      "bytes": 46670,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/coffee-horizontal-mirror.png",
+      "path": "validation/coffee-horizontal-mirror.png",
+      "split": "validation",
+      "sourceId": "coffee",
+      "partition": "development",
+      "transform": "horizontal-mirror",
+      "width": 256,
+      "height": 171,
+      "byteDigest": "8e459c80e78a4fc9df47b61c11776e6d57e69b0898408feae1773d9c707d2eff",
+      "canonicalPixelDigest": "22383e1ace20c3ad7ce63253d7e88b0ac0ab8efd9544b8153cbe9591e8459c9e",
+      "bytes": 86542,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "path": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "split": "validation",
+      "sourceId": "coffee",
+      "partition": "development",
+      "transform": "mirror-jpeg-quality70",
+      "width": 256,
+      "height": 171,
+      "byteDigest": "6393d5c533af026e9eac1db39f46cee74ebc95745779aac5de9d76ef2967a85b",
+      "canonicalPixelDigest": "aa303eb8cc77066fc893049f6d8f9a757e373f862afd1c6d0044def44bf07261",
+      "bytes": 9181,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/coffee-png-repack.png",
+      "path": "validation/coffee-png-repack.png",
+      "split": "validation",
+      "sourceId": "coffee",
+      "partition": "development",
+      "transform": "png-repack",
+      "width": 256,
+      "height": 171,
+      "byteDigest": "e62f52831660ecc4bee749b193fbd402d898511c95e3776275994e2984363c6e",
+      "canonicalPixelDigest": "ac4416881f5ebf8019aeaa79febff4a8064f2dc7e0c9bb04b4e2277cc9aca2b2",
+      "bytes": 117149,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/coffee-resize-73percent.png",
+      "path": "validation/coffee-resize-73percent.png",
+      "split": "validation",
+      "sourceId": "coffee",
+      "partition": "development",
+      "transform": "resize-73percent",
+      "width": 186,
+      "height": 124,
+      "byteDigest": "7f2eb83725cd4c24f6f27e7b82b15788ecc2a6e52215175617d5c97a57768054",
+      "canonicalPixelDigest": "d98333ffca6aa2a86f5561fb95bbe2c3c5d2b2346dc141267e02d98dda09bbf3",
+      "bytes": 46681,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/grass-horizontal-mirror.png",
+      "path": "validation/grass-horizontal-mirror.png",
+      "split": "validation",
+      "sourceId": "grass",
+      "partition": "development",
+      "transform": "horizontal-mirror",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "4c08809a92c8046e8f58ea5f72725c4045c6f0f8a393fd6eafe533667adcbb24",
+      "canonicalPixelDigest": "cc3c666b77a5fafcf357c5b668af34e17950548fd5f1508c14683975f3be5c93",
+      "bytes": 107204,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/grass-mirror-jpeg-quality70.jpg",
+      "path": "validation/grass-mirror-jpeg-quality70.jpg",
+      "split": "validation",
+      "sourceId": "grass",
+      "partition": "development",
+      "transform": "mirror-jpeg-quality70",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "95ea60db5ca97170b3ad3f7414d8a0661016b510048c113136eb7a105d322cf0",
+      "canonicalPixelDigest": "9ad82974e9f6b598511f8bb8fef56b683050efda062ed3327030051ef7a03281",
+      "bytes": 21232,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/grass-png-repack.png",
+      "path": "validation/grass-png-repack.png",
+      "split": "validation",
+      "sourceId": "grass",
+      "partition": "development",
+      "transform": "png-repack",
+      "width": 256,
+      "height": 256,
+      "byteDigest": "b475b6ca716000cbba2b40255761e4f552e99e66f667e03beb7bf934f7441820",
+      "canonicalPixelDigest": "7b88bfccaf10772053905f1fc8c75b42d9bb874cd24cb8cf7a21b69d718fbe49",
+      "bytes": 140007,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    },
+    {
+      "id": "validation/grass-resize-73percent.png",
+      "path": "validation/grass-resize-73percent.png",
+      "split": "validation",
+      "sourceId": "grass",
+      "partition": "development",
+      "transform": "resize-73percent",
+      "width": 186,
+      "height": 186,
+      "byteDigest": "152e3c39812884245527427da65e7be0d8bfe9d7d530b16551386038f3997cae",
+      "canonicalPixelDigest": "94a6ab96464e78abfd8e1957ec73a942b22bdef58336478d7a11f266e36180bf",
+      "bytes": 59147,
+      "provenance": "controlled-transform-of-licensed-photograph"
+    }
+  ],
+  "pairs": [
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "train/astronaut-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "train/brick-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "train/chelsea-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "train/coffee-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "train/grass-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "validation/brick-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "validation/grass-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "train/astronaut-original.png",
+      "relation": "byte-identical"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "train/brick-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "train/chelsea-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "train/coffee-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "train/grass-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "pixel-identical"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "validation/brick-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "validation/grass-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-center-crop-90percent.png",
+      "right": "train/astronaut-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/astronaut-center-crop-90percent.png",
+      "right": "train/brick-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-center-crop-90percent.png",
+      "right": "train/chelsea-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-center-crop-90percent.png",
+      "right": "train/coffee-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-center-crop-90percent.png",
+      "right": "train/grass-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-center-crop-90percent.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/astronaut-center-crop-90percent.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/astronaut-center-crop-90percent.png",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/astronaut-center-crop-90percent.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/astronaut-center-crop-90percent.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-center-crop-90percent.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-center-crop-90percent.png",
+      "right": "validation/brick-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-center-crop-90percent.png",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-center-crop-90percent.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-center-crop-90percent.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-center-crop-90percent.png",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-center-crop-90percent.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-center-crop-90percent.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-center-crop-90percent.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-center-crop-90percent.png",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-center-crop-90percent.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-center-crop-90percent.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-center-crop-90percent.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-center-crop-90percent.png",
+      "right": "validation/grass-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-center-crop-90percent.png",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "train/astronaut-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "train/brick-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "train/chelsea-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "train/coffee-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "train/grass-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "validation/brick-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "validation/grass-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-rotate90.png",
+      "right": "train/astronaut-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/astronaut-rotate90.png",
+      "right": "train/brick-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-rotate90.png",
+      "right": "train/chelsea-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-rotate90.png",
+      "right": "train/coffee-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-rotate90.png",
+      "right": "train/grass-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-rotate90.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/astronaut-rotate90.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/astronaut-rotate90.png",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/astronaut-rotate90.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/astronaut-rotate90.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-rotate90.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-rotate90.png",
+      "right": "validation/brick-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-rotate90.png",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-rotate90.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-rotate90.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-rotate90.png",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-rotate90.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-rotate90.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-rotate90.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-rotate90.png",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-rotate90.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-rotate90.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-rotate90.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-rotate90.png",
+      "right": "validation/grass-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/astronaut-rotate90.png",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "train/astronaut-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "train/brick-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "train/chelsea-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "train/coffee-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "train/grass-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "validation/brick-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "validation/grass-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "train/astronaut-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "train/brick-original.png",
+      "relation": "byte-identical"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "train/chelsea-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "train/coffee-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "train/grass-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "validation/brick-png-repack.png",
+      "relation": "pixel-identical"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "validation/grass-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-center-crop-90percent.png",
+      "right": "train/astronaut-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-center-crop-90percent.png",
+      "right": "train/brick-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/brick-center-crop-90percent.png",
+      "right": "train/chelsea-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-center-crop-90percent.png",
+      "right": "train/coffee-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-center-crop-90percent.png",
+      "right": "train/grass-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-center-crop-90percent.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-center-crop-90percent.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-center-crop-90percent.png",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-center-crop-90percent.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-center-crop-90percent.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/brick-center-crop-90percent.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/brick-center-crop-90percent.png",
+      "right": "validation/brick-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/brick-center-crop-90percent.png",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/brick-center-crop-90percent.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-center-crop-90percent.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-center-crop-90percent.png",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-center-crop-90percent.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-center-crop-90percent.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-center-crop-90percent.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-center-crop-90percent.png",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-center-crop-90percent.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-center-crop-90percent.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-center-crop-90percent.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-center-crop-90percent.png",
+      "right": "validation/grass-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-center-crop-90percent.png",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "train/astronaut-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "train/brick-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "train/chelsea-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "train/coffee-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "train/grass-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "validation/brick-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "validation/grass-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-rotate90.png",
+      "right": "train/astronaut-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-rotate90.png",
+      "right": "train/brick-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/brick-rotate90.png",
+      "right": "train/chelsea-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-rotate90.png",
+      "right": "train/coffee-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-rotate90.png",
+      "right": "train/grass-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-rotate90.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-rotate90.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-rotate90.png",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-rotate90.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-rotate90.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/brick-rotate90.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/brick-rotate90.png",
+      "right": "validation/brick-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/brick-rotate90.png",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/brick-rotate90.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-rotate90.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-rotate90.png",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-rotate90.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-rotate90.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-rotate90.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-rotate90.png",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-rotate90.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-rotate90.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-rotate90.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-rotate90.png",
+      "right": "validation/grass-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/brick-rotate90.png",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "train/astronaut-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "train/brick-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "train/chelsea-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "train/coffee-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "train/grass-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "validation/brick-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "validation/grass-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "train/astronaut-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "train/brick-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "train/chelsea-original.png",
+      "relation": "byte-identical"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "train/coffee-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "train/grass-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "validation/brick-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "pixel-identical"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "validation/grass-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-center-crop-90percent.png",
+      "right": "train/astronaut-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-center-crop-90percent.png",
+      "right": "train/brick-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-center-crop-90percent.png",
+      "right": "train/chelsea-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/chelsea-center-crop-90percent.png",
+      "right": "train/coffee-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-center-crop-90percent.png",
+      "right": "train/grass-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-center-crop-90percent.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-center-crop-90percent.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-center-crop-90percent.png",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-center-crop-90percent.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-center-crop-90percent.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-center-crop-90percent.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-center-crop-90percent.png",
+      "right": "validation/brick-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-center-crop-90percent.png",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-center-crop-90percent.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/chelsea-center-crop-90percent.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/chelsea-center-crop-90percent.png",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/chelsea-center-crop-90percent.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/chelsea-center-crop-90percent.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-center-crop-90percent.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-center-crop-90percent.png",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-center-crop-90percent.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-center-crop-90percent.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-center-crop-90percent.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-center-crop-90percent.png",
+      "right": "validation/grass-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-center-crop-90percent.png",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "train/astronaut-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "train/brick-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "train/chelsea-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "train/coffee-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "train/grass-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "validation/brick-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "validation/grass-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-rotate90.png",
+      "right": "train/astronaut-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-rotate90.png",
+      "right": "train/brick-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-rotate90.png",
+      "right": "train/chelsea-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/chelsea-rotate90.png",
+      "right": "train/coffee-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-rotate90.png",
+      "right": "train/grass-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-rotate90.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-rotate90.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-rotate90.png",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-rotate90.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-rotate90.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-rotate90.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-rotate90.png",
+      "right": "validation/brick-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-rotate90.png",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-rotate90.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/chelsea-rotate90.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/chelsea-rotate90.png",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/chelsea-rotate90.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/chelsea-rotate90.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-rotate90.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-rotate90.png",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-rotate90.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-rotate90.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-rotate90.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-rotate90.png",
+      "right": "validation/grass-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/chelsea-rotate90.png",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "train/astronaut-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "train/brick-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "train/chelsea-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "train/coffee-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "train/grass-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "validation/brick-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "validation/grass-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "train/astronaut-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "train/brick-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "train/chelsea-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "train/coffee-original.png",
+      "relation": "byte-identical"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "train/grass-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "validation/brick-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "pixel-identical"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "validation/grass-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "train/astronaut-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "train/brick-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "train/chelsea-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "train/coffee-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "train/grass-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "validation/brick-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "validation/grass-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "train/astronaut-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "train/brick-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "train/chelsea-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "train/coffee-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "train/grass-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "validation/brick-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "validation/grass-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-rotate90.png",
+      "right": "train/astronaut-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-rotate90.png",
+      "right": "train/brick-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-rotate90.png",
+      "right": "train/chelsea-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-rotate90.png",
+      "right": "train/coffee-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/coffee-rotate90.png",
+      "right": "train/grass-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-rotate90.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-rotate90.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-rotate90.png",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-rotate90.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-rotate90.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-rotate90.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-rotate90.png",
+      "right": "validation/brick-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-rotate90.png",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-rotate90.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-rotate90.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-rotate90.png",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-rotate90.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-rotate90.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/coffee-rotate90.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/coffee-rotate90.png",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/coffee-rotate90.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/coffee-rotate90.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-rotate90.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-rotate90.png",
+      "right": "validation/grass-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/coffee-rotate90.png",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "train/astronaut-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "train/brick-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "train/chelsea-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "train/coffee-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "train/grass-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "validation/brick-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "validation/grass-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "train/astronaut-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "train/brick-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "train/chelsea-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "train/coffee-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "train/grass-original.png",
+      "relation": "byte-identical"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "validation/brick-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "validation/grass-png-repack.png",
+      "relation": "pixel-identical"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/grass-center-crop-90percent.png",
+      "right": "train/astronaut-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-center-crop-90percent.png",
+      "right": "train/brick-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-center-crop-90percent.png",
+      "right": "train/chelsea-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-center-crop-90percent.png",
+      "right": "train/coffee-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-center-crop-90percent.png",
+      "right": "train/grass-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/grass-center-crop-90percent.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-center-crop-90percent.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-center-crop-90percent.png",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-center-crop-90percent.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-center-crop-90percent.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-center-crop-90percent.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-center-crop-90percent.png",
+      "right": "validation/brick-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-center-crop-90percent.png",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-center-crop-90percent.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-center-crop-90percent.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-center-crop-90percent.png",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-center-crop-90percent.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-center-crop-90percent.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-center-crop-90percent.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-center-crop-90percent.png",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-center-crop-90percent.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-center-crop-90percent.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/grass-center-crop-90percent.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/grass-center-crop-90percent.png",
+      "right": "validation/grass-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/grass-center-crop-90percent.png",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "train/astronaut-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "train/brick-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "train/chelsea-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "train/coffee-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "train/grass-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "validation/brick-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "validation/grass-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/grass-rotate90.png",
+      "right": "train/astronaut-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-rotate90.png",
+      "right": "train/brick-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-rotate90.png",
+      "right": "train/chelsea-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-rotate90.png",
+      "right": "train/coffee-original.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-rotate90.png",
+      "right": "train/grass-original.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/grass-rotate90.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-rotate90.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-rotate90.png",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-rotate90.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-rotate90.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-rotate90.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-rotate90.png",
+      "right": "validation/brick-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-rotate90.png",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-rotate90.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-rotate90.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-rotate90.png",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-rotate90.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-rotate90.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-rotate90.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-rotate90.png",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-rotate90.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "test/grass-rotate90.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/grass-rotate90.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/grass-rotate90.png",
+      "right": "validation/grass-png-repack.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "test/grass-rotate90.png",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/astronaut-original.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/astronaut-original.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/astronaut-original.png",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "pixel-identical"
+    },
+    {
+      "left": "train/astronaut-original.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/astronaut-original.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/astronaut-original.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/astronaut-original.png",
+      "right": "validation/brick-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/astronaut-original.png",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/astronaut-original.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/astronaut-original.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/astronaut-original.png",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/astronaut-original.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/astronaut-original.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/astronaut-original.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/astronaut-original.png",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/astronaut-original.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/astronaut-original.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/astronaut-original.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/astronaut-original.png",
+      "right": "validation/grass-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/astronaut-original.png",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/brick-original.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/brick-original.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/brick-original.png",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/brick-original.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/brick-original.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/brick-original.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/brick-original.png",
+      "right": "validation/brick-png-repack.png",
+      "relation": "pixel-identical"
+    },
+    {
+      "left": "train/brick-original.png",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/brick-original.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/brick-original.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/brick-original.png",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/brick-original.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/brick-original.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/brick-original.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/brick-original.png",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/brick-original.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/brick-original.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/brick-original.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/brick-original.png",
+      "right": "validation/grass-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/brick-original.png",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/chelsea-original.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/chelsea-original.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/chelsea-original.png",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/chelsea-original.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/chelsea-original.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/chelsea-original.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/chelsea-original.png",
+      "right": "validation/brick-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/chelsea-original.png",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/chelsea-original.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/chelsea-original.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/chelsea-original.png",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "pixel-identical"
+    },
+    {
+      "left": "train/chelsea-original.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/chelsea-original.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/chelsea-original.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/chelsea-original.png",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/chelsea-original.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/chelsea-original.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/chelsea-original.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/chelsea-original.png",
+      "right": "validation/grass-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/chelsea-original.png",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/coffee-original.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/coffee-original.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/coffee-original.png",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/coffee-original.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/coffee-original.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/coffee-original.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/coffee-original.png",
+      "right": "validation/brick-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/coffee-original.png",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/coffee-original.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/coffee-original.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/coffee-original.png",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/coffee-original.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/coffee-original.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/coffee-original.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/coffee-original.png",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "pixel-identical"
+    },
+    {
+      "left": "train/coffee-original.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/coffee-original.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/coffee-original.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/coffee-original.png",
+      "right": "validation/grass-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/coffee-original.png",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/grass-original.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/grass-original.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/grass-original.png",
+      "right": "validation/astronaut-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/grass-original.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/grass-original.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/grass-original.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/grass-original.png",
+      "right": "validation/brick-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/grass-original.png",
+      "right": "validation/brick-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/grass-original.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/grass-original.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/grass-original.png",
+      "right": "validation/chelsea-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/grass-original.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/grass-original.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/grass-original.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "relation": "negative"
+    },
+    {
+      "left": "train/grass-original.png",
+      "right": "validation/coffee-png-repack.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/grass-original.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "relation": "negative"
+    },
+    {
+      "left": "train/grass-original.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/grass-original.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "relation": "near-source"
+    },
+    {
+      "left": "train/grass-original.png",
+      "right": "validation/grass-png-repack.png",
+      "relation": "pixel-identical"
+    },
+    {
+      "left": "train/grass-original.png",
+      "right": "validation/grass-resize-73percent.png",
+      "relation": "near-source"
+    }
+  ],
+  "counts": {
+    "near-source": 130,
+    "negative": 580,
+    "byte-identical": 5,
+    "pixel-identical": 10
+  },
+  "totalBytes": 3599912,
+  "sourcesSha256": "7b59138a6358d1f25c205b2e5d8fb8803ab101c8d980ef0991bd6f6c3ad8248a",
+  "protocolSha256": "027bc300e5b46eb18b5f9afb6871678b1d880de91a120a9ea2c21c0b017c1847"
+}

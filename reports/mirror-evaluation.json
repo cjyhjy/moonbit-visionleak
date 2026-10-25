@@ -1,0 +1,826 @@
+{
+  "schemaVersion": "visionleak-mirror-evaluation-v1",
+  "status": "passed",
+  "generatedAt": "2026-10-23T16:01:07.356729+00:00",
+  "scope": "59 deterministic synthetic PNG/JPEG files, horizontal-reflection candidates only; not natural dataset contamination or a tuned universal threshold.",
+  "threshold": 6,
+  "groundTruthSha256": "046a6009b6d4c3090c2262dcf614efe818ec490e15cd4dae39b77c4f032e32ba",
+  "engineSha256": "86a74558178474cc22591e1e4da38cc8a0b547c7c39ec3b9d9282d9736093bcb",
+  "default": {
+    "auditId": "10f740be2630e3ea2941339b4360900eec93cf5751b038ddd585d310d2ed1b43",
+    "scores": {
+      "exact": {
+        "tp": 27,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1059,
+        "precision": 1.0,
+        "recall": 1.0,
+        "falsePositiveRate": 0.0,
+        "falsePositives": [],
+        "falseNegatives": []
+      },
+      "nearOnly": {
+        "tp": 67,
+        "fp": 2,
+        "fn": 18,
+        "tn": 972,
+        "precision": 0.9710144927536232,
+        "recall": 0.788235294117647,
+        "falsePositiveRate": 0.002053388090349076,
+        "falsePositives": [
+          [
+            "test/flat-blue.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/lookalike-ramp-0.png"
+          ]
+        ],
+        "falseNegatives": [
+          [
+            "test/brighter-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/brighter-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/local-copy.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/scene-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/repacked-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/resized-00.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "train/scene-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/resized-01.png"
+          ],
+          [
+            "test/quality72-00.jpg",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/renamed-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/renamed-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "train/local-copy.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-01.png",
+            "validation/mirrored-01.png"
+          ]
+        ]
+      },
+      "nearCommonTransforms": {
+        "tp": 67,
+        "fp": 2,
+        "fn": 0,
+        "tn": 852,
+        "precision": 0.9710144927536232,
+        "recall": 1.0,
+        "falsePositiveRate": 0.00234192037470726,
+        "falsePositives": [
+          [
+            "test/flat-blue.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/lookalike-ramp-0.png"
+          ]
+        ],
+        "falseNegatives": []
+      },
+      "nearChallengeTransforms": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 18,
+        "tn": 120,
+        "precision": null,
+        "recall": 0.0,
+        "falsePositiveRate": 0.0,
+        "falsePositives": [],
+        "falseNegatives": [
+          [
+            "test/brighter-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/brighter-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/local-copy.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/scene-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/repacked-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/resized-00.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "train/scene-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/resized-01.png"
+          ],
+          [
+            "test/quality72-00.jpg",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/quality72-01.jpg",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/renamed-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/renamed-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "train/local-copy.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "train/scene-01.png",
+            "validation/mirrored-01.png"
+          ]
+        ]
+      },
+      "exactEvidenceTierMismatches": [],
+      "exactPairsEmittedAsCandidates": 0,
+      "pairUniverse": 1086,
+      "nearOnlyUniverse": 1059
+    },
+    "stats": {
+      "inputImages": 59,
+      "processedImages": 59,
+      "comparisons": 740,
+      "distanceEvaluations": 611,
+      "pairChecks": 129,
+      "emittedPairs": 96,
+      "indexNodes": 18,
+      "reason": ""
+    }
+  },
+  "mirrors": {
+    "auditId": "e9dfa748b17b41f8f08cd430af8d219a5de5a3179a3fc1e3bdb7689a79ca67bb",
+    "scores": {
+      "exact": {
+        "tp": 27,
+        "fp": 0,
+        "fn": 0,
+        "tn": 1059,
+        "precision": 1.0,
+        "recall": 1.0,
+        "falsePositiveRate": 0.0,
+        "falsePositives": [],
+        "falseNegatives": []
+      },
+      "nearOnly": {
+        "tp": 76,
+        "fp": 4,
+        "fn": 9,
+        "tn": 970,
+        "precision": 0.95,
+        "recall": 0.8941176470588236,
+        "falsePositiveRate": 0.004106776180698152,
+        "falsePositives": [
+          [
+            "test/flat-blue.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/flat-blue.png",
+            "train/lookalike-ramp-0.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/lookalike-ramp-0.png"
+          ]
+        ],
+        "falseNegatives": [
+          [
+            "test/cropped-00.png",
+            "train/local-copy.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/scene-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/repacked-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/resized-00.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "train/scene-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/resized-01.png"
+          ]
+        ]
+      },
+      "nearCommonTransforms": {
+        "tp": 67,
+        "fp": 4,
+        "fn": 0,
+        "tn": 850,
+        "precision": 0.9436619718309859,
+        "recall": 1.0,
+        "falsePositiveRate": 0.00468384074941452,
+        "falsePositives": [
+          [
+            "test/flat-blue.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/flat-blue.png",
+            "train/lookalike-ramp-0.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/flat-red.png"
+          ],
+          [
+            "test/lookalike-ramp-1.png",
+            "train/lookalike-ramp-0.png"
+          ]
+        ],
+        "falseNegatives": []
+      },
+      "nearChallengeTransforms": {
+        "tp": 9,
+        "fp": 0,
+        "fn": 9,
+        "tn": 120,
+        "precision": 1.0,
+        "recall": 0.5,
+        "falsePositiveRate": 0.0,
+        "falsePositives": [],
+        "falseNegatives": [
+          [
+            "test/cropped-00.png",
+            "train/local-copy.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "train/scene-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/mirrored-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/repacked-00.png"
+          ],
+          [
+            "test/cropped-00.png",
+            "validation/resized-00.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "train/scene-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/mirrored-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/repacked-01.png"
+          ],
+          [
+            "test/cropped-01.png",
+            "validation/resized-01.png"
+          ]
+        ]
+      },
+      "exactEvidenceTierMismatches": [],
+      "exactPairsEmittedAsCandidates": 0,
+      "pairUniverse": 1086,
+      "nearOnlyUniverse": 1059
+    },
+    "stats": {
+      "inputImages": 59,
+      "processedImages": 59,
+      "comparisons": 2382,
+      "distanceEvaluations": 2236,
+      "pairChecks": 146,
+      "emittedPairs": 107,
+      "indexNodes": 28,
+      "reason": ""
+    }
+  },
+  "oracle": {
+    "passed": 59,
+    "total": 59,
+    "checks": [
+      {
+        "path": "test/alpha-white.png",
+        "expectedMirrorHash": "1011001110011011100110011101110111001101011011000110011001110110",
+        "passed": true
+      },
+      {
+        "path": "test/brighter-00.png",
+        "expectedMirrorHash": "0001101101010110001001100010100000110100100101110010100101010101",
+        "passed": true
+      },
+      {
+        "path": "test/brighter-01.png",
+        "expectedMirrorHash": "1001000010000110010011101011110010110001110001011101110011010001",
+        "passed": true
+      },
+      {
+        "path": "test/brighter-02.png",
+        "expectedMirrorHash": "1110101011111010111010010011001000110110101010010010001010000100",
+        "passed": true
+      },
+      {
+        "path": "test/brighter-03.png",
+        "expectedMirrorHash": "0011001000100110101111100101001011010100101011100110110010011101",
+        "passed": true
+      },
+      {
+        "path": "test/brighter-04.png",
+        "expectedMirrorHash": "1100111011001110010101101000110100010110001001000010010111010010",
+        "passed": true
+      },
+      {
+        "path": "test/brighter-05.png",
+        "expectedMirrorHash": "1001100110001010011000010110110001101101001011010011100100110101",
+        "passed": true
+      },
+      {
+        "path": "test/brighter-06.png",
+        "expectedMirrorHash": "0001101100111101001110011010011010100011010100100100100001011001",
+        "passed": true
+      },
+      {
+        "path": "test/brighter-07.png",
+        "expectedMirrorHash": "1010001100101101100011011010110010101000101100010101000101011011",
+        "passed": true
+      },
+      {
+        "path": "test/cropped-00.png",
+        "expectedMirrorHash": "1001011010100110011001000101000001100100101100101010000101001010",
+        "passed": true
+      },
+      {
+        "path": "test/cropped-01.png",
+        "expectedMirrorHash": "1010001001001111100111100010111000110110100100011000110011011100",
+        "passed": true
+      },
+      {
+        "path": "test/flat-blue.png",
+        "expectedMirrorHash": "0000000000000000000000000000000000000000000000000000000000000000",
+        "passed": true
+      },
+      {
+        "path": "test/lookalike-ramp-1.png",
+        "expectedMirrorHash": "0000000000000000000000000000000000000000000000000000000000000000",
+        "passed": true
+      },
+      {
+        "path": "test/quality72-00.jpg",
+        "expectedMirrorHash": "0001101101010110001001100010100000110100100101110010100101010101",
+        "passed": true
+      },
+      {
+        "path": "test/quality72-01.jpg",
+        "expectedMirrorHash": "1001000010000110010011101011110010110001110001011101110011010001",
+        "passed": true
+      },
+      {
+        "path": "test/quality72-02.jpg",
+        "expectedMirrorHash": "1110101011111010111010010011001000110110101010010010001010000100",
+        "passed": true
+      },
+      {
+        "path": "test/quality72-03.jpg",
+        "expectedMirrorHash": "0011001000100110101111100101001011010100101011100110110010011101",
+        "passed": true
+      },
+      {
+        "path": "test/quality72-04.jpg",
+        "expectedMirrorHash": "1100111011001110010101101000110100110110001001000010010111010010",
+        "passed": true
+      },
+      {
+        "path": "test/quality72-05.jpg",
+        "expectedMirrorHash": "1001100110001010011000010110110001101101001011010011100100110101",
+        "passed": true
+      },
+      {
+        "path": "test/quality72-06.jpg",
+        "expectedMirrorHash": "0001101100111101001110011010011010100011010100100100100001011001",
+        "passed": true
+      },
+      {
+        "path": "test/quality72-07.jpg",
+        "expectedMirrorHash": "1010001100101101100011011010110010101000101100010101000101011011",
+        "passed": true
+      },
+      {
+        "path": "test/renamed-00.png",
+        "expectedMirrorHash": "0001101101010110001001100010100000110100100101110010100101010101",
+        "passed": true
+      },
+      {
+        "path": "test/renamed-01.png",
+        "expectedMirrorHash": "1001000010000110010011101011110010110001110001011101110011010001",
+        "passed": true
+      },
+      {
+        "path": "test/renamed-02.png",
+        "expectedMirrorHash": "1110101011111010111010010011001000110110101010010010001010000100",
+        "passed": true
+      },
+      {
+        "path": "test/renamed-03.png",
+        "expectedMirrorHash": "0011001000100110101111100101001011010100101011100110110010011101",
+        "passed": true
+      },
+      {
+        "path": "test/renamed-04.png",
+        "expectedMirrorHash": "1100111011001110010101101000110100010110001001000010010111010010",
+        "passed": true
+      },
+      {
+        "path": "test/renamed-05.png",
+        "expectedMirrorHash": "1001100110001010011000010110110001101101001011010011100100110101",
+        "passed": true
+      },
+      {
+        "path": "test/renamed-06.png",
+        "expectedMirrorHash": "0001101100111101001110011010011010100011010100100100100001011001",
+        "passed": true
+      },
+      {
+        "path": "test/renamed-07.png",
+        "expectedMirrorHash": "1010001100101101100011011010110010101000101100010101000101011011",
+        "passed": true
+      },
+      {
+        "path": "train/alpha-source.png",
+        "expectedMirrorHash": "1011001110011011100110011101110111001101011011000110011001110110",
+        "passed": true
+      },
+      {
+        "path": "train/flat-red.png",
+        "expectedMirrorHash": "0000000000000000000000000000000000000000000000000000000000000000",
+        "passed": true
+      },
+      {
+        "path": "train/local-copy.png",
+        "expectedMirrorHash": "0001101101010110001001100010100000110100100101110010100101010101",
+        "passed": true
+      },
+      {
+        "path": "train/lookalike-ramp-0.png",
+        "expectedMirrorHash": "0000000000000000000000000000000000000000000000000000000000000000",
+        "passed": true
+      },
+      {
+        "path": "train/scene-00.png",
+        "expectedMirrorHash": "0001101101010110001001100010100000110100100101110010100101010101",
+        "passed": true
+      },
+      {
+        "path": "train/scene-01.png",
+        "expectedMirrorHash": "1001000010000110010011101011110010110001110001011101110011010001",
+        "passed": true
+      },
+      {
+        "path": "train/scene-02.png",
+        "expectedMirrorHash": "1110101011111010111010010011001000110110101010010010001010000100",
+        "passed": true
+      },
+      {
+        "path": "train/scene-03.png",
+        "expectedMirrorHash": "0011001000100110101111100101001011010100101011100110110010011101",
+        "passed": true
+      },
+      {
+        "path": "train/scene-04.png",
+        "expectedMirrorHash": "1100111011001110010101101000110100010110001001000010010111010010",
+        "passed": true
+      },
+      {
+        "path": "train/scene-05.png",
+        "expectedMirrorHash": "1001100110001010011000010110110001101101001011010011100100110101",
+        "passed": true
+      },
+      {
+        "path": "train/scene-06.png",
+        "expectedMirrorHash": "0001101100111101001110011010011010100011010100100100100001011001",
+        "passed": true
+      },
+      {
+        "path": "train/scene-07.png",
+        "expectedMirrorHash": "1010001100101101100011011010110010101000101100010101000101011011",
+        "passed": true
+      },
+      {
+        "path": "validation/mirrored-00.png",
+        "expectedMirrorHash": "0010011110010101100110101110101111010011000101100110101101010101",
+        "passed": true
+      },
+      {
+        "path": "validation/mirrored-01.png",
+        "expectedMirrorHash": "1111011010011010100011011100001001110010010111001100010001110100",
+        "passed": true
+      },
+      {
+        "path": "validation/repacked-00.png",
+        "expectedMirrorHash": "0001101101010110001001100010100000110100100101110010100101010101",
+        "passed": true
+      },
+      {
+        "path": "validation/repacked-01.png",
+        "expectedMirrorHash": "1001000010000110010011101011110010110001110001011101110011010001",
+        "passed": true
+      },
+      {
+        "path": "validation/repacked-02.png",
+        "expectedMirrorHash": "1110101011111010111010010011001000110110101010010010001010000100",
+        "passed": true
+      },
+      {
+        "path": "validation/repacked-03.png",
+        "expectedMirrorHash": "0011001000100110101111100101001011010100101011100110110010011101",
+        "passed": true
+      },
+      {
+        "path": "validation/repacked-04.png",
+        "expectedMirrorHash": "1100111011001110010101101000110100010110001001000010010111010010",
+        "passed": true
+      },
+      {
+        "path": "validation/repacked-05.png",
+        "expectedMirrorHash": "1001100110001010011000010110110001101101001011010011100100110101",
+        "passed": true
+      },
+      {
+        "path": "validation/repacked-06.png",
+        "expectedMirrorHash": "0001101100111101001110011010011010100011010100100100100001011001",
+        "passed": true
+      },
+      {
+        "path": "validation/repacked-07.png",
+        "expectedMirrorHash": "1010001100101101100011011010110010101000101100010101000101011011",
+        "passed": true
+      },
+      {
+        "path": "validation/resized-00.png",
+        "expectedMirrorHash": "0001101101010110001001100010100000110100100101110010100101010101",
+        "passed": true
+      },
+      {
+        "path": "validation/resized-01.png",
+        "expectedMirrorHash": "1001000010000110010011101011110010110001110001011101110011010001",
+        "passed": true
+      },
+      {
+        "path": "validation/resized-02.png",
+        "expectedMirrorHash": "1110101011111010111010010011001000110110101010010010001010000100",
+        "passed": true
+      },
+      {
+        "path": "validation/resized-03.png",
+        "expectedMirrorHash": "0011001000100110101111100101001011010100101011100110110010011101",
+        "passed": true
+      },
+      {
+        "path": "validation/resized-04.png",
+        "expectedMirrorHash": "1100111011001110010101101000110100010110001001000010010111010010",
+        "passed": true
+      },
+      {
+        "path": "validation/resized-05.png",
+        "expectedMirrorHash": "1001100110001010011000010110110001101101001011010011100100110101",
+        "passed": true
+      },
+      {
+        "path": "validation/resized-06.png",
+        "expectedMirrorHash": "0001101100111101001110011010011010100011010100100100100001011001",
+        "passed": true
+      },
+      {
+        "path": "validation/resized-07.png",
+        "expectedMirrorHash": "1010001100101101100011011010110010101000101100010101000101011011",
+        "passed": true
+      }
+    ],
+    "method": "ImageHash on independently reflected full RGBA and canonical grid"
+  },
+  "pairOracle": {
+    "passed": true,
+    "pairs": 107,
+    "comparison": "Independent exhaustive four-distance minimum, exact priority, transform labels and pair uniqueness"
+  },
+  "addedPairs": [
+    {
+      "left": "test/lookalike-ramp-1.png",
+      "right": "train/flat-red.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": true,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left",
+      "truth": "negative"
+    },
+    {
+      "left": "test/flat-blue.png",
+      "right": "train/lookalike-ramp-0.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": true,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right",
+      "truth": "negative"
+    },
+    {
+      "left": "test/brighter-00.png",
+      "right": "validation/mirrored-00.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left",
+      "truth": "near-source"
+    },
+    {
+      "left": "test/quality72-00.jpg",
+      "right": "validation/mirrored-00.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left",
+      "truth": "near-source"
+    },
+    {
+      "left": "test/renamed-00.png",
+      "right": "validation/mirrored-00.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left",
+      "truth": "near-source"
+    },
+    {
+      "left": "train/local-copy.png",
+      "right": "validation/mirrored-00.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left",
+      "truth": "near-source"
+    },
+    {
+      "left": "train/scene-00.png",
+      "right": "validation/mirrored-00.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left",
+      "truth": "near-source"
+    },
+    {
+      "left": "test/brighter-01.png",
+      "right": "validation/mirrored-01.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left",
+      "truth": "near-source"
+    },
+    {
+      "left": "test/quality72-01.jpg",
+      "right": "validation/mirrored-01.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left",
+      "truth": "near-source"
+    },
+    {
+      "left": "test/renamed-01.png",
+      "right": "validation/mirrored-01.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left",
+      "truth": "near-source"
+    },
+    {
+      "left": "train/scene-01.png",
+      "right": "validation/mirrored-01.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left",
+      "truth": "near-source"
+    }
+  ]
+}

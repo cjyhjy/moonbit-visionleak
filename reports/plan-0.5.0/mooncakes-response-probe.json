@@ -1,0 +1,30 @@
+[
+  {
+    "status": 200,
+    "exitCode": 255,
+    "requests": [],
+    "stdout": "",
+    "stderr": "Error: `moon.mod.json` at '/private/var/folders/sm/v6v7286s07j8z7x50805469c0000gn/T/vl-mooncake-probe-4u_crpvm/project' is no longer supported. Run `moon fmt` to migrate to `moon.mod`.\n"
+  },
+  {
+    "status": 202,
+    "exitCode": 255,
+    "requests": [],
+    "stdout": "",
+    "stderr": "Error: `moon.mod.json` at '/private/var/folders/sm/v6v7286s07j8z7x50805469c0000gn/T/vl-mooncake-probe-4u_crpvm/project' is no longer supported. Run `moon fmt` to migrate to `moon.mod`.\n"
+  },
+  {
+    "status": 401,
+    "exitCode": 255,
+    "requests": [],
+    "stdout": "",
+    "stderr": "Error: `moon.mod.json` at '/private/var/folders/sm/v6v7286s07j8z7x50805469c0000gn/T/vl-mooncake-probe-4u_crpvm/project' is no longer supported. Run `moon fmt` to migrate to `moon.mod`.\n"
+  },
+  {
+    "status": 500,
+    "exitCode": 255,
+    "requests": [],
+    "stdout": "",
+    "stderr": "Error: `moon.mod.json` at '/private/var/folders/sm/v6v7286s07j8z7x50805469c0000gn/T/vl-mooncake-probe-4u_crpvm/project' is no longer supported. Run `moon fmt` to migrate to `moon.mod`.\n"
+  }
+]

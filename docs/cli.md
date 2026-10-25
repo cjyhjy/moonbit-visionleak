@@ -16,11 +16,11 @@ node tools/server.mjs --report reports/my-audit/report.json --port 4173
 ```text
 dataset/
   train/       # 可递归子目录
-  validation/
+  validation/  # 也可用 val/valid/dev
   test/
 ```
 
-可缺少某个 split；缺失项记录在 `scope.missingSplits`。仅一个 split 也可审计，但不存在跨 split 比较。全部为空会返回 `EMPTY_DATASET`。扫描范围仅为这三个已知目录，扩展名为 `.png`、`.jpg`、`.jpeg`、`.webp`、`.avif`、`.tif`、`.tiff`、`.gif`，不区分大小写。其他普通文件不参与审计并计入 `ignoredFiles`；因此不支持的格式、根目录中的图片以及根目录中的 ground-truth 清单不属于此次审计范围。
+可缺少某个 split；缺失项记录在 `scope.missingSplits`。仅一个 split 也可审计，但不存在跨 split 比较。全部为空会返回 `EMPTY_DATASET`。split 别名为 train/training、validation/val/valid/dev、test/testing；每组只能存在一个目录，同时存在即报 SPLIT_ALIAS_CONFLICT。报告 scope.splitDirectories 保留实际目录到规范 split 的映射。扫描范围仅为这些已知目录，扩展名为 `.png`、`.jpg`、`.jpeg`、`.webp`、`.avif`、`.tif`、`.tiff`、`.gif`，不区分大小写。其他普通文件不参与审计并计入 `ignoredFiles`；因此不支持的格式、根目录中的图片以及根目录中的 ground-truth 清单不属于此次审计范围。
 
 解码后确认实际文件类型，不根据扩展名盲信内容。动画 GIF/WebP、带多个页面的 TIFF/HEIF 等明确报 `MULTIFRAME_IMAGE`，不会静默取第一帧。SVG/PDF 不接受。图像文件及 split 内的符号链接不跟随，报告路径错误。根目录本身先解析为真实目录。
 
@@ -32,13 +32,14 @@ dataset/
 | --- | ---: | ---: |
 | `--threshold` | 6 | 0–64 |
 | `--max-images` | 1000 | 1–10000 |
-| `--max-pixels` | 4194304 | 1–4194304 |
+| `--max-pixels`（感知取样） | 4194304 | 1–4194304 |
+| `--max-decode-pixels`（完整源图） | 64000000 | 1–100000000 |
 | `--max-total-pixels` | 100000000 | 1–1000000000 |
 | `--max-file-bytes` | 33554432 | 1–1073741824 |
 | `--max-comparisons` | 1000000 | 0–10000000 |
 | `--max-pairs` | 10000 | 0–100000 |
 
-另有固定目录预算：最多观察 100000 个目录项、最多递归 64 层。宽、高各不超过 65535，单图总像素还受 MoonBit 的 4194304 硬上限限制。按文件逐个解码，读取前检查编码字节数；读取过程固定上限并检查文件是否变化。总像素预算在下一张图片解码前限制其可用像素数。
+另有固定目录预算：最多观察 100000 个目录项、最多递归 64 层。宽、高各不超过 65535。完整源图受 --max-decode-pixels 限制，默认 64MP、硬上限 100MP；感知取样受 --max-pixels 限制，硬上限仍为 4194304。按文件逐个解码，读取前检查编码字节数；读取过程固定上限并检查文件是否变化。总像素预算在下一张图片解码前限制其可用像素数，按完整源图计费。超过感知取样上限时，完整 RGBA 由 MoonBit 分块规范化并计算像素摘要，再单独用 sharp 的 resize/shrink-on-load 路径取得 dHash 与预览输入。降低 --max-pixels 会缩小感知输入；拒收大图使用 --max-decode-pixels。
 
 ```sh
 node tools/cli.mjs audit --root /path/to/dataset --out reports/limited \
@@ -86,7 +87,7 @@ output/
 }
 ```
 
-`auditId` 为所有稳定报告内容的 SHA-256，包括图像摘要、路径、预算、解码器、MoonBit 编译产物摘要、证据、输入错误、扫描范围与完整性；只排除生成时刻和计时。相同审计可复现同 ID，参数、输入范围或引擎发生变化即获得新 ID。它用于防止不同审计的复核记录混用，并非数字签名，也不能认证报告作者。时间记录包含扫描、解码、指纹、比较和缩略图生成等本次流程，不是独立的核心微基准。
+`auditId` 为所有稳定报告内容的 SHA-256，包括图像摘要、路径、预算、解码器、MoonBit 编译产物摘要、证据、输入错误、扫描范围与完整性；新算法以 `identityVersion: vl-report-sha256-v2` 标识，递归按对象键排序并保留数组顺序；排除顶层 auditId、createdAt、timing 和附加人工 review。旧 0.1.0 报告按原属性顺序算法兼容。服务与浏览器接收报告时重算并核对摘要。相同审计可复现同 ID，参数、输入范围或引擎发生变化即获得新 ID。它用于防止不同审计的复核记录混用，并非数字签名，也不能认证报告作者。时间记录包含扫描、解码、指纹、比较和缩略图生成等本次流程，不是独立的核心微基准。
 
 `byte-identical` 是文件字节摘要一致；`pixel-identical` 是规范化完整像素及尺寸摘要一致；`perceptual-candidate` 仅表示哈希距离处于阈值，需要人工核验。SHA-256 摘要一致依赖其通常的抗碰撞假设。缩略图只用于观察，完整像素摘要并非从缩略图计算。
 
@@ -100,7 +101,7 @@ import { fingerprint, audit } from './tools/runtime.mjs';
 import { runAudit } from './tools/cli.mjs';
 
 const decoded = await decodeImage('/absolute/image.png', {
-  maxPixels: 4194304, maxFileBytes: 33554432
+  maxPixels: 4194304, maxDecodePixels: 64000000, maxFileBytes: 33554432
 });
 const fp = await fingerprint(decoded); // 调用真实 MoonBit fingerprint_rgba
 const result = await audit(images, {
@@ -109,7 +110,7 @@ const result = await audit(images, {
 const { report } = await runAudit({ root: '/absolute/dataset', out: '/absolute/output', options: { threshold: 4 } });
 ```
 
-`decodeImage` 返回 `{width,height,rgba:Buffer,byteDigest,format,pixelCount}`。`fingerprint` 返回核心成功对象，拒绝输入时抛带 `code` 的 `VisionLeakError`。`audit` 返回核心结果，不附加图像和磁盘报告。`runAudit` 合并默认预算并验证所有参数，执行完整流程；不自行修改进程退出码。
+`decodeImage` 返回 `{width,height,rgba:Buffer,byteDigest,format,pixelCount,sourceWidth,sourceHeight,downsampled,fullIdentity}`。width/height/rgba 是有界感知输入，sourceWidth/sourceHeight/pixelCount 是完整源图，fullIdentity 在采样时保存全分辨率 MoonBit 摘要与对比度。`fingerprint` 返回核心成功对象，拒绝输入时抛带 `code` 的 `VisionLeakError`。`audit` 返回核心结果，不附加图像和磁盘报告。`runAudit` 合并默认预算并验证所有参数，执行完整流程；不自行修改进程退出码。
 
 ## 本地服务范围
 
@@ -126,3 +127,15 @@ node --test tests/cli.test.mjs
 集成测试使用真实 PNG/JPEG 与实际 MoonBit 核心，包括跨集合字节/像素证据、EXIF 像素位置、alpha 规范化、可复现身份、预算不完整、结构化错误、源文件保持、覆盖保护、仅回环监听和 HTTP 路径限制。测试临时目录自动清理，无 mock 核心。HTTP 测试需要本地监听权限。
 
 解码行为依据 [Sharp 构造器与像素限制](https://sharp.pixelplumbing.com/api-constructor/)、[EXIF 自动方向](https://sharp.pixelplumbing.com/api-operation/#autoorient)、[颜色转换](https://sharp.pixelplumbing.com/api-colour/)、[原始像素输出](https://sharp.pixelplumbing.com/api-output/#raw)。这些来源描述解码库的能力；VisionLeak 的具体边界以本项目锁定代码和实际测试为准。
+
+## 0.3.0 水平镜像模式
+
+CLI 增加 `--include-mirrors`；JS `fingerprint({width,height,rgba,includeMirrors:true})` 或核心 `fingerprint_mirrored_rgba` 额外返回 `dhashMirror`。核心审计传 `options.includeMirrors:true` 时每个图像必须提供有效 `dhashMirror`。报告中的非原方向 `matchTransform` 对应 left/right 的水平反射，仍属人工复核候选，不能当作像素相等。默认模式不计算额外镜像指纹。详见 [0.3.0 合同与评测](changes-0.3.0.md)。
+
+## 0.4.0 照片评测与直角旋转
+
+新增 `--include-rotations`，可与镜像组合；完整 API、方向顺序、预算语义与开销见 [0.4.0 说明](changes-0.4.0.md)，照片来源与实际误报漏检见 [评测](../reports/photos-v1/summary.md)。
+
+## 0.5.0 阶段执行说明
+
+以上大图与别名更新为计划第 0、1 阶段的实现，待 Claude 阶段验收。12MP JPEG、复制件和无损 PNG 重编码的现场验证、峰值 RSS 及默认检测兼容结果见 `reports/plan-0.5.0/phase-1.md`。Node/sharp 仍会分配完整 RGBA 解码缓冲；增量 SHA-256 不等于整个解码流程零拷贝或固定 RSS。

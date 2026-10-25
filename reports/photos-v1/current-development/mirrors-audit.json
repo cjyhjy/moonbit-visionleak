@@ -1,0 +1,1708 @@
+{
+  "schemaVersion": "visionleak-report-v1",
+  "identityVersion": "vl-report-sha256-v2",
+  "normalization": "vl-rgb-v1",
+  "decoder": {
+    "name": "sharp",
+    "version": "0.35.5",
+    "libvips": "8.18.7"
+  },
+  "engine": {
+    "name": "visionleak-moonbit",
+    "artifactDigest": "86a74558178474cc22591e1e4da38cc8a0b547c7c39ec3b9d9282d9736093bcb"
+  },
+  "ok": true,
+  "complete": true,
+  "status": "complete",
+  "pairs": [
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "train/astronaut-original.png",
+      "evidence": "byte-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "train/astronaut-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "train/astronaut-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "train/brick-original.png",
+      "evidence": "byte-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "train/brick-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 2,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "train/brick-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-both"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "train/chelsea-original.png",
+      "evidence": "byte-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "train/chelsea-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "train/chelsea-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "train/coffee-original.png",
+      "evidence": "byte-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "train/coffee-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "train/coffee-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "train/coffee-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "train/grass-original.png",
+      "evidence": "byte-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "train/grass-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "train/grass-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "train/astronaut-original.png",
+      "right": "validation/astronaut-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "train/astronaut-original.png",
+      "right": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "validation/astronaut-png-repack.png",
+      "evidence": "pixel-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "train/astronaut-original.png",
+      "right": "validation/astronaut-png-repack.png",
+      "evidence": "pixel-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "validation/astronaut-png-repack.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "validation/astronaut-png-repack.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/astronaut-brightness-1.15.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/astronaut-byte-copy.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/astronaut-jpeg-quality70.jpg",
+      "right": "validation/astronaut-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "train/astronaut-original.png",
+      "right": "validation/astronaut-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "validation/brick-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "train/brick-original.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "validation/brick-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 2,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "train/brick-original.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "validation/brick-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 2,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "validation/brick-png-repack.png",
+      "evidence": "pixel-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "train/brick-original.png",
+      "right": "validation/brick-png-repack.png",
+      "evidence": "pixel-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "validation/brick-png-repack.png",
+      "evidence": "perceptual-candidate",
+      "distance": 2,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "validation/brick-png-repack.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-both"
+    },
+    {
+      "left": "test/brick-brightness-1.15.png",
+      "right": "validation/brick-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 4,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/brick-jpeg-quality70.jpg",
+      "right": "validation/brick-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 2,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/brick-byte-copy.png",
+      "right": "validation/brick-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 4,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "train/brick-original.png",
+      "right": "validation/brick-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 4,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "train/chelsea-original.png",
+      "right": "validation/chelsea-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "train/chelsea-original.png",
+      "right": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "validation/chelsea-png-repack.png",
+      "evidence": "pixel-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "train/chelsea-original.png",
+      "right": "validation/chelsea-png-repack.png",
+      "evidence": "pixel-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "validation/chelsea-png-repack.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "validation/chelsea-png-repack.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/chelsea-brightness-1.15.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/chelsea-byte-copy.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/chelsea-jpeg-quality70.jpg",
+      "right": "validation/chelsea-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "train/chelsea-original.png",
+      "right": "validation/chelsea-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "train/coffee-original.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "validation/coffee-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "train/coffee-original.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "validation/coffee-png-repack.png",
+      "evidence": "pixel-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "train/coffee-original.png",
+      "right": "validation/coffee-png-repack.png",
+      "evidence": "pixel-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/coffee-center-crop-90percent.png",
+      "right": "validation/coffee-png-repack.png",
+      "evidence": "perceptual-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "validation/coffee-png-repack.png",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "validation/coffee-png-repack.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/coffee-brightness-1.15.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-both"
+    },
+    {
+      "left": "test/coffee-byte-copy.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/coffee-jpeg-quality70.jpg",
+      "right": "validation/coffee-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "train/coffee-original.png",
+      "right": "validation/coffee-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "validation/grass-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "train/grass-original.png",
+      "right": "validation/grass-horizontal-mirror.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-right"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "train/grass-original.png",
+      "right": "validation/grass-mirror-jpeg-quality70.jpg",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-left"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "validation/grass-png-repack.png",
+      "evidence": "pixel-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "train/grass-original.png",
+      "right": "validation/grass-png-repack.png",
+      "evidence": "pixel-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "validation/grass-png-repack.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "validation/grass-png-repack.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/grass-brightness-1.15.png",
+      "right": "validation/grass-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-both"
+    },
+    {
+      "left": "test/grass-byte-copy.png",
+      "right": "validation/grass-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-both"
+    },
+    {
+      "left": "test/grass-jpeg-quality70.jpg",
+      "right": "validation/grass-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-both"
+    },
+    {
+      "left": "train/grass-original.png",
+      "right": "validation/grass-resize-73percent.png",
+      "evidence": "perceptual-candidate",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchTransform": "mirror-both"
+    }
+  ],
+  "groups": [
+    {
+      "members": [
+        "test/astronaut-byte-copy.png",
+        "train/astronaut-original.png",
+        "validation/astronaut-png-repack.png"
+      ],
+      "evidence": "exact-component"
+    },
+    {
+      "members": [
+        "test/brick-byte-copy.png",
+        "train/brick-original.png",
+        "validation/brick-png-repack.png"
+      ],
+      "evidence": "exact-component"
+    },
+    {
+      "members": [
+        "test/chelsea-byte-copy.png",
+        "train/chelsea-original.png",
+        "validation/chelsea-png-repack.png"
+      ],
+      "evidence": "exact-component"
+    },
+    {
+      "members": [
+        "test/coffee-byte-copy.png",
+        "train/coffee-original.png",
+        "validation/coffee-png-repack.png"
+      ],
+      "evidence": "exact-component"
+    },
+    {
+      "members": [
+        "test/grass-byte-copy.png",
+        "train/grass-original.png",
+        "validation/grass-png-repack.png"
+      ],
+      "evidence": "exact-component"
+    }
+  ],
+  "options": {
+    "threshold": 6,
+    "maxImages": 1000,
+    "maxPixels": 4194304,
+    "maxTotalPixels": 100000000,
+    "maxFileBytes": 33554432,
+    "maxComparisons": 1000000,
+    "maxPairs": 10000,
+    "includeMirrors": true,
+    "includeRotations": false
+  },
+  "stats": {
+    "inputImages": 50,
+    "processedImages": 50,
+    "comparisons": 2250,
+    "distanceEvaluations": 2104,
+    "pairChecks": 146,
+    "emittedPairs": 99,
+    "indexNodes": 42,
+    "reason": ""
+  },
+  "images": [
+    {
+      "id": "test/astronaut-brightness-1.15.png",
+      "path": "test/astronaut-brightness-1.15.png",
+      "split": "test",
+      "byteDigest": "4dc606b6e2ac44d2e205464b04f88d9e8f776c055f52d7d549f8d69f93d71c0f",
+      "pixelDigest": "601bdee6dc057ee49827a8d0f30bf516bbf8a4aaecb3d6021d68b514a916bbb0",
+      "dhash": "1101110110001101101111010000110110011101001100101001010110100110",
+      "dhashMirror": "0100010001001110010000100100111101100110101100110101011010011010",
+      "width": 256,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/64d90a35fd5c7dea2df5b4fa1b9f94580aceb210a9f40e9514499539cdc4f9a6.jpg",
+      "thumbnailDigest": "d59d9da031b91fc407730cc4cdffa12417c65a216dd6adbf650bc299ddb9b2af",
+      "format": "png"
+    },
+    {
+      "id": "test/astronaut-byte-copy.png",
+      "path": "test/astronaut-byte-copy.png",
+      "split": "test",
+      "byteDigest": "35104b000dbc1b242d19203de6c8be1077cafe367723a8bca39e7f21657d9122",
+      "pixelDigest": "ef4a363df04a0422275160d7070a985b5b4160be607465956cd6c5333033b6a7",
+      "dhash": "1101110110001101101111010000110110011101001100101001010110100110",
+      "dhashMirror": "0100010001001110010000100100111101100110101100110101011010011010",
+      "width": 256,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/04f65c86c1f8b95802e55058689e7f48085921284b0e9d3c14ace4785abfcf57.jpg",
+      "thumbnailDigest": "274b13f1372adfffb7d74569ff79f359438b5ddf593278f2006b0a935bf4c417",
+      "format": "png"
+    },
+    {
+      "id": "test/astronaut-center-crop-90percent.png",
+      "path": "test/astronaut-center-crop-90percent.png",
+      "split": "test",
+      "byteDigest": "21c420598344fe1012d5e28c55b3d13d6b4a026e5d045697999ad1b457500c60",
+      "pixelDigest": "b94d4b72a804fa8abc77e1ce5bc4642eb64d795e10c9be368f11edeb0760687f",
+      "dhash": "1000110110101101101110010000110110011101010100100101000110010100",
+      "dhashMirror": "0100111001001010011000100100011101000110101101010111010111010110",
+      "width": 256,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/b9f40ff87a53dfec448e441bbf8532095f9a4005899e15d9924ebb617d13e544.jpg",
+      "thumbnailDigest": "fc4d416d263df611bd4635a370115c8e537fba608a60796fa808fbf26a7d348a",
+      "format": "png"
+    },
+    {
+      "id": "test/astronaut-jpeg-quality70.jpg",
+      "path": "test/astronaut-jpeg-quality70.jpg",
+      "split": "test",
+      "byteDigest": "ee6b0fa7791c22b93f322a96d71ad3514a760be1f03285ffc63ddc89e8a4e1c8",
+      "pixelDigest": "17658c3c976555a6d59a4ee9b5995a20c7dd33de143f25c6771532c5a508b07a",
+      "dhash": "1101110110001101101111010000110110011101001100101001010110100110",
+      "dhashMirror": "0100010001001110010000100100111101100110101100110101011010011010",
+      "width": 256,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/2d047e553acf9514503407295c81e0fe966c74d22b198106de2d23fe84720a5c.jpg",
+      "thumbnailDigest": "d84b0f5ed810773ad2fd7bafa3dc7ff5b486b316622673890450cf5066092668",
+      "format": "jpeg"
+    },
+    {
+      "id": "test/astronaut-rotate90.png",
+      "path": "test/astronaut-rotate90.png",
+      "split": "test",
+      "byteDigest": "aba62428e86e913b9c24c23a88d4371fea00d7bf585abff22037447983f03db4",
+      "pixelDigest": "d504e6c553b3b2e8856d885e243f904c16e00948654df3c1ad7a56501d6ab9b1",
+      "dhash": "1100010000100100011000000100110001011100010110010101000101101100",
+      "dhashMirror": "1101110011011011111110011100110111000100011001010111010111001001",
+      "width": 256,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/9a9cf5a39166c97c7ac2504de613a9a25e80dad7dc932148b9692bf63f05ecee.jpg",
+      "thumbnailDigest": "547a4ecf334fc2a967580b0d639f3f8a3c99e3e156db62b978e30430090d8bef",
+      "format": "png"
+    },
+    {
+      "id": "test/brick-brightness-1.15.png",
+      "path": "test/brick-brightness-1.15.png",
+      "split": "test",
+      "byteDigest": "af3b735b8877bdd969b87d71cec709e159e37892c3c6907f4e78769ffe852b1c",
+      "pixelDigest": "ad29774c541b5172fbb24d1a1c300466a1430fc2509de4e61f7ce0fcd71767b2",
+      "dhash": "0100010111101111010010100110110110101010101010101010101000101101",
+      "dhashMirror": "0101000000001000101011010000100110101010101010101010101101001011",
+      "width": 256,
+      "height": 256,
+      "contrast": 159,
+      "thumbnail": "thumbnails/b63aba7b192804d3052757e9920177208fa7679f8bb26ebe97e6f9714aef3c80.jpg",
+      "thumbnailDigest": "52858daaf95033e2beb7cada68be7b3a9477d4da1dfc7b0c8350aac68c0bec31",
+      "format": "png"
+    },
+    {
+      "id": "test/brick-byte-copy.png",
+      "path": "test/brick-byte-copy.png",
+      "split": "test",
+      "byteDigest": "c6c455db838960a2ca63f8dd3ec7370f768482b040e78829db83795f559cd27f",
+      "pixelDigest": "1114b19f21ddc60758f9643ff44e421f2107c8ad678ca57366aeef3f7a25daa1",
+      "dhash": "0101010111101101010010100110110110101010101010101010101000101101",
+      "dhashMirror": "0001000000001000100011010000100100101010101010101010101101001011",
+      "width": 256,
+      "height": 256,
+      "contrast": 138,
+      "thumbnail": "thumbnails/2c0276b55a0f90dd907054c162c11a93a0fc4e2dc98c25eeebeaee4a4e1da6d7.jpg",
+      "thumbnailDigest": "cce9a0ba4c10deb412a96f5d1ae6e116f6a7b2474bc604dce486c46041c1fc90",
+      "format": "png"
+    },
+    {
+      "id": "test/brick-center-crop-90percent.png",
+      "path": "test/brick-center-crop-90percent.png",
+      "split": "test",
+      "byteDigest": "cb67c35fe5a0616408ef1bf511e05e6fde714d71466fcf7f69be99af03b1e04e",
+      "pixelDigest": "af1b59a7b68dab3d246224113ac2bc8d111d0fb711e1492605d9f37fdae47c4c",
+      "dhash": "0110100010101101101010101010101000101010001011010010110101001100",
+      "dhashMirror": "1000101001001010001010101010101010101011010010010100101001001101",
+      "width": 256,
+      "height": 256,
+      "contrast": 140,
+      "thumbnail": "thumbnails/05d2f125a34e0b97b7562f4f4e9d2b91fd05cebd4c8b0bbab6143c03f64db057.jpg",
+      "thumbnailDigest": "3b59be897262f15979ba64011b41024cbc4a1e2ff1536c795b8a828e053ac3ac",
+      "format": "png"
+    },
+    {
+      "id": "test/brick-jpeg-quality70.jpg",
+      "path": "test/brick-jpeg-quality70.jpg",
+      "split": "test",
+      "byteDigest": "aa992f1cdeaeb8820a5286f82d7a74376f4d6196fec4578d2d12057a907c127b",
+      "pixelDigest": "384c4d18b1bb94b211c948db0d3e827b5f3f96863ef97cdda304b3e7fd1a68da",
+      "dhash": "0100011111101101010010100110110110101010101010101010101000101101",
+      "dhashMirror": "0001000000001000100011010000100100101010101010101010101101001011",
+      "width": 256,
+      "height": 256,
+      "contrast": 145,
+      "thumbnail": "thumbnails/2ae53ee1b0b9d6cf8b9f64ef5488dbce22715b64d593d5dcd34631449e79a6aa.jpg",
+      "thumbnailDigest": "4c87add14cc110bdf343cd521e4846af37c7f4f34d3ba81b10fed976deab2354",
+      "format": "jpeg"
+    },
+    {
+      "id": "test/brick-rotate90.png",
+      "path": "test/brick-rotate90.png",
+      "split": "test",
+      "byteDigest": "59daf2b2d209a59ce862625fd772ed1e4e7b3667105fec0534a337575d1740fd",
+      "pixelDigest": "f50c5009b97f52b8585d4d09d98410675c8e5dbfbc20be5b663831097049245f",
+      "dhash": "0010001000101000010101011000111111010101001010011010100111000010",
+      "dhashMirror": "0101001001101010010101000000111001010100001010011010001010010100",
+      "width": 256,
+      "height": 256,
+      "contrast": 138,
+      "thumbnail": "thumbnails/36a4616c73fc2a5dd76c75b92fadf4b450b9c10b7037bcfd3b5a757324a74d42.jpg",
+      "thumbnailDigest": "dd75838af9db4ea8a4ac22d88103ca5d2ff74bc033b54b91d050fef0a5206da4",
+      "format": "png"
+    },
+    {
+      "id": "test/chelsea-brightness-1.15.png",
+      "path": "test/chelsea-brightness-1.15.png",
+      "split": "test",
+      "byteDigest": "d9ed6d60cc7d4040af3a1d6487c5e3213ac4f77cacd4235ef5d7b71a916ae579",
+      "pixelDigest": "d3a2cca355547d1b2f98126dbb4214ae7893b3fb2e7f16a90346966861c32139",
+      "dhash": "0101010000010100010110101001101010101001010010111000011110000111",
+      "dhashMirror": "1101010111010111101001011010011001101010001011010001111000001110",
+      "width": 256,
+      "height": 170,
+      "contrast": 219,
+      "thumbnail": "thumbnails/0fff32d825ce93c514f406eb2d7768ae5451bfb8569aa8c5763c5ed92f3ce93f.jpg",
+      "thumbnailDigest": "36bb280ae1f49738f2ab107504d10d20778890b83588d5e24598a2ba8d6ae6da",
+      "format": "png"
+    },
+    {
+      "id": "test/chelsea-byte-copy.png",
+      "path": "test/chelsea-byte-copy.png",
+      "split": "test",
+      "byteDigest": "7c68be3d803c53395704d786525cc61f273ee75040eb680bd6740b937015b41b",
+      "pixelDigest": "bc678b6d8bfedea4b166680c4e1a1fb9f7347eeddfb0ca63017f2ffdd8bc0e6d",
+      "dhash": "0101010000010100010110101001101010101001010010111000011110000111",
+      "dhashMirror": "1101010111010111101001011010011001101010001011010001111000001110",
+      "width": 256,
+      "height": 170,
+      "contrast": 190,
+      "thumbnail": "thumbnails/516c4304e1f8cb593aba770cf70c2b1b1a2eaf8862ed094cf1d2c05a66c3c7fd.jpg",
+      "thumbnailDigest": "fd873b6b23486d5f7933259007710de065d7d6b9ecd3b4195e7abeb1235e9a45",
+      "format": "png"
+    },
+    {
+      "id": "test/chelsea-center-crop-90percent.png",
+      "path": "test/chelsea-center-crop-90percent.png",
+      "split": "test",
+      "byteDigest": "e33c0e38470e712a6d5384313a7165af91c37c27beaafa5e37faf38bcd9e4ead",
+      "pixelDigest": "c09d9548c2219522d5d9caec1c0dea4fe2ecde66003a455bdcef4941c82abcd3",
+      "dhash": "1001011000010100010110101001101010101010010010110100011110000110",
+      "dhashMirror": "1001011011010101101001011010011010101010001011010001110100011110",
+      "width": 256,
+      "height": 170,
+      "contrast": 188,
+      "thumbnail": "thumbnails/0ea8d8a30b14bfd851c04008d5df30e1e1e26cc0b0d372c7a25bbf73f1a74b41.jpg",
+      "thumbnailDigest": "679b7d695040870fd4bf4340a3fb5335c5836da36935e2b769aaaa67c544df47",
+      "format": "png"
+    },
+    {
+      "id": "test/chelsea-jpeg-quality70.jpg",
+      "path": "test/chelsea-jpeg-quality70.jpg",
+      "split": "test",
+      "byteDigest": "3f4df0fa4ce8455d0c5014884921195779ca38d89cdf6b90ba2c82176476a516",
+      "pixelDigest": "b3416d1e9ee32300bc63fed24e7a6fa1d7452224778084798732c3a9170fd040",
+      "dhash": "0101010000010100010110101001101010101001010010111000011110000111",
+      "dhashMirror": "1101010111010111101001011010011001101010001011010001111000001110",
+      "width": 256,
+      "height": 170,
+      "contrast": 193,
+      "thumbnail": "thumbnails/42313693051a30800d86b731898a1b6cff3c0933a6e11cd70c7d002077d09f0f.jpg",
+      "thumbnailDigest": "bc5c6442c4c1819136e29dc6575489edf3cfbed79e516ef7d4d7933a10c8ed2b",
+      "format": "jpeg"
+    },
+    {
+      "id": "test/chelsea-rotate90.png",
+      "path": "test/chelsea-rotate90.png",
+      "split": "test",
+      "byteDigest": "d45f6115a7d63dc1c47b4b6230f9f1dd1e15206a8e8d6ff50d5afbf23a0fcdff",
+      "pixelDigest": "e5cf3eba3a5c335220593f70d80cb53b52516d022216f9f030697b2ad8bc1d93",
+      "dhash": "1101010001110101010010111111000100011110010001011011011111001101",
+      "dhashMirror": "1101010001010001001011000111000010000110010001010001001001001100",
+      "width": 170,
+      "height": 256,
+      "contrast": 190,
+      "thumbnail": "thumbnails/c7c3baee9032044e65b85041879d88c3a1ebdd186ce8168c47cfaac37b84dbcd.jpg",
+      "thumbnailDigest": "0b9a3cb7fc952af290c21ddc30875e1d87b416de7ab04402c0d50267de6d5d3a",
+      "format": "png"
+    },
+    {
+      "id": "test/coffee-brightness-1.15.png",
+      "path": "test/coffee-brightness-1.15.png",
+      "split": "test",
+      "byteDigest": "85abb11066dc8cf7bcb7c46ebcc1260f4a61f34949a4b4c0f14fdb1539cbc317",
+      "pixelDigest": "b22982e4ee5962a8cc8a3f145761cd99210400ea9fdea7797dbae676bf2c2a86",
+      "dhash": "1111001111111001010110010011001100010110001010110000111100010110",
+      "dhashMirror": "0011000001100000001001010011001110010111000010110000111110010011",
+      "width": 256,
+      "height": 171,
+      "contrast": 255,
+      "thumbnail": "thumbnails/c0198a9c8c4b07ea6fdc3fd8588c72b44593dcb6a417b8713fcf1d03b556cbd8.jpg",
+      "thumbnailDigest": "83b9530c9a62bd8d269479fcee7111c6380e5e0181f4ddca5a2143b0da1b5d57",
+      "format": "png"
+    },
+    {
+      "id": "test/coffee-byte-copy.png",
+      "path": "test/coffee-byte-copy.png",
+      "split": "test",
+      "byteDigest": "cf41a81efbd79898d0b66c9d9616ecb046aa16353d280b41bcbf71f95e477897",
+      "pixelDigest": "ca626d71e0495598e2b34f7f124ea3217c368edc690366998a1a1321b15fa118",
+      "dhash": "1111001111101001010110010011001100010110001010110000111100010110",
+      "dhashMirror": "0011000001100000001001010011001110010111000010110000111110010111",
+      "width": 256,
+      "height": 171,
+      "contrast": 255,
+      "thumbnail": "thumbnails/15d4b7dd87687134d0fc75bfdfa81a02311072332d801738490cf8d1e52b000d.jpg",
+      "thumbnailDigest": "c2dda9298fb4d96e53e4e27128af4e72a1d430fe7ff40b269ad977534e22a85d",
+      "format": "png"
+    },
+    {
+      "id": "test/coffee-center-crop-90percent.png",
+      "path": "test/coffee-center-crop-90percent.png",
+      "split": "test",
+      "byteDigest": "8cc7b187cf4c23e5dccb73269f50baff65952decfb02a2a5c67fc2f4c394bbba",
+      "pixelDigest": "b87431c65e77a6c14286b4b32ae66f71ca9609cde968cc353d260f8a8c971686",
+      "dhash": "1111001111001001010110010110001100010110001010110000111100011011",
+      "dhashMirror": "0011000001100100011001010011100110010111001010110000111100100111",
+      "width": 256,
+      "height": 171,
+      "contrast": 255,
+      "thumbnail": "thumbnails/76c744a3239f7b1e93d3df20f34115184e319cd9c8a1d00b45172e70b8b33694.jpg",
+      "thumbnailDigest": "311c3ae14cd17e9735558ea899f49ff63db35074baa44ee0d333821ea8e297b1",
+      "format": "png"
+    },
+    {
+      "id": "test/coffee-jpeg-quality70.jpg",
+      "path": "test/coffee-jpeg-quality70.jpg",
+      "split": "test",
+      "byteDigest": "4c09b4fb476d382df04a4b67f1835b58139e513fae492b08a545b896e0506698",
+      "pixelDigest": "0f06cafa8843e1d63559bd4a6c0b16b96c8ca744866fe0ce3ff61176f85e40da",
+      "dhash": "1111001111101001010110010011001100010110001010110000111100010110",
+      "dhashMirror": "0011000001100000001001010011001110010111000010110000111110010011",
+      "width": 256,
+      "height": 171,
+      "contrast": 253,
+      "thumbnail": "thumbnails/f30141aa5be2bdfd7004d78b7d54b1a389d159957fb1853ba8fd42f159401766.jpg",
+      "thumbnailDigest": "dfefe578a125305c6b05cfb0afe80ec7961a067e163ddddad2d05982a0cd5b36",
+      "format": "jpeg"
+    },
+    {
+      "id": "test/coffee-rotate90.png",
+      "path": "test/coffee-rotate90.png",
+      "split": "test",
+      "byteDigest": "a6678c1b53f1f3cb9e804d4de21ba08631dc440f56e62e650d8886f48e833b6f",
+      "pixelDigest": "0d5cd2d086b4eb6418095c017398999177c7db55a2639b1e2fe517ad4a4a7ee3",
+      "dhash": "0100010100100011110000001010010100100001100000101000001111110111",
+      "dhashMirror": "0101110100111011111111000101101001111010101111100010111000010000",
+      "width": 171,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/751a01421b29f72f46b73125eed7fdf84d2fb681d43e1c2766926960e3b80ca4.jpg",
+      "thumbnailDigest": "e303e1af9ce350441f87671c7f4641c119431890eccf617e319241cff04d6acf",
+      "format": "png"
+    },
+    {
+      "id": "test/grass-brightness-1.15.png",
+      "path": "test/grass-brightness-1.15.png",
+      "split": "test",
+      "byteDigest": "c93833efda459bdfdfd542647a02dd5ba430a3227c860c13e0c8f0df72ccf62d",
+      "pixelDigest": "9af8a934cb18893ecce2f492000c2c95e60bfac5fbf7071b9053bf7f39b49051",
+      "dhash": "1101110110010101101010000110110110110101111011011111000110101010",
+      "dhashMirror": "0100010001010010111010100100100100010010010010000111000010001010",
+      "width": 256,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/219b61bfcbde78e6727eb0f04c52879bfa1bb51e6612679aac5d14f0546a3b8d.jpg",
+      "thumbnailDigest": "8dbe6ff61b5af4b9a8fc793ffcce7c42ac98c4fce982bf3ded76b5442745283f",
+      "format": "png"
+    },
+    {
+      "id": "test/grass-byte-copy.png",
+      "path": "test/grass-byte-copy.png",
+      "split": "test",
+      "byteDigest": "7ae9bcc61d6418c8c9a25dcbd1dbe1e3554415065800414e8dacfc455a714163",
+      "pixelDigest": "3310416948db5732fb3d52c586a0e429bdf0e191f071d294588a9ce0be3023f9",
+      "dhash": "1101110110010101101010000110110110110101111011011111000110101010",
+      "dhashMirror": "0100010001010010111010100100100100010010010010000101000010001010",
+      "width": 256,
+      "height": 256,
+      "contrast": 226,
+      "thumbnail": "thumbnails/19e53c45d1e44ebfd6442cdb87fd2d5193bc32f916453c6338c96d6a843550b6.jpg",
+      "thumbnailDigest": "5e12f372cf34a8a637e6def2503e27fe298d4d74c7c3d51086be1eb58fa96af3",
+      "format": "png"
+    },
+    {
+      "id": "test/grass-center-crop-90percent.png",
+      "path": "test/grass-center-crop-90percent.png",
+      "split": "test",
+      "byteDigest": "2e597d5d3bd7f974e5704461b17a259b91bb2aee5f3ef4812db58e82b2fb53e2",
+      "pixelDigest": "77adb88fac9b94c81d8d05738946e1148f4a3b33db7daad0aaccaa4cc37180c5",
+      "dhash": "1010010110010100101010100110110010110101111011001011001011001010",
+      "dhashMirror": "0100101011010110101010100100100101010010010010000011000000101100",
+      "width": 256,
+      "height": 256,
+      "contrast": 230,
+      "thumbnail": "thumbnails/dbc6aaf8792c712e731e57dc2a5bd2c352f7d66eb62e5d6dba0b3f567016fb3e.jpg",
+      "thumbnailDigest": "c9687f839cf0208f699735b49c5b3558a358d05f514a52aca3a202b76f404a75",
+      "format": "png"
+    },
+    {
+      "id": "test/grass-jpeg-quality70.jpg",
+      "path": "test/grass-jpeg-quality70.jpg",
+      "split": "test",
+      "byteDigest": "c2debdef89dd377828e49f8583cb85ccb3132778f2eea39814bd3189d9c87a69",
+      "pixelDigest": "d55a9401ee9a1e88f63e88a9feb0ff805cf33a0e9f6833f3f55c283ea085f187",
+      "dhash": "1101110110010101101010000110110110110101111011011111000110101010",
+      "dhashMirror": "0100010001010010111010100100100100010010010010000101000010001010",
+      "width": 256,
+      "height": 256,
+      "contrast": 241,
+      "thumbnail": "thumbnails/297108ce712d5da614ff146eca3b1ebeef6fc6de98b3135c9dd25cfab063b3e3.jpg",
+      "thumbnailDigest": "8034702d31ad25c3cacd27bdc586feaa696c94683d192633e60c50b0346880e7",
+      "format": "jpeg"
+    },
+    {
+      "id": "test/grass-rotate90.png",
+      "path": "test/grass-rotate90.png",
+      "split": "test",
+      "byteDigest": "2227cee3c09a292574e2aea734858e263f865489c48d55fb1340fe3ba1518090",
+      "pixelDigest": "0051cbee57146d53b9a02ca5f9cbb5b426aa61c4221d16ea31fadeb8e14304ad",
+      "dhash": "1011001110011011101001010001011010010011001011101001010110101001",
+      "dhashMirror": "0011001000100110010110101001010100110110100010110011011001101010",
+      "width": 256,
+      "height": 256,
+      "contrast": 226,
+      "thumbnail": "thumbnails/febb0b644fe3defc7e3468f083caedbd1bc6cdea85017ad1da5498dfcd0334be.jpg",
+      "thumbnailDigest": "7cc996c987c09da5ae80ae86608208face1f93f77b2d7e6891c6dca5b7babf76",
+      "format": "png"
+    },
+    {
+      "id": "train/astronaut-original.png",
+      "path": "train/astronaut-original.png",
+      "split": "train",
+      "byteDigest": "35104b000dbc1b242d19203de6c8be1077cafe367723a8bca39e7f21657d9122",
+      "pixelDigest": "ef4a363df04a0422275160d7070a985b5b4160be607465956cd6c5333033b6a7",
+      "dhash": "1101110110001101101111010000110110011101001100101001010110100110",
+      "dhashMirror": "0100010001001110010000100100111101100110101100110101011010011010",
+      "width": 256,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/802fb417e0c3acc324662b7c3ed142fdee7d9f09d14202fac7fc46418396c8d3.jpg",
+      "thumbnailDigest": "274b13f1372adfffb7d74569ff79f359438b5ddf593278f2006b0a935bf4c417",
+      "format": "png"
+    },
+    {
+      "id": "train/brick-original.png",
+      "path": "train/brick-original.png",
+      "split": "train",
+      "byteDigest": "c6c455db838960a2ca63f8dd3ec7370f768482b040e78829db83795f559cd27f",
+      "pixelDigest": "1114b19f21ddc60758f9643ff44e421f2107c8ad678ca57366aeef3f7a25daa1",
+      "dhash": "0101010111101101010010100110110110101010101010101010101000101101",
+      "dhashMirror": "0001000000001000100011010000100100101010101010101010101101001011",
+      "width": 256,
+      "height": 256,
+      "contrast": 138,
+      "thumbnail": "thumbnails/fbcffe5b0ab1a11b8d9fba1eb965ad913d83215e71b8009f681d20f947fd838c.jpg",
+      "thumbnailDigest": "cce9a0ba4c10deb412a96f5d1ae6e116f6a7b2474bc604dce486c46041c1fc90",
+      "format": "png"
+    },
+    {
+      "id": "train/chelsea-original.png",
+      "path": "train/chelsea-original.png",
+      "split": "train",
+      "byteDigest": "7c68be3d803c53395704d786525cc61f273ee75040eb680bd6740b937015b41b",
+      "pixelDigest": "bc678b6d8bfedea4b166680c4e1a1fb9f7347eeddfb0ca63017f2ffdd8bc0e6d",
+      "dhash": "0101010000010100010110101001101010101001010010111000011110000111",
+      "dhashMirror": "1101010111010111101001011010011001101010001011010001111000001110",
+      "width": 256,
+      "height": 170,
+      "contrast": 190,
+      "thumbnail": "thumbnails/db0e450dae415f58019269e30b8691198818d7b2a6f4e6da01b4b076a5d7d3f5.jpg",
+      "thumbnailDigest": "fd873b6b23486d5f7933259007710de065d7d6b9ecd3b4195e7abeb1235e9a45",
+      "format": "png"
+    },
+    {
+      "id": "train/coffee-original.png",
+      "path": "train/coffee-original.png",
+      "split": "train",
+      "byteDigest": "cf41a81efbd79898d0b66c9d9616ecb046aa16353d280b41bcbf71f95e477897",
+      "pixelDigest": "ca626d71e0495598e2b34f7f124ea3217c368edc690366998a1a1321b15fa118",
+      "dhash": "1111001111101001010110010011001100010110001010110000111100010110",
+      "dhashMirror": "0011000001100000001001010011001110010111000010110000111110010111",
+      "width": 256,
+      "height": 171,
+      "contrast": 255,
+      "thumbnail": "thumbnails/18426dc444494cecb2c1c9add3d0e85707bf4eb6354feab9cfa8915d17d371bb.jpg",
+      "thumbnailDigest": "c2dda9298fb4d96e53e4e27128af4e72a1d430fe7ff40b269ad977534e22a85d",
+      "format": "png"
+    },
+    {
+      "id": "train/grass-original.png",
+      "path": "train/grass-original.png",
+      "split": "train",
+      "byteDigest": "7ae9bcc61d6418c8c9a25dcbd1dbe1e3554415065800414e8dacfc455a714163",
+      "pixelDigest": "3310416948db5732fb3d52c586a0e429bdf0e191f071d294588a9ce0be3023f9",
+      "dhash": "1101110110010101101010000110110110110101111011011111000110101010",
+      "dhashMirror": "0100010001010010111010100100100100010010010010000101000010001010",
+      "width": 256,
+      "height": 256,
+      "contrast": 226,
+      "thumbnail": "thumbnails/6759f35e700d9070d5caf4f69e2d6c00709c9b57a9fd1c3a65e5ba9b5ac95d72.jpg",
+      "thumbnailDigest": "5e12f372cf34a8a637e6def2503e27fe298d4d74c7c3d51086be1eb58fa96af3",
+      "format": "png"
+    },
+    {
+      "id": "validation/astronaut-horizontal-mirror.png",
+      "path": "validation/astronaut-horizontal-mirror.png",
+      "split": "validation",
+      "byteDigest": "e244a2c66cb9418898ee534a62940c7c16d2d988f797fd44e4178b468081fd1a",
+      "pixelDigest": "1b4191ad140cb8a2d4353a50b20eeb9244f1cc0576884e9419c2aa6e968da4cf",
+      "dhash": "0100010001001110010000100100111101100110101100110101011010011010",
+      "dhashMirror": "1101110110001101101111010000110110011101001100101001010110100110",
+      "width": 256,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/c255bbe776e9d2046c1f58bd3ad2e6fd0b3acea6de61b3d593d57339e7deaadb.jpg",
+      "thumbnailDigest": "ef932ef7a0e5d59cf4e7fe0fa1b0590ab041d15d2bb2d1e7be2c82f1aa39c26f",
+      "format": "png"
+    },
+    {
+      "id": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "path": "validation/astronaut-mirror-jpeg-quality70.jpg",
+      "split": "validation",
+      "byteDigest": "182d54db4800859e5f14e43c8a440981c6c8dfa3f6acfd86c8daafcb4ab1d63a",
+      "pixelDigest": "59f6cd45143e87307da9d4fa265875834704dbb7cc92afaf08c580cc7e8d6963",
+      "dhash": "0100010001001110010000100100111101100110101100110101011010011010",
+      "dhashMirror": "1101110110001101101111010000110110011101001100101001010110100110",
+      "width": 256,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/992987b5be7e853f869e2c58f86f94ed1f07b07b8f8e17a93210acb4aad865ce.jpg",
+      "thumbnailDigest": "587f1e5fc46ccdc3c69e338312f8eeca166139e66e4eeb4f53aeefb65d4045c8",
+      "format": "jpeg"
+    },
+    {
+      "id": "validation/astronaut-png-repack.png",
+      "path": "validation/astronaut-png-repack.png",
+      "split": "validation",
+      "byteDigest": "ed8876197d678b393f3caf24f6191be08b9163315e3be9fcedb2a10918e448ae",
+      "pixelDigest": "ef4a363df04a0422275160d7070a985b5b4160be607465956cd6c5333033b6a7",
+      "dhash": "1101110110001101101111010000110110011101001100101001010110100110",
+      "dhashMirror": "0100010001001110010000100100111101100110101100110101011010011010",
+      "width": 256,
+      "height": 256,
+      "contrast": 255,
+      "thumbnail": "thumbnails/3505992d91460623de777b597191bc115db1f34c627d54f7a63bdfd3cffae279.jpg",
+      "thumbnailDigest": "274b13f1372adfffb7d74569ff79f359438b5ddf593278f2006b0a935bf4c417",
+      "format": "png"
+    },
+    {
+      "id": "validation/astronaut-resize-73percent.png",
+      "path": "validation/astronaut-resize-73percent.png",
+      "split": "validation",
+      "byteDigest": "12f8991dbd269534124b810cf9d38f6a9a6353a9cd200f0e1fbb854702ef644d",
+      "pixelDigest": "99e22f0290f425f7d496c86f1bf662c84b1e19c1e82bfcf8e2afd67a75539fbd",
+      "dhash": "1101110110001101101111010000110110011101001100101001010110100110",
+      "dhashMirror": "0100010001001110010000100100011101000110101100110101011010011010",
+      "width": 186,
+      "height": 186,
+      "contrast": 255,
+      "thumbnail": "thumbnails/ec19eae53620803e8a8c5d91b21ab9ae20af93f599198ab5aa3fc22eb745571f.jpg",
+      "thumbnailDigest": "37f6e6797f97518ca0102311dfce8f129afbaf471a8d0b534290e28bc7f66cb1",
+      "format": "png"
+    },
+    {
+      "id": "validation/brick-horizontal-mirror.png",
+      "path": "validation/brick-horizontal-mirror.png",
+      "split": "validation",
+      "byteDigest": "cd7bddc5819836be13f2f2b56e7f77bd8765e92732298b553f31cc56c64c787c",
+      "pixelDigest": "c3c88bdb7226897436627db2c8b6d9ab3bb00b07fcc784ef0ccde1dce6b98ce2",
+      "dhash": "0001000000001000100011010000100100101010101010101010101101001011",
+      "dhashMirror": "0101010111101101010010100110110110101010101010101010101000101101",
+      "width": 256,
+      "height": 256,
+      "contrast": 138,
+      "thumbnail": "thumbnails/adb1444dfcbf4e188cbf9c87be1a6780804c30ebbe74353b687d948959fe2445.jpg",
+      "thumbnailDigest": "63c157079adec754e8d754ed580a867f5d2927c31fdfdfa8e5c49c74474f4377",
+      "format": "png"
+    },
+    {
+      "id": "validation/brick-mirror-jpeg-quality70.jpg",
+      "path": "validation/brick-mirror-jpeg-quality70.jpg",
+      "split": "validation",
+      "byteDigest": "f12be528a00df930e6fcc9992461d4005c8e9efa06cab6bc7a7a12efbbf5fac1",
+      "pixelDigest": "831a4931357de936b589c620695c793412c4432ef2a66d206e0edfe4788596db",
+      "dhash": "0001000000001000100011010000100100101010101010101010101101001011",
+      "dhashMirror": "0100011111101101010010100110110110101010101010101010101000101101",
+      "width": 256,
+      "height": 256,
+      "contrast": 145,
+      "thumbnail": "thumbnails/217d25254b6ebf0a574fd04d51ea7de7869c5462bf01a936c6e0017fa7310e0d.jpg",
+      "thumbnailDigest": "1ce1dd8aa925a682db91ef98d5a0f5afb650705b5e2ab804f9064c9726bdb8e4",
+      "format": "jpeg"
+    },
+    {
+      "id": "validation/brick-png-repack.png",
+      "path": "validation/brick-png-repack.png",
+      "split": "validation",
+      "byteDigest": "bc34bd700756e7a631a952c477d1ae550c1df76e422b70ba21970e28cb1574a4",
+      "pixelDigest": "1114b19f21ddc60758f9643ff44e421f2107c8ad678ca57366aeef3f7a25daa1",
+      "dhash": "0101010111101101010010100110110110101010101010101010101000101101",
+      "dhashMirror": "0001000000001000100011010000100100101010101010101010101101001011",
+      "width": 256,
+      "height": 256,
+      "contrast": 138,
+      "thumbnail": "thumbnails/654958bd318b8fbda0d4b2638877bf11ab3d45d2627ae2e5b03e028062958749.jpg",
+      "thumbnailDigest": "cce9a0ba4c10deb412a96f5d1ae6e116f6a7b2474bc604dce486c46041c1fc90",
+      "format": "png"
+    },
+    {
+      "id": "validation/brick-resize-73percent.png",
+      "path": "validation/brick-resize-73percent.png",
+      "split": "validation",
+      "byteDigest": "533e9fe55efd2d325b330d96ec4199210dfbc7ec4eeeac3e64b3966fa9dfb2f5",
+      "pixelDigest": "61262a184cd46581726af3f48d14004f5f57916001224213cf02a36c7fd57fc1",
+      "dhash": "0100011111101101010010000110110110101010101010101010101010101101",
+      "dhashMirror": "0001010000001000100011010000101010101010101010101010101101001001",
+      "width": 186,
+      "height": 186,
+      "contrast": 132,
+      "thumbnail": "thumbnails/4e0742befde43a0ad9f8e75b091de90de7eefcaee47d50719965954fb52b0020.jpg",
+      "thumbnailDigest": "08c8bd1d24a0be67b3570782572e1d9debd46cf7d3602b1c2624f8a57cf0a554",
+      "format": "png"
+    },
+    {
+      "id": "validation/chelsea-horizontal-mirror.png",
+      "path": "validation/chelsea-horizontal-mirror.png",
+      "split": "validation",
+      "byteDigest": "f75a9665717ddf065a23b029c13a70ca9f768f7ab64ec22e1b629a2d5de17b35",
+      "pixelDigest": "244b2186804f9c2ffd3a192b58a378a3228da4bd73f5e635057fa2134669170e",
+      "dhash": "1101010111010111101001011010011001101010001011010001111000001110",
+      "dhashMirror": "0101010000010100010110101001101010101001010010111000011110000111",
+      "width": 256,
+      "height": 170,
+      "contrast": 190,
+      "thumbnail": "thumbnails/ddd836f0021ecf24669954122d1970b9ee97e384d20affd1f6a173e32b1bdb5f.jpg",
+      "thumbnailDigest": "4430f446f0743e26707d64fcf09981d561d5a997c57a03c6ccf3f97a7d197912",
+      "format": "png"
+    },
+    {
+      "id": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "path": "validation/chelsea-mirror-jpeg-quality70.jpg",
+      "split": "validation",
+      "byteDigest": "800f492b63df19d50165fa4aa792bebee46c9784bc738bedd1a5570ed3e3a68d",
+      "pixelDigest": "9fdc22c0542daaf7cf4fcda68f7c1926eb85c9f376da113f14b9ff87cb54664f",
+      "dhash": "1101010111010111101001011010011001101010001011010001111000001110",
+      "dhashMirror": "0101010000010100010110101001101010101001010010111000011110000111",
+      "width": 256,
+      "height": 170,
+      "contrast": 193,
+      "thumbnail": "thumbnails/607f8f939a02134676f16db9949ec0e8a64ea923c81f68aee73e0b85a898f617.jpg",
+      "thumbnailDigest": "6a7ffa14dd20e0bae13ea21c6c4ddf162a78dd56fc0bb8eed1bfce5821199de3",
+      "format": "jpeg"
+    },
+    {
+      "id": "validation/chelsea-png-repack.png",
+      "path": "validation/chelsea-png-repack.png",
+      "split": "validation",
+      "byteDigest": "00db4675142687c6a8e7f7c67427cdd125b2e9afe5d056a0243956594c725098",
+      "pixelDigest": "bc678b6d8bfedea4b166680c4e1a1fb9f7347eeddfb0ca63017f2ffdd8bc0e6d",
+      "dhash": "0101010000010100010110101001101010101001010010111000011110000111",
+      "dhashMirror": "1101010111010111101001011010011001101010001011010001111000001110",
+      "width": 256,
+      "height": 170,
+      "contrast": 190,
+      "thumbnail": "thumbnails/606c377aacecca4cf9ccb5c87b9aa8732a3d031e887d6cacf37e1a726ed97b13.jpg",
+      "thumbnailDigest": "fd873b6b23486d5f7933259007710de065d7d6b9ecd3b4195e7abeb1235e9a45",
+      "format": "png"
+    },
+    {
+      "id": "validation/chelsea-resize-73percent.png",
+      "path": "validation/chelsea-resize-73percent.png",
+      "split": "validation",
+      "byteDigest": "473f63e5f8d22ab354eac369913178f6129cc2c463781f4785b9c240075bf24b",
+      "pixelDigest": "bbb10ea41ea7925829fdf10147cbde068ded7bc3315d611f0480ab66be33c48a",
+      "dhash": "0101010000010100010110101001101010101001010010111000011110000111",
+      "dhashMirror": "1101010111010111101001011010011001101010001011010001111000001110",
+      "width": 186,
+      "height": 124,
+      "contrast": 192,
+      "thumbnail": "thumbnails/7365bed3250dbe76bcfc1e2fb0f255889d200fdd339273ab3458465be3e4b8c3.jpg",
+      "thumbnailDigest": "c021d3f5e4569d9e2089b02762937165cd09b63a610b3beef6abcc4276df7a27",
+      "format": "png"
+    },
+    {
+      "id": "validation/coffee-horizontal-mirror.png",
+      "path": "validation/coffee-horizontal-mirror.png",
+      "split": "validation",
+      "byteDigest": "8e459c80e78a4fc9df47b61c11776e6d57e69b0898408feae1773d9c707d2eff",
+      "pixelDigest": "f707f569bd390063c210927df93db7e28992ac6b289ec94f5f7f82bf8a30d205",
+      "dhash": "0011000001100000001001010011001110010111000010110000111110010111",
+      "dhashMirror": "1111001111101001010110010011001100010110001010110000111100010110",
+      "width": 256,
+      "height": 171,
+      "contrast": 255,
+      "thumbnail": "thumbnails/ab716b35f0c67bee9e73f27defabf38291efcf13869f343b7f0fec64e1788485.jpg",
+      "thumbnailDigest": "f892f14ee13f390dfd9427760381b1a01e5304e30a891034c5f5c81396f250bf",
+      "format": "png"
+    },
+    {
+      "id": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "path": "validation/coffee-mirror-jpeg-quality70.jpg",
+      "split": "validation",
+      "byteDigest": "6393d5c533af026e9eac1db39f46cee74ebc95745779aac5de9d76ef2967a85b",
+      "pixelDigest": "f83a61179393ce0968bd8cdebbf79d33a19499f894c23c1ad854a890d60905bd",
+      "dhash": "0011000001100000001001010011001110010111000010110000111110010011",
+      "dhashMirror": "1111001111101001010110010011001100010110001010110000111100010110",
+      "width": 256,
+      "height": 171,
+      "contrast": 253,
+      "thumbnail": "thumbnails/31c99e544b7a01f6bfa0f2deb730c2f628aff44a080943326c87dbad0144dde5.jpg",
+      "thumbnailDigest": "2695689fa05442ebfb3655e692508bf41308ac497bce9e633d82dca9e9cc1f13",
+      "format": "jpeg"
+    },
+    {
+      "id": "validation/coffee-png-repack.png",
+      "path": "validation/coffee-png-repack.png",
+      "split": "validation",
+      "byteDigest": "e62f52831660ecc4bee749b193fbd402d898511c95e3776275994e2984363c6e",
+      "pixelDigest": "ca626d71e0495598e2b34f7f124ea3217c368edc690366998a1a1321b15fa118",
+      "dhash": "1111001111101001010110010011001100010110001010110000111100010110",
+      "dhashMirror": "0011000001100000001001010011001110010111000010110000111110010111",
+      "width": 256,
+      "height": 171,
+      "contrast": 255,
+      "thumbnail": "thumbnails/5ab7f6ec949bb83a8f9c8d35d6ea16eb5a6b8d1ac1e742ddd9655df5af765c32.jpg",
+      "thumbnailDigest": "c2dda9298fb4d96e53e4e27128af4e72a1d430fe7ff40b269ad977534e22a85d",
+      "format": "png"
+    },
+    {
+      "id": "validation/coffee-resize-73percent.png",
+      "path": "validation/coffee-resize-73percent.png",
+      "split": "validation",
+      "byteDigest": "7f2eb83725cd4c24f6f27e7b82b15788ecc2a6e52215175617d5c97a57768054",
+      "pixelDigest": "a5e1f1c0a2cf522e586d7bec35d9e72ba0123353955537a911aa1d4ceaf91e40",
+      "dhash": "1111001111101001010110010011001100011110001010110000111100010110",
+      "dhashMirror": "0011000001100000001001010011001110000111000010110000111110010011",
+      "width": 186,
+      "height": 124,
+      "contrast": 254,
+      "thumbnail": "thumbnails/48dfb2857faae4b6634b6cd9ef7248655fe523f88f9d3a3fdb591240f62d7ba1.jpg",
+      "thumbnailDigest": "4d22d4b2daaab38cc7b3acccbbdfaed282f07d2a4a52885f72bb2ab1d234a7a4",
+      "format": "png"
+    },
+    {
+      "id": "validation/grass-horizontal-mirror.png",
+      "path": "validation/grass-horizontal-mirror.png",
+      "split": "validation",
+      "byteDigest": "4c08809a92c8046e8f58ea5f72725c4045c6f0f8a393fd6eafe533667adcbb24",
+      "pixelDigest": "9da9bdab5c22c327a9aeb7a0980c4b99eda9bf77a70f05884ccd99d060121b15",
+      "dhash": "0100010001010010111010100100100100010010010010000101000010001010",
+      "dhashMirror": "1101110110010101101010000110110110110101111011011111000110101010",
+      "width": 256,
+      "height": 256,
+      "contrast": 226,
+      "thumbnail": "thumbnails/8bdce6a7834cce2fb4332546cc9e6fbf4a838adf6c38d4fd35c5164cecbd5c81.jpg",
+      "thumbnailDigest": "68e4f777634d77620bccf49b50f83ddbd5511d839de87bfd64e7f99efe6d5d3a",
+      "format": "png"
+    },
+    {
+      "id": "validation/grass-mirror-jpeg-quality70.jpg",
+      "path": "validation/grass-mirror-jpeg-quality70.jpg",
+      "split": "validation",
+      "byteDigest": "95ea60db5ca97170b3ad3f7414d8a0661016b510048c113136eb7a105d322cf0",
+      "pixelDigest": "b3e2aa11c91e109d439c2a8f9ae989971ec443331c2ec64edb03046460ba7d46",
+      "dhash": "0100010001010010111010100100100100010010010010000101000010001010",
+      "dhashMirror": "1101110110010101101010000110110110110101111011011111000110101010",
+      "width": 256,
+      "height": 256,
+      "contrast": 241,
+      "thumbnail": "thumbnails/f87ef2f83c65679e3b8f3dd57612816714a6e81e8c3b25394dd372cd09b2b03d.jpg",
+      "thumbnailDigest": "c30f97b627b9c131085309e0845c82198548de551e4c2e67442ed3833188c6f1",
+      "format": "jpeg"
+    },
+    {
+      "id": "validation/grass-png-repack.png",
+      "path": "validation/grass-png-repack.png",
+      "split": "validation",
+      "byteDigest": "b475b6ca716000cbba2b40255761e4f552e99e66f667e03beb7bf934f7441820",
+      "pixelDigest": "3310416948db5732fb3d52c586a0e429bdf0e191f071d294588a9ce0be3023f9",
+      "dhash": "1101110110010101101010000110110110110101111011011111000110101010",
+      "dhashMirror": "0100010001010010111010100100100100010010010010000101000010001010",
+      "width": 256,
+      "height": 256,
+      "contrast": 226,
+      "thumbnail": "thumbnails/03de2e65aad7a296e805dcb80a0d000c7244f809e776c2a87e91355a4ed0abb4.jpg",
+      "thumbnailDigest": "5e12f372cf34a8a637e6def2503e27fe298d4d74c7c3d51086be1eb58fa96af3",
+      "format": "png"
+    },
+    {
+      "id": "validation/grass-resize-73percent.png",
+      "path": "validation/grass-resize-73percent.png",
+      "split": "validation",
+      "byteDigest": "152e3c39812884245527427da65e7be0d8bfe9d7d530b16551386038f3997cae",
+      "pixelDigest": "c76bf0a92297855059145403c2a521c5b16711875e31585e0ec459f73b2031bc",
+      "dhash": "1101110110010101101010000110110110110111011011001111000110101010",
+      "dhashMirror": "0100010001010010111010100100100100010010010010000101000010001010",
+      "width": 186,
+      "height": 186,
+      "contrast": 223,
+      "thumbnail": "thumbnails/06cd8d08d664efce45d7937af0747b32ad9b3b294cc085b070f649312449a202.jpg",
+      "thumbnailDigest": "7bf858b46e49a9c266042591bc6b80563954d05bca0a3fd7f0c334afeac37cf8",
+      "format": "png"
+    }
+  ],
+  "errors": [],
+  "scope": {
+    "splits": [
+      "train",
+      "validation",
+      "test"
+    ],
+    "missingSplits": [],
+    "supportedExtensions": [
+      ".png",
+      ".jpg",
+      ".jpeg",
+      ".webp",
+      ".avif",
+      ".tif",
+      ".tiff",
+      ".gif"
+    ],
+    "ignoredFiles": 0,
+    "entriesScanned": 50,
+    "discoveredAtLeast": 50,
+    "acceptedImages": 50,
+    "totalDecodedPixels": 2705052,
+    "maxDirectoryEntries": 100000,
+    "source": "local-files",
+    "allPairsAreCrossSplit": true,
+    "perceptualMatchesRequireReview": true
+  },
+  "auditId": "39313f285d8ccf3c2762118129f80655c81bdbdbc3f58c865050f979469e938d",
+  "createdAt": "2026-10-23T16:01:11.053Z",
+  "timing": {
+    "elapsedMs": 347
+  }
+}

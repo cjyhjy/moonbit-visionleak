@@ -1,0 +1,19 @@
+{
+  "name": "browser-downloads-verified-from-disk",
+  "passed": true,
+  "auditId": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078",
+  "reviews": 1,
+  "machineEvidenceUnchanged": true,
+  "files": [
+    {
+      "path": "demo/qa/phase01-followup-review.json",
+      "sha256": "f529048bad86c46e8fcbd477a70275b338a1d66f7b2d7fa11a624d7ac5bbe801",
+      "bytes": 488
+    },
+    {
+      "path": "demo/qa/phase01-followup-report-reviewed.json",
+      "sha256": "fe72d807ecb22710f131fc59674368abfe87a68883ef751484ee6874ec3bc527",
+      "bytes": 103937
+    }
+  ]
+}

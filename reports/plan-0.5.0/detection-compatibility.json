@@ -1,0 +1,560 @@
+{
+  "status": "passed",
+  "cases": 8,
+  "detectionUnchanged": true,
+  "workCountsUnchanged": true,
+  "comparisons": {
+    "synthetic/default": {
+      "version": "0.4.0",
+      "key": "synthetic/default",
+      "baselineReportSha256": "8cd0d294caa79db04e55e73f1a13ece3ee69ee037036e3ef92cda0a681acba74",
+      "freezeSha256": "19bd6f8517416dcf820057b184972d6929f470eaf9d2b2ea615875df6d57d011",
+      "detectionUnchanged": true,
+      "detectionDifferences": [],
+      "allowedChangeReason": null,
+      "passed": true,
+      "workComparison": [
+        {
+          "field": "comparisons",
+          "before": 740,
+          "after": 740,
+          "delta": 0
+        },
+        {
+          "field": "distanceEvaluations",
+          "before": 611,
+          "after": 611,
+          "delta": 0
+        },
+        {
+          "field": "emittedPairs",
+          "before": 96,
+          "after": 96,
+          "delta": 0
+        },
+        {
+          "field": "indexNodes",
+          "before": 18,
+          "after": 18,
+          "delta": 0
+        },
+        {
+          "field": "inputImages",
+          "before": 59,
+          "after": 59,
+          "delta": 0
+        },
+        {
+          "field": "pairChecks",
+          "before": 129,
+          "after": 129,
+          "delta": 0
+        },
+        {
+          "field": "processedImages",
+          "before": 59,
+          "after": 59,
+          "delta": 0
+        },
+        {
+          "field": "reason",
+          "before": "",
+          "after": "",
+          "delta": null
+        }
+      ],
+      "timingComparison": {
+        "before": {
+          "elapsedMs": 183
+        },
+        "after": {
+          "elapsedMs": 216
+        },
+        "note": "Observational; never a regression failure condition."
+      }
+    },
+    "synthetic/mirrors": {
+      "version": "0.4.0",
+      "key": "synthetic/mirrors",
+      "baselineReportSha256": "94f3729a377e4e900d58b86ae705e4347a8801f5053cc3c57c8d5f307a1d3d33",
+      "freezeSha256": "19bd6f8517416dcf820057b184972d6929f470eaf9d2b2ea615875df6d57d011",
+      "detectionUnchanged": true,
+      "detectionDifferences": [],
+      "allowedChangeReason": null,
+      "passed": true,
+      "workComparison": [
+        {
+          "field": "comparisons",
+          "before": 2382,
+          "after": 2382,
+          "delta": 0
+        },
+        {
+          "field": "distanceEvaluations",
+          "before": 2236,
+          "after": 2236,
+          "delta": 0
+        },
+        {
+          "field": "emittedPairs",
+          "before": 107,
+          "after": 107,
+          "delta": 0
+        },
+        {
+          "field": "indexNodes",
+          "before": 28,
+          "after": 28,
+          "delta": 0
+        },
+        {
+          "field": "inputImages",
+          "before": 59,
+          "after": 59,
+          "delta": 0
+        },
+        {
+          "field": "pairChecks",
+          "before": 146,
+          "after": 146,
+          "delta": 0
+        },
+        {
+          "field": "processedImages",
+          "before": 59,
+          "after": 59,
+          "delta": 0
+        },
+        {
+          "field": "reason",
+          "before": "",
+          "after": "",
+          "delta": null
+        }
+      ],
+      "timingComparison": {
+        "before": {
+          "elapsedMs": 211
+        },
+        "after": {
+          "elapsedMs": 215
+        },
+        "note": "Observational; never a regression failure condition."
+      }
+    },
+    "development/default": {
+      "version": "0.4.0",
+      "key": "development/default",
+      "baselineReportSha256": "459636b95f552731ee4d8211fd820d507b15120a35018ccff61c2cd3ec5f655a",
+      "freezeSha256": "19bd6f8517416dcf820057b184972d6929f470eaf9d2b2ea615875df6d57d011",
+      "detectionUnchanged": true,
+      "detectionDifferences": [],
+      "allowedChangeReason": null,
+      "passed": true,
+      "workComparison": [
+        {
+          "field": "comparisons",
+          "before": 569,
+          "after": 569,
+          "delta": 0
+        },
+        {
+          "field": "distanceEvaluations",
+          "before": 485,
+          "after": 485,
+          "delta": 0
+        },
+        {
+          "field": "emittedPairs",
+          "before": 57,
+          "after": 57,
+          "delta": 0
+        },
+        {
+          "field": "indexNodes",
+          "before": 27,
+          "after": 27,
+          "delta": 0
+        },
+        {
+          "field": "inputImages",
+          "before": 50,
+          "after": 50,
+          "delta": 0
+        },
+        {
+          "field": "pairChecks",
+          "before": 84,
+          "after": 84,
+          "delta": 0
+        },
+        {
+          "field": "processedImages",
+          "before": 50,
+          "after": 50,
+          "delta": 0
+        },
+        {
+          "field": "reason",
+          "before": "",
+          "after": "",
+          "delta": null
+        }
+      ],
+      "timingComparison": {
+        "before": {
+          "elapsedMs": 293
+        },
+        "after": {
+          "elapsedMs": 307
+        },
+        "note": "Observational; never a regression failure condition."
+      }
+    },
+    "development/mirrors": {
+      "version": "0.4.0",
+      "key": "development/mirrors",
+      "baselineReportSha256": "a98871671168893cef88154033276c46c24175adb6fb61bba07380004a5f2489",
+      "freezeSha256": "19bd6f8517416dcf820057b184972d6929f470eaf9d2b2ea615875df6d57d011",
+      "detectionUnchanged": true,
+      "detectionDifferences": [],
+      "allowedChangeReason": null,
+      "passed": true,
+      "workComparison": [
+        {
+          "field": "comparisons",
+          "before": 2250,
+          "after": 2250,
+          "delta": 0
+        },
+        {
+          "field": "distanceEvaluations",
+          "before": 2104,
+          "after": 2104,
+          "delta": 0
+        },
+        {
+          "field": "emittedPairs",
+          "before": 99,
+          "after": 99,
+          "delta": 0
+        },
+        {
+          "field": "indexNodes",
+          "before": 42,
+          "after": 42,
+          "delta": 0
+        },
+        {
+          "field": "inputImages",
+          "before": 50,
+          "after": 50,
+          "delta": 0
+        },
+        {
+          "field": "pairChecks",
+          "before": 146,
+          "after": 146,
+          "delta": 0
+        },
+        {
+          "field": "processedImages",
+          "before": 50,
+          "after": 50,
+          "delta": 0
+        },
+        {
+          "field": "reason",
+          "before": "",
+          "after": "",
+          "delta": null
+        }
+      ],
+      "timingComparison": {
+        "before": {
+          "elapsedMs": 347
+        },
+        "after": {
+          "elapsedMs": 318
+        },
+        "note": "Observational; never a regression failure condition."
+      }
+    },
+    "development/orientations": {
+      "version": "0.4.0",
+      "key": "development/orientations",
+      "baselineReportSha256": "786a38f9a8ee8756061fafce9058f13d2e4f86261fda695a24be2593b3f2daee",
+      "freezeSha256": "19bd6f8517416dcf820057b184972d6929f470eaf9d2b2ea615875df6d57d011",
+      "detectionUnchanged": true,
+      "detectionDifferences": [],
+      "allowedChangeReason": null,
+      "passed": true,
+      "workComparison": [
+        {
+          "field": "comparisons",
+          "before": 21539,
+          "after": 21539,
+          "delta": 0
+        },
+        {
+          "field": "distanceEvaluations",
+          "before": 21351,
+          "after": 21351,
+          "delta": 0
+        },
+        {
+          "field": "emittedPairs",
+          "before": 124,
+          "after": 124,
+          "delta": 0
+        },
+        {
+          "field": "indexNodes",
+          "before": 149,
+          "after": 149,
+          "delta": 0
+        },
+        {
+          "field": "inputImages",
+          "before": 50,
+          "after": 50,
+          "delta": 0
+        },
+        {
+          "field": "pairChecks",
+          "before": 188,
+          "after": 188,
+          "delta": 0
+        },
+        {
+          "field": "processedImages",
+          "before": 50,
+          "after": 50,
+          "delta": 0
+        },
+        {
+          "field": "reason",
+          "before": "",
+          "after": "",
+          "delta": null
+        }
+      ],
+      "timingComparison": {
+        "before": {
+          "elapsedMs": 598
+        },
+        "after": {
+          "elapsedMs": 547
+        },
+        "note": "Observational; never a regression failure condition."
+      }
+    },
+    "holdout/default": {
+      "version": "0.4.0",
+      "key": "holdout/default",
+      "baselineReportSha256": "617bc438dba790ac3dc1504ac3f796ea077bfc0724e2f5914a37831b03bfd41b",
+      "freezeSha256": "19bd6f8517416dcf820057b184972d6929f470eaf9d2b2ea615875df6d57d011",
+      "detectionUnchanged": true,
+      "detectionDifferences": [],
+      "allowedChangeReason": null,
+      "passed": true,
+      "workComparison": [
+        {
+          "field": "comparisons",
+          "before": 584,
+          "after": 584,
+          "delta": 0
+        },
+        {
+          "field": "distanceEvaluations",
+          "before": 491,
+          "after": 491,
+          "delta": 0
+        },
+        {
+          "field": "emittedPairs",
+          "before": 62,
+          "after": 62,
+          "delta": 0
+        },
+        {
+          "field": "indexNodes",
+          "before": 28,
+          "after": 28,
+          "delta": 0
+        },
+        {
+          "field": "inputImages",
+          "before": 50,
+          "after": 50,
+          "delta": 0
+        },
+        {
+          "field": "pairChecks",
+          "before": 93,
+          "after": 93,
+          "delta": 0
+        },
+        {
+          "field": "processedImages",
+          "before": 50,
+          "after": 50,
+          "delta": 0
+        },
+        {
+          "field": "reason",
+          "before": "",
+          "after": "",
+          "delta": null
+        }
+      ],
+      "timingComparison": {
+        "before": {
+          "elapsedMs": 258
+        },
+        "after": {
+          "elapsedMs": 268
+        },
+        "note": "Observational; never a regression failure condition."
+      }
+    },
+    "holdout/mirrors": {
+      "version": "0.4.0",
+      "key": "holdout/mirrors",
+      "baselineReportSha256": "d053225364b8d8bdf752cb9b1c48c72b3560043f916f785f052e9a8ed3ad08b6",
+      "freezeSha256": "19bd6f8517416dcf820057b184972d6929f470eaf9d2b2ea615875df6d57d011",
+      "detectionUnchanged": true,
+      "detectionDifferences": [],
+      "allowedChangeReason": null,
+      "passed": true,
+      "workComparison": [
+        {
+          "field": "comparisons",
+          "before": 2382,
+          "after": 2382,
+          "delta": 0
+        },
+        {
+          "field": "distanceEvaluations",
+          "before": 2225,
+          "after": 2225,
+          "delta": 0
+        },
+        {
+          "field": "emittedPairs",
+          "before": 106,
+          "after": 106,
+          "delta": 0
+        },
+        {
+          "field": "indexNodes",
+          "before": 47,
+          "after": 47,
+          "delta": 0
+        },
+        {
+          "field": "inputImages",
+          "before": 50,
+          "after": 50,
+          "delta": 0
+        },
+        {
+          "field": "pairChecks",
+          "before": 157,
+          "after": 157,
+          "delta": 0
+        },
+        {
+          "field": "processedImages",
+          "before": 50,
+          "after": 50,
+          "delta": 0
+        },
+        {
+          "field": "reason",
+          "before": "",
+          "after": "",
+          "delta": null
+        }
+      ],
+      "timingComparison": {
+        "before": {
+          "elapsedMs": 327
+        },
+        "after": {
+          "elapsedMs": 323
+        },
+        "note": "Observational; never a regression failure condition."
+      }
+    },
+    "holdout/orientations": {
+      "version": "0.4.0",
+      "key": "holdout/orientations",
+      "baselineReportSha256": "834dac1e96ed2ebc12a431024d6a32e2722ee03f1a8541502eb08a30a8bfee1b",
+      "freezeSha256": "19bd6f8517416dcf820057b184972d6929f470eaf9d2b2ea615875df6d57d011",
+      "detectionUnchanged": true,
+      "detectionDifferences": [],
+      "allowedChangeReason": null,
+      "passed": true,
+      "workComparison": [
+        {
+          "field": "comparisons",
+          "before": 19396,
+          "after": 19396,
+          "delta": 0
+        },
+        {
+          "field": "distanceEvaluations",
+          "before": 19197,
+          "after": 19197,
+          "delta": 0
+        },
+        {
+          "field": "emittedPairs",
+          "before": 131,
+          "after": 131,
+          "delta": 0
+        },
+        {
+          "field": "indexNodes",
+          "before": 143,
+          "after": 143,
+          "delta": 0
+        },
+        {
+          "field": "inputImages",
+          "before": 50,
+          "after": 50,
+          "delta": 0
+        },
+        {
+          "field": "pairChecks",
+          "before": 199,
+          "after": 199,
+          "delta": 0
+        },
+        {
+          "field": "processedImages",
+          "before": 50,
+          "after": 50,
+          "delta": 0
+        },
+        {
+          "field": "reason",
+          "before": "",
+          "after": "",
+          "delta": null
+        }
+      ],
+      "timingComparison": {
+        "before": {
+          "elapsedMs": 522
+        },
+        "after": {
+          "elapsedMs": 494
+        },
+        "note": "Observational; never a regression failure condition."
+      }
+    }
+  }
+}

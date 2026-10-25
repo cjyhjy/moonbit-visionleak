@@ -1,0 +1,4 @@
+{
+  "status": "passed",
+  "scope": "All stored synthetic and photo mode score objects match the newly executed MoonBit score output exactly."
+}

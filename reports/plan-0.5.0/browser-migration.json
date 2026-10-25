@@ -1,0 +1,8 @@
+{
+  "status": "unavailable",
+  "attempt": "Tabbit stable launcher create --task VisionLeak 0.5 core validation",
+  "exitCode": 69,
+  "error": "BROWSER_LAUNCH_FAILED: macOS kLSNoExecutableErr, selected browser executable is missing",
+  "pageCodeDispatched": false,
+  "scope": "No live browser success or fresh screenshot is claimed. Node HTTP integration verifies the compiled core is served as a fixed same-origin JavaScript asset; full browser interaction remains pending."
+}

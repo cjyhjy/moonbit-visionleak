@@ -1,0 +1,202 @@
+{
+  "status": "passed",
+  "reports": 39,
+  "scope": "Valid report samples in reports/ and available original 0.1.0\u20130.4.0 ZIPs; excludes intentionally tampered QA inputs and old failed clean-room copies.",
+  "results": [
+    {
+      "path": "reports/cli-smoke/report.json",
+      "auditId": "dc9fb9efb9db57e2a9e7381181c83d89118cab0b84029a14770177d08c55f2c2",
+      "actual": "dc9fb9efb9db57e2a9e7381181c83d89118cab0b84029a14770177d08c55f2c2"
+    },
+    {
+      "path": "reports/demo/report.json",
+      "auditId": "10f740be2630e3ea2941339b4360900eec93cf5751b038ddd585d310d2ed1b43",
+      "actual": "10f740be2630e3ea2941339b4360900eec93cf5751b038ddd585d310d2ed1b43"
+    },
+    {
+      "path": "reports/evaluation-audit.json",
+      "auditId": "10f740be2630e3ea2941339b4360900eec93cf5751b038ddd585d310d2ed1b43",
+      "actual": "10f740be2630e3ea2941339b4360900eec93cf5751b038ddd585d310d2ed1b43"
+    },
+    {
+      "path": "reports/mirror-demo/report.json",
+      "auditId": "e9dfa748b17b41f8f08cd430af8d219a5de5a3179a3fc1e3bdb7689a79ca67bb",
+      "actual": "e9dfa748b17b41f8f08cd430af8d219a5de5a3179a3fc1e3bdb7689a79ca67bb"
+    },
+    {
+      "path": "reports/mirror-evaluation-audit.json",
+      "auditId": "e9dfa748b17b41f8f08cd430af8d219a5de5a3179a3fc1e3bdb7689a79ca67bb",
+      "actual": "e9dfa748b17b41f8f08cd430af8d219a5de5a3179a3fc1e3bdb7689a79ca67bb"
+    },
+    {
+      "path": "reports/photos-demo/report.json",
+      "auditId": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078",
+      "actual": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078"
+    },
+    {
+      "path": "reports/photos-v1/baseline-development/default-audit.json",
+      "auditId": "294c3231225da1645db5cc09456f2dfb5d8a8d5b40120eec8d40ac1460b2f849",
+      "actual": "294c3231225da1645db5cc09456f2dfb5d8a8d5b40120eec8d40ac1460b2f849"
+    },
+    {
+      "path": "reports/photos-v1/baseline-development/mirrors-audit.json",
+      "auditId": "fca2db62f56f26474ae9f1fad0e0d548e9affa625897f03935a55e2043ca46f1",
+      "actual": "fca2db62f56f26474ae9f1fad0e0d548e9affa625897f03935a55e2043ca46f1"
+    },
+    {
+      "path": "reports/photos-v1/baseline-holdout/default-audit.json",
+      "auditId": "e1fd16f25d65faee82a5257ea962cf58668adcecf2f75702e518908f27d8f1e2",
+      "actual": "e1fd16f25d65faee82a5257ea962cf58668adcecf2f75702e518908f27d8f1e2"
+    },
+    {
+      "path": "reports/photos-v1/baseline-holdout/mirrors-audit.json",
+      "auditId": "9a3f2fef2ef3eaf4336af2b5c199a677bb6068e54ce20283a1679484de66b8d1",
+      "actual": "9a3f2fef2ef3eaf4336af2b5c199a677bb6068e54ce20283a1679484de66b8d1"
+    },
+    {
+      "path": "reports/photos-v1/current-development/default-audit.json",
+      "auditId": "ee53feb13ac994bd153f2a391092aa7485fd1a734f66e97f4741dbced536fdb1",
+      "actual": "ee53feb13ac994bd153f2a391092aa7485fd1a734f66e97f4741dbced536fdb1"
+    },
+    {
+      "path": "reports/photos-v1/current-development/mirrors-audit.json",
+      "auditId": "39313f285d8ccf3c2762118129f80655c81bdbdbc3f58c865050f979469e938d",
+      "actual": "39313f285d8ccf3c2762118129f80655c81bdbdbc3f58c865050f979469e938d"
+    },
+    {
+      "path": "reports/photos-v1/current-development/orientations-audit.json",
+      "auditId": "6b40c9010d6e1564c1b43b99056cb0a50e2f007987806da45a03eb3547f2f4d0",
+      "actual": "6b40c9010d6e1564c1b43b99056cb0a50e2f007987806da45a03eb3547f2f4d0"
+    },
+    {
+      "path": "reports/photos-v1/current-holdout/default-audit.json",
+      "auditId": "15b8158fdfeb0e7c951ceee33eb923a559d0507681b641f964eb96737cb90449",
+      "actual": "15b8158fdfeb0e7c951ceee33eb923a559d0507681b641f964eb96737cb90449"
+    },
+    {
+      "path": "reports/photos-v1/current-holdout/mirrors-audit.json",
+      "auditId": "fb4dfbedca92aaae2c7948b8fa1668b8913b0823519b63abc9a439ecbf51f6db",
+      "actual": "fb4dfbedca92aaae2c7948b8fa1668b8913b0823519b63abc9a439ecbf51f6db"
+    },
+    {
+      "path": "reports/photos-v1/current-holdout/orientations-audit.json",
+      "auditId": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078",
+      "actual": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078"
+    },
+    {
+      "path": "release/visionleak-0.1.0.zip:visionleak/reports/demo/report.json",
+      "auditId": "dc9fb9efb9db57e2a9e7381181c83d89118cab0b84029a14770177d08c55f2c2",
+      "actual": "dc9fb9efb9db57e2a9e7381181c83d89118cab0b84029a14770177d08c55f2c2"
+    },
+    {
+      "path": "release/visionleak-0.1.0.zip:visionleak/reports/evaluation-audit.json",
+      "auditId": "dc9fb9efb9db57e2a9e7381181c83d89118cab0b84029a14770177d08c55f2c2",
+      "actual": "dc9fb9efb9db57e2a9e7381181c83d89118cab0b84029a14770177d08c55f2c2"
+    },
+    {
+      "path": "release/visionleak-0.2.0.zip:visionleak/reports/demo/report.json",
+      "auditId": "e42687baf8bbb30662aedd69e1b909bbdbf6b5aeef85ea7a6d64d90a55a41f10",
+      "actual": "e42687baf8bbb30662aedd69e1b909bbdbf6b5aeef85ea7a6d64d90a55a41f10"
+    },
+    {
+      "path": "release/visionleak-0.2.0.zip:visionleak/reports/evaluation-audit.json",
+      "auditId": "e42687baf8bbb30662aedd69e1b909bbdbf6b5aeef85ea7a6d64d90a55a41f10",
+      "actual": "e42687baf8bbb30662aedd69e1b909bbdbf6b5aeef85ea7a6d64d90a55a41f10"
+    },
+    {
+      "path": "release/visionleak-0.3.0.zip:visionleak/reports/demo/report.json",
+      "auditId": "92ab9ca54a6b6932d76fc8f1080796cbe5c8486f96109b7007323bb44d01893a",
+      "actual": "92ab9ca54a6b6932d76fc8f1080796cbe5c8486f96109b7007323bb44d01893a"
+    },
+    {
+      "path": "release/visionleak-0.3.0.zip:visionleak/reports/evaluation-audit.json",
+      "auditId": "92ab9ca54a6b6932d76fc8f1080796cbe5c8486f96109b7007323bb44d01893a",
+      "actual": "92ab9ca54a6b6932d76fc8f1080796cbe5c8486f96109b7007323bb44d01893a"
+    },
+    {
+      "path": "release/visionleak-0.3.0.zip:visionleak/reports/mirror-demo/report.json",
+      "auditId": "3afc97dd6d0d8fe66667862548cfa280f27441127703493a3e2f9b625ebfc7b3",
+      "actual": "3afc97dd6d0d8fe66667862548cfa280f27441127703493a3e2f9b625ebfc7b3"
+    },
+    {
+      "path": "release/visionleak-0.3.0.zip:visionleak/reports/mirror-evaluation-audit.json",
+      "auditId": "3afc97dd6d0d8fe66667862548cfa280f27441127703493a3e2f9b625ebfc7b3",
+      "actual": "3afc97dd6d0d8fe66667862548cfa280f27441127703493a3e2f9b625ebfc7b3"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/demo/report.json",
+      "auditId": "10f740be2630e3ea2941339b4360900eec93cf5751b038ddd585d310d2ed1b43",
+      "actual": "10f740be2630e3ea2941339b4360900eec93cf5751b038ddd585d310d2ed1b43"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/evaluation-audit.json",
+      "auditId": "10f740be2630e3ea2941339b4360900eec93cf5751b038ddd585d310d2ed1b43",
+      "actual": "10f740be2630e3ea2941339b4360900eec93cf5751b038ddd585d310d2ed1b43"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/mirror-demo/report.json",
+      "auditId": "e9dfa748b17b41f8f08cd430af8d219a5de5a3179a3fc1e3bdb7689a79ca67bb",
+      "actual": "e9dfa748b17b41f8f08cd430af8d219a5de5a3179a3fc1e3bdb7689a79ca67bb"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/mirror-evaluation-audit.json",
+      "auditId": "e9dfa748b17b41f8f08cd430af8d219a5de5a3179a3fc1e3bdb7689a79ca67bb",
+      "actual": "e9dfa748b17b41f8f08cd430af8d219a5de5a3179a3fc1e3bdb7689a79ca67bb"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-demo/report.json",
+      "auditId": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078",
+      "actual": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/baseline-development/default-audit.json",
+      "auditId": "294c3231225da1645db5cc09456f2dfb5d8a8d5b40120eec8d40ac1460b2f849",
+      "actual": "294c3231225da1645db5cc09456f2dfb5d8a8d5b40120eec8d40ac1460b2f849"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/baseline-development/mirrors-audit.json",
+      "auditId": "fca2db62f56f26474ae9f1fad0e0d548e9affa625897f03935a55e2043ca46f1",
+      "actual": "fca2db62f56f26474ae9f1fad0e0d548e9affa625897f03935a55e2043ca46f1"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/baseline-holdout/default-audit.json",
+      "auditId": "e1fd16f25d65faee82a5257ea962cf58668adcecf2f75702e518908f27d8f1e2",
+      "actual": "e1fd16f25d65faee82a5257ea962cf58668adcecf2f75702e518908f27d8f1e2"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/baseline-holdout/mirrors-audit.json",
+      "auditId": "9a3f2fef2ef3eaf4336af2b5c199a677bb6068e54ce20283a1679484de66b8d1",
+      "actual": "9a3f2fef2ef3eaf4336af2b5c199a677bb6068e54ce20283a1679484de66b8d1"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/current-development/default-audit.json",
+      "auditId": "ee53feb13ac994bd153f2a391092aa7485fd1a734f66e97f4741dbced536fdb1",
+      "actual": "ee53feb13ac994bd153f2a391092aa7485fd1a734f66e97f4741dbced536fdb1"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/current-development/mirrors-audit.json",
+      "auditId": "39313f285d8ccf3c2762118129f80655c81bdbdbc3f58c865050f979469e938d",
+      "actual": "39313f285d8ccf3c2762118129f80655c81bdbdbc3f58c865050f979469e938d"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/current-development/orientations-audit.json",
+      "auditId": "6b40c9010d6e1564c1b43b99056cb0a50e2f007987806da45a03eb3547f2f4d0",
+      "actual": "6b40c9010d6e1564c1b43b99056cb0a50e2f007987806da45a03eb3547f2f4d0"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/current-holdout/default-audit.json",
+      "auditId": "15b8158fdfeb0e7c951ceee33eb923a559d0507681b641f964eb96737cb90449",
+      "actual": "15b8158fdfeb0e7c951ceee33eb923a559d0507681b641f964eb96737cb90449"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/current-holdout/mirrors-audit.json",
+      "auditId": "fb4dfbedca92aaae2c7948b8fa1668b8913b0823519b63abc9a439ecbf51f6db",
+      "actual": "fb4dfbedca92aaae2c7948b8fa1668b8913b0823519b63abc9a439ecbf51f6db"
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/current-holdout/orientations-audit.json",
+      "auditId": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078",
+      "actual": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "visionleak-photo-reproduction-v1",
+  "status": "passed",
+  "files": 102,
+  "method": "Generated into a fresh temporary directory with pinned Pillow; complete path set and all SHA-256 matched shipped fixtures and two ground-truth files.",
+  "generatorSha256": "620a665c1bd906978e6972cca19930646c9c6cbfa6e97cfbf64332e5676ee54b",
+  "protocolSha256": "027bc300e5b46eb18b5f9afb6871678b1d880de91a120a9ea2c21c0b017c1847"
+}

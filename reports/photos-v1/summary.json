@@ -1,0 +1,1875 @@
+{
+  "schemaVersion": "visionleak-photo-summary-v1",
+  "status": "passed",
+  "partitions": {
+    "development": {
+      "evaluationSha256": "b4b157573c5932fc3ae1b4e85127b423015509aee9a30d798c10215f7481d1e4",
+      "sources": [
+        "astronaut",
+        "brick",
+        "chelsea",
+        "coffee",
+        "grass"
+      ],
+      "images": 50,
+      "modes": {
+        "default": {
+          "scores": {
+            "exact": {
+              "tp": 15,
+              "fp": 0,
+              "fn": 0,
+              "tn": 710,
+              "precision": 1.0,
+              "recall": 1.0,
+              "falsePositiveRate": 0.0,
+              "falsePositives": [],
+              "falseNegatives": []
+            },
+            "nearOnly": {
+              "tp": 42,
+              "fp": 0,
+              "fn": 88,
+              "tn": 580,
+              "precision": 1.0,
+              "recall": 0.3230769230769231,
+              "falsePositiveRate": 0.0,
+              "falsePositives": [],
+              "falseNegatives": [
+                [
+                  "test/astronaut-brightness-1.15.png",
+                  "validation/astronaut-horizontal-mirror.png"
+                ],
+                [
+                  "test/astronaut-brightness-1.15.png",
+                  "validation/astronaut-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/astronaut-byte-copy.png",
+                  "validation/astronaut-horizontal-mirror.png"
+                ],
+                [
+                  "test/astronaut-byte-copy.png",
+                  "validation/astronaut-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/astronaut-center-crop-90percent.png",
+                  "train/astronaut-original.png"
+                ],
+                [
+                  "test/astronaut-center-crop-90percent.png",
+                  "validation/astronaut-horizontal-mirror.png"
+                ],
+                [
+                  "test/astronaut-center-crop-90percent.png",
+                  "validation/astronaut-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/astronaut-center-crop-90percent.png",
+                  "validation/astronaut-png-repack.png"
+                ],
+                [
+                  "test/astronaut-center-crop-90percent.png",
+                  "validation/astronaut-resize-73percent.png"
+                ],
+                [
+                  "test/astronaut-jpeg-quality70.jpg",
+                  "validation/astronaut-horizontal-mirror.png"
+                ],
+                [
+                  "test/astronaut-jpeg-quality70.jpg",
+                  "validation/astronaut-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/astronaut-rotate90.png",
+                  "train/astronaut-original.png"
+                ],
+                [
+                  "test/astronaut-rotate90.png",
+                  "validation/astronaut-horizontal-mirror.png"
+                ],
+                [
+                  "test/astronaut-rotate90.png",
+                  "validation/astronaut-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/astronaut-rotate90.png",
+                  "validation/astronaut-png-repack.png"
+                ],
+                [
+                  "test/astronaut-rotate90.png",
+                  "validation/astronaut-resize-73percent.png"
+                ],
+                [
+                  "test/brick-brightness-1.15.png",
+                  "validation/brick-horizontal-mirror.png"
+                ],
+                [
+                  "test/brick-brightness-1.15.png",
+                  "validation/brick-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/brick-byte-copy.png",
+                  "validation/brick-horizontal-mirror.png"
+                ],
+                [
+                  "test/brick-byte-copy.png",
+                  "validation/brick-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/brick-center-crop-90percent.png",
+                  "train/brick-original.png"
+                ],
+                [
+                  "test/brick-center-crop-90percent.png",
+                  "validation/brick-horizontal-mirror.png"
+                ],
+                [
+                  "test/brick-center-crop-90percent.png",
+                  "validation/brick-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/brick-center-crop-90percent.png",
+                  "validation/brick-png-repack.png"
+                ],
+                [
+                  "test/brick-center-crop-90percent.png",
+                  "validation/brick-resize-73percent.png"
+                ],
+                [
+                  "test/brick-jpeg-quality70.jpg",
+                  "validation/brick-horizontal-mirror.png"
+                ],
+                [
+                  "test/brick-jpeg-quality70.jpg",
+                  "validation/brick-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/brick-rotate90.png",
+                  "train/brick-original.png"
+                ],
+                [
+                  "test/brick-rotate90.png",
+                  "validation/brick-horizontal-mirror.png"
+                ],
+                [
+                  "test/brick-rotate90.png",
+                  "validation/brick-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/brick-rotate90.png",
+                  "validation/brick-png-repack.png"
+                ],
+                [
+                  "test/brick-rotate90.png",
+                  "validation/brick-resize-73percent.png"
+                ],
+                [
+                  "test/chelsea-brightness-1.15.png",
+                  "validation/chelsea-horizontal-mirror.png"
+                ],
+                [
+                  "test/chelsea-brightness-1.15.png",
+                  "validation/chelsea-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/chelsea-byte-copy.png",
+                  "validation/chelsea-horizontal-mirror.png"
+                ],
+                [
+                  "test/chelsea-byte-copy.png",
+                  "validation/chelsea-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/chelsea-center-crop-90percent.png",
+                  "train/chelsea-original.png"
+                ],
+                [
+                  "test/chelsea-center-crop-90percent.png",
+                  "validation/chelsea-horizontal-mirror.png"
+                ],
+                [
+                  "test/chelsea-center-crop-90percent.png",
+                  "validation/chelsea-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/chelsea-center-crop-90percent.png",
+                  "validation/chelsea-png-repack.png"
+                ],
+                [
+                  "test/chelsea-center-crop-90percent.png",
+                  "validation/chelsea-resize-73percent.png"
+                ],
+                [
+                  "test/chelsea-jpeg-quality70.jpg",
+                  "validation/chelsea-horizontal-mirror.png"
+                ],
+                [
+                  "test/chelsea-jpeg-quality70.jpg",
+                  "validation/chelsea-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/chelsea-rotate90.png",
+                  "train/chelsea-original.png"
+                ],
+                [
+                  "test/chelsea-rotate90.png",
+                  "validation/chelsea-horizontal-mirror.png"
+                ],
+                [
+                  "test/chelsea-rotate90.png",
+                  "validation/chelsea-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/chelsea-rotate90.png",
+                  "validation/chelsea-png-repack.png"
+                ],
+                [
+                  "test/chelsea-rotate90.png",
+                  "validation/chelsea-resize-73percent.png"
+                ],
+                [
+                  "test/coffee-brightness-1.15.png",
+                  "validation/coffee-horizontal-mirror.png"
+                ],
+                [
+                  "test/coffee-brightness-1.15.png",
+                  "validation/coffee-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/coffee-byte-copy.png",
+                  "validation/coffee-horizontal-mirror.png"
+                ],
+                [
+                  "test/coffee-byte-copy.png",
+                  "validation/coffee-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/coffee-center-crop-90percent.png",
+                  "validation/coffee-horizontal-mirror.png"
+                ],
+                [
+                  "test/coffee-center-crop-90percent.png",
+                  "validation/coffee-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/coffee-center-crop-90percent.png",
+                  "validation/coffee-resize-73percent.png"
+                ],
+                [
+                  "test/coffee-jpeg-quality70.jpg",
+                  "validation/coffee-horizontal-mirror.png"
+                ],
+                [
+                  "test/coffee-jpeg-quality70.jpg",
+                  "validation/coffee-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/coffee-rotate90.png",
+                  "train/coffee-original.png"
+                ],
+                [
+                  "test/coffee-rotate90.png",
+                  "validation/coffee-horizontal-mirror.png"
+                ],
+                [
+                  "test/coffee-rotate90.png",
+                  "validation/coffee-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/coffee-rotate90.png",
+                  "validation/coffee-png-repack.png"
+                ],
+                [
+                  "test/coffee-rotate90.png",
+                  "validation/coffee-resize-73percent.png"
+                ],
+                [
+                  "test/grass-brightness-1.15.png",
+                  "validation/grass-horizontal-mirror.png"
+                ],
+                [
+                  "test/grass-brightness-1.15.png",
+                  "validation/grass-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/grass-byte-copy.png",
+                  "validation/grass-horizontal-mirror.png"
+                ],
+                [
+                  "test/grass-byte-copy.png",
+                  "validation/grass-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/grass-center-crop-90percent.png",
+                  "train/grass-original.png"
+                ],
+                [
+                  "test/grass-center-crop-90percent.png",
+                  "validation/grass-horizontal-mirror.png"
+                ],
+                [
+                  "test/grass-center-crop-90percent.png",
+                  "validation/grass-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/grass-center-crop-90percent.png",
+                  "validation/grass-png-repack.png"
+                ],
+                [
+                  "test/grass-center-crop-90percent.png",
+                  "validation/grass-resize-73percent.png"
+                ],
+                [
+                  "test/grass-jpeg-quality70.jpg",
+                  "validation/grass-horizontal-mirror.png"
+                ],
+                [
+                  "test/grass-jpeg-quality70.jpg",
+                  "validation/grass-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/grass-rotate90.png",
+                  "train/grass-original.png"
+                ],
+                [
+                  "test/grass-rotate90.png",
+                  "validation/grass-horizontal-mirror.png"
+                ],
+                [
+                  "test/grass-rotate90.png",
+                  "validation/grass-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/grass-rotate90.png",
+                  "validation/grass-png-repack.png"
+                ],
+                [
+                  "test/grass-rotate90.png",
+                  "validation/grass-resize-73percent.png"
+                ],
+                [
+                  "train/astronaut-original.png",
+                  "validation/astronaut-horizontal-mirror.png"
+                ],
+                [
+                  "train/astronaut-original.png",
+                  "validation/astronaut-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "train/brick-original.png",
+                  "validation/brick-horizontal-mirror.png"
+                ],
+                [
+                  "train/brick-original.png",
+                  "validation/brick-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "train/chelsea-original.png",
+                  "validation/chelsea-horizontal-mirror.png"
+                ],
+                [
+                  "train/chelsea-original.png",
+                  "validation/chelsea-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "train/coffee-original.png",
+                  "validation/coffee-horizontal-mirror.png"
+                ],
+                [
+                  "train/coffee-original.png",
+                  "validation/coffee-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "train/grass-original.png",
+                  "validation/grass-horizontal-mirror.png"
+                ],
+                [
+                  "train/grass-original.png",
+                  "validation/grass-mirror-jpeg-quality70.jpg"
+                ]
+              ]
+            },
+            "exactEvidenceTierMismatches": [],
+            "exactPairsEmittedAsCandidates": 0,
+            "pairUniverse": 725,
+            "nearOnlyUniverse": 710
+          },
+          "anchorRetrieval": {
+            "brightness-1.15": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "byte-copy": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "center-crop-90percent": {
+              "detected": 1,
+              "total": 5,
+              "missedSources": [
+                "astronaut",
+                "brick",
+                "chelsea",
+                "grass"
+              ]
+            },
+            "jpeg-quality70": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "rotate90": {
+              "detected": 0,
+              "total": 5,
+              "missedSources": [
+                "astronaut",
+                "brick",
+                "chelsea",
+                "coffee",
+                "grass"
+              ]
+            },
+            "horizontal-mirror": {
+              "detected": 0,
+              "total": 5,
+              "missedSources": [
+                "astronaut",
+                "brick",
+                "chelsea",
+                "coffee",
+                "grass"
+              ]
+            },
+            "mirror-jpeg-quality70": {
+              "detected": 0,
+              "total": 5,
+              "missedSources": [
+                "astronaut",
+                "brick",
+                "chelsea",
+                "coffee",
+                "grass"
+              ]
+            },
+            "png-repack": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "resize-73percent": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            }
+          },
+          "stats": {
+            "inputImages": 50,
+            "processedImages": 50,
+            "comparisons": 569,
+            "distanceEvaluations": 485,
+            "pairChecks": 84,
+            "emittedPairs": 57,
+            "indexNodes": 27,
+            "reason": ""
+          },
+          "wallSeconds": [
+            0.3612927091307938,
+            0.32690066704526544,
+            0.3421937501989305
+          ],
+          "medianWallSeconds": 0.3421937501989305,
+          "auditId": "ee53feb13ac994bd153f2a391092aa7485fd1a734f66e97f4741dbced536fdb1"
+        },
+        "mirrors": {
+          "scores": {
+            "exact": {
+              "tp": 15,
+              "fp": 0,
+              "fn": 0,
+              "tn": 710,
+              "precision": 1.0,
+              "recall": 1.0,
+              "falsePositiveRate": 0.0,
+              "falsePositives": [],
+              "falseNegatives": []
+            },
+            "nearOnly": {
+              "tp": 84,
+              "fp": 0,
+              "fn": 46,
+              "tn": 580,
+              "precision": 1.0,
+              "recall": 0.6461538461538462,
+              "falsePositiveRate": 0.0,
+              "falsePositives": [],
+              "falseNegatives": [
+                [
+                  "test/astronaut-center-crop-90percent.png",
+                  "train/astronaut-original.png"
+                ],
+                [
+                  "test/astronaut-center-crop-90percent.png",
+                  "validation/astronaut-horizontal-mirror.png"
+                ],
+                [
+                  "test/astronaut-center-crop-90percent.png",
+                  "validation/astronaut-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/astronaut-center-crop-90percent.png",
+                  "validation/astronaut-png-repack.png"
+                ],
+                [
+                  "test/astronaut-center-crop-90percent.png",
+                  "validation/astronaut-resize-73percent.png"
+                ],
+                [
+                  "test/astronaut-rotate90.png",
+                  "train/astronaut-original.png"
+                ],
+                [
+                  "test/astronaut-rotate90.png",
+                  "validation/astronaut-horizontal-mirror.png"
+                ],
+                [
+                  "test/astronaut-rotate90.png",
+                  "validation/astronaut-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/astronaut-rotate90.png",
+                  "validation/astronaut-png-repack.png"
+                ],
+                [
+                  "test/astronaut-rotate90.png",
+                  "validation/astronaut-resize-73percent.png"
+                ],
+                [
+                  "test/brick-center-crop-90percent.png",
+                  "train/brick-original.png"
+                ],
+                [
+                  "test/brick-center-crop-90percent.png",
+                  "validation/brick-horizontal-mirror.png"
+                ],
+                [
+                  "test/brick-center-crop-90percent.png",
+                  "validation/brick-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/brick-center-crop-90percent.png",
+                  "validation/brick-png-repack.png"
+                ],
+                [
+                  "test/brick-center-crop-90percent.png",
+                  "validation/brick-resize-73percent.png"
+                ],
+                [
+                  "test/brick-rotate90.png",
+                  "train/brick-original.png"
+                ],
+                [
+                  "test/brick-rotate90.png",
+                  "validation/brick-horizontal-mirror.png"
+                ],
+                [
+                  "test/brick-rotate90.png",
+                  "validation/brick-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/brick-rotate90.png",
+                  "validation/brick-png-repack.png"
+                ],
+                [
+                  "test/brick-rotate90.png",
+                  "validation/brick-resize-73percent.png"
+                ],
+                [
+                  "test/chelsea-center-crop-90percent.png",
+                  "train/chelsea-original.png"
+                ],
+                [
+                  "test/chelsea-center-crop-90percent.png",
+                  "validation/chelsea-horizontal-mirror.png"
+                ],
+                [
+                  "test/chelsea-center-crop-90percent.png",
+                  "validation/chelsea-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/chelsea-center-crop-90percent.png",
+                  "validation/chelsea-png-repack.png"
+                ],
+                [
+                  "test/chelsea-center-crop-90percent.png",
+                  "validation/chelsea-resize-73percent.png"
+                ],
+                [
+                  "test/chelsea-rotate90.png",
+                  "train/chelsea-original.png"
+                ],
+                [
+                  "test/chelsea-rotate90.png",
+                  "validation/chelsea-horizontal-mirror.png"
+                ],
+                [
+                  "test/chelsea-rotate90.png",
+                  "validation/chelsea-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/chelsea-rotate90.png",
+                  "validation/chelsea-png-repack.png"
+                ],
+                [
+                  "test/chelsea-rotate90.png",
+                  "validation/chelsea-resize-73percent.png"
+                ],
+                [
+                  "test/coffee-center-crop-90percent.png",
+                  "validation/coffee-resize-73percent.png"
+                ],
+                [
+                  "test/coffee-rotate90.png",
+                  "train/coffee-original.png"
+                ],
+                [
+                  "test/coffee-rotate90.png",
+                  "validation/coffee-horizontal-mirror.png"
+                ],
+                [
+                  "test/coffee-rotate90.png",
+                  "validation/coffee-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/coffee-rotate90.png",
+                  "validation/coffee-png-repack.png"
+                ],
+                [
+                  "test/coffee-rotate90.png",
+                  "validation/coffee-resize-73percent.png"
+                ],
+                [
+                  "test/grass-center-crop-90percent.png",
+                  "train/grass-original.png"
+                ],
+                [
+                  "test/grass-center-crop-90percent.png",
+                  "validation/grass-horizontal-mirror.png"
+                ],
+                [
+                  "test/grass-center-crop-90percent.png",
+                  "validation/grass-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/grass-center-crop-90percent.png",
+                  "validation/grass-png-repack.png"
+                ],
+                [
+                  "test/grass-center-crop-90percent.png",
+                  "validation/grass-resize-73percent.png"
+                ],
+                [
+                  "test/grass-rotate90.png",
+                  "train/grass-original.png"
+                ],
+                [
+                  "test/grass-rotate90.png",
+                  "validation/grass-horizontal-mirror.png"
+                ],
+                [
+                  "test/grass-rotate90.png",
+                  "validation/grass-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/grass-rotate90.png",
+                  "validation/grass-png-repack.png"
+                ],
+                [
+                  "test/grass-rotate90.png",
+                  "validation/grass-resize-73percent.png"
+                ]
+              ]
+            },
+            "exactEvidenceTierMismatches": [],
+            "exactPairsEmittedAsCandidates": 0,
+            "pairUniverse": 725,
+            "nearOnlyUniverse": 710
+          },
+          "anchorRetrieval": {
+            "brightness-1.15": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "byte-copy": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "center-crop-90percent": {
+              "detected": 1,
+              "total": 5,
+              "missedSources": [
+                "astronaut",
+                "brick",
+                "chelsea",
+                "grass"
+              ]
+            },
+            "jpeg-quality70": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "rotate90": {
+              "detected": 0,
+              "total": 5,
+              "missedSources": [
+                "astronaut",
+                "brick",
+                "chelsea",
+                "coffee",
+                "grass"
+              ]
+            },
+            "horizontal-mirror": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "mirror-jpeg-quality70": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "png-repack": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "resize-73percent": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            }
+          },
+          "stats": {
+            "inputImages": 50,
+            "processedImages": 50,
+            "comparisons": 2250,
+            "distanceEvaluations": 2104,
+            "pairChecks": 146,
+            "emittedPairs": 99,
+            "indexNodes": 42,
+            "reason": ""
+          },
+          "wallSeconds": [
+            0.38439541729167104,
+            0.3954867087304592,
+            0.3976174592971802
+          ],
+          "medianWallSeconds": 0.3954867087304592,
+          "auditId": "39313f285d8ccf3c2762118129f80655c81bdbdbc3f58c865050f979469e938d"
+        },
+        "orientations": {
+          "scores": {
+            "exact": {
+              "tp": 15,
+              "fp": 0,
+              "fn": 0,
+              "tn": 710,
+              "precision": 1.0,
+              "recall": 1.0,
+              "falsePositiveRate": 0.0,
+              "falsePositives": [],
+              "falseNegatives": []
+            },
+            "nearOnly": {
+              "tp": 109,
+              "fp": 0,
+              "fn": 21,
+              "tn": 580,
+              "precision": 1.0,
+              "recall": 0.8384615384615385,
+              "falsePositiveRate": 0.0,
+              "falsePositives": [],
+              "falseNegatives": [
+                [
+                  "test/astronaut-center-crop-90percent.png",
+                  "train/astronaut-original.png"
+                ],
+                [
+                  "test/astronaut-center-crop-90percent.png",
+                  "validation/astronaut-horizontal-mirror.png"
+                ],
+                [
+                  "test/astronaut-center-crop-90percent.png",
+                  "validation/astronaut-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/astronaut-center-crop-90percent.png",
+                  "validation/astronaut-png-repack.png"
+                ],
+                [
+                  "test/astronaut-center-crop-90percent.png",
+                  "validation/astronaut-resize-73percent.png"
+                ],
+                [
+                  "test/brick-center-crop-90percent.png",
+                  "train/brick-original.png"
+                ],
+                [
+                  "test/brick-center-crop-90percent.png",
+                  "validation/brick-horizontal-mirror.png"
+                ],
+                [
+                  "test/brick-center-crop-90percent.png",
+                  "validation/brick-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/brick-center-crop-90percent.png",
+                  "validation/brick-png-repack.png"
+                ],
+                [
+                  "test/brick-center-crop-90percent.png",
+                  "validation/brick-resize-73percent.png"
+                ],
+                [
+                  "test/chelsea-center-crop-90percent.png",
+                  "train/chelsea-original.png"
+                ],
+                [
+                  "test/chelsea-center-crop-90percent.png",
+                  "validation/chelsea-horizontal-mirror.png"
+                ],
+                [
+                  "test/chelsea-center-crop-90percent.png",
+                  "validation/chelsea-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/chelsea-center-crop-90percent.png",
+                  "validation/chelsea-png-repack.png"
+                ],
+                [
+                  "test/chelsea-center-crop-90percent.png",
+                  "validation/chelsea-resize-73percent.png"
+                ],
+                [
+                  "test/coffee-center-crop-90percent.png",
+                  "validation/coffee-resize-73percent.png"
+                ],
+                [
+                  "test/grass-center-crop-90percent.png",
+                  "train/grass-original.png"
+                ],
+                [
+                  "test/grass-center-crop-90percent.png",
+                  "validation/grass-horizontal-mirror.png"
+                ],
+                [
+                  "test/grass-center-crop-90percent.png",
+                  "validation/grass-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/grass-center-crop-90percent.png",
+                  "validation/grass-png-repack.png"
+                ],
+                [
+                  "test/grass-center-crop-90percent.png",
+                  "validation/grass-resize-73percent.png"
+                ]
+              ]
+            },
+            "exactEvidenceTierMismatches": [],
+            "exactPairsEmittedAsCandidates": 0,
+            "pairUniverse": 725,
+            "nearOnlyUniverse": 710
+          },
+          "anchorRetrieval": {
+            "brightness-1.15": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "byte-copy": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "center-crop-90percent": {
+              "detected": 1,
+              "total": 5,
+              "missedSources": [
+                "astronaut",
+                "brick",
+                "chelsea",
+                "grass"
+              ]
+            },
+            "jpeg-quality70": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "rotate90": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "horizontal-mirror": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "mirror-jpeg-quality70": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "png-repack": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "resize-73percent": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            }
+          },
+          "stats": {
+            "inputImages": 50,
+            "processedImages": 50,
+            "comparisons": 21539,
+            "distanceEvaluations": 21351,
+            "pairChecks": 188,
+            "emittedPairs": 124,
+            "indexNodes": 149,
+            "reason": ""
+          },
+          "wallSeconds": [
+            0.6500627910718322,
+            0.5783469588495791,
+            0.646757666952908
+          ],
+          "medianWallSeconds": 0.646757666952908,
+          "auditId": "6b40c9010d6e1564c1b43b99056cb0a50e2f007987806da45a03eb3547f2f4d0"
+        }
+      }
+    },
+    "holdout": {
+      "evaluationSha256": "5107890e98bab735a2a4697f76e8ad2fceda0dda785363b6aad813c3298e9112",
+      "sources": [
+        "camera",
+        "clock",
+        "eagle",
+        "gravel",
+        "rocket"
+      ],
+      "images": 50,
+      "modes": {
+        "default": {
+          "scores": {
+            "exact": {
+              "tp": 15,
+              "fp": 0,
+              "fn": 0,
+              "tn": 710,
+              "precision": 1.0,
+              "recall": 1.0,
+              "falsePositiveRate": 0.0,
+              "falsePositives": [],
+              "falseNegatives": []
+            },
+            "nearOnly": {
+              "tp": 47,
+              "fp": 0,
+              "fn": 83,
+              "tn": 580,
+              "precision": 1.0,
+              "recall": 0.36153846153846153,
+              "falsePositiveRate": 0.0,
+              "falsePositives": [],
+              "falseNegatives": [
+                [
+                  "test/camera-brightness-1.15.png",
+                  "validation/camera-horizontal-mirror.png"
+                ],
+                [
+                  "test/camera-brightness-1.15.png",
+                  "validation/camera-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/camera-byte-copy.png",
+                  "validation/camera-horizontal-mirror.png"
+                ],
+                [
+                  "test/camera-byte-copy.png",
+                  "validation/camera-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/camera-center-crop-90percent.png",
+                  "train/camera-original.png"
+                ],
+                [
+                  "test/camera-center-crop-90percent.png",
+                  "validation/camera-horizontal-mirror.png"
+                ],
+                [
+                  "test/camera-center-crop-90percent.png",
+                  "validation/camera-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/camera-center-crop-90percent.png",
+                  "validation/camera-png-repack.png"
+                ],
+                [
+                  "test/camera-center-crop-90percent.png",
+                  "validation/camera-resize-73percent.png"
+                ],
+                [
+                  "test/camera-jpeg-quality70.jpg",
+                  "validation/camera-horizontal-mirror.png"
+                ],
+                [
+                  "test/camera-jpeg-quality70.jpg",
+                  "validation/camera-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/camera-rotate90.png",
+                  "train/camera-original.png"
+                ],
+                [
+                  "test/camera-rotate90.png",
+                  "validation/camera-horizontal-mirror.png"
+                ],
+                [
+                  "test/camera-rotate90.png",
+                  "validation/camera-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/camera-rotate90.png",
+                  "validation/camera-png-repack.png"
+                ],
+                [
+                  "test/camera-rotate90.png",
+                  "validation/camera-resize-73percent.png"
+                ],
+                [
+                  "test/clock-brightness-1.15.png",
+                  "validation/clock-horizontal-mirror.png"
+                ],
+                [
+                  "test/clock-brightness-1.15.png",
+                  "validation/clock-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/clock-byte-copy.png",
+                  "validation/clock-horizontal-mirror.png"
+                ],
+                [
+                  "test/clock-byte-copy.png",
+                  "validation/clock-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/clock-center-crop-90percent.png",
+                  "validation/clock-horizontal-mirror.png"
+                ],
+                [
+                  "test/clock-center-crop-90percent.png",
+                  "validation/clock-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/clock-jpeg-quality70.jpg",
+                  "validation/clock-horizontal-mirror.png"
+                ],
+                [
+                  "test/clock-jpeg-quality70.jpg",
+                  "validation/clock-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/clock-rotate90.png",
+                  "train/clock-original.png"
+                ],
+                [
+                  "test/clock-rotate90.png",
+                  "validation/clock-horizontal-mirror.png"
+                ],
+                [
+                  "test/clock-rotate90.png",
+                  "validation/clock-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/clock-rotate90.png",
+                  "validation/clock-png-repack.png"
+                ],
+                [
+                  "test/clock-rotate90.png",
+                  "validation/clock-resize-73percent.png"
+                ],
+                [
+                  "test/eagle-brightness-1.15.png",
+                  "validation/eagle-horizontal-mirror.png"
+                ],
+                [
+                  "test/eagle-brightness-1.15.png",
+                  "validation/eagle-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/eagle-byte-copy.png",
+                  "validation/eagle-horizontal-mirror.png"
+                ],
+                [
+                  "test/eagle-byte-copy.png",
+                  "validation/eagle-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/eagle-center-crop-90percent.png",
+                  "train/eagle-original.png"
+                ],
+                [
+                  "test/eagle-center-crop-90percent.png",
+                  "validation/eagle-horizontal-mirror.png"
+                ],
+                [
+                  "test/eagle-center-crop-90percent.png",
+                  "validation/eagle-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/eagle-center-crop-90percent.png",
+                  "validation/eagle-png-repack.png"
+                ],
+                [
+                  "test/eagle-jpeg-quality70.jpg",
+                  "validation/eagle-horizontal-mirror.png"
+                ],
+                [
+                  "test/eagle-jpeg-quality70.jpg",
+                  "validation/eagle-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/eagle-rotate90.png",
+                  "train/eagle-original.png"
+                ],
+                [
+                  "test/eagle-rotate90.png",
+                  "validation/eagle-horizontal-mirror.png"
+                ],
+                [
+                  "test/eagle-rotate90.png",
+                  "validation/eagle-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/eagle-rotate90.png",
+                  "validation/eagle-png-repack.png"
+                ],
+                [
+                  "test/eagle-rotate90.png",
+                  "validation/eagle-resize-73percent.png"
+                ],
+                [
+                  "test/gravel-brightness-1.15.png",
+                  "validation/gravel-horizontal-mirror.png"
+                ],
+                [
+                  "test/gravel-brightness-1.15.png",
+                  "validation/gravel-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/gravel-byte-copy.png",
+                  "validation/gravel-horizontal-mirror.png"
+                ],
+                [
+                  "test/gravel-byte-copy.png",
+                  "validation/gravel-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/gravel-center-crop-90percent.png",
+                  "train/gravel-original.png"
+                ],
+                [
+                  "test/gravel-center-crop-90percent.png",
+                  "validation/gravel-horizontal-mirror.png"
+                ],
+                [
+                  "test/gravel-center-crop-90percent.png",
+                  "validation/gravel-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/gravel-center-crop-90percent.png",
+                  "validation/gravel-png-repack.png"
+                ],
+                [
+                  "test/gravel-center-crop-90percent.png",
+                  "validation/gravel-resize-73percent.png"
+                ],
+                [
+                  "test/gravel-jpeg-quality70.jpg",
+                  "validation/gravel-horizontal-mirror.png"
+                ],
+                [
+                  "test/gravel-jpeg-quality70.jpg",
+                  "validation/gravel-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/gravel-rotate90.png",
+                  "train/gravel-original.png"
+                ],
+                [
+                  "test/gravel-rotate90.png",
+                  "validation/gravel-horizontal-mirror.png"
+                ],
+                [
+                  "test/gravel-rotate90.png",
+                  "validation/gravel-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/gravel-rotate90.png",
+                  "validation/gravel-png-repack.png"
+                ],
+                [
+                  "test/gravel-rotate90.png",
+                  "validation/gravel-resize-73percent.png"
+                ],
+                [
+                  "test/rocket-brightness-1.15.png",
+                  "validation/rocket-horizontal-mirror.png"
+                ],
+                [
+                  "test/rocket-brightness-1.15.png",
+                  "validation/rocket-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/rocket-byte-copy.png",
+                  "validation/rocket-horizontal-mirror.png"
+                ],
+                [
+                  "test/rocket-byte-copy.png",
+                  "validation/rocket-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/rocket-center-crop-90percent.png",
+                  "validation/rocket-horizontal-mirror.png"
+                ],
+                [
+                  "test/rocket-center-crop-90percent.png",
+                  "validation/rocket-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/rocket-jpeg-quality70.jpg",
+                  "validation/rocket-horizontal-mirror.png"
+                ],
+                [
+                  "test/rocket-jpeg-quality70.jpg",
+                  "validation/rocket-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/rocket-rotate90.png",
+                  "train/rocket-original.png"
+                ],
+                [
+                  "test/rocket-rotate90.png",
+                  "validation/rocket-horizontal-mirror.png"
+                ],
+                [
+                  "test/rocket-rotate90.png",
+                  "validation/rocket-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/rocket-rotate90.png",
+                  "validation/rocket-png-repack.png"
+                ],
+                [
+                  "test/rocket-rotate90.png",
+                  "validation/rocket-resize-73percent.png"
+                ],
+                [
+                  "train/camera-original.png",
+                  "validation/camera-horizontal-mirror.png"
+                ],
+                [
+                  "train/camera-original.png",
+                  "validation/camera-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "train/clock-original.png",
+                  "validation/clock-horizontal-mirror.png"
+                ],
+                [
+                  "train/clock-original.png",
+                  "validation/clock-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "train/eagle-original.png",
+                  "validation/eagle-horizontal-mirror.png"
+                ],
+                [
+                  "train/eagle-original.png",
+                  "validation/eagle-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "train/gravel-original.png",
+                  "validation/gravel-horizontal-mirror.png"
+                ],
+                [
+                  "train/gravel-original.png",
+                  "validation/gravel-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "train/rocket-original.png",
+                  "validation/rocket-horizontal-mirror.png"
+                ],
+                [
+                  "train/rocket-original.png",
+                  "validation/rocket-mirror-jpeg-quality70.jpg"
+                ]
+              ]
+            },
+            "exactEvidenceTierMismatches": [],
+            "exactPairsEmittedAsCandidates": 0,
+            "pairUniverse": 725,
+            "nearOnlyUniverse": 710
+          },
+          "anchorRetrieval": {
+            "brightness-1.15": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "byte-copy": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "center-crop-90percent": {
+              "detected": 2,
+              "total": 5,
+              "missedSources": [
+                "camera",
+                "eagle",
+                "gravel"
+              ]
+            },
+            "jpeg-quality70": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "rotate90": {
+              "detected": 0,
+              "total": 5,
+              "missedSources": [
+                "camera",
+                "clock",
+                "eagle",
+                "gravel",
+                "rocket"
+              ]
+            },
+            "horizontal-mirror": {
+              "detected": 0,
+              "total": 5,
+              "missedSources": [
+                "camera",
+                "clock",
+                "eagle",
+                "gravel",
+                "rocket"
+              ]
+            },
+            "mirror-jpeg-quality70": {
+              "detected": 0,
+              "total": 5,
+              "missedSources": [
+                "camera",
+                "clock",
+                "eagle",
+                "gravel",
+                "rocket"
+              ]
+            },
+            "png-repack": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "resize-73percent": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            }
+          },
+          "stats": {
+            "inputImages": 50,
+            "processedImages": 50,
+            "comparisons": 584,
+            "distanceEvaluations": 491,
+            "pairChecks": 93,
+            "emittedPairs": 62,
+            "indexNodes": 28,
+            "reason": ""
+          },
+          "wallSeconds": [
+            0.31721791671589017,
+            0.31883162492886186,
+            0.3074298747815192
+          ],
+          "medianWallSeconds": 0.31721791671589017,
+          "auditId": "15b8158fdfeb0e7c951ceee33eb923a559d0507681b641f964eb96737cb90449"
+        },
+        "mirrors": {
+          "scores": {
+            "exact": {
+              "tp": 15,
+              "fp": 0,
+              "fn": 0,
+              "tn": 710,
+              "precision": 1.0,
+              "recall": 1.0,
+              "falsePositiveRate": 0.0,
+              "falsePositives": [],
+              "falseNegatives": []
+            },
+            "nearOnly": {
+              "tp": 91,
+              "fp": 0,
+              "fn": 39,
+              "tn": 580,
+              "precision": 1.0,
+              "recall": 0.7,
+              "falsePositiveRate": 0.0,
+              "falsePositives": [],
+              "falseNegatives": [
+                [
+                  "test/camera-center-crop-90percent.png",
+                  "train/camera-original.png"
+                ],
+                [
+                  "test/camera-center-crop-90percent.png",
+                  "validation/camera-horizontal-mirror.png"
+                ],
+                [
+                  "test/camera-center-crop-90percent.png",
+                  "validation/camera-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/camera-center-crop-90percent.png",
+                  "validation/camera-png-repack.png"
+                ],
+                [
+                  "test/camera-center-crop-90percent.png",
+                  "validation/camera-resize-73percent.png"
+                ],
+                [
+                  "test/camera-rotate90.png",
+                  "train/camera-original.png"
+                ],
+                [
+                  "test/camera-rotate90.png",
+                  "validation/camera-horizontal-mirror.png"
+                ],
+                [
+                  "test/camera-rotate90.png",
+                  "validation/camera-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/camera-rotate90.png",
+                  "validation/camera-png-repack.png"
+                ],
+                [
+                  "test/camera-rotate90.png",
+                  "validation/camera-resize-73percent.png"
+                ],
+                [
+                  "test/clock-rotate90.png",
+                  "train/clock-original.png"
+                ],
+                [
+                  "test/clock-rotate90.png",
+                  "validation/clock-horizontal-mirror.png"
+                ],
+                [
+                  "test/clock-rotate90.png",
+                  "validation/clock-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/clock-rotate90.png",
+                  "validation/clock-png-repack.png"
+                ],
+                [
+                  "test/clock-rotate90.png",
+                  "validation/clock-resize-73percent.png"
+                ],
+                [
+                  "test/eagle-center-crop-90percent.png",
+                  "train/eagle-original.png"
+                ],
+                [
+                  "test/eagle-center-crop-90percent.png",
+                  "validation/eagle-horizontal-mirror.png"
+                ],
+                [
+                  "test/eagle-center-crop-90percent.png",
+                  "validation/eagle-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/eagle-center-crop-90percent.png",
+                  "validation/eagle-png-repack.png"
+                ],
+                [
+                  "test/eagle-rotate90.png",
+                  "train/eagle-original.png"
+                ],
+                [
+                  "test/eagle-rotate90.png",
+                  "validation/eagle-horizontal-mirror.png"
+                ],
+                [
+                  "test/eagle-rotate90.png",
+                  "validation/eagle-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/eagle-rotate90.png",
+                  "validation/eagle-png-repack.png"
+                ],
+                [
+                  "test/eagle-rotate90.png",
+                  "validation/eagle-resize-73percent.png"
+                ],
+                [
+                  "test/gravel-center-crop-90percent.png",
+                  "train/gravel-original.png"
+                ],
+                [
+                  "test/gravel-center-crop-90percent.png",
+                  "validation/gravel-horizontal-mirror.png"
+                ],
+                [
+                  "test/gravel-center-crop-90percent.png",
+                  "validation/gravel-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/gravel-center-crop-90percent.png",
+                  "validation/gravel-png-repack.png"
+                ],
+                [
+                  "test/gravel-center-crop-90percent.png",
+                  "validation/gravel-resize-73percent.png"
+                ],
+                [
+                  "test/gravel-rotate90.png",
+                  "train/gravel-original.png"
+                ],
+                [
+                  "test/gravel-rotate90.png",
+                  "validation/gravel-horizontal-mirror.png"
+                ],
+                [
+                  "test/gravel-rotate90.png",
+                  "validation/gravel-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/gravel-rotate90.png",
+                  "validation/gravel-png-repack.png"
+                ],
+                [
+                  "test/gravel-rotate90.png",
+                  "validation/gravel-resize-73percent.png"
+                ],
+                [
+                  "test/rocket-rotate90.png",
+                  "train/rocket-original.png"
+                ],
+                [
+                  "test/rocket-rotate90.png",
+                  "validation/rocket-horizontal-mirror.png"
+                ],
+                [
+                  "test/rocket-rotate90.png",
+                  "validation/rocket-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/rocket-rotate90.png",
+                  "validation/rocket-png-repack.png"
+                ],
+                [
+                  "test/rocket-rotate90.png",
+                  "validation/rocket-resize-73percent.png"
+                ]
+              ]
+            },
+            "exactEvidenceTierMismatches": [],
+            "exactPairsEmittedAsCandidates": 0,
+            "pairUniverse": 725,
+            "nearOnlyUniverse": 710
+          },
+          "anchorRetrieval": {
+            "brightness-1.15": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "byte-copy": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "center-crop-90percent": {
+              "detected": 2,
+              "total": 5,
+              "missedSources": [
+                "camera",
+                "eagle",
+                "gravel"
+              ]
+            },
+            "jpeg-quality70": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "rotate90": {
+              "detected": 0,
+              "total": 5,
+              "missedSources": [
+                "camera",
+                "clock",
+                "eagle",
+                "gravel",
+                "rocket"
+              ]
+            },
+            "horizontal-mirror": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "mirror-jpeg-quality70": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "png-repack": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "resize-73percent": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            }
+          },
+          "stats": {
+            "inputImages": 50,
+            "processedImages": 50,
+            "comparisons": 2382,
+            "distanceEvaluations": 2225,
+            "pairChecks": 157,
+            "emittedPairs": 106,
+            "indexNodes": 47,
+            "reason": ""
+          },
+          "wallSeconds": [
+            0.3709027087315917,
+            0.43057195795699954,
+            0.377316040918231
+          ],
+          "medianWallSeconds": 0.377316040918231,
+          "auditId": "fb4dfbedca92aaae2c7948b8fa1668b8913b0823519b63abc9a439ecbf51f6db"
+        },
+        "orientations": {
+          "scores": {
+            "exact": {
+              "tp": 15,
+              "fp": 0,
+              "fn": 0,
+              "tn": 710,
+              "precision": 1.0,
+              "recall": 1.0,
+              "falsePositiveRate": 0.0,
+              "falsePositives": [],
+              "falseNegatives": []
+            },
+            "nearOnly": {
+              "tp": 116,
+              "fp": 0,
+              "fn": 14,
+              "tn": 580,
+              "precision": 1.0,
+              "recall": 0.8923076923076924,
+              "falsePositiveRate": 0.0,
+              "falsePositives": [],
+              "falseNegatives": [
+                [
+                  "test/camera-center-crop-90percent.png",
+                  "train/camera-original.png"
+                ],
+                [
+                  "test/camera-center-crop-90percent.png",
+                  "validation/camera-horizontal-mirror.png"
+                ],
+                [
+                  "test/camera-center-crop-90percent.png",
+                  "validation/camera-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/camera-center-crop-90percent.png",
+                  "validation/camera-png-repack.png"
+                ],
+                [
+                  "test/camera-center-crop-90percent.png",
+                  "validation/camera-resize-73percent.png"
+                ],
+                [
+                  "test/eagle-center-crop-90percent.png",
+                  "train/eagle-original.png"
+                ],
+                [
+                  "test/eagle-center-crop-90percent.png",
+                  "validation/eagle-horizontal-mirror.png"
+                ],
+                [
+                  "test/eagle-center-crop-90percent.png",
+                  "validation/eagle-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/eagle-center-crop-90percent.png",
+                  "validation/eagle-png-repack.png"
+                ],
+                [
+                  "test/gravel-center-crop-90percent.png",
+                  "train/gravel-original.png"
+                ],
+                [
+                  "test/gravel-center-crop-90percent.png",
+                  "validation/gravel-horizontal-mirror.png"
+                ],
+                [
+                  "test/gravel-center-crop-90percent.png",
+                  "validation/gravel-mirror-jpeg-quality70.jpg"
+                ],
+                [
+                  "test/gravel-center-crop-90percent.png",
+                  "validation/gravel-png-repack.png"
+                ],
+                [
+                  "test/gravel-center-crop-90percent.png",
+                  "validation/gravel-resize-73percent.png"
+                ]
+              ]
+            },
+            "exactEvidenceTierMismatches": [],
+            "exactPairsEmittedAsCandidates": 0,
+            "pairUniverse": 725,
+            "nearOnlyUniverse": 710
+          },
+          "anchorRetrieval": {
+            "brightness-1.15": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "byte-copy": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "center-crop-90percent": {
+              "detected": 2,
+              "total": 5,
+              "missedSources": [
+                "camera",
+                "eagle",
+                "gravel"
+              ]
+            },
+            "jpeg-quality70": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "rotate90": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "horizontal-mirror": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "mirror-jpeg-quality70": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "png-repack": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            },
+            "resize-73percent": {
+              "detected": 5,
+              "total": 5,
+              "missedSources": []
+            }
+          },
+          "stats": {
+            "inputImages": 50,
+            "processedImages": 50,
+            "comparisons": 19396,
+            "distanceEvaluations": 19197,
+            "pairChecks": 199,
+            "emittedPairs": 131,
+            "indexNodes": 143,
+            "reason": ""
+          },
+          "wallSeconds": [
+            0.5647735837846994,
+            0.619633125141263,
+            0.5698417923413217
+          ],
+          "medianWallSeconds": 0.5698417923413217,
+          "auditId": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078"
+        }
+      }
+    }
+  },
+  "combinedNearOnly": {
+    "default": {
+      "tp": 89,
+      "fp": 0,
+      "fn": 171,
+      "tn": 1160,
+      "precision": 1.0,
+      "recall": 0.3423076923076923
+    },
+    "mirrors": {
+      "tp": 175,
+      "fp": 0,
+      "fn": 85,
+      "tn": 1160,
+      "precision": 1.0,
+      "recall": 0.6730769230769231
+    },
+    "orientations": {
+      "tp": 225,
+      "fp": 0,
+      "fn": 35,
+      "tn": 1160,
+      "precision": 1.0,
+      "recall": 0.8653846153846154
+    }
+  },
+  "scope": "Sum of two source-disjoint 50-image CLI experiments, 10 original photographs total. All within-partition cross-split pairs are scored; cross-partition pairs are not included. Controlled same-source transformations, not natural contamination.",
+  "negativePairs": 1160,
+  "limitations": [
+    "Only ten curated sources and five held-out sources; no population precision claim.",
+    "Many correlated pairs derive from each source; pair counts are not independent sample sizes.",
+    "Crops still cause false negatives; no arbitrary rotation, local-object or semantic-leakage coverage.",
+    "Wall times are three local alternating runs including Node startup, decode, hashing and output; operation counts are deterministic, timings are not."
+  ]
+}

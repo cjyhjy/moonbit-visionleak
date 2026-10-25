@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "visionleak-photo-protocol-v1",
+  "frozenBeforeBaseline": true,
+  "date": "2026-10-23",
+  "baseMaxSide": 256,
+  "threshold": 6,
+  "sourcePartitions": "Five development and five holdout photo sources, fixed in sources.json before any metric run; all derivatives of a source stay in its evaluation partition.",
+  "auditSplits": "train, validation, test are deliberately contaminated audit folders and are separate from development/holdout evaluation partitions.",
+  "transforms": ["original", "byte-copy", "png-repack", "jpeg-quality70", "resize-73percent", "brightness-1.15", "horizontal-mirror", "mirror-jpeg-quality70", "center-crop-90percent", "rotate90"],
+  "groundTruth": "Cross-split pairs only. Byte equality first, then independently decoded canonical pixel equality, then same original-photo source. Different photo sources are negatives; semantic/object leakage is outside this definition.",
+  "reporting": "Report exact and near-only separately, default and mirror modes at fixed threshold 6, per-source evaluation partitions, per-transform original-anchor retrieval, all false positives/negatives, added and removed pairs, deterministic work counts and local runtime samples.",
+  "improvementPolicy": "Inspect development results first. Record and freeze any chosen improvement before evaluating holdout. Retain unchanged baseline, do not choose a threshold from holdout, and report regressions and inconclusive findings.",
+  "limitations": "Ten selected sources cannot establish natural contamination rates or production precision. The positive relations are generated transforms of real photographs, not discovered naturally occurring duplication. Pair counts are correlated within sources."
+}

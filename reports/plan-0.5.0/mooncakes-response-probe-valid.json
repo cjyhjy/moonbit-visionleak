@@ -1,0 +1,50 @@
+[
+  {
+    "status": 200,
+    "exitCode": 0,
+    "requests": [
+      {
+        "path": "/api/v0/publish",
+        "bytes": 937
+      }
+    ],
+    "stdout": "Server status: 200 OK\n",
+    "stderr": "Warning: 'readme' field is not set or empty in module manifest\nWarning: 'repository' field is not set or empty in module manifest\nRunning moon check ...\nFinished. moon: ran 2 tasks, now up to date\nCheck passed\nvalidating packaged zip: /private/var/folders/sm/v6v7286s07j8z7x50805469c0000gn/T/vl-mooncake-probe-i_h5hd33/project/_build/publish/localtest-dryrun-0.1.0.zip\nextracting packaged zip to /private/var/folders/sm/v6v7286s07j8z7x50805469c0000gn/T/vl-mooncake-probe-i_h5hd33/project/_build/publish/verify/mooncake_publish_checkAs8hlt\nrunning moon check on extracted package\nWarning: 'readme' field is not set or empty in module manifest\nWarning: 'repository' field is not set or empty in module manifest\nRunning moon check ...\nFinished. moon: ran 2 tasks, now up to date\nCheck passed\n"
+  },
+  {
+    "status": 202,
+    "exitCode": 255,
+    "requests": [
+      {
+        "path": "/api/v0/publish",
+        "bytes": 937
+      }
+    ],
+    "stdout": "",
+    "stderr": "Warning: 'readme' field is not set or empty in module manifest\nWarning: 'repository' field is not set or empty in module manifest\nRunning moon check ...\nFinished. moon: no work to do\nCheck passed\nvalidating packaged zip: /private/var/folders/sm/v6v7286s07j8z7x50805469c0000gn/T/vl-mooncake-probe-i_h5hd33/project/_build/publish/localtest-dryrun-0.1.0.zip\nextracting packaged zip to /private/var/folders/sm/v6v7286s07j8z7x50805469c0000gn/T/vl-mooncake-probe-i_h5hd33/project/_build/publish/verify/mooncake_publish_checkhtADGc\nrunning moon check on extracted package\nWarning: 'readme' field is not set or empty in module manifest\nWarning: 'repository' field is not set or empty in module manifest\nRunning moon check ...\nFinished. moon: ran 2 tasks, now up to date\nCheck passed\nServer status: 202 Accepted, detail: Dry run completed successfully. No changes were made. The dry-run was made for package localtest/dryrun version 0.1.0.\nError: `moon publish` failed\n"
+  },
+  {
+    "status": 401,
+    "exitCode": 255,
+    "requests": [
+      {
+        "path": "/api/v0/publish",
+        "bytes": 937
+      }
+    ],
+    "stdout": "",
+    "stderr": "Warning: 'readme' field is not set or empty in module manifest\nWarning: 'repository' field is not set or empty in module manifest\nRunning moon check ...\nFinished. moon: no work to do\nCheck passed\nvalidating packaged zip: /private/var/folders/sm/v6v7286s07j8z7x50805469c0000gn/T/vl-mooncake-probe-i_h5hd33/project/_build/publish/localtest-dryrun-0.1.0.zip\nextracting packaged zip to /private/var/folders/sm/v6v7286s07j8z7x50805469c0000gn/T/vl-mooncake-probe-i_h5hd33/project/_build/publish/verify/mooncake_publish_checky5f47o\nrunning moon check on extracted package\nWarning: 'readme' field is not set or empty in module manifest\nWarning: 'repository' field is not set or empty in module manifest\nRunning moon check ...\nFinished. moon: ran 2 tasks, now up to date\nCheck passed\nServer status: 401 Unauthorized, detail: Dry run completed successfully. No changes were made. The dry-run was made for package localtest/dryrun version 0.1.0.\nError: `moon publish` failed\n"
+  },
+  {
+    "status": 500,
+    "exitCode": 255,
+    "requests": [
+      {
+        "path": "/api/v0/publish",
+        "bytes": 937
+      }
+    ],
+    "stdout": "",
+    "stderr": "Warning: 'readme' field is not set or empty in module manifest\nWarning: 'repository' field is not set or empty in module manifest\nRunning moon check ...\nFinished. moon: no work to do\nCheck passed\nvalidating packaged zip: /private/var/folders/sm/v6v7286s07j8z7x50805469c0000gn/T/vl-mooncake-probe-i_h5hd33/project/_build/publish/localtest-dryrun-0.1.0.zip\nextracting packaged zip to /private/var/folders/sm/v6v7286s07j8z7x50805469c0000gn/T/vl-mooncake-probe-i_h5hd33/project/_build/publish/verify/mooncake_publish_checklrYAFQ\nrunning moon check on extracted package\nWarning: 'readme' field is not set or empty in module manifest\nWarning: 'repository' field is not set or empty in module manifest\nRunning moon check ...\nFinished. moon: ran 2 tasks, now up to date\nCheck passed\nServer status: 500 Internal Server Error, detail: Dry run completed successfully. No changes were made. The dry-run was made for package localtest/dryrun version 0.1.0.\nError: `moon publish` failed\n"
+  }
+]

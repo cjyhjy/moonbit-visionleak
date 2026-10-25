@@ -1,0 +1,11 @@
+{
+  "archives": {
+    "visionleak-0.1.0.zip": "ddc66b151622545abe7e76e41fb6cd679643f5335ea91c6c5bad98500058689b",
+    "visionleak-0.2.0.zip": "7a48cc18dfb5d150cbd04886b2d9595a878a690ba6aaebc57923d1561d305c42",
+    "visionleak-0.3.0.zip": "aa7f8d879b8c54764b4a680542fca276d6ea188e68a279165261920079a8ef3f",
+    "visionleak-0.4.0.zip": "afdc5a1499a2a5f5980c4e868ca2ef996ce3d649ef2c62ada19c4f26a2b7c1d1"
+  },
+  "historicalFreezeSha256": "93ffad949ec069539de6d871872aa204584311ba1d7e48817294e3e263416382",
+  "baselineFreezeSha256": "19bd6f8517416dcf820057b184972d6929f470eaf9d2b2ea615875df6d57d011",
+  "status": "passed"
+}

@@ -1,0 +1,8 @@
+{
+  "schemaVersion": "visionleak-photo-improvement-decision-v1",
+  "frozenBeforeHoldout": true,
+  "developmentBaselineSha256": "459276e6b9435e9ac0e5754cbf3548deae2043a71bcc3b734761e2225a3464d1",
+  "finding": "Mirroring recovers both mirror anchor transforms in 5/5 sources; no unrelated-source positives. Rotation 90 is missed in 5/5 sources, central crop missed in 4/5. Mirror near-only TP84 FP0 FN46.",
+  "decision": "Add explicit includeRotations option, default false. Compute 0/90/180/270-degree pixel-coordinate dHashes in MoonBit; optionally include their horizontal mirrors. Index ordinary Hamming variants, deduplicate pairs, report contributing left/right orientations; all extra index/verification distances consume finite work. No threshold change, no crop claim.",
+  "acceptance": "Independent coordinate/pixel and exhaustive pair oracle; budget and duplicate tests. Evaluate untouched source holdout once implementation and tests are fixed; report all regressions and extra work. Do not tune threshold or orientation set on holdout."
+}

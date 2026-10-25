@@ -1,0 +1,85 @@
+
+> visionleak@0.4.0 verify:ci
+> node tools/ci.mjs
+
+moon 0.1.20261012 (748b63c 2026-10-12) ~/Documents/ChatGPT/黑客松新项目/projects/visionleak/.toolchain/bin/moon
+moonc v0.10.15+943464bfa (2026-10-12) ~/Documents/ChatGPT/黑客松新项目/projects/visionleak/.toolchain/bin/moonc
+moonrun 0.1.20261012 (748b63c 2026-10-12) ~/Documents/ChatGPT/黑客松新项目/projects/visionleak/.toolchain/bin/moonrun
+
+Feature flags enabled: rr_moon_mod,rr_moon_pkg
+Finished. moon: no work to do
+Finished. moon: no work to do
+Finished. moon: no work to do
+Total tests: 65, passed: 65, failed: 0.
+Finished. moon: no work to do
+Finished. moon: no work to do
+Total tests: 65, passed: 65, failed: 0.
+Finished. moon: no work to do
+{"artifacts_path":["./_build/native/release/test/core/core.whitebox_test.exe"]}
+Total tests: 65, passed: 65, failed: 0.
+Total tests: 65, passed: 65, failed: 0.
+Built dist/visionleak.js from MoonBit.
+Finished. moon: no work to do
+
+> visionleak@0.4.0 test
+> node --test tests/*.test.mjs
+
+✔ real CLI separates byte equality from decoded pixel equality, preserves input, and binds stable audit IDs (230.145416ms)
+✔ decode plus real core follows EXIF orientation and canonical white alpha semantics (9.821041ms)
+✔ a bad image and a symlink leave reviewable partial evidence and explicit errors (73.733792ms)
+✔ image, pixel, file, total-pixel, comparison, and output budgets are observable (375.748583ms)
+✔ fatal arguments and empty roots return structured errors without creating a report (322.476167ms)
+✔ overwrite is explicit and refuses unrelated files even with --force (254.573667ms)
+✔ exported API merges partial options, validates them, and audit identity includes scan scope and errors (28.047875ms)
+✖ loopback server serves only fixed assets and one report, and denies traversal, symlinks, writes, and foreign hosts (75.951083ms)
+✔ symlinked output ancestry is rejected before creating directories in the dataset (3.09925ms)
+✔ server rejects altered stable report fields even when the old auditId is retained (7.862583ms)
+✔ opt-in mirror CLI emits review candidates from actual reflected files and binds mode to identity (79.054666ms)
+✔ opt-in rotations audit physical rotated and rotated-reflected files without making exact groups (88.263166ms)
+✔ compiled JSON and bytes exports preserve the host protocol (3.356458ms)
+✔ incremental SHA-256 opaque JS state accepts Buffer chunks and matches Node crypto (5.227584ms)
+✔ thumbnail sources are local and cannot traverse or execute URLs (0.723333ms)
+✔ validation is atomic and review export roundtrips without modifying machine evidence (4.466875ms)
+✔ filters compose evidence, human decision, path, split, and maximum distance (0.41025ms)
+✔ an imported report cannot reuse another audit server thumbnails (0.15875ms)
+✔ progress distinguishes unreviewed and unsure pairs inside the current scope (0.624708ms)
+✔ next pending navigation wraps inside the filtered queue and skips reviewed/current pairs (0.446625ms)
+✔ marking a filtered pair continues after its old position instead of returning to the beginning (2.35075ms)
+✔ one-step undo removes a new mark and restores an earlier decision including its note (0.617333ms)
+✔ undo cannot erase later notes, imported changes, another audit, or unrelated pair reviews (1.234ms)
+✔ 12MP JPEG byte copy and lossless reencoding keep full-resolution pixel identity (2556.239667ms)
+✔ sampling budget changes perception size while source decode and total budgets remain hard bounds (21.045709ms)
+✔ mirror host adapter routes to the compiled optional export (6.643334ms)
+✔ orientation host adapter routes booleans and bytes to the optional core export (8.816958ms)
+✔ legacy mirror mode preserves complete 0.3.0 evidence and work counts on the real development photos (10.538291ms)
+✔ content identity accepts v0.1.0 reports and reviewed exports without rebinding evidence (7.194834ms)
+✔ v2 canonical identity survives object-key reorder but binds array order and unknown fields (0.782833ms)
+✔ MoonBit identity matches an independent ECMAScript canonicalization oracle for extension fields (8.405875ms)
+✔ public JS pixel adapter rejects inputs that the compiled ABI could coerce (0.670875ms)
+✔ public JS pixel adapter accepts Uint8Array and the Buffer decoder output (8.440583ms)
+✔ all split alias combinations normalize splits while preserving actual paths and directory scope (139.441958ms)
+✔ simultaneous aliases are fatal before output creation instead of merging dataset splits (6.552667ms)
+ℹ tests 35
+ℹ suites 0
+ℹ pass 34
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2703.328833
+
+✖ failing tests:
+
+test at tests/cli.test.mjs:188:1
+✖ loopback server serves only fixed assets and one report, and denies traversal, symlinks, writes, and foreign hosts (75.951083ms)
+  Error [VisionLeakError]: Could not bind the loopback port; check local permissions or choose another --port
+      at file:///Users/cjy/Documents/ChatGPT/%E9%BB%91%E5%AE%A2%E6%9D%BE%E6%96%B0%E9%A1%B9%E7%9B%AE/projects/visionleak/tools/server.mjs:109:31
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async startServer (file:///Users/cjy/Documents/ChatGPT/%E9%BB%91%E5%AE%A2%E6%9D%BE%E6%96%B0%E9%A1%B9%E7%9B%AE/projects/visionleak/tools/server.mjs:106:3)
+      at async TestContext.<anonymous> (file:///Users/cjy/Documents/ChatGPT/%E9%BB%91%E5%AE%A2%E6%9D%BE%E6%96%B0%E9%A1%B9%E7%9B%AE/projects/visionleak/tests/cli.test.mjs:191:27)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    code: 'LISTEN_ERROR',
+    details: { cause: 'EPERM' }
+  }
+CI acceptance: failed; .ci-artifacts/verification.json

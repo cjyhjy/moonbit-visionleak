@@ -1,7 +1,7 @@
 {
   "schemaVersion": "visionleak-benchmark-v1",
-  "createdAt": "2026-10-22T15:55:46.271Z",
-  "engineSha256": "94b042685bb55030f5b44f11545c7b6f19ee28cf5971bb3c4598398c2281f2ab",
+  "createdAt": "2026-10-23T16:01:38.376Z",
+  "engineSha256": "86a74558178474cc22591e1e4da38cc8a0b547c7c39ec3b9d9282d9736093bcb",
   "environment": {
     "node": "v26.7.0",
     "platform": "darwin",
@@ -17,17 +17,17 @@
       "pixels": 2097152,
       "encodedBytes": null,
       "elapsedMs": [
-        90.33170899999999,
-        90.223667,
-        89.86204200000003,
-        89.68991699999992,
-        90.28708300000005
+        91.143584,
+        89.892167,
+        89.65625,
+        89.65816699999999,
+        94.37466700000004
       ],
-      "medianMs": 90.223667,
+      "medianMs": 89.892167,
       "outcome": {
         "ok": true
       },
-      "rssAfterBytes": 77250560
+      "rssAfterBytes": 76333056
     },
     {
       "name": "index-1000-random-threshold6",
@@ -36,13 +36,13 @@
       "pixels": null,
       "encodedBytes": null,
       "elapsedMs": [
-        191.4781670000001,
-        194.43487500000003,
-        194.34916599999997,
-        189.9984589999999,
-        198.78358400000002
+        28.67587500000002,
+        20.058208000000036,
+        27.91420800000003,
+        27.46195899999998,
+        18.42020799999989
       ],
-      "medianMs": 194.34916599999997,
+      "medianMs": 27.46195899999998,
       "outcome": {
         "complete": true,
         "stats": {
@@ -56,7 +56,7 @@
           "reason": ""
         }
       },
-      "rssAfterBytes": 110182400
+      "rssAfterBytes": 91602944
     },
     {
       "name": "dense-1000-pair-budget100",
@@ -65,13 +65,13 @@
       "pixels": null,
       "encodedBytes": null,
       "elapsedMs": [
-        4.002708999999868,
-        3.484499999999798,
-        3.2987500000001546,
-        3.4523750000000746,
-        3.5455829999998514
+        3.8916659999999865,
+        3.681750000000079,
+        3.627749999999992,
+        3.3427500000000236,
+        3.492291000000023
       ],
-      "medianMs": 3.484499999999798,
+      "medianMs": 3.627749999999992,
       "outcome": {
         "complete": false,
         "stats": {
@@ -85,7 +85,7 @@
           "reason": "PairBudget"
         }
       },
-      "rssAfterBytes": 111837184
+      "rssAfterBytes": 93749248
     }
   ]
 }

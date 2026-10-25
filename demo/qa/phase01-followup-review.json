@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "visionleak-review-v1",
+  "auditId": "f3c8e0c337e671d583fb0e9374879fecd147218b880dd56bfbad0b2f0df81078",
+  "exportedAt": "2026-10-25T09:23:41.180Z",
+  "reviews": [
+    {
+      "pairKey": "[\"test/camera-byte-copy.png\",\"train/camera-original.png\"]",
+      "left": "test/camera-byte-copy.png",
+      "right": "train/camera-original.png",
+      "decision": "unsure",
+      "note": "导入较新复核记录",
+      "updatedAt": "2026-10-25T09:23:51.729Z"
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "results": [
+    {
+      "path": "reports/mirror-evaluation-audit.json",
+      "passed": true
+    },
+    {
+      "path": "reports/evaluation-audit.json",
+      "passed": true
+    },
+    {
+      "path": "reports/demo/report.json",
+      "passed": true
+    },
+    {
+      "path": "reports/mirror-demo/report.json",
+      "passed": true
+    },
+    {
+      "path": "reports/photos-v1/current-holdout/orientations-audit.json",
+      "passed": true
+    },
+    {
+      "path": "reports/photos-v1/current-holdout/default-audit.json",
+      "passed": true
+    },
+    {
+      "path": "reports/photos-v1/current-holdout/mirrors-audit.json",
+      "passed": true
+    },
+    {
+      "path": "reports/photos-v1/current-development/orientations-audit.json",
+      "passed": true
+    },
+    {
+      "path": "reports/photos-v1/current-development/default-audit.json",
+      "passed": true
+    },
+    {
+      "path": "reports/photos-v1/current-development/mirrors-audit.json",
+      "passed": true
+    },
+    {
+      "path": "reports/photos-v1/baseline-holdout/default-audit.json",
+      "passed": true
+    },
+    {
+      "path": "reports/photos-v1/baseline-holdout/mirrors-audit.json",
+      "passed": true
+    },
+    {
+      "path": "reports/photos-v1/baseline-development/default-audit.json",
+      "passed": true
+    },
+    {
+      "path": "reports/photos-v1/baseline-development/mirrors-audit.json",
+      "passed": true
+    },
+    {
+      "path": "reports/cli-smoke/report.json",
+      "passed": true
+    },
+    {
+      "path": "reports/photos-demo/report.json",
+      "passed": true
+    },
+    {
+      "path": "release/visionleak-0.1.0.zip:visionleak/reports/demo/report.json",
+      "passed": true
+    },
+    {
+      "path": "release/visionleak-0.1.0.zip:visionleak/reports/evaluation-audit.json",
+      "passed": true
+    },
+    {
+      "path": "release/visionleak-0.3.0.zip:visionleak/reports/demo/report.json",
+      "passed": true
+    },
+    {
+      "path": "release/visionleak-0.3.0.zip:visionleak/reports/evaluation-audit.json",
+      "passed": true
+    },
+    {
+      "path": "release/visionleak-0.3.0.zip:visionleak/reports/mirror-demo/report.json",
+      "passed": true
+    },
+    {
+      "path": "release/visionleak-0.3.0.zip:visionleak/reports/mirror-evaluation-audit.json",
+      "passed": true
+    },
+    {
+      "path": "release/visionleak-0.2.0.zip:visionleak/reports/demo/report.json",
+      "passed": true
+    },
+    {
+      "path": "release/visionleak-0.2.0.zip:visionleak/reports/evaluation-audit.json",
+      "passed": true
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/demo/report.json",
+      "passed": true
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/evaluation-audit.json",
+      "passed": true
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/mirror-demo/report.json",
+      "passed": true
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/mirror-evaluation-audit.json",
+      "passed": true
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-demo/report.json",
+      "passed": true
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/baseline-development/default-audit.json",
+      "passed": true
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/baseline-development/mirrors-audit.json",
+      "passed": true
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/baseline-holdout/default-audit.json",
+      "passed": true
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/baseline-holdout/mirrors-audit.json",
+      "passed": true
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/current-development/default-audit.json",
+      "passed": true
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/current-development/mirrors-audit.json",
+      "passed": true
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/current-development/orientations-audit.json",
+      "passed": true
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/current-holdout/default-audit.json",
+      "passed": true
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/current-holdout/mirrors-audit.json",
+      "passed": true
+    },
+    {
+      "path": "release/visionleak-0.4.0.zip:visionleak/reports/photos-v1/current-holdout/orientations-audit.json",
+      "passed": true
+    }
+  ]
+}

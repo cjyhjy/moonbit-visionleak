@@ -13,4 +13,6 @@ VisionLeak 自有源码、测试、合成图像生成脚本和说明采用 [MIT]
 
 `dist/visionleak.js` 是 MoonBit 构建产物，含标准库代码，因此不能只保留 MIT 许可而丢弃 MoonBit 第三方声明。原始版本说明包含更多标准库组件的许可证文本；完整保留并不意味着所有列出的函数都被本项目链接。
 
-研究中列出的 MoonSplit、FiftyOne、ImageHash 是已存在的替代方案。引用不代表作者背书；未运行的实现不会被记为实测结果。本项目未使用人脸照片、私人数据或来自真实数据集的自然泄漏真值；fixture 中每张图都是程序生成或其受控变换。
+研究中列出的 MoonSplit、FiftyOne、ImageHash 是已存在的替代方案。引用不代表作者背书；未运行的实现不会被记为实测结果。
+
+0.4.0 新增 10 张来源明确的第三方照片，含人物、动物、物品、纹理和航天场景。原始文件保存在 `research/photos-v1/originals/`，每张的作者、CC0 或公有领域声明、官方许可证据链接和官方 SHA-256 见 [来源清单](research/photos-v1/sources.json) 与 [归属说明](research/photos-v1/ATTRIBUTION.md)。`fixtures/photos-v1/` 是这些照片的受控变换，继承各自来源的许可状态，不受项目对合成图像的 CC0 声明覆盖。本次未使用私人数据或自然发生的数据泄漏真值；公共照片及其作者没有为本项目背书。

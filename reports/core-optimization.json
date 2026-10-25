@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "visionleak-core-comparison-v1",
+  "createdAt": "2026-10-23T16:01:41.421Z",
+  "environment": {
+    "node": "v26.7.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "cpu": "Apple M5 Pro"
+  },
+  "baseline": {
+    "path": "research/baselines/visionleak-0.1.0.mjs",
+    "sha256": "94b042685bb55030f5b44f11545c7b6f19ee28cf5971bb3c4598398c2281f2ab"
+  },
+  "candidate": {
+    "path": "dist/visionleak.js",
+    "sha256": "86a74558178474cc22591e1e4da38cc8a0b547c7c39ec3b9d9282d9736093bcb"
+  },
+  "compatibilityCases": 360,
+  "method": "Same deterministic seed and 1000-fingerprint workloads as tools/benchmark.mjs. Three warmups per engine then ten paired samples with alternating engine order, in one process. Timings include JSON stringify/parse. Full serialized reports also match in 360 separate threshold/budget cases. Synthetic fingerprints, local timing observations only; no general speed or memory claim.",
+  "results": [
+    {
+      "name": "index-1000-random-threshold6",
+      "images": 1000,
+      "inputSha256": "80b13a81da786199678c68aa846bf3ca31ccb82fe27985c97602dc45883b9ed4",
+      "elapsedMs": {
+        "baseline": [
+          185.32516599999997,
+          186.73974999999996,
+          186.40620799999988,
+          188.363208,
+          190.45104199999992,
+          188.7142919999999,
+          189.08466700000008,
+          188.98308300000008,
+          185.72787500000004,
+          200.94429199999968
+        ],
+        "candidate": [
+          17.395708999999897,
+          16.79433300000005,
+          17.512166999999863,
+          17.80254100000002,
+          17.666749999999865,
+          17.265499999999975,
+          18.249791000000187,
+          18.43308300000035,
+          22.91879199999994,
+          21.19950000000017
+        ]
+      },
+      "baselineMedianMs": 188.53874999999994,
+      "candidateMedianMs": 17.734645499999942,
+      "speedup": 10.631097757212038,
+      "outcome": {
+        "complete": true,
+        "stats": {
+          "inputImages": 1000,
+          "processedImages": 1000,
+          "comparisons": 215073,
+          "distanceEvaluations": 215073,
+          "pairChecks": 0,
+          "emittedPairs": 0,
+          "indexNodes": 1000,
+          "reason": ""
+        }
+      }
+    },
+    {
+      "name": "dense-1000-pair-budget100",
+      "images": 1000,
+      "inputSha256": "288e634be8af27facf2614e0b39f5572104dabd0d7a0864b9c16efd1d2cd47ca",
+      "elapsedMs": {
+        "baseline": [
+          2.7714160000000447,
+          2.6513749999999163,
+          2.54366600000003,
+          2.6419590000000426,
+          2.5468329999998787,
+          2.6107919999999467,
+          2.6235830000000533,
+          2.6763339999997697,
+          2.595958999999766,
+          2.561584000000039
+        ],
+        "candidate": [
+          2.803124999999909,
+          2.8274999999998727,
+          2.957499999999982,
+          3.2699579999998605,
+          2.9464160000002266,
+          2.8310420000002523,
+          2.888666000000285,
+          3.0849159999997937,
+          2.962999999999738,
+          2.8474169999999503
+        ]
+      },
+      "baselineMedianMs": 2.6171875,
+      "candidateMedianMs": 2.9175410000002557,
+      "speedup": 0.8970525178565685,
+      "outcome": {
+        "complete": false,
+        "stats": {
+          "inputImages": 1000,
+          "processedImages": 17,
+          "comparisons": 176,
+          "distanceEvaluations": 33,
+          "pairChecks": 143,
+          "emittedPairs": 100,
+          "indexNodes": 1,
+          "reason": "PairBudget"
+        }
+      }
+    }
+  ]
+}
