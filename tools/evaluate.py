@@ -6,6 +6,7 @@ import argparse
 import base64
 import hashlib
 import importlib.metadata
+import importlib.util
 import itertools
 import json
 import platform
@@ -24,6 +25,9 @@ from PIL import Image
 
 PROJECT = Path(__file__).resolve().parents[1]
 EXACT = {"byte-identical", "pixel-identical"}
+_metric_spec = importlib.util.spec_from_file_location("visionleak_metric_reference", PROJECT / "tests/metric_reference.py")
+_metric_reference = importlib.util.module_from_spec(_metric_spec)
+_metric_spec.loader.exec_module(_metric_reference)
 
 
 def canonical(width, height, rgba):
@@ -55,8 +59,10 @@ def pair_key(left, right):
 
 
 def score(truth, pairs):
-    """MoonBit owns metric accounting; independent pixel/index oracles remain here."""
-    return run_bridge({"mode": "score", "truth": truth, "pairs": pairs})
+    """Keep product metrics, independently verify every field on every evaluation."""
+    actual = run_bridge({"mode": "score", "truth": truth, "pairs": pairs})
+    _metric_reference.compare(actual, _metric_reference.score(truth, pairs))
+    return actual
 
 
 def vectors():
