@@ -1,4 +1,4 @@
-import { EVIDENCE, DECISIONS, TRANSFORMS, orientationDescription, validateReport, validateReview, thumbnailURL, reviewDocument, filterPairs, canShowThumbnails } from './review-validation.mjs';
+import { EVIDENCE, DECISIONS, TRANSFORMS, orientationDescription, validateReport, validateReview, thumbnailURL, reviewDocument, filterPairs, canShowThumbnails, workbenchScope } from './review-validation.mjs';
 import { verifyReportIdentity } from './report-identity.mjs';
 import { reviewProgress, nextPendingPair, selectionAfterFilter, changeDecision, undoDecision } from './review-workflow.mjs';
 
@@ -14,13 +14,15 @@ function notice(message, error = false) {
   $('notice').hidden = !message;
 }
 function filters() {
-  return { query: $('search').value, evidence: $('evidence-filter').value, decision: $('decision-filter').value, split: $('split-filter').value, maxDistance: Number($('distance-filter').value) };
+  return { query: $('search').value, evidence: $('evidence-filter').value, decision: $('decision-filter').value, split: $('split-filter').value, maxDistance: Number($('distance-filter').value), includeLowContrast:$('show-low-contrast').checked, groupId:$('group-filter').value };
 }
 function resetFilters() {
   $('search').value = '';
   $('evidence-filter').value = 'all';
   $('decision-filter').value = 'all';
   $('split-filter').value = 'all';
+  $('group-filter').value = '';
+  $('show-low-contrast').checked = false;
   $('distance-filter').value = $('distance-filter').max;
   $('distance-output').value = $('distance-filter').value;
   state.visibleLimit = 100;
@@ -67,6 +69,11 @@ async function installReport(raw, source, served = false, sequence = state.loadS
     $(`metric-${id}`).textContent = formatCount(report.pairs.filter(pair => pair.evidence === evidence).length);
   }
   $('pair-count').textContent = `${formatCount(report.pairs.length)} 对`;
+  const scope = workbenchScope(report,{includeLowContrast:true});
+  $('low-contrast-count').textContent = `展开低对比度配对（${formatCount(scope.lowContrastPairs)}）`;
+  $('group-filter').replaceChildren(new Option(`全部候选组（${scope.candidateGroups.length}）`, ''));
+  for (const [index, group] of scope.candidateGroups.entries()) $('group-filter').add(new Option(`组 ${index+1} · ${group.members.length} 张图像`,group.id));
+  $('coverage-summary').textContent = raw.coverage?.summary ?? '历史报告未记录逐集合覆盖统计；结论仅覆盖此报告的输入与已完成比较。';
   $('split-filter').replaceChildren(new Option('全部集合', 'all'));
   for (const split of [...new Set([...report.images.values()].map(image => image.split))].sort()) $('split-filter').add(new Option(split, split));
   let maximumDistance = 64;
@@ -74,7 +81,7 @@ async function installReport(raw, source, served = false, sequence = state.loadS
   $('distance-filter').max = String(maximumDistance);
   const errors = Array.isArray(raw.errors) ? raw.errors : [];
   $('error-summary').textContent = `${errors.length ? `${formatCount(errors.length)} 条错误或跳过记录` : '无错误记录'} · 统计与选项`;
-  $('report-stats').textContent = JSON.stringify({ stats: raw.stats ?? null, scope: raw.scope ?? null, timing: raw.timing ?? null }, null, 2);
+  $('report-stats').textContent = JSON.stringify({ stats: raw.stats ?? null, scope: raw.scope ?? null, coverage:raw.coverage ?? null, timing: raw.timing ?? null }, null, 2);
   $('report-options').textContent = JSON.stringify({ options: raw.options ?? null, normalization: raw.normalization ?? null, decoder: raw.decoder ?? null }, null, 2);
   $('report-errors').textContent = errors.length ? JSON.stringify(errors, null, 2) : '[]';
   resetFilters();
@@ -164,6 +171,7 @@ function renderDetail() {
   $('detail-decision').textContent = review ? `人工：${DECISIONS[review.decision]}` : '等待人工复核';
   $('detail-distance').textContent = pair.distance;
   $('evidence-explanation').textContent = `${evidence.description} ${pair.evidence === 'perceptual-candidate' ? '相似度不是泄漏概率；缩放、低对比度或重复纹理都可能造成误报。' : '相同证据说明内容重合；是否影响评测，还取决于数据来源、分组方式和任务定义。'}`;
+  if (pair.lowContrast) $('evidence-explanation').textContent += ' 此配对包含低对比度图像，请谨慎解释感知距离。';
   if (pair.matchTransform) $('evidence-explanation').textContent += ` 匹配依据：${TRANSFORMS[pair.matchTransform]}；预览图保持原方向，距离取四种方向组合的最小值。`;
   if (pair.matchOrientation) $('evidence-explanation').textContent += ` 匹配依据：${orientationDescription(pair.matchOrientation)}。预览图保持原方向；距离为已启用方向组合的最小值，旋转发生在 EXIF 校正之后。`;
   setImage('left', left);
@@ -318,7 +326,7 @@ $('review-file').addEventListener('change', async event => {
 $('export-review').addEventListener('click', () => { if (state.report) downloadJSON(reviewDocument(state.report, state.reviews), 'review.json'); });
 $('export-report').addEventListener('click', () => { if (state.report) downloadJSON({ ...state.report.raw, review: reviewDocument(state.report, state.reviews) }, 'report-reviewed.json'); });
 $('load-default').addEventListener('click', loadDefault);
-for (const id of ['search', 'evidence-filter', 'decision-filter', 'split-filter', 'distance-filter']) $(id).addEventListener('input', () => {
+for (const id of ['search', 'evidence-filter', 'decision-filter', 'split-filter', 'distance-filter','show-low-contrast','group-filter']) $(id).addEventListener('input', () => {
   $('distance-output').value = $('distance-filter').value;
   state.visibleLimit = 100;
   render();

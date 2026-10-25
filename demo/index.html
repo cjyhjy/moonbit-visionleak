@@ -37,6 +37,7 @@
         <div class="metric progress-metric"><span>人工标记进度 <span id="review-progress">0%</span></span><strong id="metric-reviewed">0 <em>/ 0</em></strong><div class="progress-track"><div id="progress-fill"></div></div><small id="review-summary">未复核 0 · 暂不确定 0</small></div>
       </section>
       <section class="workbench">
+        <p id="coverage-summary" class="notice" role="status"></p>
         <div class="section-heading"><div><p class="eyebrow">CROSS-SPLIT PAIRS</p><h2>证据队列 <span id="pair-count">0 对</span></h2></div><div class="review-actions"><label class="button quiet file-button">导入复核<input id="review-file" type="file" accept=".json,application/json"></label><button id="export-review" class="button outline" type="button">导出复核 <span aria-hidden="true">↓</span></button><button id="export-report" class="button primary" type="button">导出完整报告 <span aria-hidden="true">↓</span></button></div></div>
         <div class="filterbar">
           <label class="search-field"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索路径或集合名称…" aria-label="搜索图像路径或集合名称"><kbd>/</kbd></label>
@@ -46,6 +47,10 @@
           <label class="distance-field"><span>距离 ≤ <output id="distance-output">64</output></span><input id="distance-filter" type="range" min="0" max="64" value="64" aria-label="最大感知哈希距离"></label>
         </div>
         <div class="queue-tools"><div><p id="queue-progress" role="status" aria-live="polite">当前筛选 0 对 · 未复核 0 · 暂不确定 0</p><p class="queue-shortcuts">快捷键 <kbd>J</kbd> 下一对 · <kbd>K</kbd> 上一对 · <kbd>N</kbd> 下一待复核 · <kbd>/</kbd> 搜索<span>（输入时停用）</span></p></div><div class="queue-tool-actions"><button id="undo-review" class="button quiet" type="button" disabled title="撤销上次结论；编辑备注、导入复核或切换报告后不可撤销">撤销上次标记</button><button id="next-pending" class="button outline" type="button" disabled aria-keyshortcuts="N" title="在当前筛选内查找另一对未复核证据，到队尾后从头继续">下一待复核 <span aria-hidden="true">↗</span></button></div></div>
+        <div class="filterbar secondary-filters">
+          <label class="select-field"><span>候选分组</span><select id="group-filter"><option value="">全部候选组</option></select></label>
+          <label><input id="show-low-contrast" type="checkbox"><span id="low-contrast-count">展开低对比度配对（0）</span></label>
+        </div>
         <div class="review-grid">
           <aside class="queue-panel"><div class="queue-label"><span>图像对</span><span id="queue-total">0 项</span></div><div id="pair-list" class="pair-list" aria-label="证据对列表"></div><div id="queue-empty" class="queue-empty" hidden>当前筛选下没有证据对。<button id="reset-filters" type="button">重置筛选</button></div></aside>
           <section id="pair-detail" class="detail-panel" aria-label="证据对详情" hidden>

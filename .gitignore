@@ -17,3 +17,5 @@ output/
 !.env.example
 # Preserve investigative programs as text attachments, not maintained sources.
 reports/plan-0.5.0/mooncakes-probe-*.py
+# Generated handoff samples are reproducible from the committed QA inputs.
+demo/qa/phase2-offline*.html

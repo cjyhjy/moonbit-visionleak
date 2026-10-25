@@ -8,6 +8,8 @@ import { decodeImage, thumbnail, DECODER, HARD_MAX_PIXELS, DEFAULT_MAX_FILE_BYTE
 import { audit, fingerprint, sha256, VisionLeakError, errorRecord } from './runtime.mjs';
 import { cli_options_json } from '../dist/visionleak.js';
 import { IDENTITY_VERSION, reportIdentity } from '../demo/report-identity.mjs';
+import { workflow } from './workflow.mjs';
+import { verifyFiles, exportFixes, exportHTML } from './report-tools.mjs';
 
 const SPLITS = ['train', 'validation', 'test'];
 const MARKER = '.visionleak-output.json';
@@ -23,6 +25,9 @@ export const DEFAULTS = Object.freeze(cliCore({ operation: 'defaults' }).options
 const HELP = `VisionLeak — local, read-only cross-split image audit
 
   node tools/cli.mjs audit --root DATASET --out OUTPUT [options]
+  node tools/cli.mjs verify --report REPORT --root DATASET
+  node tools/cli.mjs export-html --report REPORT --out FILE [--review REVIEW] [--max-bytes N]
+  node tools/cli.mjs export-fixes --report REPORT --out FILE [--review REVIEW]
   node tools/server.mjs --report OUTPUT/report.json --port 4173
 
 DATASET contains train/, validation/, and/or test/ directories.
@@ -37,11 +42,13 @@ Options (all budgets are finite):
   --max-pairs N          Output-pair budget, 0..100000 (default 10000)
   --include-rotations   Also search clockwise 90/180/270-degree orientations (default off)
   --include-mirrors     Also search horizontal-reflection candidates (default off)
+  --fail-on LEVEL       Exit 3 for exact, pixel, or candidate evidence (default off)
   --force               Replace only an intact VisionLeak-managed output directory
   --help                Show this help
 
-Exit 0: complete; 2: incomplete report; 1: fatal error (JSON on stderr).
-Finding duplicates does not change the exit code. Source files are never modified.
+Audit exit priority: 1 fatal > 3 fail-on hit > 2 incomplete > 0 complete.
+Verify exits 4 for invalid/missing evidence, 1 for fatal errors, otherwise 0.
+Without --fail-on, duplicates do not change the audit exit code. Source files are never modified.
 `;
 
 function parseArgs(argv) { return cliCore({ operation: 'parse', argv }).args; }
@@ -73,6 +80,7 @@ async function discover(root, maxImages) {
   const errors = [];
   const missingSplits = [];
   const splitDirectories = {};
+  const ignored = [];
   let entries = 0;
   let ignoredFiles = 0;
   let stopped = false;
@@ -102,8 +110,8 @@ async function discover(root, maxImages) {
       if (child.isDirectory()) await walk(absolute, split, depth + 1);
       else if (child.isFile() && EXTENSIONS.has(extname(child.name).toLowerCase())) {
         files.push({ absolute, path, split });
-        if (files.length > maxImages) { errors.push({ code: 'IMAGE_BUDGET', message: 'Dataset exceeds the image budget; only a bounded subset was processed', limit: maxImages }); stopped = true; }
-      } else ignoredFiles++;
+        if (files.length > maxImages) { errors.push({ code: 'IMAGE_BUDGET', message: 'Dataset exceeds the image budget; only a bounded subset was processed', limit: maxImages, path }); stopped = true; }
+      } else { ignoredFiles++; ignored.push({path,split}); }
     }
   }
   const present = new Map();
@@ -123,7 +131,7 @@ async function discover(root, maxImages) {
   }
   files.sort((a, b) => compare(a.path, b.path));
   if (files.length === 0 && errors.length === 0) throw new VisionLeakError('EMPTY_DATASET', 'No supported images were found under train/, validation/, or test/');
-  return { files: files.slice(0, maxImages), errors, missingSplits, splitDirectories, ignoredFiles, entriesScanned: Math.min(entries, MAX_ENTRIES), discoveredAtLeast: files.length };
+  return { files: files.slice(0, maxImages), discovered:files.map(({path,split})=>({path,split})), ignored, errors, missingSplits, splitDirectories, ignoredFiles, entriesScanned: Math.min(entries, MAX_ENTRIES), discoveredAtLeast: files.length };
 }
 
 async function inspectOutput(out, force) {
@@ -150,8 +158,9 @@ async function inspectOutput(out, force) {
   return true;
 }
 
-export async function runAudit({ root: inputRoot, out: inputOut, options: overrides = {}, force = false }) {
+export async function runAudit({ root: inputRoot, out: inputOut, options: overrides = {}, force = false, failOn = '' }) {
   const options = cliCore({ operation: 'options', overrides }).options;
+  workflow({operation:'gate',report:{complete:true,pairs:[]},failOn});
   if (typeof inputRoot !== 'string' || !inputRoot || typeof inputOut !== 'string' || !inputOut || typeof force !== 'boolean') {
     throw new VisionLeakError('ARGUMENT_ERROR', 'Root and output paths are required; force must be boolean');
   }
@@ -214,6 +223,8 @@ export async function runAudit({ root: inputRoot, out: inputOut, options: overri
         acceptedImages: images.length, totalDecodedPixels: totalPixels, maxDirectoryEntries: MAX_ENTRIES,
         source: 'local-files', allPairsAreCrossSplit: true, perceptualMatchesRequireReview: true },
     };
+    report.coverage = workflow({operation:'coverage',report,ignored:discovery.ignored,discovered:discovery.discovered}).coverage;
+    report.candidateGroups = workflow({operation:'groups',report}).candidateGroups;
     // Bind scope, rejected files, completeness, core artifact and evidence as well as input digests.
     // Exclude only wall-clock metadata so an identical audit has a reproducible ID.
     report.auditId = reportIdentity(report).digest;
@@ -241,10 +252,18 @@ export async function main(argv = process.argv.slice(2)) {
   try {
     const args = parseArgs(argv);
     if (args.help) { process.stdout.write(HELP); return 0; }
+    if (args.command) {
+      const result = args.command === 'verify' ? await verifyFiles(args)
+        : args.command === 'export-fixes' ? await exportFixes(args) : await exportHTML(args);
+      process.stdout.write(`${JSON.stringify(result)}\n`);
+      return result.exitCode ?? 0;
+    }
     const { report, out } = await runAudit(args);
+    const gate = workflow({operation:'gate',report,failOn:args.failOn});
     process.stdout.write(`${JSON.stringify({ ok: report.ok, complete: report.complete, status: report.status, auditId: report.auditId,
-      report: join(out, 'report.json'), images: report.images.length, pairs: report.pairs.length, errors: report.errors.length })}\n`);
-    return report.complete ? 0 : 2;
+      report: join(out, 'report.json'), images: report.images.length, pairs: report.pairs.length, errors: report.errors.length,
+      coverage:report.coverage, ...(args.failOn ? {failOn:gate.failOn,matched:gate.matched,evidenceCounts:gate.counts}: {}) })}\n`);
+    return gate.exitCode;
   } catch (error) {
     process.stderr.write(`${JSON.stringify({ ok: false, complete: false, status: 'error', error: errorRecord(error) })}\n`);
     return 1;

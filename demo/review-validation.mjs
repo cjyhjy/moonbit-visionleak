@@ -1,4 +1,4 @@
-import { review_validation_json } from '../dist/visionleak.js';
+import { review_validation_json, workflow_json } from '../dist/visionleak.js';
 export const REPORT_SCHEMA = 'visionleak-report-v1';
 export const REVIEW_SCHEMA = 'visionleak-review-v1';
 export const EVIDENCE = Object.freeze({
@@ -60,7 +60,10 @@ export function reviewDocument(report, reviews, now = new Date().toISOString()) 
 
 export function filterPairs(report, reviews, filters = {}) {
   const query = (filters.query ?? '').trim().toLocaleLowerCase();
+  const scope = workbenchScope(report, filters);
+  const keys = new Set(scope.keys);
   return report.pairs.filter(pair => {
+    if (!keys.has(pair.key)) return false;
     const left = report.images.get(pair.left);
     const right = report.images.get(pair.right);
     const decision = reviews.get(pair.key)?.decision ?? 'pending';
@@ -70,4 +73,10 @@ export function filterPairs(report, reviews, filters = {}) {
       && (filters.maxDistance == null || pair.distance <= filters.maxDistance)
       && (!query || `${left.path}\n${left.split}\n${right.path}\n${right.split}`.toLocaleLowerCase().includes(query));
   });
+}
+
+export function workbenchScope(report, { includeLowContrast = false, groupId = '' } = {}) {
+  const result = JSON.parse(workflow_json(JSON.stringify({ operation: 'view', report: report.raw, includeLowContrast, groupId })));
+  if (!result.ok) throw new Error(result.error.message);
+  return result;
 }

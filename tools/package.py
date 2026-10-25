@@ -14,8 +14,8 @@ import os
 from release_metadata import release_version, read_checksums
 
 ROOT=Path(__file__).resolve().parents[1]
-ROOT_FILES=['README.md','DELIVERY.md','LICENSE','THIRD_PARTY.md','moon.mod','package.json','package-lock.json','requirements-oracle.txt','toolchain.lock.json','.gitignore','.gitattributes','.node-version','.python-version']
-TREES=['.github','core','tools','tests','demo','docs','fixtures','LICENSES','dist','research']
+ROOT_FILES=['README.md','DELIVERY.md','LICENSE','THIRD_PARTY.md','moon.mod','package.json','package-lock.json','requirements-oracle.txt','toolchain.lock.json','.gitignore','.gitattributes','.moonignore','.node-version','.python-version']
+TREES=['.github','core','tools','tests','demo','examples','docs','fixtures','LICENSES','dist','research']
 REPORTS=['mirror-evaluation.json','mirror-evaluation-audit.json','README.md','core-optimization.json','verification.json','performance.json','evaluation.json','evaluation.md','evaluation-audit.json','evaluation-oracle.json','npm-dependencies.json']
 
 def sha(data): return hashlib.sha256(data).hexdigest()

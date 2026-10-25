@@ -1,0 +1,27 @@
+name: Image dataset integrity
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version-file: .python-version
+      - run: python3 tools/bootstrap.py
+      - run: npm ci
+      - run: npm run build
+      # This sample deliberately contains a training-image copy in test/.
+      # Replace the fixture path with your real dataset before using the gate.
+      - run: node tools/cli.mjs audit --root examples/github-action/dataset --out .ci-artifacts/image-audit --fail-on pixel
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: image-audit
+          path: .ci-artifacts/image-audit
