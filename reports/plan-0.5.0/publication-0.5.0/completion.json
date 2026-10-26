@@ -1,0 +1,27 @@
+{
+  "completedAt": "2026-10-26T07:25:36.420254+00:00",
+  "status": "publication-complete",
+  "version": "0.5.0",
+  "githubRelease": "https://github.com/cjyhjy/moonbit-visionleak/releases/tag/v0.5.0",
+  "githubReleaseCommit": "4421fd5504ee989ff800baf0c5fecda80b06cb45",
+  "githubReleaseCi": "https://github.com/cjyhjy/moonbit-visionleak/actions/runs/40285147853",
+  "remoteCiChecks": 25,
+  "primaryLanguage": "MoonBit",
+  "mooncakes": "https://mooncakes.io/docs/cjyhjy/visionleak/",
+  "mooncakesCoreBytes": 32754,
+  "cleanRegistryImportBackends": [
+    "js",
+    "wasm-gc",
+    "native"
+  ],
+  "sourceZip": {
+    "name": "visionleak-0.5.0.zip",
+    "bytes": 25011548,
+    "sha256": "3ccdbb11bc84eb3be725250fdc2f28068e1b4a6cdbc967bde692ca1169929777",
+    "matchesLocal": true
+  },
+  "releaseReceipt": "github-release.json",
+  "npmPublished": false,
+  "npmPrivate": true,
+  "contestSubmission": "Owner action, outside publication scope"
+}

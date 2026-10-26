@@ -1,0 +1,11 @@
+[
+  {
+    "source": "bddd03ad6c22d7880e7119e270c900c983ca3998",
+    "candidate": "4421fd5504ee989ff800baf0c5fecda80b06cb45",
+    "parent": "2a3b5f09f42e02e64ca950aca155a43a4fbe6671",
+    "tree": "fb6c353ac93dea0c323480723e7db83be1bc29ca",
+    "subject": "docs(visionleak): record public 0.5.0 CI and verified Mooncakes publication",
+    "treesIdentical": true,
+    "metadataAndMessagePreserved": true
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "branch": "codex/verify-0.5.0-action-example",
+  "commit": "43a50389600e75f799c1f671fac4b0716b6afd1f",
+  "workflow": "Image dataset integrity",
+  "expectedOutcome": "audit exit 3 from intentional duplicate, report upload succeeds",
+  "copiedUnchangedFrom": "examples/github-action/visionleak.yml",
+  "remoteBranchCleanedUp": true,
+  "reason": "Temporary Action probe completed and receipts retained; original example source remains on main."
+}

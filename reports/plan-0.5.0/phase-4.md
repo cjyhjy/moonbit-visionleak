@@ -54,3 +54,16 @@
 - GitHub Action 示例在本地运行相同实际 CLI 并验证退出 3；本版独立工作流的远端运行仍列为获准推送后的核对项。
 
 发布批准依据来自 docs/plan-0.5.0.md 第 4 阶段第 3、4 项的“经负责人同意后”。本地结果已经可供审阅，接下来只请求具体发布操作的批准，不请求重新批准已授权的 dry-run 或本地提交。
+
+## 2026-10-26：负责人批准后的发布完成记录
+
+负责人明确要求执行 GitHub 推送、远端 CI/Action/语言核对、正式 Mooncakes 发布与干净导入，以及 GitHub Release 附件上传。该授权已覆盖上文的待批准事项，不再等待额外批准。
+
+- 0.5.0 六个提交和发布证据正常推送，保留已有公开历史与原提交元数据；逐条映射见 publication-0.5.0/source-public-mapping.json 和 publication-document-commit-mapping.json。
+- [Release 目标提交 CI](https://github.com/cjyhjy/moonbit-visionleak/actions/runs/40285147853) 25 项通过；远端 languages API 确认 MoonBit 为最大语言。
+- [Action 示例实际运行](https://github.com/cjyhjy/moonbit-visionleak/actions/runs/40282015953) 对故意重复数据按预期退出 3，报告上传成功。整体 failure 是示例的预期关卡结果，不能记作全绿；独立临时分支已清理。
+- [Mooncakes 0.5.0](https://mooncakes.io/docs/cjyhjy/visionleak/) 正式发布成功（200、退出 0）。README 移除临时未发布状态后正式核心包为 **32754 字节**，算法与编译产物未变；公开注册表全新项目导入、三后端各 2 个 smoke 测试及所有下载文件逐字节核对通过。
+- [GitHub Release v0.5.0](https://github.com/cjyhjy/moonbit-visionleak/releases/tag/v0.5.0) 已公开，含最终源码 ZIP、SHA256SUMS 和包外验收记录。源码 ZIP **25011548 字节**，SHA-256 `3ccdbb11bc84eb3be725250fdc2f28068e1b4a6cdbc967bde692ca1169929777`；重新干净解压验收通过，上传后下载及公开资产 digest 全部匹配。
+- 发布证据源提交 `bddd03ad6c22d7880e7119e270c900c983ca3998` 对应公开提交 `4421fd5504ee989ff800baf0c5fecda80b06cb45`，本段最终完成记录另作后续文档提交。
+
+至此计划第 4 阶段完成；最新结构化汇总为 publication-0.5.0/completion.json，最终公开附件收据为 github-release.json。事实表已更新，所有数字都有原始证据。npm 保持 private；申报书人工撰写与赛事提交仍由负责人完成。新版 mooncake 的非阻塞升级建议继续保留为后续维护项，本次没有更换冻结工具链。

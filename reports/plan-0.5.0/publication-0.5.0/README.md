@@ -25,3 +25,11 @@
 [v0.5.0 Release](https://github.com/cjyhjy/moonbit-visionleak/releases/tag/v0.5.0) 使用已经验收的源码/运行 ZIP，独立于上述 1 MB 内核心包。附件为 visionleak-0.5.0.zip、SHA256SUMS 和 release-verification.json。最终 ZIP 的摘要、重新解压验收及上传/下载核验写入包外 reports/release-verification.json 和本目录 github-release.json；不在 ZIP 内写自身摘要。本文冻结时 Release 附件上传仍是后续执行步骤，最终状态以包外收据为准。
 
 运行时和 14 个阶段 3 冻结文件没有修改；发布文档收尾不使用新保留组调参。npm 保持 private，无需发布。赛事申报书和正式赛事提交仍由负责人完成。
+
+## 2026-10-26 最终完成追加
+
+上述 Release 后续步骤已完成：[v0.5.0](https://github.com/cjyhjy/moonbit-visionleak/releases/tag/v0.5.0) 已公开，标签指向 `4421fd5504ee989ff800baf0c5fecda80b06cb45`。[该提交 CI](https://github.com/cjyhjy/moonbit-visionleak/actions/runs/40285147853) 25 项通过，原始验收收据为 github-release-ci-verification.json。
+
+三个附件均已从 GitHub 下载，与本地已验收文件逐字节一致，公开资产的 digest 也全部匹配。源码 ZIP 为 **25011548 字节**，SHA-256 为 `3ccdbb11bc84eb3be725250fdc2f28068e1b4a6cdbc967bde692ca1169929777`。SHA256SUMS 和 release-verification.json 同时公开。完整元数据与下载核验在 github-release.json，最终汇总为 completion.json。
+
+临时 Action 验证分支在核对仍指向本次创建的提交后已清理，运行链接、日志和下载报告保留。后续文档记录提交不移动 v0.5.0 标签，不改写发布归档或已发布 Mooncakes 版本。

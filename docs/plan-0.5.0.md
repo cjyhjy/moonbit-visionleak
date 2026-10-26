@@ -250,3 +250,7 @@ Claude 同时负责修订本计划书与面向用户的文档（README、`docs/`
 负责人已说明 Claude 账号无法继续使用，并要求 Codex 继续按本计划推进。后续方向落实、文档和阶段复核由 Codex 接手，记录实际复核者及证据，不冒充 Claude 或独立评审。原评审记录保留。
 
 D4 已决定：移除 release ZIP 的 Git 跟踪，保留本地文件和已有历史，正式发布后使用 GitHub Releases。当前 `git ls-files release` 没有跟踪的 ZIP，已有 release 忽略规则；无需删除历史或执行 git rm。
+
+## 2026-10-26 执行完成追加
+
+负责人已明确授权并完成第 4 阶段的公开推送、远端 CI / Action / languages 核对、Mooncakes 正式发布与干净导入、GitHub Release 附件发布及下载校验。第 0–4 阶段执行结果与实际复核身份分别见 phase-0.md 至 phase-4.md；最终发布证据为 reports/plan-0.5.0/publication-0.5.0/completion.json。事实表已更新。赛事申报书与赛事提交由负责人完成，不属于本计划已完成的公开发布操作。
