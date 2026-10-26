@@ -1,0 +1,34 @@
+{
+  "version": "0.6.0",
+  "status": "passed",
+  "startedAt": "2026-10-26T16:40:27.316721+00:00",
+  "usesLocalPathDependency": false,
+  "checks": [
+    {
+      "id": "clean-import-add",
+      "status": "passed",
+      "exitCode": 0,
+      "log": "clean-import-add.log"
+    },
+    {
+      "id": "clean-import-test-js",
+      "status": "passed",
+      "exitCode": 0,
+      "log": "clean-import-test-js.log"
+    },
+    {
+      "id": "clean-import-test-wasm-gc",
+      "status": "passed",
+      "exitCode": 0,
+      "log": "clean-import-test-wasm-gc.log"
+    },
+    {
+      "id": "clean-import-test-native",
+      "status": "passed",
+      "exitCode": 0,
+      "log": "clean-import-test-native.log"
+    }
+  ],
+  "testsPerBackend": 3,
+  "finishedAt": "2026-10-26T16:40:36.608598+00:00"
+}

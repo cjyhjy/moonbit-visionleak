@@ -1,0 +1,22 @@
+test "published digest and exact audit" {
+  assert_eq(@visionleak.sha256(b"abc"), "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad")
+  assert_eq(@visionleak.hamming(String::make(64, '0'), String::make(64, '1')), 64)
+  let report = @visionleak.audit_json("{\"images\":[],\"options\":{}}")
+  assert_eq(report.contains("\"complete\":true"), true)
+}
+
+test "published combined export retains v1 local identity" {
+  let combined = @visionleak.fingerprint_combined_rgba(1, 1, b"\xff\x00\x00\xff", false, false)
+  assert_eq(combined.contains("vl-local-dhash-v1"), true)
+  assert_eq(combined.contains("localHashes"), true)
+  assert_eq(combined.contains("pixelDigest"), true)
+  assert_eq(combined.contains("\"ok\":true"), true)
+}
+
+test "published executable limits and capabilities parse" {
+  let limits = @visionleak.cli_options_json("{\"operation\":\"limits\"}")
+  assert_eq(limits.contains("maxTotalPixels"), true)
+  assert_eq(limits.contains("splitAliases"), true)
+  let parsed = @visionleak.cli_options_json("{\"operation\":\"parse\",\"argv\":[\"capabilities\"]}")
+  assert_eq(parsed.contains("\"command\":\"capabilities\""), true)
+}

@@ -1,0 +1,6 @@
+name = "visionleak-release-smoke"
+version = "0.0.0"
+
+import {
+  "cjyhjy/visionleak@0.6.0",
+}

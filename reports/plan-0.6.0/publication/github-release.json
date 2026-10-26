@@ -1,0 +1,77 @@
+{
+  "assets": [
+    {
+      "apiUrl": "https://api.github.com/repos/cjyhjy/moonbit-visionleak/releases/assets/678761319",
+      "contentType": "application/json",
+      "createdAt": "2026-10-26T16:32:10Z",
+      "digest": "sha256:3c09988f74b39bad856fe8736e06bdc7fae552d1eebf4d7591fb7d8b6a6ada63",
+      "downloadCount": 0,
+      "id": "RA_kwDOVTvY484odRNn",
+      "label": "",
+      "name": "release-verification.json",
+      "size": 7552,
+      "state": "uploaded",
+      "updatedAt": "2026-10-26T16:32:10Z",
+      "url": "https://github.com/cjyhjy/moonbit-visionleak/releases/download/v0.6.0/release-verification.json"
+    },
+    {
+      "apiUrl": "https://api.github.com/repos/cjyhjy/moonbit-visionleak/releases/assets/678761313",
+      "contentType": "application/octet-stream",
+      "createdAt": "2026-10-26T16:32:10Z",
+      "digest": "sha256:070d81a299d8b6b77f2b1a2ddd651b4e21686eed1200c751838ba196773e016c",
+      "downloadCount": 0,
+      "id": "RA_kwDOVTvY484odRNh",
+      "label": "",
+      "name": "SHA256SUMS",
+      "size": 522,
+      "state": "uploaded",
+      "updatedAt": "2026-10-26T16:32:10Z",
+      "url": "https://github.com/cjyhjy/moonbit-visionleak/releases/download/v0.6.0/SHA256SUMS"
+    },
+    {
+      "apiUrl": "https://api.github.com/repos/cjyhjy/moonbit-visionleak/releases/assets/678761318",
+      "contentType": "application/zip",
+      "createdAt": "2026-10-26T16:32:10Z",
+      "digest": "sha256:c1d3077953c384dc5a8fb4608a3b8157853757ae304403f6f2789c9c29f869a8",
+      "downloadCount": 0,
+      "id": "RA_kwDOVTvY484odRNm",
+      "label": "",
+      "name": "visionleak-0.6.0.zip",
+      "size": 26658473,
+      "state": "uploaded",
+      "updatedAt": "2026-10-26T16:32:14Z",
+      "url": "https://github.com/cjyhjy/moonbit-visionleak/releases/download/v0.6.0/visionleak-0.6.0.zip"
+    }
+  ],
+  "isDraft": false,
+  "publishedAt": "2026-10-26T16:34:42Z",
+  "tagName": "v0.6.0",
+  "targetCommitish": "c69824ee63da3134a1ddb455f9ff9a90ee8d2607",
+  "url": "https://github.com/cjyhjy/moonbit-visionleak/releases/tag/v0.6.0",
+  "verifiedAt": "2026-10-26T16:36:31.404102+00:00",
+  "status": "published-and-download-verified",
+  "verification": [
+    {
+      "name": "visionleak-0.6.0.zip",
+      "sha256": "c1d3077953c384dc5a8fb4608a3b8157853757ae304403f6f2789c9c29f869a8",
+      "bytes": 26658473,
+      "downloadMatchesLocal": true,
+      "publicDigestMatches": true
+    },
+    {
+      "name": "SHA256SUMS",
+      "sha256": "070d81a299d8b6b77f2b1a2ddd651b4e21686eed1200c751838ba196773e016c",
+      "bytes": 522,
+      "downloadMatchesLocal": true,
+      "publicDigestMatches": true
+    },
+    {
+      "name": "release-verification.json",
+      "sha256": "3c09988f74b39bad856fe8736e06bdc7fae552d1eebf4d7591fb7d8b6a6ada63",
+      "bytes": 7552,
+      "downloadMatchesLocal": true,
+      "publicDigestMatches": true
+    }
+  ],
+  "ciUrl": "https://github.com/cjyhjy/moonbit-visionleak/actions/runs/40359669509"
+}

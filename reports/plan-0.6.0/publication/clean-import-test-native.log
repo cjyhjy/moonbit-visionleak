@@ -1,0 +1,15 @@
+Total tests: 3, passed: 3, failed: 0.
+Warning: [0029]
+   ╭─[ <source-project>/.cache/publication-0.6.0/clean-import/moon.pkg:2:3 ]
+   │
+ 2 │   "cjyhjy/visionleak/core" @visionleak,
+   │   ────────────┬───────────  
+   │               ╰───────────── Warning (unused_package): Unused package 'cjyhjy/visionleak/core'
+───╯
+Warning: [0029]
+   ╭─[ <source-project>/.cache/publication-0.6.0/clean-import/moon.pkg:2:28 ]
+   │
+ 2 │   "cjyhjy/visionleak/core" @visionleak,
+   │                            ─────┬─────  
+   │                                 ╰─────── Warning (unused_package): Unused package alias 'visionleak'
+───╯

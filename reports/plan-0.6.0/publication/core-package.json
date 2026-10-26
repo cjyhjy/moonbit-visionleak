@@ -1,0 +1,27 @@
+{
+  "module": "cjyhjy/visionleak",
+  "version": "0.6.0",
+  "bytes": 34729,
+  "sha256": "47a2cd7c4251e18234480658134ff1fa0efc0a2b36177d948164cef39695f68b",
+  "entries": [
+    "moon.mod",
+    "core/moon.pkg",
+    "core/sha256.mbt",
+    "core/offline.mbt",
+    "core/crops.mbt",
+    "core/cli_options.mbt",
+    "core/audit.mbt",
+    "core/sampling.mbt",
+    "core/mih.mbt",
+    "core/pkg.generated.mbti",
+    "core/pixel_stream.mbt",
+    "core/review_validation.mbt",
+    "core/workflow.mbt",
+    "core/json_helpers.mbt",
+    "core/report_identity.mbt",
+    "core/metrics.mbt",
+    "core/fingerprint.mbt",
+    "LICENSE",
+    "README.md"
+  ]
+}
