@@ -1,6 +1,6 @@
-# Mooncakes 发布准备：0.5.0 计划执行稿
+# Mooncakes 0.5.0 发布核对记录
 
-模块名 `cjyhjy/visionleak` 已由负责人确认。当前本地清单已统一为 0.5.0，正在执行第 4 阶段最终包验收。license、description、repository、readme、keywords 已设置。
+模块名 `cjyhjy/visionleak` 已由负责人确认。当前清单为 0.5.0；已获负责人正式发布授权。最新结果见文末，早期失败和 dry-run 记录按时间保留。license、description、repository、readme、keywords 已设置。
 
 实际检查：`moon check/test` 三后端和 `moon package --list` 的结果见阶段证据。`moon publish --dry-run` 支持，但本机局部工具链没有登录凭据，执行失败；原始输出保存在 `reports/plan-0.5.0/logs/mooncakes-dry-run.log`。不能把 package 成功当作 publish dry-run 成功。
 
@@ -31,3 +31,7 @@
 当前结果更新：0.5.0 核心包为 **32,775 字节**，小于 1,000,000 字节；白名单只含 MoonBit 核心、README、LICENSE 和必要元数据。复用负责人已授权的现有登录，服务端返回 202 Accepted，明确确认 0.5.0 dry-run 成功且未作变更；项目入口严格识别固定客户端缺陷后有效退出 0。收据与实际日志见 `reports/plan-0.5.0/phase4-core-package.json` 和 `logs/phase4-mooncakes-dry-run.log`。旧失败记录仅表示历史状态。
 
 npm 清单保持 private；本次不需要发布 npm。正式 Mooncakes 发布和新代码公开推送仍按计划第 4 阶段取得负责人同意后执行。
+
+## 2026-10-26：正式发布与干净导入
+
+负责人明确授权 GitHub 推送、Mooncakes 正式发布、干净导入和 GitHub Release 附件上传。0.5.0 已推送，Linux CI 25 项通过，远端 MoonBit 为最大语言。README 将临时未发布状态改为发布记录链接后，正式核心包为 **32,754 字节**，原先 32,775 字节仅为本地候选；算法与编译产物未变。最终 dry-run 成功，正式发布返回 200 OK、退出 0。全新项目通过公共注册表安装 0.5.0，JS / WasmGC / native 各 2 个 smoke 测试通过，下载内容与上传 ZIP 逐字节一致。详见 reports/plan-0.5.0/publication-0.5.0/；未复制或读取凭据内容。

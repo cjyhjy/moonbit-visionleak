@@ -1,0 +1,60 @@
+{
+  "createdAt": "2026-10-25T17:24:18.655193+00:00",
+  "status": "prepared-locally-not-pushed",
+  "publicClone": "/Users/cjy/Documents/ChatGPT/黑客松新项目/repositories/moonbit-visionleak",
+  "branch": "codex/release-0.5.0-candidate",
+  "previousPublicHead": "efd33cd6a3c1583fd735b74362176134a35f9629",
+  "candidateHead": "2a3b5f09f42e02e64ca950aca155a43a4fbe6671",
+  "sourceHead": "7e2f1fe63f000fd99d64ab2dfaca32a23ca33aae",
+  "sourceAndCandidateTreesIdentical": true,
+  "preservedAuthorCommitterAndMessages": true,
+  "existingPublicHistoryRetained": true,
+  "mapping": [
+    {
+      "source": "c3dee59e90247d97f026fe1b6dfcdc8cde6cc47d",
+      "candidate": "cf8c130e45d8df7035a44af8676688fa3a05d45a",
+      "tree": "15d967795c34d2b6816cde8152971b32c20be6fa",
+      "subject": "feat(visionleak): add bounded local crop candidates in MoonBit"
+    },
+    {
+      "source": "7dc1da1e6ed5f32c7f750f23990ffe7943fda10d",
+      "candidate": "7147983a2e0bd6d6c91ab66d2b24577cd3f69c3d",
+      "tree": "319fc5340f97c8471357bd51c5f334d20404623a",
+      "subject": "test(visionleak): freeze licensed crop evaluation and resource evidence"
+    },
+    {
+      "source": "2a10683c3cf6584ac339e31dfc57b5945f815515",
+      "candidate": "ad650e60a304f0dae76f1a2aff64331c7ec3ae52",
+      "tree": "7e866c60f9045c6865dfad72b7a30ad548715e8e",
+      "subject": "docs(visionleak): document crop evidence limits and phase three acceptance"
+    },
+    {
+      "source": "293667def7f9901a56c912c46820998c32ec7167",
+      "candidate": "cc25996c616327cdec4e15b2f59c7384bae5f6b9",
+      "tree": "aeb2b89f6f5c6dbffb607039276d0e88576039b2",
+      "subject": "fix(visionleak): resolve frozen baselines from immutable archives"
+    },
+    {
+      "source": "07e2817a9f23cad094a159b4f89876584c093a4d",
+      "candidate": "8924e8dbb2f4945d9a4396cc40d9adccb5466f5a",
+      "tree": "2fa660e6ce6ab70f9db4bfca6c51b7bca5670fa6",
+      "subject": "build(visionleak): prepare verified 0.5.0 local delivery candidate"
+    },
+    {
+      "source": "7e2f1fe63f000fd99d64ab2dfaca32a23ca33aae",
+      "candidate": "2a3b5f09f42e02e64ca950aca155a43a4fbe6671",
+      "tree": "36864969afa09a33850d3605dd90f05a0f772f53",
+      "subject": "docs(visionleak): record final 0.5.0 local acceptance and publication boundary"
+    }
+  ],
+  "nextStepsAfterOwnerApproval": [
+    "Recheck remote main for drift",
+    "Push candidate normally, never force",
+    "Confirm CI and languages API",
+    "Publish Mooncakes only if separately approved"
+  ],
+  "authorization": {
+    "date": "2026-10-26",
+    "scope": "User explicitly authorized GitHub push, CI/action/language verification, formal Mooncakes publication and clean import, and GitHub Release asset upload."
+  }
+}

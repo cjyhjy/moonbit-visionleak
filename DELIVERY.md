@@ -1,4 +1,4 @@
-# VisionLeak 0.5.0 local delivery candidate
+# VisionLeak 0.5.0 delivery
 
 The previous 0.4.0 delivery record is preserved at reports/history/pre-0.5.0-20261025/DELIVERY-0.4.0.md. Historical ZIPs and freeze records remain unchanged.
 
@@ -35,4 +35,4 @@ python3.13 tools/package.py
 python3.13 tools/accept-release.py
 ```
 
-The final verification refreshes current report pointers; prior report bytes are archived with checksums under reports/history/pre-0.5.0-20261025. Registry publication and the new public synchronization remain separate release steps. npm remains private.
+The final verification refreshes current report pointers; prior report bytes are archived with checksums under reports/history/pre-0.5.0-20261025. Actual public synchronization, registry publication and clean-import receipts are under reports/plan-0.5.0/publication-0.5.0/. The final Release upload and download attestation is recorded outside the ZIP. npm remains private.

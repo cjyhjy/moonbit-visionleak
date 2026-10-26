@@ -1,0 +1,39 @@
+{
+  "attemptedAt": "2026-10-26T06:52:48.542866+00:00",
+  "module": "cjyhjy/visionleak",
+  "version": "0.5.0",
+  "exitCode": 0,
+  "corePackage": {
+    "version": "0.5.0",
+    "bytes": 32754,
+    "sha256": "ea5e9f2d866f012582afcde537ed6a3568aef16b6a0143f65665957494c50fe2",
+    "entries": [
+      "moon.mod",
+      "core/moon.pkg",
+      "core/sha256.mbt",
+      "core/offline.mbt",
+      "core/crops.mbt",
+      "core/cli_options.mbt",
+      "core/audit.mbt",
+      "core/sampling.mbt",
+      "core/pkg.generated.mbti",
+      "core/pixel_stream.mbt",
+      "core/review_validation.mbt",
+      "core/workflow.mbt",
+      "core/json_helpers.mbt",
+      "core/report_identity.mbt",
+      "core/metrics.mbt",
+      "core/fingerprint.mbt",
+      "LICENSE",
+      "README.md"
+    ],
+    "note": "Release README now links the publication receipt instead of retaining the prepublication status. Algorithm and compiled artifact unchanged. Previous 32,775-byte core was a local dry-run candidate."
+  },
+  "log": "mooncakes-publish.log",
+  "dryRunExitCode": 0,
+  "formalPublishAttempted": true,
+  "status": "published-and-clean-import-verified",
+  "moduleUrl": "https://mooncakes.io/docs/cjyhjy/visionleak/",
+  "importReceipt": "clean-import.json",
+  "byteParityReceipt": "registry-content-parity.json"
+}

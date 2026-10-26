@@ -1,6 +1,6 @@
 # VisionLeak 0.5.0 事实表
 
-本地候选版本；公开推送与正式 Mooncakes 发布待负责人同意。本文提供可核对事实，不是参赛申报书。
+0.5.0 发布事实与验收依据。公开推送和 Mooncakes 正式发布已获负责人授权并完成；GitHub Release 的最终附件摘要和状态见包外发布记录。本文不是参赛申报书。
 
 | 事项 | 事实 | 依据 |
 |---|---|---|
@@ -15,9 +15,9 @@
 | 浏览器 | 桌面和手机视口验证计数、筛选、窗口见证、标记撤销和刷新恢复；350,710 字节离线 HTML 断网重渲染，3 对证据、6 张内嵌图均显示 | [实际记录](../reports/plan-0.5.0/phase3-browser.json)、[最终 QA](../demo/qa/verification.json) |
 | 规模资源 | 1000 图默认：1.004 秒、194.47 MiB RSS、190941 次比较，完整。5000 图默认：4.628 秒、261.59 MiB RSS，达到 1000000 比较预算，结论不完整 | [机器及全部模式原始记录](../reports/plan-0.5.0/scale-phase3-final/results.json) |
 | 解码边界 | 64MP 单图默认边界：2.869 秒、391.47 MiB RSS，完成；不证明所有编码和内容的最坏内存 | [原始记录](../reports/plan-0.5.0/scale-phase3-final/results.json) |
-| Mooncakes 包 | `cjyhjy/visionleak@0.5.0` 核心包 32,775 字节，强制小于 1,000,000 字节；白名单排除测试图片、报告和宿主工具。实际 dry-run 202 成功，有效退出 0，未正式发布 | [包收据与日志](../reports/plan-0.5.0/phase4-core-package.json) |
+| Mooncakes 包 | `cjyhjy/visionleak@0.5.0` 正式核心包 32,754 字节，强制小于 1,000,000 字节；白名单排除测试图片、报告和宿主工具。正式发布 200 成功，退出 0；全新项目通过注册表导入，三后端各 2 个 smoke 测试通过 | [正式包收据](../reports/plan-0.5.0/publication-0.5.0/core-package.json)、[发布与导入](../reports/plan-0.5.0/publication-0.5.0/mooncakes-publish.json) |
 | 交付包 | 完整源码/运行 ZIP 与核心发布包分别交付；最终 ZIP 摘要与干净目录验收记录放在包外，避免摘要自引用 | [最终包验收记录](../reports/release-verification.json)、[交付说明](../DELIVERY.md) |
-| 语言统计 | 本地透明字节统计 MoonBit 最大；统计含手写测试和独立 oracle，只排除真实编译产物。当前远端语言结果须在新版本获准推送后重新确认 | [统计明细](../reports/plan-0.5.0/languages-phase4-final.json) |
+| 语言统计 | 本地透明字节统计 MoonBit 最大；统计含手写测试和独立 oracle，只排除真实编译产物。远端 languages API 同样确认 MoonBit 最大，原始返回另存于发布记录 | [本地统计](../reports/plan-0.5.0/languages-phase4-final.json)、[远端 API](../reports/plan-0.5.0/publication-0.5.0/github-languages.json) |
 
 ## 裁切候选指标
 
@@ -38,4 +38,6 @@
 
 32 个文件来源不等于 32 个独立拍摄群体；部分受控裁切与固定窗口对齐。本实验不衡量自然污染率，也不能证明任意裁切、尺度变化的召回或跨数据集性能领先。新保留组局部候选有 44 对误报，因此保持默认关闭，必须人工复核。规模测试使用确定性生成图，只说明该环境下的资源消耗；预算耗尽时必须保留不完整结论。
 
-本版完成本地构建、验证及 dry-run；正式 Mooncakes、新版本 GitHub 推送、远端 CI、GitHub Release 和赛事提交属于后续发布步骤。npm 清单保持 private，无需发布 npm。公开仓库地址见 README；历史远端同步证据见 [git-sync-2026-10-25.json](../reports/plan-0.5.0/git-sync-2026-10-25.json)，不代表本版已上线。Codex 接手阶段复核属于原实现者自查，不是独立 Claude 评审。
+本版完成本地构建、验证及真实 dry-run；0.5.0 已推送 GitHub，Linux CI 的 25 项检查通过，Mooncakes 正式发布和公共注册表导入完成。原样复制的 Action 示例在独立验证分支执行，故意重复数据触发退出 3，报告上传成功；该示例工作流的 failure 是预期演示结果，不是主分支 CI 失败。见 [发布记录](../reports/plan-0.5.0/publication-0.5.0/README.md)。
+
+[GitHub Release](https://github.com/cjyhjy/moonbit-visionleak/releases/tag/v0.5.0) 的最终附件和下载校验由包外发布收据记录，避免 ZIP 摘要自引用。npm 保持 private，无需发布。赛事申报书与正式提交仍由负责人完成。原有 [git-sync-2026-10-25.json](../reports/plan-0.5.0/git-sync-2026-10-25.json) 仅记录之前批次；0.5.0 的源码/公开提交映射见本次发布记录。Codex 阶段复核是原实现者自查，不是独立 Claude 评审。

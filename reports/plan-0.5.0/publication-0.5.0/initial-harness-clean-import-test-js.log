@@ -1,0 +1,39 @@
+[visionleak-release-smoke] test smoke_test.mbt:1 ("published core exact digest and default audit") failed: smoke_test.mbt:3:3-3:77@visionleak-release-smoke FAILED: `-1 != 64`
+diff:
+--1 +64
+Total tests: 2, passed: 1, failed: 1.
+Warning: [0029]
+   ╭─[ /Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak/.cache/publication-0.5.0/clean-import/moon.pkg:2:3 ]
+   │
+ 2 │   "cjyhjy/visionleak/core" @visionleak,
+   │   ────────────┬───────────  
+   │               ╰───────────── Warning (unused_package): Unused package 'cjyhjy/visionleak/core'
+───╯
+Warning: [0029]
+   ╭─[ /Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak/.cache/publication-0.5.0/clean-import/moon.pkg:2:28 ]
+   │
+ 2 │   "cjyhjy/visionleak/core" @visionleak,
+   │                            ─────┬─────  
+   │                                 ╰─────── Warning (unused_package): Unused package alias 'visionleak'
+───╯
+Warning: [0035]
+   ╭─[ /Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak/.cache/publication-0.5.0/clean-import/smoke_test.mbt:9:7 ]
+   │
+ 9 │   let local = @visionleak.fingerprint_local_rgba(1, 1, b"\xff\x00\x00\xff")
+   │       ──┬──  
+   │         ╰──── Warning (reserved_keyword): The word `local` is reserved for possible future use. Please consider using another name.
+───╯
+Warning: [0035]
+    ╭─[ /Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak/.cache/publication-0.5.0/clean-import/smoke_test.mbt:10:13 ]
+    │
+ 10 │   assert_eq(local.contains("vl-local-dhash-v1"), true)
+    │             ──┬──  
+    │               ╰──── Warning (reserved_keyword): The word `local` is reserved for possible future use. Please consider using another name.
+────╯
+Warning: [0035]
+    ╭─[ /Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak/.cache/publication-0.5.0/clean-import/smoke_test.mbt:11:13 ]
+    │
+ 11 │   assert_eq(local.contains("localHashes"), true)
+    │             ──┬──  
+    │               ╰──── Warning (reserved_keyword): The word `local` is reserved for possible future use. Please consider using another name.
+────╯

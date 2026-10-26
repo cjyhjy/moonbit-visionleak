@@ -19,9 +19,9 @@ Reports in `plan-0.5.0/` record phase 0–2 implementation, local acceptance, in
 
 At that synchronization the package version was 0.4.0 and phase 3 had not started. Phase 2 implementation evidence did not constitute an independent Claude review or a finished 0.5.0 release.
 
-## 0.5.0 local candidate
+## 0.5.0 release evidence
 
-Version metadata is now 0.5.0. Phase 3 is complete; phase 4 local verification, packaging and clean extraction acceptance are recorded in `plan-0.5.0/phase-4.md` and the current verification reports. New public synchronization and formal Mooncakes publication still require the owner's approval. Phase reviews by Codex are implementation self-review, not independent Claude review.
+Version metadata is now 0.5.0. Phase 3 is complete; phase 4 local verification, packaging and clean extraction acceptance are recorded in `plan-0.5.0/phase-4.md` and the current verification reports. The owner authorized public synchronization and formal Mooncakes publication on 2026-10-26; both completed. See `plan-0.5.0/publication-0.5.0/README.md` for Linux CI, registry import, language statistics and final Release evidence. Phase reviews by Codex are implementation self-review, not independent Claude review.
 
 `photos-v1/current-*` are refreshed regression reports. Their previous bytes are preserved in `history/pre-0.5.0-20261025/`; `research/photos-v1/freeze/archive-locations.json` resolves the eight 0.4.0 baselines to those immutable files and enforces the original frozen SHA-256 values. Original freeze records and historical ZIPs remain unchanged.
 

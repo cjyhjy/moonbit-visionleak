@@ -1,0 +1,21 @@
+{
+  "createdAt": "2026-10-26T06:53:41.761164+00:00",
+  "module": "cjyhjy/visionleak",
+  "version": "0.5.0",
+  "newProject": ".cache/publication-0.5.0/clean-import",
+  "checks": [
+    {
+      "id": "add",
+      "exitCode": 0,
+      "log": "clean-import-add.log",
+      "status": "passed"
+    },
+    {
+      "id": "test-js",
+      "exitCode": 2,
+      "log": "clean-import-test-js.log",
+      "status": "failed"
+    }
+  ],
+  "status": "failed"
+}

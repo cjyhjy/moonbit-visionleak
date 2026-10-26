@@ -1,0 +1,11 @@
+Running moon check ...
+Finished. moon: no work to do
+Check passed
+validating packaged zip: /Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak/_build/publish/cjyhjy-visionleak-0.5.0.zip
+extracting packaged zip to /Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak/_build/publish/verify/mooncake_publish_checkrvZ32H
+running moon check on extracted package
+Running moon check ...
+Finished. moon: ran 2 tasks, now up to date
+Check passed
+Server status: 202 Accepted, detail: Dry run completed successfully. No changes were made. The dry-run was made for package cjyhjy/visionleak version 0.5.0.
+[visionleak] Dry-run succeeded (HTTP 202). Applied compatibility for mooncake 7344121; upstream exit 255, effective exit 0.

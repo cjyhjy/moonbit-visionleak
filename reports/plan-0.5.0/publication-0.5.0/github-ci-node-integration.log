@@ -1,0 +1,290 @@
+
+> visionleak@0.5.0 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: real CLI separates byte equality from decoded pixel equality, preserves input, and binds stable audit IDs
+ok 1 - real CLI separates byte equality from decoded pixel equality, preserves input, and binds stable audit IDs
+  ---
+  duration_ms: 846.796066
+  type: 'test'
+  ...
+# Subtest: decode plus real core follows EXIF orientation and canonical white alpha semantics
+ok 2 - decode plus real core follows EXIF orientation and canonical white alpha semantics
+  ---
+  duration_ms: 33.156095
+  type: 'test'
+  ...
+# Subtest: a bad image and a symlink leave reviewable partial evidence and explicit errors
+ok 3 - a bad image and a symlink leave reviewable partial evidence and explicit errors
+  ---
+  duration_ms: 284.012484
+  type: 'test'
+  ...
+# Subtest: image, pixel, file, total-pixel, comparison, and output budgets are observable
+ok 4 - image, pixel, file, total-pixel, comparison, and output budgets are observable
+  ---
+  duration_ms: 1376.699928
+  type: 'test'
+  ...
+# Subtest: fatal arguments and empty roots return structured errors without creating a report
+ok 5 - fatal arguments and empty roots return structured errors without creating a report
+  ---
+  duration_ms: 1019.00728
+  type: 'test'
+  ...
+# Subtest: overwrite is explicit and refuses unrelated files even with --force
+ok 6 - overwrite is explicit and refuses unrelated files even with --force
+  ---
+  duration_ms: 895.329351
+  type: 'test'
+  ...
+# Subtest: exported API merges partial options, validates them, and audit identity includes scan scope and errors
+ok 7 - exported API merges partial options, validates them, and audit identity includes scan scope and errors
+  ---
+  duration_ms: 166.053098
+  type: 'test'
+  ...
+# Subtest: loopback server serves only fixed assets and one report, and denies traversal, symlinks, writes, and foreign hosts
+ok 8 - loopback server serves only fixed assets and one report, and denies traversal, symlinks, writes, and foreign hosts
+  ---
+  duration_ms: 334.853379
+  type: 'test'
+  ...
+# Subtest: symlinked output ancestry is rejected before creating directories in the dataset
+ok 9 - symlinked output ancestry is rejected before creating directories in the dataset
+  ---
+  duration_ms: 15.899392
+  type: 'test'
+  ...
+# Subtest: server rejects altered stable report fields even when the old auditId is retained
+ok 10 - server rejects altered stable report fields even when the old auditId is retained
+  ---
+  duration_ms: 44.617648
+  type: 'test'
+  ...
+# Subtest: opt-in mirror CLI emits review candidates from actual reflected files and binds mode to identity
+ok 11 - opt-in mirror CLI emits review candidates from actual reflected files and binds mode to identity
+  ---
+  duration_ms: 290.534769
+  type: 'test'
+  ...
+# Subtest: opt-in rotations audit physical rotated and rotated-reflected files without making exact groups
+ok 12 - opt-in rotations audit physical rotated and rotated-reflected files without making exact groups
+  ---
+  duration_ms: 356.734447
+  type: 'test'
+  ...
+# Subtest: compiled JSON and bytes exports preserve the host protocol
+ok 13 - compiled JSON and bytes exports preserve the host protocol
+  ---
+  duration_ms: 11.269216
+  type: 'test'
+  ...
+# Subtest: incremental SHA-256 opaque JS state accepts Buffer chunks and matches Node crypto
+ok 14 - incremental SHA-256 opaque JS state accepts Buffer chunks and matches Node crypto
+  ---
+  duration_ms: 18.513934
+  type: 'test'
+  ...
+# Subtest: 20 local integral-image fingerprints match independent direct pixel box sums
+ok 15 - 20 local integral-image fingerprints match independent direct pixel box sums
+  ---
+  duration_ms: 89.431304
+  type: 'test'
+  ...
+# Subtest: actual CLI offset/aspect crops remain candidates, enter gate, validate and never form exact groups
+ok 16 - actual CLI offset/aspect crops remain candidates, enter gate, validate and never form exact groups
+  ---
+  duration_ms: 738.524618
+  type: 'test'
+  ...
+# Subtest: local-only evidence is skipped by deterministic verify and cannot trigger the pixel gate
+ok 17 - local-only evidence is skipped by deterministic verify and cannot trigger the pixel gate
+  ---
+  duration_ms: 12.409413
+  type: 'test'
+  ...
+# Subtest: thumbnail sources are local and cannot traverse or execute URLs
+ok 18 - thumbnail sources are local and cannot traverse or execute URLs
+  ---
+  duration_ms: 1.735106
+  type: 'test'
+  ...
+# Subtest: validation is atomic and review export roundtrips without modifying machine evidence
+ok 19 - validation is atomic and review export roundtrips without modifying machine evidence
+  ---
+  duration_ms: 24.67111
+  type: 'test'
+  ...
+# Subtest: filters compose evidence, human decision, path, split, and maximum distance
+ok 20 - filters compose evidence, human decision, path, split, and maximum distance
+  ---
+  duration_ms: 10.764304
+  type: 'test'
+  ...
+# Subtest: an imported report cannot reuse another audit server thumbnails
+ok 21 - an imported report cannot reuse another audit server thumbnails
+  ---
+  duration_ms: 0.666883
+  type: 'test'
+  ...
+# Subtest: progress distinguishes unreviewed and unsure pairs inside the current scope
+ok 22 - progress distinguishes unreviewed and unsure pairs inside the current scope
+  ---
+  duration_ms: 3.798493
+  type: 'test'
+  ...
+# Subtest: next pending navigation wraps inside the filtered queue and skips reviewed/current pairs
+ok 23 - next pending navigation wraps inside the filtered queue and skips reviewed/current pairs
+  ---
+  duration_ms: 2.606992
+  type: 'test'
+  ...
+# Subtest: marking a filtered pair continues after its old position instead of returning to the beginning
+ok 24 - marking a filtered pair continues after its old position instead of returning to the beginning
+  ---
+  duration_ms: 2.100196
+  type: 'test'
+  ...
+# Subtest: one-step undo removes a new mark and restores an earlier decision including its note
+ok 25 - one-step undo removes a new mark and restores an earlier decision including its note
+  ---
+  duration_ms: 1.937994
+  type: 'test'
+  ...
+# Subtest: undo cannot erase later notes, imported changes, another audit, or unrelated pair reviews
+ok 26 - undo cannot erase later notes, imported changes, another audit, or unrelated pair reviews
+  ---
+  duration_ms: 1.774139
+  type: 'test'
+  ...
+# Subtest: 12MP JPEG byte copy and lossless reencoding keep full-resolution pixel identity
+ok 27 - 12MP JPEG byte copy and lossless reencoding keep full-resolution pixel identity
+  ---
+  duration_ms: 8030.694619
+  type: 'test'
+  ...
+# Subtest: sampling budget changes perception size while source decode and total budgets remain hard bounds
+ok 28 - sampling budget changes perception size while source decode and total budgets remain hard bounds
+  ---
+  duration_ms: 67.324765
+  type: 'test'
+  ...
+# Subtest: mirror host adapter routes to the compiled optional export
+ok 29 - mirror host adapter routes to the compiled optional export
+  ---
+  duration_ms: 14.802817
+  type: 'test'
+  ...
+# Subtest: orientation host adapter routes booleans and bytes to the optional core export
+ok 30 - orientation host adapter routes booleans and bytes to the optional core export
+  ---
+  duration_ms: 18.242621
+  type: 'test'
+  ...
+# Subtest: legacy mirror mode preserves complete 0.3.0 evidence and work counts on the real development photos
+ok 31 - legacy mirror mode preserves complete 0.3.0 evidence and work counts on the real development photos
+  ---
+  duration_ms: 57.239599
+  type: 'test'
+  ...
+# Subtest: fail-on implements fatal > hit > incomplete > complete and preserves default behavior
+ok 32 - fail-on implements fatal > hit > incomplete > complete and preserves default behavior
+  ---
+  duration_ms: 2114.126842
+  type: 'test'
+  ...
+# Subtest: fail-on exact ignores pixel-only pairs and pixel ignores candidate-only pairs
+ok 33 - fail-on exact ignores pixel-only pairs and pixel ignores candidate-only pairs
+  ---
+  duration_ms: 706.539156
+  type: 'test'
+  ...
+# Subtest: verify detects changed and missing evidence and refuses a tampered report before dataset access
+ok 34 - verify detects changed and missing evidence and refuses a tampered report before dataset access
+  ---
+  duration_ms: 950.150359
+  type: 'test'
+  ...
+# Subtest: verify never follows a report traversal or a symlink to a file outside the dataset
+ok 35 - verify never follows a report traversal or a symlink to a file outside the dataset
+  ---
+  duration_ms: 550.729496
+  type: 'test'
+  ...
+# Subtest: coverage binds canonical splits, rejected codes, ignored files, and budget exhaustion
+ok 36 - coverage binds canonical splits, rejected codes, ignored files, and budget exhaustion
+  ---
+  duration_ms: 128.696647
+  type: 'test'
+  ...
+# Subtest: CSV matches the manually enumerated exact-group keep/remove plan
+ok 37 - CSV matches the manually enumerated exact-group keep/remove plan
+  ---
+  duration_ms: 430.763972
+  type: 'test'
+  ...
+# Subtest: candidate suggestions require a validated confirmed review and HTML safely includes current review
+ok 38 - candidate suggestions require a validated confirmed review and HTML safely includes current review
+  ---
+  duration_ms: 817.172344
+  type: 'test'
+  ...
+# Subtest: the committed GitHub Action leak fixture fails the actual local audit command
+ok 39 - the committed GitHub Action leak fixture fails the actual local audit command
+  ---
+  duration_ms: 165.138581
+  type: 'test'
+  ...
+# Subtest: content identity accepts v0.1.0 reports and reviewed exports without rebinding evidence
+ok 40 - content identity accepts v0.1.0 reports and reviewed exports without rebinding evidence
+  ---
+  duration_ms: 23.209324
+  type: 'test'
+  ...
+# Subtest: v2 canonical identity survives object-key reorder but binds array order and unknown fields
+ok 41 - v2 canonical identity survives object-key reorder but binds array order and unknown fields
+  ---
+  duration_ms: 8.534424
+  type: 'test'
+  ...
+# Subtest: MoonBit identity matches an independent ECMAScript canonicalization oracle for extension fields
+ok 42 - MoonBit identity matches an independent ECMAScript canonicalization oracle for extension fields
+  ---
+  duration_ms: 71.227283
+  type: 'test'
+  ...
+# Subtest: public JS pixel adapter rejects inputs that the compiled ABI could coerce
+ok 43 - public JS pixel adapter rejects inputs that the compiled ABI could coerce
+  ---
+  duration_ms: 2.103533
+  type: 'test'
+  ...
+# Subtest: public JS pixel adapter accepts Uint8Array and the Buffer decoder output
+ok 44 - public JS pixel adapter accepts Uint8Array and the Buffer decoder output
+  ---
+  duration_ms: 19.069102
+  type: 'test'
+  ...
+# Subtest: all split alias combinations normalize splits while preserving actual paths and directory scope
+ok 45 - all split alias combinations normalize splits while preserving actual paths and directory scope
+  ---
+  duration_ms: 577.380018
+  type: 'test'
+  ...
+# Subtest: simultaneous aliases are fatal before output creation instead of merging dataset splits
+ok 46 - simultaneous aliases are fatal before output creation instead of merging dataset splits
+  ---
+  duration_ms: 28.335045
+  type: 'test'
+  ...
+1..46
+# tests 46
+# suites 0
+# pass 46
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 8631.214974

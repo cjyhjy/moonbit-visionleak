@@ -1,0 +1,282 @@
+audit	Set up job	﻿2026-10-26T06:48:51.3668873Z Current runner version: '2.338.0'
+audit	Set up job	2026-10-26T06:48:51.3707091Z ##[group]Runner Image Provisioner
+audit	Set up job	2026-10-26T06:48:51.3708450Z Hosted Compute Agent
+audit	Set up job	2026-10-26T06:48:51.3709603Z Version: 20261021.618
+audit	Set up job	2026-10-26T06:48:51.3710676Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+audit	Set up job	2026-10-26T06:48:51.3712000Z Build Date: 2026-10-21T00:45:21Z
+audit	Set up job	2026-10-26T06:48:51.3713208Z Worker ID: {20e18aa3-d921-4e3d-813b-a6058b23af4a}
+audit	Set up job	2026-10-26T06:48:51.3714370Z Region: eastus2
+audit	Set up job	2026-10-26T06:48:51.3715364Z Cloud: Azure
+audit	Set up job	2026-10-26T06:48:51.3716274Z ##[endgroup]
+audit	Set up job	2026-10-26T06:48:51.3718985Z ##[group]Operating System
+audit	Set up job	2026-10-26T06:48:51.3720081Z Ubuntu
+audit	Set up job	2026-10-26T06:48:51.3720937Z 24.04.5
+audit	Set up job	2026-10-26T06:48:51.3721860Z LTS
+audit	Set up job	2026-10-26T06:48:51.3722790Z ##[endgroup]
+audit	Set up job	2026-10-26T06:48:51.3723760Z ##[group]Runner Image
+audit	Set up job	2026-10-26T06:48:51.3724726Z Image: ubuntu-24.04
+audit	Set up job	2026-10-26T06:48:51.3725666Z Version: 20261012.334.1
+audit	Set up job	2026-10-26T06:48:51.3727900Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+audit	Set up job	2026-10-26T06:48:51.3731491Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+audit	Set up job	2026-10-26T06:48:51.3733199Z ##[endgroup]
+audit	Set up job	2026-10-26T06:48:51.3735089Z ##[group]GITHUB_TOKEN Permissions
+audit	Set up job	2026-10-26T06:48:51.3738390Z Contents: read
+audit	Set up job	2026-10-26T06:48:51.3739526Z Metadata: read
+audit	Set up job	2026-10-26T06:48:51.3740473Z ##[endgroup]
+audit	Set up job	2026-10-26T06:48:51.3743572Z Secret source: Actions
+audit	Set up job	2026-10-26T06:48:51.3745168Z Cache mode: write
+audit	Set up job	2026-10-26T06:48:51.3746893Z Prepare workflow directory
+audit	Set up job	2026-10-26T06:48:51.4226977Z Prepare all required actions
+audit	Set up job	2026-10-26T06:48:51.4299078Z Getting action download info
+audit	Set up job	2026-10-26T06:48:51.6521349Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+audit	Set up job	2026-10-26T06:48:51.7457174Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+audit	Set up job	2026-10-26T06:48:51.8330740Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+audit	Set up job	2026-10-26T06:48:51.9131652Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+audit	Set up job	2026-10-26T06:48:52.1441709Z Complete job name: audit
+audit	Run actions/checkout@v4	﻿2026-10-26T06:48:52.2402131Z ##[group]Run actions/checkout@v4
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.2403188Z with:
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.2403708Z   repository: cjyhjy/moonbit-visionleak
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.2408488Z   token: ***
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.2409010Z   ssh-strict: true
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.2409477Z   ssh-user: git
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.2409965Z   persist-credentials: true
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.2410475Z   clean: true
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.2410949Z   sparse-checkout-cone-mode: true
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.2411504Z   fetch-depth: 1
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.2411969Z   fetch-tags: false
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.2412445Z   show-progress: true
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.2412930Z   lfs: false
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.2413369Z   submodules: false
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.2413873Z   set-safe-directory: true
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.2414425Z   allow-unsafe-pr-checkout: false
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.2415677Z ##[endgroup]
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3486071Z Syncing repository: cjyhjy/moonbit-visionleak
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3489665Z ##[group]Getting Git version info
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3491581Z Working directory is '/home/runner/work/moonbit-visionleak/moonbit-visionleak'
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3494348Z [command]/usr/bin/git version
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3615046Z git version 2.55.0
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3632369Z ##[endgroup]
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3648059Z Temporarily overriding HOME='/home/runner/work/_temp/71593a91-f0f3-46f6-9b46-b27a07a65289' before making global git config changes
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3651430Z Adding repository directory to the temporary git global config as a safe directory
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3656983Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/moonbit-visionleak/moonbit-visionleak
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3733469Z Deleting the contents of '/home/runner/work/moonbit-visionleak/moonbit-visionleak'
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3740029Z ##[group]Initializing the repository
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3745639Z [command]/usr/bin/git init /home/runner/work/moonbit-visionleak/moonbit-visionleak
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3890427Z hint: Using 'master' as the name for the initial branch. This default branch name
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3893234Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3895349Z hint: to use in all of your new repositories, which will suppress this warning,
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3897520Z hint: call:
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3899504Z hint:
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3901208Z hint: 	git config --global init.defaultBranch <name>
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3902656Z hint:
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3903946Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3905847Z hint: 'development'. The just-created branch can be renamed via this command:
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3907824Z hint:
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3908801Z hint: 	git branch -m <name>
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3909967Z hint:
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3911355Z hint: Disable this message with "git config set advice.defaultBranchName false"
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3931768Z Initialized empty Git repository in /home/runner/work/moonbit-visionleak/moonbit-visionleak/.git/
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.3946701Z [command]/usr/bin/git remote add origin https://github.com/cjyhjy/moonbit-visionleak
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.4024166Z ##[endgroup]
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.4058649Z ##[group]Disabling automatic garbage collection
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.4060969Z [command]/usr/bin/git config --local gc.auto 0
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.4111318Z ##[endgroup]
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.4113173Z ##[group]Setting up auth
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.4115529Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.4165373Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.4658989Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.4699546Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.4938162Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.4984559Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.5222976Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.5304822Z ##[endgroup]
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.5306928Z ##[group]Fetching the repository
+audit	Run actions/checkout@v4	2026-10-26T06:48:52.5317092Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +43a50389600e75f799c1f671fac4b0716b6afd1f:refs/remotes/origin/codex/verify-0.5.0-action-example
+audit	Run actions/checkout@v4	2026-10-26T06:48:53.4113429Z From https://github.com/cjyhjy/moonbit-visionleak
+audit	Run actions/checkout@v4	2026-10-26T06:48:53.4117203Z  * [new ref]         43a50389600e75f799c1f671fac4b0716b6afd1f -> origin/codex/verify-0.5.0-action-example
+audit	Run actions/checkout@v4	2026-10-26T06:48:53.4133993Z ##[endgroup]
+audit	Run actions/checkout@v4	2026-10-26T06:48:53.4136012Z ##[group]Determining the checkout info
+audit	Run actions/checkout@v4	2026-10-26T06:48:53.4138535Z ##[endgroup]
+audit	Run actions/checkout@v4	2026-10-26T06:48:53.4140359Z [command]/usr/bin/git sparse-checkout disable
+audit	Run actions/checkout@v4	2026-10-26T06:48:53.4286354Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+audit	Run actions/checkout@v4	2026-10-26T06:48:53.4327058Z ##[group]Checking out the ref
+audit	Run actions/checkout@v4	2026-10-26T06:48:53.4334278Z [command]/usr/bin/git checkout --progress --force -B codex/verify-0.5.0-action-example refs/remotes/origin/codex/verify-0.5.0-action-example
+audit	Run actions/checkout@v4	2026-10-26T06:48:53.7108278Z Switched to a new branch 'codex/verify-0.5.0-action-example'
+audit	Run actions/checkout@v4	2026-10-26T06:48:53.7114355Z branch 'codex/verify-0.5.0-action-example' set up to track 'origin/codex/verify-0.5.0-action-example'.
+audit	Run actions/checkout@v4	2026-10-26T06:48:53.7127998Z ##[endgroup]
+audit	Run actions/checkout@v4	2026-10-26T06:48:53.7173574Z [command]/usr/bin/git log -1 --format=%H
+audit	Run actions/checkout@v4	2026-10-26T06:48:53.7200390Z 43a50389600e75f799c1f671fac4b0716b6afd1f
+audit	Run actions/setup-node@v4	﻿2026-10-26T06:48:53.7605453Z ##[group]Run actions/setup-node@v4
+audit	Run actions/setup-node@v4	2026-10-26T06:48:53.7606736Z with:
+audit	Run actions/setup-node@v4	2026-10-26T06:48:53.7607579Z   node-version-file: .node-version
+audit	Run actions/setup-node@v4	2026-10-26T06:48:53.7608471Z   cache: npm
+audit	Run actions/setup-node@v4	2026-10-26T06:48:53.7609247Z   always-auth: false
+audit	Run actions/setup-node@v4	2026-10-26T06:48:53.7610075Z   check-latest: false
+audit	Run actions/setup-node@v4	2026-10-26T06:48:53.7613613Z   token: ***
+audit	Run actions/setup-node@v4	2026-10-26T06:48:53.7614401Z ##[endgroup]
+audit	Run actions/setup-node@v4	2026-10-26T06:48:53.8989859Z Node version file is not JSON file
+audit	Run actions/setup-node@v4	2026-10-26T06:48:53.8991323Z Resolved .node-version as 22.22.0
+audit	Run actions/setup-node@v4	2026-10-26T06:48:53.9012047Z Attempting to download 22.22.0...
+audit	Run actions/setup-node@v4	2026-10-26T06:48:53.9118302Z (node:2282) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+audit	Run actions/setup-node@v4	2026-10-26T06:48:53.9120927Z (Use `node --trace-deprecation ...` to show where the warning was created)
+audit	Run actions/setup-node@v4	2026-10-26T06:48:54.4638423Z Acquiring 22.22.0 - x64 from https://github.com/actions/node-versions/releases/download/22.22.0-20981702931/node-22.22.0-linux-x64.tar.gz
+audit	Run actions/setup-node@v4	2026-10-26T06:48:54.9487272Z Extracting ...
+audit	Run actions/setup-node@v4	2026-10-26T06:48:54.9598979Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/1653f5af-270c-44e2-af4b-a9bfdc9f07a9 -f /home/runner/work/_temp/c1dd523e-fe97-4811-b7d5-35f139f13ee3
+audit	Run actions/setup-node@v4	2026-10-26T06:48:56.1874059Z Adding to the cache ...
+audit	Run actions/setup-node@v4	2026-10-26T06:48:58.2864484Z ##[group]Environment details
+audit	Run actions/setup-node@v4	2026-10-26T06:48:58.5142265Z node: v22.22.0
+audit	Run actions/setup-node@v4	2026-10-26T06:48:58.5142858Z npm: 10.9.4
+audit	Run actions/setup-node@v4	2026-10-26T06:48:58.5143197Z yarn: 1.22.22
+audit	Run actions/setup-node@v4	2026-10-26T06:48:58.5143954Z ##[endgroup]
+audit	Run actions/setup-node@v4	2026-10-26T06:48:58.5162223Z [command]/opt/hostedtoolcache/node/22.22.0/x64/bin/npm config get cache
+audit	Run actions/setup-node@v4	2026-10-26T06:48:58.6077415Z /home/runner/.npm
+audit	Run actions/setup-node@v4	2026-10-26T06:48:58.6858702Z npm cache is not found
+audit	Run actions/setup-python@v5	﻿2026-10-26T06:48:58.7059018Z ##[group]Run actions/setup-python@v5
+audit	Run actions/setup-python@v5	2026-10-26T06:48:58.7059343Z with:
+audit	Run actions/setup-python@v5	2026-10-26T06:48:58.7059561Z   python-version-file: .python-version
+audit	Run actions/setup-python@v5	2026-10-26T06:48:58.7059853Z   check-latest: false
+audit	Run actions/setup-python@v5	2026-10-26T06:48:58.7062347Z   token: ***
+audit	Run actions/setup-python@v5	2026-10-26T06:48:58.7062553Z   update-environment: true
+audit	Run actions/setup-python@v5	2026-10-26T06:48:58.7062791Z   allow-prereleases: false
+audit	Run actions/setup-python@v5	2026-10-26T06:48:58.7063015Z   freethreaded: false
+audit	Run actions/setup-python@v5	2026-10-26T06:48:58.7063238Z ##[endgroup]
+audit	Run actions/setup-python@v5	2026-10-26T06:48:58.8375882Z Resolved .python-version as 3.13.7
+audit	Run actions/setup-python@v5	2026-10-26T06:48:58.8377460Z ##[group]Installed versions
+audit	Run actions/setup-python@v5	2026-10-26T06:48:58.8392026Z Version 3.13.7 was not found in the local cache
+audit	Run actions/setup-python@v5	2026-10-26T06:48:58.8499287Z (node:2330) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+audit	Run actions/setup-python@v5	2026-10-26T06:48:58.8500273Z (Use `node --trace-deprecation ...` to show where the warning was created)
+audit	Run actions/setup-python@v5	2026-10-26T06:48:59.4077846Z Version 3.13.7 is available for downloading
+audit	Run actions/setup-python@v5	2026-10-26T06:48:59.4079400Z Download from "https://github.com/actions/python-versions/releases/download/3.13.7-16980743123/python-3.13.7-linux-24.04-x64.tar.gz"
+audit	Run actions/setup-python@v5	2026-10-26T06:49:00.0595763Z Extract downloaded archive
+audit	Run actions/setup-python@v5	2026-10-26T06:49:00.0739944Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/625394a6-f806-4a9b-87f4-555f832c9e0a -f /home/runner/work/_temp/9174db56-0551-44d6-ab05-3bff18d407c3
+audit	Run actions/setup-python@v5	2026-10-26T06:49:02.2599942Z Execute installation script
+audit	Run actions/setup-python@v5	2026-10-26T06:49:02.2701995Z Check if Python hostedtoolcache folder exist...
+audit	Run actions/setup-python@v5	2026-10-26T06:49:02.2702786Z Create Python 3.13.7 folder
+audit	Run actions/setup-python@v5	2026-10-26T06:49:02.2718265Z Copy Python binaries to hostedtoolcache folder
+audit	Run actions/setup-python@v5	2026-10-26T06:49:02.7584456Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+audit	Run actions/setup-python@v5	2026-10-26T06:49:02.7627303Z Upgrading pip...
+audit	Run actions/setup-python@v5	2026-10-26T06:49:04.8892999Z Looking in links: /tmp/tmpso7zlm7s
+audit	Run actions/setup-python@v5	2026-10-26T06:49:04.8897441Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.13.7/x64/lib/python3.13/site-packages (25.2)
+audit	Run actions/setup-python@v5	2026-10-26T06:49:05.9531644Z Collecting pip
+audit	Run actions/setup-python@v5	2026-10-26T06:49:05.9945796Z Downloading pip-26.2.2-py3-none-any.whl.metadata (4.6 kB)
+audit	Run actions/setup-python@v5	2026-10-26T06:49:06.0061670Z Downloading pip-26.2.2-py3-none-any.whl (1.8 MB)
+audit	Run actions/setup-python@v5	2026-10-26T06:49:06.0766221Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 31.9 MB/s  0:00:00
+audit	Run actions/setup-python@v5	2026-10-26T06:49:06.0767064Z 
+audit	Run actions/setup-python@v5	2026-10-26T06:49:06.0935526Z Installing collected packages: pip
+audit	Run actions/setup-python@v5	2026-10-26T06:49:06.0937240Z Attempting uninstall: pip
+audit	Run actions/setup-python@v5	2026-10-26T06:49:06.0966680Z Found existing installation: pip 25.2
+audit	Run actions/setup-python@v5	2026-10-26T06:49:06.1321213Z Uninstalling pip-25.2:
+audit	Run actions/setup-python@v5	2026-10-26T06:49:06.1384309Z Successfully uninstalled pip-25.2
+audit	Run actions/setup-python@v5	2026-10-26T06:49:07.0905461Z Successfully installed pip-26.2.2
+audit	Run actions/setup-python@v5	2026-10-26T06:49:07.1446131Z Create complete file
+audit	Run actions/setup-python@v5	2026-10-26T06:49:07.1489297Z Successfully set up CPython (3.13.7)
+audit	Run actions/setup-python@v5	2026-10-26T06:49:07.1490212Z ##[endgroup]
+audit	Run python3 tools/bootstrap.py	﻿2026-10-26T06:49:07.1676330Z ##[group]Run python3 tools/bootstrap.py
+audit	Run python3 tools/bootstrap.py	2026-10-26T06:49:07.1677067Z ^[[36;1mpython3 tools/bootstrap.py^[[0m
+audit	Run python3 tools/bootstrap.py	2026-10-26T06:49:07.1955145Z shell: /usr/bin/bash -e {0}
+audit	Run python3 tools/bootstrap.py	2026-10-26T06:49:07.1955464Z env:
+audit	Run python3 tools/bootstrap.py	2026-10-26T06:49:07.1955784Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.7/x64
+audit	Run python3 tools/bootstrap.py	2026-10-26T06:49:07.1956337Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.7/x64/lib/pkgconfig
+audit	Run python3 tools/bootstrap.py	2026-10-26T06:49:07.1957032Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.7/x64
+audit	Run python3 tools/bootstrap.py	2026-10-26T06:49:07.1957488Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.7/x64
+audit	Run python3 tools/bootstrap.py	2026-10-26T06:49:07.1957952Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.7/x64
+audit	Run python3 tools/bootstrap.py	2026-10-26T06:49:07.1958411Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.7/x64/lib
+audit	Run python3 tools/bootstrap.py	2026-10-26T06:49:07.1958800Z ##[endgroup]
+audit	Run python3 tools/bootstrap.py	2026-10-26T06:49:07.2625260Z Downloading https://cli.moonbitlang.com/binaries/0.10.15%2B943464bfa/moonbit-linux-x86_64.tar.gz
+audit	Run python3 tools/bootstrap.py	2026-10-26T06:49:07.8867688Z Downloading https://cli.moonbitlang.com/cores/core-0.10.15%2B943464bfa.tar.gz
+audit	Run python3 tools/bootstrap.py	2026-10-26T06:49:13.2040422Z Finished. moon: ran 328 tasks, now up to date
+audit	Run python3 tools/bootstrap.py	2026-10-26T06:49:13.2119000Z Installed v0.10.15+943464bfa (2026-10-12)
+audit	Run npm ci	﻿2026-10-26T06:49:13.2265705Z ##[group]Run npm ci
+audit	Run npm ci	2026-10-26T06:49:13.2265994Z ^[[36;1mnpm ci^[[0m
+audit	Run npm ci	2026-10-26T06:49:13.2328694Z shell: /usr/bin/bash -e {0}
+audit	Run npm ci	2026-10-26T06:49:13.2328959Z env:
+audit	Run npm ci	2026-10-26T06:49:13.2329222Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.7/x64
+audit	Run npm ci	2026-10-26T06:49:13.2329652Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.7/x64/lib/pkgconfig
+audit	Run npm ci	2026-10-26T06:49:13.2330077Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.7/x64
+audit	Run npm ci	2026-10-26T06:49:13.2330449Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.7/x64
+audit	Run npm ci	2026-10-26T06:49:13.2330826Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.7/x64
+audit	Run npm ci	2026-10-26T06:49:13.2331200Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.7/x64/lib
+audit	Run npm ci	2026-10-26T06:49:13.2331517Z ##[endgroup]
+audit	Run npm ci	2026-10-26T06:49:14.1413063Z 
+audit	Run npm ci	2026-10-26T06:49:14.1413893Z added 9 packages, and audited 10 packages in 854ms
+audit	Run npm ci	2026-10-26T06:49:14.1414389Z 
+audit	Run npm ci	2026-10-26T06:49:14.1414799Z 3 packages are looking for funding
+audit	Run npm ci	2026-10-26T06:49:14.1415337Z   run `npm fund` for details
+audit	Run npm ci	2026-10-26T06:49:14.1422493Z 
+audit	Run npm ci	2026-10-26T06:49:14.1423121Z found 0 vulnerabilities
+audit	Run npm run build	﻿2026-10-26T06:49:14.1911484Z ##[group]Run npm run build
+audit	Run npm run build	2026-10-26T06:49:14.1911794Z ^[[36;1mnpm run build^[[0m
+audit	Run npm run build	2026-10-26T06:49:14.1975035Z shell: /usr/bin/bash -e {0}
+audit	Run npm run build	2026-10-26T06:49:14.1975289Z env:
+audit	Run npm run build	2026-10-26T06:49:14.1975553Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.7/x64
+audit	Run npm run build	2026-10-26T06:49:14.1976000Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.7/x64/lib/pkgconfig
+audit	Run npm run build	2026-10-26T06:49:14.1976727Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.7/x64
+audit	Run npm run build	2026-10-26T06:49:14.1977121Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.7/x64
+audit	Run npm run build	2026-10-26T06:49:14.1977492Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.7/x64
+audit	Run npm run build	2026-10-26T06:49:14.1977892Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.7/x64/lib
+audit	Run npm run build	2026-10-26T06:49:14.1978213Z ##[endgroup]
+audit	Run npm run build	2026-10-26T06:49:14.2984160Z 
+audit	Run npm run build	2026-10-26T06:49:14.2984838Z > visionleak@0.5.0 build
+audit	Run npm run build	2026-10-26T06:49:14.2985361Z > node tools/build.mjs
+audit	Run npm run build	2026-10-26T06:49:14.2985546Z 
+audit	Run npm run build	2026-10-26T06:49:14.5482520Z Finished. moon: ran 2 tasks, now up to date
+audit	Run npm run build	2026-10-26T06:49:14.5516186Z Built dist/visionleak.js from MoonBit.
+audit	Run node tools/cli.mjs audit --root examples/github-action/dataset --out .ci-artifacts/image-audit --fail-on pixel	﻿2026-10-26T06:49:14.5649872Z ##[group]Run node tools/cli.mjs audit --root examples/github-action/dataset --out .ci-artifacts/image-audit --fail-on pixel
+audit	Run node tools/cli.mjs audit --root examples/github-action/dataset --out .ci-artifacts/image-audit --fail-on pixel	2026-10-26T06:49:14.5650808Z ^[[36;1mnode tools/cli.mjs audit --root examples/github-action/dataset --out .ci-artifacts/image-audit --fail-on pixel^[[0m
+audit	Run node tools/cli.mjs audit --root examples/github-action/dataset --out .ci-artifacts/image-audit --fail-on pixel	2026-10-26T06:49:14.5716059Z shell: /usr/bin/bash -e {0}
+audit	Run node tools/cli.mjs audit --root examples/github-action/dataset --out .ci-artifacts/image-audit --fail-on pixel	2026-10-26T06:49:14.5716329Z env:
+audit	Run node tools/cli.mjs audit --root examples/github-action/dataset --out .ci-artifacts/image-audit --fail-on pixel	2026-10-26T06:49:14.5716872Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.7/x64
+audit	Run node tools/cli.mjs audit --root examples/github-action/dataset --out .ci-artifacts/image-audit --fail-on pixel	2026-10-26T06:49:14.5717334Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.7/x64/lib/pkgconfig
+audit	Run node tools/cli.mjs audit --root examples/github-action/dataset --out .ci-artifacts/image-audit --fail-on pixel	2026-10-26T06:49:14.5717768Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.7/x64
+audit	Run node tools/cli.mjs audit --root examples/github-action/dataset --out .ci-artifacts/image-audit --fail-on pixel	2026-10-26T06:49:14.5718150Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.7/x64
+audit	Run node tools/cli.mjs audit --root examples/github-action/dataset --out .ci-artifacts/image-audit --fail-on pixel	2026-10-26T06:49:14.5718528Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.7/x64
+audit	Run node tools/cli.mjs audit --root examples/github-action/dataset --out .ci-artifacts/image-audit --fail-on pixel	2026-10-26T06:49:14.5718908Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.7/x64/lib
+audit	Run node tools/cli.mjs audit --root examples/github-action/dataset --out .ci-artifacts/image-audit --fail-on pixel	2026-10-26T06:49:14.5719241Z ##[endgroup]
+audit	Run node tools/cli.mjs audit --root examples/github-action/dataset --out .ci-artifacts/image-audit --fail-on pixel	2026-10-26T06:49:14.7165990Z {"ok":true,"complete":true,"status":"complete","auditId":"d863310fcb1b9768476af09b210902c0d18b394e332db46e980d7abc8c88a43b","report":"/home/runner/work/moonbit-visionleak/moonbit-visionleak/.ci-artifacts/image-audit/report.json","images":2,"pairs":1,"errors":0,"coverage":{"splits":{"train":{"audited":1,"fingerprinted":1,"rejectedByCode":{},"ignored":0,"unprocessed":0},"validation":{"audited":0,"fingerprinted":0,"rejectedByCode":{},"ignored":0,"unprocessed":0},"test":{"audited":1,"fingerprinted":1,"rejectedByCode":{},"ignored":0,"unprocessed":0},"unknown":{"audited":0,"fingerprinted":0,"rejectedByCode":{},"ignored":0,"unprocessed":0}},"budgetExhaustion":[],"enumerationComplete":true,"rejectedOrErrorCount":0,"ignoredFiles":0,"unprocessedKnownFiles":0,"summary":"已审计 train 1 / validation 0 / test 1；拒收/错误 0；忽略 0；已发现但未审计 0；结论只覆盖已审计输入与已完成比较。"},"failOn":"pixel","matched":1,"evidenceCounts":{"exact":1,"pixel":0,"candidate":0}}
+audit	Run node tools/cli.mjs audit --root examples/github-action/dataset --out .ci-artifacts/image-audit --fail-on pixel	2026-10-26T06:49:14.7219880Z ##[error]Process completed with exit code 3.
+audit	Run actions/upload-artifact@v4	﻿2026-10-26T06:49:14.7287831Z ##[group]Run actions/upload-artifact@v4
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:14.7288143Z with:
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:14.7288337Z   name: image-audit
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:14.7288571Z   path: .ci-artifacts/image-audit
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:14.7288840Z   if-no-files-found: warn
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:14.7289072Z   compression-level: 6
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:14.7289288Z   overwrite: false
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:14.7289499Z   include-hidden-files: false
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:14.7289724Z env:
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:14.7289973Z   pythonLocation: /opt/hostedtoolcache/Python/3.13.7/x64
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:14.7290406Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.13.7/x64/lib/pkgconfig
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:14.7290826Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.7/x64
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:14.7291204Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.7/x64
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:14.7291579Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.13.7/x64
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:14.7291967Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.13.7/x64/lib
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:14.7292301Z ##[endgroup]
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:14.8900717Z (node:3133) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:14.8901591Z (Use `node --trace-deprecation ...` to show where the warning was created)
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:14.8999198Z With the provided path, there will be 3 files uploaded
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:14.9000227Z Artifact name is valid!
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:14.9000751Z Root directory input is valid!
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:15.1018720Z Beginning upload of artifact content to blob storage
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:15.1244453Z (node:3133) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:15.1715882Z Uploaded bytes 2543
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:15.1997444Z Finished uploading artifact content to blob storage!
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:15.1998806Z SHA256 digest of uploaded artifact zip is d284afc399e27ac4115a0eab984a55d52caca5cf111bdd33b3fa4f35cf594898
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:15.2001152Z Finalizing artifact upload
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:15.6014356Z Artifact image-audit.zip successfully finalized. Artifact ID 12632790968
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:15.6016104Z Artifact image-audit has been successfully uploaded! Final size is 2543 bytes. Artifact ID is 12632790968
+audit	Run actions/upload-artifact@v4	2026-10-26T06:49:15.6023214Z Artifact download URL: https://github.com/cjyhjy/moonbit-visionleak/actions/runs/40282015953/artifacts/12632790968
+audit	Post Run actions/checkout@v4	﻿2026-10-26T06:49:15.6224942Z Post job cleanup.
+audit	Post Run actions/checkout@v4	2026-10-26T06:49:15.7060279Z [command]/usr/bin/git version
+audit	Post Run actions/checkout@v4	2026-10-26T06:49:15.7105690Z git version 2.55.0
+audit	Post Run actions/checkout@v4	2026-10-26T06:49:15.7146033Z Temporarily overriding HOME='/home/runner/work/_temp/ed586d95-1100-4c1e-a704-a160316b49a0' before making global git config changes
+audit	Post Run actions/checkout@v4	2026-10-26T06:49:15.7148072Z Adding repository directory to the temporary git global config as a safe directory
+audit	Post Run actions/checkout@v4	2026-10-26T06:49:15.7152458Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/moonbit-visionleak/moonbit-visionleak
+audit	Post Run actions/checkout@v4	2026-10-26T06:49:15.7194065Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+audit	Post Run actions/checkout@v4	2026-10-26T06:49:15.7245109Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+audit	Post Run actions/checkout@v4	2026-10-26T06:49:15.7499476Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+audit	Post Run actions/checkout@v4	2026-10-26T06:49:15.7528881Z http.https://github.com/.extraheader
+audit	Post Run actions/checkout@v4	2026-10-26T06:49:15.7541343Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+audit	Post Run actions/checkout@v4	2026-10-26T06:49:15.7581829Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+audit	Post Run actions/checkout@v4	2026-10-26T06:49:15.7890596Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+audit	Post Run actions/checkout@v4	2026-10-26T06:49:15.7933104Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+audit	Complete job	﻿2026-10-26T06:49:15.8316031Z Cleaning up orphan processes
+audit	Complete job	2026-10-26T06:49:15.8777752Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

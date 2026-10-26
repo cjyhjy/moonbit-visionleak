@@ -14,7 +14,7 @@ node tools/server.mjs --report output/example/report.json --port 4173
 
 演示数据含确定性重复，第二行预期退出 **3**；CI 可据此阻止跨集合重复。浏览器打开 http://127.0.0.1:4173 。需要 Node.js 22+，CLI 已附带编译后的 MoonBit 核心。
 
-0.5.0 本地候选的完整变更见 [CHANGELOG](CHANGELOG.md)。公开仓库的已推送范围和 CI 以 [同步记录](reports/plan-0.5.0/git-sync-2026-10-25.json) 为准；Mooncakes 核心包尚未正式发布。
+0.5.0 的完整变更见 [CHANGELOG](CHANGELOG.md)。发布与验收状态以 [发布记录](reports/plan-0.5.0/publication-0.5.0/README.md) 为准；Mooncakes 模块为 `cjyhjy/visionleak`。
 
 ## 证据与可移交输出
 

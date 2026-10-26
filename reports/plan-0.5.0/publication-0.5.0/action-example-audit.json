@@ -1,0 +1,179 @@
+{
+  "schemaVersion": "visionleak-report-v1",
+  "identityVersion": "vl-report-sha256-v2",
+  "normalization": "vl-rgb-v1",
+  "decoder": {
+    "name": "sharp",
+    "version": "0.35.5",
+    "libvips": "8.18.7"
+  },
+  "engine": {
+    "name": "visionleak-moonbit",
+    "artifactDigest": "505893ee6fc69a95446826cefc4c7941ab44098a982d33a979cf245b7b135e73"
+  },
+  "ok": true,
+  "complete": true,
+  "status": "complete",
+  "pairs": [
+    {
+      "left": "test/leaked.png",
+      "right": "train/source.png",
+      "evidence": "byte-identical",
+      "distance": 0,
+      "lowContrast": true,
+      "review": "unreviewed"
+    }
+  ],
+  "groups": [
+    {
+      "members": [
+        "test/leaked.png",
+        "train/source.png"
+      ],
+      "evidence": "exact-component"
+    }
+  ],
+  "options": {
+    "threshold": 6,
+    "maxImages": 1000,
+    "maxDecodePixels": 64000000,
+    "maxPixels": 4194304,
+    "maxTotalPixels": 100000000,
+    "maxFileBytes": 33554432,
+    "maxComparisons": 1000000,
+    "maxPairs": 10000,
+    "includeMirrors": false,
+    "includeRotations": false,
+    "includeCrops": false
+  },
+  "stats": {
+    "inputImages": 2,
+    "processedImages": 2,
+    "comparisons": 3,
+    "distanceEvaluations": 2,
+    "pairChecks": 1,
+    "emittedPairs": 1,
+    "indexNodes": 1,
+    "reason": ""
+  },
+  "images": [
+    {
+      "id": "test/leaked.png",
+      "path": "test/leaked.png",
+      "split": "test",
+      "byteDigest": "3ab2fe11874075fd8029d1a9d606d340f63ddab987be40b120aed721926c35ac",
+      "pixelDigest": "6bf0ef39ef573d262c9beb9ebe3fe2aa0398f211eb1ea187cbbab99b0a229ed6",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 16,
+        "height": 16,
+        "downsampled": false
+      },
+      "dhash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "width": 16,
+      "height": 16,
+      "contrast": 0,
+      "thumbnail": "thumbnails/e6bed96c43502dfff79f2254644db14874b0041f77180fa291f96639296bf20e.jpg",
+      "thumbnailDigest": "8f9ec9782bd364b985d8142e0c98257e0dd0d8141aa712cf6334e70ac091d5da",
+      "format": "png"
+    },
+    {
+      "id": "train/source.png",
+      "path": "train/source.png",
+      "split": "train",
+      "byteDigest": "3ab2fe11874075fd8029d1a9d606d340f63ddab987be40b120aed721926c35ac",
+      "pixelDigest": "6bf0ef39ef573d262c9beb9ebe3fe2aa0398f211eb1ea187cbbab99b0a229ed6",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 16,
+        "height": 16,
+        "downsampled": false
+      },
+      "dhash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "width": 16,
+      "height": 16,
+      "contrast": 0,
+      "thumbnail": "thumbnails/3eaf5266150dbffd5ce568843acbbaf75ca173826351e403de550d6dfd0f676e.jpg",
+      "thumbnailDigest": "8f9ec9782bd364b985d8142e0c98257e0dd0d8141aa712cf6334e70ac091d5da",
+      "format": "png"
+    }
+  ],
+  "errors": [],
+  "scope": {
+    "splits": [
+      "train",
+      "validation",
+      "test"
+    ],
+    "splitDirectories": {
+      "train": "train",
+      "test": "test"
+    },
+    "missingSplits": [
+      "validation"
+    ],
+    "supportedExtensions": [
+      ".png",
+      ".jpg",
+      ".jpeg",
+      ".webp",
+      ".avif",
+      ".tif",
+      ".tiff",
+      ".gif"
+    ],
+    "ignoredFiles": 0,
+    "entriesScanned": 2,
+    "discoveredAtLeast": 2,
+    "acceptedImages": 2,
+    "totalDecodedPixels": 512,
+    "maxDirectoryEntries": 100000,
+    "source": "local-files",
+    "allPairsAreCrossSplit": true,
+    "perceptualMatchesRequireReview": true
+  },
+  "coverage": {
+    "splits": {
+      "train": {
+        "audited": 1,
+        "fingerprinted": 1,
+        "rejectedByCode": {},
+        "ignored": 0,
+        "unprocessed": 0
+      },
+      "validation": {
+        "audited": 0,
+        "fingerprinted": 0,
+        "rejectedByCode": {},
+        "ignored": 0,
+        "unprocessed": 0
+      },
+      "test": {
+        "audited": 1,
+        "fingerprinted": 1,
+        "rejectedByCode": {},
+        "ignored": 0,
+        "unprocessed": 0
+      },
+      "unknown": {
+        "audited": 0,
+        "fingerprinted": 0,
+        "rejectedByCode": {},
+        "ignored": 0,
+        "unprocessed": 0
+      }
+    },
+    "budgetExhaustion": [],
+    "enumerationComplete": true,
+    "rejectedOrErrorCount": 0,
+    "ignoredFiles": 0,
+    "unprocessedKnownFiles": 0,
+    "summary": "已审计 train 1 / validation 0 / test 1；拒收/错误 0；忽略 0；已发现但未审计 0；结论只覆盖已审计输入与已完成比较。"
+  },
+  "candidateGroups": [],
+  "auditId": "d863310fcb1b9768476af09b210902c0d18b394e332db46e980d7abc8c88a43b",
+  "createdAt": "2026-10-26T06:49:14.713Z",
+  "timing": {
+    "elapsedMs": 36
+  }
+}

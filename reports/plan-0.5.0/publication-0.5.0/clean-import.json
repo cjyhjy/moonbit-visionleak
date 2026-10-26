@@ -1,0 +1,36 @@
+{
+  "createdAt": "2026-10-26T06:54:29.394297+00:00",
+  "module": "cjyhjy/visionleak",
+  "version": "0.5.0",
+  "newProject": ".cache/publication-0.5.0/clean-import",
+  "usesLocalPathDependency": false,
+  "testsPerBackend": 2,
+  "checks": [
+    {
+      "id": "add",
+      "exitCode": 0,
+      "status": "passed",
+      "log": "clean-import-add.log"
+    },
+    {
+      "id": "test-js",
+      "exitCode": 0,
+      "status": "passed",
+      "log": "clean-import-test-js.log"
+    },
+    {
+      "id": "test-wasm-gc",
+      "exitCode": 0,
+      "status": "passed",
+      "log": "clean-import-test-wasm-gc.log"
+    },
+    {
+      "id": "test-native",
+      "exitCode": 0,
+      "status": "passed",
+      "log": "clean-import-test-native.log"
+    }
+  ],
+  "status": "passed",
+  "initialHarnessCorrection": "Initial smoke check incorrectly supplied hexadecimal strings to hamming; public API requires 64 binary characters. Corrected the smoke harness without changing the published library; failed log retained."
+}
