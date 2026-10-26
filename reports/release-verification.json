@@ -1,9 +1,9 @@
 {
   "schemaVersion": "visionleak-release-verification-v1",
   "status": "passed",
-  "startedAt": "2026-10-26T06:57:59.984235+00:00",
-  "archive": "release/visionleak-0.5.0.zip",
-  "archiveSha256": "3ccdbb11bc84eb3be725250fdc2f28068e1b4a6cdbc967bde692ca1169929777",
+  "startedAt": "2026-10-26T16:26:00.358574+00:00",
+  "archive": "release/visionleak-0.6.0.zip",
+  "archiveSha256": "c1d3077953c384dc5a8fb4608a3b8157853757ae304403f6f2789c9c29f869a8",
   "checks": [
     {
       "name": "sha256sums",
@@ -12,7 +12,7 @@
     {
       "name": "archive-manifest",
       "status": "passed",
-      "files": 983
+      "files": 1105
     },
     {
       "name": "npm-ci",
@@ -25,7 +25,7 @@
         "--no-fund"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 0.32310429215431213,
+      "elapsedSeconds": 0.3599094171077013,
       "status": "passed",
       "log": "reports/logs/release-npm-ci.log"
     },
@@ -36,26 +36,28 @@
         "tools/build.mjs"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 2.606065541971475,
+      "elapsedSeconds": 1.6412860001437366,
       "status": "passed",
       "log": "reports/logs/release-rebuild.log"
     },
     {
       "name": "compiled-artifact-reproducible",
       "status": "passed",
-      "sha256": "505893ee6fc69a95446826cefc4c7941ab44098a982d33a979cf245b7b135e73"
+      "sha256": "ad556a709752b9add24a71fed5943442428e277b3b588c1a1692a7c2e4379507"
     },
     {
       "name": "node-tests",
       "command": [
         "node",
         "--test",
+        "tests/capabilities.test.mjs",
         "tests/cli.test.mjs",
         "tests/core.test.mjs",
         "tests/crops.test.mjs",
         "tests/demo-validation.test.mjs",
         "tests/large-images.test.mjs",
         "tests/mirror.test.mjs",
+        "tests/optimization.test.mjs",
         "tests/orientation.test.mjs",
         "tests/phase2.test.mjs",
         "tests/report-identity.test.mjs",
@@ -63,7 +65,7 @@
         "tests/split-aliases.test.mjs"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 9.037380209192634,
+      "elapsedSeconds": 3.6743807503953576,
       "status": "passed",
       "log": "reports/logs/release-node-tests.log"
     },
@@ -79,7 +81,7 @@
         "acceptance-output"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 0.5982407089322805,
+      "elapsedSeconds": 0.2754227090626955,
       "status": "passed",
       "log": "reports/logs/release-actual-images.log"
     },
@@ -88,7 +90,7 @@
       "status": "passed",
       "images": 59,
       "pairs": 96,
-      "auditId": "655c8e4c89f25201be0ee67dfbe48ea5907dfc7cc64aefe5f42c31482ad1a523"
+      "auditId": "39fb0889dd6b375bf14ebc96ab56da6a27663f1f09344c626fe61e84bd0553a4"
     },
     {
       "name": "mirror-images",
@@ -103,7 +105,7 @@
         "--include-mirrors"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 0.6328249578364193,
+      "elapsedSeconds": 0.29675633320584893,
       "status": "passed",
       "log": "reports/logs/release-mirror-images.log"
     },
@@ -111,7 +113,7 @@
       "name": "clean-mirror-report-parity",
       "status": "passed",
       "pairs": 107,
-      "auditId": "b55583134c3f58fc35255b9916171b6498ea0ec54f16128f4eff62a19265a3b5"
+      "auditId": "a8eca94a5f069727690f1da2ca58f1a898acff5a575a527db60f03ac11be3d7c"
     },
     {
       "name": "photos-development-default",
@@ -125,14 +127,14 @@
         "photo-output-development-default"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 0.725614916998893,
+      "elapsedSeconds": 0.3586588753387332,
       "status": "passed",
       "log": "reports/logs/release-photos-development-default.log"
     },
     {
       "name": "photo-parity-development-default",
       "status": "passed",
-      "auditId": "5f045d68b051404ad0086b1bf9c56e1c360fde4623aaadedad9841feecd20f73",
+      "auditId": "59846882acf9aac15efbe2f3d45bd46d87de04173e57c9d5adb737b27fff92cc",
       "pairs": 57
     },
     {
@@ -148,14 +150,14 @@
         "--include-mirrors"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 0.7675822079181671,
+      "elapsedSeconds": 0.4088702918961644,
       "status": "passed",
       "log": "reports/logs/release-photos-development-mirrors.log"
     },
     {
       "name": "photo-parity-development-mirrors",
       "status": "passed",
-      "auditId": "d524569065bb1f51f9872836ab3a71f47c24b0e3840b02f28232ef8a8b743471",
+      "auditId": "8dca984476cec5a3bf93832a77bac1032e2ab8071c81ab2a18ed1f9efeee1707",
       "pairs": 99
     },
     {
@@ -172,14 +174,14 @@
         "--include-rotations"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 1.0573054999113083,
+      "elapsedSeconds": 0.5950896660797298,
       "status": "passed",
       "log": "reports/logs/release-photos-development-orientations.log"
     },
     {
       "name": "photo-parity-development-orientations",
       "status": "passed",
-      "auditId": "7c0c14fe3ab9f2030de0e6f938addb81edd30474598a20215f5cb70c6e67b537",
+      "auditId": "2b454993fbc4b92b46f03765620c6b102ad4889d1df0396f2c7393fbb350af53",
       "pairs": 124
     },
     {
@@ -194,14 +196,14 @@
         "photo-output-holdout-default"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 0.616008291952312,
+      "elapsedSeconds": 0.3315051249228418,
       "status": "passed",
       "log": "reports/logs/release-photos-holdout-default.log"
     },
     {
       "name": "photo-parity-holdout-default",
       "status": "passed",
-      "auditId": "6e4585d60aebdcd0e75575967b1f82a74b54800f99f1ca31158c43ae942a1c19",
+      "auditId": "592c0d622e0bd85dfc7bc0232816c4e4a3225e73fd9edfaa50944204ecc1f148",
       "pairs": 62
     },
     {
@@ -217,14 +219,14 @@
         "--include-mirrors"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 0.7314190831966698,
+      "elapsedSeconds": 0.36692050006240606,
       "status": "passed",
       "log": "reports/logs/release-photos-holdout-mirrors.log"
     },
     {
       "name": "photo-parity-holdout-mirrors",
       "status": "passed",
-      "auditId": "39b39942b93f307d8556ae55f85c434eacfc64b180459b714ae23c7c293d8c5e",
+      "auditId": "d63c2c5446e582d6d2307960fe773de5e44659d698a9f3c7b88f71909eac302b",
       "pairs": 106
     },
     {
@@ -241,14 +243,14 @@
         "--include-rotations"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 1.2333712917752564,
+      "elapsedSeconds": 0.5858407909981906,
       "status": "passed",
       "log": "reports/logs/release-photos-holdout-orientations.log"
     },
     {
       "name": "photo-parity-holdout-orientations",
       "status": "passed",
-      "auditId": "b7868a4da4d61dc0d044046a8ebd4cc1c151a3124f9dc31a87252e4d1afa0b5f",
+      "auditId": "1e4a2abee08d5bb2688dcfae954fe028ee793ac904328127fbb2489f78ba962e",
       "pairs": 131
     },
     {
@@ -260,13 +262,13 @@
         "import{sourceDigest}from'./tools/source-digest.mjs';console.log(sourceDigest(process.cwd()))"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 0.0923509169369936,
+      "elapsedSeconds": 0.045807833317667246,
       "status": "passed",
       "log": "reports/logs/release-source-digest.log"
     }
   ],
-  "sourceDigest": "ca9a67ea34841a9467665ff0d699bf6300e98e74b1f221f7befc76e4d1ae8d56",
-  "extractedDirectory": "reports/clean-room/0e3ff2c1-6f3e-4a5b-b654-6eeb63d247cc/visionleak",
+  "sourceDigest": "e04dbad4ed93740312db4ffa7f41c0a7789977ef7f3cc9288638f6ff2f52ce95",
+  "extractedDirectory": "reports/clean-room/fb55cde8-4118-47c4-8124-f4cb0611e451/visionleak",
   "extractedCopyRetained": false,
-  "finishedAt": "2026-10-26T06:58:18.721484+00:00"
+  "finishedAt": "2026-10-26T16:26:09.581817+00:00"
 }

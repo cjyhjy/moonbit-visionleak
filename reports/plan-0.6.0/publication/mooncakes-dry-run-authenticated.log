@@ -1,0 +1,2 @@
+failed to open credentials file: /Users/cjy/.moon/credentials.json, please login first: No such file or directory (os error 2)
+Error: `moon publish` failed

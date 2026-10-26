@@ -1,0 +1,9 @@
+{
+  "status": "local-acceptance-passed-publication-pending",
+  "version": "0.6.0",
+  "archive": "release/visionleak-0.6.0.zip",
+  "archiveSha256": "c1d3077953c384dc5a8fb4608a3b8157853757ae304403f6f2789c9c29f869a8",
+  "artifactSha256": "ad556a709752b9add24a71fed5943442428e277b3b588c1a1692a7c2e4379507",
+  "sourceDigest": "e04dbad4ed93740312db4ffa7f41c0a7789977ef7f3cc9288638f6ff2f52ce95",
+  "verifiedAt": "2026-10-26T16:28:03.748251+00:00"
+}

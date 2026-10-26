@@ -1,7 +1,7 @@
 {
   "schemaVersion": "visionleak-benchmark-v1",
-  "createdAt": "2026-10-25T17:17:44.840Z",
-  "engineSha256": "505893ee6fc69a95446826cefc4c7941ab44098a982d33a979cf245b7b135e73",
+  "createdAt": "2026-10-26T16:22:00.279Z",
+  "engineSha256": "ad556a709752b9add24a71fed5943442428e277b3b588c1a1692a7c2e4379507",
   "environment": {
     "node": "v26.7.0",
     "platform": "darwin",
@@ -17,17 +17,17 @@
       "pixels": 2097152,
       "encodedBytes": null,
       "elapsedMs": [
-        94.760209,
-        93.495375,
-        93.20045899999997,
-        93.05808399999995,
-        92.81975
+        101.97904199999999,
+        101.7225,
+        102.61208299999998,
+        102.18124999999998,
+        101.708167
       ],
-      "medianMs": 93.20045899999997,
+      "medianMs": 101.97904199999999,
       "outcome": {
         "ok": true
       },
-      "rssAfterBytes": 81690624
+      "rssAfterBytes": 81969152
     },
     {
       "name": "index-1000-random-threshold6",
@@ -36,27 +36,29 @@
       "pixels": null,
       "encodedBytes": null,
       "elapsedMs": [
-        25.054416999999944,
-        17.090874999999983,
-        24.40020800000002,
-        24.15695800000003,
-        16.460958000000005
+        10.711291000000074,
+        7.958208000000013,
+        7.8225419999999986,
+        7.58037499999989,
+        6.919415999999956
       ],
-      "medianMs": 24.15695800000003,
+      "medianMs": 7.8225419999999986,
       "outcome": {
         "complete": true,
         "stats": {
           "inputImages": 1000,
           "processedImages": 1000,
-          "comparisons": 215073,
-          "distanceEvaluations": 215073,
+          "comparisons": 9033,
+          "distanceEvaluations": 9033,
           "pairChecks": 0,
           "emittedPairs": 0,
           "indexNodes": 1000,
-          "reason": ""
+          "reason": "",
+          "indexOperations": 61591,
+          "indexOperationLimit": 16000000
         }
       },
-      "rssAfterBytes": 92913664
+      "rssAfterBytes": 96681984
     },
     {
       "name": "dense-1000-pair-budget100",
@@ -65,13 +67,13 @@
       "pixels": null,
       "encodedBytes": null,
       "elapsedMs": [
-        3.5144579999999905,
-        3.3723750000000337,
-        3.5626250000000255,
-        3.5208750000000464,
-        3.2999999999999545
+        3.4327919999999494,
+        3.3979170000000067,
+        3.7332910000000084,
+        3.612792000000013,
+        3.2635830000000396
       ],
-      "medianMs": 3.5144579999999905,
+      "medianMs": 3.4327919999999494,
       "outcome": {
         "complete": false,
         "stats": {
@@ -85,7 +87,7 @@
           "reason": "PairBudget"
         }
       },
-      "rssAfterBytes": 103514112
+      "rssAfterBytes": 112033792
     }
   ]
 }

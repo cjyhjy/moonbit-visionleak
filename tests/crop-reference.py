@@ -9,7 +9,7 @@ class CropReference(unittest.TestCase):
   for row in sources:
    self.assertEqual(row['license'],'CC0-1.0');self.assertEqual(hashlib.sha256((ROOT/row['storedFile']).read_bytes()).hexdigest(),row['sha256'])
   frozen=json.loads((ROOT/'research/photos-v2/freeze-0.5.0.json').read_text())
-  for name,value in frozen['implementationFiles'].items():self.assertEqual(hashlib.sha256((ROOT/name).read_bytes()).hexdigest(),value,name)
+  for name,value in frozen['implementationFiles'].items():self.assertEqual(hashlib.sha256((ROOT/'research/baselines/0.5.0'/name).read_bytes()).hexdigest(),value,name)
  def test_current_core_replay_and_independent_scores(self):
   script="import{readFileSync}from'node:fs';import{audit_json}from'./dist/visionleak.js';const r=JSON.parse(readFileSync(0,'utf8'));console.log(audit_json(JSON.stringify({images:r.images,options:r.options})));"
   for part in ['development','holdout']:
@@ -18,7 +18,13 @@ class CropReference(unittest.TestCase):
     report=json.loads((folder/(mode+'-audit.json')).read_text());compare(evaluation['scores'][mode],score(truth,report['pairs']))
     run=subprocess.run(['node','--input-type=module','-e',script],cwd=ROOT,input=json.dumps(report),text=True,capture_output=True,check=True);actual=json.loads(run.stdout)
     self.assertEqual(actual['pairs'],report['pairs']);self.assertEqual(actual['groups'],report['groups']);self.assertEqual(actual['complete'],report['complete'])
-    for k,v in actual['stats'].items():self.assertEqual(v,report['stats'][k])
+    # Traversal pruning changes resource accounting, not evidence. Preserve the
+    # frozen implementation above; compare semantic stats and enforce bounds.
+    for k in ['inputImages','processedImages','emittedPairs','indexNodes','reason']:
+     self.assertEqual(actual['stats'][k],report['stats'][k])
+    stats=actual['stats'];self.assertEqual(stats['comparisons'],stats['distanceEvaluations']+stats['pairChecks'])
+    self.assertLessEqual(stats['comparisons'],report['options']['maxComparisons'])
+    self.assertLessEqual(stats.get('indexOperations',0),report['options']['maxComparisons']*16)
     images={r['id']:r for r in report['images']}
     for pair in report['pairs']:
      if pair['evidence']!='local-candidate':continue

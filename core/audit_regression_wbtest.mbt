@@ -392,3 +392,40 @@ test "JSON adapters reject invalid typed metadata and incomplete orientation arr
     Json("DuplicateId"),
   )
 }
+
+///|
+test "MIH ancestor filtering agrees with exhaustive oracle on active trees across all short radii" {
+  let random : OracleRandom = { seed: 0x671284U, }
+  let images = oracle_images(180, random)
+  // Force neighbors with differences in all four 16-bit segments.
+  for k in 0..<8 {
+    let original = text(field(images[k], "dhash"))
+    let changed = StringBuilder()
+    for bit in 0..<64 {
+      let flip = bit % 16 < 2 && bit % 16 * 4 + bit / 16 < k
+      changed.write_string(
+        if (original[bit] == '1') != flip {
+          "1"
+        } else {
+          "0"
+        },
+      )
+    }
+    if images[170 + k] is Object(fields) {
+      fields["dhash"] = Json(changed.to_string())
+    }
+  }
+  for threshold in 0..<8 {
+    let input : Json = {
+      "images": Json(images),
+      "options": { "threshold": Json(threshold) },
+    }
+    let report = @json.parse(audit_json(input.stringify()))
+    assert_eq(field(report, "complete"), Json(true))
+    assert_true(integer(field(field(report, "stats"), "indexOperations")) > 0)
+    check_oracle_members(
+      report,
+      oracle_expected(images, threshold, false, false),
+    )
+  }
+}

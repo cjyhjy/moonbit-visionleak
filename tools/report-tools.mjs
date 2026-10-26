@@ -84,7 +84,9 @@ export async function verifyFiles({ report: path, root: inputRoot }) {
       observations.push({ id, status: error.code === 'ENOENT' ? 'missing' : 'error', code: error.code || 'IO_ERROR' });
     }
   }
-  return workflow({ operation: 'verify', report: raw, observations });
+  return { ...workflow({ operation: 'verify', report: raw, observations }),
+    verificationScope: { evidenceTypes: ['byte-identical', 'pixel-identical'],
+      candidatesRecomputed: false, wholeDatasetReaudited: false } };
 }
 
 export async function exportFixes({ report: path, out, review }) {

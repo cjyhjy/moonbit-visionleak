@@ -14,7 +14,9 @@ node tools/server.mjs --report output/example/report.json --port 4173
 
 演示数据含确定性重复，第二行预期退出 **3**；CI 可据此阻止跨集合重复。浏览器打开 http://127.0.0.1:4173 。需要 Node.js 22+，CLI 已附带编译后的 MoonBit 核心。
 
-0.5.0 的完整变更见 [CHANGELOG](CHANGELOG.md)。发布与验收状态以 [发布记录](reports/plan-0.5.0/publication-0.5.0/README.md) 为准；Mooncakes 模块为 `cjyhjy/visionleak`。
+0.6.0 的完整变更见 [版本说明](docs/changes-0.6.0.md) 和 [CHANGELOG](CHANGELOG.md)。发布与验收状态以 [发布记录](reports/plan-0.6.0/publication/README.md) 为准；Mooncakes 模块为 `cjyhjy/visionleak`。
+
+下游集成可用 `node tools/cli.mjs capabilities` 查询实际版本、参数预算和复验范围；升级依赖时固定提交与产物摘要。
 
 ## 证据与可移交输出
 
@@ -37,7 +39,7 @@ node tools/cli.mjs export-fixes --report output/example/report.json --out sugges
 
 MoonBit 负责指纹、索引、预算、证据等级、报告身份和建议规则；Node/sharp 负责解码与 I/O。Python ImageHash 和独立集合指标用于外部核对。
 
-原有 10 张照片保留为回归集；新增 32 个 CC0 文件来源，按来源和场景分为 16 个开发来源、16 个新保留来源。[来源与许可](research/photos-v2/ATTRIBUTION.md) · [裁切评测](reports/plan-0.5.0/crops-holdout/evaluation.json) · [规模测试](reports/plan-0.5.0/scale-phase3-final/results.json)。
+0.5.0 使用 32 个 CC0 文件来源，按来源和场景分为 16 个开发来源、16 个当时的新保留来源；连同原有 10 张照片，现均作为已知回归数据，不是 0.6.0 的新独立测试集。[来源与许可](research/photos-v2/ATTRIBUTION.md) · [裁切评测](reports/plan-0.5.0/crops-holdout/evaluation.json) · [规模测试](reports/plan-0.5.0/scale-phase3-final/results.json)。
 
 ```sh
 python3.13 tools/bootstrap.py
@@ -54,3 +56,5 @@ npm run verify:ci
 - 摘要一致基于 SHA-256 通常的碰撞假设，规范化像素一致不等于原始像素编码逐位相同。
 
 [CLI 手册](docs/cli.md) · [API](docs/api.md) · [架构](docs/architecture.md) · [复核教程](docs/demo.md) · [复现](docs/reproducibility.md) · [来源和 AI 辅助](docs/development.md) · [MIT 许可证](LICENSE) · [第三方许可](THIRD_PARTY.md)
+
+0.6.0 索引、内存与复核改进：[实现、验证与性能边界](docs/optimization.md)。

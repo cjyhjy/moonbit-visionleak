@@ -50,7 +50,7 @@ test "eight view fingerprints match physically transformed RGBA on tiny uneven a
     let rgba = Bytes::from_array(data[:])
     let plain = fingerprint(width, height, rgba)
     for mirrors in [false, true] {
-      let oriented = fingerprint_impl(width, height, rgba, mirrors, true)
+      let oriented = fingerprint_impl(width, height, rgba, mirrors, true, false)
       assert_eq(field(oriented, "pixelDigest"), field(plain, "pixelDigest"))
       assert_eq(field(oriented, "contrast"), field(plain, "contrast"))
       assert_eq(field(oriented, "dhash"), field(plain, "dhash"))

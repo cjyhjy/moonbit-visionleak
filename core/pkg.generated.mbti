@@ -8,6 +8,8 @@ pub fn cli_options_json(String) -> String
 
 pub fn fingerprint(Int, Int, Bytes) -> Json
 
+pub fn fingerprint_combined_rgba(Int, Int, Bytes, Bool, Bool) -> String
+
 pub fn fingerprint_json(String) -> String
 
 pub fn fingerprint_local_rgba(Int, Int, Bytes) -> String

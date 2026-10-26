@@ -79,3 +79,9 @@ CLI 增加 `--include-mirrors`；JS `fingerprint({width,height,rgba,includeMirro
 `audit_json` 的 options 可设 includeCrops=true；此时每个输入图像须有上述 20 个哈希和对比度，缺失或无效会拒绝。局部证据为 local-candidate，matchLocal 含 leftWindow/rightWindow/profile，localProfile 给出千分比矩形。所有新增检索和插入距离共用 maxComparisons，预算耗尽 complete=false。
 
 局部候选不进入确定性 groups。workflow_json 的 candidate 关卡覆盖局部候选，counts.localCandidate 单独计数；复核和导出同样保持候选身份。局部报告的结构校验要求 includeCrops=true 和有效窗口见证。
+
+## 未发布的兼容优化
+
+新增核心导出 `fingerprint_combined_rgba(width, height, rgba, mirrors, rotations)`：返回原全局/方向指纹字段及 `localHashes/localContrasts/localHashVersion`，与分别调用旧入口合并的结果一致。JS `fingerprint({includeCrops:true})` 使用该入口。旧导出保留。
+
+启用 MIH 预筛选时 `stats` 可新增 `indexOperations`、`indexOperationLimit`，分别表示桶探测、posting 读取和祖先回溯的总次数及其上限（`16 × maxComparisons`）。索引预算耗尽为 `stats.reason: "IndexBudget"`，报告为 `incomplete`，遵循现有未完成审计退出码与覆盖范围规则。未使用预筛选的报告可省略这两个字段；`comparisons` 仍是距离计算和配对检查之和。详见 [优化记录](optimization.md)。

@@ -54,11 +54,15 @@ for(const scenario of scenarios) {
       outcomes[name]=run(name==='baseline'?baseline:candidate);
       elapsed[name].push(performance.now()-start);
     }
-    assert.deepEqual(outcomes.candidate,outcomes.baseline);
+    // Work counters change with exact MIH filtering; completed detection results
+    // and ordered witnesses must still match. Small budget cases above remain exact.
+    for (const name of ['ok','complete','status','pairs','groups']) assert.deepEqual(outcomes.candidate[name],outcomes.baseline[name]);
+    assert.equal(outcomes.candidate.stats.comparisons, outcomes.candidate.stats.distanceEvaluations + outcomes.candidate.stats.pairChecks);
+    assert.ok(outcomes.candidate.stats.comparisons <= scenario.options.maxComparisons);
   }
   const baselineMedianMs=median(elapsed.baseline);
   const candidateMedianMs=median(elapsed.candidate);
   results.push({name:scenario.name,images:scenario.images.length,inputSha256:digest(JSON.stringify(input)),elapsedMs:elapsed,baselineMedianMs,candidateMedianMs,speedup:baselineMedianMs/candidateMedianMs,outcome:{complete:outcomes.candidate.complete,stats:outcomes.candidate.stats}});
 }
 const moduleInfo=path=>({path:relative(root,path),sha256:createHash('sha256').update(readFileSync(path)).digest('hex')});
-console.log(JSON.stringify({schemaVersion:'visionleak-core-comparison-v1',createdAt:new Date().toISOString(),environment:{node:process.version,platform:platform(),arch:arch(),cpu:cpus()[0]?.model},baseline:moduleInfo(baselinePath),candidate:moduleInfo(candidatePath),compatibilityCases,method:'Same deterministic seed and 1000-fingerprint workloads as tools/benchmark.mjs. Three warmups per engine then ten paired samples with alternating engine order, in one process. Timings include JSON stringify/parse. Full serialized reports also match in 360 separate threshold/budget cases. Synthetic fingerprints, local timing observations only; no general speed or memory claim.',results},null,2));
+console.log(JSON.stringify({schemaVersion:'visionleak-core-comparison-v1',createdAt:new Date().toISOString(),environment:{node:process.version,platform:platform(),arch:arch(),cpu:cpus()[0]?.model},baseline:moduleInfo(baselinePath),candidate:moduleInfo(candidatePath),compatibilityCases,method:'Same deterministic seed and 1000-fingerprint workloads as tools/benchmark.mjs. Three warmups per engine then ten paired samples with alternating engine order, in one process. Timings include JSON stringify/parse. Full serialized reports match in 360 small-tree threshold/budget cases; large completed workloads compare ordered detection results while allowing work counters to differ. Synthetic fingerprints, local timing observations only; no general speed or memory claim.',results},null,2));

@@ -1,0 +1,64 @@
+{
+  "config": {
+    "name": "vl-local-dhash-v2-prototype",
+    "threshold": 5,
+    "minimumGridContrast": 32,
+    "minimumWitnesses": 2,
+    "scaleTolerance": 0.08,
+    "translationTolerance": 0.05,
+    "minimumCenterSeparation": 0.1,
+    "crossScale": true
+  },
+  "scope": "Exploratory replay of already-viewed 0.5.0 photo fingerprints; both partitions are regression/exploration data. No independent new holdout; prototype is not enabled in production.",
+  "rows": [
+    {
+      "partition": "development",
+      "baselineLocal": {
+        "tp": 113,
+        "fp": 1,
+        "fn": 63,
+        "precision": 0.9912280701754386,
+        "recall": 0.6420454545454546
+      },
+      "prototypeLocal": {
+        "tp": 32,
+        "fp": 0,
+        "fn": 144,
+        "precision": 1.0,
+        "recall": 0.18181818181818182
+      },
+      "prototypeCombined": {
+        "tp": 64,
+        "fp": 0,
+        "fn": 112,
+        "precision": 1.0,
+        "recall": 0.36363636363636365
+      }
+    },
+    {
+      "partition": "holdout",
+      "baselineLocal": {
+        "tp": 117,
+        "fp": 44,
+        "fn": 59,
+        "precision": 0.7267080745341615,
+        "recall": 0.6647727272727273
+      },
+      "prototypeLocal": {
+        "tp": 32,
+        "fp": 0,
+        "fn": 144,
+        "precision": 1.0,
+        "recall": 0.18181818181818182
+      },
+      "prototypeCombined": {
+        "tp": 64,
+        "fp": 10,
+        "fn": 112,
+        "precision": 0.8648648648648649,
+        "recall": 0.36363636363636365
+      }
+    }
+  ],
+  "decision": "Keep v1. Precision/recall tradeoff and fresh source-disjoint validation required before any v2 release."
+}

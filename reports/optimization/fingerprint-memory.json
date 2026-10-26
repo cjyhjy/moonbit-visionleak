@@ -1,0 +1,77 @@
+{
+  "scope": "Three isolated process observations per mode, synthetic 4,194,304-pixel RGBA including alpha. Peak includes input allocation and module load; no universal memory/speed claim.",
+  "rows": [
+    {
+      "mode": "default",
+      "trial": 0,
+      "baseline": {
+        "elapsedMs": 209.016667,
+        "peakRssBytes": 110755840
+      },
+      "candidate": {
+        "elapsedMs": 213.23612500000002,
+        "peakRssBytes": 86360064
+      }
+    },
+    {
+      "mode": "default",
+      "trial": 1,
+      "baseline": {
+        "elapsedMs": 205.86825,
+        "peakRssBytes": 111034368
+      },
+      "candidate": {
+        "elapsedMs": 212.074959,
+        "peakRssBytes": 86016000
+      }
+    },
+    {
+      "mode": "default",
+      "trial": 2,
+      "baseline": {
+        "elapsedMs": 213.360292,
+        "peakRssBytes": 110608384
+      },
+      "candidate": {
+        "elapsedMs": 210.98175,
+        "peakRssBytes": 85819392
+      }
+    },
+    {
+      "mode": "crops",
+      "trial": 0,
+      "baseline": {
+        "elapsedMs": 242.96070899999998,
+        "peakRssBytes": 144818176
+      },
+      "candidate": {
+        "elapsedMs": 235.741,
+        "peakRssBytes": 124649472
+      }
+    },
+    {
+      "mode": "crops",
+      "trial": 1,
+      "baseline": {
+        "elapsedMs": 238.762875,
+        "peakRssBytes": 144703488
+      },
+      "candidate": {
+        "elapsedMs": 230.17787500000003,
+        "peakRssBytes": 124665856
+      }
+    },
+    {
+      "mode": "crops",
+      "trial": 2,
+      "baseline": {
+        "elapsedMs": 239.228875,
+        "peakRssBytes": 144752640
+      },
+      "candidate": {
+        "elapsedMs": 229.75575,
+        "peakRssBytes": 124600320
+      }
+    }
+  ]
+}

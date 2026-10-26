@@ -141,15 +141,24 @@ function renderQueue() {
   }
   list.replaceChildren(fragment);
 }
-function setImage(side, imageRecord) {
+function setImage(side, imageRecord, rect) {
   const image = $(`${side}-image`), fallback = $(`${side}-fallback`);
   const matchesServer = canShowThumbnails(state.report, state.servedAuditId);
   const url = matchesServer ? thumbnailURL(imageRecord.thumbnail) : null;
   fallback.replaceChildren(document.createTextNode(matchesServer ? '缩略图不可用' : '已禁用缩略图 · 报告不匹配'), document.createElement('br'), element('small', '', '请通过对应报告的本地服务打开'));
+  const overlay = $(`${side}-window`);
+  overlay.hidden = true;
+  if (rect) {
+    overlay.style.left = `${rect[0] / 10}%`;
+    overlay.style.top = `${rect[1] / 10}%`;
+    overlay.style.width = `${(rect[2] - rect[0]) / 10}%`;
+    overlay.style.height = `${(rect[3] - rect[1]) / 10}%`;
+    overlay.setAttribute('aria-label', `命中窗口：左 ${rect[0]/10}%，上 ${rect[1]/10}%，右 ${rect[2]/10}%，下 ${rect[3]/10}%`);
+  }
   image.hidden = true;
   fallback.hidden = false;
-  image.onload = () => { image.hidden = false; fallback.hidden = true; };
-  image.onerror = () => { image.hidden = true; fallback.hidden = false; };
+  image.onload = () => { image.hidden = false; fallback.hidden = true; overlay.hidden = !rect; };
+  image.onerror = () => { image.hidden = true; fallback.hidden = false; overlay.hidden = true; };
   image.alt = `${imageRecord.split}：${imageRecord.path}`;
   if (url) image.src = url;
   else image.removeAttribute('src');
@@ -175,8 +184,9 @@ function renderDetail() {
   if (pair.matchLocal) $('evidence-explanation').textContent += ` 局部窗口 A=${pair.matchLocal.leftWindow} / B=${pair.matchLocal.rightWindow}；这是首个满足阈值的窗口证据，距离不是全部窗口的最小值。`;
   if (pair.matchTransform) $('evidence-explanation').textContent += ` 匹配依据：${TRANSFORMS[pair.matchTransform]}；预览图保持原方向，距离取四种方向组合的最小值。`;
   if (pair.matchOrientation) $('evidence-explanation').textContent += ` 匹配依据：${orientationDescription(pair.matchOrientation)}。预览图保持原方向；距离为已启用方向组合的最小值，旋转发生在 EXIF 校正之后。`;
-  setImage('left', left);
-  setImage('right', right);
+  const windows = state.report.raw.localProfile?.windows;
+  setImage('left', left, windows?.[pair.matchLocal?.leftWindow]);
+  setImage('right', right, windows?.[pair.matchLocal?.rightWindow]);
   const index = state.filtered.findIndex(item => item.key === pair.key);
   $('pair-position').textContent = `${formatCount(index + 1)} / ${formatCount(state.filtered.length)}`;
   $('previous-pair').disabled = index <= 0;
@@ -353,7 +363,7 @@ document.addEventListener('keydown', event => {
   if (!state.report || event.defaultPrevented || event.repeat || event.isComposing || event.metaKey || event.ctrlKey || event.altKey) return;
   const active = document.activeElement;
   if (['INPUT', 'TEXTAREA', 'SELECT'].includes(active?.tagName) || active?.isContentEditable) return;
-  const shortcuts = { '/': () => $('search').focus(), j: () => navigatePair(1), k: () => navigatePair(-1), n: navigatePending };
+  const shortcuts = { '/': () => $('search').focus(), j: () => navigatePair(1), k: () => navigatePair(-1), n: navigatePending, '1': () => setDecision('confirmed'), c: () => setDecision('confirmed'), '2': () => setDecision('rejected'), r: () => setDecision('rejected'), '3': () => setDecision('unsure'), u: () => setDecision('unsure'), z: undoLastDecision };
   const key = event.key.toLowerCase();
   if (!Object.hasOwn(shortcuts, key)) return;
   event.preventDefault();

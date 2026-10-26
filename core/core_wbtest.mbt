@@ -191,6 +191,7 @@ test "full RGBA reflection precedes uneven-grid sampling" {
     Bytes::from_array(rgba[:]),
     true,
     false,
+    false,
   )
   let b = fingerprint(width, height, Bytes::from_array(mirrored[:]))
   assert_eq(field(a, "dhashMirror"), field(b, "dhash"))
@@ -247,7 +248,14 @@ test "right-angle sampling matches materialized clockwise rotations" {
   for i = 0; i < data.length(); i = i + 1 {
     data[i] = ((i * 71 + 19) % 256).to_byte()
   }
-  let result = fingerprint_impl(w, h, Bytes::from_array(data[:]), true, true)
+  let result = fingerprint_impl(
+    w,
+    h,
+    Bytes::from_array(data[:]),
+    true,
+    true,
+    false,
+  )
   guard field(result, "dhashRotations") is Array(hashes) else {
     fail("missing rotations")
   }

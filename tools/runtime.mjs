@@ -38,12 +38,12 @@ export async function fingerprint({ width, height, rgba, includeMirrors = false,
   }
   if (typeof includeMirrors !== 'boolean' || typeof includeRotations !== 'boolean' || typeof includeCrops !== 'boolean') throw new VisionLeakError('INVALID_PIXELS', 'includeMirrors must be boolean');
   const core = await loadCore();
+  if (includeCrops) return result(core.fingerprint_combined_rgba(width, height, rgba, includeMirrors, includeRotations), 'combined fingerprint');
   const method = includeRotations ? 'fingerprint_oriented_rgba' : includeMirrors ? 'fingerprint_mirrored_rgba' : 'fingerprint_rgba';
   if (typeof core[method] !== 'function') {
     throw new VisionLeakError('CORE_PROTOCOL', 'Missing fingerprint_rgba export');
   }
   const value = result(core[method](width, height, rgba, includeMirrors), 'fingerprint');
-  if (includeCrops) Object.assign(value, result(core.fingerprint_local_rgba(width,height,rgba), 'local fingerprint'));
   return value;
 }
 

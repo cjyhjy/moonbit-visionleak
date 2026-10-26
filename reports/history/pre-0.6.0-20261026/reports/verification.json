@@ -1,0 +1,578 @@
+{
+  "schemaVersion": "visionleak-verification-v1",
+  "status": "passed",
+  "startedAt": "2026-10-25T17:17:02.861Z",
+  "dateTimezone": "America/New_York",
+  "checks": [
+    {
+      "id": "toolchain",
+      "command": [
+        "./tools/moon",
+        "version",
+        "--all"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 17,
+      "log": "reports/logs/toolchain.log"
+    },
+    {
+      "id": "build",
+      "command": [
+        "node",
+        "tools/build.mjs"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 45,
+      "log": "reports/logs/build.log"
+    },
+    {
+      "id": "moon-js",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "js"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 1031,
+      "log": "reports/logs/moon-js.log"
+    },
+    {
+      "id": "moon-wasm-gc",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "wasm-gc"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 742,
+      "log": "reports/logs/moon-wasm-gc.log"
+    },
+    {
+      "id": "moon-native",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "native"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 1614,
+      "log": "reports/logs/moon-native.log"
+    },
+    {
+      "id": "native-release-build",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "native",
+        "--release",
+        "--build-only"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 32,
+      "log": "reports/logs/native-release-build.log"
+    },
+    {
+      "id": "native-release-run",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "native",
+        "--release"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 305,
+      "log": "reports/logs/native-release-run.log"
+    },
+    {
+      "id": "format",
+      "command": [
+        "./tools/moon",
+        "fmt",
+        "--check"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 12,
+      "log": "reports/logs/format.log"
+    },
+    {
+      "id": "node-integration",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 2780,
+      "log": "reports/logs/node-integration.log"
+    },
+    {
+      "id": "metric-regression",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tests/oracle-metrics.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 1009,
+      "log": "reports/logs/metric-regression.log"
+    },
+    {
+      "id": "crop-reference",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tests/crop-reference.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 297,
+      "log": "reports/logs/crop-reference.log"
+    },
+    {
+      "id": "mooncakes-package",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tests/mooncakes-package.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 70,
+      "log": "reports/logs/mooncakes-package.log"
+    },
+    {
+      "id": "mooncakes-compatibility",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tests/mooncakes-dry-run.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 29,
+      "log": "reports/logs/mooncakes-compatibility.log"
+    },
+    {
+      "id": "report-history",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tests/report-history.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 238,
+      "log": "reports/logs/report-history.log"
+    },
+    {
+      "id": "evaluation-compatibility",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tests/evaluation-compatibility.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 51,
+      "log": "reports/logs/evaluation-compatibility.log"
+    },
+    {
+      "id": "imagehash-oracle",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tools/evaluate.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 3111,
+      "log": "reports/logs/imagehash-oracle.log"
+    },
+    {
+      "id": "mirror-oracle",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tools/evaluate-mirrors.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 1646,
+      "log": "reports/logs/mirror-oracle.log"
+    },
+    {
+      "id": "photo-development",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tools/evaluate-photos.py",
+        "--partition",
+        "development",
+        "--out",
+        "reports/photos-v1/current-development",
+        "--include-orientations",
+        "--replace"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 14238,
+      "log": "reports/logs/photo-development.log"
+    },
+    {
+      "id": "photo-holdout",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tools/evaluate-photos.py",
+        "--partition",
+        "holdout",
+        "--out",
+        "reports/photos-v1/current-holdout",
+        "--include-orientations",
+        "--replace"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 13893,
+      "log": "reports/logs/photo-holdout.log"
+    },
+    {
+      "id": "photo-summary",
+      "command": [
+        "research/.venv-oracle/bin/python",
+        "tools/summarize-photos.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 20,
+      "log": "reports/logs/photo-summary.log"
+    },
+    {
+      "id": "performance",
+      "command": [
+        "node",
+        "tools/benchmark.mjs"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 791,
+      "log": "reports/logs/performance.log"
+    },
+    {
+      "id": "core-comparison",
+      "command": [
+        "node",
+        "tests/core-performance.mjs"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 2856,
+      "log": "reports/logs/core-comparison.log"
+    },
+    {
+      "id": "release-contract",
+      "command": [
+        "python3",
+        "tests/release-contract.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 87,
+      "log": "reports/logs/release-contract.log"
+    }
+  ],
+  "keyFiles": [
+    "DELIVERY.md",
+    "README.md",
+    "core/audit.mbt",
+    "core/fingerprint.mbt",
+    "core/sha256.mbt",
+    "dist/visionleak.js",
+    "tools/cli.mjs",
+    "demo/index.html",
+    "reports/evaluation.json",
+    "research/comparison.md"
+  ],
+  "release": {
+    "archive": "release/visionleak-0.5.0.zip",
+    "checksumFile": "release/SHA256SUMS",
+    "attestation": "reports/release-verification.json",
+    "commands": [
+      [
+        "python3",
+        "tools/package.py"
+      ],
+      [
+        "python3",
+        "tools/accept-release.py"
+      ]
+    ],
+    "status": "read-final-attestation",
+    "note": "Final archive checksum and acceptance status are outside the ZIP to avoid self-reference."
+  },
+  "notTested": [
+    "Naturally occurring contamination in a real licensed image dataset",
+    "Windows/Linux runtime acceptance",
+    "FiftyOne or MoonSplit runtime/performance comparison",
+    "Public hosting, publication and formal contest submission"
+  ],
+  "publication": {
+    "scope": "This local verification does not query or change external publication or contest submission status."
+  },
+  "environment": {
+    "node": "v26.7.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "moon": "moon 0.1.20261012 (748b63c 2026-10-12) ./.toolchain/bin/moon\nmoonc v0.10.15+943464bfa (2026-10-12) ./.toolchain/bin/moonc\nmoonrun 0.1.20261012 (748b63c 2026-10-12) ./.toolchain/bin/moonrun\n\nFeature flags enabled: rr_moon_mod,rr_moon_pkg"
+  },
+  "evaluation": {
+    "file": "reports/evaluation.json",
+    "images": 59,
+    "exact": {
+      "tp": 27,
+      "fp": 0,
+      "fn": 0,
+      "tn": 1059,
+      "precision": 1,
+      "recall": 1,
+      "falsePositiveRate": 0,
+      "falsePositives": [],
+      "falseNegatives": []
+    },
+    "nearOnly": {
+      "tp": 67,
+      "fp": 2,
+      "fn": 18,
+      "tn": 972,
+      "precision": 0.9710144927536232,
+      "recall": 0.788235294117647,
+      "falsePositiveRate": 0.002053388090349076,
+      "falsePositives": [
+        [
+          "test/flat-blue.png",
+          "train/flat-red.png"
+        ],
+        [
+          "test/lookalike-ramp-1.png",
+          "train/lookalike-ramp-0.png"
+        ]
+      ],
+      "falseNegatives": [
+        [
+          "test/brighter-00.png",
+          "validation/mirrored-00.png"
+        ],
+        [
+          "test/brighter-01.png",
+          "validation/mirrored-01.png"
+        ],
+        [
+          "test/cropped-00.png",
+          "train/local-copy.png"
+        ],
+        [
+          "test/cropped-00.png",
+          "train/scene-00.png"
+        ],
+        [
+          "test/cropped-00.png",
+          "validation/mirrored-00.png"
+        ],
+        [
+          "test/cropped-00.png",
+          "validation/repacked-00.png"
+        ],
+        [
+          "test/cropped-00.png",
+          "validation/resized-00.png"
+        ],
+        [
+          "test/cropped-01.png",
+          "train/scene-01.png"
+        ],
+        [
+          "test/cropped-01.png",
+          "validation/mirrored-01.png"
+        ],
+        [
+          "test/cropped-01.png",
+          "validation/repacked-01.png"
+        ],
+        [
+          "test/cropped-01.png",
+          "validation/resized-01.png"
+        ],
+        [
+          "test/quality72-00.jpg",
+          "validation/mirrored-00.png"
+        ],
+        [
+          "test/quality72-01.jpg",
+          "validation/mirrored-01.png"
+        ],
+        [
+          "test/renamed-00.png",
+          "validation/mirrored-00.png"
+        ],
+        [
+          "test/renamed-01.png",
+          "validation/mirrored-01.png"
+        ],
+        [
+          "train/local-copy.png",
+          "validation/mirrored-00.png"
+        ],
+        [
+          "train/scene-00.png",
+          "validation/mirrored-00.png"
+        ],
+        [
+          "train/scene-01.png",
+          "validation/mirrored-01.png"
+        ]
+      ]
+    },
+    "indexParity": {
+      "expectedPairs": 96,
+      "actualPairs": 96,
+      "missingPairs": [],
+      "unexpectedPairs": [],
+      "duplicatePairs": 0,
+      "passed": true
+    },
+    "summary": "Deterministic synthetic files; near-only metrics exclude exact positives. See evaluation.md for false positives and false negatives."
+  },
+  "browser": {
+    "schemaVersion": "visionleak-demo-qa-v1",
+    "status": "passed",
+    "version": "0.5.0",
+    "scope": "Actual final UI and artifact: default/mirror/photo regression plus local crop review, persistence, mobile and network-disabled original offline HTML.",
+    "verifiedAt": "2026-10-25T17:09:23.419109+00:00",
+    "servedAuditId": "655c8e4c89f25201be0ee67dfbe48ea5907dfc7cc64aefe5f42c31482ad1a523",
+    "mirrorAuditId": "b55583134c3f58fc35255b9916171b6498ea0ec54f16128f4eff62a19265a3b5",
+    "photoAuditId": "b7868a4da4d61dc0d044046a8ebd4cc1c151a3124f9dc31a87252e4d1afa0b5f",
+    "localAuditId": "67c5328dbddd2e329ead596ba55270afcd57f39ca4a566669b2e768125ff254f",
+    "sourceHashes": {
+      "demo/index.html": "c0d0aae4eeb42265eb0b1e70e54a1b90c5f53e4062ec49a36ad2462fadd9dcf5",
+      "demo/styles.css": "3a77e33a296edce40eb4d16c512adcbbc70c56203b2044b333a8afae9bc23791",
+      "demo/app.mjs": "1840d32ed1108008ea6933e65fccacc1c6dbbdbcfebcd0360f75ace40f4a1761",
+      "demo/review-validation.mjs": "b69b57c9af39a640a573b5c65c84bef5841ecb27c3ec696e6f27a25df8692034",
+      "demo/report-identity.mjs": "559039cb991ad6f22e508fd230871721774f19398c6b86b2005e2fd34e7d3cdc",
+      "demo/review-workflow.mjs": "53a0ce4173b681d55fd247b536ce3ae13d974b08938cd9c811b2ceb428475628"
+    },
+    "coreArtifactSha256": "505893ee6fc69a95446826cefc4c7941ab44098a982d33a979cf245b7b135e73",
+    "browser": "Tabbit 154.0.8037.58",
+    "checks": [
+      {
+        "name": "default-mirror-photo-regression",
+        "status": "passed",
+        "evidence": "reports/plan-0.5.0/logs/phase4-browser-legacy.json"
+      },
+      {
+        "name": "local-review-desktop-mobile-offline",
+        "status": "passed",
+        "evidence": "reports/plan-0.5.0/phase3-browser.json"
+      }
+    ],
+    "screenshots": [
+      {
+        "path": "demo/qa/workbench-v050.png",
+        "sha256": "6ea4d2af666b8e99ac7cd503f86a20ea1af3a08afb59891d8488494a69875127"
+      },
+      {
+        "path": "demo/qa/workbench-mobile-v050.png",
+        "sha256": "2d422d5c687df9e9495547af538eee884e56417fbe72fcf172e1212e67fd682e"
+      },
+      {
+        "path": "demo/qa/offline-v050.png",
+        "sha256": "e41e0ad1379ba339b2cf3fb7ba6e0ce3557ddcbfd09e644166dd581cd57bdec1"
+      }
+    ],
+    "notTested": [
+      "Physical mobile device; viewport emulation was used.",
+      "Standalone GitHub Action example workflow; its actual CLI gate is covered by integration tests."
+    ]
+  },
+  "cropEvaluation": {
+    "development": "reports/plan-0.5.0/crops-development/evaluation.json",
+    "holdout": "reports/plan-0.5.0/crops-holdout/evaluation.json",
+    "scale": "reports/plan-0.5.0/scale-phase3-final/results.json",
+    "freeze": "research/photos-v2/freeze-0.5.0.json"
+  },
+  "photos": {
+    "summary": "reports/photos-v1/summary.json",
+    "development": "reports/photos-v1/current-development/evaluation.json",
+    "holdout": "reports/photos-v1/current-holdout/evaluation.json",
+    "scope": "Ten licensed photos with controlled transforms; natural contamination untested."
+  },
+  "evidenceDigests": {
+    "reports/evaluation.json": "619b65e2979cbc6ff29debbbf1dbb75ec5b5bfb23975d3c8ab9e2cf534fc9150",
+    "reports/evaluation.md": "b476a569342e1b829cbaf74bf8e286cad1b5cedf88dd4d860439a1ee90615b96",
+    "reports/evaluation-audit.json": "aeae1f5b798898c910df8b79eb7bb2d072ce2379fb586b139f6356eef45e60e9",
+    "reports/evaluation-oracle.json": "65eb7b1d7f3289f37ae9f37d3f1da6d5210f92270e59934755a8ad001564ebff",
+    "reports/performance.json": "8d197af16b1f05f7b720be21c0be708e0a65bd96089215c144078c477a670a1d",
+    "reports/demo/report.json": "9a2c93369dcac32c159e39d1ea84375f6f4fad05002bbe9eea7c589d8b20e8f1",
+    "demo/qa/verification.json": "9d1b87a5506c7e040646618ac36bcd37a1c94a358e43cff6daf79bdcdf8cfc8d",
+    "reports/core-optimization.json": "8b78e58fc7ed64a145c1562be93cb643f8e83df1776b78115886295b152bab03",
+    "reports/mirror-evaluation.json": "a86f131bdc42a41702289fe178d506c5f8eb43d1d868280bc78a0ffd89920fe5",
+    "reports/mirror-evaluation-audit.json": "3bfb3ae0670bddd184faa8a019db3fdf8120ee241248e6f26738c3a062bd1a55",
+    "reports/mirror-demo/report.json": "2fdff5e83c38511c15db883c35ef66dfe07cd82d5bd7dcef5ada79a24d4e468b",
+    "research/baselines/visionleak-0.1.0.mjs": "94b042685bb55030f5b44f11545c7b6f19ee28cf5971bb3c4598398c2281f2ab",
+    "research/baselines/visionleak-0.3.0.mjs": "859248e6d31ea6101138dcd7c54244e3e67f2bc9ec938451118f56599897788a",
+    "reports/photos-demo/report.json": "c8786f9a7630704874d2139c980a19d42c927e9d29e91fd6ae604cb7118f18f9",
+    "reports/photos-v1/summary.json": "47f90bc49ea7f4c63d0cbe57363283052534186072676e4b36bf5d8a7fb6002d",
+    "reports/photos-v1/summary.md": "abd5b171ed1664ef01401bc874c0bc6fb75287c555cd101429d46bed95e5acd7",
+    "reports/photos-v1/baseline-development/evaluation.json": "459276e6b9435e9ac0e5754cbf3548deae2043a71bcc3b734761e2225a3464d1",
+    "reports/photos-v1/baseline-development/default-audit.json": "4cdaadeba9325a6af69d33e57d19ea5001c28b9f7f07f45183a19c38d88167e0",
+    "reports/photos-v1/baseline-development/mirrors-audit.json": "90353dc1e5369ba1cdd85e2c49f451763031881d178a71d2f3217dbdf56dce89",
+    "reports/photos-v1/baseline-holdout/evaluation.json": "22a4270bb817e0205064240ebd8e73d4c02b4b87c882b69bdf273c76014741c6",
+    "reports/photos-v1/baseline-holdout/default-audit.json": "ff5b4bef1fffb4051b1f0bc06bc7f72126ba64e5b56c105b37f9618c989636c0",
+    "reports/photos-v1/baseline-holdout/mirrors-audit.json": "291c50c8f564e01b746e5193243685dac2756a79014796bc48c1fd1d4984a7e2",
+    "reports/photos-v1/current-development/evaluation.json": "7dd9b3378c33dc7bc54e077cf27b0229cf08b629dadd9a943d92530a974456da",
+    "reports/photos-v1/current-development/default-audit.json": "ecdf9f75cbb6f45ba620a735ac701f47eb265af34db3769718769fdb54656474",
+    "reports/photos-v1/current-development/mirrors-audit.json": "96b4b88163d62ce61e98ad6c528d25e39cef87f34a4bc8b4d08c2cdabfbac96c",
+    "reports/photos-v1/current-development/orientations-audit.json": "270c8a5b7351a850d974bf2df1eb3fe9296c16aaf9460d9d46be61208318e4b1",
+    "reports/photos-v1/current-holdout/evaluation.json": "313fb01f12cae47159338cd5b6e9906b6bb132953f1dbbc953a876a526b8eea1",
+    "reports/photos-v1/current-holdout/default-audit.json": "5b3e981dd86a943f9896eb8cc7ac16b6a452b1c2e4aed1d9380e80a8bb6e50d3",
+    "reports/photos-v1/current-holdout/mirrors-audit.json": "dfd3100d4c9a2ac2ba92356cc92fccf4624ccc70c204106c2e0b688c3bf654f6",
+    "reports/photos-v1/current-holdout/orientations-audit.json": "a0c31ed7bd1cbd5ba944cd3555d7bdbab0aa2f63cf834bfa935532f0fba60f0a",
+    "reports/plan-0.5.0/crops-development/evaluation.json": "8bc89a845cc2a4a88203e1cb44222fc84ec4d4f6d93072ecc2f3a79fcfcb5da0",
+    "reports/plan-0.5.0/crops-development/ground-truth.json": "cf8a7e0007db364b708aea0d4f45fa97ad8ae5bf2acc3e44e535cb566b2fd38e",
+    "reports/plan-0.5.0/crops-development/crops-audit.json": "b02b47c150e11173a7442e33cad6901bc9269097709b6de36ce2426e740c4348",
+    "reports/plan-0.5.0/crops-development/default-audit.json": "296725770e19635428e1078656f2324e73f9648770c590163337747b22281832",
+    "reports/plan-0.5.0/crops-holdout/evaluation.json": "4a617b2c33ce4f3b5231924ff67f95816aeb8367103d620d2b70fbc66039279a",
+    "reports/plan-0.5.0/crops-holdout/ground-truth.json": "80f0248780effcf50cd749d86758aab0c15eae6178fc90bc02a12e581b5c4ee1",
+    "reports/plan-0.5.0/crops-holdout/crops-audit.json": "5b402bf24ba1140f2db3ce1b2e9fa01acb1a9c8372e42cf01ff661a49c4a3dfc",
+    "reports/plan-0.5.0/crops-holdout/default-audit.json": "21c7e3053b15b4a52d3b456292249ea5c489aff4f0ac3649da498557f22c99bb",
+    "reports/plan-0.5.0/scale-phase3-final/results.json": "5995664fdede985645b35e900002f99eb9927e5d13ee5f458f98b1d799a46513",
+    "reports/plan-0.5.0/phase3-browser.json": "a5b0984533079c92a41fd51436b3ae4a5c12c8197dedd420448bde4647092a65",
+    "research/photos-v2/freeze-0.5.0.json": "0705b658d7df908f18c32cd1e6250e547ad88b1ad80a7aa3dbac822c79c2bd04",
+    "demo/qa/workbench-v050.png": "6ea4d2af666b8e99ac7cd503f86a20ea1af3a08afb59891d8488494a69875127",
+    "demo/qa/workbench-mobile-v050.png": "2d422d5c687df9e9495547af538eee884e56417fbe72fcf172e1212e67fd682e",
+    "demo/qa/offline-v050.png": "e41e0ad1379ba339b2cf3fb7ba6e0ce3557ddcbfd09e644166dd581cd57bdec1",
+    "reports/history/pre-0.5.0-20261025/reports/evaluation-audit.json": "8cd0d294caa79db04e55e73f1a13ece3ee69ee037036e3ef92cda0a681acba74",
+    "reports/history/pre-0.5.0-20261025/reports/mirror-evaluation-audit.json": "94f3729a377e4e900d58b86ae705e4347a8801f5053cc3c57c8d5f307a1d3d33",
+    "reports/history/pre-0.5.0-20261025/reports/photos-v1/current-development/default-audit.json": "459636b95f552731ee4d8211fd820d507b15120a35018ccff61c2cd3ec5f655a",
+    "reports/history/pre-0.5.0-20261025/reports/photos-v1/current-development/mirrors-audit.json": "a98871671168893cef88154033276c46c24175adb6fb61bba07380004a5f2489",
+    "reports/history/pre-0.5.0-20261025/reports/photos-v1/current-development/orientations-audit.json": "786a38f9a8ee8756061fafce9058f13d2e4f86261fda695a24be2593b3f2daee",
+    "reports/history/pre-0.5.0-20261025/reports/photos-v1/current-holdout/default-audit.json": "617bc438dba790ac3dc1504ac3f796ea077bfc0724e2f5914a37831b03bfd41b",
+    "reports/history/pre-0.5.0-20261025/reports/photos-v1/current-holdout/mirrors-audit.json": "d053225364b8d8bdf752cb9b1c48c72b3560043f916f785f052e9a8ed3ad08b6",
+    "reports/history/pre-0.5.0-20261025/reports/photos-v1/current-holdout/orientations-audit.json": "834dac1e96ed2ebc12a431024d6a32e2722ee03f1a8541502eb08a30a8bfee1b"
+  },
+  "sourceDigest": "ca9a67ea34841a9467665ff0d699bf6300e98e74b1f221f7befc76e4d1ae8d56",
+  "sourceDigestScope": "core/tools/tests/demo/fixtures and research/photos-v1, research/photos-v2, examples except demo/qa and caches, plus module/package/oracle/toolchain lock files, pinned runtime versions and .github workflows",
+  "compiledArtifact": {
+    "path": "dist/visionleak.js",
+    "sha256": "505893ee6fc69a95446826cefc4c7941ab44098a982d33a979cf245b7b135e73"
+  },
+  "cleanCopy": {
+    "status": "see-release-attestation",
+    "path": "reports/release-verification.json",
+    "note": "The final ZIP checksum and extracted-copy execution are recorded outside the archive to avoid a self-referential checksum."
+  },
+  "finishedAt": "2026-10-25T17:17:47.815Z"
+}

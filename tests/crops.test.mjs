@@ -33,6 +33,8 @@ test('actual CLI offset/aspect crops remain candidates, enter gate, validate and
  assert.equal(run('plain',[]).status,0);const base=JSON.parse(await readFile(join(temp,'plain/report.json'),'utf8'));assert.equal(base.pairs.length,0);
  const result=run('crop',['--include-crops','--fail-on','candidate']);assert.equal(result.status,3,result.stderr);
  const report=JSON.parse(await readFile(join(temp,'crop/report.json'),'utf8'));assert.equal(report.complete,true);assert.equal(report.pairs.length,2);assert.ok(report.pairs.every(p=>p.evidence==='local-candidate'&&p.distance===0));assert.deepEqual(report.groups,[]);assert.equal(validateReport(report).pairs.length,2);assert.equal(JSON.parse(result.stdout).evidenceCounts.localCandidate,2);
+ const verified=spawnSync(process.execPath,['tools/cli.mjs','verify','--root',root,'--report',join(temp,'crop/report.json')],{encoding:'utf8'});
+ assert.equal(verified.status,0,verified.stderr);const receipt=JSON.parse(verified.stdout);assert.equal(receipt.counts.valid,0);assert.equal(receipt.counts.skippedCandidates,2);assert.equal(receipt.verificationScope.candidatesRecomputed,false);
  const invalid=structuredClone(report);invalid.pairs[0].matchLocal.leftWindow=20;assert.throws(()=>validateReport(invalid),/局部/);
  const scope=workflow({operation:'groups',report});assert.equal(scope.candidateGroups.length,1);
  }finally{await rm(temp,{recursive:true,force:true});}

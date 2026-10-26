@@ -1,0 +1,451 @@
+{
+  "scope": "Previously viewed photo partitions are regression data, not a new holdout. Full ordered pairs, local witnesses, distances and exact groups compared at seven thresholds.",
+  "baselineSha256": "505893ee6fc69a95446826cefc4c7941ab44098a982d33a979cf245b7b135e73",
+  "candidateSha256": "864c51f7ebc1fc7fcb5b5a93052635984f91fcce0c9861f0e8e8a8d8b63a52bd",
+  "rows": [
+    {
+      "partition": "development",
+      "threshold": 0,
+      "pairs": 185,
+      "orderedPairsAndWitnessesEqual": true,
+      "before": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 16282,
+        "distanceEvaluations": 16087,
+        "pairChecks": 195,
+        "emittedPairs": 185,
+        "indexNodes": 70,
+        "reason": "",
+        "localComparisons": 15700,
+        "localIndexNodes": 1301
+      },
+      "after": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 13014,
+        "distanceEvaluations": 12819,
+        "pairChecks": 195,
+        "emittedPairs": 185,
+        "indexNodes": 70,
+        "reason": "",
+        "indexOperations": 28824,
+        "indexOperationLimit": 160000000,
+        "localComparisons": 12432,
+        "localIndexNodes": 1301
+      }
+    },
+    {
+      "partition": "development",
+      "threshold": 1,
+      "pairs": 192,
+      "orderedPairsAndWitnessesEqual": true,
+      "before": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 35836,
+        "distanceEvaluations": 35630,
+        "pairChecks": 206,
+        "emittedPairs": 192,
+        "indexNodes": 70,
+        "reason": "",
+        "localComparisons": 34998,
+        "localIndexNodes": 1301
+      },
+      "after": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 14973,
+        "distanceEvaluations": 14767,
+        "pairChecks": 206,
+        "emittedPairs": 192,
+        "indexNodes": 70,
+        "reason": "",
+        "indexOperations": 28824,
+        "indexOperationLimit": 160000000,
+        "localComparisons": 14135,
+        "localIndexNodes": 1301
+      }
+    },
+    {
+      "partition": "development",
+      "threshold": 3,
+      "pairs": 192,
+      "orderedPairsAndWitnessesEqual": true,
+      "before": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 153325,
+        "distanceEvaluations": 153117,
+        "pairChecks": 208,
+        "emittedPairs": 192,
+        "indexNodes": 70,
+        "reason": "",
+        "localComparisons": 151765,
+        "localIndexNodes": 1301
+      },
+      "after": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 18904,
+        "distanceEvaluations": 18696,
+        "pairChecks": 208,
+        "emittedPairs": 192,
+        "indexNodes": 70,
+        "reason": "",
+        "indexOperations": 28824,
+        "indexOperationLimit": 160000000,
+        "localComparisons": 17344,
+        "localIndexNodes": 1301
+      }
+    },
+    {
+      "partition": "development",
+      "threshold": 4,
+      "pairs": 193,
+      "orderedPairsAndWitnessesEqual": true,
+      "before": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 262603,
+        "distanceEvaluations": 262394,
+        "pairChecks": 209,
+        "emittedPairs": 193,
+        "indexNodes": 70,
+        "reason": "",
+        "localComparisons": 260609,
+        "localIndexNodes": 1301
+      },
+      "after": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 31395,
+        "distanceEvaluations": 31186,
+        "pairChecks": 209,
+        "emittedPairs": 193,
+        "indexNodes": 70,
+        "reason": "",
+        "indexOperations": 196385,
+        "indexOperationLimit": 160000000,
+        "localComparisons": 29401,
+        "localIndexNodes": 1301
+      }
+    },
+    {
+      "partition": "development",
+      "threshold": 6,
+      "pairs": 194,
+      "orderedPairsAndWitnessesEqual": true,
+      "before": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 564635,
+        "distanceEvaluations": 564425,
+        "pairChecks": 210,
+        "emittedPairs": 194,
+        "indexNodes": 70,
+        "reason": "",
+        "localComparisons": 561701,
+        "localIndexNodes": 1301
+      },
+      "after": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 42203,
+        "distanceEvaluations": 41993,
+        "pairChecks": 210,
+        "emittedPairs": 194,
+        "indexNodes": 70,
+        "reason": "",
+        "indexOperations": 196385,
+        "indexOperationLimit": 160000000,
+        "localComparisons": 39269,
+        "localIndexNodes": 1301
+      }
+    },
+    {
+      "partition": "development",
+      "threshold": 7,
+      "pairs": 194,
+      "orderedPairsAndWitnessesEqual": true,
+      "before": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 736419,
+        "distanceEvaluations": 736209,
+        "pairChecks": 210,
+        "emittedPairs": 194,
+        "indexNodes": 70,
+        "reason": "",
+        "localComparisons": 733140,
+        "localIndexNodes": 1301
+      },
+      "after": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 46681,
+        "distanceEvaluations": 46471,
+        "pairChecks": 210,
+        "emittedPairs": 194,
+        "indexNodes": 70,
+        "reason": "",
+        "indexOperations": 196385,
+        "indexOperationLimit": 160000000,
+        "localComparisons": 43402,
+        "localIndexNodes": 1301
+      }
+    },
+    {
+      "partition": "development",
+      "threshold": 8,
+      "pairs": 221,
+      "orderedPairsAndWitnessesEqual": true,
+      "before": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 907875,
+        "distanceEvaluations": 907638,
+        "pairChecks": 237,
+        "emittedPairs": 221,
+        "indexNodes": 70,
+        "reason": "",
+        "localComparisons": 904271,
+        "localIndexNodes": 1301
+      },
+      "after": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 907875,
+        "distanceEvaluations": 907638,
+        "pairChecks": 237,
+        "emittedPairs": 221,
+        "indexNodes": 70,
+        "reason": "",
+        "localComparisons": 904271,
+        "localIndexNodes": 1301
+      }
+    },
+    {
+      "partition": "holdout",
+      "threshold": 0,
+      "pairs": 187,
+      "orderedPairsAndWitnessesEqual": true,
+      "before": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 15344,
+        "distanceEvaluations": 15145,
+        "pairChecks": 199,
+        "emittedPairs": 187,
+        "indexNodes": 68,
+        "reason": "",
+        "localComparisons": 14784,
+        "localIndexNodes": 1325
+      },
+      "after": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 12587,
+        "distanceEvaluations": 12388,
+        "pairChecks": 199,
+        "emittedPairs": 187,
+        "indexNodes": 68,
+        "reason": "",
+        "indexOperations": 44963,
+        "indexOperationLimit": 160000000,
+        "localComparisons": 12027,
+        "localIndexNodes": 1325
+      }
+    },
+    {
+      "partition": "holdout",
+      "threshold": 1,
+      "pairs": 189,
+      "orderedPairsAndWitnessesEqual": true,
+      "before": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 31914,
+        "distanceEvaluations": 31710,
+        "pairChecks": 204,
+        "emittedPairs": 189,
+        "indexNodes": 68,
+        "reason": "",
+        "localComparisons": 31116,
+        "localIndexNodes": 1325
+      },
+      "after": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 15264,
+        "distanceEvaluations": 15060,
+        "pairChecks": 204,
+        "emittedPairs": 189,
+        "indexNodes": 68,
+        "reason": "",
+        "indexOperations": 44963,
+        "indexOperationLimit": 160000000,
+        "localComparisons": 14466,
+        "localIndexNodes": 1325
+      }
+    },
+    {
+      "partition": "holdout",
+      "threshold": 3,
+      "pairs": 217,
+      "orderedPairsAndWitnessesEqual": true,
+      "before": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 119100,
+        "distanceEvaluations": 118866,
+        "pairChecks": 234,
+        "emittedPairs": 217,
+        "indexNodes": 68,
+        "reason": "",
+        "localComparisons": 117778,
+        "localIndexNodes": 1325
+      },
+      "after": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 21272,
+        "distanceEvaluations": 21038,
+        "pairChecks": 234,
+        "emittedPairs": 217,
+        "indexNodes": 68,
+        "reason": "",
+        "indexOperations": 44963,
+        "indexOperationLimit": 160000000,
+        "localComparisons": 19950,
+        "localIndexNodes": 1325
+      }
+    },
+    {
+      "partition": "holdout",
+      "threshold": 4,
+      "pairs": 225,
+      "orderedPairsAndWitnessesEqual": true,
+      "before": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 195974,
+        "distanceEvaluations": 195727,
+        "pairChecks": 247,
+        "emittedPairs": 225,
+        "indexNodes": 68,
+        "reason": "",
+        "localComparisons": 194329,
+        "localIndexNodes": 1325
+      },
+      "after": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 42813,
+        "distanceEvaluations": 42566,
+        "pairChecks": 247,
+        "emittedPairs": 225,
+        "indexNodes": 68,
+        "reason": "",
+        "indexOperations": 261692,
+        "indexOperationLimit": 160000000,
+        "localComparisons": 41168,
+        "localIndexNodes": 1325
+      }
+    },
+    {
+      "partition": "holdout",
+      "threshold": 6,
+      "pairs": 251,
+      "orderedPairsAndWitnessesEqual": true,
+      "before": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 409002,
+        "distanceEvaluations": 408727,
+        "pairChecks": 275,
+        "emittedPairs": 251,
+        "indexNodes": 68,
+        "reason": "",
+        "localComparisons": 406735,
+        "localIndexNodes": 1325
+      },
+      "after": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 61742,
+        "distanceEvaluations": 61467,
+        "pairChecks": 275,
+        "emittedPairs": 251,
+        "indexNodes": 68,
+        "reason": "",
+        "indexOperations": 261692,
+        "indexOperationLimit": 160000000,
+        "localComparisons": 59475,
+        "localIndexNodes": 1325
+      }
+    },
+    {
+      "partition": "holdout",
+      "threshold": 7,
+      "pairs": 286,
+      "orderedPairsAndWitnessesEqual": true,
+      "before": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 536221,
+        "distanceEvaluations": 535911,
+        "pairChecks": 310,
+        "emittedPairs": 286,
+        "indexNodes": 68,
+        "reason": "",
+        "localComparisons": 533633,
+        "localIndexNodes": 1325
+      },
+      "after": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 69900,
+        "distanceEvaluations": 69590,
+        "pairChecks": 310,
+        "emittedPairs": 286,
+        "indexNodes": 68,
+        "reason": "",
+        "indexOperations": 261692,
+        "indexOperationLimit": 160000000,
+        "localComparisons": 67312,
+        "localIndexNodes": 1325
+      }
+    },
+    {
+      "partition": "holdout",
+      "threshold": 8,
+      "pairs": 314,
+      "orderedPairsAndWitnessesEqual": true,
+      "before": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 670402,
+        "distanceEvaluations": 670062,
+        "pairChecks": 340,
+        "emittedPairs": 314,
+        "indexNodes": 68,
+        "reason": "",
+        "localComparisons": 667503,
+        "localIndexNodes": 1325
+      },
+      "after": {
+        "inputImages": 112,
+        "processedImages": 112,
+        "comparisons": 670402,
+        "distanceEvaluations": 670062,
+        "pairChecks": 340,
+        "emittedPairs": 314,
+        "indexNodes": 68,
+        "reason": "",
+        "localComparisons": 667503,
+        "localIndexNodes": 1325
+      }
+    }
+  ]
+}

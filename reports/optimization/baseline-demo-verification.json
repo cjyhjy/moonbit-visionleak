@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "visionleak-demo-qa-v1",
+  "status": "passed",
+  "version": "0.5.0",
+  "scope": "Actual final UI and artifact: default/mirror/photo regression plus local crop review, persistence, mobile and network-disabled original offline HTML.",
+  "verifiedAt": "2026-10-25T17:09:23.419109+00:00",
+  "servedAuditId": "655c8e4c89f25201be0ee67dfbe48ea5907dfc7cc64aefe5f42c31482ad1a523",
+  "mirrorAuditId": "b55583134c3f58fc35255b9916171b6498ea0ec54f16128f4eff62a19265a3b5",
+  "photoAuditId": "b7868a4da4d61dc0d044046a8ebd4cc1c151a3124f9dc31a87252e4d1afa0b5f",
+  "localAuditId": "67c5328dbddd2e329ead596ba55270afcd57f39ca4a566669b2e768125ff254f",
+  "sourceHashes": {
+    "demo/index.html": "c0d0aae4eeb42265eb0b1e70e54a1b90c5f53e4062ec49a36ad2462fadd9dcf5",
+    "demo/styles.css": "3a77e33a296edce40eb4d16c512adcbbc70c56203b2044b333a8afae9bc23791",
+    "demo/app.mjs": "1840d32ed1108008ea6933e65fccacc1c6dbbdbcfebcd0360f75ace40f4a1761",
+    "demo/review-validation.mjs": "b69b57c9af39a640a573b5c65c84bef5841ecb27c3ec696e6f27a25df8692034",
+    "demo/report-identity.mjs": "559039cb991ad6f22e508fd230871721774f19398c6b86b2005e2fd34e7d3cdc",
+    "demo/review-workflow.mjs": "53a0ce4173b681d55fd247b536ce3ae13d974b08938cd9c811b2ceb428475628"
+  },
+  "coreArtifactSha256": "505893ee6fc69a95446826cefc4c7941ab44098a982d33a979cf245b7b135e73",
+  "browser": "Tabbit 154.0.8037.58",
+  "checks": [
+    {
+      "name": "default-mirror-photo-regression",
+      "status": "passed",
+      "evidence": "reports/plan-0.5.0/logs/phase4-browser-legacy.json"
+    },
+    {
+      "name": "local-review-desktop-mobile-offline",
+      "status": "passed",
+      "evidence": "reports/plan-0.5.0/phase3-browser.json"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "demo/qa/workbench-v050.png",
+      "sha256": "6ea4d2af666b8e99ac7cd503f86a20ea1af3a08afb59891d8488494a69875127"
+    },
+    {
+      "path": "demo/qa/workbench-mobile-v050.png",
+      "sha256": "2d422d5c687df9e9495547af538eee884e56417fbe72fcf172e1212e67fd682e"
+    },
+    {
+      "path": "demo/qa/offline-v050.png",
+      "sha256": "e41e0ad1379ba339b2cf3fb7ba6e0ce3557ddcbfd09e644166dd581cd57bdec1"
+    }
+  ],
+  "notTested": [
+    "Physical mobile device; viewport emulation was used.",
+    "Standalone GitHub Action example workflow; its actual CLI gate is covered by integration tests."
+  ]
+}

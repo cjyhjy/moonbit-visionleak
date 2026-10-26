@@ -14,7 +14,7 @@
   "groundTruthSha256": "a6b89999061cd4283218db3c3c17483506e2c8e7f3c2eba859e43269ad9695a7",
   "sourcesSha256": "7b59138a6358d1f25c205b2e5d8fb8803ab101c8d980ef0991bd6f6c3ad8248a",
   "protocolSha256": "027bc300e5b46eb18b5f9afb6871678b1d880de91a120a9ea2c21c0b017c1847",
-  "engineSha256": "505893ee6fc69a95446826cefc4c7941ab44098a982d33a979cf245b7b135e73",
+  "engineSha256": "ad556a709752b9add24a71fed5943442428e277b3b588c1a1692a7c2e4379507",
   "evaluatorSha256": "fbad0dcd229758fc39877377f07a17acc3e4c818a64ae4ffc9e53796c3e3c7e4",
   "environment": {
     "python": "3.13.15",
@@ -1827,7 +1827,7 @@
           "prediction": null
         }
       ],
-      "auditId": "5f045d68b051404ad0086b1bf9c56e1c360fde4623aaadedad9841feecd20f73",
+      "auditId": "59846882acf9aac15efbe2f3d45bd46d87de04173e57c9d5adb737b27fff92cc",
       "stats": {
         "inputImages": 50,
         "processedImages": 50,
@@ -1863,11 +1863,11 @@
         "6"
       ],
       "wallSeconds": [
-        0.34554812498390675,
-        0.3458156669512391,
-        0.3292525000870228
+        0.3549532503820956,
+        0.345683041960001,
+        0.3494209158234298
       ],
-      "medianWallSeconds": 0.34554812498390675
+      "medianWallSeconds": 0.3494209158234298
     },
     "mirrors": {
       "scores": {
@@ -2742,7 +2742,7 @@
           "prediction": null
         }
       ],
-      "auditId": "d524569065bb1f51f9872836ab3a71f47c24b0e3840b02f28232ef8a8b743471",
+      "auditId": "8dca984476cec5a3bf93832a77bac1032e2ab8071c81ab2a18ed1f9efeee1707",
       "stats": {
         "inputImages": 50,
         "processedImages": 50,
@@ -2779,11 +2779,11 @@
         "--include-mirrors"
       ],
       "wallSeconds": [
-        0.36961299972608685,
-        0.3610449996776879,
-        0.36163562489673495
+        0.4113039579242468,
+        0.4224583748728037,
+        0.3814317500218749
       ],
-      "medianWallSeconds": 0.36163562489673495
+      "medianWallSeconds": 0.4113039579242468
     },
     "orientations": {
       "scores": {
@@ -3227,16 +3227,18 @@
           "prediction": null
         }
       ],
-      "auditId": "7c0c14fe3ab9f2030de0e6f938addb81edd30474598a20215f5cb70c6e67b537",
+      "auditId": "2b454993fbc4b92b46f03765620c6b102ad4889d1df0396f2c7393fbb350af53",
       "stats": {
         "inputImages": 50,
         "processedImages": 50,
-        "comparisons": 21539,
-        "distanceEvaluations": 21351,
+        "comparisons": 16364,
+        "distanceEvaluations": 16176,
         "pairChecks": 188,
         "emittedPairs": 124,
         "indexNodes": 149,
-        "reason": ""
+        "reason": "",
+        "indexOperations": 8071,
+        "indexOperationLimit": 16000000
       },
       "options": {
         "threshold": 6,
@@ -3265,11 +3267,11 @@
         "--include-rotations"
       ],
       "wallSeconds": [
-        0.5518954168073833,
-        0.5859447498805821,
-        0.6212955829687417
+        0.6330385003238916,
+        0.640071792062372,
+        0.6436414159834385
       ],
-      "medianWallSeconds": 0.5859447498805821
+      "medianWallSeconds": 0.640071792062372
     }
   },
   "baselineComparison": {
@@ -3338,7 +3340,7 @@
           "elapsedMs": 293
         },
         "after": {
-          "elapsedMs": 276
+          "elapsedMs": 294
         },
         "note": "Observational; never a regression failure condition."
       }
@@ -3408,7 +3410,7 @@
           "elapsedMs": 347
         },
         "after": {
-          "elapsedMs": 308
+          "elapsedMs": 326
         },
         "note": "Observational; never a regression failure condition."
       }
@@ -3427,14 +3429,14 @@
         {
           "field": "comparisons",
           "before": 21539,
-          "after": 21539,
-          "delta": 0
+          "after": 16364,
+          "delta": -5175
         },
         {
           "field": "distanceEvaluations",
           "before": 21351,
-          "after": 21351,
-          "delta": 0
+          "after": 16176,
+          "delta": -5175
         },
         {
           "field": "emittedPairs",
@@ -3447,6 +3449,18 @@
           "before": 149,
           "after": 149,
           "delta": 0
+        },
+        {
+          "field": "indexOperationLimit",
+          "before": null,
+          "after": 16000000,
+          "delta": null
+        },
+        {
+          "field": "indexOperations",
+          "before": null,
+          "after": 8071,
+          "delta": null
         },
         {
           "field": "inputImages",
@@ -3478,7 +3492,7 @@
           "elapsedMs": 598
         },
         "after": {
-          "elapsedMs": 563
+          "elapsedMs": 587
         },
         "note": "Observational; never a regression failure condition."
       }

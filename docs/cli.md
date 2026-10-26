@@ -151,3 +151,7 @@ CLI 增加 `--include-mirrors`；JS `fingerprint({width,height,rgba,includeMirro
 `export-fixes --report REPORT --out FILE [--review REVIEW]` 输出 group_id,evidence_level,split,path,review_status,suggestion。确定性组按 train、validation、test 顺序保留一份；候选必须 confirmed 后才给建议，工具不执行删除。
 
 `--include-crops` 默认关闭：20 个固定窗口、网格对比度至少 16、共享比较预算，新增 local-candidate。报告 localProfile 解释窗口，matchLocal 记录首个匹配窗口见证；其距离不是全部窗口最小值。窗口基于 dHash 取样图，完整像素摘要不变。详情和不兼容预算迁移见 [0.5.0 变更](changes-0.5.0.md)。
+
+## 0.6.0 下游契约
+
+`node tools/cli.mjs capabilities` 返回实际版本、报告格式、参数边界和复验范围。详见 [0.6.0 集成说明](changes-0.6.0.md)。`verify` 的 `verificationScope` 明确候选未重新计算，退出 0 不表示全部候选已验证。

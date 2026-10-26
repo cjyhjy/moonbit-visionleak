@@ -48,6 +48,7 @@ priv struct Budget {
   maximum : Int32
   mut work : Int32
   mut distances : Int32
+  mut index_work : Int32
   mut pair_checks : Int32
   mut reason : String
 }
@@ -159,6 +160,8 @@ fn run_audit(
   let pairs : Array[Json] = []
   let nodes : Array[BkNode] = []
   let local_nodes : Array[LocalNode] = []
+  let index = mih_new()
+  let local_index = mih_new()
   let mut local_work = 0
   let by_bytes : Map[String, Array[Int32]] = Map([])
   let by_pixels : Map[String, Array[Int32]] = Map([])
@@ -168,6 +171,7 @@ fn run_audit(
     work: 0,
     distances: 0,
     pair_checks: 0,
+    index_work: 0,
     reason: "",
   }
   let mut processed = 0
@@ -219,9 +223,17 @@ fn run_audit(
       [item.hash]
     }
     for query_hash in variants {
+      let paths = mih_paths(index, query_hash, threshold, budget)
+      if budget.reason != "" {
+        break
+      }
       let pending : Array[Int32] = if nodes.is_empty() { [] } else { [0] }
       while !pending.is_empty() {
-        let n = nodes[pending.pop().unwrap()]
+        let node_id = pending.pop().unwrap()
+        if !mih_contains(paths, node_id) {
+          continue
+        }
+        let n = nodes[node_id]
         if !budget.take(true) {
           break
         }
@@ -274,10 +286,10 @@ fn run_audit(
     if include_crops {
       let before = budget.work
       local_query(
-        items, i, local_nodes, seen, pairs, budget, threshold, max_pairs,
+        items, i, local_nodes, local_index, seen, pairs, budget, threshold, max_pairs,
       )
       if budget.reason == "" {
-        local_insert(item, i, local_nodes, budget)
+        local_insert(item, i, local_nodes, local_index, budget)
       }
       local_work = local_work + budget.work - before
       if budget.reason != "" {
@@ -287,6 +299,9 @@ fn run_audit(
     for insert_hash in variants {
       if nodes.is_empty() {
         nodes.push({ hash: insert_hash, members: [i], children: Map([]), })
+        if threshold <= 7 {
+          mih_insert(index, insert_hash, -1)
+        }
       } else {
         let mut cursor = 0
         while true {
@@ -302,6 +317,9 @@ fn run_audit(
           match n.children.get(d) {
             Some(child) => cursor = child
             None => {
+              if threshold <= 7 {
+                mih_insert(index, insert_hash, cursor)
+              }
               n.children[d] = nodes.length()
               nodes.push({ hash: insert_hash, members: [i], children: Map([]), })
               break
@@ -364,6 +382,12 @@ fn run_audit(
       "indexNodes": Json(nodes.length()),
       "reason": Json(budget.reason),
     },
+  }
+  if budget.index_work > 0 {
+    if field(result, "stats") is Object(fields) {
+      fields["indexOperations"] = Json(budget.index_work)
+      fields["indexOperationLimit"] = Json(max_work * 16)
+    }
   }
   if include_mirrors {
     if field(result, "options") is Object(fields) {

@@ -9,7 +9,7 @@
   },
   "engine": {
     "name": "visionleak-moonbit",
-    "artifactDigest": "505893ee6fc69a95446826cefc4c7941ab44098a982d33a979cf245b7b135e73"
+    "artifactDigest": "ad556a709752b9add24a71fed5943442428e277b3b588c1a1692a7c2e4379507"
   },
   "ok": true,
   "complete": true,
@@ -1238,12 +1238,14 @@
   "stats": {
     "inputImages": 50,
     "processedImages": 50,
-    "comparisons": 19396,
-    "distanceEvaluations": 19197,
+    "comparisons": 16444,
+    "distanceEvaluations": 16245,
     "pairChecks": 199,
     "emittedPairs": 131,
     "indexNodes": 143,
-    "reason": ""
+    "reason": "",
+    "indexOperations": 5950,
+    "indexOperationLimit": 16000000
   },
   "images": [
     {
@@ -2948,9 +2950,9 @@
       "evidence": "perceptual-component"
     }
   ],
-  "auditId": "b7868a4da4d61dc0d044046a8ebd4cc1c151a3124f9dc31a87252e4d1afa0b5f",
-  "createdAt": "2026-10-25T17:04:40.736Z",
+  "auditId": "1e4a2abee08d5bb2688dcfae954fe028ee793ac904328127fbb2489f78ba962e",
+  "createdAt": "2026-10-26T16:16:11.030Z",
   "timing": {
-    "elapsedMs": 538
+    "elapsedMs": 527
   }
 }

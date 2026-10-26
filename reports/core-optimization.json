@@ -1,6 +1,6 @@
 {
   "schemaVersion": "visionleak-core-comparison-v1",
-  "createdAt": "2026-10-25T17:17:47.699Z",
+  "createdAt": "2026-10-26T16:22:03.117Z",
   "environment": {
     "node": "v26.7.0",
     "platform": "darwin",
@@ -13,10 +13,10 @@
   },
   "candidate": {
     "path": "dist/visionleak.js",
-    "sha256": "505893ee6fc69a95446826cefc4c7941ab44098a982d33a979cf245b7b135e73"
+    "sha256": "ad556a709752b9add24a71fed5943442428e277b3b588c1a1692a7c2e4379507"
   },
   "compatibilityCases": 360,
-  "method": "Same deterministic seed and 1000-fingerprint workloads as tools/benchmark.mjs. Three warmups per engine then ten paired samples with alternating engine order, in one process. Timings include JSON stringify/parse. Full serialized reports also match in 360 separate threshold/budget cases. Synthetic fingerprints, local timing observations only; no general speed or memory claim.",
+  "method": "Same deterministic seed and 1000-fingerprint workloads as tools/benchmark.mjs. Three warmups per engine then ten paired samples with alternating engine order, in one process. Timings include JSON stringify/parse. Full serialized reports match in 360 small-tree threshold/budget cases; large completed workloads compare ordered detection results while allowing work counters to differ. Synthetic fingerprints, local timing observations only; no general speed or memory claim.",
   "results": [
     {
       "name": "index-1000-random-threshold6",
@@ -24,44 +24,46 @@
       "inputSha256": "80b13a81da786199678c68aa846bf3ca31ccb82fe27985c97602dc45883b9ed4",
       "elapsedMs": {
         "baseline": [
-          180.21825,
-          178.24595799999997,
-          177.59858399999985,
-          177.06995799999982,
-          177.65270800000008,
-          178.03262500000005,
-          177.63533299999995,
-          179.47749999999996,
-          177.9554589999998,
-          176.94454199999973
+          186.60762499999998,
+          188.70129199999997,
+          186.292958,
+          186.88870800000018,
+          186.5558329999999,
+          184.46225000000004,
+          185.230458,
+          185.63799999999992,
+          184.53287499999988,
+          186.88041599999997
         ],
         "candidate": [
-          16.913332999999966,
-          17.13991699999997,
-          17.696207999999842,
-          17.039125000000013,
-          17.192291999999952,
-          17.008499999999913,
-          16.882333000000017,
-          17.545042000000194,
-          17.076458000000002,
-          17.236875000000055
+          7.102666999999997,
+          7.077292000000057,
+          6.409791000000041,
+          6.342374999999947,
+          6.831040999999914,
+          6.30316700000003,
+          6.369874999999865,
+          6.012791000000107,
+          6.16516700000011,
+          6.114500000000135
         ]
       },
-      "baselineMedianMs": 177.80408349999993,
-      "candidateMedianMs": 17.108187499999985,
-      "speedup": 10.392923475967287,
+      "baselineMedianMs": 186.42439549999995,
+      "candidateMedianMs": 6.356124999999906,
+      "speedup": 29.329881885583227,
       "outcome": {
         "complete": true,
         "stats": {
           "inputImages": 1000,
           "processedImages": 1000,
-          "comparisons": 215073,
-          "distanceEvaluations": 215073,
+          "comparisons": 9033,
+          "distanceEvaluations": 9033,
           "pairChecks": 0,
           "emittedPairs": 0,
           "indexNodes": 1000,
-          "reason": ""
+          "reason": "",
+          "indexOperations": 61591,
+          "indexOperationLimit": 16000000
         }
       }
     },
@@ -71,33 +73,33 @@
       "inputSha256": "288e634be8af27facf2614e0b39f5572104dabd0d7a0864b9c16efd1d2cd47ca",
       "elapsedMs": {
         "baseline": [
-          2.4844169999996666,
-          3.865291999999954,
-          2.3437920000001213,
-          2.391540999999961,
-          2.34570900000017,
-          2.6809999999995853,
-          2.3802089999999225,
-          2.4049580000000788,
-          2.3472499999998035,
-          2.374040999999579
+          2.547790999999961,
+          2.599750000000313,
+          2.534208000000035,
+          2.5289999999999964,
+          2.5100000000002183,
+          2.571208000000297,
+          2.992583000000195,
+          2.5112089999997806,
+          2.494832999999744,
+          2.698707999999897
         ],
         "candidate": [
-          2.744832999999744,
-          2.775416999999834,
-          2.8028340000000753,
-          2.695625000000291,
-          2.7752909999999247,
-          2.7455410000002303,
-          2.718833999999788,
-          2.686416999999892,
-          2.7162499999999454,
-          2.9022079999999733
+          2.9331669999996848,
+          2.9161669999998594,
+          3.174582999999984,
+          2.815041999999721,
+          2.8446249999997235,
+          2.8571670000001177,
+          2.8359999999997854,
+          2.8213330000003225,
+          2.7937910000000556,
+          2.939624999999978
         ]
       },
-      "baselineMedianMs": 2.385874999999942,
-      "candidateMedianMs": 2.745186999999987,
-      "speedup": 0.8691120131342429,
+      "baselineMedianMs": 2.540999499999998,
+      "candidateMedianMs": 2.8508959999999206,
+      "speedup": 0.8912985601719842,
       "outcome": {
         "complete": false,
         "stats": {

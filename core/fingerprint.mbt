@@ -6,6 +6,7 @@ fn fingerprint_impl(
   rgba : Bytes,
   mirrors : Bool,
   rotations : Bool,
+  crops : Bool,
 ) -> Json {
   if width <= 0 ||
     height <= 0 ||
@@ -22,16 +23,18 @@ fn fingerprint_impl(
       "InvalidPixels", "RGBA byte length does not match dimensions",
     )
   }
-  // Canonical digest domain: ASCII VL1, uint32be width, uint32be height, RGB bytes.
-  let rgb : FixedArray[Byte] = FixedArray::make(11 + count * 3, 0)
-  rgb[0] = 86
-  rgb[1] = 76
-  rgb[2] = 49
-  for k = 0; k < 4; k = k + 1 {
-    rgb[3 + k] = ((width >> ((3 - k) * 8)) & 255).to_byte()
-    rgb[7 + k] = ((height >> ((3 - k) * 8)) & 255).to_byte()
-  }
+  // Keep the VL1 domain, but hash bounded RGB blocks instead of a full RGB copy.
+  let digest = pixel_digest_new(width, height)
+  let rgb : FixedArray[Byte] = FixedArray::make(3 * 4096, 0)
+  let mut used = 0
   let gray : FixedArray[Byte] = FixedArray::make(count, 0)
+  let stride = width + 1
+  let sums = if crops {
+    FixedArray::make(stride * (height + 1), 0)
+  } else {
+    FixedArray::make(0, 0)
+  }
+  let mut row_sum = 0
   let mut lo = 255
   let mut hi = 0
   for p = 0; p < count; p = p + 1 {
@@ -39,11 +42,25 @@ fn fingerprint_impl(
     let r = (rgba[p * 4].to_int() * alpha + 255 * (255 - alpha) + 127) / 255
     let g = (rgba[p * 4 + 1].to_int() * alpha + 255 * (255 - alpha) + 127) / 255
     let b = (rgba[p * 4 + 2].to_int() * alpha + 255 * (255 - alpha) + 127) / 255
-    rgb[11 + p * 3] = r.to_byte()
-    rgb[12 + p * 3] = g.to_byte()
-    rgb[13 + p * 3] = b.to_byte()
+    rgb[used] = r.to_byte()
+    rgb[used + 1] = g.to_byte()
+    rgb[used + 2] = b.to_byte()
+    used = used + 3
+    if used == rgb.length() || p == count - 1 {
+      ignore(sha256_update(digest.hash, Bytes::from_array(rgb[:used])))
+      used = 0
+    }
     let luminance = (299 * r + 587 * g + 114 * b + 500) / 1000
     gray[p] = luminance.to_byte()
+    if crops {
+      let x = p % width
+      let y = p / width
+      if x == 0 {
+        row_sum = 0
+      }
+      row_sum = row_sum + luminance
+      sums[(y + 1) * stride + x + 1] = sums[y * stride + x + 1] + row_sum
+    }
     if luminance < lo {
       lo = luminance
     }
@@ -81,7 +98,7 @@ fn fingerprint_impl(
     "ok": true,
     "width": Json(width),
     "height": Json(height),
-    "pixelDigest": Json(sha256(Bytes::from_array(rgb[:]))),
+    "pixelDigest": Json(sha256_final(digest.hash)),
     "dhash": Json(grid_hash(grid)),
     "contrast": Json(hi - lo),
     "normalization": "vl-rgb-v1",
@@ -100,6 +117,15 @@ fn fingerprint_impl(
         fields["dhashMirrorRotations"] = Json(
           Array::makei(3, i => oriented_hash(gray, width, height, i + 1, true)),
         )
+      }
+    }
+  }
+  if crops {
+    if result is Object(fields) {
+      if local_fingerprint(width, height, sums) is Object(local_fields) {
+        for key, value in local_fields {
+          fields[key] = value
+        }
       }
     }
   }
@@ -170,7 +196,7 @@ fn grid_hash(grid : Array[Int32]) -> String {
 
 ///|
 pub fn fingerprint(width : Int32, height : Int32, rgba : Bytes) -> Json {
-  fingerprint_impl(width, height, rgba, false, false)
+  fingerprint_impl(width, height, rgba, false, false, false)
 }
 
 ///|
@@ -180,7 +206,7 @@ pub fn fingerprint_mirrored_rgba(
   height : Int32,
   rgba : Bytes,
 ) -> String {
-  fingerprint_impl(width, height, rgba, true, false).stringify()
+  fingerprint_impl(width, height, rgba, true, false, false).stringify()
 }
 
 ///|
@@ -228,5 +254,17 @@ pub fn fingerprint_oriented_rgba(
   rgba : Bytes,
   mirrors : Bool,
 ) -> String {
-  fingerprint_impl(width, height, rgba, mirrors, true).stringify()
+  fingerprint_impl(width, height, rgba, mirrors, true, false).stringify()
+}
+
+///|
+#export_name("fingerprint_combined_rgba")
+pub fn fingerprint_combined_rgba(
+  width : Int32,
+  height : Int32,
+  rgba : Bytes,
+  mirrors : Bool,
+  rotations : Bool,
+) -> String {
+  fingerprint_impl(width, height, rgba, mirrors, rotations, true).stringify()
 }

@@ -1,13 +1,20 @@
 # Changelog
 
-## 0.5.0 — local release candidate
+## 0.6.0 — performance, review and integration contracts
+
+- MIH prefilter retains BK-tree witness order; work counts and budget-limited prefixes may change.
+- Bounded canonical RGB hashing; review decision shortcuts and local-window overlays.
+- Machine-readable capabilities from executable limits; explicit exact-only verification scope.
+- Published 0.5.0 archives remain immutable. See docs/optimization.md for validation and experimental work.
+
+## 0.5.0 — published
 
 - CI gates by evidence level; deterministic file verification; coverage summaries.
 - Offline HTML, reviewed suggestions CSV and stable group keys; candidate grouping and low-contrast collapse.
 - Full-resolution streaming pixel identity; split aliases; core policy and metrics in MoonBit with independent Python scoring.
 - Experimental opt-in local crop candidates, source/scene-disjoint CC0 evaluation and resource benchmarks.
 - Breaking CLI change: `--max-pixels` now limits perceptual sampling. Use `--max-decode-pixels` to reject oversized sources; see docs/changes-0.5.0.md.
-- Registry publication is pending; this entry does not declare a published release.
+- GitHub Release and Mooncakes publication completed; see [publication receipts](reports/plan-0.5.0/publication-0.5.0/README.md). npm remains private.
 
 ## 0.4.0 真实照片与直角旋转
 

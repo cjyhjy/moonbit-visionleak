@@ -88,6 +88,12 @@ fn cli_parse(argv : Array[Json]) -> Json {
   if args.is_empty() || args.contains("--help") || args[0] == "help" {
     return { "ok": true, "args": { "help": true } }
   }
+  if args[0] == "capabilities" {
+    if args.length() != 1 {
+      return error_json("ARGUMENT_ERROR", "capabilities accepts no options")
+    }
+    return { "ok": true, "args": { "command": "capabilities" } }
+  }
   if args[0] != "audit" {
     return cli_parse_report_command(args)
   }
@@ -272,6 +278,27 @@ pub fn cli_options_json(source : String) -> String {
         return error_json("ARGUMENT_ERROR", "Split names must be an array").stringify()
       }
       resolve_split_scope(names).stringify()
+    }
+    "limits" => {
+      let limits : Map[String, Json] = Map([])
+      for row in cli_limits() {
+        limits[row.1] = {
+          "flag": Json(row.0),
+          "minimum": Json(row.2),
+          "maximum": Json(row.3),
+          "default": Json(row.4),
+        }
+      }
+      let aliases : Map[String, Json] = Map([])
+      for (split, names) in split_alias_groups() {
+        aliases[split] = Json(names)
+      }
+      let result : Json = {
+        "ok": true,
+        "limits": Json::object(limits),
+        "splitAliases": Json::object(aliases),
+      }
+      result.stringify()
     }
     "defaults" => {
       let result : Json = { "ok": true, "options": cli_defaults() }

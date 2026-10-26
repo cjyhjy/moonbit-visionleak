@@ -73,6 +73,7 @@ test('verify detects changed and missing evidence and refuses a tampered report 
   const valid=verify();
   assert.equal(valid.status,0,valid.stderr);
   assert.equal(valid.json.counts.valid,3);
+  assert.deepEqual(valid.json.verificationScope, {evidenceTypes:['byte-identical','pixel-identical'],candidatesRecomputed:false,wholeDatasetReaudited:false});
   const changed=await sharp({create:{width:32,height:24,channels:3,background:'red'}}).png().toBuffer();
   await writeFile(join(f.root,'testing/copy.png'),changed);
   const invalid=verify();

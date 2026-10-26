@@ -10,6 +10,7 @@ import { cli_options_json } from '../dist/visionleak.js';
 import { IDENTITY_VERSION, reportIdentity } from '../demo/report-identity.mjs';
 import { workflow } from './workflow.mjs';
 import { verifyFiles, exportFixes, exportHTML } from './report-tools.mjs';
+import { capabilities } from './capabilities.mjs';
 
 const SPLITS = ['train', 'validation', 'test'];
 const MARKER = '.visionleak-output.json';
@@ -24,6 +25,7 @@ function cliCore(request) {
 export const DEFAULTS = Object.freeze(cliCore({ operation: 'defaults' }).options);
 const HELP = `VisionLeak — local, read-only cross-split image audit
 
+  node tools/cli.mjs capabilities
   node tools/cli.mjs audit --root DATASET --out OUTPUT [options]
   node tools/cli.mjs verify --report REPORT --root DATASET
   node tools/cli.mjs export-html --report REPORT --out FILE [--review REVIEW] [--max-bytes N]
@@ -255,6 +257,10 @@ export async function main(argv = process.argv.slice(2)) {
   try {
     const args = parseArgs(argv);
     if (args.help) { process.stdout.write(HELP); return 0; }
+    if (args.command === 'capabilities') {
+      process.stdout.write(`${JSON.stringify(await capabilities())}\n`);
+      return 0;
+    }
     if (args.command) {
       const result = args.command === 'verify' ? await verifyFiles(args)
         : args.command === 'export-fixes' ? await exportFixes(args) : await exportHTML(args);

@@ -9,7 +9,7 @@
   },
   "engine": {
     "name": "visionleak-moonbit",
-    "artifactDigest": "505893ee6fc69a95446826cefc4c7941ab44098a982d33a979cf245b7b135e73"
+    "artifactDigest": "ad556a709752b9add24a71fed5943442428e277b3b588c1a1692a7c2e4379507"
   },
   "ok": true,
   "complete": true,
@@ -2177,9 +2177,9 @@
       "evidence": "perceptual-component"
     }
   ],
-  "auditId": "39b39942b93f307d8556ae55f85c434eacfc64b180459b714ae23c7c293d8c5e",
-  "createdAt": "2026-10-25T17:17:33.498Z",
+  "auditId": "d63c2c5446e582d6d2307960fe773de5e44659d698a9f3c7b88f71909eac302b",
+  "createdAt": "2026-10-26T16:21:48.376Z",
   "timing": {
-    "elapsedMs": 321
+    "elapsedMs": 318
   }
 }

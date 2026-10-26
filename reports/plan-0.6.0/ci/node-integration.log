@@ -1,0 +1,62 @@
+
+> visionleak@0.6.0 test
+> node --test tests/*.test.mjs
+
+✔ installed capability contract agrees with real parser bounds, artifact and package (148.420834ms)
+✔ real CLI separates byte equality from decoded pixel equality, preserves input, and binds stable audit IDs (272.446166ms)
+✔ decode plus real core follows EXIF orientation and canonical white alpha semantics (9.890959ms)
+✔ a bad image and a symlink leave reviewable partial evidence and explicit errors (76.146792ms)
+✔ image, pixel, file, total-pixel, comparison, and output budgets are observable (410.107167ms)
+✔ fatal arguments and empty roots return structured errors without creating a report (332.776375ms)
+✔ overwrite is explicit and refuses unrelated files even with --force (258.50725ms)
+✔ exported API merges partial options, validates them, and audit identity includes scan scope and errors (33.289084ms)
+✔ loopback server serves only fixed assets and one report, and denies traversal, symlinks, writes, and foreign hosts (87.587875ms)
+✔ symlinked output ancestry is rejected before creating directories in the dataset (2.399125ms)
+✔ server rejects altered stable report fields even when the old auditId is retained (8.898ms)
+✔ opt-in mirror CLI emits review candidates from actual reflected files and binds mode to identity (83.270584ms)
+✔ opt-in rotations audit physical rotated and rotated-reflected files without making exact groups (88.503958ms)
+✔ compiled JSON and bytes exports preserve the host protocol (3.7435ms)
+✔ incremental SHA-256 opaque JS state accepts Buffer chunks and matches Node crypto (5.531667ms)
+✔ 20 local integral-image fingerprints match independent direct pixel box sums (10.884333ms)
+✔ actual CLI offset/aspect crops remain candidates, enter gate, validate and never form exact groups (289.5525ms)
+✔ local-only evidence is skipped by deterministic verify and cannot trigger the pixel gate (2.772458ms)
+✔ thumbnail sources are local and cannot traverse or execute URLs (0.594292ms)
+✔ validation is atomic and review export roundtrips without modifying machine evidence (4.317583ms)
+✔ filters compose evidence, human decision, path, split, and maximum distance (2.230375ms)
+✔ an imported report cannot reuse another audit server thumbnails (0.183041ms)
+✔ progress distinguishes unreviewed and unsure pairs inside the current scope (0.458042ms)
+✔ next pending navigation wraps inside the filtered queue and skips reviewed/current pairs (5.650084ms)
+✔ marking a filtered pair continues after its old position instead of returning to the beginning (2.640708ms)
+✔ one-step undo removes a new mark and restores an earlier decision including its note (0.512542ms)
+✔ undo cannot erase later notes, imported changes, another audit, or unrelated pair reviews (0.511291ms)
+✔ 12MP JPEG byte copy and lossless reencoding keep full-resolution pixel identity (2617.68775ms)
+✔ sampling budget changes perception size while source decode and total budgets remain hard bounds (20.831125ms)
+✔ mirror host adapter routes to the compiled optional export (8.475208ms)
+✔ MIH active path matches independent exhaustive pairs for every radius 0..7, including edits spread across all segments (106.440334ms)
+✔ MIH local index retains cross-scale witnesses and exact evidence precedence (40.254834ms)
+✔ combined scan preserves legacy local API and independent canonical digest across block boundaries (42.103ms)
+✔ orientation host adapter routes booleans and bytes to the optional core export (10.287541ms)
+✔ legacy mirror mode preserves complete 0.3.0 evidence and work counts on the real development photos (12.988583ms)
+✔ fail-on implements fatal > hit > incomplete > complete and preserves default behavior (681.910959ms)
+✔ fail-on exact ignores pixel-only pairs and pixel ignores candidate-only pairs (214.910042ms)
+✔ verify detects changed and missing evidence and refuses a tampered report before dataset access (277.642959ms)
+✔ verify never follows a report traversal or a symlink to a file outside the dataset (140.170416ms)
+✔ coverage binds canonical splits, rejected codes, ignored files, and budget exhaustion (21.678709ms)
+✔ CSV matches the manually enumerated exact-group keep/remove plan (128.961792ms)
+✔ candidate suggestions require a validated confirmed review and HTML safely includes current review (251.60425ms)
+✔ the committed GitHub Action leak fixture fails the actual local audit command (66.925667ms)
+✔ content identity accepts v0.1.0 reports and reviewed exports without rebinding evidence (7.539334ms)
+✔ v2 canonical identity survives object-key reorder but binds array order and unknown fields (0.911292ms)
+✔ MoonBit identity matches an independent ECMAScript canonicalization oracle for extension fields (11.508542ms)
+✔ public JS pixel adapter rejects inputs that the compiled ABI could coerce (0.609667ms)
+✔ public JS pixel adapter accepts Uint8Array and the Buffer decoder output (7.178667ms)
+✔ all split alias combinations normalize splits while preserving actual paths and directory scope (206.394834ms)
+✔ simultaneous aliases are fatal before output creation instead of merging dataset splits (8.188333ms)
+ℹ tests 50
+ℹ suites 0
+ℹ pass 50
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2752.97125

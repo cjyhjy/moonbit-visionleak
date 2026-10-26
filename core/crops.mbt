@@ -54,6 +54,16 @@ pub fn fingerprint_local_rgba(
       sums[(y + 1) * stride + x + 1] = sums[y * stride + x + 1] + row
     }
   }
+  local_fingerprint(width, height, sums).stringify()
+}
+
+///|
+fn local_fingerprint(
+  width : Int32,
+  height : Int32,
+  sums : FixedArray[Int32],
+) -> Json {
+  let stride = width + 1
   let hashes : Array[String] = []
   let contrasts : Array[Int32] = []
   for rect in crop_windows() {
@@ -91,7 +101,7 @@ pub fn fingerprint_local_rgba(
     "localContrasts": Json(contrasts),
     "localHashVersion": "vl-local-dhash-v1",
   }
-  result.stringify()
+  result
 }
 
 ///|
@@ -106,6 +116,7 @@ fn local_query(
   items : Array[Item],
   i : Int32,
   nodes : Array[LocalNode],
+  index : MihIndex,
   seen : Map[Int32, Bool],
   pairs : Array[Json],
   budget : Budget,
@@ -117,9 +128,17 @@ fn local_query(
     if item.local_contrasts[window] < 16 {
       continue
     }
+    let paths = mih_paths(index, hash, threshold, budget)
+    if budget.reason != "" {
+      return
+    }
     let pending = if nodes.is_empty() { [] } else { [0] }
     while !pending.is_empty() {
-      let node = nodes[pending.pop().unwrap()]
+      let node_id = pending.pop().unwrap()
+      if !mih_contains(paths, node_id) {
+        continue
+      }
+      let node = nodes[node_id]
       if !budget.take(true) {
         return
       }
@@ -168,6 +187,7 @@ fn local_insert(
   item : Item,
   i : Int32,
   nodes : Array[LocalNode],
+  index : MihIndex,
   budget : Budget,
 ) -> Unit {
   for window, hash in item.local_hashes {
@@ -176,6 +196,7 @@ fn local_insert(
     }
     if nodes.is_empty() {
       nodes.push({ hash, members: [(i, window)], children: Map([]), })
+      mih_insert(index, hash, -1)
       continue
     }
     let mut cursor = 0
@@ -192,6 +213,7 @@ fn local_insert(
       match node.children.get(d) {
         Some(child) => cursor = child
         None => {
+          mih_insert(index, hash, cursor)
           node.children[d] = nodes.length()
           nodes.push({ hash, members: [(i, window)], children: Map([]), })
           break

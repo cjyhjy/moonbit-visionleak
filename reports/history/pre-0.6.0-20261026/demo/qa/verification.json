@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "visionleak-demo-qa-v1",
+  "status": "passed",
+  "version": "unreleased-after-0.5.0",
+  "scope": "Current desktop/mobile review shortcuts, undo, input exclusion, persistence, local overlay geometry and nonlocal overlay clearing. Prior broader browser acceptance is preserved separately and not re-attested.",
+  "verifiedAt": "2026-10-26T12:38:26.794499+00:00",
+  "localAuditId": "67c5328dbddd2e329ead596ba55270afcd57f39ca4a566669b2e768125ff254f",
+  "sourceHashes": {
+    "demo/index.html": "b87dc673af90d84b2dbb638354a11a1a6e3a2909484ae03d9caffbb280746f2e",
+    "demo/styles.css": "65c44403c6a12256ab0d837825ee78121791205e5f25eb12369ef1470f816e46",
+    "demo/app.mjs": "32adfe2ef977836f7c0f93b9b3b0f11ddb7a50c2e89d3950254183c6cc84d4b8",
+    "demo/review-validation.mjs": "b69b57c9af39a640a573b5c65c84bef5841ecb27c3ec696e6f27a25df8692034",
+    "demo/report-identity.mjs": "559039cb991ad6f22e508fd230871721774f19398c6b86b2005e2fd34e7d3cdc",
+    "demo/review-workflow.mjs": "53a0ce4173b681d55fd247b536ce3ae13d974b08938cd9c811b2ceb428475628"
+  },
+  "coreArtifactSha256": "864c51f7ebc1fc7fcb5b5a93052635984f91fcce0c9861f0e8e8a8d8b63a52bd",
+  "checks": [
+    {
+      "name": "six-decision-shortcuts",
+      "status": "passed"
+    },
+    {
+      "name": "undo-shortcut",
+      "status": "passed"
+    },
+    {
+      "name": "input-exclusion",
+      "status": "passed"
+    },
+    {
+      "name": "navigation",
+      "status": "passed"
+    },
+    {
+      "name": "reload-decision-and-note-persistence",
+      "status": "passed"
+    },
+    {
+      "name": "desktop-overlay-visual",
+      "status": "passed"
+    },
+    {
+      "name": "mobile-overlay-ratios-and-no-horizontal-overflow",
+      "status": "passed"
+    },
+    {
+      "name": "nonlocal-overlay-clearing",
+      "status": "passed"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "reports/optimization/workbench-desktop.png",
+      "sha256": "0ab0257e5b5ca265246dd4b28495d9c8a5c7727645039b324b489070d1691985"
+    },
+    {
+      "path": "reports/optimization/workbench-mobile.png",
+      "sha256": "01520fc1439e77b0f3b4838dd07663d240189286339368ac6bea883a27001db3"
+    }
+  ],
+  "historicalReceipt": "reports/optimization/baseline-demo-verification.json"
+}
