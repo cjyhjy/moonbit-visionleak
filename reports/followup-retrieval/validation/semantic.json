@@ -1,0 +1,69 @@
+{
+  "status": "passed",
+  "fullOutputBudgetComparisons": 144,
+  "independentExhaustiveCases": 12,
+  "scope": "Strict full output includes complete/partial pair order, all witness fields, exact groups, coverage, work counters and budget reasons. Independent exhaustive oracle checks candidate completeness and evidence precedence at MIH radii and radius-8 fallback.",
+  "oracleCounts": [
+    {
+      "name": "repeated-with-exact-and-global-ties",
+      "threshold": 0,
+      "pairs": 697
+    },
+    {
+      "name": "repeated-with-exact-and-global-ties",
+      "threshold": 3,
+      "pairs": 697
+    },
+    {
+      "name": "repeated-with-exact-and-global-ties",
+      "threshold": 4,
+      "pairs": 697
+    },
+    {
+      "name": "repeated-with-exact-and-global-ties",
+      "threshold": 6,
+      "pairs": 697
+    },
+    {
+      "name": "repeated-with-exact-and-global-ties",
+      "threshold": 7,
+      "pairs": 697
+    },
+    {
+      "name": "repeated-with-exact-and-global-ties",
+      "threshold": 8,
+      "pairs": 697
+    },
+    {
+      "name": "known-photos",
+      "threshold": 0,
+      "pairs": 132
+    },
+    {
+      "name": "known-photos",
+      "threshold": 3,
+      "pairs": 135
+    },
+    {
+      "name": "known-photos",
+      "threshold": 4,
+      "pairs": 150
+    },
+    {
+      "name": "known-photos",
+      "threshold": 6,
+      "pairs": 159
+    },
+    {
+      "name": "known-photos",
+      "threshold": 7,
+      "pairs": 163
+    },
+    {
+      "name": "known-photos",
+      "threshold": 8,
+      "pairs": 167
+    }
+  ],
+  "scriptSha256": "68761d28d1bf9d589d668792b1fa5a0e18e4d4b32184009d5c7782a47843b907"
+}

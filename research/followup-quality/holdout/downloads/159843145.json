@@ -1,0 +1,20 @@
+{
+  "id": "159843145",
+  "title": "File:Snowy Forest Path in Winter.jpg",
+  "scene": "forest path",
+  "author": "Fagev869",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Snowy_Forest_Path_in_Winter.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Snowy_Forest_Path_in_Winter.jpg/960px-Snowy_Forest_Path_in_Winter.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Snowy_Forest_Path_in_Winter.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "2cf0ba4eb1ba083bc9a500ab0f8582257b2d521b",
+  "width": 2265,
+  "height": 1500,
+  "downloadSha256": "20476ceed8475cc4b85f1b950b7baccdef511a38b878e4e8ed9bfe9c22929624",
+  "sha256": "8273fbb4646d9c2bb514f46e68d3a4c86552f2e570e8deaff4deaf2c631e2640",
+  "storedFile": "research/followup-quality/holdout/originals/159843145.png",
+  "storedWidth": 384,
+  "storedHeight": 254,
+  "modification": "EXIF transpose, RGB, longest edge <=384 with Pillow LANCZOS, PNG storage; downstream preparation applies product sRGB normalization to every source before crops."
+}

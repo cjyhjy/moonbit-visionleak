@@ -1,0 +1,20 @@
+{
+  "id": "170072252",
+  "title": "File:Venice Canal 20170512.jpg",
+  "scene": "Venice canal",
+  "author": "Chonsp",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Venice_Canal_20170512.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Venice_Canal_20170512.jpg/960px-Venice_Canal_20170512.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Venice_Canal_20170512.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "d7812efa6328fd5f7fe7ae936c24641fd06c25e5",
+  "width": 3840,
+  "height": 5120,
+  "downloadSha256": "daddbb585cf07f9011c0d8f53c2740305e1e34548eb5c9bc6a2ec7d1badc09d2",
+  "sha256": "5a018ffe53b7130e33cb2d8fd24a479b1ac6269248ee87a39ba27b03ce1cb6be",
+  "storedFile": "research/followup-quality/holdout/originals/170072252.png",
+  "storedWidth": 288,
+  "storedHeight": 384,
+  "modification": "EXIF transpose, RGB, longest edge <=384 with Pillow LANCZOS, PNG storage; downstream preparation applies product sRGB normalization to every source before crops."
+}

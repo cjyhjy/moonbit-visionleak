@@ -1,0 +1,107 @@
+{
+  "status": "passed",
+  "version": "0.7.0",
+  "packageSha256": "3d10533116f3b79d03dea23a3944b1ee45b719a3a2398f26630bad9f178848d7",
+  "files": [
+    {
+      "path": "moon.mod",
+      "sha256": "97e7deeecff23aaa87cb3bd486ad6f92a159a354c145a357cd30f0835d6cb524",
+      "matches": true
+    },
+    {
+      "path": "core/moon.pkg",
+      "sha256": "119da56038e3680d53d90cdd8b88e23d8602ff94b482df64c6ae69936daafb1d",
+      "matches": true
+    },
+    {
+      "path": "core/sha256.mbt",
+      "sha256": "f6afe36c0373b044f2e37471e06ccc8bbf31d8f94a0ca16fa2881757fc2c352a",
+      "matches": true
+    },
+    {
+      "path": "core/offline.mbt",
+      "sha256": "b0d9fd714b48c690a00966f29bbd66692fa63402bfd2237511f52f98c6e3c6a1",
+      "matches": true
+    },
+    {
+      "path": "core/crops.mbt",
+      "sha256": "2e7c33f09efab79d67587627d30bf395645f1093dccea98d3c662481aa3e36f7",
+      "matches": true
+    },
+    {
+      "path": "core/cli_options.mbt",
+      "sha256": "fed648ea65e7d4c9c4e938d5d4f04e9787df776bc8634cc8e98fd016e9b115cc",
+      "matches": true
+    },
+    {
+      "path": "core/audit.mbt",
+      "sha256": "1ef6600beacdd217b8e26a44a9f4554ea0321b3abb9594d6bc1334471c442c95",
+      "matches": true
+    },
+    {
+      "path": "core/sampling.mbt",
+      "sha256": "90854de65d99ba745bca5da02dee30fe9fd0fcc589885937806578847821eff6",
+      "matches": true
+    },
+    {
+      "path": "core/mih.mbt",
+      "sha256": "a31609c62f5a29f08675b0af4dca59564f40f411cd66895b23336ff959b182d9",
+      "matches": true
+    },
+    {
+      "path": "core/pkg.generated.mbti",
+      "sha256": "80dcac9db3758c0c1415b6349dcfda3c2fd5089f49b77ea12efa667e1a73e3c5",
+      "matches": true
+    },
+    {
+      "path": "core/pixel_stream.mbt",
+      "sha256": "af2948a9cad08d936473b1d2d5f4d6b089cf6cff279983f6e380a30c480ee230",
+      "matches": true
+    },
+    {
+      "path": "core/review_validation.mbt",
+      "sha256": "a5ca872862c492472cd8a6c4f754dd391a58e55f9e0a5ac96f05879629de053f",
+      "matches": true
+    },
+    {
+      "path": "core/workflow.mbt",
+      "sha256": "2dd73b81d5f4e541f9a94428432959ceb6a72ac0d15909b4712e5d5c883c021c",
+      "matches": true
+    },
+    {
+      "path": "core/json_helpers.mbt",
+      "sha256": "a96a4a33e2816a5ae513b6bc4e70e65cd732684db9a974fb6e568ed988562ea4",
+      "matches": true
+    },
+    {
+      "path": "core/report_identity.mbt",
+      "sha256": "b606b45e67b9d14c7dab49705322c0e2a7fda0bdfb1ceda839e02e6545684a04",
+      "matches": true
+    },
+    {
+      "path": "core/metrics.mbt",
+      "sha256": "b2731c3c40fb9b66e94e7a62c1e4991afa43782ad80669e853bdf1defe7065b7",
+      "matches": true
+    },
+    {
+      "path": "core/review_ranking.mbt",
+      "sha256": "102c608c43945b5ea72a1af110bdc4a57a274e8e7553e5a00745bf1cf2658694",
+      "matches": true
+    },
+    {
+      "path": "core/fingerprint.mbt",
+      "sha256": "ead0ee6cffb6e406afad3c022712386aba4a7eaa633b15372606780c8267e6d4",
+      "matches": true
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "3f738fcff65c0e761991aef51dee7c3b118cf0d13f3384f0770b90ebfd0feb10",
+      "matches": true
+    },
+    {
+      "path": "README.md",
+      "sha256": "6e493dd3023cdb90557f017589d27b8408ddf7e1e74b0b8abc4caff5591cd4b0",
+      "matches": true
+    }
+  ]
+}

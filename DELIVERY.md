@@ -1,8 +1,8 @@
-# VisionLeak 0.7.0 local candidate
+# VisionLeak 0.7.0 delivery
 
-Implemented after initial review, with the 2026-11-03 coverage correction and stricter ordered regression. Publication status is tracked separately from local acceptance in `reports/followup-0.7.0/README.md`. Public 0.6.0 receipts remain in `reports/plan-0.6.0/publication/`; previous delivery text is preserved in `reports/history/pre-0.7.0-20261030/DELIVERY-0.6.0.md`.
+Published on 2026-11-03 after the coverage correction and stricter ordered regression. GitHub Release v0.7.0 and Mooncakes cjyhjy/visionleak@0.7.0 were independently downloaded/imported and verified; see `reports/followup-0.7.0/publication/completion.json`. Public 0.6.0 receipts remain in `reports/plan-0.6.0/publication/`; previous delivery text is preserved in `reports/history/pre-0.7.0-20261030/DELIVERY-0.6.0.md`.
 
-See `docs/changes-0.7.0.md` for migration and `docs/followup-2026-11-03.md` for task status. Current evidence is indexed in `reports/followup-0.7.0/README.md`; `reports/post-review/` preserves the original pre-followup acceptance. Historical `reports/verification.json`, release receipts, ZIPs and freezes do not attest this candidate.
+See `docs/changes-0.7.0.md` for migration and `docs/followup-2026-11-03.md` for task status. Current evidence is indexed in `reports/followup-0.7.0/README.md`; `reports/post-review/` preserves the original pre-followup acceptance. Historical `reports/verification.json`, older ZIPs and freezes do not attest this release.
 
 ```sh
 npm ci
@@ -14,7 +14,7 @@ node tools/server.mjs --report output/walkthrough-v070/audit/report.json --port 
 
 Current known-source regression: `research/.venv-oracle/bin/python tools/evaluate-post-review.py --regression --out output/known-replay`. Original frozen implementation: `research/.venv-oracle/bin/python tools/frozen_post_review.py --out output/historical-replay`. Both require new output directories. Neither obtains a new holdout.
 
-After the fresh CI/browser evidence described in the current evidence index exists:
+The following were the packaging commands. The published ZIP is immutable; use a fresh isolated checkout to reproduce acceptance, and a new version for a different deliverable:
 
 ```sh
 node tools/attest-followup.mjs
@@ -25,3 +25,5 @@ python3 tools/accept-release.py --reference-dir reports/followup-0.7.0/ci --repo
 The walkthrough creates a new directory and generates clearly marked scripted review records, offline HTML, suggestions and a corrected copy. It checks that original generated inputs are unchanged. CSV manifests use `--manifest`, and optional content-keyed caching uses `--cache`; the production audit never deletes or moves input files.
 
 Requirements remain Node.js 22+, Python 3.13 for the independent oracles, and the pinned toolchain. Core publication packaging excludes photos and host tools. Crop v2, provider-backed Agents, natural-contamination evaluation and human review timing remain outside the completed scope.
+
+Subsequent bounded experiments are separate: `reports/followup-quality/README.md` records the ORB research candidate and frozen new-source results; `reports/followup-retrieval/README.md` records the equivalent MIH generation-mark candidate. Neither candidate changes the published 0.7.0 runtime or its supported profiles.

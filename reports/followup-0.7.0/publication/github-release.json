@@ -1,0 +1,46 @@
+{
+  "release": "https://github.com/cjyhjy/moonbit-visionleak/releases/tag/v0.7.0",
+  "tag": "v0.7.0",
+  "target": "7f2925850ff988875b8f544d7490fd10546621c4",
+  "id": 433110271,
+  "assets": [
+    {
+      "name": "acceptance.json",
+      "bytes": 9713,
+      "digest": "sha256:6293669ea730b228ef60b4f328ca1c85079defc65ff9579d3ba39400bbbf686a",
+      "url": "https://github.com/cjyhjy/moonbit-visionleak/releases/download/v0.7.0/acceptance.json"
+    },
+    {
+      "name": "clean-copy.json",
+      "bytes": 7938,
+      "digest": "sha256:785139246d1f2fa85a8b06ab270aacc2f35051bf375910c7d3d499c5d6cb8f29",
+      "url": "https://github.com/cjyhjy/moonbit-visionleak/releases/download/v0.7.0/clean-copy.json"
+    },
+    {
+      "name": "linux-final-verification.json",
+      "bytes": 8318,
+      "digest": "sha256:9e13dedd1dbbc0673a56919b9bec32ca12bf07de7b9124cfd0e32be62bb98456",
+      "url": "https://github.com/cjyhjy/moonbit-visionleak/releases/download/v0.7.0/linux-final-verification.json"
+    },
+    {
+      "name": "registry-status.json",
+      "bytes": 511,
+      "digest": "sha256:6814596b0df75a0da7cb4f84d19c6f6c4bb18b6f539ca922493a29aeeaeaa223",
+      "url": "https://github.com/cjyhjy/moonbit-visionleak/releases/download/v0.7.0/registry-status.json"
+    },
+    {
+      "name": "SHA256SUMS",
+      "bytes": 87,
+      "digest": "sha256:b5f5d9a792121428ddada7660dea13e8edb0f4b20bdbb16dd529a7eb507c1d23",
+      "url": "https://github.com/cjyhjy/moonbit-visionleak/releases/download/v0.7.0/SHA256SUMS"
+    },
+    {
+      "name": "visionleak-0.7.0.zip",
+      "bytes": 27695583,
+      "digest": "sha256:c56c27dc3b56d6660458d75755ab5728e15a3d26713ab24659601b061c49d476",
+      "url": "https://github.com/cjyhjy/moonbit-visionleak/releases/download/v0.7.0/visionleak-0.7.0.zip"
+    }
+  ],
+  "downloadSha256": "c56c27dc3b56d6660458d75755ab5728e15a3d26713ab24659601b061c49d476",
+  "downloadVerified": true
+}

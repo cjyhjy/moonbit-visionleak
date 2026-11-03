@@ -1,0 +1,300 @@
+{
+  "auditId": "58ded94ad07b6f45c92e0db9fcb7f5b5ade36218f5e8053f70186aba5ce373e0",
+  "complete": true,
+  "phases": {
+    "deterministic": {
+      "enabled": true,
+      "complete": true,
+      "status": "complete",
+      "inputImages": 84,
+      "processedImages": 84,
+      "comparisons": 0,
+      "maxComparisons": 1000000,
+      "distanceEvaluations": 0,
+      "pairChecks": 0,
+      "indexOperations": 0,
+      "indexOperationLimit": 16000000,
+      "emittedPairs": 0,
+      "reason": ""
+    },
+    "perceptual": {
+      "enabled": true,
+      "complete": true,
+      "status": "complete",
+      "inputImages": 84,
+      "processedImages": 84,
+      "comparisons": 1625,
+      "maxComparisons": 10000000,
+      "distanceEvaluations": 1623,
+      "pairChecks": 2,
+      "indexOperations": 0,
+      "indexOperationLimit": 160000000,
+      "emittedPairs": 2,
+      "reason": ""
+    },
+    "local": {
+      "enabled": true,
+      "complete": true,
+      "status": "complete",
+      "inputImages": 84,
+      "processedImages": 84,
+      "comparisons": 20340,
+      "maxComparisons": 10000000,
+      "distanceEvaluations": 20324,
+      "pairChecks": 16,
+      "indexOperations": 133544,
+      "indexOperationLimit": 160000000,
+      "emittedPairs": 16,
+      "reason": ""
+    }
+  },
+  "byEvidence": {
+    "byte-identical": {
+      "pairs": 0,
+      "tp": 0,
+      "fp": 0
+    },
+    "pixel-identical": {
+      "pairs": 0,
+      "tp": 0,
+      "fp": 0
+    },
+    "perceptual-candidate": {
+      "pairs": 2,
+      "tp": 2,
+      "fp": 0
+    },
+    "local-candidate": {
+      "pairs": 16,
+      "tp": 14,
+      "fp": 2
+    }
+  },
+  "pairs": [
+    {
+      "left": "test/170072252-large-png.png",
+      "right": "train/170072252-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/193647816-large-resize-jpeg75.png",
+      "right": "train/193647816-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/138877124-large-resize-jpeg75.png",
+      "right": "train/138877124-original.png",
+      "evidence": "local-candidate",
+      "distance": 4,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 0,
+        "rightWindow": 5,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/138877124-large-png.png",
+      "right": "train/138877124-original.png",
+      "evidence": "local-candidate",
+      "distance": 4,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 2,
+        "rightWindow": 10,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/159843145-medium-png.png",
+      "right": "train/159843145-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 18,
+        "rightWindow": 0,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/159843145-large-resize-jpeg75.png",
+      "right": "train/159843145-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 10,
+        "rightWindow": 0,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/159843145-large-png.png",
+      "right": "train/159843145-original.png",
+      "evidence": "local-candidate",
+      "distance": 2,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 1,
+        "rightWindow": 0,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/185114032-large-png.png",
+      "right": "train/159843145-original.png",
+      "evidence": "local-candidate",
+      "distance": 5,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 11,
+        "rightWindow": 7,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/185114032-large-resize-jpeg75.png",
+      "right": "train/159843145-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 11,
+        "rightWindow": 9,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/170072252-large-resize-jpeg75.png",
+      "right": "train/170072252-original.png",
+      "evidence": "local-candidate",
+      "distance": 4,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 5,
+        "rightWindow": 10,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/173322491-large-resize-jpeg75.png",
+      "right": "train/173322491-original.png",
+      "evidence": "local-candidate",
+      "distance": 5,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 14,
+        "rightWindow": 14,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/185114032-large-png.png",
+      "right": "train/185114032-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 0,
+        "rightWindow": 1,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/185114032-large-resize-jpeg75.png",
+      "right": "train/185114032-original.png",
+      "evidence": "local-candidate",
+      "distance": 1,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 11,
+        "rightWindow": 11,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/193368210-small-png.png",
+      "right": "train/193368210-original.png",
+      "evidence": "local-candidate",
+      "distance": 3,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 3,
+        "rightWindow": 15,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/193647816-large-png.png",
+      "right": "train/193647816-original.png",
+      "evidence": "local-candidate",
+      "distance": 5,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 0,
+        "rightWindow": 1,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/197959608-large-png.png",
+      "right": "train/197959608-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 2,
+        "rightWindow": 2,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/56014736-large-png.png",
+      "right": "train/56014736-original.png",
+      "evidence": "local-candidate",
+      "distance": 4,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 0,
+        "rightWindow": 4,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/56014736-large-resize-jpeg75.png",
+      "right": "train/56014736-original.png",
+      "evidence": "local-candidate",
+      "distance": 4,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 0,
+        "rightWindow": 5,
+        "profile": "vl-local-dhash-v1"
+      }
+    }
+  ],
+  "scope": "Actual released Core evidence, separated by class. ORB prototype emits only research candidates and does not run or replace Core exact stages."
+}

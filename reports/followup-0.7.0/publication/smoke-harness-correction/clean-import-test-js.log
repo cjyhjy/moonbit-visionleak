@@ -1,0 +1,28 @@
+Warning: [0029]
+   ╭─[ /private/var/folders/sm/v6v7286s07j8z7x50805469c0000gn/T/visionleak-070-registry-bup2q4v5/moon.pkg:2:3 ]
+   │
+ 2 │   "cjyhjy/visionleak/core" @visionleak,
+   │   ────────────┬───────────  
+   │               ╰───────────── Warning (unused_package): Unused package 'cjyhjy/visionleak/core'
+───╯
+Warning: [0029]
+   ╭─[ /private/var/folders/sm/v6v7286s07j8z7x50805469c0000gn/T/visionleak-070-registry-bup2q4v5/moon.pkg:2:28 ]
+   │
+ 2 │   "cjyhjy/visionleak/core" @visionleak,
+   │                            ─────┬─────  
+   │                                 ╰─────── Warning (unused_package): Unused package alias 'visionleak'
+───╯
+Warning: [0029]
+   ╭─[ /private/var/folders/sm/v6v7286s07j8z7x50805469c0000gn/T/visionleak-070-registry-bup2q4v5/moon.pkg:3:3 ]
+   │
+ 3 │   "moonbitlang/core/json",
+   │   ───────────┬───────────  
+   │              ╰───────────── Warning (unused_package): Unused package 'moonbitlang/core/json'
+───╯
+Error: [4015]
+    ╭─[ /private/var/folders/sm/v6v7286s07j8z7x50805469c0000gn/T/visionleak-070-registry-bup2q4v5/smoke_test.mbt:28:36 ]
+    │
+ 28 │   let parsed = @json.parse(report).unwrap()
+    │                                    ───┬──  
+    │                                       ╰──── Type Json has no method unwrap.
+────╯

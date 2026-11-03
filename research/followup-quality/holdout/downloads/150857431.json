@@ -1,0 +1,20 @@
+{
+  "id": "150857431",
+  "title": "File:Big Sunflower waiting for a Visitor.jpg",
+  "scene": "sunflower field",
+  "author": "HLI-Photography",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Big_Sunflower_waiting_for_a_Visitor.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Big_Sunflower_waiting_for_a_Visitor.jpg/960px-Big_Sunflower_waiting_for_a_Visitor.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Big_Sunflower_waiting_for_a_Visitor.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "36b6310faf4ed5788cf3668ca9bc955185ccbb74",
+  "width": 7641,
+  "height": 5096,
+  "downloadSha256": "f9bbcf5e0b8905cc504e0610f1eb432504baf86b0fbb7b7064d11cf542239fa5",
+  "sha256": "54f054d200407f326b2a02f83f0e0ca39836a5f315926c99330f4870c0d5799f",
+  "storedFile": "research/followup-quality/holdout/originals/150857431.png",
+  "storedWidth": 384,
+  "storedHeight": 256,
+  "modification": "EXIF transpose, RGB, longest edge <=384 with Pillow LANCZOS, PNG storage; downstream preparation applies product sRGB normalization to every source before crops."
+}

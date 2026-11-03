@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak/research/followup-quality/experiment.py", line 248, in <module>
+    else:evaluate(args.dataset.resolve(),args.profile,args.out.resolve(),protocol)
+         ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak/research/followup-quality/experiment.py", line 232, in evaluate
+    assert image['localHashes']==fingerprints[image['id']]['hashes']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

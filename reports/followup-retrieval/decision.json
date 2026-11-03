@@ -1,0 +1,209 @@
+{
+  "status": "accepted-as-next-release-candidate",
+  "recordedAt": "2026-11-03T19:20:15.986360+00:00",
+  "decision": "Retain the single predeclared generation-mark implementation as the next-version candidate. Keep the independently published 0.7.0 baseline frozen. No broader parameter search.",
+  "productionChanged": false,
+  "coreArtifactSha256": "65fa94357c70b76ccb4e62f4dc88ace45cb719783edc3ca9de5fb80d8305e6d4",
+  "performanceGates": {
+    "identicalOutputs": true,
+    "geometricMean": true,
+    "hotWorkloadGain": true,
+    "noMaterialSlowdown": true,
+    "memory": true
+  },
+  "geometricMeanSpeedup": 1.2550980271830643,
+  "summary": [
+    {
+      "name": "sparse",
+      "identicalFullOutput": true,
+      "baselineMedianMs": 431.476916,
+      "candidateMedianMs": 285.83912499999997,
+      "speedup": 1.5095096446296499,
+      "baselineMedianRssBytes": 190726144,
+      "candidateMedianRssBytes": 177963008,
+      "memoryRatio": 0.9330813503994502,
+      "complete": false,
+      "phases": {
+        "deterministic": {
+          "enabled": true,
+          "complete": true,
+          "status": "complete",
+          "inputImages": 1600,
+          "processedImages": 1600,
+          "comparisons": 0,
+          "maxComparisons": 1000000,
+          "distanceEvaluations": 0,
+          "pairChecks": 0,
+          "indexOperations": 0,
+          "indexOperationLimit": 16000000,
+          "emittedPairs": 0,
+          "reason": ""
+        },
+        "perceptual": {
+          "enabled": true,
+          "complete": true,
+          "status": "complete",
+          "inputImages": 1600,
+          "processedImages": 1600,
+          "comparisons": 13497,
+          "maxComparisons": 1000000,
+          "distanceEvaluations": 13497,
+          "pairChecks": 0,
+          "indexOperations": 106188,
+          "indexOperationLimit": 16000000,
+          "emittedPairs": 0,
+          "reason": ""
+        },
+        "local": {
+          "enabled": true,
+          "complete": false,
+          "status": "incomplete",
+          "inputImages": 1600,
+          "processedImages": 1363,
+          "comparisons": 1000000,
+          "maxComparisons": 1000000,
+          "distanceEvaluations": 999998,
+          "pairChecks": 2,
+          "indexOperations": 3779581,
+          "indexOperationLimit": 16000000,
+          "emittedPairs": 2,
+          "reason": "ComparisonBudget"
+        }
+      },
+      "candidateFasterInPairedRuns": 5,
+      "measuredRuns": 5
+    },
+    {
+      "name": "repeated-local",
+      "identicalFullOutput": true,
+      "baselineMedianMs": 53.592667000000006,
+      "candidateMedianMs": 49.223917,
+      "speedup": 1.0887525874870951,
+      "baselineMedianRssBytes": 112361472,
+      "candidateMedianRssBytes": 111607808,
+      "memoryRatio": 0.9932925051035287,
+      "complete": true,
+      "phases": {
+        "deterministic": {
+          "enabled": true,
+          "complete": true,
+          "status": "complete",
+          "inputImages": 400,
+          "processedImages": 400,
+          "comparisons": 0,
+          "maxComparisons": 1000000,
+          "distanceEvaluations": 0,
+          "pairChecks": 0,
+          "indexOperations": 0,
+          "indexOperationLimit": 16000000,
+          "emittedPairs": 0,
+          "reason": ""
+        },
+        "perceptual": {
+          "enabled": true,
+          "complete": true,
+          "status": "complete",
+          "inputImages": 400,
+          "processedImages": 400,
+          "comparisons": 5917,
+          "maxComparisons": 1000000,
+          "distanceEvaluations": 5917,
+          "pairChecks": 0,
+          "indexOperations": 18828,
+          "indexOperationLimit": 16000000,
+          "emittedPairs": 0,
+          "reason": ""
+        },
+        "local": {
+          "enabled": true,
+          "complete": true,
+          "status": "complete",
+          "inputImages": 400,
+          "processedImages": 400,
+          "comparisons": 73093,
+          "maxComparisons": 1000000,
+          "distanceEvaluations": 69929,
+          "pairChecks": 3164,
+          "indexOperations": 607215,
+          "indexOperationLimit": 16000000,
+          "emittedPairs": 3164,
+          "reason": ""
+        }
+      },
+      "candidateFasterInPairedRuns": 5,
+      "measuredRuns": 5
+    },
+    {
+      "name": "known-photos",
+      "identicalFullOutput": true,
+      "baselineMedianMs": 23.37075,
+      "candidateMedianMs": 19.426958,
+      "speedup": 1.2030061525844655,
+      "baselineMedianRssBytes": 81428480,
+      "candidateMedianRssBytes": 80199680,
+      "memoryRatio": 0.9849094567404426,
+      "complete": true,
+      "phases": {
+        "deterministic": {
+          "enabled": true,
+          "complete": true,
+          "status": "complete",
+          "inputImages": 108,
+          "processedImages": 108,
+          "comparisons": 36,
+          "maxComparisons": 1000000,
+          "distanceEvaluations": 0,
+          "pairChecks": 36,
+          "indexOperations": 0,
+          "indexOperationLimit": 16000000,
+          "emittedPairs": 36,
+          "reason": ""
+        },
+        "perceptual": {
+          "enabled": true,
+          "complete": true,
+          "status": "complete",
+          "inputImages": 108,
+          "processedImages": 108,
+          "comparisons": 1900,
+          "maxComparisons": 1000000,
+          "distanceEvaluations": 1804,
+          "pairChecks": 96,
+          "indexOperations": 0,
+          "indexOperationLimit": 16000000,
+          "emittedPairs": 96,
+          "reason": ""
+        },
+        "local": {
+          "enabled": true,
+          "complete": true,
+          "status": "complete",
+          "inputImages": 108,
+          "processedImages": 108,
+          "comparisons": 36030,
+          "maxComparisons": 1000000,
+          "distanceEvaluations": 36003,
+          "pairChecks": 27,
+          "indexOperations": 184992,
+          "indexOperationLimit": 16000000,
+          "emittedPairs": 27,
+          "reason": ""
+        }
+      },
+      "candidateFasterInPairedRuns": 5,
+      "measuredRuns": 5
+    }
+  ],
+  "semanticChecks": {
+    "fullOutputBudgetComparisons": 144,
+    "independentExhaustiveCases": 12,
+    "moonTestsPerBackend": 82,
+    "nodeIntegrationTests": 57
+  },
+  "limits": [
+    "One macOS arm64 host, Node 26.7.0; timings are not Linux, native backend or end-to-end CLI measurements.",
+    "Identical work accounting means same-budget completed prefix is unchanged (sparse local phase 1363/1600), despite lower wall time.",
+    "Publication of this optimization requires a new version; it is not silently included in 0.7.0."
+  ],
+  "setupCorrection": "Initial profiling input exceeded the API default maxImages=1000 and was rejected before query measurement. Explicit maxImages=2000 was set for both compared implementations before profiling/protocol freeze; comparison budgets remained 1000000 per phase."
+}

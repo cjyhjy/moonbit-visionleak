@@ -1,0 +1,20 @@
+{
+  "id": "193647816",
+  "title": "File:Snow-covered forest path at dawn, near Villard-Reculas, 2026.jpg",
+  "scene": "forest path",
+  "author": "DimiTalen",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Snow-covered_forest_path_at_dawn,_near_Villard-Reculas,_2026.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Snow-covered_forest_path_at_dawn%2C_near_Villard-Reculas%2C_2026.jpg/960px-Snow-covered_forest_path_at_dawn%2C_near_Villard-Reculas%2C_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/61/Snow-covered_forest_path_at_dawn%2C_near_Villard-Reculas%2C_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "1667d771ac3af0f0a20a3d0b9232759f1188af33",
+  "width": 3712,
+  "height": 5568,
+  "downloadSha256": "fae0c8b0b9732d3cbc533dcd6743b499e0719f3f75c322d6ff1a4b4466c8c607",
+  "sha256": "7eda27bf078b4e41f49830f47df04d636821fc2c757b9fde94bdbaebda69432b",
+  "storedFile": "research/followup-quality/holdout/originals/193647816.png",
+  "storedWidth": 256,
+  "storedHeight": 384,
+  "modification": "EXIF transpose, RGB, longest edge <=384 with Pillow LANCZOS, PNG storage; downstream preparation applies product sRGB normalization to every source before crops."
+}

@@ -1,0 +1,20 @@
+{
+  "id": "193368210",
+  "title": "File:Grand Canal, Venice by Arthur Trevor Haddon.jpg",
+  "scene": "Venice canal",
+  "author": "Aldwick - Naseby",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Grand_Canal,_Venice_by_Arthur_Trevor_Haddon.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Grand_Canal%2C_Venice_by_Arthur_Trevor_Haddon.jpg/960px-Grand_Canal%2C_Venice_by_Arthur_Trevor_Haddon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/87/Grand_Canal%2C_Venice_by_Arthur_Trevor_Haddon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "8f4c08200ebf8706dc2ecb5c7d4d7499a12e7708",
+  "width": 2592,
+  "height": 1944,
+  "downloadSha256": "8e327c0cc860fc01b314051c11921f8ca414f98a74fe9e48a681c5a627f46a25",
+  "sha256": "620abe06228ab53626232e5fd56ce145116d223c4db6f36176b7f058e4c8cde0",
+  "storedFile": "research/followup-quality/holdout/originals/193368210.png",
+  "storedWidth": 384,
+  "storedHeight": 288,
+  "modification": "EXIF transpose, RGB, longest edge <=384 with Pillow LANCZOS, PNG storage; downstream preparation applies product sRGB normalization to every source before crops."
+}

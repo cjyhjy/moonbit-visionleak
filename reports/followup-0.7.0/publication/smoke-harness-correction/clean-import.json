@@ -1,0 +1,21 @@
+{
+  "version": "0.7.0",
+  "status": "running",
+  "startedAt": "2026-11-03T19:05:50.353671+00:00",
+  "usesLocalPathDependency": false,
+  "checks": [
+    {
+      "id": "add",
+      "exitCode": 0,
+      "status": "passed",
+      "log": "clean-import-add.log"
+    },
+    {
+      "id": "test-js",
+      "exitCode": 1,
+      "status": "failed",
+      "log": "clean-import-test-js.log"
+    }
+  ],
+  "testsPerBackend": 4
+}

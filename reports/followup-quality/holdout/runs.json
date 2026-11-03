@@ -1,0 +1,30 @@
+{
+  "startedAt": "2026-11-03T19:07:55.260135+00:00",
+  "partition": "holdout",
+  "python": "3.13.15 (main, Aug  5 2026, 12:25:43) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "numpy": "2.3.3",
+    "Pillow": "11.3.0",
+    "opencv-python-headless": "4.13.0.92"
+  },
+  "outerTimeoutSeconds": 90,
+  "runs": [
+    {
+      "profile": "v1-reference",
+      "exitCode": 0,
+      "wallSecondsIncludingOracle": 0.9277718341909349,
+      "log": "v1-reference.log",
+      "resultSha256": "9e34cfad980b1e1df7d44690640dde0ccb0572bef9d23bece57970e86df0934c"
+    },
+    {
+      "profile": "orb800",
+      "exitCode": 0,
+      "wallSecondsIncludingOracle": 3.747754374984652,
+      "log": "orb800.log",
+      "resultSha256": "853f5c7e39574ce8f90db4a426d75b38d9a70e023c3a6f883fdff954cfc9fa91"
+    }
+  ],
+  "status": "passed",
+  "finishedAt": "2026-11-03T19:07:59.950207+00:00"
+}

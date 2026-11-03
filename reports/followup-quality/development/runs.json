@@ -1,0 +1,44 @@
+{
+  "startedAt": "2026-11-03T19:01:27.323922+00:00",
+  "partition": "development",
+  "python": "3.13.15 (main, Aug  5 2026, 12:25:43) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "numpy": "2.3.3",
+    "Pillow": "11.3.0",
+    "opencv-python-headless": "4.13.0.92"
+  },
+  "outerTimeoutSeconds": 90,
+  "runs": [
+    {
+      "profile": "v1-reference",
+      "exitCode": 0,
+      "wallSecondsIncludingOracle": 1.8704935000278056,
+      "log": "v1-reference.log",
+      "resultSha256": "9a4445d0de4f47032020426a02fba1567b76453e2747c18cd248981a83e0c8f2"
+    },
+    {
+      "profile": "grid154",
+      "exitCode": 0,
+      "wallSecondsIncludingOracle": 0.4636293747462332,
+      "log": "grid154.log",
+      "resultSha256": "4582ed791e55e27df716d7ce42c42aa7128655c669bbf0ea888430b4c9359934"
+    },
+    {
+      "profile": "orb400",
+      "exitCode": 0,
+      "wallSecondsIncludingOracle": 39.24774333415553,
+      "log": "orb400.log",
+      "resultSha256": "81e97d4adad7774c2a23b7cae16221a23a39f5e8c4d7f15b4d7d29ae3894525a"
+    },
+    {
+      "profile": "orb800",
+      "exitCode": 0,
+      "wallSecondsIncludingOracle": 14.836607416160405,
+      "log": "orb800.log",
+      "resultSha256": "acf0037ca22b996fb5585af5ebfa3a11a59c16d87a0f43fdaf9dfa5ec16cd884"
+    }
+  ],
+  "status": "passed",
+  "finishedAt": "2026-11-03T19:02:23.768913+00:00"
+}

@@ -1,0 +1,35 @@
+{
+  "version": "0.7.0",
+  "status": "passed",
+  "startedAt": "2026-11-03T19:05:50.353671+00:00",
+  "usesLocalPathDependency": false,
+  "checks": [
+    {
+      "id": "add",
+      "exitCode": 0,
+      "status": "passed",
+      "log": "clean-import-add.log"
+    },
+    {
+      "id": "test-js",
+      "exitCode": 0,
+      "status": "passed",
+      "log": "clean-import-test-js.log"
+    },
+    {
+      "id": "test-wasm-gc",
+      "exitCode": 0,
+      "status": "passed",
+      "log": "clean-import-test-wasm-gc.log"
+    },
+    {
+      "id": "test-native",
+      "exitCode": 0,
+      "status": "passed",
+      "log": "clean-import-test-native.log"
+    }
+  ],
+  "testsPerBackend": 4,
+  "finishedAt": "2026-11-03T19:06:34.906222+00:00",
+  "harnessCorrection": "smoke-harness-correction/note.txt"
+}

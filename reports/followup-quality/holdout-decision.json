@@ -1,0 +1,71 @@
+{
+  "recordedAt": "2026-11-03T19:09:41.054011+00:00",
+  "status": "passed-predeclared-controlled-holdout-gates",
+  "selectedProfile": "orb800",
+  "algorithmFreezeSha256": "844ff58096ab6b259ab139402dfb936af270b90344c3124b3699d4a829463c28",
+  "selectionFreezeSha256": "4ae08d0600518a7a15d5da7c6f9674a9fc91300221b15cd21535a93a6f4308fa",
+  "newSources": 12,
+  "queries": 72,
+  "baseline": {
+    "tp": 16,
+    "fp": 2,
+    "fn": 56,
+    "recall": 0.2222222222222222,
+    "precision": 0.8888888888888888,
+    "wallSeconds": 0.14239629125222564,
+    "peakRssBytes": 51331072,
+    "independentCoreParity": true
+  },
+  "candidate": {
+    "tp": 67,
+    "fp": 0,
+    "fn": 5,
+    "recall": 0.9305555555555556,
+    "precision": 1.0,
+    "byBand": {
+      "small": {
+        "tp": 19,
+        "total": 24,
+        "recall": 0.7916666666666666
+      },
+      "medium": {
+        "tp": 24,
+        "total": 24,
+        "recall": 1.0
+      },
+      "large": {
+        "tp": 24,
+        "total": 24,
+        "recall": 1.0
+      }
+    },
+    "wallSeconds": 3.634182082954794,
+    "peakRssBytes": 94109696,
+    "descriptorOrHashComparisons": 955364768,
+    "acceptanceGates": {
+      "complete": true,
+      "recall": true,
+      "bandRecall": true,
+      "falsePositiveRate": true,
+      "precision": true,
+      "candidateLoad": true,
+      "time": true,
+      "memory": true
+    },
+    "missedQueries": [
+      "test/173322491-small-resize-jpeg75.png",
+      "test/185114032-small-png.png",
+      "test/185114032-small-resize-jpeg75.png",
+      "test/150857431-small-resize-jpeg75.png",
+      "test/159843145-small-resize-jpeg75.png"
+    ]
+  },
+  "decision": "Stop parameter exploration. Retain orb800 as the selected research prototype; a separately scoped bounded product-integration design is justified. No automatic Core integration or release capability claim.",
+  "remainingEvidence": [
+    "Natural contamination and human-adjudicated negatives",
+    "Human review time",
+    "Large-source retrieval and bounded candidate-generation recall",
+    "Portable MoonBit/host dependency and geometric-evidence integration"
+  ],
+  "dependencyCost": "Python/OpenCV prototype, up to 800 descriptors per image, exhaustive original-query descriptor matching; far more work than the reference fixed windows. No global-image prefilter was used."
+}

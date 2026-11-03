@@ -1,0 +1,9 @@
+{
+  "status": "invalid-reference-run-not-algorithm-evidence",
+  "detectedBy": "Independent per-image Core localHashes parity assertion",
+  "cause": "Pillow preserves embedded ICC profiles without applying the same sRGB normalization as the product sharp decoder; generated PNG files retained ICC metadata. Python hash input pixels therefore differed from actual Core input pixels.",
+  "fix": "Normalize each source once with the existing product decoder before creating controlled crops. Keep crop seeds, rectangles, thresholds, feature settings and acceptance gates unchanged. Regenerate the entire partition; exclude no images.",
+  "prototypeRunsBeforeFix": 0,
+  "oldFreezeSha256": "8f87a1d735a3c695d418e936f7e7fa37f65ae4dde0740c5cf815f123f843bd3c",
+  "recordedAt": "2026-11-03T19:00:51.365193+00:00"
+}

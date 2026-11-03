@@ -1,0 +1,20 @@
+{
+  "id": "148479133",
+  "title": "File:Collapsed wind turbine.jpg",
+  "scene": "wind turbine",
+  "author": "Simiprof",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Collapsed_wind_turbine.jpg",
+  "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Collapsed_wind_turbine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Collapsed_wind_turbine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "a923301e2824435108c70ea49fb38bbd277eab3a",
+  "width": 900,
+  "height": 600,
+  "downloadSha256": "68e6d4812f74d19a4f7b7998ad77cefd4639625182ffa1b57225a61a36c640f0",
+  "sha256": "eed218b9d007a3e37adb9107961523a8e2168e0c072c4a5264a0d00f666e77bc",
+  "storedFile": "research/followup-quality/holdout/originals/148479133.png",
+  "storedWidth": 384,
+  "storedHeight": 256,
+  "modification": "EXIF transpose, RGB, longest edge <=384 with Pillow LANCZOS, PNG storage; downstream preparation applies product sRGB normalization to every source before crops."
+}

@@ -1,0 +1,20 @@
+{
+  "id": "185114032",
+  "title": "File:Wind-turbine-size.png",
+  "scene": "wind turbine",
+  "author": "O. Sidor",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Wind-turbine-size.png",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Wind-turbine-size.png/960px-Wind-turbine-size.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Wind-turbine-size.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "f015e281f1ec17a07bed176a0c65fe5134a10e1e",
+  "width": 4990,
+  "height": 4100,
+  "downloadSha256": "2ca305445b21502187de553c6174d13516131de718bbfc362bdfc80cd35831dd",
+  "sha256": "4815f232e570e36a01caf5f0cc2e68977960cec55c6dee13b75bbac04a82d7b1",
+  "storedFile": "research/followup-quality/holdout/originals/185114032.png",
+  "storedWidth": 384,
+  "storedHeight": 316,
+  "modification": "EXIF transpose, RGB, longest edge <=384 with Pillow LANCZOS, PNG storage; downstream preparation applies product sRGB normalization to every source before crops."
+}

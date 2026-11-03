@@ -1,0 +1,17 @@
+{
+  "version": "0.7.0",
+  "status": "published-and-independently-verified",
+  "commit": "7f2925850ff988875b8f544d7490fd10546621c4",
+  "pullRequest": "https://github.com/cjyhjy/moonbit-visionleak/pull/1",
+  "mainCiRun": "https://github.com/cjyhjy/moonbit-visionleak/actions/runs/41699751041",
+  "mainCiConclusion": "success",
+  "prCiRun": "https://github.com/cjyhjy/moonbit-visionleak/actions/runs/41699012166",
+  "mergeAndCiPreviewTree": "4d26f89d8b033b8f03ea526f32c26bbaa376cafb",
+  "githubRelease": "https://github.com/cjyhjy/moonbit-visionleak/releases/tag/v0.7.0",
+  "releaseZipSha256": "c56c27dc3b56d6660458d75755ab5728e15a3d26713ab24659601b061c49d476",
+  "mooncakes": "cjyhjy/visionleak@0.7.0",
+  "registryReceipt": "registry-status.json",
+  "completedAt": "2026-11-03T19:12:37.504381+00:00",
+  "researchIncluded": false,
+  "scope": "Engineering release only. Future crop-quality and retrieval research remain separate."
+}

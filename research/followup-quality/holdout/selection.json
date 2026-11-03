@@ -1,0 +1,206 @@
+{
+  "selectedAt": "2026-11-03T19:05:45.390163+00:00",
+  "policy": {
+    "scenes": [
+      "Venice canal",
+      "wind turbine",
+      "sunflower field",
+      "forest path"
+    ],
+    "filesPerScene": 3,
+    "rule": "First three eligible CC0 JPEG/PNG API search results per scene; minimum dimensions 320x240; exclude all known source IDs and upstream file SHA-1 digests and duplicates within selection; metadata only. No substitute queries after outcomes.",
+    "selectionFrozenBeforeImageDownload": true
+  },
+  "queries": [
+    {
+      "scene": "Venice canal",
+      "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=Venice+canal+filetype%3Abitmap+incategory%3A%22CC-Zero%22&gsrnamespace=6&gsrlimit=20&prop=imageinfo&iiprop=url%7Cextmetadata%7Csha1%7Csize&iiurlwidth=512",
+      "responseSha256": "58eef8ace50f9acac41297af2502ad6597fcd169d6705fed45fed6ecb4da7ecb"
+    },
+    {
+      "scene": "wind turbine",
+      "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=wind+turbine+filetype%3Abitmap+incategory%3A%22CC-Zero%22&gsrnamespace=6&gsrlimit=20&prop=imageinfo&iiprop=url%7Cextmetadata%7Csha1%7Csize&iiurlwidth=512",
+      "responseSha256": "0d51c6baaa54e4d37888ba91552fb25e165dd683e56e5b159422f91117258fe9"
+    },
+    {
+      "scene": "sunflower field",
+      "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=sunflower+field+filetype%3Abitmap+incategory%3A%22CC-Zero%22&gsrnamespace=6&gsrlimit=20&prop=imageinfo&iiprop=url%7Cextmetadata%7Csha1%7Csize&iiurlwidth=512",
+      "responseSha256": "e346be38c7a6863382789df903bd0f01b1fdefc3ea600b8a6dbf72eb99337b4d"
+    },
+    {
+      "scene": "forest path",
+      "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=forest+path+filetype%3Abitmap+incategory%3A%22CC-Zero%22&gsrnamespace=6&gsrlimit=20&prop=imageinfo&iiprop=url%7Cextmetadata%7Csha1%7Csize&iiurlwidth=512",
+      "responseSha256": "609deda97d7b07f4ca7207664d061c8030807ce3fb7ba7cfa8499dbb76788a32"
+    }
+  ],
+  "images": [
+    {
+      "id": "170072252",
+      "title": "File:Venice Canal 20170512.jpg",
+      "scene": "Venice canal",
+      "author": "Chonsp",
+      "license": "CC0-1.0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Venice_Canal_20170512.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Venice_Canal_20170512.jpg/960px-Venice_Canal_20170512.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Venice_Canal_20170512.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "upstreamSha1": "d7812efa6328fd5f7fe7ae936c24641fd06c25e5",
+      "width": 3840,
+      "height": 5120
+    },
+    {
+      "id": "173322491",
+      "title": "File:The Grand Canal, Venice 2016.jpg",
+      "scene": "Venice canal",
+      "author": "Mustang Joe",
+      "license": "CC0-1.0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "licenseEvidence": "https://commons.wikimedia.org/wiki/File:The_Grand_Canal,_Venice_2016.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/The_Grand_Canal%2C_Venice_2016.jpg/960px-The_Grand_Canal%2C_Venice_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/38/The_Grand_Canal%2C_Venice_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "upstreamSha1": "f3fde01819de12a9f4b4ab4f16f58eb34f481ef4",
+      "width": 6016,
+      "height": 4016
+    },
+    {
+      "id": "193368210",
+      "title": "File:Grand Canal, Venice by Arthur Trevor Haddon.jpg",
+      "scene": "Venice canal",
+      "author": "Aldwick - Naseby",
+      "license": "CC0-1.0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Grand_Canal,_Venice_by_Arthur_Trevor_Haddon.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Grand_Canal%2C_Venice_by_Arthur_Trevor_Haddon.jpg/960px-Grand_Canal%2C_Venice_by_Arthur_Trevor_Haddon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/87/Grand_Canal%2C_Venice_by_Arthur_Trevor_Haddon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "upstreamSha1": "8f4c08200ebf8706dc2ecb5c7d4d7499a12e7708",
+      "width": 2592,
+      "height": 1944
+    },
+    {
+      "id": "197959608",
+      "title": "File:Vierwies wind farm, seen from a hot air balloon, Zele, 2026.jpg",
+      "scene": "wind turbine",
+      "author": "DimiTalen",
+      "license": "CC0-1.0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Vierwies_wind_farm,_seen_from_a_hot_air_balloon,_Zele,_2026.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Vierwies_wind_farm%2C_seen_from_a_hot_air_balloon%2C_Zele%2C_2026.jpg/960px-Vierwies_wind_farm%2C_seen_from_a_hot_air_balloon%2C_Zele%2C_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Vierwies_wind_farm%2C_seen_from_a_hot_air_balloon%2C_Zele%2C_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "upstreamSha1": "364cd398fa3f4325bb78df298b65ab6719576b9e",
+      "width": 2662,
+      "height": 3992
+    },
+    {
+      "id": "148479133",
+      "title": "File:Collapsed wind turbine.jpg",
+      "scene": "wind turbine",
+      "author": "Simiprof",
+      "license": "CC0-1.0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Collapsed_wind_turbine.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Collapsed_wind_turbine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Collapsed_wind_turbine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "upstreamSha1": "a923301e2824435108c70ea49fb38bbd277eab3a",
+      "width": 900,
+      "height": 600
+    },
+    {
+      "id": "185114032",
+      "title": "File:Wind-turbine-size.png",
+      "scene": "wind turbine",
+      "author": "O. Sidor",
+      "license": "CC0-1.0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Wind-turbine-size.png",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Wind-turbine-size.png/960px-Wind-turbine-size.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Wind-turbine-size.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "upstreamSha1": "f015e281f1ec17a07bed176a0c65fe5134a10e1e",
+      "width": 4990,
+      "height": 4100
+    },
+    {
+      "id": "138877124",
+      "title": "File:Sunflower field at sunset.jpg",
+      "scene": "sunflower field",
+      "author": "Summer Stock",
+      "license": "CC0-1.0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Sunflower_field_at_sunset.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Sunflower_field_at_sunset.jpg/960px-Sunflower_field_at_sunset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/Sunflower_field_at_sunset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "upstreamSha1": "f0358fce0bfe3195f344992dcee53ad6eea1165d",
+      "width": 3000,
+      "height": 2000
+    },
+    {
+      "id": "56014736",
+      "title": "File:Sunflower Fields.jpg",
+      "scene": "sunflower field",
+      "author": "Wenchieh Yang",
+      "license": "CC0-1.0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Sunflower_Fields.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Sunflower_Fields.jpg/960px-Sunflower_Fields.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Sunflower_Fields.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "upstreamSha1": "5a4261124c86c7ac5b9ccf736432300dc1bb8084",
+      "width": 3264,
+      "height": 2448
+    },
+    {
+      "id": "150857431",
+      "title": "File:Big Sunflower waiting for a Visitor.jpg",
+      "scene": "sunflower field",
+      "author": "HLI-Photography",
+      "license": "CC0-1.0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Big_Sunflower_waiting_for_a_Visitor.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Big_Sunflower_waiting_for_a_Visitor.jpg/960px-Big_Sunflower_waiting_for_a_Visitor.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Big_Sunflower_waiting_for_a_Visitor.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "upstreamSha1": "36b6310faf4ed5788cf3668ca9bc955185ccbb74",
+      "width": 7641,
+      "height": 5096
+    },
+    {
+      "id": "196962223",
+      "title": "File:Forest path to Roche du Taureau, Cléron, 2026.jpg",
+      "scene": "forest path",
+      "author": "DimiTalen",
+      "license": "CC0-1.0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Forest_path_to_Roche_du_Taureau,_Cl%C3%A9ron,_2026.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Forest_path_to_Roche_du_Taureau%2C_Cl%C3%A9ron%2C_2026.jpg/960px-Forest_path_to_Roche_du_Taureau%2C_Cl%C3%A9ron%2C_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Forest_path_to_Roche_du_Taureau%2C_Cl%C3%A9ron%2C_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "upstreamSha1": "6401028fb65d5cdacd084923731e06339667bbcd",
+      "width": 5568,
+      "height": 3712
+    },
+    {
+      "id": "193647816",
+      "title": "File:Snow-covered forest path at dawn, near Villard-Reculas, 2026.jpg",
+      "scene": "forest path",
+      "author": "DimiTalen",
+      "license": "CC0-1.0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Snow-covered_forest_path_at_dawn,_near_Villard-Reculas,_2026.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Snow-covered_forest_path_at_dawn%2C_near_Villard-Reculas%2C_2026.jpg/960px-Snow-covered_forest_path_at_dawn%2C_near_Villard-Reculas%2C_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/61/Snow-covered_forest_path_at_dawn%2C_near_Villard-Reculas%2C_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "upstreamSha1": "1667d771ac3af0f0a20a3d0b9232759f1188af33",
+      "width": 3712,
+      "height": 5568
+    },
+    {
+      "id": "159843145",
+      "title": "File:Snowy Forest Path in Winter.jpg",
+      "scene": "forest path",
+      "author": "Fagev869",
+      "license": "CC0-1.0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Snowy_Forest_Path_in_Winter.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Snowy_Forest_Path_in_Winter.jpg/960px-Snowy_Forest_Path_in_Winter.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Snowy_Forest_Path_in_Winter.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "upstreamSha1": "2cf0ba4eb1ba083bc9a500ab0f8582257b2d521b",
+      "width": 2265,
+      "height": 1500
+    }
+  ]
+}
