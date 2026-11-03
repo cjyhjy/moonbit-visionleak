@@ -1,0 +1,25 @@
+{
+  "version": "0.7.0",
+  "status": "local-and-linux-accepted",
+  "sourceDigest": "42490b7373867ebb31af030f95c1d78393533a8ab6c9cb80eaa0f574f3570c80",
+  "coreArtifactSha256": "ad05cc71d2d8ef8620b7fe7695b5cd7b38c669c02e8b0a7afd6e943acef3b701",
+  "sourceZip": {
+    "path": "release/visionleak-0.7.0.zip",
+    "sha256": "c56c27dc3b56d6660458d75755ab5728e15a3d26713ab24659601b061c49d476",
+    "bytes": 27695583
+  },
+  "corePackage": {
+    "path": "_build/publish/cjyhjy-visionleak-0.7.0.zip",
+    "sha256": "3d10533116f3b79d03dea23a3944b1ee45b719a3a2398f26630bad9f178848d7",
+    "bytes": 37730,
+    "files": 20
+  },
+  "cleanCopyChecks": 23,
+  "linuxRunUrl": "https://github.com/cjyhjy/moonbit-visionleak/actions/runs/41697918606",
+  "linuxHeadSha": "81fc777fca8847e44d27c307cb2a16e221c4be83",
+  "linuxMergePreviewSha": "4336392efc6554bc0d78d0a79ae424e6642c6ff4",
+  "linuxEncodedPngByteChanges": 84,
+  "linuxDecodedPixelsAndLabelsUnchanged": true,
+  "recordedAt": "2026-11-03T18:58:38.552537+00:00",
+  "publication": "Not yet published at this receipt; see completion.json for subsequent status."
+}

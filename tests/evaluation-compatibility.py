@@ -12,6 +12,17 @@ import evaluation_compatibility as compatibility
 
 
 class EvaluationCompatibility(unittest.TestCase):
+    def test_transform_encodings_can_vary_only_with_identical_pixels_and_labels(self):
+        baseline={'images':[{'id':'a.png','byteDigest':'old','pixelDigest':'pixels','cropPixels':[1,2,3,4]}],
+                  'pairs':[{'left':'a.png','right':'b.png','relation':'byte-identical'}]}
+        current=copy.deepcopy(baseline);current['images'][0]['byteDigest']='new'
+        self.assertEqual(compatibility.compare_transform_truth(current,baseline)['encodedByteChanges'],['a.png'])
+        for field,value in [('pixelDigest','different'),('cropPixels',[1,2,3,5]),('id','b.png')]:
+            altered=copy.deepcopy(current);altered['images'][0][field]=value
+            with self.assertRaises(ValueError): compatibility.compare_transform_truth(altered,baseline)
+        current['pairs'][0]['relation']='pixel-identical'
+        with self.assertRaises(ValueError): compatibility.compare_transform_truth(current,baseline)
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
@@ -26,6 +37,42 @@ class EvaluationCompatibility(unittest.TestCase):
         directory = self.root/'research/photos-v1/freeze'
         directory.mkdir(parents=True)
         (directory/'0.4.0.json').write_text(json.dumps({'reports':{'test':{'path':'report.json','sha256':hashlib.sha256(raw).hexdigest()}}}))
+
+    def test_declared_phase_order_allows_only_pair_reordering(self):
+        other = {'left':'a','right':'c','evidence':'perceptual-candidate','distance':3}
+        self.old['pairs'].insert(0,other)
+        raw = json.dumps(self.old).encode()
+        (self.root/'report.json').write_bytes(raw)
+        path = self.root/'research/photos-v1/freeze/0.4.0.json'
+        frozen = json.loads(path.read_text())
+        frozen['reports']['test']['sha256'] = hashlib.sha256(raw).hexdigest()
+        path.write_text(json.dumps(frozen))
+        current = copy.deepcopy(self.old)
+        current['pairs'].reverse()
+        self.assertFalse(compatibility.compare_baseline(current,'test')['passed'])
+        current['auditStrategy'] = 'exact-first-v1'
+        row = compatibility.compare_baseline(current,'test')
+        self.assertTrue(row['passed'])
+        self.assertTrue(row['pairOrderChanged'])
+        current['pairs'][0]['distance'] = 4
+        self.assertFalse(compatibility.compare_baseline(current,'test')['passed'])
+
+    def test_phase_migration_rejects_same_phase_reorder_and_changed_window(self):
+        local = {'left':'b','right':'c','evidence':'local-candidate','distance':2,
+                 'matchLocal':{'leftWindow':4,'rightWindow':1,'profile':'vl-local-dhash-v1'}}
+        self.old['pairs'].extend([
+            {'left':'a','right':'c','evidence':'perceptual-candidate','distance':3},
+            {'left':'a','right':'d','evidence':'perceptual-candidate','distance':2},local])
+        raw=json.dumps(self.old).encode();(self.root/'report.json').write_bytes(raw)
+        path=self.root/'research/photos-v1/freeze/0.4.0.json';frozen=json.loads(path.read_text())
+        frozen['reports']['test']['sha256']=hashlib.sha256(raw).hexdigest();path.write_text(json.dumps(frozen))
+        current=copy.deepcopy(self.old);current['auditStrategy']='exact-first-v1'
+        self.assertTrue(compatibility.compare_baseline(current,'test')['passed'])
+        current['pairs'][1],current['pairs'][2]=current['pairs'][2],current['pairs'][1]
+        self.assertFalse(compatibility.compare_baseline(current,'test')['passed'])
+        current=copy.deepcopy(self.old);current['auditStrategy']='exact-first-v1'
+        current['pairs'][-1]['matchLocal']['leftWindow']=5
+        self.assertFalse(compatibility.compare_baseline(current,'test')['passed'])
 
     def test_stats_and_timing_changes_are_recorded_without_failing(self):
         current = copy.deepcopy(self.old)

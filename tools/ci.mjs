@@ -66,6 +66,8 @@ try {
   run('report-history', python, ['tests/report-history.py']);
   run('metric-regression', python, ['tests/oracle-metrics.py']);
   run('crop-reference', python, ['tests/crop-reference.py']);
+  run('frozen-source-integrity', python, ['tools/frozen_post_review.py']);
+  run('known-source-regression', python, ['tools/evaluate-post-review.py', '--regression', '--out', `.ci-artifacts/post-review-regression-${Date.now()}`]);
   run('imagehash-oracle', python, ['tools/evaluate.py', '--out', '.ci-artifacts/evaluation.json']);
   run('mirror-oracle', python, ['tools/evaluate-mirrors.py','--out','.ci-artifacts/mirror-evaluation.json']);
   for (const partition of ['development','holdout']) run(`photo-${partition}`,python,['tools/evaluate-photos.py','--partition',partition,'--out',`.ci-artifacts/photos-${partition}`,'--include-orientations','--replace']);

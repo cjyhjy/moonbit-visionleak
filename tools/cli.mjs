@@ -4,13 +4,15 @@ import { resolve, join, relative, dirname, basename, extname, sep, isAbsolute } 
 import { fileURLToPath } from 'node:url';
 import { randomUUID } from 'node:crypto';
 import { performance } from 'node:perf_hooks';
-import { decodeImage, thumbnail, DECODER, HARD_MAX_PIXELS, DEFAULT_MAX_FILE_BYTES, SUPPORTED_EXTENSIONS } from './decode.mjs';
+import { decodeImage, decodeBuffer, readImageBytes, thumbnail, DECODER, HARD_MAX_PIXELS, DEFAULT_MAX_FILE_BYTES, SUPPORTED_EXTENSIONS } from './decode.mjs';
 import { audit, fingerprint, sha256, VisionLeakError, errorRecord } from './runtime.mjs';
 import { cli_options_json } from '../dist/visionleak.js';
 import { IDENTITY_VERSION, reportIdentity } from '../demo/report-identity.mjs';
 import { workflow } from './workflow.mjs';
 import { verifyFiles, exportFixes, exportHTML } from './report-tools.mjs';
 import { capabilities } from './capabilities.mjs';
+import { discoverManifest, containedFile } from './input.mjs';
+import { openCache } from './fingerprint-cache.mjs';
 
 const SPLITS = ['train', 'validation', 'test'];
 const MARKER = '.visionleak-output.json';
@@ -34,13 +36,16 @@ const HELP = `VisionLeak — local, read-only cross-split image audit
 
 DATASET contains train/, validation/, and/or test/ directories.
 Options (all budgets are finite):
+  --manifest FILE        UTF-8 CSV path,split; paths relative to --root
+  --cache DIRECTORY      Optional content/config keyed fingerprint cache
+  --max-exact-comparisons N  Deterministic-stage budget (default 1000000)
   --threshold N          Hamming threshold, 0..64 (default 6)
   --max-images N         1..10000 (default 1000)
   --max-pixels N         Fingerprint sampling cap, 1..4194304 (default 4194304)
   --max-decode-pixels N  Source decode cap, 1..100000000 (default 64000000)
   --max-total-pixels N   Across successfully decoded images (default 100000000)
   --max-file-bytes N     Per encoded file (default 33554432)
-  --max-comparisons N    Core budget, 0..10000000 (default 1000000)
+  --max-comparisons N    Budget for EACH perceptual/local stage, 0..10000000 (default 1000000)
   --max-pairs N          Output-pair budget, 0..100000 (default 10000)
   --include-crops       Experimental local-window candidates (default off)
   --include-rotations   Also search clockwise 90/180/270-degree orientations (default off)
@@ -161,7 +166,7 @@ async function inspectOutput(out, force) {
   return true;
 }
 
-export async function runAudit({ root: inputRoot, out: inputOut, options: overrides = {}, force = false, failOn = '' }) {
+export async function runAudit({ root: inputRoot, out: inputOut, options: overrides = {}, force = false, failOn = '', manifest, cache: cacheDirectory }) {
   const options = cliCore({ operation: 'options', overrides }).options;
   workflow({operation:'gate',report:{complete:true,pairs:[]},failOn});
   if (typeof inputRoot !== 'string' || !inputRoot || typeof inputOut !== 'string' || !inputOut || typeof force !== 'boolean') {
@@ -176,7 +181,15 @@ export async function runAudit({ root: inputRoot, out: inputOut, options: overri
   const intendedOut = await canonicalDestination(out);
   if (within(root, intendedOut) || within(intendedOut, root)) throw new VisionLeakError('UNSAFE_OUTPUT', 'Resolved output directory overlaps the dataset');
   const previous = await inspectOutput(out, force);
-  const discovery = await discover(root, options.maxImages);
+  if ((manifest !== undefined && (typeof manifest !== 'string' || !manifest)) || (cacheDirectory !== undefined && (typeof cacheDirectory !== 'string' || !cacheDirectory))) throw new VisionLeakError('ARGUMENT_ERROR', 'Manifest and cache paths must be nonempty strings');
+  let cache;
+  if (cacheDirectory) {
+    const intendedCache = await canonicalDestination(resolve(cacheDirectory));
+    if (within(root, intendedCache) || within(intendedCache, root) || within(intendedOut, intendedCache) || within(intendedCache, intendedOut)) throw new VisionLeakError('UNSAFE_CACHE', 'Cache, dataset and output directories must not overlap');
+    cache = await openCache(intendedCache, { coreArtifact: sha256(await readFile(new URL('../dist/visionleak.js', import.meta.url))),
+      maxPixels: options.maxPixels, includeMirrors: options.includeMirrors, includeRotations: options.includeRotations, includeCrops: options.includeCrops });
+  }
+  const discovery = manifest ? await discoverManifest(root, resolve(manifest), options.maxImages) : await discover(root, options.maxImages);
   await mkdir(dirname(out), { recursive: true });
   const realParent = await realpath(dirname(out));
   const canonicalOut = join(realParent, basename(out));
@@ -191,17 +204,33 @@ export async function runAudit({ root: inputRoot, out: inputOut, options: overri
       const remaining = options.maxTotalPixels - totalPixels;
       if (remaining <= 0) { errors.push({ code: 'TOTAL_PIXEL_BUDGET', message: 'Total decoded pixel budget exhausted', limit: options.maxTotalPixels, path: entry.path }); break; }
       try {
-        const decoded = await decodeImage(entry.absolute, { maxPixels: options.maxPixels, maxDecodePixels: Math.min(options.maxDecodePixels, remaining), maxFileBytes: options.maxFileBytes });
-        totalPixels += decoded.pixelCount;
-        const fp = await fingerprint({ ...decoded, includeMirrors: options.includeMirrors, includeRotations: options.includeRotations, includeCrops: options.includeCrops });
+        const decodeOptions = { maxPixels: options.maxPixels, maxDecodePixels: Math.min(options.maxDecodePixels, remaining), maxFileBytes: options.maxFileBytes };
+        // Recheck every ancestor before opening either discovery mode's input.
+        const file = await containedFile(root, entry.path);
+        let cached, buffer;
+        if (cache) {
+          buffer = await readImageBytes(file, decodeOptions);
+          cached = await cache.get(sha256(buffer), { ...options, ...decodeOptions });
+        }
         const previewPath = `thumbnails/${sha256(entry.path)}.jpg`;
-        const preview = await thumbnail(decoded);
-        await writeFile(join(stage, previewPath), preview, { flag: 'wx' });
-        images.push({ id: entry.path, path: entry.path, split: entry.split, byteDigest: decoded.byteDigest,
+        let image, preview;
+        if (cached) {
+          ({ image, preview } = cached);
+          totalPixels += cached.pixelCount;
+        } else {
+          const decoded = buffer ? await decodeBuffer(buffer, decodeOptions) : await decodeImage(file, decodeOptions);
+          totalPixels += decoded.pixelCount;
+          const fp = await fingerprint({ ...decoded, includeMirrors: options.includeMirrors, includeRotations: options.includeRotations, includeCrops: options.includeCrops });
+          preview = await thumbnail(decoded);
+        image = { byteDigest: decoded.byteDigest,
           pixelDigest: decoded.fullIdentity?.pixelDigest ?? fp.pixelDigest, pixelDigestBasis: 'full',
           dhashBasis: { width: fp.width, height: fp.height, downsampled: decoded.downsampled }, dhash: fp.dhash, ...(options.includeMirrors ? { dhashMirror: fp.dhashMirror } : {}), ...(options.includeRotations ? { dhashRotations: fp.dhashRotations, ...(options.includeMirrors ? { dhashMirrorRotations: fp.dhashMirrorRotations } : {}) } : {}), width: decoded.sourceWidth, height: decoded.sourceHeight, contrast: decoded.fullIdentity?.contrast ?? fp.contrast,
           ...(options.includeCrops ? { localHashes: fp.localHashes, localContrasts: fp.localContrasts, localHashVersion: fp.localHashVersion } : {}),
-          thumbnail: previewPath, thumbnailDigest: sha256(preview), format: decoded.format });
+          thumbnailDigest: sha256(preview), format: decoded.format };
+          if (cache) await cache.put(image, preview);
+        }
+        await writeFile(join(stage, previewPath), preview, { flag: 'wx' });
+        images.push({ id: entry.path, path: entry.path, split: entry.split, ...image, thumbnail: previewPath });
       } catch (error) {
         if (error.code === 'CORE_UNAVAILABLE' || error.code === 'CORE_PROTOCOL' || error.code === 'CORE_REJECTED') throw error;
         if (error.code === 'PIXEL_BUDGET' && remaining < options.maxDecodePixels) {
@@ -211,7 +240,7 @@ export async function runAudit({ root: inputRoot, out: inputOut, options: overri
         errors.push(errorRecord(error, entry.path));
       }
     }
-    const coreOptions = Object.fromEntries(['threshold', 'maxComparisons', 'maxPairs', 'maxImages', 'includeMirrors', 'includeRotations', 'includeCrops'].map((key) => [key, options[key]]));
+    const coreOptions = Object.fromEntries(['threshold', 'maxExactComparisons', 'maxComparisons', 'maxPairs', 'maxImages', 'includeMirrors', 'includeRotations', 'includeCrops'].map((key) => [key, options[key]]));
     const computed = images.length > 0 ? await audit(images, coreOptions) : {
       ok: false, complete: false, status: 'incomplete', pairs: [], groups: [], stats: { reason: 'no-decodable-images', processedImages: 0 },
     };
@@ -223,7 +252,7 @@ export async function runAudit({ root: inputRoot, out: inputOut, options: overri
       normalization: 'vl-rgb-v1', decoder: DECODER,
       engine: { name: 'visionleak-moonbit', artifactDigest: sha256(await readFile(new URL('../dist/visionleak.js', import.meta.url))) },
       ...computed, complete, status: complete ? 'complete' : 'incomplete', images, options, errors,
-      scope: { splits: SPLITS, splitDirectories: discovery.splitDirectories, missingSplits: discovery.missingSplits, supportedExtensions: SUPPORTED_EXTENSIONS,
+      scope: { ...(discovery.input ? { input: discovery.input } : {}), splits: SPLITS, splitDirectories: discovery.splitDirectories, missingSplits: discovery.missingSplits, supportedExtensions: SUPPORTED_EXTENSIONS,
         ignoredFiles: discovery.ignoredFiles, entriesScanned: discovery.entriesScanned, discoveredAtLeast: discovery.discoveredAtLeast,
         acceptedImages: images.length, totalDecodedPixels: totalPixels, maxDirectoryEntries: MAX_ENTRIES,
         source: 'local-files', allPairsAreCrossSplit: true, perceptualMatchesRequireReview: true },
@@ -234,7 +263,7 @@ export async function runAudit({ root: inputRoot, out: inputOut, options: overri
     // Exclude only wall-clock metadata so an identical audit has a reproducible ID.
     report.auditId = reportIdentity(report).digest;
     report.createdAt = new Date().toISOString();
-    report.timing = { elapsedMs: Math.round(performance.now() - started) };
+    report.timing = { ...(cache ? { cache: cache.stats } : {}), elapsedMs: Math.round(performance.now() - started) };
     await writeFile(join(stage, 'report.json'), `${JSON.stringify(report, null, 2)}\n`, { flag: 'wx' });
     await writeFile(join(stage, MARKER), `${JSON.stringify({ format: FORMAT, files: ['report.json', ...images.map((i) => i.thumbnail)] }, null, 2)}\n`, { flag: 'wx' });
     if (previous) {
@@ -249,7 +278,7 @@ export async function runAudit({ root: inputRoot, out: inputOut, options: overri
       catch (error) { if (error.code !== 'ENOENT') throw error; }
       await rename(stage, out);
     }
-    return { report, out };
+    return { report, out, ...(cache ? { cache: cache.stats } : {}) };
   } finally { await rm(stage, { recursive: true, force: true }); }
 }
 
@@ -271,7 +300,7 @@ export async function main(argv = process.argv.slice(2)) {
     const gate = workflow({operation:'gate',report,failOn:args.failOn});
     process.stdout.write(`${JSON.stringify({ ok: report.ok, complete: report.complete, status: report.status, auditId: report.auditId,
       report: join(out, 'report.json'), images: report.images.length, pairs: report.pairs.length, errors: report.errors.length,
-      coverage:report.coverage, ...(args.failOn ? {failOn:gate.failOn,matched:gate.matched,evidenceCounts:gate.counts}: {}) })}\n`);
+      phases:report.phases, cache:report.timing.cache, coverage:report.coverage, ...(args.failOn ? {failOn:gate.failOn,matched:gate.matched,evidenceCounts:gate.counts}: {}) })}\n`);
     return gate.exitCode;
   } catch (error) {
     process.stderr.write(`${JSON.stringify({ ok: false, complete: false, status: 'error', error: errorRecord(error) })}\n`);

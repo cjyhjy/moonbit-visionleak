@@ -9,6 +9,7 @@ import time
 import uuid
 import zipfile
 import shutil
+import argparse
 from datetime import datetime, timezone
 from release_metadata import release_version, read_checksums
 
@@ -18,7 +19,7 @@ REPORT=ROOT/'reports/release-verification.json'
 def digest(data):return hashlib.sha256(data).hexdigest()
 def timestamp():return datetime.now(timezone.utc).isoformat()
 
-def main():
+def main(reference_dir=None):
     report={'schemaVersion':'visionleak-release-verification-v1','status':'running','startedAt':timestamp(),'archive':None,'archiveSha256':None,'checks':[]}
     def save():REPORT.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
     save()
@@ -28,7 +29,9 @@ def main():
         start=time.monotonic()
         result=subprocess.run(args,cwd=project,env=env,capture_output=True,text=True,timeout=300)
         log=(result.stdout+result.stderr).replace(str(project),'<extracted-project>').replace(str(ROOT),'<source-project>')
-        logfile=ROOT/'reports/logs'/f'release-{name}.log';logfile.write_text(log)
+        log_dir=ROOT/'reports/logs' if REPORT==ROOT/'reports/release-verification.json' else REPORT.parent/'clean-copy-logs'
+        log_dir.mkdir(parents=True,exist_ok=True)
+        logfile=log_dir/f'release-{name}.log';logfile.write_text(log)
         check={'name':name,'command':[str(x).replace(str(ROOT),'<source-project>') for x in args],'exitCode':result.returncode,'elapsedSeconds':time.monotonic()-start,'status':'passed' if result.returncode==0 else 'failed','log':str(logfile.relative_to(ROOT))}
         report['checks'].append(check);save()
         if result.returncode:raise RuntimeError(f'{name} failed; inspect {check["log"]}')
@@ -72,14 +75,15 @@ def main():
         run('node-tests',['node','--test',*[str(p.relative_to(project)) for p in sorted((project/'tests').glob('*.test.mjs'))]])
         run('actual-images',['node','tools/cli.mjs','audit','--root','fixtures/benchmark','--out','acceptance-output'])
         actual=json.loads((project/'acceptance-output/report.json').read_text())
-        reference=json.loads((project/'reports/evaluation-audit.json').read_text())
+        references=project/(reference_dir or 'reports')
+        reference=json.loads((references/'evaluation-audit.json').read_text())
         def pairs(r):return sorted((tuple(sorted([p['left'],p['right']])),p['evidence'],p['distance']) for p in r['pairs'])
         if not actual['complete'] or actual['errors'] or pairs(actual)!=pairs(reference):raise ValueError('Clean image audit differs from recorded evaluation')
         if actual['auditId']!=reference['auditId']:raise ValueError('Stable audit ID differs in clean copy')
         report['checks'].append({'name':'clean-report-parity','status':'passed','images':len(actual['images']),'pairs':len(actual['pairs']),'auditId':actual['auditId']});save()
         run('mirror-images',['node','tools/cli.mjs','audit','--root','fixtures/benchmark','--out','mirror-output','--include-mirrors'])
         mirrored=json.loads((project/'mirror-output/report.json').read_text())
-        mirror_reference=json.loads((project/'reports/mirror-evaluation-audit.json').read_text())
+        mirror_reference=json.loads((references/'mirror-evaluation-audit.json').read_text())
         if not mirrored['complete'] or mirrored['auditId']!=mirror_reference['auditId']:raise ValueError('Clean mirror audit differs from recorded evaluation')
         report['checks'].append({'name':'clean-mirror-report-parity','status':'passed','pairs':len(mirrored['pairs']),'auditId':mirrored['auditId']});save()
         for partition in ['development','holdout']:
@@ -87,7 +91,8 @@ def main():
                 output=f'photo-output-{partition}-{mode}'
                 run(f'photos-{partition}-{mode}',['node','tools/cli.mjs','audit','--root',f'fixtures/photos-v1/{partition}','--out',output,*flags])
                 photo=json.loads((project/output/'report.json').read_text())
-                expected_photo=json.loads((project/f'reports/photos-v1/current-{partition}/{mode}-audit.json').read_text())
+                photo_reference=references/f'photos-{partition}/{mode}-audit.json' if reference_dir else project/f'reports/photos-v1/current-{partition}/{mode}-audit.json'
+                expected_photo=json.loads(photo_reference.read_text())
                 if not photo['complete'] or photo['auditId']!=expected_photo['auditId']:raise ValueError('Clean photo audit differs')
                 report['checks'].append({'name':f'photo-parity-{partition}-{mode}','status':'passed','auditId':photo['auditId'],'pairs':len(photo['pairs'])});save()
         source=run('source-digest' ,['node','--input-type=module','-e',"import{sourceDigest}from'./tools/source-digest.mjs';console.log(sourceDigest(process.cwd()))"]).strip()
@@ -109,4 +114,8 @@ def main():
         report['finishedAt']=timestamp();save()
         print(json.dumps({k:report[k] for k in ('status','archive','archiveSha256')}))
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    parser=argparse.ArgumentParser();parser.add_argument('--reference-dir');parser.add_argument('--report',type=Path);args=parser.parse_args()
+    if args.report:
+        REPORT=args.report.resolve();REPORT.parent.mkdir(parents=True,exist_ok=True)
+    main(args.reference_dir)

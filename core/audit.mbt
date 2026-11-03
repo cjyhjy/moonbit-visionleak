@@ -147,6 +147,54 @@ fn append_pair(
 }
 
 ///|
+fn budget_new(maximum : Int32) -> Budget {
+  { maximum, work: 0, distances: 0, index_work: 0, pair_checks: 0, reason: "", }
+}
+
+///|
+fn phase_json(
+  budget : Budget,
+  processed : Int32,
+  total : Int32,
+  pairs : Int32,
+  enabled : Bool,
+  started : Bool,
+) -> Json {
+  let complete = enabled && started && budget.reason == "" && processed == total
+  {
+    "enabled": Json(enabled),
+    "complete": Json(complete),
+    "status": Json(
+      if !enabled {
+        "disabled"
+      } else if !started {
+        "skipped"
+      } else if complete {
+        "complete"
+      } else {
+        "incomplete"
+      },
+    ),
+    "inputImages": Json(total),
+    "processedImages": Json(processed),
+    "comparisons": Json(budget.work),
+    "maxComparisons": Json(budget.maximum),
+    "distanceEvaluations": Json(budget.distances),
+    "pairChecks": Json(budget.pair_checks),
+    "indexOperations": Json(budget.index_work),
+    "indexOperationLimit": Json(budget.maximum * 16),
+    "emittedPairs": Json(pairs),
+    "reason": Json(
+      if enabled && !started {
+        "PreviousPhaseIncomplete"
+      } else {
+        budget.reason
+      },
+    ),
+  }
+}
+
+///|
 fn run_audit(
   items : Array[Item],
   threshold : Int32,
@@ -156,42 +204,43 @@ fn run_audit(
   include_mirrors : Bool,
   include_rotations : Bool,
   include_crops : Bool,
+  max_exact_work~ : Int32 = 1000000,
 ) -> Json {
   let pairs : Array[Json] = []
   let nodes : Array[BkNode] = []
   let local_nodes : Array[LocalNode] = []
   let index = mih_new()
   let local_index = mih_new()
-  let mut local_work = 0
   let by_bytes : Map[String, Array[Int32]] = Map([])
   let by_pixels : Map[String, Array[Int32]] = Map([])
   let parents = Array::makei(items.length(), i => i)
-  let budget : Budget = {
-    maximum: max_work,
-    work: 0,
-    distances: 0,
-    pair_checks: 0,
-    index_work: 0,
-    reason: "",
-  }
+  let seen_by_image : Array[Map[Int32, Bool]] = Array::makei(items.length(), _ => {
+    Map([])
+  })
+  let exact = budget_new(max_exact_work)
+  let budget = budget_new(max_work)
+  let local_budget = budget_new(max_work)
+  let mut exact_processed = 0
   let mut processed = 0
-  // Exact buckets are checked independently of the approximate index.
+  let mut local_processed = 0
+  // Finish deterministic evidence before spending any perceptual budget.
   for i = 0; i < items.length(); i = i + 1 {
     let item = items[i]
-    let seen : Map[Int32, Bool] = Map([])
-    let exact_buckets = [
-      by_bytes.get(item.bytes).unwrap_or([]),
-      by_pixels.get(item.pixels).unwrap_or([]),
-    ]
-    for bucket in exact_buckets {
+    let seen = seen_by_image[i]
+    for
+      bucket in [
+        by_bytes.get(item.bytes).unwrap_or([]),
+        by_pixels.get(item.pixels).unwrap_or([]),
+      ] {
       for j in bucket {
         if seen.contains(j) {
           continue
         }
-        seen[j] = true
-        if !budget.take(false) {
+        // Same-split enumeration is bounded too: an all-identical split can be quadratic.
+        if !exact.take(false) {
           break
         }
+        seen[j] = true
         if !append_pair(
             items,
             j,
@@ -199,7 +248,7 @@ fn run_audit(
             hash_distance(items[j].hash, item.hash),
             pairs,
             parents,
-            budget,
+            exact,
             max_pairs,
             "original",
             include_rotations,
@@ -207,131 +256,11 @@ fn run_audit(
           break
         }
       }
-      if budget.reason != "" {
+      if exact.reason != "" {
         break
       }
     }
-    if budget.reason != "" {
-      break
-    }
-    // Iterative metric-tree query. No recursion; each visit/pair consumes budget.
-    let variants = if include_rotations {
-      item.orientation_hashes
-    } else if include_mirrors {
-      [item.hash, item.mirror_hash]
-    } else {
-      [item.hash]
-    }
-    for query_hash in variants {
-      let paths = mih_paths(index, query_hash, threshold, budget)
-      if budget.reason != "" {
-        break
-      }
-      let pending : Array[Int32] = if nodes.is_empty() { [] } else { [0] }
-      while !pending.is_empty() {
-        let node_id = pending.pop().unwrap()
-        if !mih_contains(paths, node_id) {
-          continue
-        }
-        let n = nodes[node_id]
-        if !budget.take(true) {
-          break
-        }
-        let d = hash_distance(query_hash, n.hash)
-        if d <= threshold {
-          for j in n.members {
-            if seen.contains(j) {
-              continue
-            }
-            if !budget.take(false) {
-              break
-            }
-            let (pair_d, transform) = if include_rotations {
-              orientation_distance(items[j], item, budget, include_mirrors)
-            } else if include_mirrors {
-              mirror_distance(items[j], item, budget)
-            } else {
-              (d, "original")
-            }
-            if budget.reason != "" {
-              break
-            }
-            seen[j] = true
-            if !append_pair(
-                items, j, i, pair_d, pairs, parents, budget, max_pairs, transform,
-                include_rotations,
-              ) {
-              break
-            }
-          }
-        }
-        if budget.reason != "" {
-          break
-        }
-        for edge = Int32::max(0, d - threshold)
-            edge <= Int32::min(64, d + threshold)
-            edge = edge + 1 {
-          if n.children.get(edge) is Some(child) {
-            pending.push(child)
-          }
-        }
-      }
-      if budget.reason != "" {
-        break
-      }
-    }
-    if budget.reason != "" {
-      break
-    }
-    if include_crops {
-      let before = budget.work
-      local_query(
-        items, i, local_nodes, local_index, seen, pairs, budget, threshold, max_pairs,
-      )
-      if budget.reason == "" {
-        local_insert(item, i, local_nodes, local_index, budget)
-      }
-      local_work = local_work + budget.work - before
-      if budget.reason != "" {
-        break
-      }
-    }
-    for insert_hash in variants {
-      if nodes.is_empty() {
-        nodes.push({ hash: insert_hash, members: [i], children: Map([]), })
-        if threshold <= 7 {
-          mih_insert(index, insert_hash, -1)
-        }
-      } else {
-        let mut cursor = 0
-        while true {
-          if !budget.take(true) {
-            break
-          }
-          let n = nodes[cursor]
-          let d = hash_distance(insert_hash, n.hash)
-          if d == 0 {
-            n.members.push(i)
-            break
-          }
-          match n.children.get(d) {
-            Some(child) => cursor = child
-            None => {
-              if threshold <= 7 {
-                mih_insert(index, insert_hash, cursor)
-              }
-              n.children[d] = nodes.length()
-              nodes.push({ hash: insert_hash, members: [i], children: Map([]), })
-              break
-            }
-          }
-        }
-      }
-      if budget.reason != "" {
-        break
-      }
-    }
-    if budget.reason != "" {
+    if exact.reason != "" {
       break
     }
     match by_bytes.get(item.bytes) {
@@ -342,7 +271,194 @@ fn run_audit(
       Some(b) => b.push(i)
       None => by_pixels[item.pixels] = [i]
     }
-    processed = processed + 1
+    exact_processed = exact_processed + 1
+  }
+  let exact_pairs = pairs.length()
+  if exact.reason == "" {
+    for i = 0; i < items.length(); i = i + 1 {
+      let item = items[i]
+      let seen = seen_by_image[i]
+      // Iterative metric-tree query. No recursion; each visit/pair consumes budget.
+      let variants = if include_rotations {
+        item.orientation_hashes
+      } else if include_mirrors {
+        [item.hash, item.mirror_hash]
+      } else {
+        [item.hash]
+      }
+      for query_hash in variants {
+        let paths = mih_paths(index, query_hash, threshold, budget)
+        if budget.reason != "" {
+          break
+        }
+        let pending : Array[Int32] = if nodes.is_empty() { [] } else { [0] }
+        while !pending.is_empty() {
+          let node_id = pending.pop().unwrap()
+          if !mih_contains(paths, node_id) {
+            continue
+          }
+          let n = nodes[node_id]
+          if !budget.take(true) {
+            break
+          }
+          let d = hash_distance(query_hash, n.hash)
+          if d <= threshold {
+            for j in n.members {
+              if seen.contains(j) ||
+                items[j].split == item.split ||
+                items[j].bytes == item.bytes ||
+                items[j].pixels == item.pixels {
+                continue
+              }
+              if !budget.take(false) {
+                break
+              }
+              let (pair_d, transform) = if include_rotations {
+                orientation_distance(items[j], item, budget, include_mirrors)
+              } else if include_mirrors {
+                mirror_distance(items[j], item, budget)
+              } else {
+                (d, "original")
+              }
+              if budget.reason != "" {
+                break
+              }
+              seen[j] = true
+              if !append_pair(
+                  items, j, i, pair_d, pairs, parents, budget, max_pairs, transform,
+                  include_rotations,
+                ) {
+                break
+              }
+            }
+          }
+          if budget.reason != "" {
+            break
+          }
+          for edge = Int32::max(0, d - threshold)
+              edge <= Int32::min(64, d + threshold)
+              edge = edge + 1 {
+            if n.children.get(edge) is Some(child) {
+              pending.push(child)
+            }
+          }
+        }
+        if budget.reason != "" {
+          break
+        }
+      }
+      if budget.reason != "" {
+        break
+      }
+      for insert_hash in variants {
+        if nodes.is_empty() {
+          nodes.push({ hash: insert_hash, members: [i], children: Map([]), })
+          if threshold <= 7 {
+            mih_insert(index, insert_hash, -1)
+          }
+        } else {
+          let mut cursor = 0
+          while true {
+            if !budget.take(true) {
+              break
+            }
+            let n = nodes[cursor]
+            let d = hash_distance(insert_hash, n.hash)
+            if d == 0 {
+              n.members.push(i)
+              break
+            }
+            match n.children.get(d) {
+              Some(child) => cursor = child
+              None => {
+                if threshold <= 7 {
+                  mih_insert(index, insert_hash, cursor)
+                }
+                n.children[d] = nodes.length()
+                nodes.push({
+                  hash: insert_hash,
+                  members: [i],
+                  children: Map([]),
+                })
+                break
+              }
+            }
+          }
+        }
+        if budget.reason != "" {
+          break
+        }
+      }
+      if budget.reason != "" {
+        break
+      }
+      processed = processed + 1
+    }
+  }
+  let global_pairs = pairs.length() - exact_pairs
+  // A separate local pass preserves exact > global > local precedence.
+  if include_crops && exact.reason == "" && budget.reason == "" {
+    for i = 0; i < items.length(); i = i + 1 {
+      local_query(
+        items,
+        i,
+        local_nodes,
+        local_index,
+        seen_by_image[i],
+        pairs,
+        local_budget,
+        threshold,
+        max_pairs,
+      )
+      if local_budget.reason == "" {
+        local_insert(items[i], i, local_nodes, local_index, local_budget)
+      }
+      if local_budget.reason != "" {
+        break
+      }
+      local_processed = local_processed + 1
+    }
+  }
+  let local_work = local_budget.work
+  let reason = if exact.reason != "" {
+    exact.reason
+  } else if budget.reason != "" {
+    budget.reason
+  } else {
+    local_budget.reason
+  }
+  let phases : Json = {
+    "deterministic": phase_json(
+      exact,
+      exact_processed,
+      items.length(),
+      exact_pairs,
+      true,
+      true,
+    ),
+    "perceptual": phase_json(
+      budget,
+      processed,
+      items.length(),
+      global_pairs,
+      true,
+      exact.reason == "",
+    ),
+    "local": phase_json(
+      local_budget,
+      local_processed,
+      items.length(),
+      pairs.length() - exact_pairs - global_pairs,
+      include_crops,
+      exact.reason == "" && budget.reason == "",
+    ),
+  }
+  // A skipped enabled phase completed no input. Do not substitute the
+  // interrupted phase's prefix for coverage of the entire audit.
+  let all_processed = if include_crops {
+    Int32::min(exact_processed, Int32::min(processed, local_processed))
+  } else {
+    Int32::min(exact_processed, processed)
   }
   let components : Map[Int32, Array[String]] = Map([])
   for i = 0; i < items.length(); i = i + 1 {
@@ -358,35 +474,46 @@ fn run_audit(
       groups.push({ "members": Json(members), "evidence": "exact-component" })
     }
   }
-  let complete = budget.reason == ""
+  let complete = reason == ""
   let result : Json = {
     "ok": true,
     "complete": Json(complete),
     "status": Json(if complete { "complete" } else { "incomplete" }),
     "normalization": "vl-rgb-v1",
+    "auditStrategy": "exact-first-v1",
+    "phases": phases,
     "pairs": Json(pairs),
     "groups": Json(groups),
     "options": {
       "threshold": Json(threshold),
       "maxComparisons": Json(max_work),
+      "maxExactComparisons": Json(max_exact_work),
       "maxPairs": Json(max_pairs),
       "maxImages": Json(max_images),
     },
     "stats": {
       "inputImages": Json(items.length()),
-      "processedImages": Json(processed),
-      "comparisons": Json(budget.work),
-      "distanceEvaluations": Json(budget.distances),
-      "pairChecks": Json(budget.pair_checks),
+      "processedImages": Json(all_processed),
+      "comparisons": Json(exact.work + budget.work + local_budget.work),
+      "distanceEvaluations": Json(
+        exact.distances + budget.distances + local_budget.distances,
+      ),
+      "pairChecks": Json(
+        exact.pair_checks + budget.pair_checks + local_budget.pair_checks,
+      ),
       "emittedPairs": Json(pairs.length()),
       "indexNodes": Json(nodes.length()),
-      "reason": Json(budget.reason),
+      "reason": Json(reason),
     },
   }
-  if budget.index_work > 0 {
+  if budget.index_work + local_budget.index_work > 0 {
     if field(result, "stats") is Object(fields) {
-      fields["indexOperations"] = Json(budget.index_work)
-      fields["indexOperationLimit"] = Json(max_work * 16)
+      fields["indexOperations"] = Json(
+        budget.index_work + local_budget.index_work,
+      )
+      fields["indexOperationLimit"] = Json(
+        max_work * 16 * (if include_crops { 2 } else { 1 }),
+      )
     }
   }
   if include_mirrors {
@@ -468,12 +595,15 @@ pub fn audit_json(source : String) -> String {
   let include_crops = crop_option == Json(true)
   let threshold = option(opts, "threshold", 6)
   let max_work = option(opts, "maxComparisons", 1000000)
+  let max_exact_work = option(opts, "maxExactComparisons", 1000000)
   let max_pairs = option(opts, "maxPairs", 10000)
   let max_images = option(opts, "maxImages", 1000)
   if threshold < 0 ||
     threshold > 64 ||
     max_work < 0 ||
     max_work > 10000000 ||
+    max_exact_work < 0 ||
+    max_exact_work > 10000000 ||
     max_pairs < 0 ||
     max_pairs > 100000 ||
     max_images < 0 ||
@@ -600,8 +730,15 @@ pub fn audit_json(source : String) -> String {
     })
   }
   run_audit(
-    items, threshold, max_work, max_pairs, max_images, include_mirrors, include_rotations,
+    items,
+    threshold,
+    max_work,
+    max_pairs,
+    max_images,
+    include_mirrors,
+    include_rotations,
     include_crops,
+    max_exact_work~,
   ).stringify()
 }
 

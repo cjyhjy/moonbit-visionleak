@@ -410,6 +410,10 @@ fn workflow_split(path : String, directories : Json) -> String {
 fn workflow_coverage(request : Json) -> Json {
   let report = field(request, "report")
   let directories = field(field(report, "scope"), "splitDirectories")
+  let manifest_splits : Map[String, String] = Map([])
+  for image in workflow_rows(request, "discovered") {
+    manifest_splits[text(field(image, "path"))] = text(field(image, "split"))
+  }
   let audited : Map[String, Bool] = Map([])
   for image in workflow_rows(report, "images") {
     audited[text(field(image, "path"))] = true
@@ -438,17 +442,34 @@ fn workflow_coverage(request : Json) -> Json {
     processed_value
   }
   if reason != "" && reason != "no-decodable-images" {
-    budgets.push({
+    let mut stopped_phase = ""
+    let mut stopped_processed = processed
+    for name in ["deterministic", "perceptual", "local"] {
+      let phase = field(field(report, "phases"), name)
+      if field(phase, "status") == Json("incomplete") {
+        stopped_phase = name
+        stopped_processed = integer(field(phase, "processedImages"))
+        break
+      }
+    }
+    let exhaustion : Json = {
       "code": Json(reason),
       "stage": "core-comparison",
-      "processedImages": field(field(report, "stats"), "processedImages"),
+      "processedImages": Json(stopped_processed),
       "emittedPairs": field(field(report, "stats"), "emittedPairs"),
-      "atImage": if processed < images.length() {
-        field(images[processed], "path")
+      "atImage": if stopped_processed >= 0 &&
+        stopped_processed < images.length() {
+        field(images[stopped_processed], "path")
       } else {
         Json::null()
       },
-    })
+    }
+    if stopped_phase != "" {
+      if exhaustion is Object(fields) {
+        fields["phase"] = Json(stopped_phase)
+      }
+    }
+    budgets.push(exhaustion)
   }
   let summary = StringBuilder()
   summary.write_string("已审计 ")
@@ -474,7 +495,8 @@ fn workflow_coverage(request : Json) -> Json {
     }
     for error in errors {
       let path = text(field(error, "path"))
-      if workflow_split(path, directories) == split {
+      if manifest_splits.get(path).unwrap_or(workflow_split(path, directories)) ==
+        split {
         let code = text(field(error, "code"))
         let before = integer(reasons.get(code).unwrap_or(Json(0)))
         reasons[code] = Json(before + 1)
@@ -535,6 +557,12 @@ fn workflow_coverage(request : Json) -> Json {
       "ignoredFiles": Json(ignored_total),
       "unprocessedKnownFiles": Json(unprocessed_total),
       "summary": Json(summary.to_string()),
+      "phases": field(report, "phases"),
+      "deterministicInputComplete": Json(
+        field(field(field(report, "phases"), "deterministic"), "complete") ==
+        Json(true) &&
+        errors.is_empty(),
+      ),
     },
   }
 }
@@ -565,6 +593,7 @@ pub fn workflow_json(source : String) -> String {
     "coverage" => workflow_coverage(request)
     "verify" => workflow_verify(report, workflow_rows(request, "observations"))
     "verificationInputs" => workflow_verification_inputs(report)
+    "reviewOrder" => workflow_review_order(report)
     "view" =>
       workflow_view(
         report,

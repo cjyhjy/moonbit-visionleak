@@ -36,7 +36,8 @@ dataset/
 | `--max-decode-pixels`（完整源图） | 64000000 | 1–100000000 |
 | `--max-total-pixels` | 100000000 | 1–1000000000 |
 | `--max-file-bytes` | 33554432 | 1–1073741824 |
-| `--max-comparisons` | 1000000 | 0–10000000 |
+| `--max-comparisons`（每个近似阶段） | 1000000 | 0–10000000 |
+| `--max-exact-comparisons` | 1000000 | 0–10000000 |
 | `--max-pairs` | 10000 | 0–100000 |
 
 另有固定目录预算：最多观察 100000 个目录项、最多递归 64 层。宽、高各不超过 65535。完整源图受 --max-decode-pixels 限制，默认 64MP、硬上限 100MP；感知取样受 --max-pixels 限制，硬上限仍为 4194304。按文件逐个解码，读取前检查编码字节数；读取过程固定上限并检查文件是否变化。总像素预算在下一张图片解码前限制其可用像素数，按完整源图计费。超过感知取样上限时，完整 RGBA 由 MoonBit 分块规范化并计算像素摘要，再单独用 sharp 的 resize/shrink-on-load 路径取得 dHash 与预览输入。降低 --max-pixels 会缩小感知输入；拒收大图使用 --max-decode-pixels。
@@ -136,9 +137,9 @@ CLI 增加 `--include-mirrors`；JS `fingerprint({width,height,rgba,includeMirro
 
 新增 `--include-rotations`，可与镜像组合；完整 API、方向顺序、预算语义与开销见 [0.4.0 说明](changes-0.4.0.md)，照片来源与实际误报漏检见 [评测](../reports/photos-v1/summary.md)。
 
-## 0.5.0 阶段执行说明
+## 0.5.0 实施与发布记录
 
-以上大图与别名更新为计划第 0、1 阶段的实现，待 Claude 阶段验收。12MP JPEG、复制件和无损 PNG 重编码的现场验证、峰值 RSS 及默认检测兼容结果见 `reports/plan-0.5.0/phase-1.md`。Node/sharp 仍会分配完整 RGBA 解码缓冲；增量 SHA-256 不等于整个解码流程零拷贝或固定 RSS。
+以上大图与别名更新已随 0.5.0 发布，实际发布收据见 `reports/plan-0.5.0/publication-0.5.0/`。12MP JPEG、复制件和无损 PNG 重编码的现场验证、峰值 RSS 及默认检测兼容结果见 `reports/plan-0.5.0/phase-1.md`。Node/sharp 仍会分配完整 RGBA 解码缓冲；增量 SHA-256 不等于整个解码流程零拷贝或固定 RSS。
 
 ## 0.5.0：关卡、复核与局部候选
 
@@ -155,3 +156,12 @@ CLI 增加 `--include-mirrors`；JS `fingerprint({width,height,rgba,includeMirro
 ## 0.6.0 下游契约
 
 `node tools/cli.mjs capabilities` 返回实际版本、报告格式、参数边界和复验范围。详见 [0.6.0 集成说明](changes-0.6.0.md)。`verify` 的 `verificationScope` 明确候选未重新计算，退出 0 不表示全部候选已验证。
+
+## 0.7.0 新参数（本地候选版本）
+
+- `--manifest FILE`：UTF-8 `path,split` 清单，路径相对 root，仅审计列出的文件。
+- `--cache DIRECTORY`：可选的指纹与缩略图缓存；目录不得与数据集或输出重叠。
+- `--max-exact-comparisons N`：独立确定性预算，0..10000000，默认 1000000。
+- `--max-comparisons N`：分别限制全图与局部阶段，各自独立，不再是全核心的单一总预算。
+
+`--max-pairs` 仍是共享输出上限。`--fail-on` 保留原退出优先级；感知检索中断时仍能以已发现的精确重复返回 3。覆盖情况读取 `phases`，同时检查 `coverage.deterministicInputComplete` 和输入错误。详情见 [0.7.0 说明](changes-0.7.0.md)。

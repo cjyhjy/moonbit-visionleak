@@ -26,3 +26,7 @@ Version metadata is now 0.5.0. Phase 3 is complete; phase 4 local verification, 
 `photos-v1/current-*` are refreshed regression reports. Their previous bytes are preserved in `history/pre-0.5.0-20261025/`; `research/photos-v1/freeze/archive-locations.json` resolves the eight 0.4.0 baselines to those immutable files and enforces the original frozen SHA-256 values. Original freeze records and historical ZIPs remain unchanged.
 
 `plan-0.5.0/crops-development/` and `crops-holdout/` report controlled transformations of 32 newly licensed file sources. Source and scene partitioning, freeze chronology, oracle comparisons, resource results and their limits are recorded in `plan-0.5.0/phase-3.md`. The old photos-v1 holdout is a regression set for this version.
+
+## 0.7.0 local candidate
+
+Current implementation and acceptance are indexed in [post-review/README.md](post-review/README.md). Historical root verification/release receipts attest only their recorded versions. The 0.7.0 candidate adds exact-first phases, CSV manifests, optional content-keyed fingerprint caching, bounded review ordering, new frozen photo evaluation and a complete walkthrough. It has not been committed, pushed or published in this work.

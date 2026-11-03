@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "visionleak-browser-followup-v1",
+  "status": "passed",
+  "checkedAt": "2026-11-03T18:36:54.872945+00:00",
+  "browser": "Google Chrome via CUA",
+  "coreArtifactSha256": "ad05cc71d2d8ef8620b7fe7695b5cd7b38c669c02e8b0a7afd6e943acef3b701",
+  "sourceHashes": {
+    "demo/app.mjs": "d0469c6500b273a0efcb24dbc2b47255faf71b8a3c6d2bb2e4c4428f30d1b457",
+    "demo/index.html": "278c7ebe68a4544714515fa2a9ed408f02bf84364f9a99eff7826f312c5abc01",
+    "demo/styles.css": "65c44403c6a12256ab0d837825ee78121791205e5f25eb12369ef1470f816e46",
+    "dist/visionleak.js": "ad05cc71d2d8ef8620b7fe7695b5cd7b38c669c02e8b0a7afd6e943acef3b701"
+  },
+  "auditIds": [
+    "dec04cae979075990e5b1ff3ae7ab822d03fc776ad01c9f808b09bf152ce0345",
+    "b597c840415ae82f81c6c4cce861a2676d3479637bf725acd0b7d6ba6484ba42"
+  ],
+  "checks": {
+    "skippedPhasesDoNotCountAsAudited": true,
+    "interruptedPhasePrefixStillVisible": true,
+    "completeCoverageVisible": true,
+    "rankingDefaultsToReportOrder": true,
+    "experimentalOrderingPreservesFivePairs": true,
+    "markProgressAndUndo": true,
+    "desktopVisualInspection": true,
+    "mobile390VisualInspection": true,
+    "mobileScrollWidth": 375,
+    "mobileViewportWidth": 390,
+    "consoleWarningsOrErrorsObserved": []
+  },
+  "screenshots": [
+    {
+      "path": "reports/followup-0.7.0/coverage-desktop.jpg",
+      "sha256": "d75a737bcaa27159a6e4f079609ec4f4d0cf14921f893ef30b3b34bd14f9073a"
+    },
+    {
+      "path": "reports/followup-0.7.0/review-desktop.jpg",
+      "sha256": "08088c7714d070be1f67ed454d12cb7000193f61a143be809fd35cf3831a6030"
+    },
+    {
+      "path": "reports/followup-0.7.0/coverage-mobile-390.jpg",
+      "sha256": "962a48a3cc6f3183a9fa9a49830739e5718f05b2334e6437c5b938d9fdfd9d6b"
+    }
+  ],
+  "limitations": [
+    "Chrome on this macOS host only; not Safari/Firefox/Windows acceptance.",
+    "Standalone HTML export verified by integration tests and walkthrough; file:// visual acceptance not performed.",
+    "Scripted fixture decisions are functional tests, not a human review study."
+  ]
+}

@@ -1,10 +1,11 @@
+import { workflow_json } from '../dist/visionleak.js';
 import { EVIDENCE, DECISIONS, TRANSFORMS, orientationDescription, validateReport, validateReview, thumbnailURL, reviewDocument, filterPairs, canShowThumbnails, workbenchScope } from './review-validation.mjs';
 import { verifyReportIdentity } from './report-identity.mjs';
 import { reviewProgress, nextPendingPair, selectionAfterFilter, changeDecision, undoDecision } from './review-workflow.mjs';
 
 const $ = id => document.getElementById(id);
 const MAX_FILE_BYTES = 32 * 1024 * 1024;
-const state = { report: null, servedAuditId: null, reviews: new Map(), selected: null, filtered: [], visibleLimit: 100, loadSequence: 0, storageOK: true, undo: null };
+const state = { report: null, servedAuditId: null, reviews: new Map(), selected: null, filtered: [], visibleLimit: 100, loadSequence: 0, storageOK: true, undo: null, reviewOrder: null };
 const formatCount = number => number.toLocaleString('zh-CN');
 const storageKey = report => `visionleak:reviews:v1:${encodeURIComponent(report.auditId)}`;
 
@@ -17,6 +18,7 @@ function filters() {
   return { query: $('search').value, evidence: $('evidence-filter').value, decision: $('decision-filter').value, split: $('split-filter').value, maxDistance: Number($('distance-filter').value), includeLowContrast:$('show-low-contrast').checked, groupId:$('group-filter').value };
 }
 function resetFilters() {
+  $('queue-order').value = 'report';
   $('search').value = '';
   $('evidence-filter').value = 'all';
   $('decision-filter').value = 'all';
@@ -56,6 +58,7 @@ async function installReport(raw, source, served = false, sequence = state.loadS
   state.selected = null;
   state.filtered = [];
   state.undo = null;
+  state.reviewOrder = null;
   $('workspace').hidden = false;
   $('empty-state').hidden = true;
   $('audit-id').textContent = report.auditId;
@@ -73,6 +76,10 @@ async function installReport(raw, source, served = false, sequence = state.loadS
   $('low-contrast-count').textContent = `展开低对比度配对（${formatCount(scope.lowContrastPairs)}）`;
   $('group-filter').replaceChildren(new Option(`全部候选组（${scope.candidateGroups.length}）`, ''));
   for (const [index, group] of scope.candidateGroups.entries()) $('group-filter').add(new Option(`组 ${index+1} · ${group.members.length} 张图像`,group.id));
+  const phaseNames = { deterministic: '确定性检查', perceptual: '感知检索', local: '裁切检索' };
+  const phaseStatus = { complete: '完成', incomplete: '未完成', skipped: '未执行', disabled: '关闭' };
+  $('phase-summary').hidden = !raw.phases;
+  $('phase-summary').textContent = Object.entries(raw.phases ?? {}).map(([key, phase]) => `${phaseNames[key] ?? key}：${phaseStatus[phase.status] ?? phase.status} ${phase.processedImages}/${phase.inputImages}`).join(' · ') + (raw.phases ? (raw.coverage?.deterministicInputComplete ? '。确定性检查覆盖本次全部输入。' : '。各阶段只覆盖已接收的图像；请检查拒收和输入范围。') : '');
   $('coverage-summary').textContent = raw.coverage?.summary ?? '历史报告未记录逐集合覆盖统计；结论仅覆盖此报告的输入与已完成比较。';
   $('split-filter').replaceChildren(new Option('全部集合', 'all'));
   for (const split of [...new Set([...report.images.values()].map(image => image.split))].sort()) $('split-filter').add(new Option(split, split));
@@ -81,7 +88,7 @@ async function installReport(raw, source, served = false, sequence = state.loadS
   $('distance-filter').max = String(maximumDistance);
   const errors = Array.isArray(raw.errors) ? raw.errors : [];
   $('error-summary').textContent = `${errors.length ? `${formatCount(errors.length)} 条错误或跳过记录` : '无错误记录'} · 统计与选项`;
-  $('report-stats').textContent = JSON.stringify({ stats: raw.stats ?? null, scope: raw.scope ?? null, coverage:raw.coverage ?? null, timing: raw.timing ?? null }, null, 2);
+  $('report-stats').textContent = JSON.stringify({ phases: raw.phases ?? null, stats: raw.stats ?? null, scope: raw.scope ?? null, coverage:raw.coverage ?? null, timing: raw.timing ?? null }, null, 2);
   $('report-options').textContent = JSON.stringify({ options: raw.options ?? null, normalization: raw.normalization ?? null, decoder: raw.decoder ?? null }, null, 2);
   $('report-errors').textContent = errors.length ? JSON.stringify(errors, null, 2) : '[]';
   resetFilters();
@@ -216,6 +223,18 @@ function render() {
   if (!state.report) return;
   const previous = state.filtered;
   state.filtered = filterPairs(state.report, state.reviews, filters());
+  const prioritize = $('queue-order').value === 'support';
+  $('ranking-note').hidden = !prioritize;
+  if (prioritize) {
+    if (!state.reviewOrder) {
+      const result = JSON.parse(workflow_json(JSON.stringify({ operation: 'reviewOrder', report: state.report.raw })));
+      if (!result.ok) throw new Error(result.error.message);
+      state.reviewOrder = result;
+    }
+    const order = new Map(state.reviewOrder.keys.map((key, i) => [key, i]));
+    state.filtered.sort((a, b) => order.get(a.key) - order.get(b.key));
+    $('ranking-note').textContent = `确定性证据优先；候选参考对比度、窗口支持数和距离排序。已计算 ${state.reviewOrder.scoredLocalPairs} 对局部候选，未计算 ${state.reviewOrder.unscoredLocalPairs} 对（最多 200 对）。窗口相关，支持数不是概率；排序不改变证据和候选集合。`;
+  }
   state.selected = selectionAfterFilter(state.filtered, state.selected, previous);
   ensureSelectionVisible();
   renderMetrics();
@@ -370,3 +389,5 @@ document.addEventListener('keydown', event => {
   shortcuts[key]();
 });
 loadDefault();
+
+$('queue-order').addEventListener('change', () => { state.visibleLimit = 100; render(); });

@@ -1,3 +1,4 @@
+import { readRegular, containedFile } from './input.mjs';
 import { open, lstat, realpath, writeFile } from 'node:fs/promises';
 import { constants } from 'node:fs';
 import { resolve, dirname, join, relative, isAbsolute, sep } from 'node:path';
@@ -7,39 +8,6 @@ import { validateReport, validateReview, pairKey } from '../demo/review-validati
 import { decodeImage } from './decode.mjs';
 import { fingerprint, sha256, VisionLeakError } from './runtime.mjs';
 import { workflow } from './workflow.mjs';
-
-async function readRegular(path, limit) {
-  const handle = await open(path, constants.O_RDONLY | constants.O_NOFOLLOW);
-  try {
-    const before = await handle.stat();
-    if (!before.isFile() || before.size > limit) throw new VisionLeakError('INPUT_LIMIT', 'Input must be a bounded regular file');
-    const bytes = Buffer.alloc(before.size + 1);
-    let offset = 0;
-    while (offset < bytes.length) {
-      const { bytesRead } = await handle.read(bytes, offset, bytes.length - offset, null);
-      if (!bytesRead) break;
-      offset += bytesRead;
-    }
-    const after = await handle.stat();
-    if (offset !== before.size || after.size !== before.size || after.mtimeMs !== before.mtimeMs) throw new VisionLeakError('INPUT_CHANGED', 'Input changed while being read');
-    return bytes.subarray(0, offset);
-  } finally { await handle.close(); }
-}
-
-async function containedFile(root, name) {
-  if (typeof name !== 'string' || !name || name.includes('\\') || name.includes('\0') || isAbsolute(name) || name.split('/').some(p => !p || p === '.' || p === '..')) {
-    throw new VisionLeakError('UNSAFE_PATH', 'Report paths must be relative files inside the selected root');
-  }
-  let path = root;
-  for (const part of name.split('/')) {
-    path = join(path, part);
-    if ((await lstat(path)).isSymbolicLink()) throw new VisionLeakError('UNSAFE_PATH', 'Symbolic links are not followed');
-  }
-  const canonical = await realpath(path);
-  const suffix = relative(root, canonical);
-  if (!suffix || suffix === '..' || suffix.startsWith('..' + sep) || isAbsolute(suffix)) throw new VisionLeakError('UNSAFE_PATH', 'Input escaped the selected root');
-  return canonical;
-}
 
 async function loadReport(path, reviewPath) {
   const bytes = await readRegular(resolve(path), 64 * 1024 * 1024);

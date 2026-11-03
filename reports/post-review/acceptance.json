@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "visionleak-post-review-acceptance-v1",
+  "status": "passed",
+  "verifiedAt": "2026-10-30T09:54:32.445Z",
+  "version": "0.7.0",
+  "sourceDigest": "d365a037596bec6b37a15415838a19c53695c6a2fb93f4b864480f8b4bda8428",
+  "coreArtifactSha256": "15e9bc702941f771f4b77c76b09ae3f2e21abd0186acf059f994d1f4a26f17fe",
+  "ci": {
+    "status": "passed",
+    "checks": 26,
+    "moonTestsPerBackend": 82,
+    "nodeTests": 54,
+    "report": "ci/verification.json"
+  },
+  "browser": {
+    "status": "passed",
+    "report": "browser.json"
+  },
+  "photos": {
+    "report": "photos/evaluation.json",
+    "sources": 12,
+    "images": 108,
+    "randomCropAnchors": {
+      "found": 0,
+      "total": 24
+    },
+    "humanReviewTimeMeasured": false
+  },
+  "scale": {
+    "report": "scale/results.json"
+  },
+  "walkthrough": {
+    "report": "walkthrough.json",
+    "sourceDatasetUnchanged": true
+  },
+  "publication": {
+    "committed": false,
+    "pushed": false,
+    "published": false
+  },
+  "evidenceSha256": {
+    "ci/verification.json": "44129a1eee96f8270e0a641fd8bbcd0a7b5f10ae121090cf48bb3c9634eb82db",
+    "browser.json": "95b2a15cb8d0e0ab3671987763d83c70249fbde049a74219a0f9bd1cafd7684b",
+    "photos/evaluation.json": "a1977b19f9a33df69aae8afa8bcd7dc4e5cc6bf6d6bd17756d96f8e1ab177fdc",
+    "photos/ground-truth.json": "bc1c03d9c8de9d2ed1c503f892ca0bf8bde204fb3a8f9d13d0fa3639aa4f4851",
+    "scale/results.json": "511d9b1442e53a935863c2a30cfe8ceb1fc1e36f2524f991efbf21c6c4126e00",
+    "walkthrough.json": "1d92b777950c1d94627aae9bccdde539744c9404787e609635cf68e290d1cbfe",
+    "demo-evidence.html": "76cebbe6227dcae6f85d0a2ce0fb3aefd8a083b4edd40189abf2a7627fc4dd46"
+  }
+}

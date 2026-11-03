@@ -47,7 +47,7 @@ test('fail-on implements fatal > hit > incomplete > complete and preserves defau
   assert.equal(partial.status,3);
   assert.equal(partial.json.complete,false);
   assert.equal(audit('incomplete').status,2);
-  assert.equal(audit('budget','--max-comparisons','0','--fail-on','exact').status,2);
+  assert.equal(audit('budget','--max-comparisons','0','--fail-on','exact').status,3);
   assert.equal(run('audit','--root',join(f.temp,'missing'),'--out',join(f.temp,'fatal'),'--fail-on','candidate').status,1);
   assert.equal(audit('bad-flag','--fail-on','typo').status,1);
 });

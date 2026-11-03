@@ -1,40 +1,27 @@
-# VisionLeak 0.6.0 delivery
+# VisionLeak 0.7.0 local candidate
 
-The previous 0.4.0 delivery record is preserved at reports/history/pre-0.5.0-20261025/DELIVERY-0.4.0.md. Historical ZIPs and freeze records remain unchanged.
+Implemented after initial review, with the 2026-11-03 coverage correction and stricter ordered regression. Publication status is tracked separately from local acceptance in `reports/followup-0.7.0/README.md`. Public 0.6.0 receipts remain in `reports/plan-0.6.0/publication/`; previous delivery text is preserved in `reports/history/pre-0.7.0-20261030/DELIVERY-0.6.0.md`.
 
-## Run
-
-Requires Node.js 22+; development acceptance uses Python 3.13 and the checksummed MoonBit toolchain in toolchain.lock.json.
+See `docs/changes-0.7.0.md` for migration and `docs/followup-2026-11-03.md` for task status. Current evidence is indexed in `reports/followup-0.7.0/README.md`; `reports/post-review/` preserves the original pre-followup acceptance. Historical `reports/verification.json`, release receipts, ZIPs and freezes do not attest this candidate.
 
 ```sh
 npm ci
-node tools/cli.mjs audit --root fixtures/crop-demo --out output/crops --include-crops --fail-on candidate
-node tools/server.mjs --report output/crops/report.json --port 4173
-```
-
-The controlled example contains a byte copy and local crop candidates, so the audit deliberately exits 3. The tool never deletes or moves source images.
-
-## Evidence
-
-- reports/verification.json: final current-source verification, compiled artifact and browser evidence hashes.
-- reports/release-verification.json: acceptance of release/visionleak-0.6.0.zip outside the archive; release/SHA256SUMS contains its digest.
-- reports/plan-0.5.0/phase-3.md: frozen crop experiment, source/scene split, independent oracles, 1k/5k resource runs and limitations.
-- research/photos-v2/ATTRIBUTION.md: 32 CC0 file sources with per-file authors, license pages and hashes; old photos-v1 holdout is a regression set.
-- docs/changes-0.5.0.md: breaking max-pixels semantics and migration to max-decode-pixels.
-
-The source/runtime ZIP is separate from the Mooncakes core archive. The core archive has a strict sub-1,000,000-byte contract and excludes host code, evaluation photos, screenshots, tests and reports.
-
-## Rebuild and verify
-
-```sh
-python3.13 tools/bootstrap.py
 npm run build
 npm run verify:ci
-node tools/verify.mjs
-python3.13 tools/package.py
-python3.13 tools/accept-release.py
+node tools/demo-walkthrough.mjs output/walkthrough-v070
+node tools/server.mjs --report output/walkthrough-v070/audit/report.json --port 4173
 ```
 
-The final verification refreshes current report pointers; prior report bytes are archived with checksums under reports/history/pre-0.5.0-20261025. Actual public synchronization, registry publication and clean-import receipts are under reports/plan-0.6.0/publication/. The final Release upload and download attestation is recorded outside the ZIP. npm remains private.
+Current known-source regression: `research/.venv-oracle/bin/python tools/evaluate-post-review.py --regression --out output/known-replay`. Original frozen implementation: `research/.venv-oracle/bin/python tools/frozen_post_review.py --out output/historical-replay`. Both require new output directories. Neither obtains a new holdout.
 
-0.6.0 migration and downstream contract: docs/changes-0.6.0.md. The 0.5.0 delivery text is archived under reports/history/pre-0.6.0-20261026/. Crop v2 and end-to-end streaming decode are not enabled.
+After the fresh CI/browser evidence described in the current evidence index exists:
+
+```sh
+node tools/attest-followup.mjs
+python3 tools/package.py --verification reports/followup-0.7.0/acceptance.json
+python3 tools/accept-release.py --reference-dir reports/followup-0.7.0/ci --report reports/followup-0.7.0/clean-copy.json
+```
+
+The walkthrough creates a new directory and generates clearly marked scripted review records, offline HTML, suggestions and a corrected copy. It checks that original generated inputs are unchanged. CSV manifests use `--manifest`, and optional content-keyed caching uses `--cache`; the production audit never deletes or moves input files.
+
+Requirements remain Node.js 22+, Python 3.13 for the independent oracles, and the pinned toolchain. Core publication packaging excludes photos and host tools. Crop v2, provider-backed Agents, natural-contamination evaluation and human review timing remain outside the completed scope.

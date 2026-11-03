@@ -15,7 +15,7 @@ sharp.cache(false);
 sharp.concurrency(1);
 
 /** Decode exactly one still image. No fingerprint algorithm is implemented here. */
-export async function decodeImage(path, { maxPixels = HARD_MAX_PIXELS, maxDecodePixels = DEFAULT_MAX_DECODE_PIXELS, maxFileBytes = DEFAULT_MAX_FILE_BYTES } = {}) {
+export async function readImageBytes(path, { maxPixels = HARD_MAX_PIXELS, maxDecodePixels = DEFAULT_MAX_DECODE_PIXELS, maxFileBytes = DEFAULT_MAX_FILE_BYTES } = {}) {
   if (!Number.isSafeInteger(maxPixels) || maxPixels < 1 || maxPixels > HARD_MAX_PIXELS ||
       !Number.isSafeInteger(maxDecodePixels) || maxDecodePixels < 1 || maxDecodePixels > HARD_MAX_DECODE_PIXELS ||
       !Number.isSafeInteger(maxFileBytes) || maxFileBytes < 1 || maxFileBytes > 1024 * 1024 * 1024) {
@@ -49,7 +49,17 @@ export async function decodeImage(path, { maxPixels = HARD_MAX_PIXELS, maxDecode
     }
     buffer = allocation.subarray(0, bytes);
   } finally { await handle.close(); }
+  return buffer;
+}
 
+
+
+export async function decodeImage(path, options = {}) {
+  return decodeBuffer(await readImageBytes(path, options), options);
+}
+
+export async function decodeBuffer(buffer, { maxPixels = HARD_MAX_PIXELS, maxDecodePixels = DEFAULT_MAX_DECODE_PIXELS, maxFileBytes = DEFAULT_MAX_FILE_BYTES } = {}) {
+  if (!(buffer instanceof Uint8Array) || buffer.length > maxFileBytes || !Number.isSafeInteger(maxPixels) || maxPixels < 1 || maxPixels > HARD_MAX_PIXELS || !Number.isSafeInteger(maxDecodePixels) || maxDecodePixels < 1 || maxDecodePixels > HARD_MAX_DECODE_PIXELS) throw new VisionLeakError('INVALID_BUDGET', 'Invalid buffered decode input');
   let metadata;
   try {
     metadata = await sharp(buffer, { limitInputPixels: maxDecodePixels, failOn: 'warning' }).metadata();

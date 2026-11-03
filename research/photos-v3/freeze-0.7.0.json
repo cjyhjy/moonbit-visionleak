@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "visionleak-evaluation-freeze-v3",
+  "frozenAt": "2026-10-30T09:40:41.512013+00:00",
+  "selectionSha256": "93ad3913ec1d24175a44f1cf87198e8ad841dec8cef65f22f0d3d2d5c7756248",
+  "implementationFiles": {
+    "core/audit.mbt": "fbac2f7994eae57bf406c574b57b3e2dd37f72d7d12a576f88fa06e92f31a830",
+    "core/crops.mbt": "2e7c33f09efab79d67587627d30bf395645f1093dccea98d3c662481aa3e36f7",
+    "core/fingerprint.mbt": "ead0ee6cffb6e406afad3c022712386aba4a7eaa633b15372606780c8267e6d4",
+    "core/cli_options.mbt": "fed648ea65e7d4c9c4e938d5d4f04e9787df776bc8634cc8e98fd016e9b115cc",
+    "core/mih.mbt": "a31609c62f5a29f08675b0af4dca59564f40f411cd66895b23336ff959b182d9",
+    "core/review_ranking.mbt": "102c608c43945b5ea72a1af110bdc4a57a274e8e7553e5a00745bf1cf2658694",
+    "tools/decode.mjs": "c2198fb88e64e7ca24b6253cac9780d6b18af51757c2dcf1621921ceec7f9300",
+    "tools/runtime.mjs": "83a987e6e585ab492e88b756e294c2e76dad12c2e243922c4e80df85b7e39c35",
+    "tools/cli.mjs": "d631ff70b3e0b5dece3afb8f03e2accd240a33a1bb7d4a00ee917010105c67fd",
+    "tools/input.mjs": "5f6e28e880052baf8db492a11b0d4d41c935581d138309bceb0bbe755b15e2d8",
+    "tools/fingerprint-cache.mjs": "cf565d6c3042be25ed90e8601c0dd12e6bc5c336b7ab3028ec4c82dffae40cbc",
+    "tools/evaluate-post-review.py": "2352162d166f7ff3aad091b8ff942e827a8e21bac90e90b5f577af2bc9726410",
+    "tools/prepare-photos-v3.py": "701e9dd8e4e30ec1f2d287a05b85f8c34fe27fca1602e65bb86995541f8a0442",
+    "dist/visionleak.js": "15e9bc702941f771f4b77c76b09ae3f2e21abd0186acf059f994d1f4a26f17fe"
+  },
+  "protocol": {
+    "threshold": 6,
+    "localProfile": "vl-local-dhash-v1",
+    "maxComparisonsPerApproximatePhase": 10000000,
+    "maxExactComparisons": 1000000,
+    "randomSeed": "SHA256(visionleak-v3-crop-{sourceId})",
+    "cropPolicy": "Two independent non-window-aligned rectangles: 58..86% per dimension; uniform integer offsets. Never snap to the product windows.",
+    "transforms": [
+      "original",
+      "byte-copy",
+      "pixel-repack",
+      "jpeg45",
+      "random-crop-a",
+      "random-crop-b",
+      "watermark",
+      "color",
+      "screenshot-border"
+    ],
+    "hardNegatives": "different source files in the same predeclared scene, including brick textures; file-source lineage labels, no natural-contamination claim",
+    "groundTruth": "Same source-file lineage is near-source except exact byte/pixel identities. Different selected files are negatives; manual semantic adjudication not performed.",
+    "reviewLoad": "candidate pairs per 1000 images and top-25/50/100 precision for report versus optional support order",
+    "humanReviewTiming": "not measured; do not substitute automated runtime",
+    "noTuning": "Do not tune rules or remove difficult images after viewing results; errors remain visible."
+  }
+}

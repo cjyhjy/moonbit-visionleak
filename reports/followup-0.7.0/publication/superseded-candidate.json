@@ -1,0 +1,11 @@
+{
+  "status": "superseded-before-publication",
+  "candidateCommit": "2cc69c1d30371665386b0ceb98e9018e27fae013",
+  "candidateZip": "release/candidates/visionleak-0.7.0-pre-linux.zip",
+  "candidateSha256": "f30d9b8f67967dc82cebc76f4084b1085eb36445ca00d1c8c4dffc443f8dc721",
+  "failedCiRun": "https://github.com/cjyhjy/moonbit-visionleak/actions/runs/41696121036",
+  "reason": "Generated transform byte digests were compared across platforms; replace with strict decoded-pixel, transform and pair-identity-label equality, with encoding deltas recorded separately. Runtime artifact unchanged.",
+  "publicReleaseCreated": false,
+  "mooncakesPublished": false,
+  "previousEvidenceCommit": "2cc69c1d30371665386b0ceb98e9018e27fae013"
+}
