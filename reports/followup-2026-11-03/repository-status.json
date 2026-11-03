@@ -1,0 +1,21 @@
+{
+  "recordedAt": "2026-11-03T19:38:15.072631+00:00",
+  "status": "research-archive-merged-and-ci-verified",
+  "releaseVersion": "0.7.0",
+  "releaseCommit": "7f2925850ff988875b8f544d7490fd10546621c4",
+  "releaseUrl": "https://github.com/cjyhjy/moonbit-visionleak/releases/tag/v0.7.0",
+  "researchContentCommit": "d4ce7a2994207dd714f8e795b1dcc299bc272e3a",
+  "researchMergeCommit": "2aad0a91dec02cefe7452bf41ed8b20f3a715597",
+  "researchPullRequest": "https://github.com/cjyhjy/moonbit-visionleak/pull/2",
+  "researchCiRun": "https://github.com/cjyhjy/moonbit-visionleak/actions/runs/41704057567",
+  "researchCiHead": "d4ce7a2994207dd714f8e795b1dcc299bc272e3a",
+  "researchCiMergePreview": "bc6846645dd44ff9cbd5d6eb4f5b95a83bc0e801",
+  "researchCiConclusion": "success",
+  "researchCiChecks": 27,
+  "productionSourceDigest": "42490b7373867ebb31af030f95c1d78393533a8ab6c9cb80eaa0f574f3570c80",
+  "productionRuntimeSha256": "ad05cc71d2d8ef8620b7fe7695b5cd7b38c669c02e8b0a7afd6e943acef3b701",
+  "researchCandidatesInProduction": false,
+  "localResearchValidation": "passed; see quality and retrieval reports",
+  "scientificEvidenceIndexSha256": "2d188c232156fa162b592f931804fa3003721171c59d93396068a5115cd7c4f9",
+  "scope": "This post-merge metadata receipt records the tested research content commit; it does not claim the research algorithms were integrated into or published as 0.7.0. Production core/dist/tools are unchanged by the research archive."
+}
