@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "reports": 62,
+  "reports": 74,
   "scope": "Valid report samples in reports/ and available original 0.1.0\u20130.4.0 ZIPs; excludes intentionally tampered QA inputs and old failed clean-room copies.",
   "results": [
     {
@@ -17,6 +17,66 @@
       "path": "reports/evaluation-audit.json",
       "auditId": "39fb0889dd6b375bf14ebc96ab56da6a27663f1f09344c626fe61e84bd0553a4",
       "actual": "39fb0889dd6b375bf14ebc96ab56da6a27663f1f09344c626fe61e84bd0553a4"
+    },
+    {
+      "path": "reports/followup-0.7.0/ci/evaluation-audit.json",
+      "auditId": "1163fa2e9756ec5828395685087683953fe80d916413aab976bdacf3ccfdd81f",
+      "actual": "1163fa2e9756ec5828395685087683953fe80d916413aab976bdacf3ccfdd81f"
+    },
+    {
+      "path": "reports/followup-0.7.0/ci/mirror-evaluation-audit.json",
+      "auditId": "72dd4593060c83df195fae0d06b7ba025e43e44488bae9b48a41617ecde89378",
+      "actual": "72dd4593060c83df195fae0d06b7ba025e43e44488bae9b48a41617ecde89378"
+    },
+    {
+      "path": "reports/followup-0.7.0/ci/photos-development/default-audit.json",
+      "auditId": "e8fb48055aed5ef3b8cde4776933db3b37d9b620210ad1838f5f34093fef7308",
+      "actual": "e8fb48055aed5ef3b8cde4776933db3b37d9b620210ad1838f5f34093fef7308"
+    },
+    {
+      "path": "reports/followup-0.7.0/ci/photos-development/mirrors-audit.json",
+      "auditId": "dd8b71e211f27b7903f03d7050117b1f47e3bb09331733434b70058edb327c80",
+      "actual": "dd8b71e211f27b7903f03d7050117b1f47e3bb09331733434b70058edb327c80"
+    },
+    {
+      "path": "reports/followup-0.7.0/ci/photos-development/orientations-audit.json",
+      "auditId": "6635308f106eceaebb2aa90186b46dfc28bffad326c064f017cc149a5a517d4b",
+      "actual": "6635308f106eceaebb2aa90186b46dfc28bffad326c064f017cc149a5a517d4b"
+    },
+    {
+      "path": "reports/followup-0.7.0/ci/photos-holdout/default-audit.json",
+      "auditId": "521681427f3f9b3acc1a285c305704031c6f478573ab868dcad17faa9487c906",
+      "actual": "521681427f3f9b3acc1a285c305704031c6f478573ab868dcad17faa9487c906"
+    },
+    {
+      "path": "reports/followup-0.7.0/ci/photos-holdout/mirrors-audit.json",
+      "auditId": "b3f53f5c9c9153ffb977989e26bc482c1205199b546ddeba2af798975a55a7ac",
+      "actual": "b3f53f5c9c9153ffb977989e26bc482c1205199b546ddeba2af798975a55a7ac"
+    },
+    {
+      "path": "reports/followup-0.7.0/ci/photos-holdout/orientations-audit.json",
+      "auditId": "02dd765229a0c7373c261d9f68f3295bb1368c6832ec98b7a72736cda8afe257",
+      "actual": "02dd765229a0c7373c261d9f68f3295bb1368c6832ec98b7a72736cda8afe257"
+    },
+    {
+      "path": "reports/followup-0.7.0/ci/post-review-regression-1793730889616/crops-audit.json",
+      "auditId": "61cdd1b183d70ba184c273402373e9cb05e9b4e6cff24c19938a63bf7ff1cd09",
+      "actual": "61cdd1b183d70ba184c273402373e9cb05e9b4e6cff24c19938a63bf7ff1cd09"
+    },
+    {
+      "path": "reports/followup-0.7.0/ci/post-review-regression-1793730889616/default-audit.json",
+      "auditId": "2ab307a0602413647c79a75bd4d164f77997994c53ec52b1ed6485e7e4b28b3a",
+      "actual": "2ab307a0602413647c79a75bd4d164f77997994c53ec52b1ed6485e7e4b28b3a"
+    },
+    {
+      "path": "reports/followup-0.7.0/frozen-replay/crops-audit.json",
+      "auditId": "40a9bcea69bc313420d57342f877471aef24f41cb3019c784824caf747ba8955",
+      "actual": "40a9bcea69bc313420d57342f877471aef24f41cb3019c784824caf747ba8955"
+    },
+    {
+      "path": "reports/followup-0.7.0/frozen-replay/default-audit.json",
+      "auditId": "a4bb90f6596dc32ae58066d90238269d463fa3a865a041bf512e9211cc7d5886",
+      "actual": "a4bb90f6596dc32ae58066d90238269d463fa3a865a041bf512e9211cc7d5886"
     },
     {
       "path": "reports/history/pre-0.5.0-20261025/reports/demo/report.json",

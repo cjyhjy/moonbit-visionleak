@@ -14,7 +14,7 @@ node tools/server.mjs --report output/example/report.json --port 4173
 
 演示数据含确定性重复，第二行预期退出 **3**；CI 可据此阻止跨集合重复。浏览器打开 http://127.0.0.1:4173 。需要 Node.js 22+，CLI 已附带编译后的 MoonBit 核心。
 
-**当前工作区为 0.7.0 本地候选版本，尚未公开发布。** [本轮改进与迁移](docs/changes-0.7.0.md) · [本地验收](reports/post-review/README.md)。
+**0.7.0：确定性优先的分阶段审计、CSV 清单与指纹缓存。** [改进与迁移](docs/changes-0.7.0.md) · [工程验收](reports/followup-0.7.0/README.md)。实际公开发布状态以 [发布记录](reports/followup-0.7.0/publication/) 为准。
 
 已发布 0.6.0 的完整变更见 [版本说明](docs/changes-0.6.0.md) 和 [CHANGELOG](CHANGELOG.md)。发布与验收状态以 [发布记录](reports/plan-0.6.0/publication/README.md) 为准；Mooncakes 模块为 `cjyhjy/visionleak`。
 
@@ -58,7 +58,7 @@ npm run build
 npm run verify:ci
 ```
 
-0.7.0 新增 12 个 CC0 文件来源，先冻结规则再下载图像，包含随机偏移裁切、水印、截图边框和同场景负例。[来源与许可](research/photos-v3/ATTRIBUTION.md) · [本轮评测](reports/post-review/photos/evaluation.json)。
+0.7.0 原冻结实验新增 12 个 CC0 文件来源，先冻结规则再下载图像，包含随机偏移裁切、水印、截图边框和同场景负例。这些来源现均作为已知回归数据；原图对随机裁切召回为 0/24。[来源与许可](research/photos-v3/ATTRIBUTION.md) · [本轮评测](reports/post-review/photos/evaluation.json)。
 
 ## 局限
 

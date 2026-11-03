@@ -1813,8 +1813,8 @@
     }
   ],
   "auditId": "521681427f3f9b3acc1a285c305704031c6f478573ab868dcad17faa9487c906",
-  "createdAt": "2026-11-03T18:35:19.930Z",
+  "createdAt": "2026-11-03T18:52:57.083Z",
   "timing": {
-    "elapsedMs": 324
+    "elapsedMs": 284
   }
 }

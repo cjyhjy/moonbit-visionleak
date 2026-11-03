@@ -1,6 +1,6 @@
 {
   "schemaVersion": "visionleak-post-review-evaluation-v1",
-  "evaluatedAt": "2026-11-03T18:34:56.416473+00:00",
+  "evaluatedAt": "2026-11-03T18:52:33.842605+00:00",
   "freezeSha256": "ed1043e412c352504089dbf569d6f378bc5c35bdfe846b9dc79e1123a36b177a",
   "sourcesSha256": "1ccdc683fc2e748bcc7006026f23fb34fd0f4920eb7ee6d0e4a60bb8d7054a94",
   "newSourceFiles": 0,
@@ -2273,8 +2273,8 @@
     "humanReviewStatus": "not-measured"
   },
   "automatedWallSeconds": {
-    "default": 1.0205398751422763,
-    "crops": 1.0728328749537468
+    "default": 1.005425333045423,
+    "crops": 1.084577125031501
   },
   "phases": {
     "default": {
@@ -2373,9 +2373,14 @@
     }
   },
   "scope": "Current implementation on already-known photos-v3; unchanged source bytes, transforms and labels; strict ordered evidence and window-witness comparison to the frozen staged baseline. Not a new holdout; natural contamination and human review time untested.",
+  "transformParity": {
+    "decodedPixelsAndLabelsUnchanged": true,
+    "encodedByteChanges": [],
+    "scope": "Generated file encodings may vary; source bytes, decoded pixels, transform metadata and all pair identity labels remain fixed."
+  },
   "evaluationRole": "known-source-regression",
   "sourceFiles": 12,
-  "currentSourceDigest": "df9b0a3516a63dc63cf6b64406c85d0c8c72721eec7a844ee886205fc39736fa",
+  "currentSourceDigest": "42490b7373867ebb31af030f95c1d78393533a8ab6c9cb80eaa0f574f3570c80",
   "currentArtifactSha256": "ad05cc71d2d8ef8620b7fe7695b5cd7b38c669c02e8b0a7afd6e943acef3b701",
   "orderedBaselineParity": true
 }

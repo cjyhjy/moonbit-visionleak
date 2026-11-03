@@ -62,7 +62,7 @@ node tools/server.mjs --report output/walkthrough-v070/audit/report.json --port 
 
 脚本在全新目录生成数据，演示 CI 阻止重复、确定性复验、**明确标注的脚本复核**、离线 HTML、建议 CSV、构造修正副本并重审。原演示数据的前后摘要必须一致。脚本复核不代表真人复核结果；生产工具只导出建议。
 
-本轮版本尚未提交、推送或发布。公开 0.6.0 的收据保留在 `reports/plan-0.6.0/publication/`；本轮本地验收统一见 `reports/post-review/`。
+本轮 0.7.0 工程候选已独立提交并推送至 PR #1；最新远端 CI 与发布状态见 `reports/followup-0.7.0/publication/`，不以本地验收代替实际发布。公开 0.6.0 收据保留在 `reports/plan-0.6.0/publication/`；原 0.7.0 冻结验收保留在 `reports/post-review/`。
 
 后续工作状态见 [任务清单](followup-2026-11-03.md)。`reports/post-review/` 为原始冻结验收，收尾后的新证据保存到 `reports/followup-0.7.0/`。历史冻结复现使用 `python tools/frozen_post_review.py --out NEW_DIR`；当前实现的已知数据回归使用 `python tools/evaluate-post-review.py --regression --out NEW_DIR`。后者核对相同来源和变换，并逐条比较当前阶段顺序、距离和窗口见证，不声称获得新保留集结果。
 
