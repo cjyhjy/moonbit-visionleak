@@ -1,0 +1,177 @@
+{
+  "ok": true,
+  "schemaVersion": "visionleak-capabilities-v1",
+  "version": "0.7.0",
+  "engine": {
+    "name": "visionleak-moonbit",
+    "artifactSha256": "15e9bc702941f771f4b77c76b09ae3f2e21abd0186acf059f994d1f4a26f17fe"
+  },
+  "runtime": {
+    "node": "v26.7.0",
+    "requiredNode": ">=22",
+    "decoder": {
+      "name": "sharp",
+      "version": "0.35.5",
+      "libvips": "8.18.7"
+    }
+  },
+  "report": {
+    "schemaVersion": "visionleak-report-v1",
+    "identityVersion": "vl-report-sha256-v2"
+  },
+  "input": {
+    "layout": "split-directories-or-csv-manifest",
+    "splitAliases": {
+      "train": [
+        "train",
+        "training"
+      ],
+      "validation": [
+        "validation",
+        "val",
+        "valid",
+        "dev"
+      ],
+      "test": [
+        "test",
+        "testing"
+      ]
+    },
+    "extensions": [
+      ".png",
+      ".jpg",
+      ".jpeg",
+      ".webp",
+      ".avif",
+      ".tif",
+      ".tiff",
+      ".gif"
+    ],
+    "csvSplitInput": true,
+    "manifestInput": true,
+    "followsSymlinks": false
+  },
+  "commands": [
+    "capabilities",
+    "audit",
+    "verify",
+    "export-html",
+    "export-fixes"
+  ],
+  "features": {
+    "incrementalAudit": false,
+    "pairSubsetAudit": false,
+    "fingerprintCache": true,
+    "endToEndStreamingDecode": false,
+    "combinedFingerprint": true
+  },
+  "profiles": {
+    "normalization": "vl-rgb-v1",
+    "local": {
+      "id": "vl-local-dhash-v1",
+      "experimental": true,
+      "enabledByDefault": false,
+      "windows": 20,
+      "minimumGridContrast": 16,
+      "crossScale": true
+    }
+  },
+  "limits": {
+    "threshold": {
+      "flag": "--threshold",
+      "minimum": 0,
+      "maximum": 64,
+      "default": 6
+    },
+    "maxImages": {
+      "flag": "--max-images",
+      "minimum": 1,
+      "maximum": 10000,
+      "default": 1000
+    },
+    "maxDecodePixels": {
+      "flag": "--max-decode-pixels",
+      "minimum": 1,
+      "maximum": 100000000,
+      "default": 64000000
+    },
+    "maxPixels": {
+      "flag": "--max-pixels",
+      "minimum": 1,
+      "maximum": 4194304,
+      "default": 4194304
+    },
+    "maxTotalPixels": {
+      "flag": "--max-total-pixels",
+      "minimum": 1,
+      "maximum": 1000000000,
+      "default": 100000000
+    },
+    "maxFileBytes": {
+      "flag": "--max-file-bytes",
+      "minimum": 1,
+      "maximum": 1073741824,
+      "default": 33554432
+    },
+    "maxComparisons": {
+      "flag": "--max-comparisons",
+      "minimum": 0,
+      "maximum": 10000000,
+      "default": 1000000
+    },
+    "maxExactComparisons": {
+      "flag": "--max-exact-comparisons",
+      "minimum": 0,
+      "maximum": 10000000,
+      "default": 1000000
+    },
+    "maxPairs": {
+      "flag": "--max-pairs",
+      "minimum": 0,
+      "maximum": 100000,
+      "default": 10000
+    }
+  },
+  "accounting": {
+    "comparisons": "sum of phase distanceEvaluations + pairChecks",
+    "auditStrategy": "exact-first-v1",
+    "phases": [
+      "deterministic",
+      "perceptual",
+      "local"
+    ],
+    "exactBudget": "maxExactComparisons",
+    "approximateBudget": "maxComparisons independently per perceptual/local stage",
+    "outputBudget": "maxPairs shared; deterministic evidence emitted first",
+    "indexOperations": "separate",
+    "indexOperationLimitMultiplier": 16,
+    "indexStatsMayBeAbsentWhenUnused": true,
+    "decodedPixels": "scope.totalDecodedPixels",
+    "fingerprintedImages": "scope.acceptedImages",
+    "processedImages": "stats.processedImages (all enabled stages); see phases for stage coverage",
+    "freshBudgetPerInvocation": true,
+    "verifyUsesAuditPixelBudget": false
+  },
+  "verification": {
+    "evidenceTypes": [
+      "byte-identical",
+      "pixel-identical"
+    ],
+    "candidatesRecomputed": false,
+    "wholeDatasetReaudited": false,
+    "skippedCount": "counts.skippedCandidates"
+  },
+  "exitCodes": {
+    "audit": {
+      "complete": 0,
+      "fatal": 1,
+      "incomplete": 2,
+      "failOnHit": 3
+    },
+    "verify": {
+      "noInvalidExactEvidence": 0,
+      "fatal": 1,
+      "invalidOrMissing": 4
+    }
+  }
+}

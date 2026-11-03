@@ -11,6 +11,7 @@ import subprocess
 import zipfile
 import tempfile
 import os
+import argparse
 from release_metadata import release_version, read_checksums
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -20,9 +21,9 @@ REPORTS=['mirror-evaluation.json','mirror-evaluation-audit.json','README.md','co
 
 def sha(data): return hashlib.sha256(data).hexdigest()
 
-def main():
+def main(verification_path=None):
     version=release_version(ROOT)
-    verification=json.loads((ROOT/'reports/verification.json').read_text())
+    verification=json.loads((verification_path or ROOT/'reports/verification.json').read_text())
     if verification.get('status')!='passed': raise SystemExit('Verification must pass before packaging')
     current=subprocess.check_output(['node','--input-type=module','-e',"import{sourceDigest}from'./tools/source-digest.mjs';console.log(sourceDigest(process.cwd()))"],cwd=ROOT,text=True).strip()
     if current!=verification.get('sourceDigest'): raise SystemExit('Source digest changed: rerun tools/verify.mjs')
@@ -46,7 +47,7 @@ def main():
     candidates.extend(p for p in (ROOT/'reports/mirror-demo').rglob('*') if p.is_file() and not p.name.startswith('.'))
     for folder in ['reports/photos-v1','reports/photos-demo']:
         candidates.extend(p for p in (ROOT/folder).rglob('*') if p.is_file() and not p.name.startswith('.'))
-    for folder in ['reports/plan-0.5.0','reports/plan-0.6.0','reports/optimization']:
+    for folder in ['reports/plan-0.5.0','reports/plan-0.6.0','reports/optimization','reports/post-review','reports/followup-0.7.0']:
         candidates.extend(p for p in (ROOT/folder).rglob('*') if p.is_file() and not p.name.startswith('.'))
     locations=json.loads((ROOT/'research/photos-v1/freeze/archive-locations.json').read_text())
     candidates.extend(ROOT/name for version in locations.values() for name in version.values())
@@ -79,4 +80,6 @@ def main():
     (release/'SHA256SUMS').write_text(''.join(f'{value}  {name}\n' for name,value in sorted(checksums.items())))
     print(json.dumps({'path':str(target.relative_to(ROOT)),'sha256':digest,'bytes':target.stat().st_size,'files':len(payload)}))
 
-if __name__=='__main__': main()
+if __name__=='__main__':
+    parser=argparse.ArgumentParser();parser.add_argument('--verification',type=Path);args=parser.parse_args()
+    main(args.verification)

@@ -8,6 +8,7 @@ fn cli_limits() -> Array[(String, String, Int32, Int32, Int32)] {
     ("--max-total-pixels", "maxTotalPixels", 1, 1000000000, 100000000),
     ("--max-file-bytes", "maxFileBytes", 1, 1073741824, 33554432),
     ("--max-comparisons", "maxComparisons", 0, 10000000, 1000000),
+    ("--max-exact-comparisons", "maxExactComparisons", 0, 10000000, 1000000),
     ("--max-pairs", "maxPairs", 0, 100000, 10000),
   ]
 }
@@ -104,6 +105,7 @@ fn cli_parse(argv : Array[Json]) -> Json {
   let mut root = ""
   let mut out = ""
   let mut fail_on = ""
+  let paths : Map[String, Json] = Map([])
   let mut i = 1
   while i < args.length() {
     let arg = args[i]
@@ -137,6 +139,16 @@ fn cli_parse(argv : Array[Json]) -> Json {
     }
     if arg == "--include-rotations" {
       values["includeRotations"] = Json(true)
+      continue
+    }
+    if ["--manifest", "--cache"].contains(arg) {
+      if i >= args.length() || args[i] == "" || args[i].has_prefix("--") {
+        return error_json("ARGUMENT_ERROR", "Missing value: " + arg)
+      }
+      paths[if arg == "--manifest" { "manifest" } else { "cache" }] = Json(
+        args[i],
+      )
+      i = i + 1
       continue
     }
     if arg == "--root" || arg == "--out" {
@@ -180,7 +192,7 @@ fn cli_parse(argv : Array[Json]) -> Json {
   if root == "" || out == "" {
     return error_json("ARGUMENT_ERROR", "Both --root and --out are required")
   }
-  {
+  let parsed : Json = {
     "ok": true,
     "args": {
       "options": options,
@@ -190,6 +202,12 @@ fn cli_parse(argv : Array[Json]) -> Json {
       "failOn": Json(fail_on),
     },
   }
+  if field(parsed, "args") is Object(fields) {
+    for key, value in paths {
+      fields[key] = value
+    }
+  }
+  parsed
 }
 
 ///|

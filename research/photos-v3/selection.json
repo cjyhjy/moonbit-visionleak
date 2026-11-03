@@ -1,0 +1,185 @@
+{
+  "schemaVersion": "visionleak-source-selection-v3",
+  "selectedAt": "2026-10-30T09:37:48.107919+00:00",
+  "policy": "First 3 eligible API search results per declared scene, selected from metadata only. No image content downloaded or evaluated at selection. All sources unseen by prior v1/v2 evaluations; same-scene different files treated as negatives under source-file ground truth.",
+  "queries": [
+    {
+      "scene": "Brooklyn Bridge",
+      "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=Brooklyn+Bridge+filetype%3Abitmap+incategory%3A%22CC-Zero%22&gsrnamespace=6&gsrlimit=12&prop=imageinfo&iiprop=url%7Cextmetadata%7Csha1%7Csize&iiurlwidth=512",
+      "responseSha256": "6cb19a0be592df11c4220375c9f45f4d50cb84c4a72cc823024367b7fc199664"
+    },
+    {
+      "scene": "Leaning Tower of Pisa",
+      "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=Leaning+Tower+of+Pisa+filetype%3Abitmap+incategory%3A%22CC-Zero%22&gsrnamespace=6&gsrlimit=12&prop=imageinfo&iiprop=url%7Cextmetadata%7Csha1%7Csize&iiurlwidth=512",
+      "responseSha256": "969966d5734b4090d4beba5e37684622326789f9b92a21029e23748595993471"
+    },
+    {
+      "scene": "Arc de Triomphe",
+      "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=Arc+de+Triomphe+filetype%3Abitmap+incategory%3A%22CC-Zero%22&gsrnamespace=6&gsrlimit=12&prop=imageinfo&iiprop=url%7Cextmetadata%7Csha1%7Csize&iiurlwidth=512",
+      "responseSha256": "4e889c0f18d216b20ef596677b3570699d1490e5b15b1d94e3a1a47cb386f9c2"
+    },
+    {
+      "scene": "brick wall",
+      "url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=brick+wall+filetype%3Abitmap+incategory%3A%22CC-Zero%22&gsrnamespace=6&gsrlimit=12&prop=imageinfo&iiprop=url%7Cextmetadata%7Csha1%7Csize&iiurlwidth=512",
+      "responseSha256": "9b74a46f09e902e6de056a81155ceed8b3f8485517ba495ea2c8abcc67c9fd3d"
+    }
+  ],
+  "images": [
+    {
+      "id": "90293410",
+      "title": "File:Panorama of Brooklyn bridge and Manhattan.jpg",
+      "scene": "Brooklyn Bridge",
+      "author": "Luca Bravo",
+      "license": "CC0-1.0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Panorama_of_Brooklyn_bridge_and_Manhattan.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Panorama_of_Brooklyn_bridge_and_Manhattan.jpg/960px-Panorama_of_Brooklyn_bridge_and_Manhattan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "upstreamSha1": "f54f87cebbd235ba4265956d574f1d936f0ed9fa",
+      "width": 5577,
+      "height": 3718
+    },
+    {
+      "id": "147381266",
+      "title": "File:The Brooklyn Bridge From Manhattan to Brooklyn.jpg",
+      "scene": "Brooklyn Bridge",
+      "author": "Summermother",
+      "license": "CC0-1.0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "licenseEvidence": "https://commons.wikimedia.org/wiki/File:The_Brooklyn_Bridge_From_Manhattan_to_Brooklyn.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/The_Brooklyn_Bridge_From_Manhattan_to_Brooklyn.jpg/960px-The_Brooklyn_Bridge_From_Manhattan_to_Brooklyn.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "upstreamSha1": "06d42f84d52549aaec6d0180aa549bda0482d720",
+      "width": 3024,
+      "height": 4032
+    },
+    {
+      "id": "147659458",
+      "title": "File:Sunrise at the Brooklyn Bridge.jpg",
+      "scene": "Brooklyn Bridge",
+      "author": "XandraHarris",
+      "license": "CC0-1.0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Sunrise_at_the_Brooklyn_Bridge.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Sunrise_at_the_Brooklyn_Bridge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "upstreamSha1": "e126634987e4f49c1924e958626e7870cbce3f31",
+      "width": 419,
+      "height": 640
+    },
+    {
+      "id": "153007046",
+      "title": "File:Leaning Tower of Pisa and Pisa Cathedral.jpg",
+      "scene": "Leaning Tower of Pisa",
+      "author": "InnovativeEngineering",
+      "license": "CC0-1.0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Leaning_Tower_of_Pisa_and_Pisa_Cathedral.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Leaning_Tower_of_Pisa_and_Pisa_Cathedral.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "upstreamSha1": "5de6287bee8c51367d4843163d5f751d3dd2c141",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "id": "175882787",
+      "title": "File:Leaning Tower of Pisa, 2023.jpg",
+      "scene": "Leaning Tower of Pisa",
+      "author": "Julian Lupyan",
+      "license": "CC0-1.0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Leaning_Tower_of_Pisa,_2023.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Leaning_Tower_of_Pisa%2C_2023.jpg/960px-Leaning_Tower_of_Pisa%2C_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "upstreamSha1": "185d5c718e3542fbae9009bc8e2eaf1ef71bed62",
+      "width": 3840,
+      "height": 5120
+    },
+    {
+      "id": "153007056",
+      "title": "File:Leaning Tower of Pisa through the Porta Nuova of Pisa.jpg",
+      "scene": "Leaning Tower of Pisa",
+      "author": "InnovativeEngineering",
+      "license": "CC0-1.0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Leaning_Tower_of_Pisa_through_the_Porta_Nuova_of_Pisa.jpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Leaning_Tower_of_Pisa_through_the_Porta_Nuova_of_Pisa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "upstreamSha1": "f1132d930a6d588dcaf09c173499864704b48ace",
+      "width": 320,
+      "height": 240
+    },
+    {
+      "id": "147065481",
+      "title": "File:Arc de Triomphe de l'Étoile at night vertical fix.jpg",
+      "scene": "Arc de Triomphe",
+      "author": "Wilfredor",
+      "license": "CC0-1.0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Arc_de_Triomphe_de_l%27%C3%89toile_at_night_vertical_fix.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Arc_de_Triomphe_de_l%27%C3%89toile_at_night_vertical_fix.jpg/960px-Arc_de_Triomphe_de_l%27%C3%89toile_at_night_vertical_fix.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "upstreamSha1": "c4b53eea073c0b7b00ef54684b129e7680606c8b",
+      "width": 6784,
+      "height": 4863
+    },
+    {
+      "id": "27959644",
+      "title": "File:Avenue des Champs-Elysées from top of Arc de triomphe Paris.jpg",
+      "scene": "Arc de Triomphe",
+      "author": "Jebulon",
+      "license": "CC0-1.0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Avenue_des_Champs-Elys%C3%A9es_from_top_of_Arc_de_triomphe_Paris.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Avenue_des_Champs-Elys%C3%A9es_from_top_of_Arc_de_triomphe_Paris.jpg/960px-Avenue_des_Champs-Elys%C3%A9es_from_top_of_Arc_de_triomphe_Paris.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "upstreamSha1": "4e99223af8eeac0e2d388d93046b7cb1b2afb40d",
+      "width": 2073,
+      "height": 3115
+    },
+    {
+      "id": "28305582",
+      "title": "File:Le Départ des Volontaires (La Marseillaise) par Rude, Arc de Triomphe Etoile Paris.jpg",
+      "scene": "Arc de Triomphe",
+      "author": "Jebulon",
+      "license": "CC0-1.0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Le_D%C3%A9part_des_Volontaires_(La_Marseillaise)_par_Rude,_Arc_de_Triomphe_Etoile_Paris.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Le_D%C3%A9part_des_Volontaires_%28La_Marseillaise%29_par_Rude%2C_Arc_de_Triomphe_Etoile_Paris.jpg/960px-Le_D%C3%A9part_des_Volontaires_%28La_Marseillaise%29_par_Rude%2C_Arc_de_Triomphe_Etoile_Paris.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "upstreamSha1": "6466234cb9457450e6e2876140e3236d4eb7ccb8",
+      "width": 2594,
+      "height": 4160
+    },
+    {
+      "id": "28818900",
+      "title": "File:Surfaces vertical brick wall closeup view.JPG",
+      "scene": "brick wall",
+      "author": "Tomwsulcer",
+      "license": "CC0-1.0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Surfaces_vertical_brick_wall_closeup_view.JPG",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Surfaces_vertical_brick_wall_closeup_view.JPG/960px-Surfaces_vertical_brick_wall_closeup_view.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "upstreamSha1": "80a8ee5652ac28901f94779ac640c5687dce10e1",
+      "width": 2592,
+      "height": 1944
+    },
+    {
+      "id": "117737596",
+      "title": "File:Brick Wall Building.jpg",
+      "scene": "brick wall",
+      "author": "Bango Textures",
+      "license": "CC0-1.0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Brick_Wall_Building.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Brick_Wall_Building.jpg/960px-Brick_Wall_Building.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "upstreamSha1": "736b29257877d4517abfcb8adbf305f79a082917",
+      "width": 8192,
+      "height": 5464
+    },
+    {
+      "id": "105538175",
+      "title": "File:Moscow, ferns on a brick wall 05.jpg",
+      "scene": "brick wall",
+      "author": "Retired electrician",
+      "license": "CC0-1.0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Moscow,_ferns_on_a_brick_wall_05.jpg",
+      "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Moscow%2C_ferns_on_a_brick_wall_05.jpg/960px-Moscow%2C_ferns_on_a_brick_wall_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "upstreamSha1": "841a52f3ca058490642f3fd6e60f9d968e98250f",
+      "width": 3931,
+      "height": 2948
+    }
+  ]
+}

@@ -17,14 +17,15 @@ class CropReference(unittest.TestCase):
    for mode in ['default','crops']:
     report=json.loads((folder/(mode+'-audit.json')).read_text());compare(evaluation['scores'][mode],score(truth,report['pairs']))
     run=subprocess.run(['node','--input-type=module','-e',script],cwd=ROOT,input=json.dumps(report),text=True,capture_output=True,check=True);actual=json.loads(run.stdout)
-    self.assertEqual(actual['pairs'],report['pairs']);self.assertEqual(actual['groups'],report['groups']);self.assertEqual(actual['complete'],report['complete'])
+    self.assertEqual(sorted(actual['pairs'],key=lambda p:(p['left'],p['right'])),sorted(report['pairs'],key=lambda p:(p['left'],p['right'])));self.assertEqual(actual['groups'],report['groups']);self.assertEqual(actual['complete'],report['complete'])
     # Traversal pruning changes resource accounting, not evidence. Preserve the
     # frozen implementation above; compare semantic stats and enforce bounds.
     for k in ['inputImages','processedImages','emittedPairs','indexNodes','reason']:
      self.assertEqual(actual['stats'][k],report['stats'][k])
     stats=actual['stats'];self.assertEqual(stats['comparisons'],stats['distanceEvaluations']+stats['pairChecks'])
-    self.assertLessEqual(stats['comparisons'],report['options']['maxComparisons'])
-    self.assertLessEqual(stats.get('indexOperations',0),report['options']['maxComparisons']*16)
+    self.assertEqual(stats['comparisons'],sum(p['comparisons'] for p in actual['phases'].values()))
+    for phase in actual['phases'].values():self.assertLessEqual(phase['comparisons'],phase['maxComparisons'])
+    self.assertLessEqual(stats.get('indexOperations',0),sum(p['indexOperationLimit'] for p in actual['phases'].values() if p['enabled']))
     images={r['id']:r for r in report['images']}
     for pair in report['pairs']:
      if pair['evidence']!='local-candidate':continue

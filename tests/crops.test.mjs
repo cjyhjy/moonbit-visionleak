@@ -42,6 +42,6 @@ test('actual CLI offset/aspect crops remain candidates, enter gate, validate and
 test('local-only evidence is skipped by deterministic verify and cannot trigger the pixel gate',async()=>{
  const make=(id,split,bit)=>({id,split,byteDigest:bit.repeat(64),pixelDigest:bit.repeat(64),dhash:bit==='a'?'0'.repeat(64):'1'.repeat(64),contrast:150,localHashes:Array(20).fill('01'.repeat(32)),localContrasts:Array(20).fill(100)});
  const images=[make('a','train','a'),make('b','test','b')];const report=await audit(images,{includeCrops:true});assert.equal(report.pairs[0].evidence,'local-candidate');assert.equal(workflow({operation:'gate',report,failOn:'pixel'}).exitCode,0);
- for(const n of [0,1,10,30]){const limited=await audit(images,{includeCrops:true,maxComparisons:n});assert.equal(limited.complete,false);assert.ok(limited.stats.comparisons<=n);}
+ for(const n of [0,1,10,30]){const limited=await audit(images,{includeCrops:true,maxComparisons:n});assert.equal(limited.complete,false);for(const phase of Object.values(limited.phases)) assert.ok(phase.comparisons<=phase.maxComparisons);}
  await assert.rejects(audit(images.map(x=>({...x,localHashes:['bad']})),{includeCrops:true}));
 });

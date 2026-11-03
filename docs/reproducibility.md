@@ -133,3 +133,7 @@ CLI 增加 `--include-mirrors`；JS `fingerprint({width,height,rgba,includeMirro
 ## 0.4.0 照片评测与直角旋转
 
 新增 `--include-rotations`，可与镜像组合；完整 API、方向顺序、预算语义与开销见 [0.4.0 说明](changes-0.4.0.md)，照片来源与实际误报漏检见 [评测](../reports/photos-v1/summary.md)。
+
+## 0.7.0 新来源与阶段验收
+
+`npm run verify:ci` 也会使用已保存的 `research/photos-v3/` 来源重放新照片协议，不重新联网选样。输入及实现冻结于 `freeze-0.7.0.json`，协议和测量边界见 `reports/post-review/README.md`。这些照片本轮测量后即为已知回归数据。源摘要集合已包含 `research/photos-v3/`。当前本地验收与旧发布收据分别存放，不能用旧 ZIP 验收代替 0.7.0 验收。

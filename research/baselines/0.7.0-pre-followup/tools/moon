@@ -1,0 +1,24 @@
+#!/bin/sh
+set -eu
+vl_root=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+if [ -x "$vl_root/.tools/moon/bin/moon" ]; then
+  export MOON_HOME="$vl_root/.tools/moon"
+  export PATH="$MOON_HOME/bin:$PATH"
+  vl_moon="$MOON_HOME/bin/moon"
+elif [ -x "$vl_root/.toolchain/bin/moon" ]; then
+  export MOON_HOME="$vl_root/.toolchain"
+  export PATH="$MOON_HOME/bin:$PATH"
+  vl_moon="$MOON_HOME/bin/moon"
+else
+  exec moon "$@"
+fi
+# Only the explicit publish preview uses the HTTP-202 compatibility adapter.
+# All other commands, including actual publication, retain upstream behavior.
+if [ "${1-}" = publish ]; then
+  for vl_arg in "$@"; do
+    if [ "$vl_arg" = --dry-run ]; then
+      exec python3 "$vl_root/tools/mooncakes_dry_run.py" "$vl_moon" "$@"
+    fi
+  done
+fi
+exec "$vl_moon" "$@"

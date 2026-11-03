@@ -29,7 +29,8 @@ const result = JSON.parse(audit_json(JSON.stringify({ images: [], options: { thr
 |---|---:|---:|
 | threshold | 6 | 0..64 |
 | maxImages | 1000 | 0..10000 |
-| maxComparisons | 1000000 | 0..10000000 |
+| maxComparisons（每个感知/局部阶段） | 1000000 | 0..10000000 |
+| maxExactComparisons（确定性阶段） | 1000000 | 0..10000000 |
 | maxPairs | 10000 | 0..100000 |
 
 缺省或 null 采用默认值；非整数或越界拒绝。未知字段保留兼容性而不参与计算。整体 JSON 最大 16 Mi 字符、深度 8。空数组在核心产生完整空报告；CLI 仅在没有发现支持扩展名的图片且无扫描错误时报 `EMPTY_DATASET`。若已发现图片但全部坏图或超预算，会生成 `ok:false, complete:false` 报告并退出 2。
@@ -38,7 +39,7 @@ const result = JSON.parse(audit_json(JSON.stringify({ images: [], options: { thr
 
 0.2.0 在验证 `dhash` 后将其内部表示打包为两个 UInt32，使用 XOR 与 popcnt 计算汉明距离。外部仍传入 64 个 0/1 字符；规范化、阈值、精确证据优先级、索引遍历、输出顺序与预算计费保持原合同。公开 MoonBit `hamming(String, String)` 仍对非法长度或非二进制字符返回 `-1`。
 
-`groups` 只合并已经输出的确定重复边，绝不传递合并感知候选。预算不完整时分组也可能不完整。`stats.processedImages` 只计完成查询与索引插入的前缀；最后一项可能已输出部分有效证据。`stats.comparisons` 是工作单位：树节点距离计算或检查一个 bucket 成员各一单位；不是所有像素算术的计数。`stats.reason` 为 `ComparisonBudget` / `PairBudget` / 空串。
+`groups` 只合并已经输出的确定重复边，绝不传递合并感知候选。预算不完整时分组也可能不完整。0.7.0 的 `stats.processedImages` 只计所有启用阶段均完成的输入前缀；逐阶段完成数见 `phases`，最后一项可能已输出部分有效证据。`stats.comparisons` 是工作单位：树节点距离计算或检查一个 bucket 成员各一单位；不是所有像素算术的计数。`stats.reason` 为 `ComparisonBudget` / `IndexBudget` / `PairBudget` / 空串。
 
 ## 主机报告与复核
 
@@ -58,7 +59,7 @@ CLI 增加 `--include-mirrors`；JS `fingerprint({width,height,rgba,includeMirro
 
 新增 `--include-rotations`，可与镜像组合；完整 API、方向顺序、预算语义与开销见 [0.4.0 说明](changes-0.4.0.md)，照片来源与实际误报漏检见 [评测](../reports/photos-v1/summary.md)。
 
-## 0.5.0 开发中的核心迁移与大图合同（待阶段验收）
+## 0.5.0 核心迁移与大图合同（已发布）
 
 模块名已按负责人决定改为 `cjyhjy/visionleak`，第 4 阶段已统一升版为 0.5.0。新增导出：
 
@@ -76,7 +77,7 @@ CLI 增加 `--include-mirrors`；JS `fingerprint({width,height,rgba,includeMirro
 
 新增 `fingerprint_local_rgba(width, height, rgba) -> String`，输入与既有 RGBA ABI 相同，上限 4,194,304 像素；返回 JSON 中的 localHashes/localContrasts 各含 20 项，localHashVersion 为 vl-local-dhash-v1。完整公开签名见 core/pkg.generated.mbti。
 
-`audit_json` 的 options 可设 includeCrops=true；此时每个输入图像须有上述 20 个哈希和对比度，缺失或无效会拒绝。局部证据为 local-candidate，matchLocal 含 leftWindow/rightWindow/profile，localProfile 给出千分比矩形。所有新增检索和插入距离共用 maxComparisons，预算耗尽 complete=false。
+`audit_json` 的 options 可设 includeCrops=true；此时每个输入图像须有上述 20 个哈希和对比度，缺失或无效会拒绝。局部证据为 local-candidate，matchLocal 含 leftWindow/rightWindow/profile，localProfile 给出千分比矩形。0.7.0 的全图与局部阶段分别使用独立的 maxComparisons 预算，预算耗尽 complete=false；确定性阶段使用 maxExactComparisons。
 
 局部候选不进入确定性 groups。workflow_json 的 candidate 关卡覆盖局部候选，counts.localCandidate 单独计数；复核和导出同样保持候选身份。局部报告的结构校验要求 includeCrops=true 和有效窗口见证。
 
@@ -84,4 +85,10 @@ CLI 增加 `--include-mirrors`；JS `fingerprint({width,height,rgba,includeMirro
 
 新增核心导出 `fingerprint_combined_rgba(width, height, rgba, mirrors, rotations)`：返回原全局/方向指纹字段及 `localHashes/localContrasts/localHashVersion`，与分别调用旧入口合并的结果一致。JS `fingerprint({includeCrops:true})` 使用该入口。旧导出保留。
 
-启用 MIH 预筛选时 `stats` 可新增 `indexOperations`、`indexOperationLimit`，分别表示桶探测、posting 读取和祖先回溯的总次数及其上限（`16 × maxComparisons`）。索引预算耗尽为 `stats.reason: "IndexBudget"`，报告为 `incomplete`，遵循现有未完成审计退出码与覆盖范围规则。未使用预筛选的报告可省略这两个字段；`comparisons` 仍是距离计算和配对检查之和。详见 [优化记录](optimization.md)。
+启用 MIH 预筛选时 `stats` 可新增 `indexOperations`、`indexOperationLimit`，分别表示桶探测、posting 读取和祖先回溯的总次数及其上限（单阶段 `16 × maxComparisons`，聚合统计相加）。索引预算耗尽为 `stats.reason: "IndexBudget"`，报告为 `incomplete`，遵循现有未完成审计退出码与覆盖范围规则。未使用预筛选的报告可省略这两个字段；`comparisons` 仍是距离计算和配对检查之和。详见 [优化记录](optimization.md)。
+
+## 0.7.0 本地候选版本
+
+`runAudit` 新增可选顶层参数 `manifest`、`cache`（路径字符串）；`options.maxExactComparisons` 为独立确定性预算。`maxComparisons` 分别限制感知、局部阶段，聚合计数可超过这个单阶段上限。报告新增 `auditStrategy`、`phases`、`coverage.deterministicInputComplete`；完整定义、CSV 路径边界和缓存失效规则见 [0.7.0 迁移](changes-0.7.0.md)。版本未发布；不得沿用旧配对顺序、工作计数或 auditId。
+
+总体 `stats.processedImages` 包含启用但被跳过的阶段（完成数 0），不包含禁用阶段。阶段化报告的核心预算记录带 `coverage.budgetExhaustion[].phase`；该记录的 `processedImages` 和 `atImage` 指实际耗尽预算的阶段，与总体覆盖分开。旧报告的无阶段记录保持原义。

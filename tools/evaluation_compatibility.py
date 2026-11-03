@@ -21,8 +21,15 @@ def compare_baseline(report, key, version='0.4.0', reason=None):
         raise ValueError('Historical baseline report changed: ' + entry['path'])
     baseline = json.loads(raw)
     differences = []
+    order_changed = False
     for field in ['pairs', 'groups']:
         old, new = baseline[field], report[field]
+        if field == 'pairs' and report.get('auditStrategy') == 'exact-first-v1':
+            order_changed = old != new
+            # Permit only the declared stable partition into exact/global/local
+            # phases. Keep order and every witness field inside each phase.
+            phase = lambda p: 0 if p['evidence'] in ('byte-identical','pixel-identical') else 1 if p['evidence']=='perceptual-candidate' else 2
+            old = sorted(old, key=phase)
         if old != new:
             differences.append({'field': field, 'before': old, 'after': new})
     work = []
@@ -33,6 +40,7 @@ def compare_baseline(report, key, version='0.4.0', reason=None):
     return {'version': version, 'key': key, 'baselinePath': baseline_path,
             'baselineReportSha256': entry['sha256'],
             'freezeSha256': hashlib.sha256(freeze_bytes).hexdigest(),
+            'pairOrderChanged': order_changed, 'orderingContract': report.get('auditStrategy'),
             'detectionUnchanged': not differences, 'detectionDifferences': differences,
             'allowedChangeReason': reason, 'passed': not differences or bool(reason and reason.strip()),
             'workComparison': work,

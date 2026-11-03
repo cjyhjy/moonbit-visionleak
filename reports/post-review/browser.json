@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "visionleak-browser-acceptance-v070",
+  "status": "passed",
+  "checkedAt": "2026-10-30T09:54:32.293613+00:00",
+  "browser": "Google Chrome via Codex CUA",
+  "sourceHashes": {
+    "demo/app.mjs": "d0469c6500b273a0efcb24dbc2b47255faf71b8a3c6d2bb2e4c4428f30d1b457",
+    "demo/index.html": "278c7ebe68a4544714515fa2a9ed408f02bf84364f9a99eff7826f312c5abc01",
+    "demo/styles.css": "65c44403c6a12256ab0d837825ee78121791205e5f25eb12369ef1470f816e46",
+    "core/review_ranking.mbt": "102c608c43945b5ea72a1af110bdc4a57a274e8e7553e5a00745bf1cf2658694",
+    "dist/visionleak.js": "15e9bc702941f771f4b77c76b09ae3f2e21abd0186acf059f994d1f4a26f17fe"
+  },
+  "checks": {
+    "phaseCoverageVisible": true,
+    "optionalOrderingPreservesPairCount": true,
+    "globalCandidateOrdering": true,
+    "localWindowSupportCountDisplayed": true,
+    "localEvidenceFilterAndOverlays": true,
+    "decisionAndUndo": true,
+    "desktopVisualInspection": true,
+    "mobile390VisualInspection": true,
+    "mobile390ScrollWidth": 390,
+    "mobile390ViewportWidth": 390,
+    "pageConsoleErrorsObserved": []
+  },
+  "auditIds": [
+    "05b02dd4bedd36ae6614abd235bf8a9919379e3a664b92494796b1ee0b16e9f2",
+    "18f2073986e782f4b45081307d1513ded55457bda9cfe5387f0295b40450c7fa"
+  ],
+  "screenshots": [
+    {
+      "path": "reports/post-review/workbench-desktop.png",
+      "sha256": "36903034743604c154224b97e908ed40229e701a3d7ea160ac068656ab41b880",
+      "pixels": [
+        1185,
+        752
+      ]
+    },
+    {
+      "path": "reports/post-review/workbench-local-evidence.png",
+      "sha256": "c82d4f7ee1e66d26a81f62c4027fb4ad6e1cfc7ad54a1512e515e6ac451beaf8",
+      "pixels": [
+        1185,
+        697
+      ]
+    },
+    {
+      "path": "reports/post-review/workbench-mobile-390.png",
+      "sha256": "49aa322029a9d126b219ca7801dd9ec4988a9ba5925c8fd0db337b62e8070276",
+      "pixels": [
+        390,
+        619
+      ]
+    },
+    {
+      "path": "reports/post-review/workbench-mobile-controls.png",
+      "sha256": "ffe4a30bc5f66c8bcdd8e4a59b8e35afd87f6ab05c25cfd8dd27b2f431db37ea",
+      "pixels": [
+        390,
+        619
+      ]
+    }
+  ],
+  "scope": "Manual browser functional and visual acceptance in Chrome on this macOS host. No other-browser or Windows claim; no human review timing study.",
+  "limitations": [
+    "The browser connector blocks file:// navigation. The offline HTML was generated and covered by export integration checks, but opening the saved file directly in Chrome was not visually verified."
+  ]
+}

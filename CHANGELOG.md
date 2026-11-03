@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.7.0 — local candidate, unpublished
+
+- Exact-first audit with independent deterministic/global/local phase accounting; pair order, work counts and audit IDs change.
+- CSV split manifests and content/configuration keyed fingerprint and thumbnail cache.
+- Phase coverage in the workbench and bounded optional multi-window review ordering; no candidate filtering.
+- Frozen new-source photo protocol and reproducible CI-to-corrected-copy walkthrough.
+- See docs/changes-0.7.0.md and reports/post-review/ for measured results and limits.
+
 ## 0.6.0 — performance, review and integration contracts
 
 - MIH prefilter retains BK-tree witness order; work counts and budget-limited prefixes may change.

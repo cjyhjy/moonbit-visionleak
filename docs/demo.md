@@ -58,3 +58,9 @@ CLI 增加 `--include-mirrors`；JS `fingerprint({width,height,rgba,includeMirro
 ## 0.4.0 照片评测与直角旋转
 
 新增 `--include-rotations`，可与镜像组合；完整 API、方向顺序、预算语义与开销见 [0.4.0 说明](changes-0.4.0.md)，照片来源与实际误报漏检见 [评测](../reports/photos-v1/summary.md)。
+
+## 初审后完整答辩流程（0.7.0 本地版本）
+
+运行 `node tools/demo-walkthrough.mjs output/walkthrough-v070`，每次使用不存在的新目录。脚本依次生成数据、触发重复关卡（3）、展示近似阶段预算耗尽时保留确定性证据、复验、构造并注明脚本复核记录、导出 HTML/CSV、创建修正副本并重审（0）。`walkthrough.json` 记录全部步骤及原演示数据的前后摘要。
+
+现场启动 `node tools/server.mjs --report output/walkthrough-v070/audit/report.json --port 4173`，先解释逐阶段覆盖，再亲自标记一条证据并撤销，导出复核记录。打开生成的 `evidence.html` 可离线展示完整证据。切换到 `reaudit/report.json` 展示修正副本的结果。生成器中的自动复核仅供演示，不能声称测得真人复核耗时。

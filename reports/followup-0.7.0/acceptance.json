@@ -1,0 +1,127 @@
+{
+  "schemaVersion": "visionleak-followup-acceptance-v1",
+  "version": "0.7.0",
+  "status": "passed",
+  "verifiedAt": "2026-11-03T18:37:44.102Z",
+  "sourceDigest": "df9b0a3516a63dc63cf6b64406c85d0c8c72721eec7a844ee886205fc39736fa",
+  "compiledArtifact": {
+    "path": "dist/visionleak.js",
+    "sha256": "ad05cc71d2d8ef8620b7fe7695b5cd7b38c669c02e8b0a7afd6e943acef3b701"
+  },
+  "ci": {
+    "path": "reports/followup-0.7.0/ci/verification.json",
+    "checks": 27
+  },
+  "browser": {
+    "schemaVersion": "visionleak-browser-followup-v1",
+    "status": "passed",
+    "checkedAt": "2026-11-03T18:36:54.872945+00:00",
+    "browser": "Google Chrome via CUA",
+    "coreArtifactSha256": "ad05cc71d2d8ef8620b7fe7695b5cd7b38c669c02e8b0a7afd6e943acef3b701",
+    "sourceHashes": {
+      "demo/app.mjs": "d0469c6500b273a0efcb24dbc2b47255faf71b8a3c6d2bb2e4c4428f30d1b457",
+      "demo/index.html": "278c7ebe68a4544714515fa2a9ed408f02bf84364f9a99eff7826f312c5abc01",
+      "demo/styles.css": "65c44403c6a12256ab0d837825ee78121791205e5f25eb12369ef1470f816e46",
+      "dist/visionleak.js": "ad05cc71d2d8ef8620b7fe7695b5cd7b38c669c02e8b0a7afd6e943acef3b701"
+    },
+    "auditIds": [
+      "dec04cae979075990e5b1ff3ae7ab822d03fc776ad01c9f808b09bf152ce0345",
+      "b597c840415ae82f81c6c4cce861a2676d3479637bf725acd0b7d6ba6484ba42"
+    ],
+    "checks": {
+      "skippedPhasesDoNotCountAsAudited": true,
+      "interruptedPhasePrefixStillVisible": true,
+      "completeCoverageVisible": true,
+      "rankingDefaultsToReportOrder": true,
+      "experimentalOrderingPreservesFivePairs": true,
+      "markProgressAndUndo": true,
+      "desktopVisualInspection": true,
+      "mobile390VisualInspection": true,
+      "mobileScrollWidth": 375,
+      "mobileViewportWidth": 390,
+      "consoleWarningsOrErrorsObserved": []
+    },
+    "screenshots": [
+      {
+        "path": "reports/followup-0.7.0/coverage-desktop.jpg",
+        "sha256": "d75a737bcaa27159a6e4f079609ec4f4d0cf14921f893ef30b3b34bd14f9073a"
+      },
+      {
+        "path": "reports/followup-0.7.0/review-desktop.jpg",
+        "sha256": "08088c7714d070be1f67ed454d12cb7000193f61a143be809fd35cf3831a6030"
+      },
+      {
+        "path": "reports/followup-0.7.0/coverage-mobile-390.jpg",
+        "sha256": "962a48a3cc6f3183a9fa9a49830739e5718f05b2334e6437c5b938d9fdfd9d6b"
+      }
+    ],
+    "limitations": [
+      "Chrome on this macOS host only; not Safari/Firefox/Windows acceptance.",
+      "Standalone HTML export verified by integration tests and walkthrough; file:// visual acceptance not performed.",
+      "Scripted fixture decisions are functional tests, not a human review study."
+    ]
+  },
+  "walkthrough": {
+    "path": "reports/followup-0.7.0/walkthrough.json",
+    "sourceDatasetUnchanged": true
+  },
+  "evidenceDigests": {
+    "reports/followup-0.7.0/ci/build-js.log": "30ec13dbdad8330682289e0f37415033da68d27500ec282757b7d943ce8227b5",
+    "reports/followup-0.7.0/ci/build-native-test-executable.log": "125b2b98d7b1c9fd1e254ce5e6466fe497da45f8d3f4065b5aa2f9ad7434c5bc",
+    "reports/followup-0.7.0/ci/build-wasm-gc.log": "6126828c8e86fe3c5be3be88c3825b1b5c2d1cbbde371534b119e8089013a720",
+    "reports/followup-0.7.0/ci/check-js.log": "c79826b968ab80e4632fd7628b7c2b6b8300755d69c7d7c480e13ee010cac331",
+    "reports/followup-0.7.0/ci/check-native.log": "c79826b968ab80e4632fd7628b7c2b6b8300755d69c7d7c480e13ee010cac331",
+    "reports/followup-0.7.0/ci/check-wasm-gc.log": "c79826b968ab80e4632fd7628b7c2b6b8300755d69c7d7c480e13ee010cac331",
+    "reports/followup-0.7.0/ci/crop-reference.log": "f66ba7ef911ad8ddf843f6da29bb0e473c6cccf223f17bab3b66ea7b090d657e",
+    "reports/followup-0.7.0/ci/evaluation-audit.json": "742b30d91a421859a4c856bf9fc68f129f4d75467f9c6202caafd50cc4b68edb",
+    "reports/followup-0.7.0/ci/evaluation-compatibility.log": "637ad693971420b70a01476cd5d51065ecc3c7af270c41cfe91899ec8c2db4bd",
+    "reports/followup-0.7.0/ci/evaluation-oracle.json": "65eb7b1d7f3289f37ae9f37d3f1da6d5210f92270e59934755a8ad001564ebff",
+    "reports/followup-0.7.0/ci/evaluation.json": "5da22b4e34ff675e2389d4b2e43bb8fa88fff6ff9fffd78d8b7416debe702b11",
+    "reports/followup-0.7.0/ci/evaluation.md": "874e12ef3f75f71e4013003b82745aa32b8d6bfdab3a21a5401df9f4a32d6630",
+    "reports/followup-0.7.0/ci/format.log": "b02883c39fe2f9a88793c8e27595ac4cccd5c101400fa7a8f2b3b702009dea42",
+    "reports/followup-0.7.0/ci/frozen-source-integrity.log": "e3ac76bff2afb4e303338e3a000ede0b4232082dde26ccddeed978cee3dd0931",
+    "reports/followup-0.7.0/ci/imagehash-oracle.log": "dc5a822ab1a1c11a0b0f627ebac1e010aff1778c1bf98597494e634dcc254f54",
+    "reports/followup-0.7.0/ci/known-source-regression.log": "219daef05a3049ea7137e00eae931671f7f266a5e1e12558dfb0ba9f1830e1c6",
+    "reports/followup-0.7.0/ci/metric-regression.log": "22715ead0936c3a7d71b2be714ac8e1bcd566565c39db4f3fafbcf6de5362a47",
+    "reports/followup-0.7.0/ci/mirror-evaluation-audit.json": "ac8aba131a9a55a1a180a9a107e35185d758c0a5d23bb32f35cc442ed2732de4",
+    "reports/followup-0.7.0/ci/mirror-evaluation.json": "bdeb2eb98a8e4121e4638d97ca7e1bab868036fbe417586a0a2e23f51aaaf322",
+    "reports/followup-0.7.0/ci/mirror-oracle.log": "48bdc2a97be372bb8f777340f78aba8223ade123ab854ee496f0741426b07e08",
+    "reports/followup-0.7.0/ci/mooncakes-compatibility.log": "33060fd73862c5e1af97335504d5b45211fce6d229657f556d8deceeadc52ce4",
+    "reports/followup-0.7.0/ci/mooncakes-package.log": "0276289a917b36926f4a82fd7b7e1660cb3eb443b96c998d41c5d3cf04007a39",
+    "reports/followup-0.7.0/ci/node-integration.log": "4e720df673c98685824417f1204adcd631488fe57357dc5939700df185626eb5",
+    "reports/followup-0.7.0/ci/photo-development.log": "8ea74ecef114d4d2af61f2bf12451bae420a709afbf634be34eac87e5c90811b",
+    "reports/followup-0.7.0/ci/photo-holdout.log": "54ec42c1adeb6ce752be4fb78bef71530b03453b6c079b98e0d71049160b2f72",
+    "reports/followup-0.7.0/ci/photos-development/default-audit.json": "d50ada389472dacd66f9743d70f3f7fd76543752d7bcdfbec486c6c53b13112d",
+    "reports/followup-0.7.0/ci/photos-development/evaluation.json": "ad7a3c02f8543ea825190f307427d3830067d2e5b73c7a633b9a8a23e8f42365",
+    "reports/followup-0.7.0/ci/photos-development/mirrors-audit.json": "c7487af21562a853fffb324296da959e57975b08d04db7ab8e06e2426e909d5d",
+    "reports/followup-0.7.0/ci/photos-development/orientations-audit.json": "df1d08717b9112b94f2ce5b1a8a3d4b4b03b53ce27d8e66d8ba53d39c9970566",
+    "reports/followup-0.7.0/ci/photos-holdout/default-audit.json": "0a8acc6f9ea2b208feee2d0bbadd72a0d6ee5f622430c740d03aa8e2e12a7962",
+    "reports/followup-0.7.0/ci/photos-holdout/evaluation.json": "b4608455c26aab43c6dcb00006971dd0421ea339969b2aa91edbb60df2648d28",
+    "reports/followup-0.7.0/ci/photos-holdout/mirrors-audit.json": "542a39be96c173c40da2edfc5d29fc8c5b8e5f76b5ff7c1652b49140a8d44683",
+    "reports/followup-0.7.0/ci/photos-holdout/orientations-audit.json": "f78f0201e26ecfae8fae25ee8ea553e3631117faf54624a5b20393a890391856",
+    "reports/followup-0.7.0/ci/post-review-regression-1793730889616/crops-audit.json": "a8f1fad6861861752f76b165b8bd6126ed6c3a11bc6a6694aa2e81b08e70281f",
+    "reports/followup-0.7.0/ci/post-review-regression-1793730889616/default-audit.json": "e19f860fdad80523deb5d5eb6f158aa491e4e2a397c36e021c424bdea4a89223",
+    "reports/followup-0.7.0/ci/post-review-regression-1793730889616/evaluation.json": "24e8fcc5be0a36dc54ede73b121d228532765a2e18534f0006f03fe28fbbe723",
+    "reports/followup-0.7.0/ci/post-review-regression-1793730889616/ground-truth.json": "bc1c03d9c8de9d2ed1c503f892ca0bf8bde204fb3a8f9d13d0fa3639aa4f4851",
+    "reports/followup-0.7.0/ci/release-contract.log": "36824aeca06fc30f43cd44ab3d790179a15f7b92e295a690bf3564f14feabf36",
+    "reports/followup-0.7.0/ci/report-history.log": "4fd6713a62741828be01ad9e2e383926d335e3277de2db9f0c742788e23dc29d",
+    "reports/followup-0.7.0/ci/runtime-build.log": "629dcfd7aeb0a14d01ebd71b45d1256a54f2b855a4fa49bd5325e33112c53931",
+    "reports/followup-0.7.0/ci/test-js.log": "d1980b17d783129ee9afee24830f4f4aacee3d652ee2b3cb3a0e33b63cad5efb",
+    "reports/followup-0.7.0/ci/test-native-release.log": "d1980b17d783129ee9afee24830f4f4aacee3d652ee2b3cb3a0e33b63cad5efb",
+    "reports/followup-0.7.0/ci/test-native.log": "d1980b17d783129ee9afee24830f4f4aacee3d652ee2b3cb3a0e33b63cad5efb",
+    "reports/followup-0.7.0/ci/test-wasm-gc.log": "d1980b17d783129ee9afee24830f4f4aacee3d652ee2b3cb3a0e33b63cad5efb",
+    "reports/followup-0.7.0/ci/toolchain.log": "7e87c42fc4a6ca81d3947e0e5bf18e01faeaa842c762a4b22aac8eb37d8503d0",
+    "reports/followup-0.7.0/ci/verification.json": "48c48c0e8510ce110d7791411f01e0c410a4fd2cd57a4cc6e3134fcd93ca9962",
+    "reports/followup-0.7.0/browser.json": "68373463b5272fba55e2b599cbe2f9211046f290bde4b3c523e7c54a24f3fdae",
+    "reports/followup-0.7.0/walkthrough.json": "3dac3df22fda9c1b942c8fbf00df2df768eea4a66440d2dbcda9d8c2dd015685",
+    "reports/followup-0.7.0/frozen-replay/evaluation.json": "55d6985af7a03e4402d16cd2658582c177b736e071bdbea10ae31b580d464cd4",
+    "research/photos-v3/freeze-0.7.0.json": "ed1043e412c352504089dbf569d6f378bc5c35bdfe846b9dc79e1123a36b177a",
+    "research/baselines/0.7.0-pre-followup/snapshot.json": "6d1fa2c509d7da04a4a7873a78c9c644297e0bd3c4012c35be3d3d7d67c9ae9e",
+    "reports/followup-0.7.0/coverage-desktop.jpg": "d75a737bcaa27159a6e4f079609ec4f4d0cf14921f893ef30b3b34bd14f9073a",
+    "reports/followup-0.7.0/review-desktop.jpg": "08088c7714d070be1f67ed454d12cb7000193f61a143be809fd35cf3831a6030",
+    "reports/followup-0.7.0/coverage-mobile-390.jpg": "962a48a3cc6f3183a9fa9a49830739e5718f05b2334e6437c5b938d9fdfd9d6b"
+  },
+  "publication": {
+    "scope": "Local acceptance only; see separate publication receipts for commit, remote CI and release status."
+  }
+}

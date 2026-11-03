@@ -149,7 +149,11 @@ test "work and output budgets expose incompleteness" {
   let work = run_audit(items, 6, 0, 10, 10, false, false, false)
   assert_eq(field(work, "complete"), Json(false))
   assert_eq(field(field(work, "stats"), "reason"), Json("ComparisonBudget"))
-  assert_eq(field(field(work, "stats"), "comparisons"), Json(0))
+  assert_eq(field(field(work, "stats"), "comparisons"), Json(1))
+  assert_eq(
+    field(field(field(work, "phases"), "deterministic"), "complete"),
+    Json(true),
+  )
   let output = run_audit(items, 6, 100, 0, 10, false, false, false)
   assert_eq(field(output, "complete"), Json(false))
   assert_eq(field(field(output, "stats"), "reason"), Json("PairBudget"))
