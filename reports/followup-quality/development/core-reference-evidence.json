@@ -1,0 +1,670 @@
+{
+  "auditId": "9ea2a896ab70038b662911234578132a796726d501f9601b0b974263a626923f",
+  "complete": true,
+  "phases": {
+    "deterministic": {
+      "enabled": true,
+      "complete": true,
+      "status": "complete",
+      "inputImages": 168,
+      "processedImages": 168,
+      "comparisons": 0,
+      "maxComparisons": 1000000,
+      "distanceEvaluations": 0,
+      "pairChecks": 0,
+      "indexOperations": 0,
+      "indexOperationLimit": 16000000,
+      "emittedPairs": 0,
+      "reason": ""
+    },
+    "perceptual": {
+      "enabled": true,
+      "complete": true,
+      "status": "complete",
+      "inputImages": 168,
+      "processedImages": 168,
+      "comparisons": 4155,
+      "maxComparisons": 10000000,
+      "distanceEvaluations": 4149,
+      "pairChecks": 6,
+      "indexOperations": 2968,
+      "indexOperationLimit": 160000000,
+      "emittedPairs": 6,
+      "reason": ""
+    },
+    "local": {
+      "enabled": true,
+      "complete": true,
+      "status": "complete",
+      "inputImages": 168,
+      "processedImages": 168,
+      "comparisons": 76148,
+      "maxComparisons": 10000000,
+      "distanceEvaluations": 76106,
+      "pairChecks": 42,
+      "indexOperations": 353378,
+      "indexOperationLimit": 160000000,
+      "emittedPairs": 42,
+      "reason": ""
+    }
+  },
+  "byEvidence": {
+    "byte-identical": {
+      "pairs": 0,
+      "tp": 0,
+      "fp": 0
+    },
+    "pixel-identical": {
+      "pairs": 0,
+      "tp": 0,
+      "fp": 0
+    },
+    "perceptual-candidate": {
+      "pairs": 6,
+      "tp": 6,
+      "fp": 0
+    },
+    "local-candidate": {
+      "pairs": 42,
+      "tp": 32,
+      "fp": 10
+    }
+  },
+  "pairs": [
+    {
+      "left": "test/131972354-large-png.png",
+      "right": "train/131972354-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/149692131-large-resize-jpeg75.png",
+      "right": "train/149692131-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 5,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/153007046-large-png.png",
+      "right": "train/153007046-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 3,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/164228977-large-png.png",
+      "right": "train/164228977-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 4,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/17093098-large-resize-jpeg75.png",
+      "right": "train/17093098-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 3,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/89995572-large-resize-jpeg75.png",
+      "right": "train/89995572-original.png",
+      "evidence": "perceptual-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/117790284-large-resize-jpeg75.png",
+      "right": "train/117790284-original.png",
+      "evidence": "local-candidate",
+      "distance": 4,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 0,
+        "rightWindow": 4,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/117790284-large-png.png",
+      "right": "train/117790284-original.png",
+      "evidence": "local-candidate",
+      "distance": 3,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 0,
+        "rightWindow": 5,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/183139140-large-resize-jpeg75.png",
+      "right": "train/117790284-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 11,
+        "rightWindow": 12,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/183139140-medium-png.png",
+      "right": "train/117790284-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 11,
+        "rightWindow": 12,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/183139140-small-resize-jpeg75.png",
+      "right": "train/117790284-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 1,
+        "rightWindow": 12,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/117790284-small-png.png",
+      "right": "train/117790284-original.png",
+      "evidence": "local-candidate",
+      "distance": 5,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 12,
+        "rightWindow": 12,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/117790284-small-resize-jpeg75.png",
+      "right": "train/117790284-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 7,
+        "rightWindow": 12,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/183139140-large-png.png",
+      "right": "train/117790284-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 11,
+        "rightWindow": 12,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/143127453-large-resize-jpeg75.png",
+      "right": "train/143127453-original.png",
+      "evidence": "local-candidate",
+      "distance": 3,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 0,
+        "rightWindow": 4,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/143127453-large-png.png",
+      "right": "train/143127453-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 5,
+        "rightWindow": 4,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/143127453-medium-resize-jpeg75.png",
+      "right": "train/143127453-original.png",
+      "evidence": "local-candidate",
+      "distance": 4,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 2,
+        "rightWindow": 10,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/145082531-large-resize-jpeg75.png",
+      "right": "train/145082531-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 0,
+        "rightWindow": 4,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/145489226-large-resize-jpeg75.png",
+      "right": "train/145489226-original.png",
+      "evidence": "local-candidate",
+      "distance": 5,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 3,
+        "rightWindow": 10,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/147065481-large-png.png",
+      "right": "train/147065481-original.png",
+      "evidence": "local-candidate",
+      "distance": 5,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 0,
+        "rightWindow": 1,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/147381266-large-resize-jpeg75.png",
+      "right": "train/147381266-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 2,
+        "rightWindow": 10,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/147381266-medium-png.png",
+      "right": "train/147381266-original.png",
+      "evidence": "local-candidate",
+      "distance": 5,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 1,
+        "rightWindow": 10,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/153007046-medium-resize-jpeg75.png",
+      "right": "train/153007046-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 3,
+        "rightWindow": 8,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/153492197-large-resize-jpeg75.png",
+      "right": "train/153492197-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 0,
+        "rightWindow": 4,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/153492197-large-png.png",
+      "right": "train/153492197-original.png",
+      "evidence": "local-candidate",
+      "distance": 5,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 3,
+        "rightWindow": 10,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/164228977-large-resize-jpeg75.png",
+      "right": "train/164228977-original.png",
+      "evidence": "local-candidate",
+      "distance": 4,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 2,
+        "rightWindow": 7,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/164228977-small-resize-jpeg75.png",
+      "right": "train/164228977-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 15,
+        "rightWindow": 11,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/164228977-medium-resize-jpeg75.png",
+      "right": "train/164228977-original.png",
+      "evidence": "local-candidate",
+      "distance": 5,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 11,
+        "rightWindow": 11,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/164228977-small-png.png",
+      "right": "train/164228977-original.png",
+      "evidence": "local-candidate",
+      "distance": 2,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 11,
+        "rightWindow": 11,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/143127453-medium-png.png",
+      "right": "train/164228977-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 11,
+        "rightWindow": 11,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/17093098-large-png.png",
+      "right": "train/17093098-original.png",
+      "evidence": "local-candidate",
+      "distance": 4,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 0,
+        "rightWindow": 2,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/17192579-large-png.png",
+      "right": "train/17192579-original.png",
+      "evidence": "local-candidate",
+      "distance": 5,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 13,
+        "rightWindow": 13,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/175882787-large-resize-jpeg75.png",
+      "right": "train/175882787-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 17,
+        "rightWindow": 17,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/183139140-large-resize-jpeg75.png",
+      "right": "train/183139140-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 3,
+        "rightWindow": 0,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/183139140-small-resize-jpeg75.png",
+      "right": "train/183139140-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 9,
+        "rightWindow": 0,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/183139140-large-png.png",
+      "right": "train/183139140-original.png",
+      "evidence": "local-candidate",
+      "distance": 5,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 5,
+        "rightWindow": 0,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/183139140-medium-png.png",
+      "right": "train/183139140-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 11,
+        "rightWindow": 1,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/117790284-small-png.png",
+      "right": "train/183139140-original.png",
+      "evidence": "local-candidate",
+      "distance": 5,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 12,
+        "rightWindow": 1,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/117790284-small-resize-jpeg75.png",
+      "right": "train/183139140-original.png",
+      "evidence": "local-candidate",
+      "distance": 4,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 7,
+        "rightWindow": 1,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/117790284-large-resize-jpeg75.png",
+      "right": "train/183139140-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 12,
+        "rightWindow": 6,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/117790284-large-png.png",
+      "right": "train/183139140-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 12,
+        "rightWindow": 6,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/28818900-large-png.png",
+      "right": "train/28818900-original.png",
+      "evidence": "local-candidate",
+      "distance": 2,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 0,
+        "rightWindow": 5,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/29757973-medium-png.png",
+      "right": "train/29757973-original.png",
+      "evidence": "local-candidate",
+      "distance": 5,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 0,
+        "rightWindow": 10,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/29757973-large-resize-jpeg75.png",
+      "right": "train/29757973-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 5,
+        "rightWindow": 10,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/89995572-large-png.png",
+      "right": "train/89995572-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 3,
+        "rightWindow": 8,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/90293410-large-png.png",
+      "right": "train/90293410-original.png",
+      "evidence": "local-candidate",
+      "distance": 5,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 2,
+        "rightWindow": 10,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/90293410-large-resize-jpeg75.png",
+      "right": "train/90293410-original.png",
+      "evidence": "local-candidate",
+      "distance": 5,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 5,
+        "rightWindow": 10,
+        "profile": "vl-local-dhash-v1"
+      }
+    },
+    {
+      "left": "test/164228977-small-resize-jpeg75.png",
+      "right": "train/90293410-original.png",
+      "evidence": "local-candidate",
+      "distance": 6,
+      "lowContrast": false,
+      "review": "unreviewed",
+      "matchLocal": {
+        "leftWindow": 15,
+        "rightWindow": 11,
+        "profile": "vl-local-dhash-v1"
+      }
+    }
+  ],
+  "scope": "Actual released Core evidence, separated by class. ORB prototype emits only research candidates and does not run or replace Core exact stages."
+}

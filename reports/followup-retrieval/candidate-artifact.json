@@ -1,0 +1,10 @@
+{
+  "source": "research/followup-retrieval/mih-candidate.mbt.txt",
+  "patch": "research/followup-retrieval/mih-generation.patch",
+  "sourceFormattedSha256": "6663b5eb585725acf4dcbe9dbf03460df5221d02eb19afd23f1a9c753a8f6e7c",
+  "compiledArtifactSha256": "65fa94357c70b76ccb4e62f4dc88ace45cb719783edc3ca9de5fb80d8305e6d4",
+  "compiledArtifactBytes": 548944,
+  "rebuildCommand": "python3 research/followup-retrieval/build_candidate.py",
+  "role": "unreleased-next-version-candidate",
+  "productionArtifactUnchanged": true
+}

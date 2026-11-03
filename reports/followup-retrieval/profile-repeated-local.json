@@ -1,0 +1,119 @@
+{
+  "name": "repeated-local",
+  "mode": "profile",
+  "node": "v26.7.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "inputSha256": "b1879bf3cbf2e026e3f8492b09b4b52d7d1d7c3a7fb2166198ad7e054856689f",
+  "moduleSha256": "dd314c8e8609ba55734afcc0361751cc94b60558551c547073be41833a39ee0e",
+  "wallMs": 63.447292000000004,
+  "peakRssBytes": 105496576,
+  "resultSha256": "43e27c16ae65758a02646173825e9ecbd72bb5d4bb1b2eafb3586ab81f88a7da",
+  "complete": true,
+  "phases": {
+    "deterministic": {
+      "enabled": true,
+      "complete": true,
+      "status": "complete",
+      "inputImages": 400,
+      "processedImages": 400,
+      "comparisons": 0,
+      "maxComparisons": 1000000,
+      "distanceEvaluations": 0,
+      "pairChecks": 0,
+      "indexOperations": 0,
+      "indexOperationLimit": 16000000,
+      "emittedPairs": 0,
+      "reason": ""
+    },
+    "perceptual": {
+      "enabled": true,
+      "complete": true,
+      "status": "complete",
+      "inputImages": 400,
+      "processedImages": 400,
+      "comparisons": 5917,
+      "maxComparisons": 1000000,
+      "distanceEvaluations": 5917,
+      "pairChecks": 0,
+      "indexOperations": 18828,
+      "indexOperationLimit": 16000000,
+      "emittedPairs": 0,
+      "reason": ""
+    },
+    "local": {
+      "enabled": true,
+      "complete": true,
+      "status": "complete",
+      "inputImages": 400,
+      "processedImages": 400,
+      "comparisons": 73093,
+      "maxComparisons": 1000000,
+      "distanceEvaluations": 69929,
+      "pairChecks": 3164,
+      "indexOperations": 607215,
+      "indexOperationLimit": 16000000,
+      "emittedPairs": 3164,
+      "reason": ""
+    }
+  },
+  "stats": {
+    "inputImages": 400,
+    "processedImages": 400,
+    "comparisons": 79010,
+    "distanceEvaluations": 75846,
+    "pairChecks": 3164,
+    "emittedPairs": 3164,
+    "indexNodes": 400,
+    "reason": "",
+    "indexOperations": 626043,
+    "indexOperationLimit": 32000000,
+    "localComparisons": 73093,
+    "localIndexNodes": 512
+  },
+  "pairs": 3164,
+  "profile": {
+    "probes": 552976,
+    "postings": 33862,
+    "ancestorMarks": 39205,
+    "memberVisits": 58588,
+    "repeatedCandidates": 27828,
+    "sameSplitMembers": 27596,
+    "prunedTreeVisits": 146959,
+    "functions": {
+      "global:mihPaths": {
+        "calls": 400,
+        "inclusiveMs": 1.0329570000000672
+      },
+      "global:mihInsert": {
+        "calls": 400,
+        "inclusiveMs": 0.5318230000000241
+      },
+      "global:mihContains": {
+        "calls": 6046,
+        "inclusiveMs": 0.5898020000001338
+      },
+      "localQuery:localQuery": {
+        "calls": 400,
+        "inclusiveMs": 32.75341999999992
+      },
+      "localQuery:mihPaths": {
+        "calls": 8000,
+        "inclusiveMs": 9.958598999999303
+      },
+      "localInsert:localInsert": {
+        "calls": 400,
+        "inclusiveMs": 1.3452340000000618
+      },
+      "localInsert:mihInsert": {
+        "calls": 512,
+        "inclusiveMs": 0.2270640000000057
+      },
+      "localQuery:mihContains": {
+        "calls": 185702,
+        "inclusiveMs": 5.884743000001762
+      }
+    },
+    "context": "global"
+  }
+}

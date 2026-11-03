@@ -1,0 +1,65 @@
+{
+  "complete": true,
+  "phases": {
+    "deterministic": {
+      "enabled": true,
+      "complete": true,
+      "status": "complete",
+      "inputImages": 168,
+      "processedImages": 168,
+      "comparisons": 0,
+      "maxComparisons": 1000000,
+      "distanceEvaluations": 0,
+      "pairChecks": 0,
+      "indexOperations": 0,
+      "indexOperationLimit": 16000000,
+      "emittedPairs": 0,
+      "reason": ""
+    },
+    "perceptual": {
+      "enabled": true,
+      "complete": true,
+      "status": "complete",
+      "inputImages": 168,
+      "processedImages": 168,
+      "comparisons": 4155,
+      "maxComparisons": 10000000,
+      "distanceEvaluations": 4149,
+      "pairChecks": 6,
+      "indexOperations": 2968,
+      "indexOperationLimit": 160000000,
+      "emittedPairs": 6,
+      "reason": ""
+    },
+    "local": {
+      "enabled": true,
+      "complete": true,
+      "status": "complete",
+      "inputImages": 168,
+      "processedImages": 168,
+      "comparisons": 76148,
+      "maxComparisons": 10000000,
+      "distanceEvaluations": 76106,
+      "pairChecks": 42,
+      "indexOperations": 353378,
+      "indexOperationLimit": 160000000,
+      "emittedPairs": 42,
+      "reason": ""
+    }
+  },
+  "stats": {
+    "inputImages": 168,
+    "processedImages": 168,
+    "comparisons": 80303,
+    "distanceEvaluations": 80255,
+    "pairChecks": 48,
+    "emittedPairs": 48,
+    "indexNodes": 168,
+    "reason": "",
+    "indexOperations": 356346,
+    "indexOperationLimit": 320000000,
+    "localComparisons": 76148,
+    "localIndexNodes": 3347
+  },
+  "auditId": "9ea2a896ab70038b662911234578132a796726d501f9601b0b974263a626923f"
+}

@@ -1,0 +1,27 @@
+{
+  "frozenAt": "2026-11-03T19:14:25.947828+00:00",
+  "baselineRuntimeSha256": "ad05cc71d2d8ef8620b7fe7695b5cd7b38c669c02e8b0a7afd6e943acef3b701",
+  "profileEvidenceSha256": "e83e5d31b3bba99d6a9d0a4824e89841c112b135a3c3c1552634334e065e28d3",
+  "candidate": "One generation-mark array per MIH index; replace per-query Map membership, retain all postings and ancestor walks, BK order and work charges. No filtering or threshold/budget changes.",
+  "maximumCandidates": 1,
+  "repetitions": 5,
+  "order": "Fresh process per trial; alternate baseline/candidate order by repeat. Full warmup, GC, one timed audit.",
+  "limits": {
+    "processTimeoutSeconds": 60,
+    "nodeOldSpaceMiB": 768,
+    "sameInputAndBudget": true
+  },
+  "acceptance": {
+    "fullOutputIncludingPartialPrefixAndWorkIdentical": true,
+    "geometricMeanSpeedupAtLeast": 1.1,
+    "oneWorkloadOver50msSpeedupAtLeast": 1.15,
+    "allowedSlowdownPerWorkload": "5% plus 2 ms",
+    "medianPeakRssRatioAtMost": 1.05
+  },
+  "scope": "Core retrieval only. Three workloads: 1,600 sparse synthetic inputs, 400 inputs with repeated local fingerprints, 108 known photo inputs. Different from full decode/CLI and from ORB research. No parameter tuning after comparison.",
+  "files": {
+    "research/followup-retrieval/experiment.mjs": "70544fbd8e84600c2a0a43ccb26186d66e384e4eed3fdea07d31130982a15512",
+    "research/followup-retrieval/mih-candidate.mbt.txt": "94802a9d915299680b01f9fc71c6b8fcbad7fb2d476034e728d8dbb6658a4755",
+    "reports/followup-retrieval/inputs.json": "52b7a1d2606b6046fd6876166b0fd5b3a533902ac414a1cf851c164022968852"
+  }
+}

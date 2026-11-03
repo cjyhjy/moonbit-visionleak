@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "visionleak-crop-exploration-protocol-v1",
+  "createdAt": "2026-11-03T18:47:55.762666+00:00",
+  "scope": "Bounded research prototypes; does not change the 0.7.0 Core API or production dependencies.",
+  "cropBands": [
+    [
+      "small",
+      40,
+      60
+    ],
+    [
+      "medium",
+      60,
+      80
+    ],
+    [
+      "large",
+      80,
+      94
+    ]
+  ],
+  "seed": "SHA256(vl-followup-crops-v1:sourceId)",
+  "transforms": "Two random crops per band with independent width/height and integer offsets; first lossless PNG, second scaled to longest edge 384 and JPEG75 decoded to PNG. No snap to product windows.",
+  "labels": "Compare each crop query only with original gallery files; same source is positive. All variants from a source stay in the same development or held-out source partition. Different file IDs are negative, without human semantic adjudication.",
+  "explorationBudget": {
+    "prototypeFamilies": 2,
+    "maximumConfigsPerFamily": 2,
+    "scheduledProfiles": [
+      "grid154",
+      "orb400",
+      "orb800"
+    ],
+    "maximumMeasuredRunsPerProfileAndPartition": 1,
+    "maximumSecondsPerRun": 60,
+    "driverTimeoutSeconds": 90,
+    "noPostResultTuning": true
+  },
+  "profiles": {
+    "v1-reference": {
+      "version": "vl-local-dhash-v1-reference",
+      "windows": 20,
+      "threshold": 6,
+      "minimumLocalContrast": 16,
+      "fullImageLowContrastCandidatesRetained": true
+    },
+    "grid154": {
+      "version": "vl-local-grid154-research-v1",
+      "windows": 154,
+      "threshold": 6,
+      "minimumLocalContrast": 16,
+      "fullImageLowContrastCandidatesRetained": true,
+      "evidence": "candidate only; fixed grid and minimum eligible Hamming witness, not arbitrary crop completeness"
+    },
+    "orb400": {
+      "version": "vl-orb-geometry-research-v1",
+      "features": 400,
+      "maxDistance": 48,
+      "ratio": 0.75,
+      "minimumInliers": 8,
+      "evidence": "candidate only; mutual binary descriptor matches with ratio filter, bounded RANSAC partial affine geometry, >=50% inliers, >=15% query span per axis and mapped corners within 10% of gallery bounds"
+    },
+    "orb800": {
+      "version": "vl-orb-geometry-research-v1",
+      "features": 800,
+      "maxDistance": 48,
+      "ratio": 0.75,
+      "minimumInliers": 8,
+      "evidence": "same geometric evidence contract as orb400, larger feature cap"
+    }
+  },
+  "acceptance": {
+    "minimumRecall": 0.6,
+    "minimumBandRecall": 0.4,
+    "minimumPrecision": 0.95,
+    "maximumFalsePositiveRate": 0.01,
+    "maximumCandidatesPerQuery": 2,
+    "maximumSeconds": 60,
+    "maximumRssBytes": 536870912
+  },
+  "selectionRule": "Among development-pass profiles choose highest original-crop recall; ties choose lower descriptor/hash work then lower measured wall time. Failed profiles stop without more parameter trials. Freeze selected implementation and parameters before acquiring new-source image content.",
+  "limitations": [
+    "These thresholds are exploration gates, not real-world accuracy guarantees.",
+    "No learned provider/API calls. No production MoonBit integration implied by a Python/OpenCV research pass.",
+    "No approximate global-image prefilter; every gallery/query pair is tested unless the explicit time cap produces an incomplete rejected run.",
+    "Source-file negatives, controlled crops, and one local timing run cannot establish natural-contamination accuracy or large-scale performance."
+  ],
+  "primaryReferences": [
+    "https://docs.opencv.org/4.13.0/d1/d89/tutorial_py_orb.html",
+    "https://docs.opencv.org/4.13.0/dc/dc3/tutorial_py_matcher.html",
+    "https://docs.opencv.org/4.13.0/d9/d0c/group__calib3d.html",
+    "https://pypi.org/project/opencv-python-headless/4.13.0.92/"
+  ],
+  "sourceNormalization": "Before crops, decode all sources with the product EXIF/sRGB path, then save opaque metadata-free RGB PNG. Reference fingerprints must match the actual Core on every generated image."
+}

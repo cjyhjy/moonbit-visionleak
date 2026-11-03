@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "startedAt": "2026-11-03T19:16:51.646925+00:00",
+  "candidateSourceSha256": "6663b5eb585725acf4dcbe9dbf03460df5221d02eb19afd23f1a9c753a8f6e7c",
+  "candidateArtifactSha256": "65fa94357c70b76ccb4e62f4dc88ace45cb719783edc3ca9de5fb80d8305e6d4",
+  "sourceChange": "Only core/mih.mbt; formatter adds one trailing comma to the predeclared candidate file.",
+  "checks": [
+    {
+      "id": "moon-js",
+      "status": "passed",
+      "exitCode": 0,
+      "log": "moon-js.log"
+    },
+    {
+      "id": "moon-wasm-gc",
+      "status": "passed",
+      "exitCode": 0,
+      "log": "moon-wasm-gc.log"
+    },
+    {
+      "id": "moon-native",
+      "status": "passed",
+      "exitCode": 0,
+      "log": "moon-native.log"
+    },
+    {
+      "id": "node",
+      "status": "passed",
+      "exitCode": 0,
+      "log": "node.log"
+    }
+  ],
+  "finishedAt": "2026-11-03T19:17:00.539397+00:00"
+}

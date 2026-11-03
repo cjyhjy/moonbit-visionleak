@@ -1,0 +1,21 @@
+{
+  "scope": "Core fingerprint inputs only; no decoder or feature extraction timing. Photos are already-known v3.",
+  "artifactSha256": "ad05cc71d2d8ef8620b7fe7695b5cd7b38c669c02e8b0a7afd6e943acef3b701",
+  "inputs": [
+    {
+      "name": "sparse",
+      "images": 1600,
+      "sha256": "01eda378a81a7beda3579f695153480159afb4c9bc086315553b4837702011ec"
+    },
+    {
+      "name": "repeated-local",
+      "images": 400,
+      "sha256": "e9ab899b49a35ff90272a942c5c50aaae86c6f39edabe3a200f7ae160dc250c3"
+    },
+    {
+      "name": "known-photos",
+      "images": 108,
+      "sha256": "eac8edb4a09ac4c35d5814e3e39f6839850bd9d09c04ba455204500bcf6cb324"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "173322491",
+  "title": "File:The Grand Canal, Venice 2016.jpg",
+  "scene": "Venice canal",
+  "author": "Mustang Joe",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:The_Grand_Canal,_Venice_2016.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/The_Grand_Canal%2C_Venice_2016.jpg/960px-The_Grand_Canal%2C_Venice_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/38/The_Grand_Canal%2C_Venice_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "f3fde01819de12a9f4b4ab4f16f58eb34f481ef4",
+  "width": 6016,
+  "height": 4016,
+  "downloadSha256": "c9081524b681750d66e64bc792735adf4f9fb4cd725d0f1aff9740ced2774796",
+  "sha256": "af584fa30b7e9badc7b423f840193077b8f4da6dc37eeb3a42e0c92e228a4b3c",
+  "storedFile": "research/followup-quality/holdout/originals/173322491.png",
+  "storedWidth": 384,
+  "storedHeight": 256,
+  "modification": "EXIF transpose, RGB, longest edge <=384 with Pillow LANCZOS, PNG storage; downstream preparation applies product sRGB normalization to every source before crops."
+}

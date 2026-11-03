@@ -1,0 +1,20 @@
+{
+  "id": "197959608",
+  "title": "File:Vierwies wind farm, seen from a hot air balloon, Zele, 2026.jpg",
+  "scene": "wind turbine",
+  "author": "DimiTalen",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Vierwies_wind_farm,_seen_from_a_hot_air_balloon,_Zele,_2026.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Vierwies_wind_farm%2C_seen_from_a_hot_air_balloon%2C_Zele%2C_2026.jpg/960px-Vierwies_wind_farm%2C_seen_from_a_hot_air_balloon%2C_Zele%2C_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Vierwies_wind_farm%2C_seen_from_a_hot_air_balloon%2C_Zele%2C_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "364cd398fa3f4325bb78df298b65ab6719576b9e",
+  "width": 2662,
+  "height": 3992,
+  "downloadSha256": "eb0602a75b0dbe0689656bb40240bf1096bf34619c643f318fed1fa9ed848e39",
+  "sha256": "69f937005157c61c928022b87309a5c36c6e3fcb8a9d50dd1fff9a6597e9b3fe",
+  "storedFile": "research/followup-quality/holdout/originals/197959608.png",
+  "storedWidth": 256,
+  "storedHeight": 384,
+  "modification": "EXIF transpose, RGB, longest edge <=384 with Pillow LANCZOS, PNG storage; downstream preparation applies product sRGB normalization to every source before crops."
+}

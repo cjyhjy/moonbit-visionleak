@@ -1,0 +1,1 @@
+The new registry smoke harness used obsolete Result-style unwrap on the pinned compiler Json parser. Compilation failed before any runtime assertion. Corrected only the harness; published package unchanged.

@@ -16,6 +16,8 @@ node tools/server.mjs --report output/example/report.json --port 4173
 
 **0.7.0：确定性优先的分阶段审计、CSV 清单与指纹缓存。** [改进与迁移](docs/changes-0.7.0.md) · [工程验收](reports/followup-0.7.0/README.md)。实际公开发布状态以 [发布记录](reports/followup-0.7.0/publication/) 为准。
 
+[v0.7.0 已发布](https://github.com/cjyhjy/moonbit-visionleak/releases/tag/v0.7.0)，Mooncakes 为 `cjyhjy/visionleak@0.7.0`；实际下载和干净导入已校验。
+
 已发布 0.6.0 的完整变更见 [版本说明](docs/changes-0.6.0.md) 和 [CHANGELOG](CHANGELOG.md)。发布与验收状态以 [发布记录](reports/plan-0.6.0/publication/README.md) 为准；Mooncakes 模块为 `cjyhjy/visionleak`。
 
 下游集成可用 `node tools/cli.mjs capabilities` 查询实际版本、参数预算和复验范围；升级依赖时固定提交与产物摘要。
@@ -71,3 +73,5 @@ npm run verify:ci
 [CLI 手册](docs/cli.md) · [API](docs/api.md) · [架构](docs/architecture.md) · [复核教程](docs/demo.md) · [复现](docs/reproducibility.md) · [来源和 AI 辅助](docs/development.md) · [MIT 许可证](LICENSE) · [第三方许可](THIRD_PARTY.md)
 
 0.6.0 索引、内存与复核改进：[实现、验证与性能边界](docs/optimization.md)。
+
+2026-11-03 后续研究：[裁切质量](reports/followup-quality/README.md) · [检索效率](reports/followup-retrieval/README.md) · [逐项任务状态](docs/followup-2026-11-03.md)。ORB 及代次标记均为独立候选，未纳入 0.7.0；自然污染与真人复核仍未验证。

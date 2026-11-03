@@ -1,0 +1,363 @@
+{
+  "status": "passed",
+  "scope": "Instrumented inclusive timings identify hotspots; instrumentation overhead makes these unsuitable as speedup evidence. Probes/postings/ancestor marks count successful index budget operations; member repeats are seen-candidate skips.",
+  "runs": [
+    {
+      "name": "sparse",
+      "mode": "profile",
+      "node": "v26.7.0",
+      "platform": "darwin",
+      "arch": "arm64",
+      "inputSha256": "42df8520e473a483f878df608fba3e83b0a76c672cc571b23a466d9890898b9b",
+      "moduleSha256": "dd314c8e8609ba55734afcc0361751cc94b60558551c547073be41833a39ee0e",
+      "wallMs": 689.763416,
+      "peakRssBytes": 190840832,
+      "resultSha256": "25c6af4eeeb7860cf59b5d4eb37d0c8bf79d40d69b58f9624f8afea751cba56b",
+      "complete": false,
+      "phases": {
+        "deterministic": {
+          "enabled": true,
+          "complete": true,
+          "status": "complete",
+          "inputImages": 1600,
+          "processedImages": 1600,
+          "comparisons": 0,
+          "maxComparisons": 1000000,
+          "distanceEvaluations": 0,
+          "pairChecks": 0,
+          "indexOperations": 0,
+          "indexOperationLimit": 16000000,
+          "emittedPairs": 0,
+          "reason": ""
+        },
+        "perceptual": {
+          "enabled": true,
+          "complete": true,
+          "status": "complete",
+          "inputImages": 1600,
+          "processedImages": 1600,
+          "comparisons": 13497,
+          "maxComparisons": 1000000,
+          "distanceEvaluations": 13497,
+          "pairChecks": 0,
+          "indexOperations": 106188,
+          "indexOperationLimit": 16000000,
+          "emittedPairs": 0,
+          "reason": ""
+        },
+        "local": {
+          "enabled": true,
+          "complete": false,
+          "status": "incomplete",
+          "inputImages": 1600,
+          "processedImages": 1363,
+          "comparisons": 1000000,
+          "maxComparisons": 1000000,
+          "distanceEvaluations": 999998,
+          "pairChecks": 2,
+          "indexOperations": 3779581,
+          "indexOperationLimit": 16000000,
+          "emittedPairs": 2,
+          "reason": "ComparisonBudget"
+        }
+      },
+      "stats": {
+        "inputImages": 1600,
+        "processedImages": 1363,
+        "comparisons": 1013497,
+        "distanceEvaluations": 1013495,
+        "pairChecks": 2,
+        "emittedPairs": 2,
+        "indexNodes": 1600,
+        "reason": "ComparisonBudget",
+        "indexOperations": 3885769,
+        "indexOperationLimit": 32000000,
+        "localComparisons": 1000000,
+        "localIndexNodes": 27260
+      },
+      "pairs": 2,
+      "profile": {
+        "probes": 1945412,
+        "postings": 387574,
+        "ancestorMarks": 1552783,
+        "memberVisits": 5,
+        "repeatedCandidates": 0,
+        "sameSplitMembers": 3,
+        "prunedTreeVisits": 3267902,
+        "functions": {
+          "global:mihPaths": {
+            "calls": 1600,
+            "inclusiveMs": 3.7583820000003385
+          },
+          "global:mihInsert": {
+            "calls": 1600,
+            "inclusiveMs": 2.5066720000003073
+          },
+          "global:mihContains": {
+            "calls": 26162,
+            "inclusiveMs": 1.1961910000005673
+          },
+          "localQuery:localQuery": {
+            "calls": 1364,
+            "inclusiveMs": 600.5832600000003
+          },
+          "localQuery:mihPaths": {
+            "calls": 27277,
+            "inclusiveMs": 154.45397599999586
+          },
+          "localInsert:localInsert": {
+            "calls": 1363,
+            "inclusiveMs": 25.94402900000067
+          },
+          "localInsert:mihInsert": {
+            "calls": 27260,
+            "inclusiveMs": 11.972026000001208
+          },
+          "localQuery:mihContains": {
+            "calls": 4121653,
+            "inclusiveMs": 118.98897999996474
+          }
+        },
+        "context": "global"
+      }
+    },
+    {
+      "name": "repeated-local",
+      "mode": "profile",
+      "node": "v26.7.0",
+      "platform": "darwin",
+      "arch": "arm64",
+      "inputSha256": "b1879bf3cbf2e026e3f8492b09b4b52d7d1d7c3a7fb2166198ad7e054856689f",
+      "moduleSha256": "dd314c8e8609ba55734afcc0361751cc94b60558551c547073be41833a39ee0e",
+      "wallMs": 63.447292000000004,
+      "peakRssBytes": 105496576,
+      "resultSha256": "43e27c16ae65758a02646173825e9ecbd72bb5d4bb1b2eafb3586ab81f88a7da",
+      "complete": true,
+      "phases": {
+        "deterministic": {
+          "enabled": true,
+          "complete": true,
+          "status": "complete",
+          "inputImages": 400,
+          "processedImages": 400,
+          "comparisons": 0,
+          "maxComparisons": 1000000,
+          "distanceEvaluations": 0,
+          "pairChecks": 0,
+          "indexOperations": 0,
+          "indexOperationLimit": 16000000,
+          "emittedPairs": 0,
+          "reason": ""
+        },
+        "perceptual": {
+          "enabled": true,
+          "complete": true,
+          "status": "complete",
+          "inputImages": 400,
+          "processedImages": 400,
+          "comparisons": 5917,
+          "maxComparisons": 1000000,
+          "distanceEvaluations": 5917,
+          "pairChecks": 0,
+          "indexOperations": 18828,
+          "indexOperationLimit": 16000000,
+          "emittedPairs": 0,
+          "reason": ""
+        },
+        "local": {
+          "enabled": true,
+          "complete": true,
+          "status": "complete",
+          "inputImages": 400,
+          "processedImages": 400,
+          "comparisons": 73093,
+          "maxComparisons": 1000000,
+          "distanceEvaluations": 69929,
+          "pairChecks": 3164,
+          "indexOperations": 607215,
+          "indexOperationLimit": 16000000,
+          "emittedPairs": 3164,
+          "reason": ""
+        }
+      },
+      "stats": {
+        "inputImages": 400,
+        "processedImages": 400,
+        "comparisons": 79010,
+        "distanceEvaluations": 75846,
+        "pairChecks": 3164,
+        "emittedPairs": 3164,
+        "indexNodes": 400,
+        "reason": "",
+        "indexOperations": 626043,
+        "indexOperationLimit": 32000000,
+        "localComparisons": 73093,
+        "localIndexNodes": 512
+      },
+      "pairs": 3164,
+      "profile": {
+        "probes": 552976,
+        "postings": 33862,
+        "ancestorMarks": 39205,
+        "memberVisits": 58588,
+        "repeatedCandidates": 27828,
+        "sameSplitMembers": 27596,
+        "prunedTreeVisits": 146959,
+        "functions": {
+          "global:mihPaths": {
+            "calls": 400,
+            "inclusiveMs": 1.0329570000000672
+          },
+          "global:mihInsert": {
+            "calls": 400,
+            "inclusiveMs": 0.5318230000000241
+          },
+          "global:mihContains": {
+            "calls": 6046,
+            "inclusiveMs": 0.5898020000001338
+          },
+          "localQuery:localQuery": {
+            "calls": 400,
+            "inclusiveMs": 32.75341999999992
+          },
+          "localQuery:mihPaths": {
+            "calls": 8000,
+            "inclusiveMs": 9.958598999999303
+          },
+          "localInsert:localInsert": {
+            "calls": 400,
+            "inclusiveMs": 1.3452340000000618
+          },
+          "localInsert:mihInsert": {
+            "calls": 512,
+            "inclusiveMs": 0.2270640000000057
+          },
+          "localQuery:mihContains": {
+            "calls": 185702,
+            "inclusiveMs": 5.884743000001762
+          }
+        },
+        "context": "global"
+      }
+    },
+    {
+      "name": "known-photos",
+      "mode": "profile",
+      "node": "v26.7.0",
+      "platform": "darwin",
+      "arch": "arm64",
+      "inputSha256": "c81de08850e966b24d985ace7a290c474804ae1b4347db2aa30706ab9c1c5424",
+      "moduleSha256": "dd314c8e8609ba55734afcc0361751cc94b60558551c547073be41833a39ee0e",
+      "wallMs": 32.305707999999996,
+      "peakRssBytes": 78331904,
+      "resultSha256": "e91b058f59c358381d70908a2c0f66ef7a0a93f5e7c8137209d0cc8738714be8",
+      "complete": true,
+      "phases": {
+        "deterministic": {
+          "enabled": true,
+          "complete": true,
+          "status": "complete",
+          "inputImages": 108,
+          "processedImages": 108,
+          "comparisons": 36,
+          "maxComparisons": 1000000,
+          "distanceEvaluations": 0,
+          "pairChecks": 36,
+          "indexOperations": 0,
+          "indexOperationLimit": 16000000,
+          "emittedPairs": 36,
+          "reason": ""
+        },
+        "perceptual": {
+          "enabled": true,
+          "complete": true,
+          "status": "complete",
+          "inputImages": 108,
+          "processedImages": 108,
+          "comparisons": 1900,
+          "maxComparisons": 1000000,
+          "distanceEvaluations": 1804,
+          "pairChecks": 96,
+          "indexOperations": 0,
+          "indexOperationLimit": 16000000,
+          "emittedPairs": 96,
+          "reason": ""
+        },
+        "local": {
+          "enabled": true,
+          "complete": true,
+          "status": "complete",
+          "inputImages": 108,
+          "processedImages": 108,
+          "comparisons": 36030,
+          "maxComparisons": 1000000,
+          "distanceEvaluations": 36003,
+          "pairChecks": 27,
+          "indexOperations": 184992,
+          "indexOperationLimit": 16000000,
+          "emittedPairs": 27,
+          "reason": ""
+        }
+      },
+      "stats": {
+        "inputImages": 108,
+        "processedImages": 108,
+        "comparisons": 37966,
+        "distanceEvaluations": 37807,
+        "pairChecks": 159,
+        "emittedPairs": 159,
+        "indexNodes": 70,
+        "reason": "",
+        "indexOperations": 184992,
+        "indexOperationLimit": 32000000,
+        "localComparisons": 36030,
+        "localIndexNodes": 1288
+      },
+      "pairs": 159,
+      "profile": {
+        "probes": 136000,
+        "postings": 17530,
+        "ancestorMarks": 31462,
+        "memberVisits": 3669,
+        "repeatedCandidates": 2651,
+        "sameSplitMembers": 991,
+        "prunedTreeVisits": 62859,
+        "functions": {
+          "global:mihPaths": {
+            "calls": 108,
+            "inclusiveMs": 0.04428899999999203
+          },
+          "global:mihInsert": {
+            "calls": 70,
+            "inclusiveMs": 0.2622109999999971
+          },
+          "global:mihContains": {
+            "calls": 1594,
+            "inclusiveMs": 0.08936799999997547
+          },
+          "localQuery:localQuery": {
+            "calls": 108,
+            "inclusiveMs": 18.718953000000003
+          },
+          "localQuery:mihPaths": {
+            "calls": 2160,
+            "inclusiveMs": 5.599843000000035
+          },
+          "localInsert:localInsert": {
+            "calls": 108,
+            "inclusiveMs": 1.5090369999999709
+          },
+          "localInsert:mihInsert": {
+            "calls": 1288,
+            "inclusiveMs": 0.7769130000000466
+          },
+          "localQuery:mihContains": {
+            "calls": 91349,
+            "inclusiveMs": 2.967906000000415
+          }
+        },
+        "context": "global"
+      }
+    }
+  ]
+}

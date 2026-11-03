@@ -1,0 +1,20 @@
+{
+  "id": "138877124",
+  "title": "File:Sunflower field at sunset.jpg",
+  "scene": "sunflower field",
+  "author": "Summer Stock",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Sunflower_field_at_sunset.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Sunflower_field_at_sunset.jpg/960px-Sunflower_field_at_sunset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/Sunflower_field_at_sunset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "f0358fce0bfe3195f344992dcee53ad6eea1165d",
+  "width": 3000,
+  "height": 2000,
+  "downloadSha256": "ff8026d62e31c3314436bb99271b2750474da1fbf62ab1ee64684810b74478e7",
+  "sha256": "dfa6424a85d8a313f6476bfab1805b0b363df2f23e316e276f297f41e045c1df",
+  "storedFile": "research/followup-quality/holdout/originals/138877124.png",
+  "storedWidth": 384,
+  "storedHeight": 256,
+  "modification": "EXIF transpose, RGB, longest edge <=384 with Pillow LANCZOS, PNG storage; downstream preparation applies product sRGB normalization to every source before crops."
+}

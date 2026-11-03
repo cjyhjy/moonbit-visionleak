@@ -1,0 +1,2745 @@
+{
+  "sourceManifestSha256": "3fff478d92e80fb3751635cef0c0c2614695af2cdbfa2c96aa7ef9ba5c6fee44",
+  "sourceManifest": "/Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak/research/followup-quality/development-sources.json",
+  "protocolSha256": "cfa4f86c3ae2bd60f511144660a2f165aa421ff1385ec98dd498da5e66ba2d18",
+  "sourceFiles": 24,
+  "records": [
+    {
+      "id": "train/89995572-original.png",
+      "sourceId": "89995572",
+      "scene": "Golden Gate Bridge",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 268,
+      "sha256": "68edbd524433acceaa4e61a3899d7a27e8a60cea65591eb6e299e09158dca940"
+    },
+    {
+      "id": "test/89995572-small-png.png",
+      "sourceId": "89995572",
+      "scene": "Golden Gate Bridge",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        156,
+        117,
+        321,
+        240
+      ],
+      "width": 165,
+      "height": 123,
+      "sha256": "489432aded30bde984af108bbde6528c6b64f60d6dd979dd9c7b63779646af51"
+    },
+    {
+      "id": "test/89995572-small-resize-jpeg75.png",
+      "sourceId": "89995572",
+      "scene": "Golden Gate Bridge",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        61,
+        55,
+        272,
+        194
+      ],
+      "width": 384,
+      "height": 253,
+      "sha256": "47f9fc0f877c2ff8d3bbaf5b122eb4d64a59c9887c012164b6c0baae3ffdf3b7"
+    },
+    {
+      "id": "test/89995572-medium-png.png",
+      "sourceId": "89995572",
+      "scene": "Golden Gate Bridge",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        6,
+        52,
+        278,
+        263
+      ],
+      "width": 272,
+      "height": 211,
+      "sha256": "cbc924ba2a1ecd28f2236155fa1cc4b72da7c38eb8dc12aa3f204b6dbd2cc520"
+    },
+    {
+      "id": "test/89995572-medium-resize-jpeg75.png",
+      "sourceId": "89995572",
+      "scene": "Golden Gate Bridge",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        94,
+        84,
+        343,
+        266
+      ],
+      "width": 384,
+      "height": 281,
+      "sha256": "12f9e21d8f32b4d255f0852264536eeaef169070aa1717daa3d12f3de7993405"
+    },
+    {
+      "id": "test/89995572-large-png.png",
+      "sourceId": "89995572",
+      "scene": "Golden Gate Bridge",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        10,
+        39,
+        317,
+        266
+      ],
+      "width": 307,
+      "height": 227,
+      "sha256": "3021d26f1610ad9f9c8482d59122b9617533958b61e35d16e1025dc791507430"
+    },
+    {
+      "id": "test/89995572-large-resize-jpeg75.png",
+      "sourceId": "89995572",
+      "scene": "Golden Gate Bridge",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        4,
+        12,
+        361,
+        258
+      ],
+      "width": 384,
+      "height": 265,
+      "sha256": "1f8a4fae039dcd347c41716059d86f62212c0794c5512375045067f4c62afbc5"
+    },
+    {
+      "id": "train/145082531-original.png",
+      "sourceId": "145082531",
+      "scene": "Golden Gate Bridge",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 288,
+      "sha256": "36ee93194276d29dc78cb547dfc7c0043adb227247d1b0ec5d0a4f8498cb22ef"
+    },
+    {
+      "id": "test/145082531-small-png.png",
+      "sourceId": "145082531",
+      "scene": "Golden Gate Bridge",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        155,
+        77,
+        350,
+        226
+      ],
+      "width": 195,
+      "height": 149,
+      "sha256": "560ddcc9bd0f37071fc8c0c1686da9baf9e05384b4807ea14503e042aad7dfb6"
+    },
+    {
+      "id": "test/145082531-small-resize-jpeg75.png",
+      "sourceId": "145082531",
+      "scene": "Golden Gate Bridge",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        128,
+        22,
+        343,
+        163
+      ],
+      "width": 384,
+      "height": 252,
+      "sha256": "b0fb7dbcb7f1388477e933a7e712647abe8c5e26051a8f9f8e86743c8c2ff553"
+    },
+    {
+      "id": "test/145082531-medium-png.png",
+      "sourceId": "145082531",
+      "scene": "Golden Gate Bridge",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        6,
+        50,
+        270,
+        228
+      ],
+      "width": 264,
+      "height": 178,
+      "sha256": "91a156c37ef2c86809452c9b9cb4273c66f26769d64c64ba79fa625ae98bc51c"
+    },
+    {
+      "id": "test/145082531-medium-resize-jpeg75.png",
+      "sourceId": "145082531",
+      "scene": "Golden Gate Bridge",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        77,
+        51,
+        345,
+        272
+      ],
+      "width": 384,
+      "height": 317,
+      "sha256": "51c0e3c671c47e3af6649fda8387ad1b72033d6c99b9ba0e5798f2134a73c8f4"
+    },
+    {
+      "id": "test/145082531-large-png.png",
+      "sourceId": "145082531",
+      "scene": "Golden Gate Bridge",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        54,
+        5,
+        384,
+        258
+      ],
+      "width": 330,
+      "height": 253,
+      "sha256": "8133f37a3a30cf49b127a97d1a19b59473fab73e9db6870c008cf8684622cd14"
+    },
+    {
+      "id": "test/145082531-large-resize-jpeg75.png",
+      "sourceId": "145082531",
+      "scene": "Golden Gate Bridge",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        21,
+        16,
+        381,
+        283
+      ],
+      "width": 384,
+      "height": 285,
+      "sha256": "bfe85bf4d8a4e6e0fec1bc4497bb610f5701f6f2400187edee8314b2cee2ff3a"
+    },
+    {
+      "id": "train/17093098-original.png",
+      "sourceId": "17093098",
+      "scene": "Eiffel Tower",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 263,
+      "sha256": "abd098d3e4e631da2da99f8bc30d201345509dec9dd56709c5dd93cc4bd6c0c7"
+    },
+    {
+      "id": "test/17093098-small-png.png",
+      "sourceId": "17093098",
+      "scene": "Eiffel Tower",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        155,
+        69,
+        350,
+        224
+      ],
+      "width": 195,
+      "height": 155,
+      "sha256": "6896a2d95b59703ac47cf00b96f1b135a41e1ef878663c5e630c362e499fe505"
+    },
+    {
+      "id": "test/17093098-small-resize-jpeg75.png",
+      "sourceId": "17093098",
+      "scene": "Eiffel Tower",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        196,
+        73,
+        372,
+        191
+      ],
+      "width": 384,
+      "height": 257,
+      "sha256": "959b939527709f295bed4d8db3e4aefa18febe8f5418c995e29b62bd84df2d7e"
+    },
+    {
+      "id": "test/17093098-medium-png.png",
+      "sourceId": "17093098",
+      "scene": "Eiffel Tower",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        28,
+        4,
+        323,
+        172
+      ],
+      "width": 295,
+      "height": 168,
+      "sha256": "3c11ab563d1548c2c9602652c33d2bec81c989aed07ccbb4fb52b9baac8b12d9"
+    },
+    {
+      "id": "test/17093098-medium-resize-jpeg75.png",
+      "sourceId": "17093098",
+      "scene": "Eiffel Tower",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        99,
+        41,
+        363,
+        240
+      ],
+      "width": 384,
+      "height": 289,
+      "sha256": "3b859cf39468511b94275fd13a8ab505a36f974794b105a05ad44603d1180ffd"
+    },
+    {
+      "id": "test/17093098-large-png.png",
+      "sourceId": "17093098",
+      "scene": "Eiffel Tower",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        38,
+        6,
+        383,
+        242
+      ],
+      "width": 345,
+      "height": 236,
+      "sha256": "2a1b38b701279f4cc1166b7016778880d96cbe33e1bb667919fbd0b47418c9f0"
+    },
+    {
+      "id": "test/17093098-large-resize-jpeg75.png",
+      "sourceId": "17093098",
+      "scene": "Eiffel Tower",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        13,
+        12,
+        373,
+        259
+      ],
+      "width": 384,
+      "height": 263,
+      "sha256": "017071328e52a8718d0737ac04783a77a8564d2d258cd409c7c00ec3772b34c4"
+    },
+    {
+      "id": "train/17192579-original.png",
+      "sourceId": "17192579",
+      "scene": "Eiffel Tower",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 256,
+      "sha256": "188195ef058e4f988fa6ea1c12d9b0f24c1488dea9033afce6de30aa6d202b63"
+    },
+    {
+      "id": "test/17192579-small-png.png",
+      "sourceId": "17192579",
+      "scene": "Eiffel Tower",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        122,
+        59,
+        352,
+        174
+      ],
+      "width": 230,
+      "height": 115,
+      "sha256": "a28c2a30668e8a6f501d2223aa60c53946a532c5a4abfac9aa9d173837f9180a"
+    },
+    {
+      "id": "test/17192579-small-resize-jpeg75.png",
+      "sourceId": "17192579",
+      "scene": "Eiffel Tower",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        176,
+        14,
+        383,
+        134
+      ],
+      "width": 384,
+      "height": 223,
+      "sha256": "8ba6980ba702bc8dc62b38829ba09cef6a6605d18d8dded2b6e6d772bb69c7d9"
+    },
+    {
+      "id": "test/17192579-medium-png.png",
+      "sourceId": "17192579",
+      "scene": "Eiffel Tower",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        61,
+        16,
+        299,
+        197
+      ],
+      "width": 238,
+      "height": 181,
+      "sha256": "bc415511066181b14e33cba3069e7ccf83d114f138bae0f071039f2a57ce748e"
+    },
+    {
+      "id": "test/17192579-medium-resize-jpeg75.png",
+      "sourceId": "17192579",
+      "scene": "Eiffel Tower",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        62,
+        61,
+        311,
+        250
+      ],
+      "width": 384,
+      "height": 291,
+      "sha256": "c0af0a9662673353950b900df86a711eeca325ed6f04c7f2fbe0b8bc42e7e3f8"
+    },
+    {
+      "id": "test/17192579-large-png.png",
+      "sourceId": "17192579",
+      "scene": "Eiffel Tower",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        9,
+        16,
+        366,
+        256
+      ],
+      "width": 357,
+      "height": 240,
+      "sha256": "f05c86e6bfa013114c95c04305c74e795422e1502168fbe0e6be7fabf313371e"
+    },
+    {
+      "id": "test/17192579-large-resize-jpeg75.png",
+      "sourceId": "17192579",
+      "scene": "Eiffel Tower",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        46,
+        14,
+        380,
+        241
+      ],
+      "width": 384,
+      "height": 261,
+      "sha256": "c0ed30c949fc5dd1fe46bb8d5b25abbccc9a7867b1af5150d4c097accf663b03"
+    },
+    {
+      "id": "train/29757973-original.png",
+      "sourceId": "29757973",
+      "scene": "Colosseum Rome",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 255,
+      "height": 384,
+      "sha256": "004f7bf8f699f7b86c9e7f68f5c862c4d4923c6314a1c1e2394cc627b3d54e9e"
+    },
+    {
+      "id": "test/29757973-small-png.png",
+      "sourceId": "29757973",
+      "scene": "Colosseum Rome",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        98,
+        73,
+        235,
+        280
+      ],
+      "width": 137,
+      "height": 207,
+      "sha256": "2f09d78ab2f9090624d7747e58c8fe7bfbd8b0ea74dd336f5cb29c506ac4fc03"
+    },
+    {
+      "id": "test/29757973-small-resize-jpeg75.png",
+      "sourceId": "29757973",
+      "scene": "Colosseum Rome",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        92,
+        99,
+        216,
+        287
+      ],
+      "width": 253,
+      "height": 384,
+      "sha256": "f55db0890b41799aecf1e38a44ca0945e4ef549fd32e6ecf0f6693e85a5eefcb"
+    },
+    {
+      "id": "test/29757973-medium-png.png",
+      "sourceId": "29757973",
+      "scene": "Colosseum Rome",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        29,
+        48,
+        212,
+        351
+      ],
+      "width": 183,
+      "height": 303,
+      "sha256": "947e128846ac0d05828e83616ac68a04a1d4108fe2dc006749f96733881b7c27"
+    },
+    {
+      "id": "test/29757973-medium-resize-jpeg75.png",
+      "sourceId": "29757973",
+      "scene": "Colosseum Rome",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        1,
+        16,
+        197,
+        277
+      ],
+      "width": 288,
+      "height": 384,
+      "sha256": "6fda370aed859eb026a78c14135d64f7fe15667b1ddeb9a7c77a95e052837bc5"
+    },
+    {
+      "id": "test/29757973-large-png.png",
+      "sourceId": "29757973",
+      "scene": "Colosseum Rome",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        22,
+        10,
+        233,
+        367
+      ],
+      "width": 211,
+      "height": 357,
+      "sha256": "712aa8ace2083a0d2fcd1a234bc9f3d8d63c20cff51d657f2c3294b013e6fd25"
+    },
+    {
+      "id": "test/29757973-large-resize-jpeg75.png",
+      "sourceId": "29757973",
+      "scene": "Colosseum Rome",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        10,
+        30,
+        234,
+        367
+      ],
+      "width": 255,
+      "height": 384,
+      "sha256": "71121be52d7dbb579d2f6787d17e570d43ef2af7fbfb1496807c3724f192c8e0"
+    },
+    {
+      "id": "train/145489226-original.png",
+      "sourceId": "145489226",
+      "scene": "Colosseum Rome",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 300,
+      "sha256": "9ca8ae034f7ee174e65112a06b8af4c8e37c0d1e76a719c8b69a8fc4c508a3e5"
+    },
+    {
+      "id": "test/145489226-small-png.png",
+      "sourceId": "145489226",
+      "scene": "Colosseum Rome",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        9,
+        122,
+        197,
+        257
+      ],
+      "width": 188,
+      "height": 135,
+      "sha256": "da2a1c5f2d4bc083155872d885a1e4a5202d049d25821bee797df0643ff85f11"
+    },
+    {
+      "id": "test/145489226-small-resize-jpeg75.png",
+      "sourceId": "145489226",
+      "scene": "Colosseum Rome",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        31,
+        9,
+        253,
+        162
+      ],
+      "width": 384,
+      "height": 265,
+      "sha256": "866ef5e53df9482df477dd9c1be72ac2b2a66126e77841f6382d557b57c0a787"
+    },
+    {
+      "id": "test/145489226-medium-png.png",
+      "sourceId": "145489226",
+      "scene": "Colosseum Rome",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        66,
+        34,
+        346,
+        253
+      ],
+      "width": 280,
+      "height": 219,
+      "sha256": "d71e027529106a73b6ee0c4ab8bc2c12593dccc1b430d90c24de9a771f9ca97c"
+    },
+    {
+      "id": "test/145489226-medium-resize-jpeg75.png",
+      "sourceId": "145489226",
+      "scene": "Colosseum Rome",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        89,
+        13,
+        334,
+        250
+      ],
+      "width": 384,
+      "height": 371,
+      "sha256": "1666ee876b782bb62f4d673032743bd0704f237fe4025326548565c16aa96440"
+    },
+    {
+      "id": "test/145489226-large-png.png",
+      "sourceId": "145489226",
+      "scene": "Colosseum Rome",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        29,
+        30,
+        370,
+        300
+      ],
+      "width": 341,
+      "height": 270,
+      "sha256": "4a553ba8fa096827933f537e13830901a0d6b72845f0c9d62e902d3ac36f4f67"
+    },
+    {
+      "id": "test/145489226-large-resize-jpeg75.png",
+      "sourceId": "145489226",
+      "scene": "Colosseum Rome",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        41,
+        2,
+        367,
+        269
+      ],
+      "width": 384,
+      "height": 315,
+      "sha256": "f19ae21cb22a0fbd50d721882cf2b7c146c16a2f4555be7df022b2816f2fdb47"
+    },
+    {
+      "id": "train/153492197-original.png",
+      "sourceId": "153492197",
+      "scene": "Sydney Opera House",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 288,
+      "sha256": "fb590c72f0dc223a224293d6cc178245f30096416c533eae3a127c58d496c618"
+    },
+    {
+      "id": "test/153492197-small-png.png",
+      "sourceId": "153492197",
+      "scene": "Sydney Opera House",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        155,
+        83,
+        377,
+        255
+      ],
+      "width": 222,
+      "height": 172,
+      "sha256": "e32bb67b88bcc6ed0f4a40815b8bc8b61a3b71c2b67a6517d48ec7da310d7b3c"
+    },
+    {
+      "id": "test/153492197-small-resize-jpeg75.png",
+      "sourceId": "153492197",
+      "scene": "Sydney Opera House",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        98,
+        63,
+        324,
+        212
+      ],
+      "width": 384,
+      "height": 253,
+      "sha256": "973986913dab15defd23802a9b2f171363906baa726a4f6ee2e952dfd1fd6723"
+    },
+    {
+      "id": "test/153492197-medium-png.png",
+      "sourceId": "153492197",
+      "scene": "Sydney Opera House",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        112,
+        112,
+        384,
+        287
+      ],
+      "width": 272,
+      "height": 175,
+      "sha256": "72f00d3564ade5ab4b9eabb6e06b43162f59f8a7b1d8f55ff3dc5149ad9296d9"
+    },
+    {
+      "id": "test/153492197-medium-resize-jpeg75.png",
+      "sourceId": "153492197",
+      "scene": "Sydney Opera House",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        17,
+        54,
+        266,
+        278
+      ],
+      "width": 384,
+      "height": 345,
+      "sha256": "8c9a3e5c53ee3109ba93fda730f13968b272b0ed7ff7f6d81c611f6114d17449"
+    },
+    {
+      "id": "test/153492197-large-png.png",
+      "sourceId": "153492197",
+      "scene": "Sydney Opera House",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        54,
+        8,
+        365,
+        270
+      ],
+      "width": 311,
+      "height": 262,
+      "sha256": "5b5dfae6a9a212fa4870df563c3bb1d7f9addea8c811dbd5f8d0dbc4e31b205b"
+    },
+    {
+      "id": "test/153492197-large-resize-jpeg75.png",
+      "sourceId": "153492197",
+      "scene": "Sydney Opera House",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        44,
+        31,
+        381,
+        272
+      ],
+      "width": 384,
+      "height": 275,
+      "sha256": "73ddcf01239a525c6094d55f3f1f2f2793ad7ee865120c5bd98c5417c9a9d361"
+    },
+    {
+      "id": "train/153492198-original.png",
+      "sourceId": "153492198",
+      "scene": "Sydney Opera House",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 288,
+      "sha256": "71cec77356881ed2329e0e7963219d3ecf71090412616afa27645c0c325bf22b"
+    },
+    {
+      "id": "test/153492198-small-png.png",
+      "sourceId": "153492198",
+      "scene": "Sydney Opera House",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        127,
+        64,
+        326,
+        210
+      ],
+      "width": 199,
+      "height": 146,
+      "sha256": "180641d1cdb1da650e6000b29d8dd8051137f31c4ab689b26751c613fdb6a188"
+    },
+    {
+      "id": "test/153492198-small-resize-jpeg75.png",
+      "sourceId": "153492198",
+      "scene": "Sydney Opera House",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        21,
+        75,
+        174,
+        195
+      ],
+      "width": 384,
+      "height": 301,
+      "sha256": "7d53b350421f65c02bbf4fef3e45c53078225bb7b25938fc315acc5d901218d9"
+    },
+    {
+      "id": "test/153492198-medium-png.png",
+      "sourceId": "153492198",
+      "scene": "Sydney Opera House",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        104,
+        31,
+        384,
+        247
+      ],
+      "width": 280,
+      "height": 216,
+      "sha256": "ebc58e9e76488ebe50268a86b66b01aa8b00f6a9f834dc60c2b3f9943f651c7a"
+    },
+    {
+      "id": "test/153492198-medium-resize-jpeg75.png",
+      "sourceId": "153492198",
+      "scene": "Sydney Opera House",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        90,
+        6,
+        378,
+        227
+      ],
+      "width": 384,
+      "height": 295,
+      "sha256": "12e113542052863b67e4a5aae631b8169604f1c8242ec9224ca52ad2812c5c40"
+    },
+    {
+      "id": "test/153492198-large-png.png",
+      "sourceId": "153492198",
+      "scene": "Sydney Opera House",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        8,
+        56,
+        368,
+        286
+      ],
+      "width": 360,
+      "height": 230,
+      "sha256": "89fc1619199730c7306cf744a098d3ec71788c5a02a846c3cc663b997f7e5af4"
+    },
+    {
+      "id": "test/153492198-large-resize-jpeg75.png",
+      "sourceId": "153492198",
+      "scene": "Sydney Opera House",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        6,
+        1,
+        366,
+        240
+      ],
+      "width": 384,
+      "height": 255,
+      "sha256": "1a5e1c74db408147cbf517846688ba148d5c50d80d7823781b821417f6b6ea68"
+    },
+    {
+      "id": "train/164228977-original.png",
+      "sourceId": "164228977",
+      "scene": "Mount Fuji",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 256,
+      "sha256": "8462c576ba874c0cb024e709fe169c8282dc6a181a61ffe8ca76abc942ae93a1"
+    },
+    {
+      "id": "test/164228977-small-png.png",
+      "sourceId": "164228977",
+      "scene": "Mount Fuji",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        4,
+        47,
+        180,
+        190
+      ],
+      "width": 176,
+      "height": 143,
+      "sha256": "18fe6619f03b0f858fb40894f77e96b78da3caac3454d699d891a388d7f54492"
+    },
+    {
+      "id": "test/164228977-small-resize-jpeg75.png",
+      "sourceId": "164228977",
+      "scene": "Mount Fuji",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        82,
+        18,
+        297,
+        166
+      ],
+      "width": 384,
+      "height": 264,
+      "sha256": "1e9f685da009d251ca40a3cbc42e68489afdf5a399462599cecb3c10c5bf5a7a"
+    },
+    {
+      "id": "test/164228977-medium-png.png",
+      "sourceId": "164228977",
+      "scene": "Mount Fuji",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        71,
+        63,
+        335,
+        239
+      ],
+      "width": 264,
+      "height": 176,
+      "sha256": "99f78596c3ee6fe3c3bc0be6891e3fa777172b433a14ba67b2a0ee9e78b4f9bb"
+    },
+    {
+      "id": "test/164228977-medium-resize-jpeg75.png",
+      "sourceId": "164228977",
+      "scene": "Mount Fuji",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        86,
+        23,
+        358,
+        227
+      ],
+      "width": 384,
+      "height": 288,
+      "sha256": "1832be191f927460bc7916150c30ba158a45af0d5f76dd500ea5256013184e6a"
+    },
+    {
+      "id": "test/164228977-large-png.png",
+      "sourceId": "164228977",
+      "scene": "Mount Fuji",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        19,
+        21,
+        379,
+        241
+      ],
+      "width": 360,
+      "height": 220,
+      "sha256": "3d4a4f301d90103dfffec1afd12bb87e2bf095419d651265115105993357078a"
+    },
+    {
+      "id": "test/164228977-large-resize-jpeg75.png",
+      "sourceId": "164228977",
+      "scene": "Mount Fuji",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        73,
+        5,
+        384,
+        209
+      ],
+      "width": 384,
+      "height": 252,
+      "sha256": "7df754c13e56e4d45f8f07769dd1e3eec48afc8579a82415507162a112371199"
+    },
+    {
+      "id": "train/145260818-original.png",
+      "sourceId": "145260818",
+      "scene": "Mount Fuji",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 288,
+      "sha256": "69b1c9c9fbe5e3ce6763628922bca7d3eb8fd82295b450523a0c45fad275431a"
+    },
+    {
+      "id": "test/145260818-small-png.png",
+      "sourceId": "145260818",
+      "scene": "Mount Fuji",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        55,
+        12,
+        277,
+        164
+      ],
+      "width": 222,
+      "height": 152,
+      "sha256": "b0bdced5ef760e212fb371fcfdd9d1715c9e7086966c766eb144fb8d43b3d659"
+    },
+    {
+      "id": "test/145260818-small-resize-jpeg75.png",
+      "sourceId": "145260818",
+      "scene": "Mount Fuji",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        130,
+        55,
+        295,
+        199
+      ],
+      "width": 384,
+      "height": 335,
+      "sha256": "6a5e1808a756d9dae241a991219b5955b4c6cc05ffd3bd2d785ba40450c23d33"
+    },
+    {
+      "id": "test/145260818-medium-png.png",
+      "sourceId": "145260818",
+      "scene": "Mount Fuji",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        106,
+        47,
+        370,
+        265
+      ],
+      "width": 264,
+      "height": 218,
+      "sha256": "cbc56834a48efb9f71ea2e8a95996cc9885f1fcdcbe7aa542c0f8ca50f206f58"
+    },
+    {
+      "id": "test/145260818-medium-resize-jpeg75.png",
+      "sourceId": "145260818",
+      "scene": "Mount Fuji",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        14,
+        47,
+        294,
+        231
+      ],
+      "width": 384,
+      "height": 252,
+      "sha256": "9b30f6991db59bdb0ece790abaf0c6191d344d291cfd693f217a90e1cb35aca5"
+    },
+    {
+      "id": "test/145260818-large-png.png",
+      "sourceId": "145260818",
+      "scene": "Mount Fuji",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        22,
+        17,
+        344,
+        279
+      ],
+      "width": 322,
+      "height": 262,
+      "sha256": "37f458cd0e733ebe106af419ae6fc70e8ba508dc2cb76fc1e3d74a09405becda"
+    },
+    {
+      "id": "test/145260818-large-resize-jpeg75.png",
+      "sourceId": "145260818",
+      "scene": "Mount Fuji",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        44,
+        2,
+        362,
+        272
+      ],
+      "width": 384,
+      "height": 326,
+      "sha256": "1f84f8574f8ff32b9b641415329a9a7651e8342c5c523042b61db70354c20add"
+    },
+    {
+      "id": "train/149005856-original.png",
+      "sourceId": "149005856",
+      "scene": "Statue of Liberty",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 175,
+      "height": 384,
+      "sha256": "6627df80d2dfa346296f8da67bd20f2ae5dabc7043b303c64b25c18257ee36c6"
+    },
+    {
+      "id": "test/149005856-small-png.png",
+      "sourceId": "149005856",
+      "scene": "Statue of Liberty",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        33,
+        32,
+        134,
+        227
+      ],
+      "width": 101,
+      "height": 195,
+      "sha256": "6ab23f25383c630a19ce519ddb184fd3f5df6144ec9268788b360e5a7332b6e5"
+    },
+    {
+      "id": "test/149005856-small-resize-jpeg75.png",
+      "sourceId": "149005856",
+      "scene": "Statue of Liberty",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        48,
+        165,
+        147,
+        349
+      ],
+      "width": 207,
+      "height": 384,
+      "sha256": "69c5a52ccc614b0ec4a228bc469db92c2aca623046da9bc74c1fe32b3c012a6c"
+    },
+    {
+      "id": "test/149005856-medium-png.png",
+      "sourceId": "149005856",
+      "scene": "Statue of Liberty",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        15,
+        33,
+        135,
+        324
+      ],
+      "width": 120,
+      "height": 291,
+      "sha256": "c32fba51b036fa47a6a33c1acfd40a28c38f998f727385525b9c95c3ae2756a4"
+    },
+    {
+      "id": "test/149005856-medium-resize-jpeg75.png",
+      "sourceId": "149005856",
+      "scene": "Statue of Liberty",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        49,
+        1,
+        161,
+        308
+      ],
+      "width": 140,
+      "height": 384,
+      "sha256": "cbc1d125cdfcc5f488c1a2100651db6cd55b9a48e5a3ebb124e804c77b050806"
+    },
+    {
+      "id": "test/149005856-large-png.png",
+      "sourceId": "149005856",
+      "scene": "Statue of Liberty",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        20,
+        40,
+        170,
+        347
+      ],
+      "width": 150,
+      "height": 307,
+      "sha256": "3da507e17350fa113f8e1363c2925f4eaeb25b3965977e20461888148b01c761"
+    },
+    {
+      "id": "test/149005856-large-resize-jpeg75.png",
+      "sourceId": "149005856",
+      "scene": "Statue of Liberty",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        14,
+        36,
+        171,
+        347
+      ],
+      "width": 194,
+      "height": 384,
+      "sha256": "07bb1c22cb7339f4c3c0c1a739c365a0ce05771ba29d6a47d98d946f0ffda566"
+    },
+    {
+      "id": "train/117790284-original.png",
+      "sourceId": "117790284",
+      "scene": "Statue of Liberty",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 256,
+      "height": 384,
+      "sha256": "ada420635fd4993dd6719d79b5d2ff37df8962cbd3488495bc4bc1be1c56641a"
+    },
+    {
+      "id": "test/117790284-small-png.png",
+      "sourceId": "117790284",
+      "scene": "Statue of Liberty",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        84,
+        119,
+        224,
+        349
+      ],
+      "width": 140,
+      "height": 230,
+      "sha256": "66fda93635ae6dc436bf6cfe83d80f59007b4eec7ff34ddcc60c39c043704b28"
+    },
+    {
+      "id": "test/117790284-small-resize-jpeg75.png",
+      "sourceId": "117790284",
+      "scene": "Statue of Liberty",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        138,
+        154,
+        248,
+        342
+      ],
+      "width": 225,
+      "height": 384,
+      "sha256": "8b71c8cd3832e85ab3c583719ad6ef7393c92b24c9cf6cf04232e7d6e47c7716"
+    },
+    {
+      "id": "test/117790284-medium-png.png",
+      "sourceId": "117790284",
+      "scene": "Statue of Liberty",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        1,
+        59,
+        162,
+        366
+      ],
+      "width": 161,
+      "height": 307,
+      "sha256": "688687badc823618788876369db01bc5dd8740b09b1a5b15738fa59687b90e39"
+    },
+    {
+      "id": "test/117790284-medium-resize-jpeg75.png",
+      "sourceId": "117790284",
+      "scene": "Statue of Liberty",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        31,
+        77,
+        205,
+        353
+      ],
+      "width": 242,
+      "height": 384,
+      "sha256": "2fba5687f5565900d689e97a0c9e953b99d76e8bf6c4fc94342578e5ca8fe3c5"
+    },
+    {
+      "id": "test/117790284-large-png.png",
+      "sourceId": "117790284",
+      "scene": "Statue of Liberty",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        20,
+        15,
+        250,
+        352
+      ],
+      "width": 230,
+      "height": 337,
+      "sha256": "f0d82150e9db531aeeb24d9703b918c333537a60998b7b178df79265873be79c"
+    },
+    {
+      "id": "test/117790284-large-resize-jpeg75.png",
+      "sourceId": "117790284",
+      "scene": "Statue of Liberty",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        20,
+        33,
+        252,
+        367
+      ],
+      "width": 267,
+      "height": 384,
+      "sha256": "97953278a656e58cf0cd53b543b528d87b5f65635773df062ddd305ee9eb1671"
+    },
+    {
+      "id": "train/131972354-original.png",
+      "sourceId": "131972354",
+      "scene": "Tower Bridge London",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 288,
+      "sha256": "8fe1abca7b129e9851e8f5d805b84c489d21ace380668e0493e243ae05cf8e17"
+    },
+    {
+      "id": "test/131972354-small-png.png",
+      "sourceId": "131972354",
+      "scene": "Tower Bridge London",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        79,
+        23,
+        247,
+        181
+      ],
+      "width": 168,
+      "height": 158,
+      "sha256": "40bc44133527325b2d51d101829dcaeca867788241fe5e98569551180a9e709c"
+    },
+    {
+      "id": "test/131972354-small-resize-jpeg75.png",
+      "sourceId": "131972354",
+      "scene": "Tower Bridge London",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        81,
+        88,
+        311,
+        220
+      ],
+      "width": 384,
+      "height": 220,
+      "sha256": "821730f975e361ba617e64b058a0957cfaf3cf5f984c7098600c0acd43fd0a12"
+    },
+    {
+      "id": "test/131972354-medium-png.png",
+      "sourceId": "131972354",
+      "scene": "Tower Bridge London",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        39,
+        19,
+        280,
+        237
+      ],
+      "width": 241,
+      "height": 218,
+      "sha256": "931c86366f28dc57818becfdf2c065ab268836f6ed0a83143e95501c94ebba02"
+    },
+    {
+      "id": "test/131972354-medium-resize-jpeg75.png",
+      "sourceId": "131972354",
+      "scene": "Tower Bridge London",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        74,
+        29,
+        377,
+        230
+      ],
+      "width": 384,
+      "height": 255,
+      "sha256": "4364e5a082f5f79fe3fc98137038cd51a69c5c460fd746522f2d416a8e3a73ff"
+    },
+    {
+      "id": "test/131972354-large-png.png",
+      "sourceId": "131972354",
+      "scene": "Tower Bridge London",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        21,
+        12,
+        374,
+        282
+      ],
+      "width": 353,
+      "height": 270,
+      "sha256": "d76279858bc39ba968f5c16119f01e70e4435267bd93d52e61346e2ee7f215b0"
+    },
+    {
+      "id": "test/131972354-large-resize-jpeg75.png",
+      "sourceId": "131972354",
+      "scene": "Tower Bridge London",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        15,
+        29,
+        337,
+        273
+      ],
+      "width": 384,
+      "height": 291,
+      "sha256": "d9e7014f7ca2211c6e6fbc5fe9010922450ad5159103d9ed84511aae8d2bc263"
+    },
+    {
+      "id": "train/143127453-original.png",
+      "sourceId": "143127453",
+      "scene": "Tower Bridge London",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 255,
+      "sha256": "45434ac1edb05fbb529cc9a49282e77bd559cee4bb8b88485b5e34d5cb5ba608"
+    },
+    {
+      "id": "test/143127453-small-png.png",
+      "sourceId": "143127453",
+      "scene": "Tower Bridge London",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        23,
+        90,
+        238,
+        204
+      ],
+      "width": 215,
+      "height": 114,
+      "sha256": "12a58ddb4be39bd3b2f4eb9c2b87c5a269af242d2810f9fcf2959f422008378f"
+    },
+    {
+      "id": "test/143127453-small-resize-jpeg75.png",
+      "sourceId": "143127453",
+      "scene": "Tower Bridge London",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        29,
+        107,
+        232,
+        244
+      ],
+      "width": 384,
+      "height": 259,
+      "sha256": "35af7525e89e58d301723430d9d0be54f651233b1287e7f125e6e53c81ba34dd"
+    },
+    {
+      "id": "test/143127453-medium-png.png",
+      "sourceId": "143127453",
+      "scene": "Tower Bridge London",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        4,
+        30,
+        242,
+        231
+      ],
+      "width": 238,
+      "height": 201,
+      "sha256": "215cb7c886d68c9c7af80057e4108fa45824cddfbc6c112d24845eccd6e5cedf"
+    },
+    {
+      "id": "test/143127453-medium-resize-jpeg75.png",
+      "sourceId": "143127453",
+      "scene": "Tower Bridge London",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        29,
+        32,
+        332,
+        230
+      ],
+      "width": 384,
+      "height": 251,
+      "sha256": "e1aacfb326ea85766008b75da88f2c3055dd11ec3d2cb716661d128dc2317785"
+    },
+    {
+      "id": "test/143127453-large-png.png",
+      "sourceId": "143127453",
+      "scene": "Tower Bridge London",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        40,
+        18,
+        377,
+        242
+      ],
+      "width": 337,
+      "height": 224,
+      "sha256": "13d498601df3dfe945a08bc530eb532ec98e2827983043564d87a19fcc792ea3"
+    },
+    {
+      "id": "test/143127453-large-resize-jpeg75.png",
+      "sourceId": "143127453",
+      "scene": "Tower Bridge London",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        57,
+        8,
+        368,
+        247
+      ],
+      "width": 384,
+      "height": 295,
+      "sha256": "dcad2330658211de64a4f855b2603c403881490d7be6d83d856de4cc5226bcf1"
+    },
+    {
+      "id": "train/149692131-original.png",
+      "sourceId": "149692131",
+      "scene": "Niagara Falls",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 216,
+      "sha256": "5463779345c73a2b0c1e721a2ea41bf17f10d1320471b83906c2fd456493a864"
+    },
+    {
+      "id": "test/149692131-small-png.png",
+      "sourceId": "149692131",
+      "scene": "Niagara Falls",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        6,
+        45,
+        205,
+        161
+      ],
+      "width": 199,
+      "height": 116,
+      "sha256": "849b8d6abe5ae5d635361736822e4745598a7ce7716323b8e515bfa565b9619e"
+    },
+    {
+      "id": "test/149692131-small-resize-jpeg75.png",
+      "sourceId": "149692131",
+      "scene": "Niagara Falls",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        146,
+        78,
+        349,
+        196
+      ],
+      "width": 384,
+      "height": 223,
+      "sha256": "7b2ae6f36348aee1c1b658e534ab622443e81d07afb2c30a7b458c76a1bf329c"
+    },
+    {
+      "id": "test/149692131-medium-png.png",
+      "sourceId": "149692131",
+      "scene": "Niagara Falls",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        88,
+        9,
+        360,
+        142
+      ],
+      "width": 272,
+      "height": 133,
+      "sha256": "3938ac3d967ce26f3cb93a4b0e806324f3660ad6769cb099d902338caab4b138"
+    },
+    {
+      "id": "test/149692131-medium-resize-jpeg75.png",
+      "sourceId": "149692131",
+      "scene": "Niagara Falls",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        33,
+        37,
+        313,
+        205
+      ],
+      "width": 384,
+      "height": 230,
+      "sha256": "7ba98585e539dbd165a912768ac34442479267d514ae444a6c2ebb16e0e1272d"
+    },
+    {
+      "id": "test/149692131-large-png.png",
+      "sourceId": "149692131",
+      "scene": "Niagara Falls",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        59,
+        8,
+        381,
+        200
+      ],
+      "width": 322,
+      "height": 192,
+      "sha256": "b8b62ff98a36e3444b1e9782c6bf7be6a3aa6f49205d8882d498ba1b14ab98b4"
+    },
+    {
+      "id": "test/149692131-large-resize-jpeg75.png",
+      "sourceId": "149692131",
+      "scene": "Niagara Falls",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        42,
+        2,
+        360,
+        202
+      ],
+      "width": 384,
+      "height": 242,
+      "sha256": "0a669b3f5f21d2d235749d3d406635533fd78e05bc57a1829ce35276e4916305"
+    },
+    {
+      "id": "train/183139140-original.png",
+      "sourceId": "183139140",
+      "scene": "Niagara Falls",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 288,
+      "sha256": "fefa295552828f5f458d19c74a7e8d404e42017e8a81e8d1c51c37b991bb1823"
+    },
+    {
+      "id": "test/183139140-small-png.png",
+      "sourceId": "183139140",
+      "scene": "Niagara Falls",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        9,
+        144,
+        216,
+        276
+      ],
+      "width": 207,
+      "height": 132,
+      "sha256": "ad03bce352ca280760f8c83719aced2bc6e3496c083e53aaa49094d3fc795b4c"
+    },
+    {
+      "id": "test/183139140-small-resize-jpeg75.png",
+      "sourceId": "183139140",
+      "scene": "Niagara Falls",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        27,
+        52,
+        245,
+        172
+      ],
+      "width": 384,
+      "height": 211,
+      "sha256": "f83d9fad755706e01321e2b6cff6e6ac24acd10341ae3c3cb0c6d9bfdfbc02d8"
+    },
+    {
+      "id": "test/183139140-medium-png.png",
+      "sourceId": "183139140",
+      "scene": "Niagara Falls",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        57,
+        46,
+        306,
+        256
+      ],
+      "width": 249,
+      "height": 210,
+      "sha256": "a2a167dc5f8fe194f8d33154ba0fb4fccc171ac73ad9561c8a600ea7f363b250"
+    },
+    {
+      "id": "test/183139140-medium-resize-jpeg75.png",
+      "sourceId": "183139140",
+      "scene": "Niagara Falls",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        140,
+        34,
+        381,
+        261
+      ],
+      "width": 384,
+      "height": 362,
+      "sha256": "4475a58b3d59a387d1855d2237ed931c555097753502364c5ae20f4ab948adb8"
+    },
+    {
+      "id": "test/183139140-large-png.png",
+      "sourceId": "183139140",
+      "scene": "Niagara Falls",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        3,
+        21,
+        329,
+        274
+      ],
+      "width": 326,
+      "height": 253,
+      "sha256": "35d3e0d014211e4fd81d288fa2e152ea22f065cadd64440fc8e599b7ea526e0a"
+    },
+    {
+      "id": "test/183139140-large-resize-jpeg75.png",
+      "sourceId": "183139140",
+      "scene": "Niagara Falls",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        19,
+        18,
+        353,
+        262
+      ],
+      "width": 384,
+      "height": 281,
+      "sha256": "baa0383c3b8416289f5eed5da0ad6b0fe58cb8d3048a3dab11f2e52b5c166cff"
+    },
+    {
+      "id": "train/90293410-original.png",
+      "sourceId": "90293410",
+      "scene": "Brooklyn Bridge",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 256,
+      "sha256": "790fcdafb75201343f4377d4bac6952e5ec617948899ad7668742f794ca81612"
+    },
+    {
+      "id": "test/90293410-small-png.png",
+      "sourceId": "90293410",
+      "scene": "Brooklyn Bridge",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        89,
+        7,
+        277,
+        158
+      ],
+      "width": 188,
+      "height": 151,
+      "sha256": "531cc7cc1b7a5dc4fbf4bd577da6933d8d43de7297447309725dea20a46af8a9"
+    },
+    {
+      "id": "test/90293410-small-resize-jpeg75.png",
+      "sourceId": "90293410",
+      "scene": "Brooklyn Bridge",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        7,
+        107,
+        175,
+        219
+      ],
+      "width": 384,
+      "height": 256,
+      "sha256": "cc413bea6dcb74b441de3bee362fc829c440407ce2090ad587403d11dbe18e11"
+    },
+    {
+      "id": "test/90293410-medium-png.png",
+      "sourceId": "90293410",
+      "scene": "Brooklyn Bridge",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        93,
+        50,
+        357,
+        236
+      ],
+      "width": 264,
+      "height": 186,
+      "sha256": "feb972a2a69d0e5e0abb68a44568054ad0357b9d386ab144ba6f6b6d689183e3"
+    },
+    {
+      "id": "test/90293410-medium-resize-jpeg75.png",
+      "sourceId": "90293410",
+      "scene": "Brooklyn Bridge",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        127,
+        46,
+        376,
+        220
+      ],
+      "width": 384,
+      "height": 268,
+      "sha256": "2568382b0be47d3025b855753df6a09e2fe2afcbdaf2c352af387ea873ebca5a"
+    },
+    {
+      "id": "test/90293410-large-png.png",
+      "sourceId": "90293410",
+      "scene": "Brooklyn Bridge",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        22,
+        18,
+        333,
+        250
+      ],
+      "width": 311,
+      "height": 232,
+      "sha256": "f9a20dfb98f177ab1ccaa6dd8a7ea0a0b3b813bd66419db0149d3539fbb89794"
+    },
+    {
+      "id": "test/90293410-large-resize-jpeg75.png",
+      "sourceId": "90293410",
+      "scene": "Brooklyn Bridge",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        34,
+        19,
+        364,
+        226
+      ],
+      "width": 384,
+      "height": 241,
+      "sha256": "34adfb6e30757403653ac71666f667bc1181127a599a9a1671eb6d0f98753705"
+    },
+    {
+      "id": "train/147381266-original.png",
+      "sourceId": "147381266",
+      "scene": "Brooklyn Bridge",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 288,
+      "height": 384,
+      "sha256": "b60b6ac8f5cfc44d9b81143dcf9493d420020327a18039eb289ef6060bbd6032"
+    },
+    {
+      "id": "test/147381266-small-png.png",
+      "sourceId": "147381266",
+      "scene": "Brooklyn Bridge",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        58,
+        160,
+        216,
+        340
+      ],
+      "width": 158,
+      "height": 180,
+      "sha256": "9e87da0dca9986b15e9797c837f45f7de52d4d25020869f2e2fc7627adba4474"
+    },
+    {
+      "id": "test/147381266-small-resize-jpeg75.png",
+      "sourceId": "147381266",
+      "scene": "Brooklyn Bridge",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        142,
+        59,
+        280,
+        224
+      ],
+      "width": 321,
+      "height": 384,
+      "sha256": "b2720c71f6cfadcd4117906c88848701d73fc1a13a961675964990a51c8757e1"
+    },
+    {
+      "id": "test/147381266-medium-png.png",
+      "sourceId": "147381266",
+      "scene": "Brooklyn Bridge",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        42,
+        48,
+        272,
+        347
+      ],
+      "width": 230,
+      "height": 299,
+      "sha256": "bfca8ab6a00bd237c740c160dc21e71132b7b51b31208fe795fe7d3467cf2126"
+    },
+    {
+      "id": "test/147381266-medium-resize-jpeg75.png",
+      "sourceId": "147381266",
+      "scene": "Brooklyn Bridge",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        86,
+        21,
+        284,
+        293
+      ],
+      "width": 280,
+      "height": 384,
+      "sha256": "ea424d6b517ebf55c54c09dee0258181ab6c1feedfd13d87b6941783af828ae0"
+    },
+    {
+      "id": "test/147381266-large-png.png",
+      "sourceId": "147381266",
+      "scene": "Brooklyn Bridge",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        2,
+        45,
+        246,
+        371
+      ],
+      "width": 244,
+      "height": 326,
+      "sha256": "6a20ba03a3a5a2cf62328131c3215a67c933d4a1a6953e6414a2e3aa913ed443"
+    },
+    {
+      "id": "test/147381266-large-resize-jpeg75.png",
+      "sourceId": "147381266",
+      "scene": "Brooklyn Bridge",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        1,
+        42,
+        268,
+        353
+      ],
+      "width": 330,
+      "height": 384,
+      "sha256": "a4653e4f965e584d9e78a967024c6eae3e2b4456aa5bba93c9cb07d362b9b25c"
+    },
+    {
+      "id": "train/153007046-original.png",
+      "sourceId": "153007046",
+      "scene": "Leaning Tower of Pisa",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 320,
+      "height": 240,
+      "sha256": "d939b08dbab83255d3f3e8e2db63c7326c2cd122ed30963855d9c6eacd37ad93"
+    },
+    {
+      "id": "test/153007046-small-png.png",
+      "sourceId": "153007046",
+      "scene": "Leaning Tower of Pisa",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        51,
+        86,
+        211,
+        198
+      ],
+      "width": 160,
+      "height": 112,
+      "sha256": "1bcf4be8febec9992fc5944a655c9ad12c568a6f31271ee27903ba78dc52a33a"
+    },
+    {
+      "id": "test/153007046-small-resize-jpeg75.png",
+      "sourceId": "153007046",
+      "scene": "Leaning Tower of Pisa",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        81,
+        6,
+        266,
+        116
+      ],
+      "width": 384,
+      "height": 228,
+      "sha256": "bd84bc6359d4de56ed914f7632f8beba1f13a6aee5aa16bcd64b7206ca910907"
+    },
+    {
+      "id": "test/153007046-medium-png.png",
+      "sourceId": "153007046",
+      "scene": "Leaning Tower of Pisa",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        67,
+        28,
+        316,
+        193
+      ],
+      "width": 249,
+      "height": 165,
+      "sha256": "e5f619ac01676d0f7e1db81d40a2d4aacb44576b800f66c9b4b5504ed53aca07"
+    },
+    {
+      "id": "test/153007046-medium-resize-jpeg75.png",
+      "sourceId": "153007046",
+      "scene": "Leaning Tower of Pisa",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        14,
+        32,
+        244,
+        224
+      ],
+      "width": 384,
+      "height": 321,
+      "sha256": "e533edc30e13f1fea2ab0971113fd9080369234f2d75f57173ee32d2ef5673d9"
+    },
+    {
+      "id": "test/153007046-large-png.png",
+      "sourceId": "153007046",
+      "scene": "Leaning Tower of Pisa",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        8,
+        18,
+        308,
+        231
+      ],
+      "width": 300,
+      "height": 213,
+      "sha256": "efa6d20d264f339a9fb398eb155e754415813d613d20aeb00d20955fa8da22b0"
+    },
+    {
+      "id": "test/153007046-large-resize-jpeg75.png",
+      "sourceId": "153007046",
+      "scene": "Leaning Tower of Pisa",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        25,
+        25,
+        281,
+        217
+      ],
+      "width": 384,
+      "height": 288,
+      "sha256": "18b415480d7f39a20d1429e69a37bfc44f0f778faad607caf129ee1272263624"
+    },
+    {
+      "id": "train/175882787-original.png",
+      "sourceId": "175882787",
+      "scene": "Leaning Tower of Pisa",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 288,
+      "height": 384,
+      "sha256": "5fc9571039a12d462d9974b7eea8c1633481febe17e6873fd31ace48a99a09b6"
+    },
+    {
+      "id": "test/175882787-small-png.png",
+      "sourceId": "175882787",
+      "scene": "Leaning Tower of Pisa",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        6,
+        18,
+        126,
+        221
+      ],
+      "width": 120,
+      "height": 203,
+      "sha256": "1f1c31b3c9a4ac547c03518acf1e361d24f6719d76c42760715847ed47406fbf"
+    },
+    {
+      "id": "test/175882787-small-resize-jpeg75.png",
+      "sourceId": "175882787",
+      "scene": "Leaning Tower of Pisa",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        25,
+        97,
+        186,
+        277
+      ],
+      "width": 343,
+      "height": 384,
+      "sha256": "512b6ca62cf4a86d7c42463525707f34be7a690fd3f26cf453c70f6e25781f04"
+    },
+    {
+      "id": "test/175882787-medium-png.png",
+      "sourceId": "175882787",
+      "scene": "Leaning Tower of Pisa",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        4,
+        24,
+        231,
+        292
+      ],
+      "width": 227,
+      "height": 268,
+      "sha256": "64c13b804c739bb093e05cc2fd3516b5d30cb90c99078e960f83a8574435364a"
+    },
+    {
+      "id": "test/175882787-medium-resize-jpeg75.png",
+      "sourceId": "175882787",
+      "scene": "Leaning Tower of Pisa",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        75,
+        90,
+        279,
+        320
+      ],
+      "width": 341,
+      "height": 384,
+      "sha256": "d86856c26773421e82c81857e4413c54917e68a134692e0d2e9e19e5a121e3c2"
+    },
+    {
+      "id": "test/175882787-large-png.png",
+      "sourceId": "175882787",
+      "scene": "Leaning Tower of Pisa",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        0,
+        31,
+        264,
+        342
+      ],
+      "width": 264,
+      "height": 311,
+      "sha256": "f8453e9849ba027075911c2d351e87bb89c4267d48db89ea9dc0b0842898dc5d"
+    },
+    {
+      "id": "test/175882787-large-resize-jpeg75.png",
+      "sourceId": "175882787",
+      "scene": "Leaning Tower of Pisa",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        30,
+        16,
+        277,
+        376
+      ],
+      "width": 263,
+      "height": 384,
+      "sha256": "679f54403656a6c7691b7f85c3a1e0e9346bf309c3475b50f439f93180a64bd8"
+    },
+    {
+      "id": "train/147065481-original.png",
+      "sourceId": "147065481",
+      "scene": "Arc de Triomphe",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 275,
+      "sha256": "4c14fc2689de0d620601551019bcad7b40a9c0f28ca156cc7fd7b9fda214f69b"
+    },
+    {
+      "id": "test/147065481-small-png.png",
+      "sourceId": "147065481",
+      "scene": "Arc de Triomphe",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        81,
+        45,
+        276,
+        204
+      ],
+      "width": 195,
+      "height": 159,
+      "sha256": "5ee7168aa6ccd86329c3a2aaf6b9f3b236f4667681d9a6eafc84839ac93a21de"
+    },
+    {
+      "id": "test/147065481-small-resize-jpeg75.png",
+      "sourceId": "147065481",
+      "scene": "Arc de Triomphe",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        127,
+        19,
+        338,
+        170
+      ],
+      "width": 384,
+      "height": 275,
+      "sha256": "4dbfaaa1770b8a69b09e28465a89d995232d8d72e64df946b826d7336061d341"
+    },
+    {
+      "id": "test/147065481-medium-png.png",
+      "sourceId": "147065481",
+      "scene": "Arc de Triomphe",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        40,
+        18,
+        339,
+        191
+      ],
+      "width": 299,
+      "height": 173,
+      "sha256": "4139cb665de770e352b766270047599eeb61faa0206f0c49b95e8163c80a3ee5"
+    },
+    {
+      "id": "test/147065481-medium-resize-jpeg75.png",
+      "sourceId": "147065481",
+      "scene": "Arc de Triomphe",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        19,
+        48,
+        322,
+        246
+      ],
+      "width": 384,
+      "height": 251,
+      "sha256": "a5ee95a369bb910066242bc8036a532264c1e312de26724e197b83df7d620172"
+    },
+    {
+      "id": "test/147065481-large-png.png",
+      "sourceId": "147065481",
+      "scene": "Arc de Triomphe",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        9,
+        0,
+        335,
+        247
+      ],
+      "width": 326,
+      "height": 247,
+      "sha256": "0f1e3cde272e83d09d354ce698cf6f255cc56d063c91dd4f37a1c1ffc555dccf"
+    },
+    {
+      "id": "test/147065481-large-resize-jpeg75.png",
+      "sourceId": "147065481",
+      "scene": "Arc de Triomphe",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        42,
+        20,
+        364,
+        262
+      ],
+      "width": 384,
+      "height": 289,
+      "sha256": "733a264380a9cd1ce98c2703d38a34df2cb004f2185391df803433a3c7e6d787"
+    },
+    {
+      "id": "train/27959644-original.png",
+      "sourceId": "27959644",
+      "scene": "Arc de Triomphe",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 255,
+      "height": 384,
+      "sha256": "07015fb335000f8e8ea17dfce0e23649e312f2fb7396010bad3aae427f2f6151"
+    },
+    {
+      "id": "test/27959644-small-png.png",
+      "sourceId": "27959644",
+      "scene": "Arc de Triomphe",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        83,
+        86,
+        205,
+        266
+      ],
+      "width": 122,
+      "height": 180,
+      "sha256": "cbeb2ba10b40fc27d8195e5fd924244779ff5f111d9fef660c063d261c3ed071"
+    },
+    {
+      "id": "test/27959644-small-resize-jpeg75.png",
+      "sourceId": "27959644",
+      "scene": "Arc de Triomphe",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        89,
+        129,
+        203,
+        321
+      ],
+      "width": 228,
+      "height": 384,
+      "sha256": "bb7b55283c7f4e8c2b541d88bc586c77b963b766002fc38f121db080041fd72b"
+    },
+    {
+      "id": "test/27959644-medium-png.png",
+      "sourceId": "27959644",
+      "scene": "Arc de Triomphe",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        15,
+        16,
+        216,
+        288
+      ],
+      "width": 201,
+      "height": 272,
+      "sha256": "95c6090e39089638abb88a2f87dec62db7cafe2e2e36c0a92fa392b136ebcd5b"
+    },
+    {
+      "id": "test/27959644-medium-resize-jpeg75.png",
+      "sourceId": "27959644",
+      "scene": "Arc de Triomphe",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        52,
+        42,
+        205,
+        314
+      ],
+      "width": 216,
+      "height": 384,
+      "sha256": "d4ac9b9bdc131342aa6e914ec3a1a36025694b760a2590e5a40e8b66f4e14aa2"
+    },
+    {
+      "id": "test/27959644-large-png.png",
+      "sourceId": "27959644",
+      "scene": "Arc de Triomphe",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        32,
+        10,
+        251,
+        370
+      ],
+      "width": 219,
+      "height": 360,
+      "sha256": "63a806e6179ab1d118c902e3e50f14c107412ee278d67585319d6366c3f7d669"
+    },
+    {
+      "id": "test/27959644-large-resize-jpeg75.png",
+      "sourceId": "27959644",
+      "scene": "Arc de Triomphe",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        16,
+        2,
+        227,
+        320
+      ],
+      "width": 255,
+      "height": 384,
+      "sha256": "762bdd1dfe55d4852c1e72ebf1bcb5c9507d4d163838b79ed084643e06445674"
+    },
+    {
+      "id": "train/28818900-original.png",
+      "sourceId": "28818900",
+      "scene": "brick wall",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 288,
+      "sha256": "20a6c1934a19488861c5c7d14d3384967ec5b5ed1cc6ab9588e6f537500f8368"
+    },
+    {
+      "id": "test/28818900-small-png.png",
+      "sourceId": "28818900",
+      "scene": "brick wall",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        51,
+        97,
+        216,
+        229
+      ],
+      "width": 165,
+      "height": 132,
+      "sha256": "6a3a51542bcc0123801bbb0a019391a9fa28db91d5549eb799fbdbee584f4d46"
+    },
+    {
+      "id": "test/28818900-small-resize-jpeg75.png",
+      "sourceId": "28818900",
+      "scene": "brick wall",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        23,
+        104,
+        238,
+        265
+      ],
+      "width": 384,
+      "height": 288,
+      "sha256": "ca77db9d426a089da6c54f5cf5b94d0b8481a5f38b90fe38f6d2150f4a6a373f"
+    },
+    {
+      "id": "test/28818900-medium-png.png",
+      "sourceId": "28818900",
+      "scene": "brick wall",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        115,
+        55,
+        372,
+        239
+      ],
+      "width": 257,
+      "height": 184,
+      "sha256": "d6bf8100a3f2afe5b97ac47f4a7237ab2382eab34d4960583257dc71e3795dc1"
+    },
+    {
+      "id": "test/28818900-medium-resize-jpeg75.png",
+      "sourceId": "28818900",
+      "scene": "brick wall",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        90,
+        48,
+        351,
+        264
+      ],
+      "width": 384,
+      "height": 318,
+      "sha256": "cea94ddf6f66aaf42fd4fb0b7db7df1e8584290d3a48958f901964592c632a02"
+    },
+    {
+      "id": "test/28818900-large-png.png",
+      "sourceId": "28818900",
+      "scene": "brick wall",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        25,
+        10,
+        362,
+        274
+      ],
+      "width": 337,
+      "height": 264,
+      "sha256": "12b20c6ad3fcb4d40cc3c95b1dd7558a5cb07cd0d063460d668008cb75e44967"
+    },
+    {
+      "id": "test/28818900-large-resize-jpeg75.png",
+      "sourceId": "28818900",
+      "scene": "brick wall",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        10,
+        28,
+        370,
+        264
+      ],
+      "width": 384,
+      "height": 252,
+      "sha256": "93758eac7a0915f4619fc0e3176e0cf0acd2f682754e1855dd2c25bd4852f2bc"
+    },
+    {
+      "id": "train/117737596-original.png",
+      "sourceId": "117737596",
+      "scene": "brick wall",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 256,
+      "sha256": "b8c071fee27ba3ee0dcece4e79af079c36ffd419a6f47a4b0002a56e0bf330b4"
+    },
+    {
+      "id": "test/117737596-small-png.png",
+      "sourceId": "117737596",
+      "scene": "brick wall",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        79,
+        7,
+        282,
+        114
+      ],
+      "width": 203,
+      "height": 107,
+      "sha256": "4cf4cf31f25e3f2064bfa03f5706e1c48286124db6b672f98d89b8a8d763619e"
+    },
+    {
+      "id": "test/117737596-small-resize-jpeg75.png",
+      "sourceId": "117737596",
+      "scene": "brick wall",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        13,
+        10,
+        235,
+        163
+      ],
+      "width": 384,
+      "height": 265,
+      "sha256": "5a8f0263c089c19d2e191f315ead136dcee6931d834956219b5b9070713fb814"
+    },
+    {
+      "id": "test/117737596-medium-png.png",
+      "sourceId": "117737596",
+      "scene": "brick wall",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        50,
+        48,
+        345,
+        229
+      ],
+      "width": 295,
+      "height": 181,
+      "sha256": "576e64dc4f0ccb780db09c026136793ebc100aa4886c06d286d1ff31a925d5f5"
+    },
+    {
+      "id": "test/117737596-medium-resize-jpeg75.png",
+      "sourceId": "117737596",
+      "scene": "brick wall",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        125,
+        65,
+        370,
+        223
+      ],
+      "width": 384,
+      "height": 248,
+      "sha256": "64cb690fbfa9f02735027ad55ee922af3710177518f73b963d31268cc40a6751"
+    },
+    {
+      "id": "test/117737596-large-png.png",
+      "sourceId": "117737596",
+      "scene": "brick wall",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        12,
+        6,
+        357,
+        236
+      ],
+      "width": 345,
+      "height": 230,
+      "sha256": "b3a7190c97a246e64e5b6589aa1419f3f449d06fb243d34c4e0e3c6894e0eb20"
+    },
+    {
+      "id": "test/117737596-large-resize-jpeg75.png",
+      "sourceId": "117737596",
+      "scene": "brick wall",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        6,
+        22,
+        328,
+        229
+      ],
+      "width": 384,
+      "height": 247,
+      "sha256": "7cae984bdc69a28521cef3ee7ac946c7fa5744e38b96d0bbb9b3a27896ba54cd"
+    }
+  ],
+  "groundTruth": "Only original-gallery versus transformed-query pairs; same source ID is positive, other source files are negatives. No human semantic adjudication."
+}

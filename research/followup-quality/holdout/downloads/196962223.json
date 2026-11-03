@@ -1,0 +1,20 @@
+{
+  "id": "196962223",
+  "title": "File:Forest path to Roche du Taureau, Cléron, 2026.jpg",
+  "scene": "forest path",
+  "author": "DimiTalen",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Forest_path_to_Roche_du_Taureau,_Cl%C3%A9ron,_2026.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/Forest_path_to_Roche_du_Taureau%2C_Cl%C3%A9ron%2C_2026.jpg/960px-Forest_path_to_Roche_du_Taureau%2C_Cl%C3%A9ron%2C_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Forest_path_to_Roche_du_Taureau%2C_Cl%C3%A9ron%2C_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "6401028fb65d5cdacd084923731e06339667bbcd",
+  "width": 5568,
+  "height": 3712,
+  "downloadSha256": "11b93f320c0672e7e715a9db4e9d8a4a6dc4990bc637574504eff282ef1be7d5",
+  "sha256": "6fcabdcaffab3141442b0dd6624f81803195d2078c4b3bc87ca49ee209721a46",
+  "storedFile": "research/followup-quality/holdout/originals/196962223.png",
+  "storedWidth": 384,
+  "storedHeight": 256,
+  "modification": "EXIF transpose, RGB, longest edge <=384 with Pillow LANCZOS, PNG storage; downstream preparation applies product sRGB normalization to every source before crops."
+}

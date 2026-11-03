@@ -1,0 +1,65 @@
+{
+  "complete": true,
+  "phases": {
+    "deterministic": {
+      "enabled": true,
+      "complete": true,
+      "status": "complete",
+      "inputImages": 84,
+      "processedImages": 84,
+      "comparisons": 0,
+      "maxComparisons": 1000000,
+      "distanceEvaluations": 0,
+      "pairChecks": 0,
+      "indexOperations": 0,
+      "indexOperationLimit": 16000000,
+      "emittedPairs": 0,
+      "reason": ""
+    },
+    "perceptual": {
+      "enabled": true,
+      "complete": true,
+      "status": "complete",
+      "inputImages": 84,
+      "processedImages": 84,
+      "comparisons": 1625,
+      "maxComparisons": 10000000,
+      "distanceEvaluations": 1623,
+      "pairChecks": 2,
+      "indexOperations": 0,
+      "indexOperationLimit": 160000000,
+      "emittedPairs": 2,
+      "reason": ""
+    },
+    "local": {
+      "enabled": true,
+      "complete": true,
+      "status": "complete",
+      "inputImages": 84,
+      "processedImages": 84,
+      "comparisons": 20340,
+      "maxComparisons": 10000000,
+      "distanceEvaluations": 20324,
+      "pairChecks": 16,
+      "indexOperations": 133544,
+      "indexOperationLimit": 160000000,
+      "emittedPairs": 16,
+      "reason": ""
+    }
+  },
+  "stats": {
+    "inputImages": 84,
+    "processedImages": 84,
+    "comparisons": 21965,
+    "distanceEvaluations": 21947,
+    "pairChecks": 18,
+    "emittedPairs": 18,
+    "indexNodes": 84,
+    "reason": "",
+    "indexOperations": 133544,
+    "indexOperationLimit": 320000000,
+    "localComparisons": 20340,
+    "localIndexNodes": 1664
+  },
+  "auditId": "58ded94ad07b6f45c92e0db9fcb7f5b5ade36218f5e8053f70186aba5ce373e0"
+}
