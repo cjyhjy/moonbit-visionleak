@@ -6,6 +6,31 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def compare_transform_truth(current, baseline):
+    """Pin decoded pixels, transforms and identity labels across encoders.
+
+    PNG compression bytes can differ across platform zlib implementations.
+    Byte-identity *relations* must still match, as must every decoded pixel.
+    Source files have a separate byte checksum gate before transformation.
+    """
+    if set(current) != set(baseline) or current['pairs'] != baseline['pairs']:
+        raise ValueError('Known transform fields or pair identity labels changed')
+    if len(current['images']) != len(baseline['images']):
+        raise ValueError('Known transform image count changed')
+    encoding_changes = []
+    for actual, expected in zip(current['images'], baseline['images']):
+        for field in sorted(set(actual) | set(expected)):
+            if field == 'byteDigest':
+                if actual[field] != expected[field]: encoding_changes.append(actual['id'])
+            elif actual.get(field) != expected.get(field):
+                raise ValueError(f"Known transform changed: {actual.get('id')} {field}: {expected.get(field)} -> {actual.get(field)}")
+    for field in set(current) - {'images', 'pairs'}:
+        if current[field] != baseline[field]: raise ValueError('Known transform metadata changed: ' + field)
+    return {'decodedPixelsAndLabelsUnchanged': True,
+            'encodedByteChanges': encoding_changes,
+            'scope': 'Generated file encodings may vary; source bytes, decoded pixels, transform metadata and all pair identity labels remain fixed.'}
+
+
 def compare_baseline(report, key, version='0.4.0', reason=None):
     freeze_path = ROOT / 'research/photos-v1/freeze' / (version + '.json')
     freeze_bytes = freeze_path.read_bytes()

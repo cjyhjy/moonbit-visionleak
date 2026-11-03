@@ -56,8 +56,11 @@ def run(out, regression=False):
     reports={};times={}
     with tempfile.TemporaryDirectory(prefix='vl-new-photos-') as temp:
         temp=pathlib.Path(temp);data=temp/'data';truth=generated(manifest['images'],data)
+        (out/'ground-truth.json').write_text(json.dumps(truth,ensure_ascii=False,indent=2)+'\n')
         if regression:
-            assert truth==json.loads((ROOT/'reports/post-review/photos/ground-truth.json').read_text()), 'known transform labels changed'
+            from evaluation_compatibility import compare_transform_truth
+            transform_parity=compare_transform_truth(truth,json.loads((ROOT/'reports/post-review/photos/ground-truth.json').read_text()))
+            print(json.dumps({'transformParity':transform_parity}))
         for mode,flags in [('default',[]),('crops',['--include-crops'])]:
             start=time.monotonic();result=subprocess.run(['node','tools/cli.mjs','audit','--root',str(data),'--out',str(temp/mode),'--max-comparisons','10000000',*flags],cwd=ROOT,capture_output=True,text=True,timeout=300);assert result.returncode==0,result.stderr
             times[mode]=time.monotonic()-start;reports[mode]=json.loads((temp/mode/'report.json').read_text())
@@ -96,6 +99,7 @@ def run(out, regression=False):
             anchors[transform]={'targets':len(target),'found':sum(key(p) in {key(q) for q in crops['pairs']} for p in target)}
         result={'schemaVersion':'visionleak-post-review-evaluation-v1','evaluatedAt':now(),'freezeSha256':digest(DATA/'freeze-0.7.0.json'),'sourcesSha256':digest(DATA/'sources.json'),'newSourceFiles':12,'images':len(truth['images']),'scores':{m:score(truth,r['pairs']) for m,r in reports.items()},'independentGlobalIndexParity':True,'independentLocalIndexParity':True,'exactGroupsUnchanged':True,'sameSceneNegativePairs':len(same_scene),'sameSceneFalsePositivePairs':len(hard_fp),'anchorRetrievalByTransform':anchors,'reviewLoad':{'candidatePairs':candidate_count,'pairsPer1000Images':candidate_count*1000/len(truth['images']),'originalOrderTopK':top(near_order(crops['pairs'])),'experimentalOrderTopK':top(near_order([lookup[k] for k in ordering['keys']])),'scoredLocalPairs':ordering['scoredLocalPairs'],'unscoredLocalPairs':ordering['unscoredLocalPairs'],'humanReviewSeconds':None,'humanReviewStatus':'not-measured'},'automatedWallSeconds':times,'phases':{m:r['phases'] for m,r in reports.items()},'scope':'New source-file holdout under a frozen protocol; controlled transforms and metadata-selected same-scene negatives. No tuning after measurement. Natural contamination and human review time untested.'}
         if regression:
+            result['transformParity']=transform_parity
             source=subprocess.check_output(['node','--input-type=module','-e',"import{sourceDigest}from'./tools/source-digest.mjs';console.log(sourceDigest(process.cwd()))"],cwd=ROOT,text=True).strip()
             result.update(evaluationRole='known-source-regression',newSourceFiles=0,sourceFiles=len(manifest['images']),currentSourceDigest=source,currentArtifactSha256=digest(ROOT/'dist/visionleak.js'),orderedBaselineParity=True,scope='Current implementation on already-known photos-v3; unchanged source bytes, transforms and labels; strict ordered evidence and window-witness comparison to the frozen staged baseline. Not a new holdout; natural contamination and human review time untested.')
         (out/'ground-truth.json').write_text(json.dumps(truth,ensure_ascii=False,indent=2)+'\n');(out/'evaluation.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')

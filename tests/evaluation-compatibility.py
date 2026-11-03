@@ -12,6 +12,17 @@ import evaluation_compatibility as compatibility
 
 
 class EvaluationCompatibility(unittest.TestCase):
+    def test_transform_encodings_can_vary_only_with_identical_pixels_and_labels(self):
+        baseline={'images':[{'id':'a.png','byteDigest':'old','pixelDigest':'pixels','cropPixels':[1,2,3,4]}],
+                  'pairs':[{'left':'a.png','right':'b.png','relation':'byte-identical'}]}
+        current=copy.deepcopy(baseline);current['images'][0]['byteDigest']='new'
+        self.assertEqual(compatibility.compare_transform_truth(current,baseline)['encodedByteChanges'],['a.png'])
+        for field,value in [('pixelDigest','different'),('cropPixels',[1,2,3,5]),('id','b.png')]:
+            altered=copy.deepcopy(current);altered['images'][0][field]=value
+            with self.assertRaises(ValueError): compatibility.compare_transform_truth(altered,baseline)
+        current['pairs'][0]['relation']='pixel-identical'
+        with self.assertRaises(ValueError): compatibility.compare_transform_truth(current,baseline)
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
