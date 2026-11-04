@@ -1,13 +1,12 @@
-# 0.8.0 ORB 产品集成验收
+# 0.8.0 ORB 产品集成与正式发布
 
-集成已通过 PR #4 合并为 `d9d616e82f869743cf05dda9cb1e0a5d2a2dfc1f`。本地30项、[Linux30项](linux/receipt.json)、最终包23项及Chrome通过；[外部交付收据](delivery.json)记录最终ZIP摘要与发布边界。最终ZIP SHA-256：`eea07e314504f2e63a35f5bc7fe8ab071a26cece750a9e93d11bc0b1f7724127`。0.8.0正式发布尚未执行，等待该版本单独批准。
+[GitHub Release v0.8.0](https://github.com/cjyhjy/moonbit-visionleak/releases/tag/v0.8.0) 与 Mooncakes `cjyhjy/visionleak@0.8.0` 已在用户明确批准后发布。固定发布提交 `a66c773622b86d54b333e534900ef501a600a1c1`；PR #4 合并代码，后续收据提交不改变该标签。
 
-Linux重放保留全部历史命中（136/144、67/72，无新增FP），同方向见证检查136/65对。203个历史正例的矩阵/内点等至少一项存在跨平台数值差异，全部归档；这不等于203个命中变化。Linux native稀疏负载0.90×、照片1.27×，原始中位数见 `linux/native-performance-*/summary.json`。
+本地30项、[最终提交Linux30项](linux/main-receipt.json)、最终ZIP的23项干净检查及Chrome通过。公开下载ZIP SHA-256 `eea07e314504f2e63a35f5bc7fe8ab071a26cece750a9e93d11bc0b1f7724127`；注册表全新消费者三后端各5项通过，21个安装文件逐字节一致。[实际发布收据](publication/completion.json)包含批准、提交、渠道与校验结果。0.7.1的检索优化发布收据另存，不混用版本。
 
+ZIP中的状态文件是打包时快照；最终发布和包专属验收在打包后完成，以本目录外部收据为准。先前未发布候选及失败保存在 `pre-linux/`、`pre-receipt-correction/` 和 `linux-first-failure/`，未覆盖已发布版本。
 
-本页记录 2026-11-03 开始的集成。0.7.1 检索优化已实际发布并独立核验；本页属于另一个 0.8.0 候选版本。正式 Release/Mooncakes 发布尚未执行；提交和 Linux 结果将单独记录在 `delivery.json`。当前用户授权完成集成与自动验收。
-
-当前行为源码的本地30项已通过。本页及 `delivery.json` 是打包前快照；最终包摘要、包专属干净验收和远端状态在打包后产生，应同时查阅仓库/发布页上的外部收据。先前通过本地/干净检查但未发布的候选记录保存在 `pre-linux/`、`pre-receipt-correction/`；不得把它们当成最终包收据。
+Linux重放保留全部历史命中（136/144、67/72，无新增FP），同方向见证检查136/65对。203个历史正例的矩阵/内点等至少一项存在跨平台数值差异，全部归档；这不等于203个命中变化。Linux native稀疏负载0.90×、照片1.27×，完整中位数见 `linux/native-performance-*/summary.json`。
 
 ## 已通过
 

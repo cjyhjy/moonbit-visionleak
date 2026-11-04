@@ -31,4 +31,4 @@ Version metadata is now 0.5.0. Phase 3 is complete; phase 4 local verification, 
 
 0.7.0 and 0.7.1 are published releases. Their separate receipts are in `followup-0.7.0/publication/` and `integration-0.7.1/publication/`; historical root receipts describe only the versions they name.
 
-The current 0.8.0 ORB candidate is indexed in [integration-0.8.0/README.md](integration-0.8.0/README.md). It adds an optional Python/OpenCV worker, geometric candidate witnesses, explicit partial coverage and the review workflow. Its local, clean-package and remote CI statuses are recorded separately; a version field is not publication evidence.
+The published 0.8.0 ORB integration is indexed in [integration-0.8.0/README.md](integration-0.8.0/README.md). It adds an optional Python/OpenCV worker, geometric candidate witnesses, explicit partial coverage and the review workflow. Its local, clean-package, exact-commit CI and public download/registry checks are recorded separately in the publication receipts.

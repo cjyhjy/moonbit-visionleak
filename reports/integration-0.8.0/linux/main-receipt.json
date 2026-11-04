@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "commit": "a66c773622b86d54b333e534900ef501a600a1c1",
+  "sourceDigest": "f36c847f692395d7e61a8400b6bacddb7b0409cf6ac0077ead5103ce16bc766a",
+  "checks": 30,
+  "url": "https://github.com/cjyhjy/moonbit-visionleak/actions/runs/41789015910",
+  "artifactId": 13303185419,
+  "compiledArtifact": {
+    "sha256": "5e8f83e3f09afd11393a3218e3e5ddbd8e66c90702059f85feaf36aea3fcd856",
+    "matchesCommitted": true
+  }
+}

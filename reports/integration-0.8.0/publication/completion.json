@@ -1,0 +1,37 @@
+{
+  "status": "published-and-independently-verified",
+  "version": "0.8.0",
+  "commit": "a66c773622b86d54b333e534900ef501a600a1c1",
+  "pullRequest": "https://github.com/cjyhjy/moonbit-visionleak/pull/4",
+  "finalMainCI": {
+    "status": "passed",
+    "commit": "a66c773622b86d54b333e534900ef501a600a1c1",
+    "sourceDigest": "f36c847f692395d7e61a8400b6bacddb7b0409cf6ac0077ead5103ce16bc766a",
+    "checks": 30,
+    "url": "https://github.com/cjyhjy/moonbit-visionleak/actions/runs/41789015910",
+    "artifactId": 13303185419,
+    "compiledArtifact": {
+      "sha256": "5e8f83e3f09afd11393a3218e3e5ddbd8e66c90702059f85feaf36aea3fcd856",
+      "matchesCommitted": true
+    }
+  },
+  "github": {
+    "url": "https://github.com/cjyhjy/moonbit-visionleak/releases/tag/v0.8.0",
+    "releaseId": 433610095,
+    "tagCommit": "a66c773622b86d54b333e534900ef501a600a1c1",
+    "downloadedArchiveSha256": "eea07e314504f2e63a35f5bc7fe8ab071a26cece750a9e93d11bc0b1f7724127",
+    "bytes": 124794877
+  },
+  "mooncakes": {
+    "module": "cjyhjy/visionleak",
+    "version": "0.8.0",
+    "serverStatus": "200 OK",
+    "packageSha256": "1c62e462f433f7d1705138e9c8a3ee27c900357f0ff94081b37d7b53738c2b71",
+    "packageBytes": 39969,
+    "installedFilesByteIdentical": 21,
+    "cleanRegistryTestsPerBackend": 5,
+    "url": "https://mooncakes.io/docs/cjyhjy/visionleak/"
+  },
+  "authorization": "User explicitly approved 0.8.0 GitHub Release and Mooncakes publication including server preview, for fixed a66c773 and ZIP eea07e31...; supersedes earlier automatic-review rejection for missing version-specific approval.",
+  "verifiedAt": "2026-11-04T07:13:58.613935+00:00"
+}

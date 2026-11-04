@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "files": 21,
+  "packageSha256": "1c62e462f433f7d1705138e9c8a3ee27c900357f0ff94081b37d7b53738c2b71",
+  "fileDigests": {
+    "moon.mod": "df03bf2ad36b2fbfdd01ae411c675467f3111adba806010ad4bbbb45241c0905",
+    "core/moon.pkg": "119da56038e3680d53d90cdd8b88e23d8602ff94b482df64c6ae69936daafb1d",
+    "core/sha256.mbt": "f6afe36c0373b044f2e37471e06ccc8bbf31d8f94a0ca16fa2881757fc2c352a",
+    "core/orb_validation.mbt": "a2d3d2c328babb64f5b318e72679553e13249d4c473fd7340be0c929251de59d",
+    "core/offline.mbt": "b0d9fd714b48c690a00966f29bbd66692fa63402bfd2237511f52f98c6e3c6a1",
+    "core/crops.mbt": "2e7c33f09efab79d67587627d30bf395645f1093dccea98d3c662481aa3e36f7",
+    "core/cli_options.mbt": "9bad01e92de2d403830d35f6ae7dcacdf049854db74dc4ee00fd538b136df901",
+    "core/audit.mbt": "5d24e55d0e4f2ee7f535b462d0521162b9601f8f16f81fe9da3e1157df1a4d7e",
+    "core/sampling.mbt": "90854de65d99ba745bca5da02dee30fe9fd0fcc589885937806578847821eff6",
+    "core/mih.mbt": "6663b5eb585725acf4dcbe9dbf03460df5221d02eb19afd23f1a9c753a8f6e7c",
+    "core/pkg.generated.mbti": "80dcac9db3758c0c1415b6349dcfda3c2fd5089f49b77ea12efa667e1a73e3c5",
+    "core/pixel_stream.mbt": "af2948a9cad08d936473b1d2d5f4d6b089cf6cff279983f6e380a30c480ee230",
+    "core/review_validation.mbt": "e6d33c78c50bb19bd095957742577fe9343c1846ecfbb3d21375a6418a5e2195",
+    "core/workflow.mbt": "3decf0478e1c012012b08650c93d4173461381d218cb5225034828082e0d4d57",
+    "core/json_helpers.mbt": "a96a4a33e2816a5ae513b6bc4e70e65cd732684db9a974fb6e568ed988562ea4",
+    "core/report_identity.mbt": "b606b45e67b9d14c7dab49705322c0e2a7fda0bdfb1ceda839e02e6545684a04",
+    "core/metrics.mbt": "b2731c3c40fb9b66e94e7a62c1e4991afa43782ad80669e853bdf1defe7065b7",
+    "core/review_ranking.mbt": "102c608c43945b5ea72a1af110bdc4a57a274e8e7553e5a00745bf1cf2658694",
+    "core/fingerprint.mbt": "ead0ee6cffb6e406afad3c022712386aba4a7eaa633b15372606780c8267e6d4",
+    "LICENSE": "3f738fcff65c0e761991aef51dee7c3b118cf0d13f3384f0770b90ebfd0feb10",
+    "README.md": "f5f848a28a39e27d630c41acb5cca77e4767c7d249a1a41194684248759ae9d7"
+  },
+  "consumerManifest": "name = \"acceptance/visionleak080\"\nversion = \"0.0.0\"\npreferred_target = \"js\"\n\nimport {\n  \"cjyhjy/visionleak@0.8.0\",\n}\n"
+}

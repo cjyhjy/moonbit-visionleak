@@ -1,0 +1,3 @@
+Warning: failed to update registry index, continuing with existing index: update failed
+Warning: you may need to run `moon update` to update the registry
+Error: Failed to resolve registry dependency `cjyhjy/visionleak` for module `acceptance/visionleak080`: no version satisfies requirement `0.8.0`

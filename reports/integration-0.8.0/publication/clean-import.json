@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "module": "cjyhjy/visionleak",
+  "version": "0.8.0",
+  "directory": "/var/folders/sm/v6v7286s07j8z7x50805469c0000gn/T/visionleak-080-registry-wq4xq04h",
+  "testsPerBackend": 5,
+  "checks": [
+    {
+      "id": "add",
+      "exitCode": 0,
+      "status": "passed"
+    },
+    {
+      "id": "test-js",
+      "exitCode": 0,
+      "status": "passed"
+    },
+    {
+      "id": "test-wasm-gc",
+      "exitCode": 0,
+      "status": "passed"
+    },
+    {
+      "id": "test-native",
+      "exitCode": 0,
+      "status": "passed"
+    }
+  ],
+  "scope": "Fresh consumer importing the public registry version without local path dependencies. Five smoke tests on each backend; ORB host computation is not part of the Mooncakes package. Initial index refresh failed, explicit moon update succeeded before retry."
+}

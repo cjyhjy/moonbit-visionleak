@@ -20,7 +20,7 @@ node tools/server.mjs --report output/example/report.json --port 4173
 
 **0.7.0：确定性优先的分阶段审计、CSV 清单与指纹缓存。** [改进与迁移](docs/changes-0.7.0.md) · [工程验收](reports/followup-0.7.0/README.md)。实际公开发布状态以 [发布记录](reports/followup-0.7.0/publication/) 为准。
 
-[v0.7.1 已发布](https://github.com/cjyhjy/moonbit-visionleak/releases/tag/v0.7.1)，Mooncakes 为 `cjyhjy/visionleak@0.7.1`；实际下载和干净导入已校验。0.8.0 的版本字段与本地验收不代表正式发布，见其独立状态记录。
+[v0.8.0 已发布](https://github.com/cjyhjy/moonbit-visionleak/releases/tag/v0.8.0)，Mooncakes 为 `cjyhjy/visionleak@0.8.0`；实际下载和三后端干净导入已校验。Mooncakes 仅包含 Core；完整 ORB 功能使用源代码/Node 包。
 
 已发布 0.6.0 的完整变更见 [版本说明](docs/changes-0.6.0.md) 和 [CHANGELOG](CHANGELOG.md)。发布与验收状态以 [发布记录](reports/plan-0.6.0/publication/README.md) 为准；Mooncakes 模块为 `cjyhjy/visionleak`。
 

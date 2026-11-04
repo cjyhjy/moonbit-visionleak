@@ -1,6 +1,6 @@
-# VisionLeak 0.8.0 integration
+# VisionLeak 0.8.0 delivery
 
-Current source includes the independently accepted 0.7.1 retrieval optimization and opt-in ORB host integration. See `docs/changes-0.8.0.md`, `docs/followup-2026-11-03.md` and `reports/integration-0.8.0/README.md` for exact acceptance/publication state.
+Published from a66c773 after explicit approval; GitHub Release and Mooncakes 0.8.0 were independently downloaded/imported and verified. See reports/integration-0.8.0/publication/completion.json. Source includes the independently accepted 0.7.1 retrieval optimization and opt-in ORB host integration. See `docs/changes-0.8.0.md`, `docs/followup-2026-11-03.md` and `reports/integration-0.8.0/README.md` for exact acceptance/publication state.
 
 For full contributor acceptance install both requirements-oracle.txt and requirements-orb.txt into the selected Python environment, set VISIONLEAK_ORACLE_PYTHON and VISIONLEAK_ORB_PYTHON, then run `npm run verify:ci`. Optional dependencies are never required by default production audits. `node tools/orb-walkthrough.mjs NEW_DIR` generates the marked scripted review workflow.
 
