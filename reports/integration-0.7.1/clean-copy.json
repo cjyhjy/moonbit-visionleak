@@ -1,9 +1,9 @@
 {
   "schemaVersion": "visionleak-release-verification-v1",
   "status": "passed",
-  "startedAt": "2026-11-04T05:47:14.742191+00:00",
+  "startedAt": "2026-11-04T05:52:42.716471+00:00",
   "archive": "release/visionleak-0.7.1.zip",
-  "archiveSha256": "326f12fc375c2a3aa3367456a354fb75d7d1323833b4c30c5969d32b150a0722",
+  "archiveSha256": "9a41d2e1848fe6fc4e2e93296f3ac69f6a80d287fbb575ab3ed0a66c71596e68",
   "checks": [
     {
       "name": "sha256sums",
@@ -12,7 +12,7 @@
     {
       "name": "archive-manifest",
       "status": "passed",
-      "files": 1598
+      "files": 1515
     },
     {
       "name": "npm-ci",
@@ -25,7 +25,7 @@
         "--no-fund"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 0.290112792,
+      "elapsedSeconds": 0.188186959,
       "status": "passed",
       "log": "reports/integration-0.7.1/clean-copy-logs/release-npm-ci.log"
     },
@@ -36,7 +36,7 @@
         "tools/build.mjs"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 2.205605625,
+      "elapsedSeconds": 1.7818667090000002,
       "status": "passed",
       "log": "reports/integration-0.7.1/clean-copy-logs/release-rebuild.log"
     },
@@ -68,7 +68,7 @@
         "tests/split-aliases.test.mjs"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 3.6249856250000003,
+      "elapsedSeconds": 3.651355792,
       "status": "passed",
       "log": "reports/integration-0.7.1/clean-copy-logs/release-node-tests.log"
     },
@@ -84,7 +84,7 @@
         "acceptance-output"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 0.26122166599999996,
+      "elapsedSeconds": 0.25794145900000043,
       "status": "passed",
       "log": "reports/integration-0.7.1/clean-copy-logs/release-actual-images.log"
     },
@@ -108,7 +108,7 @@
         "--include-mirrors"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 0.29457379199999956,
+      "elapsedSeconds": 0.29649116600000003,
       "status": "passed",
       "log": "reports/integration-0.7.1/clean-copy-logs/release-mirror-images.log"
     },
@@ -130,7 +130,7 @@
         "photo-output-development-default"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 0.37864808299999986,
+      "elapsedSeconds": 0.36498945800000016,
       "status": "passed",
       "log": "reports/integration-0.7.1/clean-copy-logs/release-photos-development-default.log"
     },
@@ -153,7 +153,7 @@
         "--include-mirrors"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 0.38910095799999933,
+      "elapsedSeconds": 0.3804910829999999,
       "status": "passed",
       "log": "reports/integration-0.7.1/clean-copy-logs/release-photos-development-mirrors.log"
     },
@@ -177,7 +177,7 @@
         "--include-rotations"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 0.6190705830000001,
+      "elapsedSeconds": 0.6154074999999999,
       "status": "passed",
       "log": "reports/integration-0.7.1/clean-copy-logs/release-photos-development-orientations.log"
     },
@@ -199,7 +199,7 @@
         "photo-output-holdout-default"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 0.3329917079999998,
+      "elapsedSeconds": 0.32999866599999983,
       "status": "passed",
       "log": "reports/integration-0.7.1/clean-copy-logs/release-photos-holdout-default.log"
     },
@@ -222,7 +222,7 @@
         "--include-mirrors"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 0.3875536250000007,
+      "elapsedSeconds": 0.36726487500000005,
       "status": "passed",
       "log": "reports/integration-0.7.1/clean-copy-logs/release-photos-holdout-mirrors.log"
     },
@@ -246,7 +246,7 @@
         "--include-rotations"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 0.5578909579999998,
+      "elapsedSeconds": 0.5533782919999997,
       "status": "passed",
       "log": "reports/integration-0.7.1/clean-copy-logs/release-photos-holdout-orientations.log"
     },
@@ -265,13 +265,13 @@
         "import{sourceDigest}from'./tools/source-digest.mjs';console.log(sourceDigest(process.cwd()))"
       ],
       "exitCode": 0,
-      "elapsedSeconds": 0.05092295799999924,
+      "elapsedSeconds": 0.04784304100000014,
       "status": "passed",
       "log": "reports/integration-0.7.1/clean-copy-logs/release-source-digest.log"
     }
   ],
-  "sourceDigest": "7b24268d7895d76a24deacbd3f6434bb3126f987b4747c83c40ea2ae7938f689",
-  "extractedDirectory": "reports/clean-room/13ae44e2-00cd-4b5b-8533-7acfa396baf4/visionleak",
+  "sourceDigest": "2496d684fb7476f06e69aece2b1b7681e05459dbd8bc25760599dfef7ae9bf0d",
+  "extractedDirectory": "reports/clean-room/b3a70d2f-5617-41c9-bc8b-68410744ca73/visionleak",
   "extractedCopyRetained": false,
-  "finishedAt": "2026-11-04T05:47:24.547406+00:00"
+  "finishedAt": "2026-11-04T05:52:51.928582+00:00"
 }

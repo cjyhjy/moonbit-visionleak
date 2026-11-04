@@ -1,9 +1,9 @@
 {
   "schemaVersion": "visionleak-post-review-evaluation-v1",
-  "evaluatedAt": "2026-11-03T18:15:35.657901+00:00",
+  "evaluatedAt": "2026-11-04T05:51:40.369850+00:00",
   "freezeSha256": "ed1043e412c352504089dbf569d6f378bc5c35bdfe846b9dc79e1123a36b177a",
   "sourcesSha256": "1ccdc683fc2e748bcc7006026f23fb34fd0f4920eb7ee6d0e4a60bb8d7054a94",
-  "newSourceFiles": 12,
+  "newSourceFiles": 0,
   "images": 108,
   "scores": {
     "default": {
@@ -2273,8 +2273,8 @@
     "humanReviewStatus": "not-measured"
   },
   "automatedWallSeconds": {
-    "default": 0.9802837083116174,
-    "crops": 1.109169667121023
+    "default": 0.9665178749710321,
+    "crops": 1.0114842923358083
   },
   "phases": {
     "default": {
@@ -2372,5 +2372,15 @@
       }
     }
   },
-  "scope": "New source-file holdout under a frozen protocol; controlled transforms and metadata-selected same-scene negatives. No tuning after measurement. Natural contamination and human review time untested."
+  "scope": "Current implementation on already-known photos-v3; unchanged source bytes, transforms and labels; strict ordered evidence and window-witness comparison to the frozen staged baseline. Not a new holdout; natural contamination and human review time untested.",
+  "transformParity": {
+    "decodedPixelsAndLabelsUnchanged": true,
+    "encodedByteChanges": [],
+    "scope": "Generated file encodings may vary; source bytes, decoded pixels, transform metadata and all pair identity labels remain fixed."
+  },
+  "evaluationRole": "known-source-regression",
+  "sourceFiles": 12,
+  "currentSourceDigest": "2496d684fb7476f06e69aece2b1b7681e05459dbd8bc25760599dfef7ae9bf0d",
+  "currentArtifactSha256": "65fa94357c70b76ccb4e62f4dc88ace45cb719783edc3ca9de5fb80d8305e6d4",
+  "orderedBaselineParity": true
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-04T05:45:35.042524+00:00",
+  "generatedAt": "2026-11-04T05:51:43.516181+00:00",
   "dataset": {
     "name": "visionleak-synthetic-v1",
     "images": 59,
@@ -39,7 +39,7 @@
       "6"
     ],
     "exitCode": 0,
-    "wallSeconds": 0.2544484161771834,
+    "wallSeconds": 0.2687774579972029,
     "complete": true,
     "stats": {
       "inputImages": 59,
@@ -65,7 +65,7 @@
       "includeRotations": false,
       "includeCrops": false
     },
-    "reportSha256": "feba8ad58ee32ffce5eca0750cfbea2dcc4a67cfc336c54ee8c9db4184563c67"
+    "reportSha256": "57d3474ec320a539e6951d8d4e4111fc6cacf4ab77a265da5d5113990e37cc30"
   },
   "scores": {
     "exact": {
@@ -3896,7 +3896,7 @@
           "elapsedMs": 183
         },
         "after": {
-          "elapsedMs": 198
+          "elapsedMs": 213
         },
         "note": "Observational; never a regression failure condition."
       }
