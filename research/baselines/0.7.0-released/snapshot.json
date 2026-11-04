@@ -1,0 +1,9 @@
+{
+  "version": "0.7.0",
+  "commit": "7f2925850ff988875b8f544d7490fd10546621c4",
+  "purpose": "Immutable released runtime for full ordered output and budget regression",
+  "files": {
+    "dist/visionleak.js": "ad05cc71d2d8ef8620b7fe7695b5cd7b38c669c02e8b0a7afd6e943acef3b701",
+    "mih.mbt": "a31609c62f5a29f08675b0af4dca59564f40f411cd66895b23336ff959b182d9"
+  }
+}

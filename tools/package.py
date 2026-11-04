@@ -47,7 +47,7 @@ def main(verification_path=None):
     candidates.extend(p for p in (ROOT/'reports/mirror-demo').rglob('*') if p.is_file() and not p.name.startswith('.'))
     for folder in ['reports/photos-v1','reports/photos-demo']:
         candidates.extend(p for p in (ROOT/folder).rglob('*') if p.is_file() and not p.name.startswith('.'))
-    for folder in ['reports/plan-0.5.0','reports/plan-0.6.0','reports/optimization','reports/post-review','reports/followup-0.7.0']:
+    for folder in ['reports/plan-0.5.0','reports/plan-0.6.0','reports/optimization','reports/post-review','reports/followup-0.7.0',f'reports/integration-{version}']:
         candidates.extend(p for p in (ROOT/folder).rglob('*') if p.is_file() and not p.name.startswith('.'))
     locations=json.loads((ROOT/'research/photos-v1/freeze/archive-locations.json').read_text())
     candidates.extend(ROOT/name for version in locations.values() for name in version.values())

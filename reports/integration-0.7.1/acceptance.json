@@ -1,0 +1,110 @@
+{
+  "schemaVersion": "visionleak-followup-acceptance-v1",
+  "version": "0.7.1",
+  "status": "passed",
+  "verifiedAt": "2026-11-04T05:52:41.816Z",
+  "sourceDigest": "2496d684fb7476f06e69aece2b1b7681e05459dbd8bc25760599dfef7ae9bf0d",
+  "compiledArtifact": {
+    "path": "dist/visionleak.js",
+    "sha256": "65fa94357c70b76ccb4e62f4dc88ace45cb719783edc3ca9de5fb80d8305e6d4"
+  },
+  "ci": {
+    "path": "reports/integration-0.7.1/ci/verification.json",
+    "checks": 27
+  },
+  "browser": {
+    "schemaVersion": "visionleak-browser-followup-v1",
+    "status": "passed",
+    "checkedAt": "2026-11-04T05:46:48.581914+00:00",
+    "browser": "Google Chrome via CUA",
+    "coreArtifactSha256": "65fa94357c70b76ccb4e62f4dc88ace45cb719783edc3ca9de5fb80d8305e6d4",
+    "sourceHashes": {
+      "demo/app.mjs": "d0469c6500b273a0efcb24dbc2b47255faf71b8a3c6d2bb2e4c4428f30d1b457",
+      "demo/index.html": "278c7ebe68a4544714515fa2a9ed408f02bf84364f9a99eff7826f312c5abc01",
+      "demo/styles.css": "65c44403c6a12256ab0d837825ee78121791205e5f25eb12369ef1470f816e46",
+      "dist/visionleak.js": "65fa94357c70b76ccb4e62f4dc88ace45cb719783edc3ca9de5fb80d8305e6d4"
+    },
+    "auditIds": [
+      "670db6d197837221ec210042c2ba5d73b32eecf4dbefd4debbe160cfbda2cfc7"
+    ],
+    "checks": {
+      "loadsFivePairs": true,
+      "completePhaseCoverage": true,
+      "defaultReportOrder": true,
+      "markAndUndo": true,
+      "desktopVisualInspection": true,
+      "consoleWarningsOrErrorsObserved": []
+    },
+    "screenshots": [
+      {
+        "path": "reports/integration-0.7.1/chrome-desktop.jpg",
+        "sha256": "08088c7714d070be1f67ed454d12cb7000193f61a143be809fd35cf3831a6030"
+      }
+    ],
+    "limitations": [
+      "Chrome desktop on macOS only for 0.7.1; no new mobile or cross-browser claim.",
+      "Scripted fixture decisions are functional checks, not human-review-time evidence."
+    ]
+  },
+  "walkthrough": {
+    "path": "reports/integration-0.7.1/walkthrough.json",
+    "sourceDatasetUnchanged": true
+  },
+  "evidenceDigests": {
+    "reports/integration-0.7.1/ci/build-js.log": "30ec13dbdad8330682289e0f37415033da68d27500ec282757b7d943ce8227b5",
+    "reports/integration-0.7.1/ci/build-native-test-executable.log": "125b2b98d7b1c9fd1e254ce5e6466fe497da45f8d3f4065b5aa2f9ad7434c5bc",
+    "reports/integration-0.7.1/ci/build-wasm-gc.log": "30ec13dbdad8330682289e0f37415033da68d27500ec282757b7d943ce8227b5",
+    "reports/integration-0.7.1/ci/check-js.log": "30ec13dbdad8330682289e0f37415033da68d27500ec282757b7d943ce8227b5",
+    "reports/integration-0.7.1/ci/check-native.log": "30ec13dbdad8330682289e0f37415033da68d27500ec282757b7d943ce8227b5",
+    "reports/integration-0.7.1/ci/check-wasm-gc.log": "30ec13dbdad8330682289e0f37415033da68d27500ec282757b7d943ce8227b5",
+    "reports/integration-0.7.1/ci/crop-reference.log": "589f4183412b10e4e58a54dea3f6caa7a09a7c226d4ccde3431a98bfefc78a85",
+    "reports/integration-0.7.1/ci/evaluation-audit.json": "57d3474ec320a539e6951d8d4e4111fc6cacf4ab77a265da5d5113990e37cc30",
+    "reports/integration-0.7.1/ci/evaluation-compatibility.log": "ca18ffc8e8fdc6b71e49e9b4fd64e04661daa3243fb767d57a64ce80ea2d7b63",
+    "reports/integration-0.7.1/ci/evaluation-oracle.json": "65eb7b1d7f3289f37ae9f37d3f1da6d5210f92270e59934755a8ad001564ebff",
+    "reports/integration-0.7.1/ci/evaluation.json": "c478a077abd39de452db4f724e38e16929fb49a8440b5064a38ea667c9b8c057",
+    "reports/integration-0.7.1/ci/evaluation.md": "e9b6f15cde13a7727591898958459002f19da8f7fef6be1e2abe034338af063e",
+    "reports/integration-0.7.1/ci/format.log": "30ec13dbdad8330682289e0f37415033da68d27500ec282757b7d943ce8227b5",
+    "reports/integration-0.7.1/ci/frozen-source-integrity.log": "e3ac76bff2afb4e303338e3a000ede0b4232082dde26ccddeed978cee3dd0931",
+    "reports/integration-0.7.1/ci/imagehash-oracle.log": "dc5a822ab1a1c11a0b0f627ebac1e010aff1778c1bf98597494e634dcc254f54",
+    "reports/integration-0.7.1/ci/known-source-regression.log": "d6ef6a590cd63cd6314fc017b181061a3e21bad8b43ad8527d471b29ede9b0db",
+    "reports/integration-0.7.1/ci/metric-regression.log": "3dae40af5ca90b2291c3b06fe388f4b544e075c269de58ba4b337213cfde3c8e",
+    "reports/integration-0.7.1/ci/mirror-evaluation-audit.json": "0cd2950cf7823c67f29e2301bd52d304b65c352a39b9e654a5dea7975c74cb5b",
+    "reports/integration-0.7.1/ci/mirror-evaluation.json": "60e1defb8c07525f3f0b7cf0e07582d0982a4d46a1f07592b49d334192fbc3a7",
+    "reports/integration-0.7.1/ci/mirror-oracle.log": "48bdc2a97be372bb8f777340f78aba8223ade123ab854ee496f0741426b07e08",
+    "reports/integration-0.7.1/ci/mooncakes-compatibility.log": "33060fd73862c5e1af97335504d5b45211fce6d229657f556d8deceeadc52ce4",
+    "reports/integration-0.7.1/ci/mooncakes-package.log": "4ce4b259b27650df250c38fd5fede04ece05e638aa348014a22d256979f7fd63",
+    "reports/integration-0.7.1/ci/node-integration.log": "1dfbcc5857e21b45c2c32c1813bc7fb0d6322f6e47e5c852d690ff1c2767dcdd",
+    "reports/integration-0.7.1/ci/photo-development.log": "8ea74ecef114d4d2af61f2bf12451bae420a709afbf634be34eac87e5c90811b",
+    "reports/integration-0.7.1/ci/photo-holdout.log": "54ec42c1adeb6ce752be4fb78bef71530b03453b6c079b98e0d71049160b2f72",
+    "reports/integration-0.7.1/ci/photos-development/default-audit.json": "352e63503fe7a3cfc1b2e179b336c0e645f445b73c0bf0279dde9fbdbb3229c0",
+    "reports/integration-0.7.1/ci/photos-development/evaluation.json": "1404e4ec802b703c8d6c117fe5ecb77b8eb60f99b450221d6a1563d81c520ca2",
+    "reports/integration-0.7.1/ci/photos-development/mirrors-audit.json": "08ea4149626badc9cf4496799850e9ae4b9d1c27169bee192922bc228d407607",
+    "reports/integration-0.7.1/ci/photos-development/orientations-audit.json": "ef5b7925ebfdd26a22297c382423ce198a40cd69e8cd3b821717933f86701008",
+    "reports/integration-0.7.1/ci/photos-holdout/default-audit.json": "20796f242d2fec407b876b75df2da37d234502ae1fb7ff9d49d777b28672d8f1",
+    "reports/integration-0.7.1/ci/photos-holdout/evaluation.json": "8e95244db29643e0813233d6588d474b98dde51d5ba811a76575087f5f726f42",
+    "reports/integration-0.7.1/ci/photos-holdout/mirrors-audit.json": "87d48a30127777efb8e55f8c4d972d6e7c4e0faa3b9a00b975bcee19d6d33b52",
+    "reports/integration-0.7.1/ci/photos-holdout/orientations-audit.json": "ef4b6c74f37c104582922e52942b351637f849ec3c9116f3824b26aa8738cf02",
+    "reports/integration-0.7.1/ci/post-review-regression-1793771493544/crops-audit.json": "7b2e43f1214b74ad276fbc52fdaa2a01ddbb0c29a50dc193a9e97c3fe14a08fe",
+    "reports/integration-0.7.1/ci/post-review-regression-1793771493544/default-audit.json": "afece0e1ef9e68f0da8921fa3132d59312e7befd94f7e2db02d8ab561fe9309b",
+    "reports/integration-0.7.1/ci/post-review-regression-1793771493544/evaluation.json": "11e9632177a09ce371ad6f862f620f6677864c7fbda36dcf400c74caf24205b7",
+    "reports/integration-0.7.1/ci/post-review-regression-1793771493544/ground-truth.json": "bc1c03d9c8de9d2ed1c503f892ca0bf8bde204fb3a8f9d13d0fa3639aa4f4851",
+    "reports/integration-0.7.1/ci/release-contract.log": "47478b5c5a221ed42958bb89ac88fb8755b86e7d28ae458efa8e53814c7a4426",
+    "reports/integration-0.7.1/ci/report-history.log": "66d8f1fd86285dff9423603285dd5c6f2f3cf3ab6416532874f42919156bf3b3",
+    "reports/integration-0.7.1/ci/runtime-build.log": "629dcfd7aeb0a14d01ebd71b45d1256a54f2b855a4fa49bd5325e33112c53931",
+    "reports/integration-0.7.1/ci/test-js.log": "d1980b17d783129ee9afee24830f4f4aacee3d652ee2b3cb3a0e33b63cad5efb",
+    "reports/integration-0.7.1/ci/test-native-release.log": "d1980b17d783129ee9afee24830f4f4aacee3d652ee2b3cb3a0e33b63cad5efb",
+    "reports/integration-0.7.1/ci/test-native.log": "d1980b17d783129ee9afee24830f4f4aacee3d652ee2b3cb3a0e33b63cad5efb",
+    "reports/integration-0.7.1/ci/test-wasm-gc.log": "d1980b17d783129ee9afee24830f4f4aacee3d652ee2b3cb3a0e33b63cad5efb",
+    "reports/integration-0.7.1/ci/toolchain.log": "7e87c42fc4a6ca81d3947e0e5bf18e01faeaa842c762a4b22aac8eb37d8503d0",
+    "reports/integration-0.7.1/ci/verification.json": "da9451546c3e4a636e740b0cbad0c2d67661ebaa1c78aacba509f2f51e3d686e",
+    "reports/integration-0.7.1/browser.json": "45f231365e54efd45c30613451774c96a33fe73751e1276f53f656c2ded1468a",
+    "reports/integration-0.7.1/walkthrough.json": "e462eaecee7b7a1ad5ed7a70d1b8282a1f7ffdfffd7c37e7b21e39e9c8334d53",
+    "reports/followup-0.7.0/frozen-replay/evaluation.json": "55d6985af7a03e4402d16cd2658582c177b736e071bdbea10ae31b580d464cd4",
+    "research/photos-v3/freeze-0.7.0.json": "ed1043e412c352504089dbf569d6f378bc5c35bdfe846b9dc79e1123a36b177a",
+    "research/baselines/0.7.0-pre-followup/snapshot.json": "6d1fa2c509d7da04a4a7873a78c9c644297e0bd3c4012c35be3d3d7d67c9ae9e",
+    "reports/integration-0.7.1/chrome-desktop.jpg": "08088c7714d070be1f67ed454d12cb7000193f61a143be809fd35cf3831a6030"
+  },
+  "publication": {
+    "scope": "Local acceptance only; see separate publication receipts for commit, remote CI and release status."
+  }
+}

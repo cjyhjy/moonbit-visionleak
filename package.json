@@ -1,6 +1,6 @@
 {
   "name": "visionleak",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "private": true,
   "description": "MoonBit-powered local cross-split image duplicate auditing",
   "type": "module",

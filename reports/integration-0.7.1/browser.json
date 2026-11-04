@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "visionleak-browser-followup-v1",
+  "status": "passed",
+  "checkedAt": "2026-11-04T05:46:48.581914+00:00",
+  "browser": "Google Chrome via CUA",
+  "coreArtifactSha256": "65fa94357c70b76ccb4e62f4dc88ace45cb719783edc3ca9de5fb80d8305e6d4",
+  "sourceHashes": {
+    "demo/app.mjs": "d0469c6500b273a0efcb24dbc2b47255faf71b8a3c6d2bb2e4c4428f30d1b457",
+    "demo/index.html": "278c7ebe68a4544714515fa2a9ed408f02bf84364f9a99eff7826f312c5abc01",
+    "demo/styles.css": "65c44403c6a12256ab0d837825ee78121791205e5f25eb12369ef1470f816e46",
+    "dist/visionleak.js": "65fa94357c70b76ccb4e62f4dc88ace45cb719783edc3ca9de5fb80d8305e6d4"
+  },
+  "auditIds": [
+    "670db6d197837221ec210042c2ba5d73b32eecf4dbefd4debbe160cfbda2cfc7"
+  ],
+  "checks": {
+    "loadsFivePairs": true,
+    "completePhaseCoverage": true,
+    "defaultReportOrder": true,
+    "markAndUndo": true,
+    "desktopVisualInspection": true,
+    "consoleWarningsOrErrorsObserved": []
+  },
+  "screenshots": [
+    {
+      "path": "reports/integration-0.7.1/chrome-desktop.jpg",
+      "sha256": "08088c7714d070be1f67ed454d12cb7000193f61a143be809fd35cf3831a6030"
+    }
+  ],
+  "limitations": [
+    "Chrome desktop on macOS only for 0.7.1; no new mobile or cross-browser claim.",
+    "Scripted fixture decisions are functional checks, not human-review-time evidence."
+  ]
+}

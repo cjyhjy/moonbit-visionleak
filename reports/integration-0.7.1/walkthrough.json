@@ -1,0 +1,241 @@
+{
+  "schemaVersion": "visionleak-walkthrough-v1",
+  "createdAt": "2026-11-04T05:45:10.562Z",
+  "status": "passed",
+  "sourceDatasetUnchanged": true,
+  "inputDigests": {
+    "train/original.png": "e2178ef57cd686bf9ab41a34e38383d0bf9ae27619d770db9de69806d0f0537d",
+    "test/byte-copy.png": "e2178ef57cd686bf9ab41a34e38383d0bf9ae27619d770db9de69806d0f0537d",
+    "validation/pixel-repack.png": "ddde45cfc9677b2e8f2731de923428c519dd50f4548719164d17d5ef44119e47",
+    "test/brighter.png": "5022bf0c718dc4aba808b66c9bc48d8086e3dcc6dc0975019b5c9a750009968e"
+  },
+  "steps": {
+    "audit": {
+      "auditId": "670db6d197837221ec210042c2ba5d73b32eecf4dbefd4debbe160cfbda2cfc7",
+      "complete": true,
+      "exitCode": 3,
+      "pairs": 5,
+      "phases": {
+        "deterministic": {
+          "enabled": true,
+          "complete": true,
+          "status": "complete",
+          "inputImages": 4,
+          "processedImages": 4,
+          "comparisons": 3,
+          "maxComparisons": 1000000,
+          "distanceEvaluations": 0,
+          "pairChecks": 3,
+          "indexOperations": 0,
+          "indexOperationLimit": 16000000,
+          "emittedPairs": 3,
+          "reason": ""
+        },
+        "perceptual": {
+          "enabled": true,
+          "complete": true,
+          "status": "complete",
+          "inputImages": 4,
+          "processedImages": 4,
+          "comparisons": 8,
+          "maxComparisons": 1000000,
+          "distanceEvaluations": 6,
+          "pairChecks": 2,
+          "indexOperations": 0,
+          "indexOperationLimit": 16000000,
+          "emittedPairs": 2,
+          "reason": ""
+        },
+        "local": {
+          "enabled": false,
+          "complete": false,
+          "status": "disabled",
+          "inputImages": 4,
+          "processedImages": 0,
+          "comparisons": 0,
+          "maxComparisons": 1000000,
+          "distanceEvaluations": 0,
+          "pairChecks": 0,
+          "indexOperations": 0,
+          "indexOperationLimit": 16000000,
+          "emittedPairs": 0,
+          "reason": ""
+        }
+      }
+    },
+    "limited": {
+      "complete": false,
+      "exitCode": 3,
+      "phases": {
+        "deterministic": {
+          "enabled": true,
+          "complete": true,
+          "status": "complete",
+          "inputImages": 4,
+          "processedImages": 4,
+          "comparisons": 3,
+          "maxComparisons": 1000000,
+          "distanceEvaluations": 0,
+          "pairChecks": 3,
+          "indexOperations": 0,
+          "indexOperationLimit": 16000000,
+          "emittedPairs": 3,
+          "reason": ""
+        },
+        "perceptual": {
+          "enabled": true,
+          "complete": false,
+          "status": "incomplete",
+          "inputImages": 4,
+          "processedImages": 1,
+          "comparisons": 0,
+          "maxComparisons": 0,
+          "distanceEvaluations": 0,
+          "pairChecks": 0,
+          "indexOperations": 0,
+          "indexOperationLimit": 0,
+          "emittedPairs": 0,
+          "reason": "ComparisonBudget"
+        },
+        "local": {
+          "enabled": false,
+          "complete": false,
+          "status": "disabled",
+          "inputImages": 4,
+          "processedImages": 0,
+          "comparisons": 0,
+          "maxComparisons": 0,
+          "distanceEvaluations": 0,
+          "pairChecks": 0,
+          "indexOperations": 0,
+          "indexOperationLimit": 0,
+          "emittedPairs": 0,
+          "reason": ""
+        }
+      }
+    },
+    "verify": {
+      "ok": true,
+      "auditId": "670db6d197837221ec210042c2ba5d73b32eecf4dbefd4debbe160cfbda2cfc7",
+      "pairs": [
+        {
+          "pairKey": "[\"test/byte-copy.png\",\"train/original.png\"]",
+          "left": "test/byte-copy.png",
+          "right": "train/original.png",
+          "evidence": "byte-identical",
+          "status": "valid",
+          "leftObservation": {
+            "id": "test/byte-copy.png",
+            "status": "ok",
+            "byteDigest": "e2178ef57cd686bf9ab41a34e38383d0bf9ae27619d770db9de69806d0f0537d",
+            "pixelDigest": "471d9a0740da1d79fe8d6e7e409ba99345fe9511a2bb04a73af0a7434f89b74c"
+          },
+          "rightObservation": {
+            "id": "train/original.png",
+            "status": "ok",
+            "byteDigest": "e2178ef57cd686bf9ab41a34e38383d0bf9ae27619d770db9de69806d0f0537d",
+            "pixelDigest": "471d9a0740da1d79fe8d6e7e409ba99345fe9511a2bb04a73af0a7434f89b74c"
+          }
+        },
+        {
+          "pairKey": "[\"test/byte-copy.png\",\"validation/pixel-repack.png\"]",
+          "left": "test/byte-copy.png",
+          "right": "validation/pixel-repack.png",
+          "evidence": "pixel-identical",
+          "status": "valid",
+          "leftObservation": {
+            "id": "test/byte-copy.png",
+            "status": "ok",
+            "byteDigest": "e2178ef57cd686bf9ab41a34e38383d0bf9ae27619d770db9de69806d0f0537d",
+            "pixelDigest": "471d9a0740da1d79fe8d6e7e409ba99345fe9511a2bb04a73af0a7434f89b74c"
+          },
+          "rightObservation": {
+            "id": "validation/pixel-repack.png",
+            "status": "ok",
+            "byteDigest": "ddde45cfc9677b2e8f2731de923428c519dd50f4548719164d17d5ef44119e47",
+            "pixelDigest": "471d9a0740da1d79fe8d6e7e409ba99345fe9511a2bb04a73af0a7434f89b74c"
+          }
+        },
+        {
+          "pairKey": "[\"train/original.png\",\"validation/pixel-repack.png\"]",
+          "left": "train/original.png",
+          "right": "validation/pixel-repack.png",
+          "evidence": "pixel-identical",
+          "status": "valid",
+          "leftObservation": {
+            "id": "train/original.png",
+            "status": "ok",
+            "byteDigest": "e2178ef57cd686bf9ab41a34e38383d0bf9ae27619d770db9de69806d0f0537d",
+            "pixelDigest": "471d9a0740da1d79fe8d6e7e409ba99345fe9511a2bb04a73af0a7434f89b74c"
+          },
+          "rightObservation": {
+            "id": "validation/pixel-repack.png",
+            "status": "ok",
+            "byteDigest": "ddde45cfc9677b2e8f2731de923428c519dd50f4548719164d17d5ef44119e47",
+            "pixelDigest": "471d9a0740da1d79fe8d6e7e409ba99345fe9511a2bb04a73af0a7434f89b74c"
+          }
+        }
+      ],
+      "counts": {
+        "valid": 3,
+        "invalid": 0,
+        "missing": 0,
+        "skippedCandidates": 2
+      },
+      "exitCode": 0,
+      "verificationScope": {
+        "evidenceTypes": [
+          "byte-identical",
+          "pixel-identical"
+        ],
+        "candidatesRecomputed": false,
+        "wholeDatasetReaudited": false
+      }
+    },
+    "review": {
+      "file": "scripted-review.json",
+      "kind": "scripted-demonstration-not-human-review"
+    },
+    "fixes": {
+      "rows": 3,
+      "file": "suggestions.csv"
+    },
+    "offline": {
+      "file": "evidence.html",
+      "bytes": 83488,
+      "truncated": false
+    },
+    "correctedCopy": {
+      "omittedPaths": [
+        "validation/pixel-repack.png",
+        "test/byte-copy.png"
+      ],
+      "auditId": "fe61579b19dc1f697358a311e3e8e17ddce53878ca5ea04a4d79201624bc179d",
+      "complete": true,
+      "exitCode": 0,
+      "remainingCandidates": 1
+    },
+    "cache": {
+      "identitiesEqual": true,
+      "cold": {
+        "hits": 1,
+        "misses": 3,
+        "invalid": 0,
+        "writes": 3,
+        "writeErrors": 0
+      },
+      "warm": {
+        "hits": 4,
+        "misses": 0,
+        "invalid": 0,
+        "writes": 0,
+        "writeErrors": 0
+      }
+    }
+  },
+  "open": {
+    "report": "audit/report.json",
+    "offline": "evidence.html"
+  },
+  "scope": "Generated demonstration data and scripted review; corrected copy is constructed inside this new output tree. Production CLI only exports suggestions."
+}

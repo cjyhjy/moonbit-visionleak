@@ -5,11 +5,13 @@
 priv struct MihIndex {
   buckets : Map[Int32, Array[Int32]]
   parents : Array[Int32]
+  marks : Array[Int32]
+  mut generation : Int32
 }
 
 ///|
 fn mih_new() -> MihIndex {
-  { buckets: Map([]), parents: [], }
+  { buckets: Map([]), parents: [], marks: [], generation: 0, }
 }
 
 ///|
@@ -22,6 +24,7 @@ fn hash_segment(hash : Hash64, part : Int32) -> Int32 {
 fn mih_insert(index : MihIndex, hash : Hash64, parent : Int32) -> Unit {
   let id = index.parents.length()
   index.parents.push(parent)
+  index.marks.push(0)
   for part in 0..<4 {
     let key = part * 65536 + hash_segment(hash, part)
     match index.buckets.get(key) {
@@ -45,17 +48,26 @@ fn Budget::take_index(self : Budget) -> Bool {
 }
 
 ///|
+priv struct MihPaths {
+  marks : Array[Int32]
+  generation : Int32
+}
+
+///|
 fn mih_paths(
   index : MihIndex,
   hash : Hash64,
   threshold : Int32,
   budget : Budget,
-) -> Map[Int32, Bool]? {
+) -> MihPaths? {
   // Small trees cost less to traverse directly. Large radii retain BK search.
   if threshold > 7 || index.parents.length() < 128 {
     return None
   }
-  let paths : Map[Int32, Bool] = Map([])
+  // At most 10,000 images * 20 local windows per audit; each audit owns
+  // a fresh index. Paths are consumed before the next query or insertion.
+  index.generation = index.generation + 1
+  let paths : MihPaths = { marks: index.marks, generation: index.generation, }
   for part in 0..<4 {
     let segment = hash_segment(hash, part)
     let probes = if threshold < 4 { 1 } else { 17 }
@@ -71,11 +83,11 @@ fn mih_paths(
             return Some(paths)
           }
           let mut cursor = id
-          while cursor >= 0 && !paths.contains(cursor) {
+          while cursor >= 0 && paths.marks[cursor] != paths.generation {
             if !budget.take_index() {
               return Some(paths)
             }
-            paths[cursor] = true
+            paths.marks[cursor] = paths.generation
             cursor = index.parents[cursor]
           }
         }
@@ -86,9 +98,9 @@ fn mih_paths(
 }
 
 ///|
-fn mih_contains(paths : Map[Int32, Bool]?, id : Int32) -> Bool {
+fn mih_contains(paths : MihPaths?, id : Int32) -> Bool {
   match paths {
     None => true
-    Some(values) => values.contains(id)
+    Some(values) => values.marks[id] == values.generation
   }
 }
