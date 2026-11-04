@@ -5,6 +5,7 @@ import hashlib
 import importlib.util
 import json
 from pathlib import Path
+import platform
 import subprocess
 import time
 
@@ -13,6 +14,35 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def read(path):
     return json.loads(path.read_text())
+
+
+def replay_reference(experiment, protocol, dataset, records, historical):
+    """Unchanged frozen algorithm on this platform; never a new holdout."""
+    import cv2
+    assert cv2.__version__ == '4.13.0'
+    assert experiment.sha(Path(experiment.__file__)) == historical['implementationSha256']
+    assert experiment.sha(ROOT / 'research/followup-quality/protocol.json') == historical['protocolSha256']
+    cv2.setNumThreads(1)
+    profile = protocol['profiles']['orb800']
+    detector = cv2.ORB_create(nfeatures=profile['features'], scaleFactor=1.2, nlevels=8,
+                             edgeThreshold=15, patchSize=31, fastThreshold=20, WTA_K=2)
+    features = {}
+    for row in records:
+        gray = experiment.grayscale(experiment.Image.open(dataset / 'data' / row['id']))
+        points, descriptors = detector.detectAndCompute(gray, None)
+        features[row['id']] = points, descriptors, gray.shape
+    pairs = {}
+    for old in historical['pairs']:
+        key = old['original'], old['query']
+        seed = int(hashlib.sha256(('|'.join(key)).encode()).hexdigest()[:8], 16)
+        hit, witness, _ = experiment.orb_match(features[key[0]], features[key[1]], profile, seed)
+        pairs[key] = {**old, 'hit': bool(hit), 'witness': witness}
+    result = {'scope': 'Known-data replay of unchanged frozen algorithm on the current platform; not a new-source experiment.',
+              'platform': platform.platform(), 'opencv': cv2.__version__,
+              'opencvBuildDigest': hashlib.sha256(cv2.getBuildInformation().encode()).hexdigest(),
+              'pairs': list(pairs.values())}
+    (dataset / 'same-platform-reference.json').write_text(json.dumps(result, indent=2) + '\n')
+    return pairs
 
 
 def main(out):
@@ -33,6 +63,7 @@ def main(out):
         queries = [r for r in records if r['role'] == 'query']
         reference = read(ROOT / f'reports/followup-quality/{partition}/orb800.json')
         expected = {(p['original'], p['query']): p for p in reference['pairs']}
+        runtime_reference = replay_reference(experiment, protocol, dataset, records, reference)
         products = {}
         batches = []
         # Fresh bounded invocations; every query is still compared to ALL originals.
@@ -66,28 +97,41 @@ def main(out):
                             'processWallSeconds': time.monotonic() - began})
         preserved = 0
         same_direction_witnesses = 0
+        platform_differences = []
         tp = fp = additional = 0
         for key, old in expected.items():
+            current = runtime_reference[key]
             pair = products.get(key)
             if old['hit']:
                 assert pair is not None, ('lost frozen ORB hit', partition, key)
                 preserved += 1
+            if current['hit']:
+                assert pair is not None, ('lost same-platform reference hit', partition, key)
+            if current['hit'] != old['hit'] or (current['hit'] and any(current['witness'][name] != old['witness'][name]
+                   for name in ['matches', 'inliers', 'queryToOriginal'])):
+                platform_differences.append({'original': key[0], 'query': key[1],
+                    'historicalHit': old['hit'], 'currentHit': current['hit'],
+                    'historicalWitness': old['witness'], 'currentWitness': current['witness']})
             if pair:
                 tp += int(old['positive']); fp += int(not old['positive'])
                 additional += int(not old['hit'])
-            if pair and pair['evidence'] == 'orb-candidate' and old['hit'] and pair['matchOrb']['original'] == old['original']:
+            if pair and pair['evidence'] == 'orb-candidate' and pair['matchOrb']['original'] == old['original']:
+                assert current['hit'], ('product-only same-direction hit', partition, key)
                 witness = pair['matchOrb']
                 for name in ['matches', 'inliers', 'contained']:
-                    assert witness[name] == old['witness'][name], (key, name)
-                # Linux and macOS floating arithmetic may differ slightly; do not hide hit/count drift.
-                for a, b in zip(sum(witness['queryToOriginal'], []), sum(old['witness']['queryToOriginal'], [])):
+                    assert witness[name] == current['witness'][name], (key, name)
+                # Keep exact count and tight matrix parity against the independent
+                # frozen algorithm; record cross-platform historical drift separately.
+                for a, b in zip(sum(witness['queryToOriginal'], []), sum(current['witness']['queryToOriginal'], [])):
                     assert abs(a - b) < 0.00001, (key, 'affine drift')
                 same_direction_witnesses += 1
         assert not (set(products) - set(expected))
         assert fp == 0, ('known source-label negative regression', partition, fp)
+        (dataset / 'cross-platform-differences.json').write_text(json.dumps(platform_differences, indent=2) + '\n')
         results.append({'partition': partition, 'sourceFiles': len(gallery), 'queries': len(queries),
                         'allOriginalQueryRelations': len(expected), 'frozenOrbHitsPreserved': preserved,
                         'matchingDirectionWitnessesChecked': same_direction_witnesses,
+                        'historicalPlatformDifferences': len(platform_differences),
                         'productUnionTp': tp, 'productUnionFp': fp, 'productUnionFn': len(queries) - tp,
                         'additionalPairsOverFrozenOrb': additional, 'batches': batches})
     assert bindings == {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in bound_files}, 'Implementation changed during regression'

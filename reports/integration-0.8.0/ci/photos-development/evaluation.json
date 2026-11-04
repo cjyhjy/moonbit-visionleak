@@ -1873,11 +1873,11 @@
         "6"
       ],
       "wallSeconds": [
-        0.3510431661270559,
-        0.383953541982919,
-        0.3513147500343621
+        0.37640908313915133,
+        0.3877497920766473,
+        0.46295829117298126
       ],
-      "medianWallSeconds": 0.3513147500343621
+      "medianWallSeconds": 0.3877497920766473
     },
     "mirrors": {
       "scores": {
@@ -2799,11 +2799,11 @@
         "--include-mirrors"
       ],
       "wallSeconds": [
-        0.4502599579282105,
-        0.4366095410659909,
-        0.3842341247946024
+        0.4163236250169575,
+        0.41633958322927356,
+        0.41201658407226205
       ],
-      "medianWallSeconds": 0.4366095410659909
+      "medianWallSeconds": 0.4163236250169575
     },
     "orientations": {
       "scores": {
@@ -3297,11 +3297,11 @@
         "--include-rotations"
       ],
       "wallSeconds": [
-        0.5838448749855161,
-        0.5955627500079572,
-        0.6148800002411008
+        0.6150946668349206,
+        0.6648877081461251,
+        0.6543304999358952
       ],
-      "medianWallSeconds": 0.5955627500079572
+      "medianWallSeconds": 0.6543304999358952
     }
   },
   "baselineComparison": {
@@ -3372,7 +3372,7 @@
           "elapsedMs": 293
         },
         "after": {
-          "elapsedMs": 295
+          "elapsedMs": 401
         },
         "note": "Observational; never a regression failure condition."
       }
@@ -3444,7 +3444,7 @@
           "elapsedMs": 347
         },
         "after": {
-          "elapsedMs": 326
+          "elapsedMs": 350
         },
         "note": "Observational; never a regression failure condition."
       }
@@ -3528,7 +3528,7 @@
           "elapsedMs": 598
         },
         "after": {
-          "elapsedMs": 557
+          "elapsedMs": 592
         },
         "note": "Observational; never a regression failure condition."
       }

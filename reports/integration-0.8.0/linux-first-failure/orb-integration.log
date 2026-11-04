@@ -1,0 +1,9 @@
+{"sourceFiles": 24, "images": 168, "queries": 144}
+Traceback (most recent call last):
+  File "./tools/validate-orb-integration.py", line 103, in <module>
+    main(parser.parse_args().out)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "./tools/validate-orb-integration.py", line 81, in main
+    assert witness[name] == old['witness'][name], (key, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: (('train/89995572-original.png', 'test/89995572-small-resize-jpeg75.png'), 'inliers')

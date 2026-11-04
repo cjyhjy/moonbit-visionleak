@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "reports": 84,
+  "reports": 103,
   "scope": "Valid report samples in reports/ and available original 0.1.0\u20130.4.0 ZIPs; excludes intentionally tampered QA inputs and old failed clean-room copies.",
   "results": [
     {
@@ -182,6 +182,101 @@
       "path": "reports/integration-0.7.1/ci/post-review-regression-1793771493544/default-audit.json",
       "auditId": "991bf02584548f83226d27270c7bd1de4e3f5a910013df1a886ea62968e5d4af",
       "actual": "991bf02584548f83226d27270c7bd1de4e3f5a910013df1a886ea62968e5d4af"
+    },
+    {
+      "path": "reports/integration-0.8.0/pre-linux/ci/evaluation-audit.json",
+      "auditId": "272ac7b849664b9ac2cf5e43fe9f5e73ca3aeb78076f383763151fa1f350dd99",
+      "actual": "272ac7b849664b9ac2cf5e43fe9f5e73ca3aeb78076f383763151fa1f350dd99"
+    },
+    {
+      "path": "reports/integration-0.8.0/pre-linux/ci/mirror-evaluation-audit.json",
+      "auditId": "e83089592f8c5940e3096808482ee4f45fd88041960afddc7868dc3424076ff8",
+      "actual": "e83089592f8c5940e3096808482ee4f45fd88041960afddc7868dc3424076ff8"
+    },
+    {
+      "path": "reports/integration-0.8.0/pre-linux/ci/orb-regression-1793773980464/development/batch-0/report.json",
+      "auditId": "050b781d204b71885bc9fce14552fa27950e8d003193d1ea9beb14ec82a2fe31",
+      "actual": "050b781d204b71885bc9fce14552fa27950e8d003193d1ea9beb14ec82a2fe31"
+    },
+    {
+      "path": "reports/integration-0.8.0/pre-linux/ci/orb-regression-1793773980464/development/batch-120/report.json",
+      "auditId": "dadf9842669d0a01f61f7289888dfeb2cbaad7b82cc66bededec1b2969036e6f",
+      "actual": "dadf9842669d0a01f61f7289888dfeb2cbaad7b82cc66bededec1b2969036e6f"
+    },
+    {
+      "path": "reports/integration-0.8.0/pre-linux/ci/orb-regression-1793773980464/development/batch-24/report.json",
+      "auditId": "cb10ee6c3e46f6c364057bafd69dbd61e788785421598a9e0138d6576b8a2a06",
+      "actual": "cb10ee6c3e46f6c364057bafd69dbd61e788785421598a9e0138d6576b8a2a06"
+    },
+    {
+      "path": "reports/integration-0.8.0/pre-linux/ci/orb-regression-1793773980464/development/batch-48/report.json",
+      "auditId": "abfaf59773250b24be1c4a0558b8773105c05cacebc8b47d5e31544a83b5cd75",
+      "actual": "abfaf59773250b24be1c4a0558b8773105c05cacebc8b47d5e31544a83b5cd75"
+    },
+    {
+      "path": "reports/integration-0.8.0/pre-linux/ci/orb-regression-1793773980464/development/batch-72/report.json",
+      "auditId": "69ed1c7e23d43245b64b36c31eb4ddc4dc660899a887d14c561d443b70958af3",
+      "actual": "69ed1c7e23d43245b64b36c31eb4ddc4dc660899a887d14c561d443b70958af3"
+    },
+    {
+      "path": "reports/integration-0.8.0/pre-linux/ci/orb-regression-1793773980464/development/batch-96/report.json",
+      "auditId": "a7450beb588ed4f8e70eb8b84bf6a7f14dae90c4e5ee7401af8483e2fd2e6c4f",
+      "actual": "a7450beb588ed4f8e70eb8b84bf6a7f14dae90c4e5ee7401af8483e2fd2e6c4f"
+    },
+    {
+      "path": "reports/integration-0.8.0/pre-linux/ci/orb-regression-1793773980464/holdout/batch-0/report.json",
+      "auditId": "a6abea664b1e6ac1540a2a0b7399e341928aa68842ec033a3b80b77eb600262a",
+      "actual": "a6abea664b1e6ac1540a2a0b7399e341928aa68842ec033a3b80b77eb600262a"
+    },
+    {
+      "path": "reports/integration-0.8.0/pre-linux/ci/orb-regression-1793773980464/holdout/batch-24/report.json",
+      "auditId": "2c08e534e20ece261f79fa7315766c1fa570bdb008f384eaea445f0dd0fdf20f",
+      "actual": "2c08e534e20ece261f79fa7315766c1fa570bdb008f384eaea445f0dd0fdf20f"
+    },
+    {
+      "path": "reports/integration-0.8.0/pre-linux/ci/orb-regression-1793773980464/holdout/batch-48/report.json",
+      "auditId": "626c38ec4ae21aa83f5f9170979b0a533951fb3352750d32ffc76320b0b3e276",
+      "actual": "626c38ec4ae21aa83f5f9170979b0a533951fb3352750d32ffc76320b0b3e276"
+    },
+    {
+      "path": "reports/integration-0.8.0/pre-linux/ci/photos-development/default-audit.json",
+      "auditId": "08a6be79de31f6c5269b8cfe2f324c05fb1983eaaed710492b68da4bdf0c3a41",
+      "actual": "08a6be79de31f6c5269b8cfe2f324c05fb1983eaaed710492b68da4bdf0c3a41"
+    },
+    {
+      "path": "reports/integration-0.8.0/pre-linux/ci/photos-development/mirrors-audit.json",
+      "auditId": "53cf021f71b611ba54b0874da16446834f7b8b3a6acdd3daf6600e23a4e340b6",
+      "actual": "53cf021f71b611ba54b0874da16446834f7b8b3a6acdd3daf6600e23a4e340b6"
+    },
+    {
+      "path": "reports/integration-0.8.0/pre-linux/ci/photos-development/orientations-audit.json",
+      "auditId": "71417e7a23179ffa4ac4cbf99c7108342be793cb1ab358bbba3b3f9ddfe24087",
+      "actual": "71417e7a23179ffa4ac4cbf99c7108342be793cb1ab358bbba3b3f9ddfe24087"
+    },
+    {
+      "path": "reports/integration-0.8.0/pre-linux/ci/photos-holdout/default-audit.json",
+      "auditId": "f34658b2fd5fcbea2a0648f5e6e2ec314368a59f0871c1bdc2412e3593524d2a",
+      "actual": "f34658b2fd5fcbea2a0648f5e6e2ec314368a59f0871c1bdc2412e3593524d2a"
+    },
+    {
+      "path": "reports/integration-0.8.0/pre-linux/ci/photos-holdout/mirrors-audit.json",
+      "auditId": "308b3d7721eba28b49166e77f92a8b0e4e0ac3a1854385c3633254e4a4d4d6c0",
+      "actual": "308b3d7721eba28b49166e77f92a8b0e4e0ac3a1854385c3633254e4a4d4d6c0"
+    },
+    {
+      "path": "reports/integration-0.8.0/pre-linux/ci/photos-holdout/orientations-audit.json",
+      "auditId": "9dbcc174f539ddf94af4d41843b596ceee6754dcd09a2081f72a22b8866b2dfa",
+      "actual": "9dbcc174f539ddf94af4d41843b596ceee6754dcd09a2081f72a22b8866b2dfa"
+    },
+    {
+      "path": "reports/integration-0.8.0/pre-linux/ci/post-review-regression-1793774050357/crops-audit.json",
+      "auditId": "b9353fe42fe5660c503c0cfc43137cf5f9ccd34351802dc56a398162715ae632",
+      "actual": "b9353fe42fe5660c503c0cfc43137cf5f9ccd34351802dc56a398162715ae632"
+    },
+    {
+      "path": "reports/integration-0.8.0/pre-linux/ci/post-review-regression-1793774050357/default-audit.json",
+      "auditId": "de5e35c74827610501ef1badddeeb6a867797e5d463778d199c57ef1640cfcb9",
+      "actual": "de5e35c74827610501ef1badddeeb6a867797e5d463778d199c57ef1640cfcb9"
     },
     {
       "path": "reports/mirror-demo/report.json",

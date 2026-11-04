@@ -1,6 +1,6 @@
 {
   "schemaVersion": "visionleak-ci-v1",
-  "startedAt": "2026-11-04T06:32:52.220Z",
+  "startedAt": "2026-11-04T06:45:16.520Z",
   "status": "passed",
   "environment": {
     "node": "v26.7.0",
@@ -20,7 +20,7 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 29,
+      "elapsedMs": 25,
       "log": "toolchain.log"
     },
     {
@@ -32,7 +32,7 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 55,
+      "elapsedMs": 64,
       "log": "format.log"
     },
     {
@@ -45,7 +45,7 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 63,
+      "elapsedMs": 68,
       "log": "check-js.log"
     },
     {
@@ -72,7 +72,7 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 1289,
+      "elapsedMs": 1188,
       "log": "test-js.log"
     },
     {
@@ -85,7 +85,7 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 71,
+      "elapsedMs": 68,
       "log": "check-wasm-gc.log"
     },
     {
@@ -99,7 +99,7 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 67,
+      "elapsedMs": 63,
       "log": "build-wasm-gc.log"
     },
     {
@@ -112,7 +112,7 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 945,
+      "elapsedMs": 877,
       "log": "test-wasm-gc.log"
     },
     {
@@ -125,7 +125,7 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 63,
+      "elapsedMs": 66,
       "log": "check-native.log"
     },
     {
@@ -140,7 +140,7 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 73,
+      "elapsedMs": 82,
       "log": "build-native-test-executable.log"
     },
     {
@@ -154,7 +154,7 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 424,
+      "elapsedMs": 401,
       "log": "test-native-release.log"
     },
     {
@@ -167,7 +167,7 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 1850,
+      "elapsedMs": 1778,
       "log": "test-native.log"
     },
     {
@@ -178,7 +178,7 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 95,
+      "elapsedMs": 89,
       "log": "runtime-build.log"
     },
     {
@@ -189,7 +189,7 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 3103,
+      "elapsedMs": 3771,
       "log": "node-integration.log"
     },
     {
@@ -198,11 +198,11 @@
         "/Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak/output/followup-quality-venv/bin/python",
         "tools/validate-orb-integration.py",
         "--out",
-        ".ci-artifacts/orb-regression-1793773980464"
+        ".ci-artifacts/orb-regression-1793774725177"
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 48374,
+      "elapsedMs": 66317,
       "log": "orb-integration.log"
     },
     {
@@ -211,11 +211,11 @@
         "research/.venv-oracle/bin/python",
         "tools/benchmark-native.py",
         "--out",
-        ".ci-artifacts/native-performance-1793774028838"
+        ".ci-artifacts/native-performance-1793774791494"
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 14265,
+      "elapsedMs": 15187,
       "log": "native-retrieval-performance.log"
     },
     {
@@ -223,12 +223,12 @@
       "command": [
         "node",
         "tools/benchmark-integration.mjs",
-        ".ci-artifacts/scale-1793774043104",
+        ".ci-artifacts/scale-1793774806681",
         "1000"
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 5091,
+      "elapsedMs": 4639,
       "log": "bounded-scale.log"
     },
     {
@@ -239,7 +239,7 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 42,
+      "elapsedMs": 37,
       "log": "mooncakes-compatibility.log"
     },
     {
@@ -250,7 +250,7 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 128,
+      "elapsedMs": 125,
       "log": "mooncakes-package.log"
     },
     {
@@ -261,7 +261,7 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 87,
+      "elapsedMs": 70,
       "log": "release-contract.log"
     },
     {
@@ -272,7 +272,7 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 58,
+      "elapsedMs": 55,
       "log": "evaluation-compatibility.log"
     },
     {
@@ -283,7 +283,7 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 481,
+      "elapsedMs": 564,
       "log": "report-history.log"
     },
     {
@@ -305,7 +305,7 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 264,
+      "elapsedMs": 259,
       "log": "crop-reference.log"
     },
     {
@@ -316,7 +316,7 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 36,
+      "elapsedMs": 35,
       "log": "frozen-source-integrity.log"
     },
     {
@@ -326,11 +326,11 @@
         "tools/evaluate-post-review.py",
         "--regression",
         "--out",
-        ".ci-artifacts/post-review-regression-1793774050357"
+        ".ci-artifacts/post-review-regression-1793774813531"
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 6984,
+      "elapsedMs": 7050,
       "log": "known-source-regression.log"
     },
     {
@@ -343,7 +343,7 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 3231,
+      "elapsedMs": 3420,
       "log": "imagehash-oracle.log"
     },
     {
@@ -356,7 +356,7 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 1762,
+      "elapsedMs": 1818,
       "log": "mirror-oracle.log"
     },
     {
@@ -373,7 +373,7 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 15022,
+      "elapsedMs": 15456,
       "log": "photo-development.log"
     },
     {
@@ -390,15 +390,15 @@
       ],
       "status": "passed",
       "exitCode": 0,
-      "elapsedMs": 15428,
+      "elapsedMs": 14704,
       "log": "photo-holdout.log"
     }
   ],
   "scope": "Fresh source build, three MoonBit backends, Node CLI/HTTP, independent ImageHash and exhaustive index oracle. Browser screenshots and ZIP reports remain historical.",
-  "sourceDigest": "a273f90e90035cdf2a41ff225c074425ff6923df5baab5a039c8c33cc2dfe1fa",
+  "sourceDigest": "f36c847f692395d7e61a8400b6bacddb7b0409cf6ac0077ead5103ce16bc766a",
   "compiledArtifact": {
     "sha256": "5e8f83e3f09afd11393a3218e3e5ddbd8e66c90702059f85feaf36aea3fcd856",
     "matchesCommitted": true
   },
-  "finishedAt": "2026-11-04T06:34:52.813Z"
+  "finishedAt": "2026-11-04T06:47:35.997Z"
 }

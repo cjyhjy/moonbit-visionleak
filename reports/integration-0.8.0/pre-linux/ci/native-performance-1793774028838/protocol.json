@@ -1,0 +1,15 @@
+{
+  "samples": 5,
+  "warmups": 1,
+  "backend": "native-release",
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "inputDigests": {
+    "sparse1600": "c82bd6ed33ed2b462aaa27ebb1f4842badba9a90772a56c10c22173afb29b864",
+    "knownPhotos": "e70135cf2d797046eb5d03f6873fb5aab7b82768f4d258c1f8cdb99268ec75da"
+  },
+  "variants": [
+    "released-map",
+    "generation-marks"
+  ],
+  "scope": "Core only; fixed budget, includes JSON parse/serialization, excludes build/decode/I/O. Sequential variant runs, no randomized timing claim."
+}
