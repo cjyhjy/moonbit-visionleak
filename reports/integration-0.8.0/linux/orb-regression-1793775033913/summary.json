@@ -1,0 +1,308 @@
+{
+  "status": "passed",
+  "implementationDigests": {
+    "dist/visionleak.js": "5e8f83e3f09afd11393a3218e3e5ddbd8e66c90702059f85feaf36aea3fcd856",
+    "tools/orb-worker.py": "98c150d77170acd4cf0bfaa0e97668d9a8d4fb6a7f94d5bf01551fe540f1edba",
+    "tools/orb.mjs": "723ed272bc101ebf009d599b82425fef2684cbc1b477cdc248073fe135c5a82f",
+    "tools/orb-profile.json": "969c6d587e735764a39e09259bc3b92f7df3823a4b7765e371ac1abd82ce02f1",
+    "tools/decode.mjs": "c2198fb88e64e7ca24b6253cac9780d6b18af51757c2dcf1621921ceec7f9300",
+    "tools/validate-orb-integration.py": "558109bef47c46a9e467af613de1faec261ffd7975d745d2b21091ebe5a8a717",
+    "research/followup-quality/experiment.py": "b7c77554258efff12cb8f43330a3ebb907dd470db1c662d46227f3ad9502ff75",
+    "research/followup-quality/protocol.json": "cfa4f86c3ae2bd60f511144660a2f165aa421ff1385ec98dd498da5e66ba2d18"
+  },
+  "schemaVersion": "visionleak-orb-integration-v1",
+  "scope": "Known-source controlled regression on previously used development/holdout files. Each 24-query invocation includes every gallery original. Product union includes earlier Core evidence. This is not a fresh holdout, natural contamination or human review study. Times include host decoding/import/worker; RSS is sampled worker memory, not aggregate peak.",
+  "partitions": [
+    {
+      "partition": "development",
+      "sourceFiles": 24,
+      "queries": 144,
+      "allOriginalQueryRelations": 3456,
+      "frozenOrbHitsPreserved": 136,
+      "matchingDirectionWitnessesChecked": 136,
+      "historicalPlatformDifferences": 136,
+      "productUnionTp": 136,
+      "productUnionFp": 0,
+      "productUnionFn": 8,
+      "additionalPairsOverFrozenOrb": 0,
+      "batches": [
+        {
+          "queryStart": 0,
+          "queries": 24,
+          "images": 48,
+          "auditId": "a457a9c06469bb1a0ccc9d29b6a49d78db80549eaad608387999683b0f5635e7",
+          "complete": true,
+          "orb": {
+            "enabled": true,
+            "status": "complete",
+            "complete": true,
+            "inputImages": 48,
+            "processedImages": 48,
+            "featureImages": 48,
+            "featurePixels": 4298590,
+            "pairChecks": 1134,
+            "descriptorComparisons": 1310920060,
+            "emittedPairs": 23,
+            "reason": ""
+          },
+          "timing": {
+            "orb": {
+              "elapsedMs": 10288,
+              "workerPeakRssBytes": 102887424,
+              "memorySamplingMs": 100
+            },
+            "elapsedMs": 11023
+          },
+          "processWallSeconds": 11.255308041000006
+        },
+        {
+          "queryStart": 24,
+          "queries": 24,
+          "images": 48,
+          "auditId": "f9b75e718f4aa8d9a7f08bc4a46b571fd7371443be942900d0b2ca47d44cd838",
+          "complete": true,
+          "orb": {
+            "enabled": true,
+            "status": "complete",
+            "complete": true,
+            "inputImages": 48,
+            "processedImages": 48,
+            "featureImages": 48,
+            "featurePixels": 4442625,
+            "pairChecks": 1134,
+            "descriptorComparisons": 1341162880,
+            "emittedPairs": 24,
+            "reason": ""
+          },
+          "timing": {
+            "orb": {
+              "elapsedMs": 10430,
+              "workerPeakRssBytes": 103092224,
+              "memorySamplingMs": 100
+            },
+            "elapsedMs": 11209
+          },
+          "processWallSeconds": 11.445643439999998
+        },
+        {
+          "queryStart": 48,
+          "queries": 24,
+          "images": 48,
+          "auditId": "378cc5e9a031aa701be9bd21f2a64ca48633bbe838ee640bdaf0f8f57b084a09",
+          "complete": true,
+          "orb": {
+            "enabled": true,
+            "status": "complete",
+            "complete": true,
+            "inputImages": 48,
+            "processedImages": 48,
+            "featureImages": 48,
+            "featurePixels": 4167478,
+            "pairChecks": 1135,
+            "descriptorComparisons": 1164094224,
+            "emittedPairs": 22,
+            "reason": ""
+          },
+          "timing": {
+            "orb": {
+              "elapsedMs": 9254,
+              "workerPeakRssBytes": 102649856,
+              "memorySamplingMs": 100
+            },
+            "elapsedMs": 9969
+          },
+          "processWallSeconds": 10.188576678999993
+        },
+        {
+          "queryStart": 72,
+          "queries": 24,
+          "images": 48,
+          "auditId": "21a38ca45e7a62f7c6869f8b275120422bbc086c3607bc1766fd482d5fab4a6f",
+          "complete": true,
+          "orb": {
+            "enabled": true,
+            "status": "complete",
+            "complete": true,
+            "inputImages": 48,
+            "processedImages": 48,
+            "featureImages": 48,
+            "featurePixels": 4235740,
+            "pairChecks": 1138,
+            "descriptorComparisons": 1110804738,
+            "emittedPairs": 20,
+            "reason": ""
+          },
+          "timing": {
+            "orb": {
+              "elapsedMs": 8872,
+              "workerPeakRssBytes": 102563840,
+              "memorySamplingMs": 100
+            },
+            "elapsedMs": 9614
+          },
+          "processWallSeconds": 9.848583286999997
+        },
+        {
+          "queryStart": 96,
+          "queries": 24,
+          "images": 48,
+          "auditId": "07d97c5973a64a4f780f871fee4fdce385ba90065369c3a97663408d7a1dccb1",
+          "complete": true,
+          "orb": {
+            "enabled": true,
+            "status": "complete",
+            "complete": true,
+            "inputImages": 48,
+            "processedImages": 48,
+            "featureImages": 48,
+            "featurePixels": 4385179,
+            "pairChecks": 1137,
+            "descriptorComparisons": 1284658240,
+            "emittedPairs": 23,
+            "reason": ""
+          },
+          "timing": {
+            "orb": {
+              "elapsedMs": 10173,
+              "workerPeakRssBytes": 102821888,
+              "memorySamplingMs": 100
+            },
+            "elapsedMs": 10937
+          },
+          "processWallSeconds": 11.168593595999994
+        },
+        {
+          "queryStart": 120,
+          "queries": 24,
+          "images": 48,
+          "auditId": "84da6a49fa6154193a26caf2697551bc7f991b1606a1e9cb66775b6a83663bab",
+          "complete": true,
+          "orb": {
+            "enabled": true,
+            "status": "complete",
+            "complete": true,
+            "inputImages": 48,
+            "processedImages": 48,
+            "featureImages": 48,
+            "featurePixels": 4266172,
+            "pairChecks": 1131,
+            "descriptorComparisons": 1313102712,
+            "emittedPairs": 24,
+            "reason": ""
+          },
+          "timing": {
+            "orb": {
+              "elapsedMs": 10326,
+              "workerPeakRssBytes": 101949440,
+              "memorySamplingMs": 100
+            },
+            "elapsedMs": 11084
+          },
+          "processWallSeconds": 11.311602246999996
+        }
+      ]
+    },
+    {
+      "partition": "holdout",
+      "sourceFiles": 12,
+      "queries": 72,
+      "allOriginalQueryRelations": 864,
+      "frozenOrbHitsPreserved": 67,
+      "matchingDirectionWitnessesChecked": 65,
+      "historicalPlatformDifferences": 67,
+      "productUnionTp": 67,
+      "productUnionFp": 0,
+      "productUnionFn": 5,
+      "additionalPairsOverFrozenOrb": 0,
+      "batches": [
+        {
+          "queryStart": 0,
+          "queries": 24,
+          "images": 36,
+          "auditId": "8440ce50b17cbad99aac959a9d930435c2b7598a2bb70880c5f00f23e8a46edb",
+          "complete": true,
+          "orb": {
+            "enabled": true,
+            "status": "complete",
+            "complete": true,
+            "inputImages": 36,
+            "processedImages": 36,
+            "featureImages": 36,
+            "featurePixels": 3198558,
+            "pairChecks": 559,
+            "descriptorComparisons": 621455942,
+            "emittedPairs": 23,
+            "reason": ""
+          },
+          "timing": {
+            "orb": {
+              "elapsedMs": 5056,
+              "workerPeakRssBytes": 102080512,
+              "memorySamplingMs": 100
+            },
+            "elapsedMs": 5648
+          },
+          "processWallSeconds": 5.854645880000021
+        },
+        {
+          "queryStart": 24,
+          "queries": 24,
+          "images": 36,
+          "auditId": "bedd9bd7b173ed42953d6e2fc4d7c8a634e1843cd61b52d1012164a5c326b482",
+          "complete": true,
+          "orb": {
+            "enabled": true,
+            "status": "complete",
+            "complete": true,
+            "inputImages": 36,
+            "processedImages": 36,
+            "featureImages": 36,
+            "featurePixels": 3136337,
+            "pairChecks": 559,
+            "descriptorComparisons": 594285604,
+            "emittedPairs": 22,
+            "reason": ""
+          },
+          "timing": {
+            "orb": {
+              "elapsedMs": 4921,
+              "workerPeakRssBytes": 102043648,
+              "memorySamplingMs": 100
+            },
+            "elapsedMs": 5507
+          },
+          "processWallSeconds": 5.7083765830000175
+        },
+        {
+          "queryStart": 48,
+          "queries": 24,
+          "images": 36,
+          "auditId": "4170048eb9797980f1ac70f1daafc41e8065f5acda007ff92c42f91783d3dcf2",
+          "complete": true,
+          "orb": {
+            "enabled": true,
+            "status": "complete",
+            "complete": true,
+            "inputImages": 36,
+            "processedImages": 36,
+            "featureImages": 36,
+            "featurePixels": 2940909,
+            "pairChecks": 555,
+            "descriptorComparisons": 634181092,
+            "emittedPairs": 22,
+            "reason": ""
+          },
+          "timing": {
+            "orb": {
+              "elapsedMs": 5128,
+              "workerPeakRssBytes": 102170624,
+              "memorySamplingMs": 100
+            },
+            "elapsedMs": 5697
+          },
+          "processWallSeconds": 5.894557530000014
+        }
+      ]
+    }
+  ]
+}

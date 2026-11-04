@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "run": "https://github.com/cjyhjy/moonbit-visionleak/actions/runs/41788056354",
+  "headCommit": "be5255a11c5b213728312ed6a0a151ee7c65529a",
+  "ciTestedCommit": "a86748d7e9e142b2064de521e3c147559186ceb2",
+  "sourceDigest": "f36c847f692395d7e61a8400b6bacddb7b0409cf6ac0077ead5103ce16bc766a",
+  "compiledArtifact": {
+    "sha256": "5e8f83e3f09afd11393a3218e3e5ddbd8e66c90702059f85feaf36aea3fcd856",
+    "matchesCommitted": true
+  },
+  "checks": 30,
+  "artifactId": 13302775295,
+  "scope": "Selected summaries and all cross-platform witness differences. Full logs and same-platform references are in the run artifact, also downloaded locally under output/linux-v080-pass."
+}

@@ -1,8 +1,13 @@
 # 0.8.0 ORB 产品集成验收
 
+集成已通过 PR #4 合并为 `d9d616e82f869743cf05dda9cb1e0a5d2a2dfc1f`。本地30项、[Linux30项](linux/receipt.json)、最终包23项及Chrome通过；[外部交付收据](delivery.json)记录最终ZIP摘要与发布边界。最终ZIP SHA-256：`eea07e314504f2e63a35f5bc7fe8ab071a26cece750a9e93d11bc0b1f7724127`。0.8.0正式发布尚未执行，等待该版本单独批准。
+
+Linux重放保留全部历史命中（136/144、67/72，无新增FP），同方向见证检查136/65对。203个历史正例的矩阵/内点等至少一项存在跨平台数值差异，全部归档；这不等于203个命中变化。Linux native稀疏负载0.90×、照片1.27×，原始中位数见 `linux/native-performance-*/summary.json`。
+
+
 本页记录 2026-11-03 开始的集成。0.7.1 检索优化已实际发布并独立核验；本页属于另一个 0.8.0 候选版本。正式 Release/Mooncakes 发布尚未执行；提交和 Linux 结果将单独记录在 `delivery.json`。当前用户授权完成集成与自动验收。
 
-新验收30项和干净ZIP的23项均已通过（真实ORB测试无跳过）；新包SHA-256：`96ce8c2798e13ab5b5364961f9df8bad2eb07dfb83e1319fd1f5062e8a7e58d8`。此前未发布包和旧验收保存在 `pre-linux/`，本地旧包SHA为 `e46fa56502e242ca1ba30d4f1c3a6d72ea44a5aaf68bf8e494d733852e1f3f29`。
+当前行为源码的本地30项已通过。本页及 `delivery.json` 是打包前快照；最终包摘要、包专属干净验收和远端状态在打包后产生，应同时查阅仓库/发布页上的外部收据。先前通过本地/干净检查但未发布的候选记录保存在 `pre-linux/`、`pre-receipt-correction/`；不得把它们当成最终包收据。
 
 ## 已通过
 

@@ -1,0 +1,1 @@
+The second unpublished candidate passed clean code checks, but its included delivery.json was a stale post-package receipt from the first candidate. Preserve that package and receipt; rebuild with a clearly labelled packaging snapshot bound to current sources. Actual ZIP checksum and post-package clean result are external receipts, avoiding a self-referential archive hash.
