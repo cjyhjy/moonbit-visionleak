@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "visionleak-browser-followup-v1",
+  "status": "passed",
+  "checkedAt": "2026-11-04T06:19:10.969286+00:00",
+  "browser": "Google Chrome via CUA",
+  "coreArtifactSha256": "5e8f83e3f09afd11393a3218e3e5ddbd8e66c90702059f85feaf36aea3fcd856",
+  "sourceHashes": {
+    "demo/app.mjs": "e511143b78a4432c7ce7dc2630d0bf65186cddb59612532077246318635654b6",
+    "demo/review-validation.mjs": "4ad9b2d25a1be962084e88807ef2d0deee00702d800723d03478f774c5c41f40",
+    "demo/index.html": "532522dedb1634da3982736dab17eff27240c957ff9e2e8d40ac9f3bbf8acf03",
+    "demo/styles.css": "7331ce9f0159a78a9d04585d75b043cbdb7f99abee47e85e50fa31efaab4071a",
+    "dist/visionleak.js": "5e8f83e3f09afd11393a3218e3e5ddbd8e66c90702059f85feaf36aea3fcd856"
+  },
+  "auditIds": [
+    "3ae1244782f473f99f983eb3468c34a099ee91948e9d7d772ccb35dae924afee"
+  ],
+  "checks": {
+    "threePairsExactFirst": true,
+    "orbFilterTwoPairs": true,
+    "orbPhaseAndDeterministicCoverage": true,
+    "geometry198InliersAnd32PointsPerImage": true,
+    "markAndUndo": true,
+    "desktopVisualInspection": true,
+    "mobile390VisualInspection": true,
+    "mobileScrollWidth": 375,
+    "mobileViewportWidth": 390,
+    "consoleWarningsOrErrorsObserved": []
+  },
+  "screenshots": [
+    {
+      "path": "reports/integration-0.8.0/orb-desktop.jpg",
+      "sha256": "654ffb7e9ad94625166fb6199228aab77aa1b5d0b46bd91293770dd43adacd3d"
+    },
+    {
+      "path": "reports/integration-0.8.0/orb-detail.jpg",
+      "sha256": "d79a05b3d0f0ca6906c9a10c547c2bfa99ba5fe2127da158c42192a24de2ab3a"
+    },
+    {
+      "path": "reports/integration-0.8.0/orb-mobile-390.jpg",
+      "sha256": "139fdabe41b30456551be6ea87f6afe59e30984506a8214e08e202d6acda6f68"
+    }
+  ],
+  "limitations": [
+    "Chrome on macOS only; no Safari/Firefox/Windows claim.",
+    "Known CC0 source and generated crop; scripted functional review, not a human-time or natural-contamination study."
+  ]
+}

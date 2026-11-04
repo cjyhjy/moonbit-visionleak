@@ -1,0 +1,10 @@
+Running moon check ...
+Finished. moon: ran 3 tasks, now up to date
+Check passed
+validating packaged zip: /private/var/folders/sm/v6v7286s07j8z7x50805469c0000gn/T/visionleak-delivery-m9q7s5ng/repo/_build/publish/cjyhjy-visionleak-0.7.1.zip
+extracting packaged zip to /private/var/folders/sm/v6v7286s07j8z7x50805469c0000gn/T/visionleak-delivery-m9q7s5ng/repo/_build/publish/verify/mooncake_publish_check2yzZwI
+running moon check on extracted package
+Running moon check ...
+Finished. moon: ran 2 tasks, now up to date
+Check passed
+Server status: 200 OK

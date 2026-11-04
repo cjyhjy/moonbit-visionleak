@@ -87,8 +87,12 @@ CLI 增加 `--include-mirrors`；JS `fingerprint({width,height,rgba,includeMirro
 
 启用 MIH 预筛选时 `stats` 可新增 `indexOperations`、`indexOperationLimit`，分别表示桶探测、posting 读取和祖先回溯的总次数及其上限（单阶段 `16 × maxComparisons`，聚合统计相加）。索引预算耗尽为 `stats.reason: "IndexBudget"`，报告为 `incomplete`，遵循现有未完成审计退出码与覆盖范围规则。未使用预筛选的报告可省略这两个字段；`comparisons` 仍是距离计算和配对检查之和。详见 [优化记录](optimization.md)。
 
-## 0.7.0 本地候选版本
+## 0.7.0 接口
 
 `runAudit` 新增可选顶层参数 `manifest`、`cache`（路径字符串）；`options.maxExactComparisons` 为独立确定性预算。`maxComparisons` 分别限制感知、局部阶段，聚合计数可超过这个单阶段上限。报告新增 `auditStrategy`、`phases`、`coverage.deterministicInputComplete`；完整定义、CSV 路径边界和缓存失效规则见 [0.7.0 迁移](changes-0.7.0.md)。版本未发布；不得沿用旧配对顺序、工作计数或 auditId。
 
 总体 `stats.processedImages` 包含启用但被跳过的阶段（完成数 0），不包含禁用阶段。阶段化报告的核心预算记录带 `coverage.budgetExhaustion[].phase`；该记录的 `processedImages` 和 `atImage` 指实际耗尽预算的阶段，与总体覆盖分开。旧报告的无阶段记录保持原义。
+
+## 0.8.0 可选宿主 ORB
+
+`runAudit({root,out,options:{includeOrb:true},signal})` 增加 `orb-candidate`、`orbProfile`、`images[].orb`、`phases.orb`。距离为 null，几何见证位于 `matchOrb`；纯 MoonBit `audit_json` 拒绝 host-only ORB 请求。独立描述子工作量不计入 Core 的 `stats.comparisons`。 详见 [0.8.0 合同](changes-0.8.0.md)。

@@ -27,6 +27,8 @@ Version metadata is now 0.5.0. Phase 3 is complete; phase 4 local verification, 
 
 `plan-0.5.0/crops-development/` and `crops-holdout/` report controlled transformations of 32 newly licensed file sources. Source and scene partitioning, freeze chronology, oracle comparisons, resource results and their limits are recorded in `plan-0.5.0/phase-3.md`. The old photos-v1 holdout is a regression set for this version.
 
-## 0.7.0 local candidate
+## Current integration evidence
 
-Current implementation and acceptance are indexed in [post-review/README.md](post-review/README.md). Historical root verification/release receipts attest only their recorded versions. The 0.7.0 candidate adds exact-first phases, CSV manifests, optional content-keyed fingerprint caching, bounded review ordering, new frozen photo evaluation and a complete walkthrough. It has not been committed, pushed or published in this work.
+0.7.0 and 0.7.1 are published releases. Their separate receipts are in `followup-0.7.0/publication/` and `integration-0.7.1/publication/`; historical root receipts describe only the versions they name.
+
+The current 0.8.0 ORB candidate is indexed in [integration-0.8.0/README.md](integration-0.8.0/README.md). It adds an optional Python/OpenCV worker, geometric candidate witnesses, explicit partial coverage and the review workflow. Its local, clean-package and remote CI statuses are recorded separately; a version field is not publication evidence.

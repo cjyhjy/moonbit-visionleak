@@ -68,15 +68,17 @@ async function installReport(raw, source, served = false, sequence = state.loadS
   $('incomplete-banner').hidden = report.complete;
   $('incomplete-reason').textContent = `报告状态：${typeof raw.status === 'string' ? raw.status : '未声明'}。预算或输入限制可能使部分图像或候选未被处理；请展开「运行信息与覆盖范围」检查统计与错误。已完成的人工标记仍可独立导出。`;
   $('metric-images').textContent = formatCount(report.images.size);
-  for (const [id, evidence] of [['byte', 'byte-identical'], ['pixel', 'pixel-identical'], ['candidate', 'perceptual-candidate'], ['local', 'local-candidate']]) {
+  for (const [id, evidence] of [['byte', 'byte-identical'], ['pixel', 'pixel-identical'], ['candidate', 'perceptual-candidate'], ['local', 'local-candidate'], ['orb', 'orb-candidate']]) {
     $(`metric-${id}`).textContent = formatCount(report.pairs.filter(pair => pair.evidence === evidence).length);
   }
+  $('orb-metric').hidden = !raw.options?.includeOrb;
+  document.querySelector('.metrics').classList.toggle('with-orb', Boolean(raw.options?.includeOrb));
   $('pair-count').textContent = `${formatCount(report.pairs.length)} 对`;
   const scope = workbenchScope(report,{includeLowContrast:true});
   $('low-contrast-count').textContent = `展开低对比度配对（${formatCount(scope.lowContrastPairs)}）`;
   $('group-filter').replaceChildren(new Option(`全部候选组（${scope.candidateGroups.length}）`, ''));
   for (const [index, group] of scope.candidateGroups.entries()) $('group-filter').add(new Option(`组 ${index+1} · ${group.members.length} 张图像`,group.id));
-  const phaseNames = { deterministic: '确定性检查', perceptual: '感知检索', local: '裁切检索' };
+  const phaseNames = { deterministic: '确定性检查', perceptual: '感知检索', local: '裁切检索', orb: 'ORB 几何检索' };
   const phaseStatus = { complete: '完成', incomplete: '未完成', skipped: '未执行', disabled: '关闭' };
   $('phase-summary').hidden = !raw.phases;
   $('phase-summary').textContent = Object.entries(raw.phases ?? {}).map(([key, phase]) => `${phaseNames[key] ?? key}：${phaseStatus[phase.status] ?? phase.status} ${phase.processedImages}/${phase.inputImages}`).join(' · ') + (raw.phases ? (raw.coverage?.deterministicInputComplete ? '。确定性检查覆盖本次全部输入。' : '。各阶段只覆盖已接收的图像；请检查拒收和输入范围。') : '');
@@ -89,7 +91,7 @@ async function installReport(raw, source, served = false, sequence = state.loadS
   const errors = Array.isArray(raw.errors) ? raw.errors : [];
   $('error-summary').textContent = `${errors.length ? `${formatCount(errors.length)} 条错误或跳过记录` : '无错误记录'} · 统计与选项`;
   $('report-stats').textContent = JSON.stringify({ phases: raw.phases ?? null, stats: raw.stats ?? null, scope: raw.scope ?? null, coverage:raw.coverage ?? null, timing: raw.timing ?? null }, null, 2);
-  $('report-options').textContent = JSON.stringify({ options: raw.options ?? null, normalization: raw.normalization ?? null, decoder: raw.decoder ?? null }, null, 2);
+  $('report-options').textContent = JSON.stringify({ options: raw.options ?? null, normalization: raw.normalization ?? null, decoder: raw.decoder ?? null, orbProfile:raw.orbProfile ?? null }, null, 2);
   $('report-errors').textContent = errors.length ? JSON.stringify(errors, null, 2) : '[]';
   resetFilters();
   render();
@@ -133,7 +135,7 @@ function renderQueue() {
     button.setAttribute('aria-pressed', String(pair.key === state.selected));
     button.setAttribute('aria-label', `${evidence.label}：${left.path} 与 ${right.path}，${review ? DECISIONS[review.decision] : '未复核'}`);
     const top = element('div', 'queue-item-top');
-    top.append(element('span', `evidence-badge ${evidence.tone}`, evidence.label), element('span', 'queue-distance', `d = ${pair.distance}`));
+    top.append(element('span', `evidence-badge ${evidence.tone}`, evidence.label), element('span', 'queue-distance', pair.matchOrb ? `${pair.matchOrb.inliers} 内点` : `d = ${pair.distance}`));
     const bottom = element('div', 'queue-item-bottom');
     bottom.append(element('span', '', `${left.split} ↔ ${right.split}`), element('span', `queue-review${review ? '' : ' pending'}`, review ? DECISIONS[review.decision] : '○ 未复核'));
     button.append(top, element('code', 'queue-path', left.path), element('code', 'queue-path', right.path), bottom);
@@ -148,7 +150,7 @@ function renderQueue() {
   }
   list.replaceChildren(fragment);
 }
-function setImage(side, imageRecord, rect) {
+function setImage(side, imageRecord, rect, orb) {
   const image = $(`${side}-image`), fallback = $(`${side}-fallback`);
   const matchesServer = canShowThumbnails(state.report, state.servedAuditId);
   const url = matchesServer ? thumbnailURL(imageRecord.thumbnail) : null;
@@ -162,10 +164,25 @@ function setImage(side, imageRecord, rect) {
     overlay.style.height = `${(rect[3] - rect[1]) / 10}%`;
     overlay.setAttribute('aria-label', `命中窗口：左 ${rect[0]/10}%，上 ${rect[1]/10}%，右 ${rect[2]/10}%，下 ${rect[3]/10}%`);
   }
+  const geometry = $(`${side}-orb`);
+  geometry.replaceChildren();geometry.toggleAttribute('hidden', true);
+  if (orb) {
+    const original=imageRecord.id===orb.original;
+    const size=original?orb.originalSize:orb.querySize;
+    geometry.setAttribute('viewBox', `0 0 ${size[0]} ${size[1]}`);
+    const corners=original?orb.projectedQueryCorners:[[0,0],[size[0],0],size,[0,size[1]]];
+    const polygon=document.createElementNS('http://www.w3.org/2000/svg','polygon');
+    polygon.setAttribute('points',corners.map(p=>p.join(',')).join(' '));geometry.append(polygon);
+    for (const point of orb.inlierCoordinates) {
+      const circle=document.createElementNS('http://www.w3.org/2000/svg','circle');
+      circle.setAttribute('cx',point[original?2:0]);circle.setAttribute('cy',point[original?3:1]);
+      circle.setAttribute('r',Math.max(size[0],size[1])/120);geometry.append(circle);
+    }
+  }
   image.hidden = true;
   fallback.hidden = false;
-  image.onload = () => { image.hidden = false; fallback.hidden = true; overlay.hidden = !rect; };
-  image.onerror = () => { image.hidden = true; fallback.hidden = false; overlay.hidden = true; };
+  image.onload = () => { image.hidden = false; fallback.hidden = true; overlay.hidden = !rect; geometry.toggleAttribute('hidden',!orb); };
+  image.onerror = () => { image.hidden = true; fallback.hidden = false; overlay.hidden = true; geometry.toggleAttribute('hidden',true); };
   image.alt = `${imageRecord.split}：${imageRecord.path}`;
   if (url) image.src = url;
   else image.removeAttribute('src');
@@ -185,15 +202,18 @@ function renderDetail() {
   $('detail-evidence').className = `evidence-badge ${evidence.tone}`;
   $('detail-evidence').textContent = evidence.label;
   $('detail-decision').textContent = review ? `人工：${DECISIONS[review.decision]}` : '等待人工复核';
-  $('detail-distance').textContent = pair.distance;
-  $('evidence-explanation').textContent = `${evidence.description} ${['perceptual-candidate','local-candidate'].includes(pair.evidence) ? '相似度不是泄漏概率；缩放、低对比度或重复纹理都可能造成误报。' : '相同证据说明内容重合；是否影响评测，还取决于数据来源、分组方式和任务定义。'}`;
+  $('detail-distance').textContent = pair.matchOrb ? pair.matchOrb.inliers : pair.distance;
+  $('detail-metric-label').textContent = pair.matchOrb ? '几何内点' : 'dHash 距离';
+  $('detail-metric-caption').textContent = pair.matchOrb ? '匹配支持 · 非概率' : '越小越相近 · 非概率';
+  $('evidence-explanation').textContent = `${evidence.description} ${['perceptual-candidate','local-candidate','orb-candidate'].includes(pair.evidence) ? '相似度不是泄漏概率；缩放、低对比度或重复纹理都可能造成误报。' : '相同证据说明内容重合；是否影响评测，还取决于数据来源、分组方式和任务定义。'}`;
   if (pair.lowContrast) $('evidence-explanation').textContent += ' 此配对包含低对比度图像，请谨慎解释感知距离。';
+  if (pair.matchOrb) $('evidence-explanation').textContent += ` ${pair.matchOrb.inliers}/${pair.matchOrb.matches} 个几何内点；高亮为查询图在参照图中的投影，圆点显示前 ${pair.matchOrb.inlierCoordinates.length} 个内点。坐标基于采样图；未测自然污染准确率。`;
   if (pair.matchLocal) $('evidence-explanation').textContent += ` 局部窗口 A=${pair.matchLocal.leftWindow} / B=${pair.matchLocal.rightWindow}；这是首个满足阈值的窗口证据，距离不是全部窗口的最小值。`;
   if (pair.matchTransform) $('evidence-explanation').textContent += ` 匹配依据：${TRANSFORMS[pair.matchTransform]}；预览图保持原方向，距离取四种方向组合的最小值。`;
   if (pair.matchOrientation) $('evidence-explanation').textContent += ` 匹配依据：${orientationDescription(pair.matchOrientation)}。预览图保持原方向；距离为已启用方向组合的最小值，旋转发生在 EXIF 校正之后。`;
   const windows = state.report.raw.localProfile?.windows;
-  setImage('left', left, windows?.[pair.matchLocal?.leftWindow]);
-  setImage('right', right, windows?.[pair.matchLocal?.rightWindow]);
+  setImage('left', left, windows?.[pair.matchLocal?.leftWindow], pair.matchOrb);
+  setImage('right', right, windows?.[pair.matchLocal?.rightWindow], pair.matchOrb);
   const index = state.filtered.findIndex(item => item.key === pair.key);
   $('pair-position').textContent = `${formatCount(index + 1)} / ${formatCount(state.filtered.length)}`;
   $('previous-pair').disabled = index <= 0;
@@ -207,6 +227,7 @@ function renderDetail() {
     ...(state.report.raw.options?.includeMirrors ? [['A · mirror dHash', left.dhashMirror], ['B · mirror dHash', right.dhashMirror], ['匹配方向', pair.matchOrientation ? orientationDescription(pair.matchOrientation) : TRANSFORMS[pair.matchTransform ?? 'original']]] : []),
     ...(state.report.raw.options?.includeRotations ? [['A · 90/180/270° dHash', left.dhashRotations?.join(' / ')], ['B · 90/180/270° dHash', right.dhashRotations?.join(' / ')], ['旋转匹配方向', pair.matchOrientation ? orientationDescription(pair.matchOrientation) : '精确证据保持原方向']] : []),
     ['A · contrast', left.contrast], ['B · contrast', right.contrast],
+    ...(pair.matchOrb ? [['ORB 几何见证', JSON.stringify(pair.matchOrb)], ['ORB profile', state.report.raw.orbProfile?.id]] : []),
     ['pair key', pair.key],
   ]) fingerprints.append(element('dt', '', label), element('dd', '', value == null ? '未提供' : String(value)));
   for (const button of document.querySelectorAll('[data-decision]')) button.setAttribute('aria-pressed', String(review?.decision === button.dataset.decision));

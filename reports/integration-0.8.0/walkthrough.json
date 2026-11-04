@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "schemaVersion": "visionleak-orb-walkthrough-v1",
+  "auditId": "3ae1244782f473f99f983eb3468c34a099ee91948e9d7d772ccb35dae924afee",
+  "sourceDatasetUnchanged": true,
+  "inputDigests": {
+    "train/170072252-original.png": "5a018ffe53b7130e33cb2d8fd24a479b1ac6269248ee87a39ba27b03ce1cb6be",
+    "validation/exact-copy.png": "5a018ffe53b7130e33cb2d8fd24a479b1ac6269248ee87a39ba27b03ce1cb6be",
+    "test/170072252-small-png.png": "37842db12489ae72329dc5df11ba832c45ae79a32909de291f952176c6cecc00"
+  },
+  "pairs": 3,
+  "orbCandidates": 2,
+  "verification": {
+    "ok": true,
+    "auditId": "3ae1244782f473f99f983eb3468c34a099ee91948e9d7d772ccb35dae924afee",
+    "pairs": [
+      {
+        "pairKey": "[\"train/170072252-original.png\",\"validation/exact-copy.png\"]",
+        "left": "train/170072252-original.png",
+        "right": "validation/exact-copy.png",
+        "evidence": "byte-identical",
+        "status": "valid",
+        "leftObservation": {
+          "id": "train/170072252-original.png",
+          "status": "ok",
+          "byteDigest": "5a018ffe53b7130e33cb2d8fd24a479b1ac6269248ee87a39ba27b03ce1cb6be",
+          "pixelDigest": "248040ed1a7925530a813e57baad1086596f93ca17d30381367bff2f94431689"
+        },
+        "rightObservation": {
+          "id": "validation/exact-copy.png",
+          "status": "ok",
+          "byteDigest": "5a018ffe53b7130e33cb2d8fd24a479b1ac6269248ee87a39ba27b03ce1cb6be",
+          "pixelDigest": "248040ed1a7925530a813e57baad1086596f93ca17d30381367bff2f94431689"
+        }
+      }
+    ],
+    "counts": {
+      "valid": 1,
+      "invalid": 0,
+      "missing": 0,
+      "skippedCandidates": 2
+    },
+    "exitCode": 0,
+    "verificationScope": {
+      "evidenceTypes": [
+        "byte-identical",
+        "pixel-identical"
+      ],
+      "candidatesRecomputed": false,
+      "wholeDatasetReaudited": false
+    }
+  },
+  "scope": "Generated crop of previously used CC0 source 170072252. Scripted review only, verify recomputes exact evidence and explicitly skips ORB candidates."
+}

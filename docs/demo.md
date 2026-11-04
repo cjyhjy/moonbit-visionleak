@@ -64,3 +64,7 @@ CLI 增加 `--include-mirrors`；JS `fingerprint({width,height,rgba,includeMirro
 运行 `node tools/demo-walkthrough.mjs output/walkthrough-v070`，每次使用不存在的新目录。脚本依次生成数据、触发重复关卡（3）、展示近似阶段预算耗尽时保留确定性证据、复验、构造并注明脚本复核记录、导出 HTML/CSV、创建修正副本并重审（0）。`walkthrough.json` 记录全部步骤及原演示数据的前后摘要。
 
 现场启动 `node tools/server.mjs --report output/walkthrough-v070/audit/report.json --port 4173`，先解释逐阶段覆盖，再亲自标记一条证据并撤销，导出复核记录。打开生成的 `evidence.html` 可离线展示完整证据。切换到 `reaudit/report.json` 展示修正副本的结果。生成器中的自动复核仅供演示，不能声称测得真人复核耗时。
+
+## 0.8.0 ORB 复核
+
+运行 `node tools/orb-walkthrough.mjs output/orb-walkthrough-fresh` 生成已知 CC0 图像的可复现裁切示例（先设置 ORB 解释器）。工作台显示投影四边形、至多 32 个内点及候选说明。示例复核记录明确标为脚本结果，不是真人验证。 详见 [0.8.0 合同](changes-0.8.0.md)。

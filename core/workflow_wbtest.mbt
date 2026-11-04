@@ -424,3 +424,14 @@ test "workflow dispatcher rejects malformed JSON unknown operations and excessiv
   let value = @json.parse(workflow_json(source)) catch { _ => Json::null() }
   assert_eq(field(field(value, "error"), "code"), Json("WorkflowBudget"))
 }
+
+///|
+test "standalone Core refuses a host-only ORB request instead of silently completing" {
+  let report = @json.parse(
+    audit_json("{\"images\":[],\"options\":{\"includeOrb\":true}}"),
+  ) catch {
+    _ => Json::null()
+  }
+  assert_eq(field(report, "ok"), Json(false))
+  assert_eq(field(field(report, "error"), "code"), Json("HostFeatureRequired"))
+}

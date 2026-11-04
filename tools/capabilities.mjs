@@ -2,6 +2,7 @@ import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { cli_options_json } from '../dist/visionleak.js';
 import { DECODER, SUPPORTED_EXTENSIONS } from './decode.mjs';
+import { orbBinding } from './orb.mjs';
 import { IDENTITY_VERSION } from '../demo/report-identity.mjs';
 
 // Explicit host contract. Limits and split aliases come from the executable core.
@@ -21,11 +22,13 @@ export async function capabilities() {
     commands: ['capabilities', 'audit', 'verify', 'export-html', 'export-fixes'],
     features: { incrementalAudit: false, pairSubsetAudit: false, fingerprintCache: true,
       endToEndStreamingDecode: false, combinedFingerprint: true },
-    profiles: { normalization: 'vl-rgb-v1', local: { id: 'vl-local-dhash-v1', experimental: true,
+    profiles: { normalization: 'vl-rgb-v1', orb:orbBinding(), local: { id: 'vl-local-dhash-v1', experimental: true,
       enabledByDefault: false, windows: 20, minimumGridContrast: 16, crossScale: true } },
     limits: core.limits,
     accounting: { comparisons: 'sum of phase distanceEvaluations + pairChecks',
-      auditStrategy: 'exact-first-v1', phases: ['deterministic', 'perceptual', 'local'],
+      auditStrategy: 'exact-first-v1', phases: ['deterministic', 'perceptual', 'local', 'orb (opt-in host worker)'],
+      orbBudget: 'separate maxOrbComparisons descriptor work and maxOrbPairChecks; no global-image prefilter',
+      orbRuntime: 'optional pinned Python/OpenCV; subprocess wall deadline and 100ms RSS guard; sampled memory is not OS isolation',
       exactBudget: 'maxExactComparisons', approximateBudget: 'maxComparisons independently per perceptual/local stage',
       outputBudget: 'maxPairs shared; deterministic evidence emitted first', indexOperations: 'separate',
       indexOperationLimitMultiplier: 16, indexStatsMayBeAbsentWhenUnused: true,

@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "scope": "5000 generated 96x96 images, interleaved manifest; one fresh Node process per mode. ORB restricted to 32 feature images and the default 100M descriptor budget. Native preflight overlapped the scale trial and is exploratory; final CI native runs are sequential without that overlap.",
+  "implementationDigests": {
+    "tools/benchmark-integration.mjs": "3d3a610849aa4def19aeea6bd0a7610e90b3d6c45725fbffeb6f05a9830fdda5",
+    "tools/benchmark-native.py": "e8a6cdb37ce5613ad8737a951d2ad3c362127641c0958ca18cda59ab939d1f90",
+    "tools/orb.mjs": "723ed272bc101ebf009d599b82425fef2684cbc1b477cdc248073fe135c5a82f",
+    "dist/visionleak.js": "5e8f83e3f09afd11393a3218e3e5ddbd8e66c90702059f85feaf36aea3fcd856"
+  }
+}

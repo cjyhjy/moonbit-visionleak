@@ -1,0 +1,12 @@
+{
+  "status": "published-and-clean-import-verified",
+  "version": "0.7.1",
+  "module": "cjyhjy/visionleak",
+  "formalPublishAttempted": true,
+  "publishExitCode": 0,
+  "serverStatus": "200 OK",
+  "packageSha256": "726d88f5786ed6c75ac6440c23e20833fc54e4b0c1de1f092f0041c4854ae5d1",
+  "packageBytes": 38144,
+  "verifiedAt": "2026-11-04T06:20:18.207456+00:00",
+  "url": "https://mooncakes.io/docs/cjyhjy/visionleak/"
+}

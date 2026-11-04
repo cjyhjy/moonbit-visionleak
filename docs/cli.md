@@ -157,7 +157,7 @@ CLI 增加 `--include-mirrors`；JS `fingerprint({width,height,rgba,includeMirro
 
 `node tools/cli.mjs capabilities` 返回实际版本、报告格式、参数边界和复验范围。详见 [0.6.0 集成说明](changes-0.6.0.md)。`verify` 的 `verificationScope` 明确候选未重新计算，退出 0 不表示全部候选已验证。
 
-## 0.7.0 新参数（本地候选版本）
+## 0.7.0 新参数
 
 - `--manifest FILE`：UTF-8 `path,split` 清单，路径相对 root，仅审计列出的文件。
 - `--cache DIRECTORY`：可选的指纹与缩略图缓存；目录不得与数据集或输出重叠。
@@ -165,3 +165,7 @@ CLI 增加 `--include-mirrors`；JS `fingerprint({width,height,rgba,includeMirro
 - `--max-comparisons N`：分别限制全图与局部阶段，各自独立，不再是全核心的单一总预算。
 
 `--max-pairs` 仍是共享输出上限。`--fail-on` 保留原退出优先级；感知检索中断时仍能以已发现的精确重复返回 3。覆盖情况读取 `phases`，同时检查 `coverage.deterministicInputComplete` 和输入错误。详情见 [0.7.0 说明](changes-0.7.0.md)。
+
+## 0.8.0 ORB
+
+使用 `--include-orb` 和 `--max-orb-*` 参数；默认关闭，`VISIONLEAK_ORB_PYTHON` 指向安装固定依赖的解释器。缺依赖和预算中断保留 Core 证据并返回不完整状态。 详见 [0.8.0 合同](changes-0.8.0.md)。

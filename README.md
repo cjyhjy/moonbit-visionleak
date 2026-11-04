@@ -14,11 +14,13 @@ node tools/server.mjs --report output/example/report.json --port 4173
 
 演示数据含确定性重复，第二行预期退出 **3**；CI 可据此阻止跨集合重复。浏览器打开 http://127.0.0.1:4173 。需要 Node.js 22+，CLI 已附带编译后的 MoonBit 核心。
 
+**0.8.0：可选 ORB 几何候选。** [安装、预算与证据合同](docs/changes-0.8.0.md) · [当前验收/发布状态](reports/integration-0.8.0/README.md)。默认关闭；需固定 Python/OpenCV 依赖，候选仍须人工复核。
+
 **0.7.1：等价 MIH 检索优化。** [版本说明](docs/changes-0.7.1.md) · [验收与发布状态](reports/integration-0.7.1/README.md)。保留顺序、见证及预算截断语义。
 
 **0.7.0：确定性优先的分阶段审计、CSV 清单与指纹缓存。** [改进与迁移](docs/changes-0.7.0.md) · [工程验收](reports/followup-0.7.0/README.md)。实际公开发布状态以 [发布记录](reports/followup-0.7.0/publication/) 为准。
 
-[v0.7.0 已发布](https://github.com/cjyhjy/moonbit-visionleak/releases/tag/v0.7.0)，Mooncakes 为 `cjyhjy/visionleak@0.7.0`；实际下载和干净导入已校验。
+[v0.7.1 已发布](https://github.com/cjyhjy/moonbit-visionleak/releases/tag/v0.7.1)，Mooncakes 为 `cjyhjy/visionleak@0.7.1`；实际下载和干净导入已校验。0.8.0 的版本字段与本地验收不代表正式发布，见其独立状态记录。
 
 已发布 0.6.0 的完整变更见 [版本说明](docs/changes-0.6.0.md) 和 [CHANGELOG](CHANGELOG.md)。发布与验收状态以 [发布记录](reports/plan-0.6.0/publication/README.md) 为准；Mooncakes 模块为 `cjyhjy/visionleak`。
 
@@ -32,6 +34,7 @@ node tools/server.mjs --report output/example/report.json --port 4173
 | 像素相同 | EXIF/sRGB/白底规范化后的完整尺寸和 RGB 摘要 | 编码可不同，仍可作为确定性关卡 |
 | 感知候选 | 全图 dHash，可选镜像及直角旋转 | 人工复核 |
 | 局部候选 | 默认关闭的 20 窗口局部 dHash | 实验性裁切线索，人工复核 |
+| ORB 几何候选 | 默认关闭的局部特征与几何一致性 | 实验性裁切线索，展示投影和内点，人工复核 |
 
 `verify` 重新读取文件核对确定性证据；`export-html` 导出单文件离线报告；`export-fixes` 导出修正建议 CSV 和稳定组键。工具不删除或移动数据。
 
@@ -76,4 +79,4 @@ npm run verify:ci
 
 0.6.0 索引、内存与复核改进：[实现、验证与性能边界](docs/optimization.md)。
 
-2026-11-03 后续研究：[裁切质量](reports/followup-quality/README.md) · [检索效率](reports/followup-retrieval/README.md) · [逐项任务状态](docs/followup-2026-11-03.md)。ORB 及代次标记均为独立候选，未纳入 0.7.0；自然污染与真人复核仍未验证。
+2026-11-03 后续研究：[裁切质量](reports/followup-quality/README.md) · [检索效率](reports/followup-retrieval/README.md) · [逐项任务状态](docs/followup-2026-11-03.md)。两条研究线和已发布 0.7.0 保留冻结记录；代次标记已在 0.7.1 集成发布，ORB 产品集成位于 0.8.0。自然污染与真人复核仍未验证。

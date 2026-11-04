@@ -22,19 +22,21 @@ fn workflow_gate(report : Json, level : String) -> Json {
   let mut pixels = 0
   let mut candidates = 0
   let mut locals = 0
+  let mut orbs = 0
   for pair in workflow_rows(report, "pairs") {
     match text(field(pair, "evidence")) {
       "byte-identical" => bytes = bytes + 1
       "pixel-identical" => pixels = pixels + 1
       "perceptual-candidate" => candidates = candidates + 1
       "local-candidate" => locals = locals + 1
+      "orb-candidate" => orbs = orbs + 1
       _ => ()
     }
   }
   let matched = match level {
     "exact" => bytes
     "pixel" => bytes + pixels
-    "candidate" => bytes + pixels + candidates + locals
+    "candidate" => bytes + pixels + candidates + locals + orbs
     _ => 0
   }
   let complete = field(report, "complete") == Json(true)
@@ -53,6 +55,11 @@ fn workflow_gate(report : Json, level : String) -> Json {
   if field(field(report, "options"), "includeCrops") == Json(true) {
     if field(result, "counts") is Object(fields) {
       fields["localCandidate"] = Json(locals)
+    }
+  }
+  if field(field(report, "options"), "includeOrb") == Json(true) {
+    if field(result, "counts") is Object(fields) {
+      fields["orbCandidate"] = Json(orbs)
     }
   }
   result
@@ -309,6 +316,7 @@ fn workflow_fixes(report : Json, reviews : Array[Json]) -> Json {
   for group in workflow_components(report, Some(confirmed)) {
     let ids = workflow_rows(group, "members").map(v => text(v))
     let mut has_local = false
+    let mut has_orb = false
     for pair in workflow_rows(report, "pairs") {
       if field(pair, "evidence") == Json("local-candidate") &&
         confirmed.contains(workflow_key(pair)) &&
@@ -317,8 +325,17 @@ fn workflow_fixes(report : Json, reviews : Array[Json]) -> Json {
         has_local = true
       }
     }
+    for pair in workflow_rows(report, "pairs") {
+      if field(pair, "evidence") == Json("orb-candidate") &&
+        confirmed.contains(workflow_key(pair)) &&
+        ids.contains(text(field(pair, "left"))) &&
+        ids.contains(text(field(pair, "right"))) {
+        has_orb = true
+      }
+    }
     components.push({
       "members": field(group, "members"),
+      "orb": Json(has_orb),
       "kind": "reviewed-candidate",
       "local": Json(has_local),
     })
@@ -351,7 +368,9 @@ fn workflow_fixes(report : Json, reviews : Array[Json]) -> Json {
     for i, image_id in ids {
       let image = images.get(image_id).unwrap_or(Json::null())
       let evidence = if kind == "reviewed-candidate" {
-        if field(group, "local") == Json(true) {
+        if field(group, "orb") == Json(true) {
+          "orb-candidate"
+        } else if field(group, "local") == Json(true) {
           "local-candidate"
         } else {
           "perceptual-candidate"
@@ -444,7 +463,7 @@ fn workflow_coverage(request : Json) -> Json {
   if reason != "" && reason != "no-decodable-images" {
     let mut stopped_phase = ""
     let mut stopped_processed = processed
-    for name in ["deterministic", "perceptual", "local"] {
+    for name in ["deterministic", "perceptual", "local", "orb"] {
       let phase = field(field(report, "phases"), name)
       if field(phase, "status") == Json("incomplete") {
         stopped_phase = name
@@ -454,7 +473,13 @@ fn workflow_coverage(request : Json) -> Json {
     }
     let exhaustion : Json = {
       "code": Json(reason),
-      "stage": "core-comparison",
+      "stage": Json(
+        if stopped_phase == "orb" {
+          "orb-comparison"
+        } else {
+          "core-comparison"
+        },
+      ),
       "processedImages": Json(stopped_processed),
       "emittedPairs": field(field(report, "stats"), "emittedPairs"),
       "atImage": if stopped_processed >= 0 &&
@@ -561,7 +586,7 @@ fn workflow_coverage(request : Json) -> Json {
       "deterministicInputComplete": Json(
         field(field(field(report, "phases"), "deterministic"), "complete") ==
         Json(true) &&
-        errors.is_empty(),
+        !errors.any(e => !text(field(e, "code")).has_prefix("ORB_")),
       ),
     },
   }

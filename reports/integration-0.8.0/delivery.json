@@ -1,0 +1,15 @@
+{
+  "version": "0.8.0",
+  "status": "local-and-clean-package-passed",
+  "sourceDigest": "a273f90e90035cdf2a41ff225c074425ff6923df5baab5a039c8c33cc2dfe1fa",
+  "compiledArtifactSha256": "5e8f83e3f09afd11393a3218e3e5ddbd8e66c90702059f85feaf36aea3fcd856",
+  "localChecks": 30,
+  "cleanPackageChecks": 23,
+  "archive": "release/visionleak-0.8.0.zip",
+  "archiveSha256": "e46fa56502e242ca1ba30d4f1c3a6d72ea44a5aaf68bf8e494d733852e1f3f29",
+  "githubReleasePublished": false,
+  "mooncakesPublished": false,
+  "publicationAuthorization": "0.7.1 only; 0.8.0 has integration and automatic acceptance authorization",
+  "remoteCI": "pending",
+  "scope": "Local integration acceptance; remote result and any publication will be recorded separately."
+}

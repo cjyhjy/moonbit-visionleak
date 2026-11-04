@@ -10,6 +10,14 @@ fn cli_limits() -> Array[(String, String, Int32, Int32, Int32)] {
     ("--max-comparisons", "maxComparisons", 0, 10000000, 1000000),
     ("--max-exact-comparisons", "maxExactComparisons", 0, 10000000, 1000000),
     ("--max-pairs", "maxPairs", 0, 100000, 10000),
+    ("--max-orb-images", "maxOrbImages", 0, 512, 256),
+    ("--max-orb-pixels", "maxOrbPixels", 1, 4194304, 1048576),
+    ("--max-orb-total-pixels", "maxOrbTotalPixels", 0, 134217728, 33554432),
+    ("--max-orb-comparisons", "maxOrbComparisons", 0, 2000000000, 100000000),
+    ("--max-orb-pair-checks", "maxOrbPairChecks", 0, 100000, 10000),
+    ("--max-orb-candidates", "maxOrbCandidates", 0, 1000, 200),
+    ("--max-orb-milliseconds", "maxOrbMilliseconds", 1, 300000, 60000),
+    ("--max-orb-memory-mib", "maxOrbMemoryMiB", 64, 512, 256),
   ]
 }
 
@@ -22,6 +30,7 @@ fn cli_defaults() -> Json {
   options["includeMirrors"] = Json(false)
   options["includeRotations"] = Json(false)
   options["includeCrops"] = Json(false)
+  options["includeOrb"] = Json(false)
   Json::object(options)
 }
 
@@ -38,7 +47,8 @@ fn cli_validate_options(overrides : Json) -> Json {
     }
     merged[key] = value
   }
-  for key in ["includeMirrors", "includeRotations", "includeCrops"] {
+  for
+    key in ["includeMirrors", "includeRotations", "includeCrops", "includeOrb"] {
     let value = merged[key]
     if !(value is True || value is False) {
       return error_json("ARGUMENT_ERROR", key + " must be boolean")
@@ -127,6 +137,10 @@ fn cli_parse(argv : Array[Json]) -> Json {
     }
     if arg == "--force" {
       force = true
+      continue
+    }
+    if arg == "--include-orb" {
+      values["includeOrb"] = Json(true)
       continue
     }
     if arg == "--include-crops" {

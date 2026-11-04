@@ -59,6 +59,9 @@ try {
   report.compiledArtifact = { sha256: digest(), matchesCommitted: digest() === committedArtifact };
   if (!report.compiledArtifact.matchesCommitted) throw new Error('Committed dist/visionleak.js differs from the fresh pinned build');
   run('node-integration', 'npm', ['test']);
+  if(process.env.VISIONLEAK_ORB_PYTHON) run('orb-integration', process.env.VISIONLEAK_ORB_PYTHON, ['tools/validate-orb-integration.py','--out',`.ci-artifacts/orb-regression-${Date.now()}`]);
+  run('native-retrieval-performance', python, ['tools/benchmark-native.py','--out',`.ci-artifacts/native-performance-${Date.now()}`]);
+  if(process.env.VISIONLEAK_ORB_PYTHON) run('bounded-scale', 'node', ['tools/benchmark-integration.mjs',`.ci-artifacts/scale-${Date.now()}`,'1000']);
   run('mooncakes-compatibility', python, ['tests/mooncakes-dry-run.py']);
   run('mooncakes-package', python, ['tests/mooncakes-package.py']);
   run('release-contract', python, ['tests/release-contract.py']);

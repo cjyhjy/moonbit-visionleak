@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.8.0
+
+- Add opt-in, bounded ORB geometry candidates through a supervised optional Python/OpenCV worker.
+- Bind sampled pixels, features, profile, worker and dependency versions to report identity; preserve exact-first evidence and explicit partial coverage.
+- Integrate geometric witnesses into review, filters, offline HTML and CSV while keeping candidates separate from exact verification.
+- Validate all known-source original/query relations against the frozen research candidate; these are regressions, not new holdout or human results.
+
 ## 0.7.1
 
 - Integrate the validated MIH generation-mark candidate without changing work budgets, pair order, local witnesses or truncation prefixes.

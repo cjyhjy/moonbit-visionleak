@@ -1,3 +1,11 @@
+# VisionLeak 0.8.0 integration
+
+Current source includes the independently accepted 0.7.1 retrieval optimization and opt-in ORB host integration. See `docs/changes-0.8.0.md`, `docs/followup-2026-11-03.md` and `reports/integration-0.8.0/README.md` for exact acceptance/publication state.
+
+For full contributor acceptance install both requirements-oracle.txt and requirements-orb.txt into the selected Python environment, set VISIONLEAK_ORACLE_PYTHON and VISIONLEAK_ORB_PYTHON, then run `npm run verify:ci`. Optional dependencies are never required by default production audits. `node tools/orb-walkthrough.mjs NEW_DIR` generates the marked scripted review workflow.
+
+The following versioned sections are historical delivery records; their receipts do not attest 0.8.0.
+
 # VisionLeak 0.7.1
 
 MIH generation-mark integration preserves the released 0.7.0 ordered output and budget semantics. Current local acceptance and publication receipts are in `reports/integration-0.7.1/`; see `docs/changes-0.7.1.md`. ORB is reserved for the following 0.8.0 opt-in integration.
