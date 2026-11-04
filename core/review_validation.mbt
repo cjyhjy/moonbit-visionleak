@@ -19,6 +19,7 @@ fn null_default(value : Json, fallback : Json) -> Json {
 fn evidence_known(value : String) -> Bool {
   [
     "byte-identical", "pixel-identical", "perceptual-candidate", "local-candidate",
+    "orb-candidate",
   ].contains(value)
 }
 
@@ -120,6 +121,11 @@ fn validate_report_value(value : Json) -> Json {
     if !evidence_known(evidence) {
       return error_json("InvalidReport", "未知证据等级：" + evidence)
     }
+    if evidence == "orb-candidate" && !valid_orb_pair(raw, value) {
+      return error_json(
+        "InvalidReport", "ORB 候选必须记录有效的几何见证、图像和配置。",
+      )
+    }
     if evidence == "local-candidate" {
       let witness = field(raw, "matchLocal")
       let a = integer(field(witness, "leftWindow"))
@@ -169,7 +175,11 @@ fn validate_report_value(value : Json) -> Json {
         Json(0)
       },
     )
-    if integer(distance) < 0 || integer(distance) > 64 {
+    if (evidence == "orb-candidate" && !(distance is Null)) ||
+      (
+        evidence != "orb-candidate" &&
+        (integer(distance) < 0 || integer(distance) > 64)
+      ) {
       return error_json(
         "InvalidReport", "证据距离必须是 0 到 64 的非负整数。",
       )
@@ -330,5 +340,7 @@ pub fn review_validation_json(source : String) -> String {
 
 ///|
 fn candidate_evidence(value : String) -> Bool {
-  value == "perceptual-candidate" || value == "local-candidate"
+  value == "perceptual-candidate" ||
+  value == "local-candidate" ||
+  value == "orb-candidate"
 }

@@ -20,6 +20,7 @@ jobs:
     timeout-minutes: 20
     env:
       VISIONLEAK_ORACLE_PYTHON: python
+      VISIONLEAK_ORB_PYTHON: python
       PYTHONDONTWRITEBYTECODE: '1'
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
@@ -33,12 +34,14 @@ jobs:
         with:
           python-version-file: .python-version
           cache: pip
-          cache-dependency-path: requirements-oracle.txt
+          cache-dependency-path: |
+            requirements-oracle.txt
+            requirements-orb.txt
       - name: Install locked dependencies
         run: |
           npm ci --no-audit --no-fund
           python -m pip install pip==25.2
-          python -m pip install -r requirements-oracle.txt
+          python -m pip install -r requirements-oracle.txt -r requirements-orb.txt
       - name: Install checksummed MoonBit compiler and standard library
         run: python tools/bootstrap.py
       - name: Check, build and test all backends and run independent image oracles

@@ -1,0 +1,721 @@
+{
+  "run": "https://github.com/cjyhjy/moonbit-visionleak/actions/runs/41786807378",
+  "commit": "fdbd625776fb765a502bd0f9a4d8ef0cc4168a8c",
+  "status": "failed",
+  "reason": "Cross-platform inlier equality; Linux 62 versus archived macOS 63, both 64 matches and both hit. Generated PNG encodings differ but the two input RGB arrays are byte-identical.",
+  "comparison": {
+    "linux": {
+      "pair": {
+        "left": "test/89995572-small-resize-jpeg75.png",
+        "right": "train/89995572-original.png",
+        "evidence": "orb-candidate",
+        "distance": null,
+        "matchOrb": {
+          "profile": "vl-orb-geometry-v1",
+          "original": "train/89995572-original.png",
+          "query": "test/89995572-small-resize-jpeg75.png",
+          "originalSize": [
+            384,
+            268
+          ],
+          "querySize": [
+            384,
+            253
+          ],
+          "matches": 64,
+          "inliers": 62,
+          "inlierRatio": 0.96875,
+          "querySpan": [
+            0.7289281686147054,
+            0.7376443614130435
+          ],
+          "queryToOriginal": [
+            [
+              0.5475201341791908,
+              0.0021179092571605536,
+              60.94947495634919
+            ],
+            [
+              -0.0021179092571605536,
+              0.5475201341791908,
+              55.45289584064265
+            ]
+          ],
+          "projectedQueryCorners": [
+            [
+              60.94947495634919,
+              55.45289584064265
+            ],
+            [
+              271.19720648115845,
+              54.63961868589299
+            ],
+            [
+              271.73303752322005,
+              193.16221263322825
+            ],
+            [
+              61.485305998410816,
+              193.9754897879779
+            ]
+          ],
+          "contained": true,
+          "scale": 0.5475242303964462,
+          "inlierCoordinates": [
+            [
+              209.0880126953125,
+              32.83200454711914,
+              176,
+              73
+            ],
+            [
+              44.92800521850586,
+              219.45602416992188,
+              86,
+              176
+            ],
+            [
+              38.0160026550293,
+              181.4400177001953,
+              82,
+              155
+            ],
+            [
+              31.10400390625,
+              183.1680145263672,
+              78,
+              156
+            ],
+            [
+              53.5680046081543,
+              184.89601135253906,
+              90,
+              157
+            ],
+            [
+              36.288002014160156,
+              186.6240234375,
+              81,
+              158
+            ],
+            [
+              58.75200653076172,
+              216.00001525878906,
+              94,
+              174
+            ],
+            [
+              27.64800262451172,
+              216.00001525878906,
+              76,
+              174
+            ],
+            [
+              76.0320053100586,
+              214.2720184326172,
+              103,
+              173
+            ],
+            [
+              39.74400329589844,
+              188.35202026367188,
+              83,
+              159
+            ],
+            [
+              44.92800521850586,
+              191.80801391601562,
+              86,
+              161
+            ],
+            [
+              29.37600326538086,
+              88.12800598144531,
+              77,
+              103
+            ],
+            [
+              57.02400588989258,
+              191.80801391601562,
+              92,
+              160
+            ],
+            [
+              27.64800262451172,
+              91.5840072631836,
+              76,
+              106
+            ],
+            [
+              198.7200164794922,
+              91.5840072631836,
+              170,
+              106
+            ],
+            [
+              62.2080078125,
+              191.80801391601562,
+              96,
+              160
+            ],
+            [
+              63.936004638671875,
+              209.0880126953125,
+              96,
+              170
+            ],
+            [
+              210.81602478027344,
+              93.31201171875,
+              177,
+              106
+            ],
+            [
+              221.18402099609375,
+              93.31201171875,
+              182,
+              106
+            ],
+            [
+              34.56000518798828,
+              205.63201904296875,
+              80,
+              168
+            ],
+            [
+              177.98402404785156,
+              138.24002075195312,
+              159,
+              131
+            ],
+            [
+              174.52801513671875,
+              136.5120086669922,
+              157,
+              130
+            ],
+            [
+              51.840003967285156,
+              196.9920196533203,
+              90,
+              164
+            ],
+            [
+              29.37600326538086,
+              124.416015625,
+              77,
+              124
+            ],
+            [
+              65.66400909423828,
+              200.44801330566406,
+              97,
+              165
+            ],
+            [
+              43.20000457763672,
+              200.44801330566406,
+              86,
+              166
+            ],
+            [
+              64.28160858154297,
+              201.13922119140625,
+              96,
+              165.60000610351562
+            ],
+            [
+              207.3600311279297,
+              33.17760467529297,
+              175.20001220703125,
+              73.20000457763672
+            ],
+            [
+              62.2080078125,
+              190.77122497558594,
+              96,
+              159.60000610351562
+            ],
+            [
+              55.98720932006836,
+              190.77122497558594,
+              91.20000457763672,
+              159.60000610351562
+            ],
+            [
+              45.619205474853516,
+              188.6976318359375,
+              86.4000015258789,
+              158.40000915527344
+            ],
+            [
+              74.64961242675781,
+              211.50723266601562,
+              102.00000762939453,
+              170.40000915527344
+            ]
+          ],
+          "coordinateCount": 62,
+          "coordinatesTruncated": true,
+          "allCoordinatesDigest": "26decffad19c2a7335095c98811d4153d20e29bf801d2460d484087318d43803"
+        }
+      },
+      "orbProfile": {
+        "id": "vl-orb-geometry-v1",
+        "experimental": true,
+        "enabledByDefault": false,
+        "normalization": "vl-rgb-v1, sampled RGBA composited on white, integer BT.601 gray",
+        "features": 800,
+        "scaleFactor": 1.2,
+        "nlevels": 8,
+        "edgeThreshold": 15,
+        "patchSize": 31,
+        "fastThreshold": 20,
+        "WTA_K": 2,
+        "maxDistance": 48,
+        "ratio": 0.75,
+        "minimumInliers": 8,
+        "minimumInlierRatio": 0.5,
+        "minimumQuerySpan": 0.15,
+        "scaleRange": [
+          0.15,
+          5
+        ],
+        "containmentTolerance": 0.1,
+        "ransacReprojectionThreshold": 3,
+        "ransacIterations": 1000,
+        "ransacConfidence": 0.99,
+        "refineIterations": 5,
+        "witnessPointLimit": 32,
+        "opencv": "4.13.0",
+        "numpy": "2.3.3",
+        "evidence": "orb-candidate; geometric support, not identity or leakage probability",
+        "pairOrder": "input prefix, earlier partners first; smaller sampled image is query first, opposite direction if no hit; existing Core pairs retained without replacement",
+        "prefilter": "none",
+        "opencvWheel": "4.13.0.92",
+        "profileDigest": "969c6d587e735764a39e09259bc3b92f7df3823a4b7765e371ac1abd82ce02f1",
+        "workerDigest": "98c150d77170acd4cf0bfaa0e97668d9a8d4fb6a7f94d5bf01551fe540f1edba",
+        "runtime": {
+          "python": "3.13.7",
+          "opencv": "4.13.0",
+          "opencvWheel": "4.13.0.92",
+          "numpy": "2.3.3",
+          "opencvBuildDigest": "9e0b6b5d3c457d7794d56f55acd3afdadd8fd4b5a8a562e78bcab4fadaf1e604"
+        }
+      },
+      "images": [
+        {
+          "id": "test/89995572-small-resize-jpeg75.png",
+          "path": "test/89995572-small-resize-jpeg75.png",
+          "split": "test",
+          "byteDigest": "41635cdfe0002a4398463d864b6665078894d8efece72c7a6822e1d10bf6bf19",
+          "pixelDigest": "94a33329121a69c9b45cc4cb68c3978e0826d0750e0c75570da31277e736ecf1",
+          "pixelDigestBasis": "full",
+          "dhashBasis": {
+            "width": 384,
+            "height": 253,
+            "downsampled": false
+          },
+          "dhash": "0100010111000100101001001000011010000011110000001110000011100100",
+          "width": 384,
+          "height": 253,
+          "contrast": 251,
+          "thumbnailDigest": "dae9681624b6334b2c6705983920bf6681c0669021418d31601dbe865aa0beef",
+          "format": "png",
+          "thumbnail": "thumbnails/32c4caf387453656d3f536b9fcf38fe6398eb0788ca2bbd5a534e893d37a9a28.jpg",
+          "orb": {
+            "width": 384,
+            "height": 253,
+            "keypoints": 778,
+            "grayDigest": "2a7426ec8f792fb692599eafac88b30465e8e5ec77afc7c7fcbf52dbfa743530",
+            "featureDigest": "d160f42c755d752bbeeccb9d330c6f4b093aeecab96deb350c0762ad71f6dbd1"
+          }
+        },
+        {
+          "id": "train/89995572-original.png",
+          "path": "train/89995572-original.png",
+          "split": "train",
+          "byteDigest": "e7d87ebe45d49136d6e58cacc61d7559e19ec63ea981766129596e632d8b3e6c",
+          "pixelDigest": "c31769dfd76854e76a1955d522856c6e2f7a451af3bb6fbd9b9d9715521ddb9d",
+          "pixelDigestBasis": "full",
+          "dhashBasis": {
+            "width": 384,
+            "height": 268,
+            "downsampled": false
+          },
+          "dhash": "0100011001001100010010011100100011100000110000001100001001101001",
+          "width": 384,
+          "height": 268,
+          "contrast": 253,
+          "thumbnailDigest": "25a5e116a1f27b8c5469cb7051f32ed57a29516b83c10b99b7909c0476238bd2",
+          "format": "png",
+          "thumbnail": "thumbnails/23bb95064c0647cdb2bcd28e81fa52edd8112c284c7958250a0b0395c5209f2e.jpg",
+          "orb": {
+            "width": 384,
+            "height": 268,
+            "keypoints": 800,
+            "grayDigest": "36cb517d31d88e393878cac8d5aab6283e3589009fbc7259b920ba9f0e5fc345",
+            "featureDigest": "c54a5f7f209ec20f0c27286a20d72c3af25f88cc3b4c00f2faba356fac000cbf"
+          }
+        }
+      ]
+    },
+    "macos": {
+      "pair": {
+        "left": "test/89995572-small-resize-jpeg75.png",
+        "right": "train/89995572-original.png",
+        "evidence": "orb-candidate",
+        "distance": null,
+        "matchOrb": {
+          "profile": "vl-orb-geometry-v1",
+          "original": "train/89995572-original.png",
+          "query": "test/89995572-small-resize-jpeg75.png",
+          "originalSize": [
+            384,
+            268
+          ],
+          "querySize": [
+            384,
+            253
+          ],
+          "matches": 64,
+          "inliers": 63,
+          "inlierRatio": 0.984375,
+          "querySpan": [
+            0.7289281686147054,
+            0.7376443614130435
+          ],
+          "queryToOriginal": [
+            [
+              0.5474532723913613,
+              0.0023249050343149254,
+              60.887449768639854
+            ],
+            [
+              -0.0023249050343149254,
+              0.5474532723913613,
+              55.48451440631449
+            ]
+          ],
+          "projectedQueryCorners": [
+            [
+              60.887449768639854,
+              55.48451440631449
+            ],
+            [
+              271.1095063669226,
+              54.591750873137556
+            ],
+            [
+              271.69770734060427,
+              193.09742878815194
+            ],
+            [
+              61.47565074232153,
+              193.9901923213289
+            ]
+          ],
+          "contained": true,
+          "scale": 0.5474582090309987,
+          "inlierCoordinates": [
+            [
+              31.10400390625,
+              183.1680145263672,
+              78,
+              156
+            ],
+            [
+              209.0880126953125,
+              32.83200454711914,
+              176,
+              73
+            ],
+            [
+              38.0160026550293,
+              181.4400177001953,
+              82,
+              155
+            ],
+            [
+              44.92800521850586,
+              219.45602416992188,
+              86,
+              176
+            ],
+            [
+              53.5680046081543,
+              184.89601135253906,
+              90,
+              157
+            ],
+            [
+              58.75200653076172,
+              216.00001525878906,
+              94,
+              174
+            ],
+            [
+              27.64800262451172,
+              216.00001525878906,
+              76,
+              174
+            ],
+            [
+              36.288002014160156,
+              186.6240234375,
+              81,
+              158
+            ],
+            [
+              39.74400329589844,
+              188.35202026367188,
+              83,
+              159
+            ],
+            [
+              76.0320053100586,
+              214.2720184326172,
+              103,
+              173
+            ],
+            [
+              177.98402404785156,
+              138.24002075195312,
+              159,
+              131
+            ],
+            [
+              44.92800521850586,
+              191.80801391601562,
+              86,
+              161
+            ],
+            [
+              174.52801513671875,
+              136.5120086669922,
+              157,
+              130
+            ],
+            [
+              57.02400588989258,
+              191.80801391601562,
+              92,
+              160
+            ],
+            [
+              62.2080078125,
+              191.80801391601562,
+              96,
+              160
+            ],
+            [
+              29.37600326538086,
+              124.416015625,
+              77,
+              124
+            ],
+            [
+              29.37600326538086,
+              88.12800598144531,
+              77,
+              103
+            ],
+            [
+              63.936004638671875,
+              209.0880126953125,
+              96,
+              170
+            ],
+            [
+              27.64800262451172,
+              91.5840072631836,
+              76,
+              106
+            ],
+            [
+              198.7200164794922,
+              91.5840072631836,
+              170,
+              106
+            ],
+            [
+              51.840003967285156,
+              196.9920196533203,
+              90,
+              164
+            ],
+            [
+              34.56000518798828,
+              205.63201904296875,
+              80,
+              168
+            ],
+            [
+              43.20000457763672,
+              200.44801330566406,
+              86,
+              166
+            ],
+            [
+              210.81602478027344,
+              93.31201171875,
+              177,
+              106
+            ],
+            [
+              221.18402099609375,
+              93.31201171875,
+              182,
+              106
+            ],
+            [
+              65.66400909423828,
+              200.44801330566406,
+              97,
+              165
+            ],
+            [
+              207.3600311279297,
+              33.17760467529297,
+              175.20001220703125,
+              73.20000457763672
+            ],
+            [
+              45.619205474853516,
+              188.6976318359375,
+              86.4000015258789,
+              158.40000915527344
+            ],
+            [
+              55.98720932006836,
+              190.77122497558594,
+              91.20000457763672,
+              159.60000610351562
+            ],
+            [
+              62.2080078125,
+              190.77122497558594,
+              96,
+              159.60000610351562
+            ],
+            [
+              37.324806213378906,
+              180.40322875976562,
+              82.80000305175781,
+              154.8000030517578
+            ],
+            [
+              74.64961242675781,
+              211.50723266601562,
+              102.00000762939453,
+              170.40000915527344
+            ]
+          ],
+          "coordinateCount": 63,
+          "coordinatesTruncated": true,
+          "allCoordinatesDigest": "f4fd1f3bc869a262664bc45d9ff2f8cee73240a7438f512ba380db13cb2d59db"
+        }
+      },
+      "orbProfile": {
+        "id": "vl-orb-geometry-v1",
+        "experimental": true,
+        "enabledByDefault": false,
+        "normalization": "vl-rgb-v1, sampled RGBA composited on white, integer BT.601 gray",
+        "features": 800,
+        "scaleFactor": 1.2,
+        "nlevels": 8,
+        "edgeThreshold": 15,
+        "patchSize": 31,
+        "fastThreshold": 20,
+        "WTA_K": 2,
+        "maxDistance": 48,
+        "ratio": 0.75,
+        "minimumInliers": 8,
+        "minimumInlierRatio": 0.5,
+        "minimumQuerySpan": 0.15,
+        "scaleRange": [
+          0.15,
+          5
+        ],
+        "containmentTolerance": 0.1,
+        "ransacReprojectionThreshold": 3,
+        "ransacIterations": 1000,
+        "ransacConfidence": 0.99,
+        "refineIterations": 5,
+        "witnessPointLimit": 32,
+        "opencv": "4.13.0",
+        "numpy": "2.3.3",
+        "evidence": "orb-candidate; geometric support, not identity or leakage probability",
+        "pairOrder": "input prefix, earlier partners first; smaller sampled image is query first, opposite direction if no hit; existing Core pairs retained without replacement",
+        "prefilter": "none",
+        "opencvWheel": "4.13.0.92",
+        "profileDigest": "969c6d587e735764a39e09259bc3b92f7df3823a4b7765e371ac1abd82ce02f1",
+        "workerDigest": "98c150d77170acd4cf0bfaa0e97668d9a8d4fb6a7f94d5bf01551fe540f1edba",
+        "runtime": {
+          "python": "3.13.15",
+          "opencv": "4.13.0",
+          "opencvWheel": "4.13.0.92",
+          "numpy": "2.3.3",
+          "opencvBuildDigest": "6ccbe122ee5d14ea2d8760dca96fb750d6827986280867d6fa5a703b46bc6ab2"
+        }
+      },
+      "images": [
+        {
+          "id": "test/89995572-small-resize-jpeg75.png",
+          "path": "test/89995572-small-resize-jpeg75.png",
+          "split": "test",
+          "byteDigest": "47f9fc0f877c2ff8d3bbaf5b122eb4d64a59c9887c012164b6c0baae3ffdf3b7",
+          "pixelDigest": "94a33329121a69c9b45cc4cb68c3978e0826d0750e0c75570da31277e736ecf1",
+          "pixelDigestBasis": "full",
+          "dhashBasis": {
+            "width": 384,
+            "height": 253,
+            "downsampled": false
+          },
+          "dhash": "0100010111000100101001001000011010000011110000001110000011100100",
+          "width": 384,
+          "height": 253,
+          "contrast": 251,
+          "thumbnailDigest": "dae9681624b6334b2c6705983920bf6681c0669021418d31601dbe865aa0beef",
+          "format": "png",
+          "thumbnail": "thumbnails/32c4caf387453656d3f536b9fcf38fe6398eb0788ca2bbd5a534e893d37a9a28.jpg",
+          "orb": {
+            "width": 384,
+            "height": 253,
+            "keypoints": 778,
+            "grayDigest": "2a7426ec8f792fb692599eafac88b30465e8e5ec77afc7c7fcbf52dbfa743530",
+            "featureDigest": "0862fdb5f7109a5ad91b73b26204a710c8b026878e0887bede14df06afd4c112"
+          }
+        },
+        {
+          "id": "train/89995572-original.png",
+          "path": "train/89995572-original.png",
+          "split": "train",
+          "byteDigest": "68edbd524433acceaa4e61a3899d7a27e8a60cea65591eb6e299e09158dca940",
+          "pixelDigest": "c31769dfd76854e76a1955d522856c6e2f7a451af3bb6fbd9b9d9715521ddb9d",
+          "pixelDigestBasis": "full",
+          "dhashBasis": {
+            "width": 384,
+            "height": 268,
+            "downsampled": false
+          },
+          "dhash": "0100011001001100010010011100100011100000110000001100001001101001",
+          "width": 384,
+          "height": 268,
+          "contrast": 253,
+          "thumbnailDigest": "25a5e116a1f27b8c5469cb7051f32ed57a29516b83c10b99b7909c0476238bd2",
+          "format": "png",
+          "thumbnail": "thumbnails/23bb95064c0647cdb2bcd28e81fa52edd8112c284c7958250a0b0395c5209f2e.jpg",
+          "orb": {
+            "width": 384,
+            "height": 268,
+            "keypoints": 800,
+            "grayDigest": "36cb517d31d88e393878cac8d5aab6283e3589009fbc7259b920ba9f0e5fc345",
+            "featureDigest": "7fba0e0e72fac4e5b4fd2c8d3e639fc5067f105e36dda27781b4df1793c0e7ae"
+          }
+        }
+      ]
+    }
+  },
+  "correction": "Run unchanged frozen reference algorithm on the current platform; strict same-platform count/matrix checks and preserved historical hits/zero additional FP remain mandatory. Record every cross-platform difference."
+}

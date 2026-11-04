@@ -576,6 +576,11 @@ pub fn audit_json(source : String) -> String {
   if !(opts is Object(_) || opts is Null) {
     return error_json("InvalidOptions", "options must be an object").stringify()
   }
+  if field(opts, "includeOrb") == Json(true) {
+    return error_json(
+      "HostFeatureRequired", "ORB needs the optional Node/Python host worker; use runAudit or the CLI",
+    ).stringify()
+  }
   let mirror_option = field(opts, "includeMirrors")
   if !(mirror_option is True || mirror_option is False || mirror_option is Null) {
     return error_json("InvalidOptions", "includeMirrors must be a boolean").stringify()

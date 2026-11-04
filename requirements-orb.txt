@@ -1,0 +1,3 @@
+# Optional host worker. The MoonBit package and default audit do not require it.
+opencv-python-headless==4.13.0.92
+numpy==2.3.3

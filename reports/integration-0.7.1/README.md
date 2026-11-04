@@ -1,6 +1,6 @@
 # 0.7.1 集成与验收
 
-当前状态：本地集成完成，完整验收与发布进行中。不能据此认定已公开发布。
+当前状态：0.7.1 已合并并正式发布。PR #3 / b8d13d7 的合并后 Linux CI 成功；实际 GitHub ZIP 下载、Mooncakes 全新导入及字节一致性均通过，见 `publication/completion.json`。
 
 - `ci/verification.json`：固定工具链、三后端及 Node/图像 oracle。
 - `browser.json`、`walkthrough.json`：当前产物的 Chrome 兼容及脚本复核闭环。

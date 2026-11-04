@@ -1,0 +1,23 @@
+{
+  "version": "0.8.0",
+  "status": "local-and-clean-package-passed",
+  "sourceDigest": "f36c847f692395d7e61a8400b6bacddb7b0409cf6ac0077ead5103ce16bc766a",
+  "compiledArtifactSha256": "5e8f83e3f09afd11393a3218e3e5ddbd8e66c90702059f85feaf36aea3fcd856",
+  "localChecks": 30,
+  "cleanPackageChecks": 23,
+  "archive": "release/visionleak-0.8.0.zip",
+  "archiveSha256": "96ce8c2798e13ab5b5364961f9df8bad2eb07dfb83e1319fd1f5062e8a7e58d8",
+  "githubReleasePublished": false,
+  "mooncakesPublished": false,
+  "publicationAuthorization": "0.7.1 only; 0.8.0 has integration and automatic acceptance authorization",
+  "remoteCI": "rerunning-after-platform-reference-correction",
+  "scope": "Local integration acceptance; remote result and any publication will be recorded separately.",
+  "pullRequest": "https://github.com/cjyhjy/moonbit-visionleak/pull/4",
+  "commit": "fdbd625776fb765a502bd0f9a4d8ef0cc4168a8c",
+  "registryServerPreflight": {
+    "status": "not-executed",
+    "reason": "Automatic approval rejected even dry-run because it could upload 0.8.0; user publication authorization currently covers 0.7.1 only.",
+    "localPackageCheck": "passed"
+  },
+  "supersededUnpublishedArchiveSha256": "e46fa56502e242ca1ba30d4f1c3a6d72ea44a5aaf68bf8e494d733852e1f3f29"
+}

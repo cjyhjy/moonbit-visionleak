@@ -13,6 +13,7 @@ import { verifyFiles, exportFixes, exportHTML } from './report-tools.mjs';
 import { capabilities } from './capabilities.mjs';
 import { discoverManifest, containedFile } from './input.mjs';
 import { openCache } from './fingerprint-cache.mjs';
+import { runOrb } from './orb.mjs';
 
 const SPLITS = ['train', 'validation', 'test'];
 const MARKER = '.visionleak-output.json';
@@ -47,6 +48,15 @@ Options (all budgets are finite):
   --max-file-bytes N     Per encoded file (default 33554432)
   --max-comparisons N    Budget for EACH perceptual/local stage, 0..10000000 (default 1000000)
   --max-pairs N          Output-pair budget, 0..100000 (default 10000)
+  --include-orb         Optional ORB geometry candidates; needs requirements-orb.txt
+  --max-orb-images N    Feature prefix cap, 0..512 (default 256)
+  --max-orb-pixels N    Per-image sampled pixels, 1..4194304 (default 1048576)
+  --max-orb-total-pixels N  Total feature pixels, 0..134217728 (default 33554432)
+  --max-orb-comparisons N  Descriptor comparisons, 0..2000000000 (default 100000000)
+  --max-orb-pair-checks N  Directional checks, 0..100000 (default 10000)
+  --max-orb-candidates N   Additional pairs, 0..1000 (default 200)
+  --max-orb-milliseconds N  Worker lifetime, 1..300000 (default 60000)
+  --max-orb-memory-mib N    Worker RSS guard, 64..512 (default 256)
   --include-crops       Experimental local-window candidates (default off)
   --include-rotations   Also search clockwise 90/180/270-degree orientations (default off)
   --include-mirrors     Also search horizontal-reflection candidates (default off)
@@ -166,7 +176,7 @@ async function inspectOutput(out, force) {
   return true;
 }
 
-export async function runAudit({ root: inputRoot, out: inputOut, options: overrides = {}, force = false, failOn = '', manifest, cache: cacheDirectory }) {
+export async function runAudit({ root: inputRoot, out: inputOut, options: overrides = {}, force = false, failOn = '', manifest, cache: cacheDirectory, signal }) {
   const options = cliCore({ operation: 'options', overrides }).options;
   workflow({operation:'gate',report:{complete:true,pairs:[]},failOn});
   if (typeof inputRoot !== 'string' || !inputRoot || typeof inputOut !== 'string' || !inputOut || typeof force !== 'boolean') {
@@ -244,9 +254,20 @@ export async function runAudit({ root: inputRoot, out: inputOut, options: overri
     const computed = images.length > 0 ? await audit(images, coreOptions) : {
       ok: false, complete: false, status: 'incomplete', pairs: [], groups: [], stats: { reason: 'no-decodable-images', processedImages: 0 },
     };
+    let orb;
+    if (options.includeOrb) {
+      orb = await runOrb({root, images, computed, options, signal});
+      computed.phases = {...computed.phases, orb:orb.phase};
+      computed.stats = {...computed.stats, processedImages:Math.min(computed.stats.processedImages,orb.phase.processedImages),
+        emittedPairs:computed.pairs.length, orbCandidatePairs:orb.phase.emittedPairs};
+      if (!orb.phase.complete && !computed.stats.reason) computed.stats.reason = orb.phase.reason;
+      computed.complete = computed.complete && orb.phase.complete;
+      errors.push(...orb.errors);
+    }
     const complete = computed.complete === true && errors.length === 0;
     const report = {
       ...(computed.localProfile ? { localProfile: computed.localProfile } : {}),
+      ...(orb ? {orbProfile:orb.profile} : {}),
       schemaVersion: 'visionleak-report-v1',
       identityVersion: IDENTITY_VERSION,
       normalization: 'vl-rgb-v1', decoder: DECODER,
@@ -263,7 +284,7 @@ export async function runAudit({ root: inputRoot, out: inputOut, options: overri
     // Exclude only wall-clock metadata so an identical audit has a reproducible ID.
     report.auditId = reportIdentity(report).digest;
     report.createdAt = new Date().toISOString();
-    report.timing = { ...(cache ? { cache: cache.stats } : {}), elapsedMs: Math.round(performance.now() - started) };
+    report.timing = { ...(orb ? {orb:orb.timing} : {}), ...(cache ? { cache: cache.stats } : {}), elapsedMs: Math.round(performance.now() - started) };
     await writeFile(join(stage, 'report.json'), `${JSON.stringify(report, null, 2)}\n`, { flag: 'wx' });
     await writeFile(join(stage, MARKER), `${JSON.stringify({ format: FORMAT, files: ['report.json', ...images.map((i) => i.thumbnail)] }, null, 2)}\n`, { flag: 'wx' });
     if (previous) {

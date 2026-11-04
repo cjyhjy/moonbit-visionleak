@@ -8,7 +8,8 @@ VisionLeak 自有源码、测试、合成图像生成脚本和说明采用 [MIT]
 | [sharp 0.35.5](https://github.com/lovell/sharp/tree/v0.35.5) | 解码、sRGB/方向变换、显示缩略图 | Apache-2.0；`package-lock.json` 锁定包与 integrity；保存 `LICENSES/sharp-Apache-2.0.txt` |
 | libvips 8.18.7 及其 codec 依赖 | sharp 原生解码后端 | 由 npm 平台包提供，包含各自许可；本交付不打包 node_modules 或 native binaries，安装包自身携带许可 |
 | [ImageHash](https://github.com/JohannesBuchner/imagehash) | 外部 dHash oracle 与默认算法基线，仅用于研究 | BSD-2-Clause；版本/依赖锁见 `requirements-oracle.txt`，不复制其实现进入核心 |
-| Pillow / NumPy / SciPy | 合成 fixture、独立规范化与评测 | 仅研究环境安装；版本锁和许可链接见 `research/sources.json` / 对应包元数据 |
+| Pillow / NumPy / SciPy | 合成 fixture、独立规范化与评测 | 研究依赖见 `requirements-oracle.txt`；NumPy 2.3.3 同时用于可选 ORB worker，许可以安装包元数据为准 |
+| OpenCV 4.13.0 / opencv-python-headless 4.13.0.92 | 可选 ORB 提取与几何校验 | OpenCV Apache-2.0；Python 打包脚本 MIT；`requirements-orb.txt` 固定版本，安装 wheel 自带许可证及第三方声明，本交付不打包 wheel 或 native binaries |
 | [NIST FIPS 180-4](https://doi.org/10.6028/NIST.FIPS.180-4) | SHA-256 算法规范 | 本项目按算法独立实现，使用公开 known-answer vectors 和 Node/Python 库进行对照 |
 
 `dist/visionleak.js` 是 MoonBit 构建产物，含标准库代码，因此不能只保留 MIT 许可而丢弃 MoonBit 第三方声明。原始版本说明包含更多标准库组件的许可证文本；完整保留并不意味着所有列出的函数都被本项目链接。

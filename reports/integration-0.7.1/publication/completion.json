@@ -1,0 +1,31 @@
+{
+  "status": "published-and-independently-verified",
+  "version": "0.7.1",
+  "commit": "b8d13d7d3de11729e5cc67bfe413bd0c49f07b5e",
+  "pullRequest": "https://github.com/cjyhjy/moonbit-visionleak/pull/3",
+  "mergedHeadCI": {
+    "id": 41782987157,
+    "status": "success",
+    "url": "https://github.com/cjyhjy/moonbit-visionleak/actions/runs/41782987157"
+  },
+  "github": {
+    "url": "https://github.com/cjyhjy/moonbit-visionleak/releases/tag/v0.7.1",
+    "downloadedArchiveSha256": "9a41d2e1848fe6fc4e2e93296f3ac69f6a80d287fbb575ab3ed0a66c71596e68",
+    "bytes": 33394459
+  },
+  "mooncakes": {
+    "status": "published-and-clean-import-verified",
+    "version": "0.7.1",
+    "module": "cjyhjy/visionleak",
+    "formalPublishAttempted": true,
+    "publishExitCode": 0,
+    "serverStatus": "200 OK",
+    "packageSha256": "726d88f5786ed6c75ac6440c23e20833fc54e4b0c1de1f092f0041c4854ae5d1",
+    "packageBytes": 38144,
+    "verifiedAt": "2026-11-04T06:20:18.207456+00:00",
+    "url": "https://mooncakes.io/docs/cjyhjy/visionleak/"
+  },
+  "cleanRegistryTestsPerBackend": 4,
+  "verifiedAt": "2026-11-04T06:24:43.590488+00:00",
+  "authorization": "User explicitly approved publishing fixed 0.7.1 after automatic approval initially rejected unconfirmed external publication."
+}
