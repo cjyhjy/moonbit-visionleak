@@ -4,7 +4,8 @@ import {fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 import {sourceDigest} from './source-digest.mjs';
-const folder='reports/followup-0.7.0';
+const folder=process.argv[2] || 'reports/followup-0.7.0';
+if(!/^reports\/[A-Za-z0-9.-]+$/.test(folder)) throw new Error('Expected a versioned reports folder');
 const read=name=>JSON.parse(readFileSync(new URL('../'+name,import.meta.url)));
 const hash=name=>createHash('sha256').update(readFileSync(new URL('../'+name,import.meta.url))).digest('hex');
 const ci=read(folder+'/ci/verification.json');
@@ -27,7 +28,7 @@ function collect(folderPath) {
   }
 }
 collect(folder+'/ci');
-for(const name of [folder+'/browser.json',folder+'/walkthrough.json',folder+'/frozen-replay/evaluation.json','research/photos-v3/freeze-0.7.0.json','research/baselines/0.7.0-pre-followup/snapshot.json'])evidenceDigests[name]=hash(name);
+for(const name of [folder+'/browser.json',folder+'/walkthrough.json','reports/followup-0.7.0/frozen-replay/evaluation.json','research/photos-v3/freeze-0.7.0.json','research/baselines/0.7.0-pre-followup/snapshot.json'])evidenceDigests[name]=hash(name);
 for(const shot of browser.screenshots??[]) {assert.equal(hash(shot.path),shot.sha256);evidenceDigests[shot.path]=shot.sha256;}
 const result={schemaVersion:'visionleak-followup-acceptance-v1',version:read('package.json').version,status:'passed',verifiedAt:new Date().toISOString(),sourceDigest:source,compiledArtifact:{path:'dist/visionleak.js',sha256:artifact},ci:{path:folder+'/ci/verification.json',checks:ci.checks.length},browser,walkthrough:{path:folder+'/walkthrough.json',sourceDatasetUnchanged:true},evidenceDigests,publication:{scope:'Local acceptance only; see separate publication receipts for commit, remote CI and release status.'}};
 writeFileSync(new URL('../'+folder+'/acceptance.json',import.meta.url),JSON.stringify(result,null,2)+'\n');

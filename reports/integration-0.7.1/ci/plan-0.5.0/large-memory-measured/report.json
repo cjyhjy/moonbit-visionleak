@@ -1,0 +1,175 @@
+{
+  "schemaVersion": "visionleak-report-v1",
+  "identityVersion": "vl-report-sha256-v2",
+  "normalization": "vl-rgb-v1",
+  "decoder": {
+    "name": "sharp",
+    "version": "0.35.5",
+    "libvips": "8.18.7"
+  },
+  "engine": {
+    "name": "visionleak-moonbit",
+    "artifactDigest": "e361edbf35be47e09c8bbabf5ce5b14a35baca287e9151108dce11f75b43c7be"
+  },
+  "ok": true,
+  "complete": true,
+  "status": "complete",
+  "pairs": [
+    {
+      "left": "test/copy.jpg",
+      "right": "train/original.jpg",
+      "evidence": "byte-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/copy.jpg",
+      "right": "validation/reencoded.png",
+      "evidence": "pixel-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "train/original.jpg",
+      "right": "validation/reencoded.png",
+      "evidence": "pixel-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    }
+  ],
+  "groups": [
+    {
+      "members": [
+        "test/copy.jpg",
+        "train/original.jpg",
+        "validation/reencoded.png"
+      ],
+      "evidence": "exact-component"
+    }
+  ],
+  "options": {
+    "threshold": 6,
+    "maxImages": 1000,
+    "maxDecodePixels": 64000000,
+    "maxPixels": 4194304,
+    "maxTotalPixels": 100000000,
+    "maxFileBytes": 33554432,
+    "maxComparisons": 1000000,
+    "maxPairs": 10000,
+    "includeMirrors": false,
+    "includeRotations": false
+  },
+  "stats": {
+    "inputImages": 3,
+    "processedImages": 3,
+    "comparisons": 7,
+    "distanceEvaluations": 4,
+    "pairChecks": 3,
+    "emittedPairs": 3,
+    "indexNodes": 1,
+    "reason": ""
+  },
+  "images": [
+    {
+      "id": "test/copy.jpg",
+      "path": "test/copy.jpg",
+      "split": "test",
+      "byteDigest": "8e1169e2fca9b23d5b85db67e4f34c80b4697deaca2d9b37328d317a18966329",
+      "pixelDigest": "50cf62964a62cf468684ede519530e22f06d5193b1f3ae556bf7328678665e75",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 2364,
+        "height": 1773,
+        "downsampled": true
+      },
+      "dhash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "width": 4000,
+      "height": 3000,
+      "contrast": 249,
+      "thumbnail": "thumbnails/963b1c825668dac30c5b9dd788639b78051e92f1699025e2e605e743c41fc7c9.jpg",
+      "thumbnailDigest": "faa8eb8baeafa58f36b2b121381157a0bfaae0933c2cbed38e185bf2ea5151ed",
+      "format": "jpeg"
+    },
+    {
+      "id": "train/original.jpg",
+      "path": "train/original.jpg",
+      "split": "train",
+      "byteDigest": "8e1169e2fca9b23d5b85db67e4f34c80b4697deaca2d9b37328d317a18966329",
+      "pixelDigest": "50cf62964a62cf468684ede519530e22f06d5193b1f3ae556bf7328678665e75",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 2364,
+        "height": 1773,
+        "downsampled": true
+      },
+      "dhash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "width": 4000,
+      "height": 3000,
+      "contrast": 249,
+      "thumbnail": "thumbnails/6b9d98d503556bbfeb634d7abf0fac737bcec9b09d5c4098cebac029f4741006.jpg",
+      "thumbnailDigest": "faa8eb8baeafa58f36b2b121381157a0bfaae0933c2cbed38e185bf2ea5151ed",
+      "format": "jpeg"
+    },
+    {
+      "id": "validation/reencoded.png",
+      "path": "validation/reencoded.png",
+      "split": "validation",
+      "byteDigest": "03d938d8d5b173460fdafc80b9fe47caee2f97497ef2f786cd425ea7b725dd62",
+      "pixelDigest": "50cf62964a62cf468684ede519530e22f06d5193b1f3ae556bf7328678665e75",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 2364,
+        "height": 1773,
+        "downsampled": true
+      },
+      "dhash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "width": 4000,
+      "height": 3000,
+      "contrast": 249,
+      "thumbnail": "thumbnails/70a612669f0584916f882a08b66b8d778f0a10f4121a96b92aecc6ed2ec17363.jpg",
+      "thumbnailDigest": "faa8eb8baeafa58f36b2b121381157a0bfaae0933c2cbed38e185bf2ea5151ed",
+      "format": "png"
+    }
+  ],
+  "errors": [],
+  "scope": {
+    "splits": [
+      "train",
+      "validation",
+      "test"
+    ],
+    "splitDirectories": {
+      "train": "train",
+      "validation": "validation",
+      "test": "test"
+    },
+    "missingSplits": [],
+    "supportedExtensions": [
+      ".png",
+      ".jpg",
+      ".jpeg",
+      ".webp",
+      ".avif",
+      ".tif",
+      ".tiff",
+      ".gif"
+    ],
+    "ignoredFiles": 0,
+    "entriesScanned": 3,
+    "discoveredAtLeast": 3,
+    "acceptedImages": 3,
+    "totalDecodedPixels": 36000000,
+    "maxDirectoryEntries": 100000,
+    "source": "local-files",
+    "allPairsAreCrossSplit": true,
+    "perceptualMatchesRequireReview": true
+  },
+  "auditId": "3e63a956036da9b403d88ac0aca3eae35dfd764e02f232c5b2d3f47cffd0d907",
+  "createdAt": "2026-10-25T08:54:45.277Z",
+  "timing": {
+    "elapsedMs": 2378
+  }
+}

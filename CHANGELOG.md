@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.7.1
+
+- Integrate the validated MIH generation-mark candidate without changing work budgets, pair order, local witnesses or truncation prefixes.
+- Pin the released 0.7.0 runtime for 144 full-output budget cases and 12 independent exhaustive cases.
+- Keep ORB outside this release; bounded product integration follows separately.
+
 ## 0.7.0 — local candidate, unpublished
 
 - Exact-first audit with independent deterministic/global/local phase accounting; pair order, work counts and audit IDs change.
