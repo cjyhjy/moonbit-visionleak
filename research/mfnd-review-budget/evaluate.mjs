@@ -1,4 +1,5 @@
-// Fixed before the first audit. Rank deterministic evidence first, then dHash
+// Four prespecified configurations plus one explicitly post-hoc combination.
+// Rank deterministic evidence first, then dHash
 // distance, then ORB inlier count. Ties use stable image paths.
 import {readFile, writeFile, mkdtemp} from 'node:fs/promises';
 import {join} from 'node:path';
@@ -10,7 +11,7 @@ const results = [];
 const rank = { 'byte-identical':0, 'pixel-identical':1, 'perceptual-candidate':2, 'orb-candidate':3 };
 for (const [part, groups] of Object.entries(sample.groups)) {
   const positives = new Set(groups.map(([a,b]) => 'test/'+b+'.jpg|train/'+a+'.jpg'));
-  for (const [config, flags] of Object.entries({default:{},mirror:{includeMirrors:true},threshold10:{threshold:10},orb:{includeOrb:true}})) {
+  for (const [config, flags] of Object.entries({default:{},mirror:{includeMirrors:true},threshold10:{threshold:10},orb:{includeOrb:true},threshold10OrbExploratory:{threshold:10,includeOrb:true}})) {
     let report;
     for (let attempt=0; attempt<20; attempt++) {
       const out = join(work,part+'-'+config+'-'+attempt);

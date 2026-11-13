@@ -12,3 +12,5 @@ VISIONLEAK_ORB_PYTHON=/path/to/pinned/python node research/mfnd-review-budget/ev
 [原始标注](https://mfnd.similarity.eu/) · [照片分卷](https://press.liacs.nl/mirflickr/mirdownload.html)
 
 保留集 64 对中，四种配置依次找回 50、53、59、60 对。固定只看前 50 对时四种配置均为 50 对，当前样本无法据此选出更好的队列排序。阈值 10 可以作为无需 Python 的扩召回对照，是否适用于自己的数据应同时衡量难负例与候选负担；项目默认阈值仍为 6。[逐配置结果](../../reports/post-090/mfnd.json)
+
+另行探索阈值 10 与 ORB 的组合。它由首轮结果启发，开发 16/16、同一保留集 61/64、前 50 对命中 50，仍漏 3 对。这一行属于事后实验。可用 `--threshold 10 --include-orb` 复现该配置，预算和缓存设置见 evaluate.mjs。

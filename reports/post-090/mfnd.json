@@ -40,6 +40,16 @@
     "auditId": "6ea17c9d124d67cae6b07280772a4fc618289a651a18fc798503bb9197a08923"
   },
   {
+    "part": "development",
+    "config": "threshold10OrbExploratory",
+    "positivePairs": 16,
+    "found": 16,
+    "candidates": 16,
+    "foundInFirst50": 16,
+    "unlabelled": 0,
+    "auditId": "c796524761c077bde2a874dd66490a045abbf3d924c761168a358d1dff1014a2"
+  },
+  {
     "part": "holdout",
     "config": "default",
     "positivePairs": 64,
@@ -78,5 +88,15 @@
     "foundInFirst50": 50,
     "unlabelled": 0,
     "auditId": "fd6d4d698316fe11531d912e6b5eef4b8dc59c47ec8c9a5aa36476ae0e3c0c65"
+  },
+  {
+    "part": "holdout",
+    "config": "threshold10OrbExploratory",
+    "positivePairs": 64,
+    "found": 61,
+    "candidates": 61,
+    "foundInFirst50": 50,
+    "unlabelled": 0,
+    "auditId": "9a7e519b03eeb93dd73926ecf9447ad6a533e3dd4df5de25de06ca03a00e2475"
   }
 ]
