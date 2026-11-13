@@ -329,7 +329,10 @@ function navigatePending() {
   if (next) selectPair(next.key);
 }
 function downloadJSON(value, filename) {
-  const blob = new Blob([JSON.stringify(value, null, 2) + '\n'], { type: 'application/json' });
+  downloadFile(JSON.stringify(value, null, 2) + '\n', filename, 'application/json');
+}
+function downloadFile(content, filename, type) {
+  const blob = new Blob([content], { type });
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
   link.href = url;
@@ -401,6 +404,17 @@ $('transfer-file').addEventListener('change',async event=>{
 $('apply-transfer').addEventListener('click',()=>{
  if(!state.report||!state.transferPlan)return;
  const result=applyReviewTransfer(state.report,state.reviews,state.transferPlan);state.reviews=result.reviews;state.undo=result.undo;if(!result.remaining)state.transferPlan=null;$('apply-transfer').disabled=!result.remaining;saveReviews();render();$('transfer-preview').textContent=`已迁移 ${result.applied} 条，保留已有结论 ${result.existing} 条，待下一批 ${result.remaining} 条。${result.applied?'可撤销本批迁移。':'未更改已有记录。'}`;
+});
+$('export-fixes').addEventListener('click', () => {
+  if (!state.report) return;
+  try {
+    const result = JSON.parse(workflow_json(JSON.stringify({
+      operation: 'fixes', report: state.report.raw, reviews: [...state.reviews.values()]
+    })));
+    if (!result.ok) throw new Error(result.error.message);
+    downloadFile(result.csv, 'suggestions.csv', 'text/csv;charset=utf-8');
+    notice(`已导出 ${result.rows.length} 行处理建议。`);
+  } catch (error) { notice(error.message, true); }
 });
 $('export-review').addEventListener('click', () => { if (state.report) downloadJSON(reviewDocument(state.report, state.reviews), 'review.json'); });
 $('export-report').addEventListener('click', () => { if (state.report) downloadJSON({ ...state.report.raw, review: reviewDocument(state.report, state.reviews) }, 'report-reviewed.json'); });

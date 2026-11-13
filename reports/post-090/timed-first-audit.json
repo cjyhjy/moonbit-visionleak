@@ -1,0 +1,8 @@
+{
+  "startEpochSeconds": 1794596119,
+  "downloadMtime": 1794596135.8538203,
+  "seconds": 16.9,
+  "rows": 27,
+  "sha256": "731898a748f92cd23c1f340eae194a7798330a9d30226a5d4d0d68fe6d16744e",
+  "scope": "Fresh scan in installed working directory through Chrome review and CSV download, automated operator, excludes dependency installation"
+}

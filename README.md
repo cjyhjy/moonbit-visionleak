@@ -14,7 +14,7 @@ node tools/server.mjs --report output/example/report.json --port 4173
 
 演示数据含确定性重复，第二行预期退出 **3**；CI 可据此阻止跨集合重复。浏览器打开 http://127.0.0.1:4173 。需要 Node.js 22+，CLI 已附带编译后的 MoonBit 核心。
 
-**0.9.0 发布候选，尚未发布。** [实施计划](docs/plan-0.9.0.md) · [开发版使用与预算合同](docs/changes-0.9.0.md) · [逐项验收状态](reports/plan-0.9.0/STATUS.json)。新增 ORB 特征/方向缓存、磁盘分批与扫描恢复、可选近似候选检索、doctor 和批量/跨次复核。近似候选队列完成不代表穷举完整；[自然公开案例基线](reports/plan-0.9.0/natural-cifair/README.md)保留全部漏检，真人复核耗时尚未测量。本地包版本现为0.9.0，最终发布包和公开发行验收仍在进行。
+**[下载 VisionLeak 0.9.0](https://github.com/cjyhjy/moonbit-visionleak/releases/tag/v0.9.0)**。解压后运行上方命令，在工作台选择一对跨集合重复，查看证据并标记结论。[首次复核与建议导出](docs/demo.md) · [0.9.0 使用说明](docs/changes-0.9.0.md) · [干净解压重建验收](reports/integration-0.9.0/clean-copy-final.json)。
 
 **0.8.0：可选 ORB 几何候选。** [安装、预算与证据合同](docs/changes-0.8.0.md) · [当前验收/发布状态](reports/integration-0.8.0/README.md)。默认关闭；需固定 Python/OpenCV 依赖，候选仍须人工复核。
 

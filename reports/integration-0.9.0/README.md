@@ -1,6 +1,6 @@
 # 0.9.0 候选验收
 
-本地版本0.9.0，尚未发布。源码摘要为`d84189de589eb7bbd61e0920627da8891245db43ae51306d6a36666a080f2d0c`；编译Core为`ec93ead0ab016a676dc98a109824a6ec4ebf3779f8ae8bd563611e5ff7349097`。实施门槛见../../docs/plan-0.9.0.md；各阶段原始证据、失败和限制保留在../plan-0.9.0/。
+0.9.0 已在 GitHub 发布。发行收据见 [publication-result.json](publication-result.json)，干净解压验收见 [clean-copy-final.json](clean-copy-final.json)。以下保留发布前的验收记录。源码摘要为`d84189de589eb7bbd61e0920627da8891245db43ae51306d6a36666a080f2d0c`；编译Core为`ec93ead0ab016a676dc98a109824a6ec4ebf3779f8ae8bd563611e5ff7349097`。实施门槛见../../docs/plan-0.9.0.md；各阶段原始证据、失败和限制保留在../plan-0.9.0/。
 
 ## 工程验收
 

@@ -1,0 +1,17 @@
+{
+  "scope": "Isolated enumeration of actual queue; excludes coverage accounting, OpenCV, caching and other audit costs",
+  "images": 5000,
+  "selected": 4975,
+  "samplesMs": {
+    "released": [
+      1447.6907919999999,
+      1447.5540419999998,
+      1410.4922919999995
+    ],
+    "sparse": [
+      0.6664160000000265,
+      0.6240839999998116,
+      0.6483750000006694
+    ]
+  }
+}

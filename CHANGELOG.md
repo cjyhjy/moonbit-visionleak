@@ -1,6 +1,11 @@
 # Changelog
 
-## 0.9.0 — release candidate, unpublished
+## Unreleased
+
+- Traverse the ordered ORB retrieval queue directly and export suggestions CSV from the review workbench.
+- Evaluate four configurations on disjoint MIRFlickr natural near-duplicate clusters with a fixed review budget.
+
+## 0.9.0 — GitHub release
 
 - Reuse content/config/runtime-bound ORB features and completed positive/negative direction checks; add bounded disk batching, OS cache locks and durable completed-prefix recovery.
 - Add opt-in supervised compact descriptor retrieval with separate resource budgets and explicit candidate-queue versus exhaustive coverage.
