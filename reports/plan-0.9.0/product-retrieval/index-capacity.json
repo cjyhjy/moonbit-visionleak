@@ -1,0 +1,55 @@
+{
+  "protocol": {
+    "counts": [
+      100,
+      1000,
+      5000
+    ],
+    "descriptorsPerImage": 800,
+    "bytesPerDescriptor": 32,
+    "indexMemoryMiB": 256,
+    "maxVisits": 1000000000,
+    "maxMilliseconds": 300000,
+    "generator": "xorshift32; per-image seed imul(index+1,2654435761); highest output byte",
+    "scope": "Synthetic independent descriptor index component, not photos, end-to-end auditing, accuracy or natural contamination.",
+    "scriptSha256": "01e9dd9e2907ded58333e6c0e0896d1db46be18fa534f96886ef387d8836dbdb"
+  },
+  "results": [
+    {
+      "images": 100,
+      "descriptors": 80000,
+      "buildMs": 66,
+      "allocatedBytes": 2560000,
+      "postings": 319990,
+      "queryMs": 76,
+      "visits": 321464,
+      "status": "passed",
+      "workerSampledPeakRssBytes": 66535424,
+      "elapsedMs": 142
+    },
+    {
+      "images": 1000,
+      "descriptors": 800000,
+      "buildMs": 287,
+      "allocatedBytes": 25600000,
+      "postings": 3199919,
+      "queryMs": 983,
+      "visits": 3353204,
+      "status": "passed",
+      "workerSampledPeakRssBytes": 92061696,
+      "elapsedMs": 1269
+    },
+    {
+      "images": 5000,
+      "descriptors": 4000000,
+      "buildMs": 1246,
+      "allocatedBytes": 128000000,
+      "postings": 15999608,
+      "queryMs": 7445,
+      "visits": 19819285,
+      "status": "passed",
+      "workerSampledPeakRssBytes": 195002368,
+      "elapsedMs": 8691
+    }
+  ]
+}

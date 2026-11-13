@@ -1,0 +1,33 @@
+{
+  "source": {
+    "id": "usgs-candor-PSP_001641_1735",
+    "page": "https://www.usgs.gov/media/images/candor-colles-candor-chasma-mars",
+    "download": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/PSP_001641_1735_RGB.NOMAP_50percent.jpg",
+    "license": "Public Domain (source page)",
+    "rawSha256": "49add4a648d7ce572f08aac156a027a4fdfc6d4d9a6382e89a88f2fe2cf327d5",
+    "partition": "development-pilot"
+  },
+  "complete": true,
+  "cold": {
+    "elapsedMs": 146,
+    "workerPeakRssBytes": 70090752,
+    "memorySamplingMs": 100,
+    "featureCacheHits": 0,
+    "matchCacheHits": 0,
+    "executedPairChecks": 2,
+    "executedDescriptorComparisons": 2347200
+  },
+  "warm": {
+    "elapsedMs": 83,
+    "workerPeakRssBytes": 0,
+    "memorySamplingMs": 100,
+    "featureCacheHits": 3,
+    "matchCacheHits": 2,
+    "executedPairChecks": 0,
+    "executedDescriptorComparisons": 0
+  },
+  "anchorPositiveRelationships": 2,
+  "detectedAnchorRelationships": 2,
+  "sameAuditId": true,
+  "scope": "Core+ORB union on one new-source controlled pilot; no negative pairs and no general accuracy claim."
+}

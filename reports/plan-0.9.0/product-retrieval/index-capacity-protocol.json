@@ -1,0 +1,15 @@
+{
+  "counts": [
+    100,
+    1000,
+    5000
+  ],
+  "descriptorsPerImage": 800,
+  "bytesPerDescriptor": 32,
+  "indexMemoryMiB": 256,
+  "maxVisits": 1000000000,
+  "maxMilliseconds": 300000,
+  "generator": "xorshift32; per-image seed imul(index+1,2654435761); highest output byte",
+  "scope": "Synthetic independent descriptor index component, not photos, end-to-end auditing, accuracy or natural contamination.",
+  "scriptSha256": "01e9dd9e2907ded58333e6c0e0896d1db46be18fa534f96886ef387d8836dbdb"
+}

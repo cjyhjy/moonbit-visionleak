@@ -1,0 +1,14 @@
+{
+  "status": "passed-before-final-thumbnail-policy",
+  "version": "0.9.0",
+  "sourceDigest": "79317cd6b05ad364a00efc0bc26c250fbf91ba977cf18594e4b602bf81be033c",
+  "profile": "visionleak090",
+  "context": "colima-visionleak090",
+  "runtimeScope": "Linux x86_64 via existing Rosetta in isolated ARM64 VM; functional acceptance, not native-x86 performance.",
+  "snapshotSha256": "367c08935dedac7600555cf76eccf31b49f04888fc1844b0c84b3020059bb75a",
+  "containerName": "visionleak-090-ci-candidate",
+  "containerId": "9169b8743f9a4837bbe234bca3ecaa25a53a3a89af4423446a7e9db18a960d06",
+  "network": "none",
+  "memoryGiB": 3,
+  "checks": 30
+}

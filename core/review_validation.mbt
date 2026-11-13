@@ -49,6 +49,45 @@ fn validate_report_value(value : Json) -> Json {
   guard value is Object(_) else {
     return error_json("InvalidReport", "报告 必须是对象。")
   }
+  let options = field(value, "options")
+  let orb = field(field(value, "phases"), "orb")
+  let retrieval = field(options, "includeOrbRetrieval") == Json(true)
+  if (retrieval && field(options, "includeOrb") != Json(true)) ||
+    (field(orb, "searchMode") == Json("retrieval") && !retrieval) ||
+    (
+      retrieval &&
+      field(value, "complete") == Json(true) &&
+      field(orb, "exhaustivePairsComplete") != Json(true)
+    ) {
+    return error_json(
+      "InvalidReport", "ORB 检索不能声明未完成的穷举覆盖。",
+    )
+  }
+  if retrieval && field(orb, "searchMode") == Json("retrieval") {
+    if field(field(field(value, "orbProfile"), "retrieval"), "id") !=
+      Json("vl-orb-lsh-24x4-top1-v1") {
+      return error_json("InvalidReport", "ORB 检索配置缺失。")
+    }
+    if field(orb, "candidateQueueComplete") == Json(true) &&
+      (
+        field(field(orb, "retrieval"), "complete") != Json(true) ||
+        field(orb, "searchProcessedImages") != field(orb, "inputImages") ||
+        field(orb, "featureImages") != field(orb, "inputImages") ||
+        field(orb, "processedPairs") !=
+        field(field(orb, "retrieval"), "selectedPairs")
+      ) {
+      return error_json(
+        "InvalidReport", "ORB 候选队列覆盖统计不一致。",
+      )
+    }
+    if field(orb, "exhaustivePairsComplete") == Json(true) &&
+      (
+        field(orb, "processedImages") != field(orb, "inputImages") ||
+        field(orb, "processedPairs") != field(orb, "eligibleInputPairs")
+      ) {
+      return error_json("InvalidReport", "ORB 穷举覆盖统计不一致。")
+    }
+  }
   if field(value, "schemaVersion") != Json("visionleak-report-v1") {
     return error_json(
       "InvalidReport", "不支持的报告格式，需要 visionleak-report-v1。",

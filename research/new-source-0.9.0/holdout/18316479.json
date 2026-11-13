@@ -1,0 +1,22 @@
+{
+  "id": "18316479",
+  "title": "File:Diane Léonard Roger Versailles MV5922.jpg",
+  "family": "Palace of Versailles",
+  "bucket": "similar-building",
+  "partition": "holdout",
+  "author": "\nLéonard ROGER (1644- après 1694)",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Diane_L%C3%A9onard_Roger_Versailles_MV5922.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Diane_L%C3%A9onard_Roger_Versailles_MV5922.jpg/960px-Diane_L%C3%A9onard_Roger_Versailles_MV5922.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/Diane_L%C3%A9onard_Roger_Versailles_MV5922.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "789e733e2a89381380c49580326375023b57e5a4",
+  "width": 2003,
+  "height": 3188,
+  "downloadSha256": "da53fa32e0165b9d033337c79f6b6cd529425d9c8185ad436b36e06eca43762f",
+  "sha256": "703c287be49efc7d10e7c8fb62758ce5bd7858f14427bb49518ac4f404d99005",
+  "storedFile": "research/new-source-0.9.0/holdout/18316479.png",
+  "storedWidth": 241,
+  "storedHeight": 384,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

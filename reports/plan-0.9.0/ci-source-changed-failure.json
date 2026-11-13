@@ -1,0 +1,217 @@
+{
+  "schemaVersion": "visionleak-ci-v1",
+  "startedAt": "2026-11-08T17:45:11.789Z",
+  "status": "failed",
+  "environment": {
+    "node": "v26.7.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "moon": "moon 0.1.20261012 (748b63c 2026-10-12) ~/Documents/ChatGPT/黑客松新项目/projects/visionleak/.toolchain/bin/moon\nmoonc v0.10.15+943464bfa (2026-10-12) ~/Documents/ChatGPT/黑客松新项目/projects/visionleak/.toolchain/bin/moonc\nmoonrun 0.1.20261012 (748b63c 2026-10-12) ~/Documents/ChatGPT/黑客松新项目/projects/visionleak/.toolchain/bin/moonrun\n\nFeature flags enabled: rr_moon_mod,rr_moon_pkg"
+  },
+  "commit": null,
+  "runUrl": null,
+  "checks": [
+    {
+      "id": "toolchain",
+      "command": [
+        "./tools/moon",
+        "version",
+        "--all"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 50,
+      "log": "toolchain.log"
+    },
+    {
+      "id": "format",
+      "command": [
+        "./tools/moon",
+        "fmt",
+        "--check"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 437,
+      "log": "format.log"
+    },
+    {
+      "id": "check-js",
+      "command": [
+        "./tools/moon",
+        "check",
+        "--target",
+        "js"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 170,
+      "log": "check-js.log"
+    },
+    {
+      "id": "build-js",
+      "command": [
+        "./tools/moon",
+        "build",
+        "--target",
+        "js",
+        "--release"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 82,
+      "log": "build-js.log"
+    },
+    {
+      "id": "test-js",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "js"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 1527,
+      "log": "test-js.log"
+    },
+    {
+      "id": "check-wasm-gc",
+      "command": [
+        "./tools/moon",
+        "check",
+        "--target",
+        "wasm-gc"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 154,
+      "log": "check-wasm-gc.log"
+    },
+    {
+      "id": "build-wasm-gc",
+      "command": [
+        "./tools/moon",
+        "build",
+        "--target",
+        "wasm-gc",
+        "--release"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 223,
+      "log": "build-wasm-gc.log"
+    },
+    {
+      "id": "test-wasm-gc",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "wasm-gc"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 1288,
+      "log": "test-wasm-gc.log"
+    },
+    {
+      "id": "check-native",
+      "command": [
+        "./tools/moon",
+        "check",
+        "--target",
+        "native"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 148,
+      "log": "check-native.log"
+    },
+    {
+      "id": "build-native-test-executable",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "native",
+        "--release",
+        "--build-only"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 4080,
+      "log": "build-native-test-executable.log"
+    },
+    {
+      "id": "test-native-release",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "native",
+        "--release"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 817,
+      "log": "test-native-release.log"
+    },
+    {
+      "id": "test-native",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "native"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 2874,
+      "log": "test-native.log"
+    },
+    {
+      "id": "runtime-build",
+      "command": [
+        "node",
+        "tools/build.mjs"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 131,
+      "log": "runtime-build.log"
+    },
+    {
+      "id": "node-integration",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 5230,
+      "log": "node-integration.log"
+    },
+    {
+      "id": "orb-integration",
+      "command": [
+        "/private/tmp/visionleak-orb-090/bin/python",
+        "tools/validate-orb-integration.py",
+        "--out",
+        ".ci-artifacts/orb-regression-1794159929070"
+      ],
+      "status": "failed",
+      "exitCode": 1,
+      "elapsedMs": 70504,
+      "log": "orb-integration.log"
+    }
+  ],
+  "scope": "Fresh source build, three MoonBit backends, Node CLI/HTTP, independent ImageHash and exhaustive index oracle. Browser screenshots and ZIP reports remain historical.",
+  "sourceDigest": "a6291942683abf9b35caa2a1f19871e58fe7b3f40f26a3607f8352db01fbd195",
+  "compiledArtifact": {
+    "sha256": "12a4576ac97b61f20f9efe6362e4977e171768556838aad77220414032abeeeb",
+    "matchesCommitted": true
+  },
+  "error": "orb-integration failed: 1",
+  "finishedAt": "2026-11-08T17:46:39.574Z"
+}

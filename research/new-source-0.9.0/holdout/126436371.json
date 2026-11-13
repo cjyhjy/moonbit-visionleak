@@ -1,0 +1,22 @@
+{
+  "id": "126436371",
+  "title": "File:Gravel035 16K Color.png",
+  "family": "gravel",
+  "bucket": "repeated-texture",
+  "partition": "holdout",
+  "author": "ambientCG.com / Lennart Demes",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Gravel035_16K_Color.png",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Gravel035_16K_Color.png/960px-Gravel035_16K_Color.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/Gravel035_16K_Color.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "9857addd2ec1b17cf3f6aa0bf380ef251f1eb710",
+  "width": 16384,
+  "height": 16384,
+  "downloadSha256": "ad1eb91259c2ccb8eb4203d340be74e90048318d6f15de81fc832ca8bade207f",
+  "sha256": "0c1b399ce70cef1a6ed6e977ff084c265f2fe79e358822657cf12f3304997752",
+  "storedFile": "research/new-source-0.9.0/holdout/126436371.png",
+  "storedWidth": 384,
+  "storedHeight": 384,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

@@ -1,0 +1,10 @@
+{
+  "status": "downloaded-and-integrity-checked",
+  "url": "https://cave.cs.toronto.edu/kriz/cifar-10-binary.tar.gz",
+  "bytes": 170052171,
+  "officialMd5": "c32a1d4ab5d03f1284b67883e8d87530",
+  "sha256": "c4a38c50a1bc5f3a1c5537f2155ab9d68f9f25eb1ed8d9ddda3db29a59bca1dd",
+  "archive": ".cache/public-data/cifar-10-binary.tar.gz",
+  "experimentStatus": "not_run",
+  "protocolSha256": "a1742a8ade8f2327f06a5a90c89ef077f9b19cfebde2fa71b009c0c6217c7b00"
+}

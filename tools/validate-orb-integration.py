@@ -52,7 +52,7 @@ def main(out):
     experiment = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(experiment)
     protocol = read(ROOT / 'research/followup-quality/protocol.json')
-    bound_files = ['dist/visionleak.js', 'tools/orb-worker.py', 'tools/orb.mjs', 'tools/orb-profile.json', 'tools/decode.mjs', 'tools/validate-orb-integration.py', 'research/followup-quality/experiment.py', 'research/followup-quality/protocol.json']
+    bound_files = ['dist/visionleak.js', 'tools/orb-worker.py', 'tools/orb.mjs', 'tools/orb-cache.mjs', 'tools/orb-cache-lock.mjs', 'tools/orb-cache-lock.py', 'tools/audit-cli.mjs', 'tools/cli.mjs', 'tools/orb-profile.json', 'tools/decode.mjs', 'tools/validate-orb-integration.py', 'research/followup-quality/experiment.py', 'research/followup-quality/protocol.json']
     bindings = {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in bound_files}
     results = []
     for partition, manifest in [('development', 'development-sources.json'), ('holdout', 'holdout/sources.json')]:

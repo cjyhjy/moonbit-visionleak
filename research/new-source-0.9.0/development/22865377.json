@@ -1,0 +1,22 @@
+{
+  "id": "22865377",
+  "title": "File:Interior of Helsinki Lutheran Cathedral - DSC05382.JPG",
+  "family": "Helsinki Cathedral",
+  "bucket": "similar-building",
+  "partition": "development",
+  "author": "Daderot",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Interior_of_Helsinki_Lutheran_Cathedral_-_DSC05382.JPG",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Interior_of_Helsinki_Lutheran_Cathedral_-_DSC05382.JPG/960px-Interior_of_Helsinki_Lutheran_Cathedral_-_DSC05382.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Interior_of_Helsinki_Lutheran_Cathedral_-_DSC05382.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "b949c02c9a043386af9dda663259a300f217903d",
+  "width": 4320,
+  "height": 3240,
+  "downloadSha256": "34276f64ed76da5d5e97493a09f1668cb756fccd13b3177cd841fe85ba0d35e7",
+  "sha256": "ce658b0ded1ad232afb3d344e99eeb6d816bdd2e91d43f2cd23e0e984401fe20",
+  "storedFile": "research/new-source-0.9.0/development/22865377.png",
+  "storedWidth": 384,
+  "storedHeight": 288,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

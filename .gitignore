@@ -21,3 +21,5 @@ reports/plan-0.5.0/mooncakes-probe-*.py
 demo/qa/phase2-offline*.html
 demo/qa/offline-v050*.html
 .venv-orb/
+# Public benchmark images stay local; retain text reports and source/hash receipts.
+reports/plan-0.9.0/natural-cifair/audit/thumbnails/

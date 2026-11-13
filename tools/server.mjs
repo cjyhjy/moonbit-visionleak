@@ -13,6 +13,7 @@ const ASSETS = new Map([
   ['/styles.css', ['styles.css', 'text/css; charset=utf-8']],
   ['/app.mjs', ['app.mjs', 'text/javascript; charset=utf-8']],
   ['/review-validation.mjs', ['review-validation.mjs', 'text/javascript; charset=utf-8']],
+  ['/review-transfer.mjs', ['review-transfer.mjs', 'text/javascript; charset=utf-8']],
   ['/review-workflow.mjs', ['review-workflow.mjs', 'text/javascript; charset=utf-8']],
   ['/report-identity.mjs', ['report-identity.mjs', 'text/javascript; charset=utf-8']],
 ]);

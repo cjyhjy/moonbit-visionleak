@@ -1,0 +1,22 @@
+{
+  "id": "152774970",
+  "title": "File:Tulip Garden Kashmir.jpg",
+  "family": "tulip garden",
+  "bucket": "same-scene",
+  "partition": "development",
+  "author": "Kajal Kumar Mukherjee",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Tulip_Garden_Kashmir.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Tulip_Garden_Kashmir.jpg/960px-Tulip_Garden_Kashmir.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/38/Tulip_Garden_Kashmir.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "4b251e38d33cf5609681caf2e3b303c5b3befc7d",
+  "width": 1600,
+  "height": 1201,
+  "downloadSha256": "1e4809e077134cb5ce46ca950d6e159b7f51ff7d4ffa44e35dfe0183b22c412f",
+  "sha256": "532907338e7d3e112717c463e0bc7eb6cb81adce0bde488fddad326f7b0ca7b4",
+  "storedFile": "research/new-source-0.9.0/development/152774970.png",
+  "storedWidth": 384,
+  "storedHeight": 288,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

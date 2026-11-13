@@ -1,0 +1,22 @@
+{
+  "id": "179278744",
+  "title": "File:Sunset Key and Sailboats, Florida, 2025.jpg",
+  "family": "sailboats",
+  "bucket": "same-scene",
+  "partition": "development",
+  "author": "Julian Lupyan",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Sunset_Key_and_Sailboats,_Florida,_2025.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Sunset_Key_and_Sailboats%2C_Florida%2C_2025.jpg/960px-Sunset_Key_and_Sailboats%2C_Florida%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Sunset_Key_and_Sailboats%2C_Florida%2C_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "a2405601c7590569b9eea5a1207c270c0084ec61",
+  "width": 6964,
+  "height": 3626,
+  "downloadSha256": "751bfbcace8d300dc30066c424fe7e796038fa3fd5cca6f016b1f1d9857513f8",
+  "sha256": "7e041185e58dd7fbf8f7e5baab74803d9212f4a53692ddb732dd0af8d7e2b952",
+  "storedFile": "research/new-source-0.9.0/development/179278744.png",
+  "storedWidth": 384,
+  "storedHeight": 200,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

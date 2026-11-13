@@ -1,0 +1,22 @@
+{
+  "id": "175821476",
+  "title": "File:Ceramic tiles 01.jpg",
+  "family": "ceramic tiles",
+  "bucket": "repeated-texture",
+  "partition": "holdout",
+  "author": "Houss 2020",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Ceramic_tiles_01.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Ceramic_tiles_01.jpg/960px-Ceramic_tiles_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Ceramic_tiles_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "295fc10f9e7ab0e79319ee4fb550bfaad6f63e27",
+  "width": 8160,
+  "height": 6144,
+  "downloadSha256": "6e167d7f32d66f91a8431ac814627c7fadb697c7e02ffea618e54ec1a5770265",
+  "sha256": "7f8d18eb09b385695091f1a4eec0abf4a88ad3f382a0c2abbeea8c5069d40d59",
+  "storedFile": "research/new-source-0.9.0/holdout/175821476.png",
+  "storedWidth": 384,
+  "storedHeight": 289,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

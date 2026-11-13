@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-11-09T09:05:55.669878+00:00",
+  "browser": "Google Chrome via CUA",
+  "url": "http://127.0.0.1:4397/",
+  "targetAuditId": "aaf909d75c7b7ae435edc962d54a18cfdb9a99016971940d1c0f80ef3f549397",
+  "fixtureSha256": "97ac3945b78e796a478becd6a3bf8a3ea9509eccaa1b9d6f8426d77fc5a20b6c",
+  "method": "Start documented filechooser listener; native Chrome accessibility click on preview input; chooser.setFiles absolute fixture path; actual page apply and undo controls.",
+  "observed": {
+    "previewProposals": 3,
+    "unmatched": 0,
+    "ambiguous": 0,
+    "applied": 3,
+    "reviewedAfterApply": "3/3",
+    "existingPreserved": 0,
+    "remaining": 0,
+    "reviewedAfterUndo": "0/3",
+    "unreviewedAfterUndo": 3,
+    "unsureAfterUndo": 0,
+    "undoDisabledAfterUndo": true
+  },
+  "earlierAttempts": "Playwright input click still timed out. Direct native picker could be opened but Open remained disabled. Native accessibility click while browser chooser listener was active obtained a chooser and setFiles succeeded.",
+  "securitySettingsChanged": false,
+  "userManualActionRequired": false,
+  "limitations": [
+    "Scripted local functional QA, not human review timing.",
+    "During this retry thumbnails displayed unavailable after the view rerendered; image delivery was not revalidated by this migration check. Prior desktop/mobile/geometry checks remain separately recorded.",
+    "Screenshots observed via CUA at applied/undone states; no persistent screenshot file produced."
+  ],
+  "qaServerObservation": "Prior server handle83444 is terminal/missing on this retry; page JavaScript remained loaded. This explains thumbnail fetch unavailability; no current image-delivery acceptance is claimed."
+}

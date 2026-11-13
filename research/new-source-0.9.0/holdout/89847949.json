@@ -1,0 +1,22 @@
+{
+  "id": "89847949",
+  "title": "File:Material Non-Woven Fabric.jpg",
+  "family": "woven fabric",
+  "bucket": "repeated-texture",
+  "partition": "holdout",
+  "author": "Anh Nhi Đỗ Lê",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Material_Non-Woven_Fabric.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Material_Non-Woven_Fabric.jpg/960px-Material_Non-Woven_Fabric.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Material_Non-Woven_Fabric.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "e0f8005526ddac4054bb82e823302838d45ac6b5",
+  "width": 1920,
+  "height": 1309,
+  "downloadSha256": "10593a8cf047acb2cadc8a2022de86e0e91159314539a52571fe241dd15f8828",
+  "sha256": "b87fde270bb0e347d6b826620e22e1f8909c2cdb8298cc129649dd419d4438a3",
+  "storedFile": "research/new-source-0.9.0/holdout/89847949.png",
+  "storedWidth": 384,
+  "storedHeight": 262,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "79403802",
+  "title": "File:Sailboats in Stångehuvud nature reserve.jpg",
+  "family": "sailboats",
+  "bucket": "same-scene",
+  "partition": "development",
+  "author": "W.carter",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Sailboats_in_St%C3%A5ngehuvud_nature_reserve.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Sailboats_in_St%C3%A5ngehuvud_nature_reserve.jpg/960px-Sailboats_in_St%C3%A5ngehuvud_nature_reserve.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Sailboats_in_St%C3%A5ngehuvud_nature_reserve.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "003372d476c6b926748f775f3125b12fbc9bd71c",
+  "width": 4667,
+  "height": 3110,
+  "downloadSha256": "1597bbc692ddea119cb80e599a52f05c1fbbbef74e368eaa95fbce3402de1e3f",
+  "sha256": "5be9aaed6f22039926ffcfadb9b8ff4d3ec6c4d227fbddb0b2bcb3de709dd878",
+  "storedFile": "research/new-source-0.9.0/development/79403802.png",
+  "storedWidth": 384,
+  "storedHeight": 256,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

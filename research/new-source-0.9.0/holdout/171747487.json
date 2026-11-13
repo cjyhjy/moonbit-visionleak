@@ -1,0 +1,22 @@
+{
+  "id": "171747487",
+  "title": "File:Bark of Sapota tree.jpg",
+  "family": "tree bark",
+  "bucket": "repeated-texture",
+  "partition": "holdout",
+  "author": "Saral Shots",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Bark_of_Sapota_tree.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Bark_of_Sapota_tree.jpg/960px-Bark_of_Sapota_tree.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Bark_of_Sapota_tree.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "1e6c2f7972513fba697a46c6d56e55dd6e370179",
+  "width": 6000,
+  "height": 4000,
+  "downloadSha256": "c34fb27e638836e1f376e053e3bf9d2aa95b2b24241cef6c42840ced1387efd9",
+  "sha256": "9d85704efbc8dd0a0ea225ddc8a2061a98c3bde5351748245726f2511c09edfb",
+  "storedFile": "research/new-source-0.9.0/holdout/171747487.png",
+  "storedWidth": 384,
+  "storedHeight": 256,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

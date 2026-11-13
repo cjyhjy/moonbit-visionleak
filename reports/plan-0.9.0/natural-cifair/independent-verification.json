@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "images": 565,
+  "annotatedPairs": 286,
+  "counts": {
+    "fn": 170,
+    "tp": 79,
+    "tn": 34,
+    "fp": 3
+  },
+  "reportSha256": "e4530611ed19715c0683862bd7cb0e92cc29cc406d306d9291ec1d9334db0b24",
+  "verifierSha256": "7dca37c14122cd7924950145782e9aa0c1f36bf215ef9b96ef49767c8f6109b4",
+  "scope": "Independent NumPy source indexing/RGB reconstruction, Python ImageHash dHash parity, direct threshold and count check. Not independent relabelling."
+}

@@ -1,0 +1,22 @@
+{
+  "id": "61901676",
+  "title": "File:Chain link fence (Unsplash).jpg",
+  "family": "chain link fence",
+  "bucket": "repeated-texture",
+  "partition": "development",
+  "author": "Sean DuBois seandubois",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Chain_link_fence_(Unsplash).jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Chain_link_fence_%28Unsplash%29.jpg/960px-Chain_link_fence_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Chain_link_fence_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "8058531113814914891647bc97ae91d31f7c17f4",
+  "width": 2808,
+  "height": 1872,
+  "downloadSha256": "709bcabadbb789432e2696fe6a57ce70e6b7a374db2871ad4cdda82391acf6fd",
+  "sha256": "7ea4e91b86dac6e7629a1fbe39e54e32bd784e6f21f0ba480b2176eca8257b9f",
+  "storedFile": "research/new-source-0.9.0/development/61901676.png",
+  "storedWidth": 384,
+  "storedHeight": 256,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

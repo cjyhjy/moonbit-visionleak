@@ -1,0 +1,22 @@
+{
+  "id": "105786230",
+  "title": "File:Chainlink fence Fence Barrier.jpg",
+  "family": "chain link fence",
+  "bucket": "repeated-texture",
+  "partition": "development",
+  "author": "Unknown authorUnknown author",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Chainlink_fence_Fence_Barrier.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Chainlink_fence_Fence_Barrier.jpg/960px-Chainlink_fence_Fence_Barrier.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/Chainlink_fence_Fence_Barrier.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "0001999f652e7842916e17dfc88b19b783f70aff",
+  "width": 4513,
+  "height": 2738,
+  "downloadSha256": "38749c654eb719b95e178efc21fde266b88ab1c3c0eebff0109107b8e9f213e9",
+  "sha256": "96da6ebc8518b0fa14691415fc2689da5afdc54b40d1099035bd7a6fd774ecb5",
+  "storedFile": "research/new-source-0.9.0/development/105786230.png",
+  "storedWidth": 384,
+  "storedHeight": 233,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

@@ -1,0 +1,50 @@
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  24.58kB
+Step 1/7 : FROM --platform=linux/amd64 visionleak-090-acceptance:candidate
+ ---> 93a3d84a41c3
+Step 2/7 : WORKDIR /workspace/visionleak
+ ---> [Warning] The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+ ---> Running in 30ba5afaec8f
+ ---> Removed intermediate container 30ba5afaec8f
+ ---> 041036cc2bd8
+Step 3/7 : COPY tools/package.py tools/package.py
+ ---> 84439cd872e7
+Step 4/7 : COPY tests/release-contract.py tests/release-contract.py
+ ---> 5885906e78ee
+Step 5/7 : RUN python tests/release-contract.py
+ ---> [Warning] The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+ ---> Running in 6064329ddb54
+[91mtest_archive_manifest_cannot_mislabel_an_old_version_or_unknown_schema (__main__.ReleaseContractTests.test_archive_manifest_cannot_mislabel_an_old_version_or_unknown_schema) ... [0m[91mok
+test_archive_payload_version_must_match_the_selected_release (__main__.ReleaseContractTests.test_archive_payload_version_must_match_the_selected_release) ... [0m[91mok
+test_candidate_release_keeps_declared_cc0_visuals_but_excludes_natural_benchmark_thumbnails (__main__.ReleaseContractTests.test_candidate_release_keeps_declared_cc0_visuals_but_excludes_natural_benchmark_thumbnails) ... [0m[91mok
+test_checksums_preserve_multiple_releases_and_allow_absent_file (__main__.ReleaseContractTests.test_checksums_preserve_multiple_releases_and_allow_absent_file) ... [0m[91mok
+test_checksums_reject_duplicate_names_even_with_identical_digests (__main__.ReleaseContractTests.test_checksums_reject_duplicate_names_even_with_identical_digests) ... [0m[91mok
+test_checksums_reject_malformed_or_unsafe_entries (__main__.ReleaseContractTests.test_checksums_reject_malformed_or_unsafe_entries) ... [0m[91mok
+test_development_provenance_ships_without_benchmark_pixels_or_hidden_local_state (__main__.ReleaseContractTests.test_development_provenance_ships_without_benchmark_pixels_or_hidden_local_state) ... [0m[91mok
+test_missing_current_archive_replaces_old_passed_attestation_with_failure (__main__.ReleaseContractTests.test_missing_current_archive_replaces_old_passed_attestation_with_failure) ... [0m[91mok
+test_release_version_agrees_across_all_manifests (__main__.ReleaseContractTests.test_release_version_agrees_across_all_manifests) ... [0m[91mok
+test_release_version_rejects_each_independent_manifest_mismatch (__main__.ReleaseContractTests.test_release_version_rejects_each_independent_manifest_mismatch) ... [0m[91mok
+test_release_version_rejects_missing_lock_root_or_moon_version (__main__.ReleaseContractTests.test_release_version_rejects_missing_lock_root_or_moon_version) ... [0m[91mok
+test_release_version_rejects_paths_control_characters_and_non_ascii_digits (__main__.ReleaseContractTests.test_release_version_rejects_paths_control_characters_and_non_ascii_digits) ... [0m[91mok
+[0m[91m
+----------------------------------------------------------------------
+[0m[91mRan 12 tests in 0.020s
+
+OK
+[0m ---> Removed intermediate container 6064329ddb54
+ ---> f8822933ac23
+Step 6/7 : RUN node --input-type=module -e 'import{sourceDigest}from"./tools/source-digest.mjs";if(sourceDigest(process.cwd())!=="d84189de589eb7bbd61e0920627da8891245db43ae51306d6a36666a080f2d0c")throw Error("Final policy source mismatch")'
+ ---> [Warning] The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+ ---> Running in bc79f0440522
+ ---> Removed intermediate container bc79f0440522
+ ---> 2007f777b2be
+Step 7/7 : CMD ["npm", "run", "verify:ci"]
+ ---> [Warning] The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+ ---> Running in 6f4e7f49718f
+ ---> Removed intermediate container 6f4e7f49718f
+ ---> 10ec8c74d9af
+Successfully built 10ec8c74d9af
+Successfully tagged visionleak-090-acceptance:final-policy

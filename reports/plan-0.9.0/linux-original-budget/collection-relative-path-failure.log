@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak/reports/plan-0.9.0/linux-original-budget/collect-evidence.py", line 32, in <module>
+    directory = PurePosixPath(command[2]).relative_to(source)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/pathlib.py", line 929, in relative_to
+    raise ValueError("{!r} is not in the subpath of {!r}"
+ValueError: '.ci-artifacts/scale-1794170593412' is not in the subpath of '/workspace/visionleak/.ci-artifacts' OR one path is relative and the other is absolute.

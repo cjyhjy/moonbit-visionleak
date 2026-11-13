@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "sourceDigest": "d84189de589eb7bbd61e0920627da8891245db43ae51306d6a36666a080f2d0c",
+  "containerId": "9f917c8ce1b03748872eba793e70ad33762cf048befee37105b3d8045a015f9c",
+  "containerName": "visionleak-090-ci-final-policy",
+  "network": "none",
+  "mounts": "none",
+  "memoryGiB": 3,
+  "runtimeScope": "Linux x86_64 userland under existing Rosetta in isolated ARM64 VM, no native-x86 performance claim.",
+  "ciReceipt": "ci/verification.json",
+  "collectionReceipt": "collection.json",
+  "exitCode": 0,
+  "oomKilled": false
+}

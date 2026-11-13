@@ -1,0 +1,7 @@
+{
+  "files": 3675,
+  "archiveBytes": 135750350,
+  "sha256": "2c2c3945c5bf1693534346c419696787e9d7ca618d24bee91680c67a434c78d4",
+  "productionSourceDigest": "399a2d11bd966529f0e771bb7abfce7244255bc72df5144f5039c60bafa5ccf2",
+  "scope": "Fresh local Linux copy, no .git/cache/dependency directories, no plan-0.9.0 report payload or source-dataset image caches; user project only."
+}

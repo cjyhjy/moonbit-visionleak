@@ -1,0 +1,198 @@
+{
+  "schemaVersion": "vl-orb-lsh-feasibility-v1",
+  "reportSha256": "7f0afc2588f21aaae24fc432823a249a3e4a38422b8a67718a422f688d4120d6",
+  "configuration": {
+    "bits": 12,
+    "tables": 8,
+    "seed": "vl-orb-lsh-v1",
+    "minimumVotes": 1,
+    "selection": "symmetric union top-k, one vote per query descriptor/image across all tables; Core pairs excluded"
+  },
+  "measurements": {
+    "buildMs": 54.22470800000002,
+    "queryMs": 2388.643083,
+    "descriptors": 119837,
+    "buckets": 29746,
+    "postingVisits": 53672677,
+    "lookups": 958696,
+    "hostPeakRssBytes": 120799232
+  },
+  "results": [
+    {
+      "k": 1,
+      "eligiblePairs": 3385,
+      "selectedPairs": 151,
+      "pairReduction": 22.417218543046356,
+      "referencePositivePairs": 73,
+      "recalled": 54,
+      "recall": 0.7397260273972602,
+      "pairWilson95DescriptiveOnly": [
+        0.6289051184932242,
+        0.8265781653636171
+      ],
+      "missed": [
+        [
+          "test/137334104-jpeg45.jpg",
+          "train/137334104-original.png"
+        ],
+        [
+          "test/45607455-random-crop-a.png",
+          "train/45607455-original.png"
+        ],
+        [
+          "test/45607455-random-crop-b.png",
+          "train/45607455-original.png"
+        ],
+        [
+          "test/59356847-random-crop-b.png",
+          "train/59356847-original.png"
+        ],
+        [
+          "test/105786230-random-crop-b.png",
+          "train/105786230-original.png"
+        ],
+        [
+          "test/117737593-random-crop-a.png",
+          "train/117737593-original.png"
+        ],
+        [
+          "test/117737593-screenshot-border.png",
+          "train/117737593-original.png"
+        ],
+        [
+          "test/32178383-random-crop-a.png",
+          "train/32178383-original.png"
+        ],
+        [
+          "test/32178383-random-crop-b.png",
+          "train/32178383-original.png"
+        ],
+        [
+          "test/101204995-random-crop-a.png",
+          "train/101204995-original.png"
+        ],
+        [
+          "test/101204995-random-crop-b.png",
+          "train/101204995-original.png"
+        ],
+        [
+          "test/61753368-random-crop-a.png",
+          "train/61753368-original.png"
+        ],
+        [
+          "test/61753368-random-crop-b.png",
+          "train/61753368-original.png"
+        ],
+        [
+          "test/145562084-random-crop-a.png",
+          "train/145562084-original.png"
+        ],
+        [
+          "test/145562084-random-crop-b.png",
+          "train/145562084-original.png"
+        ],
+        [
+          "test/22865377-random-crop-b.png",
+          "train/22865377-original.png"
+        ],
+        [
+          "test/182505159-random-crop-a.png",
+          "train/182505159-original.png"
+        ],
+        [
+          "test/182505159-random-crop-b.png",
+          "train/182505159-original.png"
+        ],
+        [
+          "test/182505159-screenshot-border.png",
+          "train/182505159-original.png"
+        ]
+      ]
+    },
+    {
+      "k": 5,
+      "eligiblePairs": 3385,
+      "selectedPairs": 778,
+      "pairReduction": 4.350899742930591,
+      "referencePositivePairs": 73,
+      "recalled": 67,
+      "recall": 0.9178082191780822,
+      "pairWilson95DescriptiveOnly": [
+        0.8320560452006283,
+        0.961786249521295
+      ],
+      "missed": [
+        [
+          "test/45607455-random-crop-a.png",
+          "train/45607455-original.png"
+        ],
+        [
+          "test/117737593-random-crop-a.png",
+          "train/117737593-original.png"
+        ],
+        [
+          "test/117737593-screenshot-border.png",
+          "train/117737593-original.png"
+        ],
+        [
+          "test/145562084-random-crop-a.png",
+          "train/145562084-original.png"
+        ],
+        [
+          "test/145562084-random-crop-b.png",
+          "train/145562084-original.png"
+        ],
+        [
+          "test/182505159-random-crop-b.png",
+          "train/182505159-original.png"
+        ]
+      ]
+    },
+    {
+      "k": 10,
+      "eligiblePairs": 3385,
+      "selectedPairs": 1547,
+      "pairReduction": 2.1881060116354236,
+      "referencePositivePairs": 73,
+      "recalled": 69,
+      "recall": 0.9452054794520548,
+      "pairWilson95DescriptiveOnly": [
+        0.8674100245784024,
+        0.9784875025843027
+      ],
+      "missed": [
+        [
+          "test/117737593-random-crop-a.png",
+          "train/117737593-original.png"
+        ],
+        [
+          "test/117737593-screenshot-border.png",
+          "train/117737593-original.png"
+        ],
+        [
+          "test/145562084-random-crop-a.png",
+          "train/145562084-original.png"
+        ],
+        [
+          "test/145562084-random-crop-b.png",
+          "train/145562084-original.png"
+        ]
+      ]
+    },
+    {
+      "k": 25,
+      "eligiblePairs": 3385,
+      "selectedPairs": 3385,
+      "pairReduction": 1,
+      "referencePositivePairs": 73,
+      "recalled": 73,
+      "recall": 1,
+      "pairWilson95DescriptiveOnly": [
+        0.9500079920442688,
+        0.9999999999999998
+      ],
+      "missed": []
+    }
+  ],
+  "scope": "Research-only fixed bit projections; complete ORB-only emitted positives are reference. Pair-level Wilson intervals are descriptive and ignore same-source correlation; not source-population confidence. No product acceleration or natural-contamination claim. Run each configuration in a fresh Node process."
+}

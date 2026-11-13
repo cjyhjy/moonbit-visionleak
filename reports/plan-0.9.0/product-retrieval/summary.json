@@ -1,0 +1,70 @@
+{
+  "sourceDigest": "3bf9beecf951bbbdc7a181ca7dde5385444fa55f3bf524fe44bd2f5acb0177bf",
+  "samePlatformFrozenWitnessParity": true,
+  "observedOrbPairs": 71,
+  "referenceOrbPairs": 71,
+  "allEvidencePairs": 143,
+  "coldWarmIdentityEqual": true,
+  "cold": {
+    "elapsedMs": 3095,
+    "workerPeakRssBytes": 80986112,
+    "memorySamplingMs": 100,
+    "featureCacheHits": 24,
+    "matchCacheHits": 0,
+    "executedPairChecks": 217,
+    "executedDescriptorComparisons": 268386738,
+    "residentFeaturePeak": 2,
+    "checkpointImages": 0,
+    "checkpointDirections": 0,
+    "retrieval": {
+      "elapsedMs": 337,
+      "workerPeakRssBytes": 69156864,
+      "executedVisits": 1726622,
+      "reusedQueries": 0,
+      "indexedDescriptors": 130128,
+      "allocatedBytes": 4164096,
+      "postings": 514354
+    }
+  },
+  "warm": {
+    "elapsedMs": 427,
+    "workerPeakRssBytes": 64110592,
+    "memorySamplingMs": 100,
+    "featureCacheHits": 168,
+    "matchCacheHits": 0,
+    "executedPairChecks": 0,
+    "executedDescriptorComparisons": 0,
+    "residentFeaturePeak": 1,
+    "checkpointImages": 168,
+    "checkpointDirections": 217,
+    "retrieval": {
+      "elapsedMs": 1,
+      "workerPeakRssBytes": 0,
+      "executedVisits": 0,
+      "reusedQueries": 168,
+      "indexedDescriptors": 0
+    }
+  },
+  "coverage": {
+    "mode": "approximate-retrieval",
+    "candidateQueueComplete": true,
+    "exhaustivePairsComplete": false,
+    "eligiblePairs": 3384,
+    "selectedPairs": 144,
+    "verifiedPairs": 144
+  },
+  "gate": {
+    "ok": true,
+    "exitCode": 2,
+    "failOn": "",
+    "matched": 0,
+    "complete": false,
+    "counts": {
+      "exact": 24,
+      "pixel": 0,
+      "candidate": 48,
+      "orbCandidate": 71
+    }
+  },
+  "scope": "Known former holdout used as product regression; not a second unseen-source test. 168-image real CLI/API pipeline, selected-pair geometry freshly executed, not a large-scale capacity result."
+}

@@ -1,0 +1,22 @@
+{
+  "id": "101205039",
+  "title": "File:Berlin Brandenburg Gate (28147935004).jpg",
+  "family": "Brandenburg Gate",
+  "bucket": "similar-building",
+  "partition": "development",
+  "author": "Gary Todd from Xinzheng, China",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Berlin_Brandenburg_Gate_(28147935004).jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Berlin_Brandenburg_Gate_%2828147935004%29.jpg/960px-Berlin_Brandenburg_Gate_%2828147935004%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/Berlin_Brandenburg_Gate_%2828147935004%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "c9c3c51818f159e63f57edcd421ed5f531b3be80",
+  "width": 5184,
+  "height": 3456,
+  "downloadSha256": "7b1e9dc268a3d3015763697bc803dd784d34e254908debad8c81daaab426804b",
+  "sha256": "0ec7f1df06f99edb22a7cf1c20b0b650a3a4af08a9e1986b1524850e6db0100c",
+  "storedFile": "research/new-source-0.9.0/development/101205039.png",
+  "storedWidth": 384,
+  "storedHeight": 256,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

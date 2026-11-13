@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "visionleak-review-v1",
+  "auditId": "3bc36db6a7618b8d7074064950490054651ef42caa4e5838769368ebd8a6a74d",
+  "reviews": [
+    {
+      "left": "test/170072252-small-png.png",
+      "right": "train/170072252-original.png",
+      "pairKey": "[\"test/170072252-small-png.png\",\"train/170072252-original.png\"]",
+      "decision": "confirmed",
+      "note": "SCRIPTED functional test: generated crop; not a human-review study",
+      "updatedAt": "2026-11-08T21:24:29.222Z"
+    },
+    {
+      "left": "test/170072252-small-png.png",
+      "right": "validation/exact-copy.png",
+      "pairKey": "[\"test/170072252-small-png.png\",\"validation/exact-copy.png\"]",
+      "decision": "confirmed",
+      "note": "SCRIPTED functional test: generated crop; not a human-review study",
+      "updatedAt": "2026-11-08T21:24:29.222Z"
+    }
+  ]
+}

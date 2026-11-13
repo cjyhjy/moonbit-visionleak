@@ -1,0 +1,22 @@
+{
+  "id": "98486744",
+  "title": "File:Tokyo Tower with Taiwan flag illumination.jpg",
+  "family": "Tokyo Tower",
+  "bucket": "similar-building",
+  "partition": "holdout",
+  "author": "Syced",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Tokyo_Tower_with_Taiwan_flag_illumination.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Tokyo_Tower_with_Taiwan_flag_illumination.jpg/960px-Tokyo_Tower_with_Taiwan_flag_illumination.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Tokyo_Tower_with_Taiwan_flag_illumination.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "ca88da31decd813e864159f6d666410679049360",
+  "width": 4032,
+  "height": 3024,
+  "downloadSha256": "006112c5c83bf49d0433b084a601a45dc30c9905c121e549f51b6d6ddf64ef7f",
+  "sha256": "88ae8041d3dd05f270ba2f1e726b9ceb1c0599b4226bbd7ec6403770581c9d7c",
+  "storedFile": "research/new-source-0.9.0/holdout/98486744.png",
+  "storedWidth": 384,
+  "storedHeight": 288,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "12442576",
+  "title": "File:Notre Dame Paris portail du Cloître tympan.jpg",
+  "family": "Notre Dame Paris",
+  "bucket": "similar-building",
+  "partition": "holdout",
+  "author": "Jebulon",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Notre_Dame_Paris_portail_du_Clo%C3%AEtre_tympan.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Notre_Dame_Paris_portail_du_Clo%C3%AEtre_tympan.jpg/960px-Notre_Dame_Paris_portail_du_Clo%C3%AEtre_tympan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Notre_Dame_Paris_portail_du_Clo%C3%AEtre_tympan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "560615d6ae67565376fb70d6169d6520da336cfe",
+  "width": 4092,
+  "height": 2988,
+  "downloadSha256": "1460875cf37b75eb45f7d48404d913cd811dc794cbc02b6947e3118b39f111e9",
+  "sha256": "186c64a654167b0a54c10623e1e5b81542d10370de1fe62e4e00793a8a537b91",
+  "storedFile": "research/new-source-0.9.0/holdout/12442576.png",
+  "storedWidth": 384,
+  "storedHeight": 280,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

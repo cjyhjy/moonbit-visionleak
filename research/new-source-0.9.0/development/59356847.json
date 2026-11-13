@@ -1,0 +1,22 @@
+{
+  "id": "59356847",
+  "title": "File:Broken black roof tiles 2.jpg",
+  "family": "roof tiles",
+  "bucket": "repeated-texture",
+  "partition": "development",
+  "author": "W.carter",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Broken_black_roof_tiles_2.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Broken_black_roof_tiles_2.jpg/960px-Broken_black_roof_tiles_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/86/Broken_black_roof_tiles_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "8db18cf5d856a7fcaf4b0f9ea1e27533bdfda828",
+  "width": 5473,
+  "height": 3651,
+  "downloadSha256": "711eb0b8666faff3cbeffa05bcf818d628dcfbff7291ccfe34254b217a4d210c",
+  "sha256": "db26945f1e6f853d08134035f73f80390eaca3ba6e971487795510ba6a4a096f",
+  "storedFile": "research/new-source-0.9.0/development/59356847.png",
+  "storedWidth": 384,
+  "storedHeight": 256,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

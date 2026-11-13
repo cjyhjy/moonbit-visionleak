@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "vl-new-source-holdout-freeze-v1",
+  "frozenAt": "2026-11-08T18:12:02.245950+00:00",
+  "selectionSha256": "4a1384b3794b7012c44dc339bd8e053f7938f8cacd0610b61d8a6a788958047a",
+  "developmentSummarySha256": "451be7c70d307692a2125531826c6265de94c25106dff0ef6de67ab4dfbc460e",
+  "developmentGridSha256": "f14ffe9287f2bb3d8c78a3dfb0787ce3e8dba385b83ade474fe8894ce988f754",
+  "selectedConfiguration": {
+    "bits": 24,
+    "tables": 4,
+    "k": 1
+  },
+  "primaryGates": {
+    "referenceOrbRecall": 0.99,
+    "pairReduction": 10
+  },
+  "implementationFiles": {
+    "tools/orb-lsh.mjs": "98f6e4aeb09eeaffb0245bdf804ada9a68163a3e995a7d1fea8ab5878368a102",
+    "tools/orb-lsh-experiment.mjs": "ec7666d74ddddcac7cef529d5bfb57bdaab6c7ce4f7292f3d77eec1c9c4ca4af",
+    "tools/compose-orb-reference.mjs": "ff5ae4065f701d2bd81f4b15fb433a4ea5584ea3216444aac60e5813364efeb3",
+    "tools/run-orb-lsh-grid.mjs": "4d11a49d42a8b7acdfd193b36e255ad9bc6d68c903afc54b9d3a75eb22a4f5c9",
+    "tools/evaluate-new-sources.mjs": "6a0af0a866a8e93b43a007063683df39638e59652ab276930c70c6bd65d6ccb8",
+    "tools/orb-worker.py": "6749851da71320bafaee8ce03f10f27e4a8d11f92439fc86476026385f36b218",
+    "tools/orb-profile.json": "969c6d587e735764a39e09259bc3b92f7df3823a4b7765e371ac1abd82ce02f1",
+    "tools/orb.mjs": "68e784a99e918beca3306755c9803330cba1eb5d81679957827f4840240f3f8a",
+    "tools/orb-cache.mjs": "b1df31f3c7ea2ba06a7cd924f0cb768b2603400fd0b353caec4386da6cc5b0a5",
+    "tools/orb-cache-lock.mjs": "b7b89ea11d5053c1c58e823d867ae7c23f7e78b23947b2ac3ab2b2c72514f2b8",
+    "tools/orb-cache-lock.py": "e085b9d0b4359bd42d757a65386ce7a832d63be5742902e6aceb09aae2450730",
+    "tools/decode.mjs": "c2198fb88e64e7ca24b6253cac9780d6b18af51757c2dcf1621921ceec7f9300",
+    "tools/runtime.mjs": "83a987e6e585ab492e88b756e294c2e76dad12c2e243922c4e80df85b7e39c35",
+    "tools/audit-cli.mjs": "8171465f0787bcc3cc214dea6f527772f5307548d277abd03e0027fddc616542",
+    "tools/cli.mjs": "bfaeaa2f8bccfd443f9e82fe50761eb0122d078fdc0638499218320153780acc",
+    "dist/visionleak.js": "12a4576ac97b61f20f9efe6362e4977e171768556838aad77220414032abeeeb",
+    "requirements-orb.txt": "7339f97820ea2b6df1f211a158f6aa11b8cfe336a59ac0851ce0043c1bdbf769",
+    "requirements-oracle.txt": "3e58542560d15b9bcbf205f4be833dea6e895397165f63ddaa02e34090854568",
+    "research/new-source-0.9.0/prepare.py": "25bb5810e613f999e36d1075f933f44804e4e14199433ddb1973cb1595b22267",
+    "research/new-source-0.9.0/family-protocol.json": "83611494a09e5dcd7049ba7c96bcff6c989f80779ed2e6f4e5c971a2a3b1aba6",
+    "research/new-source-0.9.0/retrieval-protocol.json": "7e20e03e769d4e9ad71c1e8022a395c9ca8178fa180ddb52394ce1b8dd42a510",
+    "research/new-source-0.9.0/exclusions.json": "76fd438ab6d22a8dc62150536e4d90adbcdaa025984aee05cdac0e1de4a5b846"
+  },
+  "policy": "Holdout images not downloaded or inspected before this freeze. Evaluate chosen configuration once as primary; preserve misses and failures. No parameter selection on holdout. Other top-k outputs, if produced by the frozen tool, are secondary and cannot rescue primary failure."
+}

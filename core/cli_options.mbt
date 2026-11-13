@@ -5,18 +5,23 @@ fn cli_limits() -> Array[(String, String, Int32, Int32, Int32)] {
     ("--max-images", "maxImages", 1, 10000, 1000),
     ("--max-decode-pixels", "maxDecodePixels", 1, 100000000, 64000000),
     ("--max-pixels", "maxPixels", 1, 4194304, 4194304),
-    ("--max-total-pixels", "maxTotalPixels", 1, 1000000000, 100000000),
+    ("--max-total-pixels", "maxTotalPixels", 1, 2000000000, 100000000),
     ("--max-file-bytes", "maxFileBytes", 1, 1073741824, 33554432),
     ("--max-comparisons", "maxComparisons", 0, 10000000, 1000000),
     ("--max-exact-comparisons", "maxExactComparisons", 0, 10000000, 1000000),
     ("--max-pairs", "maxPairs", 0, 100000, 10000),
-    ("--max-orb-images", "maxOrbImages", 0, 512, 256),
+    ("--max-orb-images", "maxOrbImages", 0, 10000, 256),
     ("--max-orb-pixels", "maxOrbPixels", 1, 4194304, 1048576),
-    ("--max-orb-total-pixels", "maxOrbTotalPixels", 0, 134217728, 33554432),
+    ("--max-orb-total-pixels", "maxOrbTotalPixels", 0, 2000000000, 33554432),
     ("--max-orb-comparisons", "maxOrbComparisons", 0, 2000000000, 100000000),
     ("--max-orb-pair-checks", "maxOrbPairChecks", 0, 100000, 10000),
     ("--max-orb-candidates", "maxOrbCandidates", 0, 1000, 200),
     ("--max-orb-milliseconds", "maxOrbMilliseconds", 1, 300000, 60000),
+    (
+      "--max-orb-index-descriptors", "maxOrbIndexDescriptors", 0, 8000000, 4000000,
+    ),
+    ("--max-orb-index-visits", "maxOrbIndexVisits", 0, 1000000000, 100000000),
+    ("--max-orb-index-memory-mib", "maxOrbIndexMemoryMiB", 64, 512, 256),
     ("--max-orb-memory-mib", "maxOrbMemoryMiB", 64, 512, 256),
   ]
 }
@@ -31,6 +36,7 @@ fn cli_defaults() -> Json {
   options["includeRotations"] = Json(false)
   options["includeCrops"] = Json(false)
   options["includeOrb"] = Json(false)
+  options["includeOrbRetrieval"] = Json(false)
   Json::object(options)
 }
 
@@ -48,11 +54,19 @@ fn cli_validate_options(overrides : Json) -> Json {
     merged[key] = value
   }
   for
-    key in ["includeMirrors", "includeRotations", "includeCrops", "includeOrb"] {
+    key in [
+      "includeMirrors", "includeRotations", "includeCrops", "includeOrb", "includeOrbRetrieval",
+    ] {
     let value = merged[key]
     if !(value is True || value is False) {
       return error_json("ARGUMENT_ERROR", key + " must be boolean")
     }
+  }
+  if merged["includeOrbRetrieval"] == Json(true) &&
+    merged["includeOrb"] != Json(true) {
+    return error_json(
+      "ARGUMENT_ERROR", "includeOrbRetrieval requires includeOrb",
+    )
   }
   for row in cli_limits() {
     let n = integer(merged[row.1])
@@ -139,6 +153,10 @@ fn cli_parse(argv : Array[Json]) -> Json {
       force = true
       continue
     }
+    if arg == "--include-orb-retrieval" {
+      values["includeOrbRetrieval"] = Json(true)
+      continue
+    }
     if arg == "--include-orb" {
       values["includeOrb"] = Json(true)
       continue
@@ -202,6 +220,12 @@ fn cli_parse(argv : Array[Json]) -> Json {
     if !known {
       return error_json("ARGUMENT_ERROR", "Unknown option: " + arg)
     }
+  }
+  if values["includeOrbRetrieval"] == Json(true) &&
+    values["includeOrb"] != Json(true) {
+    return error_json(
+      "ARGUMENT_ERROR", "--include-orb-retrieval requires --include-orb",
+    )
   }
   if root == "" || out == "" {
     return error_json("ARGUMENT_ERROR", "Both --root and --out are required")

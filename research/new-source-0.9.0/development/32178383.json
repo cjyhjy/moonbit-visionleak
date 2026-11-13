@@ -1,0 +1,22 @@
+{
+  "id": "32178383",
+  "title": "File:16 wood samples.jpg",
+  "family": "wood texture",
+  "bucket": "repeated-texture",
+  "partition": "development",
+  "author": "Anonimski",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:16_wood_samples.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/16_wood_samples.jpg/960px-16_wood_samples.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/16_wood_samples.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "b74a3c3b0adce408e5fc5c78e28eb29104d91781",
+  "width": 3900,
+  "height": 4800,
+  "downloadSha256": "cb50bdda94f8a8626fda1dabb46f1ce0eab40d999493f1fdfd87c6e06231bc18",
+  "sha256": "50cb4ff5373b9bc65e44432d89397cbe6b1d780741ea9a4f032a628ba4336ed4",
+  "storedFile": "research/new-source-0.9.0/development/32178383.png",
+  "storedWidth": 312,
+  "storedHeight": 384,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

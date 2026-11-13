@@ -1,0 +1,22 @@
+{
+  "id": "182505159",
+  "title": "File:Prague Main Railway Station Ceiling Lights.jpg",
+  "family": "railway station",
+  "bucket": "same-scene",
+  "partition": "development",
+  "author": "AVDLCZ",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Prague_Main_Railway_Station_Ceiling_Lights.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Prague_Main_Railway_Station_Ceiling_Lights.jpg/960px-Prague_Main_Railway_Station_Ceiling_Lights.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/70/Prague_Main_Railway_Station_Ceiling_Lights.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "12c2f090fbea67925468a8996a26e6e80d526548",
+  "width": 6795,
+  "height": 4530,
+  "downloadSha256": "a1397fca70a972e10e43024403591ec554879d19de34724f3800151b748645b1",
+  "sha256": "a7cdfd8abaa58e87117258a42f30462bc547595a5be63bf2de13d6284976ba46",
+  "storedFile": "research/new-source-0.9.0/development/182505159.png",
+  "storedWidth": 384,
+  "storedHeight": 256,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

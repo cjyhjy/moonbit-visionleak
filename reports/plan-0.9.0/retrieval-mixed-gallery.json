@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "vl-orb-retrieval-feasibility-v1",
+  "reportSha256": "18e2e3d1b640ed51773fd35b951ed5b72102e265bd195e98d6ef4c2770a9ac53",
+  "method": "mean descriptor bit frequencies, squared distance, symmetric top-k union",
+  "scope": "Recall relative to ORB-only emitted exhaustive positives; excludes earlier Core pairs. No end-to-end accuracy or fresh-source claim. Baseline parameters fixed before new-source evaluation.",
+  "results": [
+    {
+      "k": 1,
+      "referencePositivePairs": 2,
+      "recalled": 2,
+      "recall": 1,
+      "selectedPairs": 18,
+      "totalCrossSplitPairs": 34,
+      "reduction": 1.8888888888888888
+    },
+    {
+      "k": 5,
+      "referencePositivePairs": 2,
+      "recalled": 2,
+      "recall": 1,
+      "selectedPairs": 34,
+      "totalCrossSplitPairs": 34,
+      "reduction": 1
+    },
+    {
+      "k": 10,
+      "referencePositivePairs": 2,
+      "recalled": 2,
+      "recall": 1,
+      "selectedPairs": 34,
+      "totalCrossSplitPairs": 34,
+      "reduction": 1
+    },
+    {
+      "k": 25,
+      "referencePositivePairs": 2,
+      "recalled": 2,
+      "recall": 1,
+      "selectedPairs": 34,
+      "totalCrossSplitPairs": 34,
+      "reduction": 1
+    }
+  ]
+}

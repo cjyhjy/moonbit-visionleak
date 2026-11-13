@@ -1,0 +1,22 @@
+{
+  "id": "20081452",
+  "title": "File:Dieu Tout-Puissant Chapelle Royale Versailles ceiling.jpg",
+  "family": "Palace of Versailles",
+  "bucket": "similar-building",
+  "partition": "holdout",
+  "author": "Jebulon",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Dieu_Tout-Puissant_Chapelle_Royale_Versailles_ceiling.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Dieu_Tout-Puissant_Chapelle_Royale_Versailles_ceiling.jpg/960px-Dieu_Tout-Puissant_Chapelle_Royale_Versailles_ceiling.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/de/Dieu_Tout-Puissant_Chapelle_Royale_Versailles_ceiling.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "9ae481ecdf28516f8228ecf4d018a2f7eb0e6d38",
+  "width": 2008,
+  "height": 3060,
+  "downloadSha256": "faec7dd30f0437c70bc23d79710dc7fa17b47c66584bbe8ffe12ac13b350d2f2",
+  "sha256": "f850af09a7b0c1e05cc8e909ef5d011064c40568b36b597ba7dc06ab94564b77",
+  "storedFile": "research/new-source-0.9.0/holdout/20081452.png",
+  "storedWidth": 252,
+  "storedHeight": 384,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

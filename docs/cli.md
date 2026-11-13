@@ -169,3 +169,7 @@ CLI 增加 `--include-mirrors`；JS `fingerprint({width,height,rgba,includeMirro
 ## 0.8.0 ORB
 
 使用 `--include-orb` 和 `--max-orb-*` 参数；默认关闭，`VISIONLEAK_ORB_PYTHON` 指向安装固定依赖的解释器。缺依赖和预算中断保留 Core 证据并返回不完整状态。 详见 [0.8.0 合同](changes-0.8.0.md)。
+
+## 0.9.0 开发接口
+
+当前工作区增加 `node tools/cli.mjs doctor [--include-orb]`，并让 `--cache` 复用ORB特征与已完成的方向检查。磁盘分批、扩大输入上限、恢复预算和新覆盖字段见 [0.9.0 开发说明](changes-0.9.0.md)。这些改动尚未随正式版本发布。

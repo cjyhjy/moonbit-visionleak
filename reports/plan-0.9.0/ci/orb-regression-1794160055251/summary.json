@@ -1,0 +1,383 @@
+{
+  "status": "passed",
+  "implementationDigests": {
+    "dist/visionleak.js": "12a4576ac97b61f20f9efe6362e4977e171768556838aad77220414032abeeeb",
+    "tools/orb-worker.py": "6749851da71320bafaee8ce03f10f27e4a8d11f92439fc86476026385f36b218",
+    "tools/orb.mjs": "bb8d57833abc9adbdfdfaabb86fd89838080974151faeddb12d4e9783ed93456",
+    "tools/orb-cache.mjs": "2a33044c231ad02d45c38a70031fe806c79b93d213a874137408dc9cc27da6e0",
+    "tools/audit-cli.mjs": "8171465f0787bcc3cc214dea6f527772f5307548d277abd03e0027fddc616542",
+    "tools/cli.mjs": "bfaeaa2f8bccfd443f9e82fe50761eb0122d078fdc0638499218320153780acc",
+    "tools/orb-profile.json": "969c6d587e735764a39e09259bc3b92f7df3823a4b7765e371ac1abd82ce02f1",
+    "tools/decode.mjs": "c2198fb88e64e7ca24b6253cac9780d6b18af51757c2dcf1621921ceec7f9300",
+    "tools/validate-orb-integration.py": "d3a375c0a8998ee46932cb6e465bb67652814638f48298f25a7e05d7cb697d20",
+    "research/followup-quality/experiment.py": "b7c77554258efff12cb8f43330a3ebb907dd470db1c662d46227f3ad9502ff75",
+    "research/followup-quality/protocol.json": "cfa4f86c3ae2bd60f511144660a2f165aa421ff1385ec98dd498da5e66ba2d18"
+  },
+  "schemaVersion": "visionleak-orb-integration-v1",
+  "scope": "Known-source controlled regression on previously used development/holdout files. Each 24-query invocation includes every gallery original. Product union includes earlier Core evidence. This is not a fresh holdout, natural contamination or human review study. Times include host decoding/import/worker; RSS is sampled worker memory, not aggregate peak.",
+  "partitions": [
+    {
+      "partition": "development",
+      "sourceFiles": 24,
+      "queries": 144,
+      "allOriginalQueryRelations": 3456,
+      "frozenOrbHitsPreserved": 136,
+      "matchingDirectionWitnessesChecked": 135,
+      "historicalPlatformDifferences": 0,
+      "productUnionTp": 136,
+      "productUnionFp": 0,
+      "productUnionFn": 8,
+      "additionalPairsOverFrozenOrb": 0,
+      "batches": [
+        {
+          "queryStart": 0,
+          "queries": 24,
+          "images": 48,
+          "auditId": "9e7470f46082b2eb06ba0699d5a1863714216d41ee7297ff3ffcadd00b2fce87",
+          "complete": true,
+          "orb": {
+            "enabled": true,
+            "status": "complete",
+            "complete": true,
+            "inputImages": 48,
+            "processedImages": 48,
+            "featureImages": 48,
+            "featurePixels": 4298590,
+            "pairChecks": 1134,
+            "descriptorComparisons": 1310920060,
+            "emittedPairs": 23,
+            "reason": "",
+            "eligibleInputPairs": 576,
+            "eligibleFeaturePairs": 576,
+            "processedPairs": 576
+          },
+          "timing": {
+            "orb": {
+              "elapsedMs": 5329,
+              "workerPeakRssBytes": 80297984,
+              "memorySamplingMs": 100,
+              "featureCacheHits": 0,
+              "matchCacheHits": 0,
+              "executedPairChecks": 1134,
+              "executedDescriptorComparisons": 1310920060,
+              "residentFeaturePeak": 48
+            },
+            "elapsedMs": 5788
+          },
+          "processWallSeconds": 5.918374083004892
+        },
+        {
+          "queryStart": 24,
+          "queries": 24,
+          "images": 48,
+          "auditId": "78f3b922977624c2c98b3b79a00853f262616559db9b814586cd1df0b39aa7ff",
+          "complete": true,
+          "orb": {
+            "enabled": true,
+            "status": "complete",
+            "complete": true,
+            "inputImages": 48,
+            "processedImages": 48,
+            "featureImages": 48,
+            "featurePixels": 4442625,
+            "pairChecks": 1134,
+            "descriptorComparisons": 1341162880,
+            "emittedPairs": 24,
+            "reason": "",
+            "eligibleInputPairs": 576,
+            "eligibleFeaturePairs": 576,
+            "processedPairs": 576
+          },
+          "timing": {
+            "orb": {
+              "elapsedMs": 5468,
+              "workerPeakRssBytes": 80232448,
+              "memorySamplingMs": 100,
+              "featureCacheHits": 0,
+              "matchCacheHits": 0,
+              "executedPairChecks": 1134,
+              "executedDescriptorComparisons": 1341162880,
+              "residentFeaturePeak": 48
+            },
+            "elapsedMs": 5944
+          },
+          "processWallSeconds": 6.075670375023037
+        },
+        {
+          "queryStart": 48,
+          "queries": 24,
+          "images": 48,
+          "auditId": "85548b071fb3cfc2102bb04612fffa7bb8909d66481cf26c6be9079cb0772a5b",
+          "complete": true,
+          "orb": {
+            "enabled": true,
+            "status": "complete",
+            "complete": true,
+            "inputImages": 48,
+            "processedImages": 48,
+            "featureImages": 48,
+            "featurePixels": 4167478,
+            "pairChecks": 1134,
+            "descriptorComparisons": 1162814224,
+            "emittedPairs": 22,
+            "reason": "",
+            "eligibleInputPairs": 576,
+            "eligibleFeaturePairs": 576,
+            "processedPairs": 576
+          },
+          "timing": {
+            "orb": {
+              "elapsedMs": 5125,
+              "workerPeakRssBytes": 79839232,
+              "memorySamplingMs": 100,
+              "featureCacheHits": 0,
+              "matchCacheHits": 0,
+              "executedPairChecks": 1134,
+              "executedDescriptorComparisons": 1162814224,
+              "residentFeaturePeak": 48
+            },
+            "elapsedMs": 5605
+          },
+          "processWallSeconds": 5.73100670799613
+        },
+        {
+          "queryStart": 72,
+          "queries": 24,
+          "images": 48,
+          "auditId": "64f2f5663b7f222744a18a66727dcdfd63f7abff6c79d3672df97c59102d51bb",
+          "complete": true,
+          "orb": {
+            "enabled": true,
+            "status": "complete",
+            "complete": true,
+            "inputImages": 48,
+            "processedImages": 48,
+            "featureImages": 48,
+            "featurePixels": 4235740,
+            "pairChecks": 1138,
+            "descriptorComparisons": 1110804738,
+            "emittedPairs": 20,
+            "reason": "",
+            "eligibleInputPairs": 576,
+            "eligibleFeaturePairs": 576,
+            "processedPairs": 576
+          },
+          "timing": {
+            "orb": {
+              "elapsedMs": 4550,
+              "workerPeakRssBytes": 79937536,
+              "memorySamplingMs": 100,
+              "featureCacheHits": 0,
+              "matchCacheHits": 0,
+              "executedPairChecks": 1138,
+              "executedDescriptorComparisons": 1110804738,
+              "residentFeaturePeak": 48
+            },
+            "elapsedMs": 4978
+          },
+          "processWallSeconds": 5.1049785409122705
+        },
+        {
+          "queryStart": 96,
+          "queries": 24,
+          "images": 48,
+          "auditId": "be2781a9849d11956cec82f12201a023c03ba435407e1456746dd68c92fcb280",
+          "complete": true,
+          "orb": {
+            "enabled": true,
+            "status": "complete",
+            "complete": true,
+            "inputImages": 48,
+            "processedImages": 48,
+            "featureImages": 48,
+            "featurePixels": 4385179,
+            "pairChecks": 1137,
+            "descriptorComparisons": 1284658240,
+            "emittedPairs": 23,
+            "reason": "",
+            "eligibleInputPairs": 576,
+            "eligibleFeaturePairs": 576,
+            "processedPairs": 576
+          },
+          "timing": {
+            "orb": {
+              "elapsedMs": 5244,
+              "workerPeakRssBytes": 80330752,
+              "memorySamplingMs": 100,
+              "featureCacheHits": 0,
+              "matchCacheHits": 0,
+              "executedPairChecks": 1137,
+              "executedDescriptorComparisons": 1284658240,
+              "residentFeaturePeak": 48
+            },
+            "elapsedMs": 5721
+          },
+          "processWallSeconds": 5.851723250001669
+        },
+        {
+          "queryStart": 120,
+          "queries": 24,
+          "images": 48,
+          "auditId": "2ec4c840cac687de4de118775372ed13a49970accb80a6fcb52beb2630516803",
+          "complete": true,
+          "orb": {
+            "enabled": true,
+            "status": "complete",
+            "complete": true,
+            "inputImages": 48,
+            "processedImages": 48,
+            "featureImages": 48,
+            "featurePixels": 4266172,
+            "pairChecks": 1131,
+            "descriptorComparisons": 1313102712,
+            "emittedPairs": 24,
+            "reason": "",
+            "eligibleInputPairs": 576,
+            "eligibleFeaturePairs": 576,
+            "processedPairs": 576
+          },
+          "timing": {
+            "orb": {
+              "elapsedMs": 5697,
+              "workerPeakRssBytes": 80592896,
+              "memorySamplingMs": 100,
+              "featureCacheHits": 0,
+              "matchCacheHits": 0,
+              "executedPairChecks": 1131,
+              "executedDescriptorComparisons": 1313102712,
+              "residentFeaturePeak": 48
+            },
+            "elapsedMs": 6138
+          },
+          "processWallSeconds": 6.271062834188342
+        }
+      ]
+    },
+    {
+      "partition": "holdout",
+      "sourceFiles": 12,
+      "queries": 72,
+      "allOriginalQueryRelations": 864,
+      "frozenOrbHitsPreserved": 67,
+      "matchingDirectionWitnessesChecked": 65,
+      "historicalPlatformDifferences": 0,
+      "productUnionTp": 67,
+      "productUnionFp": 0,
+      "productUnionFn": 5,
+      "additionalPairsOverFrozenOrb": 0,
+      "batches": [
+        {
+          "queryStart": 0,
+          "queries": 24,
+          "images": 36,
+          "auditId": "6440677c75732b5ad83c5a64d237d5de78e789e3a345e82e28a6797e188ca2ea",
+          "complete": true,
+          "orb": {
+            "enabled": true,
+            "status": "complete",
+            "complete": true,
+            "inputImages": 36,
+            "processedImages": 36,
+            "featureImages": 36,
+            "featurePixels": 3198558,
+            "pairChecks": 559,
+            "descriptorComparisons": 621455942,
+            "emittedPairs": 23,
+            "reason": "",
+            "eligibleInputPairs": 288,
+            "eligibleFeaturePairs": 288,
+            "processedPairs": 288
+          },
+          "timing": {
+            "orb": {
+              "elapsedMs": 2757,
+              "workerPeakRssBytes": 79331328,
+              "memorySamplingMs": 100,
+              "featureCacheHits": 0,
+              "matchCacheHits": 0,
+              "executedPairChecks": 559,
+              "executedDescriptorComparisons": 621455942,
+              "residentFeaturePeak": 36
+            },
+            "elapsedMs": 3154
+          },
+          "processWallSeconds": 3.2882263329811394
+        },
+        {
+          "queryStart": 24,
+          "queries": 24,
+          "images": 36,
+          "auditId": "8c5de78317db493a3d9bb6b3d567fa506bc2cf0adf4d8fa1ce29e11a13026211",
+          "complete": true,
+          "orb": {
+            "enabled": true,
+            "status": "complete",
+            "complete": true,
+            "inputImages": 36,
+            "processedImages": 36,
+            "featureImages": 36,
+            "featurePixels": 3136337,
+            "pairChecks": 559,
+            "descriptorComparisons": 594285604,
+            "emittedPairs": 22,
+            "reason": "",
+            "eligibleInputPairs": 288,
+            "eligibleFeaturePairs": 288,
+            "processedPairs": 288
+          },
+          "timing": {
+            "orb": {
+              "elapsedMs": 2542,
+              "workerPeakRssBytes": 79249408,
+              "memorySamplingMs": 100,
+              "featureCacheHits": 0,
+              "matchCacheHits": 0,
+              "executedPairChecks": 559,
+              "executedDescriptorComparisons": 594285604,
+              "residentFeaturePeak": 36
+            },
+            "elapsedMs": 2882
+          },
+          "processWallSeconds": 3.0009513748809695
+        },
+        {
+          "queryStart": 48,
+          "queries": 24,
+          "images": 36,
+          "auditId": "85ae88f99b47677ecbc43ed537f6846718b0b260c4925911760e5f153c113bb0",
+          "complete": true,
+          "orb": {
+            "enabled": true,
+            "status": "complete",
+            "complete": true,
+            "inputImages": 36,
+            "processedImages": 36,
+            "featureImages": 36,
+            "featurePixels": 2940909,
+            "pairChecks": 555,
+            "descriptorComparisons": 634181092,
+            "emittedPairs": 22,
+            "reason": "",
+            "eligibleInputPairs": 288,
+            "eligibleFeaturePairs": 288,
+            "processedPairs": 288
+          },
+          "timing": {
+            "orb": {
+              "elapsedMs": 2676,
+              "workerPeakRssBytes": 80134144,
+              "memorySamplingMs": 100,
+              "featureCacheHits": 0,
+              "matchCacheHits": 0,
+              "executedPairChecks": 555,
+              "executedDescriptorComparisons": 634181092,
+              "residentFeaturePeak": 36
+            },
+            "elapsedMs": 3022
+          },
+          "processWallSeconds": 3.158285915851593
+        }
+      ]
+    }
+  ]
+}

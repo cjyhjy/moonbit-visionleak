@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "vl-orb-lsh-feasibility-v1",
+  "reportSha256": "7f0afc2588f21aaae24fc432823a249a3e4a38422b8a67718a422f688d4120d6",
+  "configuration": {
+    "bits": 24,
+    "tables": 8,
+    "seed": "vl-orb-lsh-v1",
+    "minimumVotes": 1,
+    "selection": "symmetric union top-k, one vote per query descriptor/image across all tables; Core pairs excluded"
+  },
+  "measurements": {
+    "buildMs": 101.56233299999997,
+    "queryMs": 341.819125,
+    "descriptors": 119837,
+    "buckets": 447498,
+    "postingVisits": 3552023,
+    "lookups": 958696,
+    "hostPeakRssBytes": 195330048
+  },
+  "results": [
+    {
+      "k": 1,
+      "eligiblePairs": 3385,
+      "selectedPairs": 144,
+      "pairReduction": 23.506944444444443,
+      "referencePositivePairs": 73,
+      "recalled": 73,
+      "recall": 1,
+      "pairWilson95DescriptiveOnly": [
+        0.9500079920442688,
+        0.9999999999999998
+      ],
+      "missed": []
+    },
+    {
+      "k": 5,
+      "eligiblePairs": 3385,
+      "selectedPairs": 734,
+      "pairReduction": 4.611716621253406,
+      "referencePositivePairs": 73,
+      "recalled": 73,
+      "recall": 1,
+      "pairWilson95DescriptiveOnly": [
+        0.9500079920442688,
+        0.9999999999999998
+      ],
+      "missed": []
+    },
+    {
+      "k": 10,
+      "eligiblePairs": 3385,
+      "selectedPairs": 1475,
+      "pairReduction": 2.294915254237288,
+      "referencePositivePairs": 73,
+      "recalled": 73,
+      "recall": 1,
+      "pairWilson95DescriptiveOnly": [
+        0.9500079920442688,
+        0.9999999999999998
+      ],
+      "missed": []
+    },
+    {
+      "k": 25,
+      "eligiblePairs": 3385,
+      "selectedPairs": 3304,
+      "pairReduction": 1.0245157384987893,
+      "referencePositivePairs": 73,
+      "recalled": 73,
+      "recall": 1,
+      "pairWilson95DescriptiveOnly": [
+        0.9500079920442688,
+        0.9999999999999998
+      ],
+      "missed": []
+    }
+  ],
+  "scope": "Research-only fixed bit projections; complete ORB-only emitted positives are reference. Pair-level Wilson intervals are descriptive and ignore same-source correlation; not source-population confidence. No product acceleration or natural-contamination claim. Run each configuration in a fresh Node process."
+}

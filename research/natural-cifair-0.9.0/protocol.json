@@ -1,0 +1,22 @@
+{
+  "status": "sources-acquired-experiment-not-run",
+  "annotationUrl": "https://raw.githubusercontent.com/cvjena/cifair/master/meta/duplicates_cifar10.csv",
+  "annotationSha256": "4cb7e99a7dfff346082c9d8fa4c2989a196e4a37d1e58f75936046696f1ba6a4",
+  "annotationMeaningUrl": "https://github.com/cvjena/cifair/tree/master/meta",
+  "datasetPage": "https://cave.cs.toronto.edu/kriz/cifar.html",
+  "archiveUrl": "https://cave.cs.toronto.edu/kriz/cifar-10-binary.tar.gz",
+  "officialArchiveMd5": "c32a1d4ab5d03f1284b67883e8d87530",
+  "judgments": {
+    "0": "author-labelled approximate pixel duplicate",
+    "1": "author-labelled same-shot near duplicate",
+    "2": "author-labelled different content, visually similar"
+  },
+  "selection": "All author-provided cross-train/test rows, without dropping difficult cases. Other pair relationships remain unlabelled.",
+  "frozenEvaluationOptions": {
+    "threshold": 6,
+    "includeCrops": false,
+    "includeOrb": false
+  },
+  "compiledArtifactSha256": "6756037841f407f9afabfeb290bdd805b6f3909df237ea91bdfc9afb07e64d16",
+  "scope": "Public naturally occurring CIFAR-10 duplicate/hard-negative annotations. 32x32 images cannot establish large-photo ORB capacity or new human review timing. No results yet."
+}

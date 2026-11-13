@@ -1,0 +1,22 @@
+{
+  "id": "145562084",
+  "title": "File:Pantheon (Rome), Dome interior.jpg",
+  "family": "Pantheon Rome",
+  "bucket": "similar-building",
+  "partition": "development",
+  "author": "Wilfredor",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Pantheon_(Rome),_Dome_interior.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Pantheon_%28Rome%29%2C_Dome_interior.jpg/960px-Pantheon_%28Rome%29%2C_Dome_interior.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Pantheon_%28Rome%29%2C_Dome_interior.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "794908f84bd6312e4c2598fe62da5abbca62fceb",
+  "width": 5698,
+  "height": 4875,
+  "downloadSha256": "6a59d67ed82b295d75a1348d0c0b57bdfef130ab741146894e57b68374c6cdf3",
+  "sha256": "126604218ae2b694584c08fc33d7c57a95389ec046ff99c2e572d2a5b964b924",
+  "storedFile": "research/new-source-0.9.0/development/145562084.png",
+  "storedWidth": 384,
+  "storedHeight": 328,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

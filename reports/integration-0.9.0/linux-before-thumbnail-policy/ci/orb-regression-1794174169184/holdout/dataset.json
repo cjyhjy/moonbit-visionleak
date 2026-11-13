@@ -1,0 +1,1377 @@
+{
+  "sourceManifestSha256": "b1678fff4dafea141bcbd51692db64c1efce12815d49aeeb35d5d47d0047e016",
+  "sourceManifest": "/workspace/visionleak/research/followup-quality/holdout/sources.json",
+  "protocolSha256": "cfa4f86c3ae2bd60f511144660a2f165aa421ff1385ec98dd498da5e66ba2d18",
+  "sourceFiles": 12,
+  "records": [
+    {
+      "id": "train/170072252-original.png",
+      "sourceId": "170072252",
+      "scene": "Venice canal",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 288,
+      "height": 384,
+      "sha256": "24c8da1f29edebab79369ec984157f50ec14d5230bce07a28f3cb11ce731b822"
+    },
+    {
+      "id": "test/170072252-small-png.png",
+      "sourceId": "170072252",
+      "scene": "Venice canal",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        14,
+        34,
+        160,
+        202
+      ],
+      "width": 146,
+      "height": 168,
+      "sha256": "097a789422bfd8a02a8a5f772dd30b4c8e735c4ac9d8722cac15435f261b3395"
+    },
+    {
+      "id": "test/170072252-small-resize-jpeg75.png",
+      "sourceId": "170072252",
+      "scene": "Venice canal",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        49,
+        53,
+        207,
+        225
+      ],
+      "width": 353,
+      "height": 384,
+      "sha256": "497b5fc5e293a2bed15b9d12219b57e6e7c814363944d97dd7aa2cb44f7b1d75"
+    },
+    {
+      "id": "test/170072252-medium-png.png",
+      "sourceId": "170072252",
+      "scene": "Venice canal",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        55,
+        40,
+        271,
+        312
+      ],
+      "width": 216,
+      "height": 272,
+      "sha256": "39b25161910f580b001926354a81b3626540dcf50d42bd6330f0dfc0cd83d9df"
+    },
+    {
+      "id": "test/170072252-medium-resize-jpeg75.png",
+      "sourceId": "170072252",
+      "scene": "Venice canal",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        74,
+        27,
+        264,
+        330
+      ],
+      "width": 241,
+      "height": 384,
+      "sha256": "042d5af7f386e9f3603d810fc23b5cf689d04884d274718792a468301ed9f381"
+    },
+    {
+      "id": "test/170072252-large-png.png",
+      "sourceId": "170072252",
+      "scene": "Venice canal",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        13,
+        12,
+        283,
+        361
+      ],
+      "width": 270,
+      "height": 349,
+      "sha256": "59aadacfeb37e40ec2f069fcec144cd09b18ff9f7d0adc20ed4c276d92ba3401"
+    },
+    {
+      "id": "test/170072252-large-resize-jpeg75.png",
+      "sourceId": "170072252",
+      "scene": "Venice canal",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        29,
+        14,
+        265,
+        374
+      ],
+      "width": 252,
+      "height": 384,
+      "sha256": "f2f8488221290ae759ada5363c1aa2a6fd6cf2fc6c4196281bf7bb738c2d8aaf"
+    },
+    {
+      "id": "train/173322491-original.png",
+      "sourceId": "173322491",
+      "scene": "Venice canal",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 256,
+      "sha256": "86985f79b9a0e71da4dcf1e83c56bb0eba4d8eae2f8f778580db451e27064e4a"
+    },
+    {
+      "id": "test/173322491-small-png.png",
+      "sourceId": "173322491",
+      "scene": "Venice canal",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        202,
+        85,
+        374,
+        195
+      ],
+      "width": 172,
+      "height": 110,
+      "sha256": "c30f9d867a4a25c418ee72a158761a3d6fa778eace86566320757295c3fe66c8"
+    },
+    {
+      "id": "test/173322491-small-resize-jpeg75.png",
+      "sourceId": "173322491",
+      "scene": "Venice canal",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        196,
+        30,
+        376,
+        163
+      ],
+      "width": 384,
+      "height": 284,
+      "sha256": "672c7803f05f2698ef39d527220f055285f03cae2d83d35773b412580483a8fa"
+    },
+    {
+      "id": "test/173322491-medium-png.png",
+      "sourceId": "173322491",
+      "scene": "Venice canal",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        67,
+        5,
+        362,
+        191
+      ],
+      "width": 295,
+      "height": 186,
+      "sha256": "83aa12ea7c830fac792810cdfe2130415ca8a5a9058d3d9c4acbb5ddfb9d3ecf"
+    },
+    {
+      "id": "test/173322491-medium-resize-jpeg75.png",
+      "sourceId": "173322491",
+      "scene": "Venice canal",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        87,
+        3,
+        332,
+        197
+      ],
+      "width": 384,
+      "height": 304,
+      "sha256": "aa7937d9dc1be76f963798cc3586ad4871d56210030c30f2090c802a4dab0895"
+    },
+    {
+      "id": "test/173322491-large-png.png",
+      "sourceId": "173322491",
+      "scene": "Venice canal",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        20,
+        0,
+        342,
+        238
+      ],
+      "width": 322,
+      "height": 238,
+      "sha256": "17eca3a3af4bf240e153305a940fb42421e9d3fc80b4b5f26409e363f129de8b"
+    },
+    {
+      "id": "test/173322491-large-resize-jpeg75.png",
+      "sourceId": "173322491",
+      "scene": "Venice canal",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        47,
+        16,
+        377,
+        251
+      ],
+      "width": 384,
+      "height": 273,
+      "sha256": "1534897114a71678b0c6978498449e6d3f7e979dc6e6801ef870bb64e6dd96d0"
+    },
+    {
+      "id": "train/193368210-original.png",
+      "sourceId": "193368210",
+      "scene": "Venice canal",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 288,
+      "sha256": "0d731070596c04d0dd833f5d0a269cbbfc8e718a82f9ffdb631ed6e74ca2f53e"
+    },
+    {
+      "id": "test/193368210-small-png.png",
+      "sourceId": "193368210",
+      "scene": "Venice canal",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        96,
+        66,
+        314,
+        212
+      ],
+      "width": 218,
+      "height": 146,
+      "sha256": "d087e0c78948c213090354548f5a0ab368dfc0f9c01890fda5d635e519a6629f"
+    },
+    {
+      "id": "test/193368210-small-resize-jpeg75.png",
+      "sourceId": "193368210",
+      "scene": "Venice canal",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        24,
+        13,
+        212,
+        185
+      ],
+      "width": 384,
+      "height": 351,
+      "sha256": "e1f6c43c218069aa78b089c3d1e9b752a08fec5a1d15bf8d20a651e396cd64ef"
+    },
+    {
+      "id": "test/193368210-medium-png.png",
+      "sourceId": "193368210",
+      "scene": "Venice canal",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        64,
+        1,
+        305,
+        191
+      ],
+      "width": 241,
+      "height": 190,
+      "sha256": "744f69f4dd4e5c8442dfcb3989ff3309dd12872c4d1bed86203c17531ca8ca16"
+    },
+    {
+      "id": "test/193368210-medium-resize-jpeg75.png",
+      "sourceId": "193368210",
+      "scene": "Venice canal",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        76,
+        15,
+        360,
+        187
+      ],
+      "width": 384,
+      "height": 233,
+      "sha256": "e2518bcc67b14deff9945793744c55f7c152d0e11ca1720fea14d531c0c4e6cd"
+    },
+    {
+      "id": "test/193368210-large-png.png",
+      "sourceId": "193368210",
+      "scene": "Venice canal",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        18,
+        24,
+        352,
+        265
+      ],
+      "width": 334,
+      "height": 241,
+      "sha256": "628bebf9453f6542dccd11e86b0521cc5b7818bcb0e97bdad9dfb7b8a6548dde"
+    },
+    {
+      "id": "test/193368210-large-resize-jpeg75.png",
+      "sourceId": "193368210",
+      "scene": "Venice canal",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        5,
+        26,
+        312,
+        285
+      ],
+      "width": 384,
+      "height": 324,
+      "sha256": "836b676a1f1748cdd950ab07a2c40bd1cbd88715090d9ee2895218678ec68788"
+    },
+    {
+      "id": "train/197959608-original.png",
+      "sourceId": "197959608",
+      "scene": "wind turbine",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 256,
+      "height": 384,
+      "sha256": "c6efcbb8d22b05c469d360a1f4437b496c6ff8a6b45197e2c179557b34ef0f3e"
+    },
+    {
+      "id": "test/197959608-small-png.png",
+      "sourceId": "197959608",
+      "scene": "wind turbine",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        33,
+        109,
+        178,
+        293
+      ],
+      "width": 145,
+      "height": 184,
+      "sha256": "9920701607e64f86a87360d1239c207f238f4752326f0787eb9d2bb5d324b396"
+    },
+    {
+      "id": "test/197959608-small-resize-jpeg75.png",
+      "sourceId": "197959608",
+      "scene": "wind turbine",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        11,
+        150,
+        149,
+        303
+      ],
+      "width": 346,
+      "height": 384,
+      "sha256": "2cc3675383378d936cc4ced646777bb86c88c834f13ba5b947ac925e4c30006d"
+    },
+    {
+      "id": "test/197959608-medium-png.png",
+      "sourceId": "197959608",
+      "scene": "wind turbine",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        53,
+        64,
+        245,
+        328
+      ],
+      "width": 192,
+      "height": 264,
+      "sha256": "2171526dfe2ae6b761e811d26308a779a61b7ad09be95ae04c05e00cd3e6c4d4"
+    },
+    {
+      "id": "test/197959608-medium-resize-jpeg75.png",
+      "sourceId": "197959608",
+      "scene": "wind turbine",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        22,
+        98,
+        190,
+        370
+      ],
+      "width": 237,
+      "height": 384,
+      "sha256": "eccf837fd7870466449fe406b39a37b12d6a9ec6382d3c54dc9ede2cea3a37d8"
+    },
+    {
+      "id": "test/197959608-large-png.png",
+      "sourceId": "197959608",
+      "scene": "wind turbine",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        14,
+        17,
+        252,
+        358
+      ],
+      "width": 238,
+      "height": 341,
+      "sha256": "2cf88adf52ec555608ad75f85e5be7ce0c631927856bcf87ec2e462269539d0d"
+    },
+    {
+      "id": "test/197959608-large-resize-jpeg75.png",
+      "sourceId": "197959608",
+      "scene": "wind turbine",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        15,
+        12,
+        219,
+        357
+      ],
+      "width": 227,
+      "height": 384,
+      "sha256": "82f3f8f9be6b20523f79125f50a7ef8acf14760b17591135a8dcdbeba98aa190"
+    },
+    {
+      "id": "train/148479133-original.png",
+      "sourceId": "148479133",
+      "scene": "wind turbine",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 256,
+      "sha256": "865b62312477e88c8ad21b0df4cb131b2c95b0b55f1dff8e5b444bead4c7575b"
+    },
+    {
+      "id": "test/148479133-small-png.png",
+      "sourceId": "148479133",
+      "scene": "wind turbine",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        103,
+        99,
+        325,
+        219
+      ],
+      "width": 222,
+      "height": 120,
+      "sha256": "d8d3fd9c472e3659b9620f3d5dc412249000b8e059854140a0f12ccdddfcceb3"
+    },
+    {
+      "id": "test/148479133-small-resize-jpeg75.png",
+      "sourceId": "148479133",
+      "scene": "wind turbine",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        139,
+        25,
+        300,
+        137
+      ],
+      "width": 384,
+      "height": 267,
+      "sha256": "92c9327dc370ea6aec94814a4b0dc133578624a12c18769f31877ce929e5103c"
+    },
+    {
+      "id": "test/148479133-medium-png.png",
+      "sourceId": "148479133",
+      "scene": "wind turbine",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        131,
+        15,
+        365,
+        217
+      ],
+      "width": 234,
+      "height": 202,
+      "sha256": "844bbdfcadcc32069558b24381470e7856447841ae3192e7cba9699e0a81282c"
+    },
+    {
+      "id": "test/148479133-medium-resize-jpeg75.png",
+      "sourceId": "148479133",
+      "scene": "wind turbine",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        95,
+        66,
+        344,
+        250
+      ],
+      "width": 384,
+      "height": 284,
+      "sha256": "fd35e1f8a80974736c838ea00b82574ff73e8ccf763f6d3ca3bbd7f3dcfc9cd8"
+    },
+    {
+      "id": "test/148479133-large-png.png",
+      "sourceId": "148479133",
+      "scene": "wind turbine",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        0,
+        25,
+        357,
+        242
+      ],
+      "width": 357,
+      "height": 217,
+      "sha256": "05218d9dbc6efaaf1ac85a4303d0f9aa6687e5fc6e675181f01769a5c5fa5978"
+    },
+    {
+      "id": "test/148479133-large-resize-jpeg75.png",
+      "sourceId": "148479133",
+      "scene": "wind turbine",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        2,
+        5,
+        359,
+        245
+      ],
+      "width": 384,
+      "height": 258,
+      "sha256": "41e5394c9dfbccbf93f7bd52b4d30c90d2c61a48fdf710c1e7ec665e1b744350"
+    },
+    {
+      "id": "train/185114032-original.png",
+      "sourceId": "185114032",
+      "scene": "wind turbine",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 316,
+      "sha256": "c6081a4efa3c10f514914a7f1d8609fda9233c7af75dfcac47b812ebdb01fd14"
+    },
+    {
+      "id": "test/185114032-small-png.png",
+      "sourceId": "185114032",
+      "scene": "wind turbine",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        11,
+        81,
+        172,
+        254
+      ],
+      "width": 161,
+      "height": 173,
+      "sha256": "ca2d5529a9ba0feba304db57f7d797187fbbd5f11a619cc757479588ea84c5a6"
+    },
+    {
+      "id": "test/185114032-small-resize-jpeg75.png",
+      "sourceId": "185114032",
+      "scene": "wind turbine",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        40,
+        5,
+        270,
+        137
+      ],
+      "width": 384,
+      "height": 220,
+      "sha256": "563bc64e5f14bdeb72b5b3d2781a249b7439118c4cc815b8453a1fbb65c69614"
+    },
+    {
+      "id": "test/185114032-medium-png.png",
+      "sourceId": "185114032",
+      "scene": "wind turbine",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        82,
+        1,
+        327,
+        244
+      ],
+      "width": 245,
+      "height": 243,
+      "sha256": "1268a8d575ebcb504efc315d370f478d102d7b307aa4447bdf237487ea650a4b"
+    },
+    {
+      "id": "test/185114032-medium-resize-jpeg75.png",
+      "sourceId": "185114032",
+      "scene": "wind turbine",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        55,
+        31,
+        316,
+        268
+      ],
+      "width": 384,
+      "height": 349,
+      "sha256": "757a1a764a19b333c5cea33cb9994e601f020c4bef377fe3778ebcc7bc30f68e"
+    },
+    {
+      "id": "test/185114032-large-png.png",
+      "sourceId": "185114032",
+      "scene": "wind turbine",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        2,
+        14,
+        347,
+        282
+      ],
+      "width": 345,
+      "height": 268,
+      "sha256": "bbd94f7ad2dae0cad5cc0bed6e8c4df37d336de4f59788c57b471a1261ac5a2b"
+    },
+    {
+      "id": "test/185114032-large-resize-jpeg75.png",
+      "sourceId": "185114032",
+      "scene": "wind turbine",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        3,
+        12,
+        360,
+        299
+      ],
+      "width": 384,
+      "height": 309,
+      "sha256": "542d6608c23cf872409bbf73f8ed82ba2d9da6baa1b04d9c75f2bba5d9d1b0e4"
+    },
+    {
+      "id": "train/138877124-original.png",
+      "sourceId": "138877124",
+      "scene": "sunflower field",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 256,
+      "sha256": "48022bc78f79cd11c9c653bae4d94fb0a8e520d26df4f06903160e55562daf7f"
+    },
+    {
+      "id": "test/138877124-small-png.png",
+      "sourceId": "138877124",
+      "scene": "sunflower field",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        124,
+        38,
+        342,
+        158
+      ],
+      "width": 218,
+      "height": 120,
+      "sha256": "0a3fe0ab4428587dadfe341daffbd0d8ba50b8d9ea63e4778d735306beaa660f"
+    },
+    {
+      "id": "test/138877124-small-resize-jpeg75.png",
+      "sourceId": "138877124",
+      "scene": "sunflower field",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        98,
+        132,
+        313,
+        252
+      ],
+      "width": 384,
+      "height": 214,
+      "sha256": "57fb0d2fafa64fb5d7b59f3693dd822baa60048f9e7b13f2d90463292796b7e3"
+    },
+    {
+      "id": "test/138877124-medium-png.png",
+      "sourceId": "138877124",
+      "scene": "sunflower field",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        136,
+        54,
+        374,
+        225
+      ],
+      "width": 238,
+      "height": 171,
+      "sha256": "e5edab136035e5533a52548b936a7667eedcd7f6f0c148a8ae3af841bb84261f"
+    },
+    {
+      "id": "test/138877124-medium-resize-jpeg75.png",
+      "sourceId": "138877124",
+      "scene": "sunflower field",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        0,
+        7,
+        291,
+        206
+      ],
+      "width": 384,
+      "height": 263,
+      "sha256": "e026f5067263308aada6da8101b002ffa2bd96c8d6ab9527aa188a84576e8579"
+    },
+    {
+      "id": "test/138877124-large-png.png",
+      "sourceId": "138877124",
+      "scene": "sunflower field",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        5,
+        25,
+        365,
+        255
+      ],
+      "width": 360,
+      "height": 230,
+      "sha256": "1ce12c25ee67c830c5b87b2804cbfabebeec89f1504d5aad4a788eddfc33980c"
+    },
+    {
+      "id": "test/138877124-large-resize-jpeg75.png",
+      "sourceId": "138877124",
+      "scene": "sunflower field",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        24,
+        14,
+        377,
+        246
+      ],
+      "width": 384,
+      "height": 252,
+      "sha256": "c926ff5e1c1f3b5ddc90c308a50bb77cba19d733cdd13bd40d62a2323e4d459c"
+    },
+    {
+      "id": "train/56014736-original.png",
+      "sourceId": "56014736",
+      "scene": "sunflower field",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 288,
+      "sha256": "c2813a907d31fc62f34df4e6d61ff05ee7a6d1bea4d46e31468f2a13e3b3b46b"
+    },
+    {
+      "id": "test/56014736-small-png.png",
+      "sourceId": "56014736",
+      "scene": "sunflower field",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        86,
+        125,
+        289,
+        251
+      ],
+      "width": 203,
+      "height": 126,
+      "sha256": "0ed50bff51f098cfad3fca1bf1ae3568a0bcc1a53fb5d82d256356d05c21d44e"
+    },
+    {
+      "id": "test/56014736-small-resize-jpeg75.png",
+      "sourceId": "56014736",
+      "scene": "sunflower field",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        204,
+        81,
+        372,
+        201
+      ],
+      "width": 384,
+      "height": 274,
+      "sha256": "f2c017effbaadf657897af95296419f86da3774223bf98449cab0ed4cae197a7"
+    },
+    {
+      "id": "test/56014736-medium-png.png",
+      "sourceId": "56014736",
+      "scene": "sunflower field",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        87,
+        33,
+        355,
+        225
+      ],
+      "width": 268,
+      "height": 192,
+      "sha256": "4306cc6408dd365d6d3d3c72ccedcc84ea3a561f1b8eae227c594ed82930d7e0"
+    },
+    {
+      "id": "test/56014736-medium-resize-jpeg75.png",
+      "sourceId": "56014736",
+      "scene": "sunflower field",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        32,
+        49,
+        293,
+        256
+      ],
+      "width": 384,
+      "height": 305,
+      "sha256": "0f93385d9b2df9272b36b793427e14aae8bb63815b3b20dca21f0302b91015e2"
+    },
+    {
+      "id": "test/56014736-large-png.png",
+      "sourceId": "56014736",
+      "scene": "sunflower field",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        47,
+        36,
+        369,
+        286
+      ],
+      "width": 322,
+      "height": 250,
+      "sha256": "c0a9f4831a3fb250763e1fa3d194a1b738bf05586d27abc781040aef05d50344"
+    },
+    {
+      "id": "test/56014736-large-resize-jpeg75.png",
+      "sourceId": "56014736",
+      "scene": "sunflower field",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        29,
+        21,
+        359,
+        265
+      ],
+      "width": 384,
+      "height": 284,
+      "sha256": "f35a4e08a9b4fa61de6e230460a3386968cd8dea98d46ecf0f50e4dee56ff6e0"
+    },
+    {
+      "id": "train/150857431-original.png",
+      "sourceId": "150857431",
+      "scene": "sunflower field",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 256,
+      "sha256": "de814dd8e7654fa29ca14eb62028a8887530041a6329434b6ae6a5012875eb40"
+    },
+    {
+      "id": "test/150857431-small-png.png",
+      "sourceId": "150857431",
+      "scene": "sunflower field",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        141,
+        114,
+        356,
+        247
+      ],
+      "width": 215,
+      "height": 133,
+      "sha256": "dfd6426213d39f01fcc6434350f2353ec7712eaa70d092e75ebc852429a7b8cc"
+    },
+    {
+      "id": "test/150857431-small-resize-jpeg75.png",
+      "sourceId": "150857431",
+      "scene": "sunflower field",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        94,
+        9,
+        262,
+        147
+      ],
+      "width": 384,
+      "height": 315,
+      "sha256": "1b7849adfb4bad35ab0688e1a5ff53e78f5eba0fd822c8271abc0c64326ec7e0"
+    },
+    {
+      "id": "test/150857431-medium-png.png",
+      "sourceId": "150857431",
+      "scene": "sunflower field",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        28,
+        12,
+        258,
+        206
+      ],
+      "width": 230,
+      "height": 194,
+      "sha256": "88b3cd5d66f1796dd795fe889fb9c196e6f7ce38260dc8c030364b579db815e1"
+    },
+    {
+      "id": "test/150857431-medium-resize-jpeg75.png",
+      "sourceId": "150857431",
+      "scene": "sunflower field",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        41,
+        41,
+        348,
+        197
+      ],
+      "width": 384,
+      "height": 195,
+      "sha256": "e18693cff31a210e212887bfe5990fc209640c902fb53f89410840a7992ccbda"
+    },
+    {
+      "id": "test/150857431-large-png.png",
+      "sourceId": "150857431",
+      "scene": "sunflower field",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        2,
+        35,
+        362,
+        244
+      ],
+      "width": 360,
+      "height": 209,
+      "sha256": "42b0591019462fa7d58aeacc271cfee48fdb88ffa416511350f20a29a82c1fd1"
+    },
+    {
+      "id": "test/150857431-large-resize-jpeg75.png",
+      "sourceId": "150857431",
+      "scene": "sunflower field",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        61,
+        13,
+        383,
+        217
+      ],
+      "width": 384,
+      "height": 243,
+      "sha256": "938b9618cdcc5b8dc43780e7bab7826db3f356add75eb5859b9620d6e2cb1643"
+    },
+    {
+      "id": "train/196962223-original.png",
+      "sourceId": "196962223",
+      "scene": "forest path",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 256,
+      "sha256": "a334c9f6d8ca495ae42e98803d25fb81481a791532de8e5db19b72bee12357f1"
+    },
+    {
+      "id": "test/196962223-small-png.png",
+      "sourceId": "196962223",
+      "scene": "forest path",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        203,
+        126,
+        371,
+        254
+      ],
+      "width": 168,
+      "height": 128,
+      "sha256": "a63884c7b876dfc3442b531b7dbbd78536177199e87db5ca81e92bcd61ea160b"
+    },
+    {
+      "id": "test/196962223-small-resize-jpeg75.png",
+      "sourceId": "196962223",
+      "scene": "forest path",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        19,
+        101,
+        222,
+        226
+      ],
+      "width": 384,
+      "height": 236,
+      "sha256": "171bd5b7c8c82128155154c9c72a34e61d48500f3126f3a08a8a0f734c997cdb"
+    },
+    {
+      "id": "test/196962223-medium-png.png",
+      "sourceId": "196962223",
+      "scene": "forest path",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        75,
+        10,
+        328,
+        186
+      ],
+      "width": 253,
+      "height": 176,
+      "sha256": "30fdabf205a3bae67d54d9b0763fadc67a1a6d6d22cfad09cda41eecf346bc81"
+    },
+    {
+      "id": "test/196962223-medium-resize-jpeg75.png",
+      "sourceId": "196962223",
+      "scene": "forest path",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        121,
+        44,
+        374,
+        197
+      ],
+      "width": 384,
+      "height": 232,
+      "sha256": "a04be710720367dfbbc8519894aae1c01980e18c5c45a52c75473a0e93eb90da"
+    },
+    {
+      "id": "test/196962223-large-png.png",
+      "sourceId": "196962223",
+      "scene": "forest path",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        7,
+        13,
+        356,
+        238
+      ],
+      "width": 349,
+      "height": 225,
+      "sha256": "7d0ff3379d835e340e5f2ed99e87f68e402d2e2c99dd8b5016b8dd8bcaec724f"
+    },
+    {
+      "id": "test/196962223-large-resize-jpeg75.png",
+      "sourceId": "196962223",
+      "scene": "forest path",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        12,
+        8,
+        361,
+        215
+      ],
+      "width": 384,
+      "height": 228,
+      "sha256": "f25fcc532b02ea2600d5e9f41205822181436b2f1a7cd701d0914a910540f49e"
+    },
+    {
+      "id": "train/193647816-original.png",
+      "sourceId": "193647816",
+      "scene": "forest path",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 256,
+      "height": 384,
+      "sha256": "7befcca7804353860f42eaf43022cda253bf04f4c7ac4c8d5018f95db1f0e0c8"
+    },
+    {
+      "id": "test/193647816-small-png.png",
+      "sourceId": "193647816",
+      "scene": "forest path",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        116,
+        188,
+        223,
+        349
+      ],
+      "width": 107,
+      "height": 161,
+      "sha256": "2d37f3c032f51961122a0e36b53e6865c335bbd0096dfc12d53001a5372d0ada"
+    },
+    {
+      "id": "test/193647816-small-resize-jpeg75.png",
+      "sourceId": "193647816",
+      "scene": "forest path",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        4,
+        15,
+        106,
+        210
+      ],
+      "width": 201,
+      "height": 384,
+      "sha256": "0a60e9d5176c6a23da1d5c756a181f495b1bd82edd14515f78cce100844c39b2"
+    },
+    {
+      "id": "test/193647816-medium-png.png",
+      "sourceId": "193647816",
+      "scene": "forest path",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        56,
+        91,
+        242,
+        352
+      ],
+      "width": 186,
+      "height": 261,
+      "sha256": "557b29d39a6c6d6c4a00fd3178a78ccbf5e250ca15de752e92eba2828773084c"
+    },
+    {
+      "id": "test/193647816-medium-resize-jpeg75.png",
+      "sourceId": "193647816",
+      "scene": "forest path",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        48,
+        5,
+        250,
+        273
+      ],
+      "width": 289,
+      "height": 384,
+      "sha256": "c8315c9ea4bc22530add437178aeed498ee0eabe6a23b3ac529ff21cb021cf3a"
+    },
+    {
+      "id": "test/193647816-large-png.png",
+      "sourceId": "193647816",
+      "scene": "forest path",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        7,
+        1,
+        234,
+        331
+      ],
+      "width": 227,
+      "height": 330,
+      "sha256": "cfb71e26870cb60affc0281c4d5d87fbf61bdc63059ceaf99139ceafeadeb639"
+    },
+    {
+      "id": "test/193647816-large-resize-jpeg75.png",
+      "sourceId": "193647816",
+      "scene": "forest path",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        10,
+        22,
+        248,
+        375
+      ],
+      "width": 259,
+      "height": 384,
+      "sha256": "be2c5b51b637a3a22719fda0a3b4f83c5eda3c769e094f0b3b786dca994f5b51"
+    },
+    {
+      "id": "train/159843145-original.png",
+      "sourceId": "159843145",
+      "scene": "forest path",
+      "role": "gallery",
+      "transform": "original",
+      "band": "original",
+      "cropPixels": null,
+      "width": 384,
+      "height": 254,
+      "sha256": "a1edc70b0cf346b18e2c9103795a382500945ce7b4f7232d0f92dfb34e7b910a"
+    },
+    {
+      "id": "test/159843145-small-png.png",
+      "sourceId": "159843145",
+      "scene": "forest path",
+      "role": "query",
+      "transform": "small-png",
+      "band": "small",
+      "cropPixels": [
+        54,
+        147,
+        284,
+        253
+      ],
+      "width": 230,
+      "height": 106,
+      "sha256": "f905f082272a01b6282cb88ad427f2ef93e9723cd5ecb49e30b2007ea067e38f"
+    },
+    {
+      "id": "test/159843145-small-resize-jpeg75.png",
+      "sourceId": "159843145",
+      "scene": "forest path",
+      "role": "query",
+      "transform": "small-resize-jpeg75",
+      "band": "small",
+      "cropPixels": [
+        82,
+        90,
+        266,
+        194
+      ],
+      "width": 384,
+      "height": 217,
+      "sha256": "cfff89aefe5950ef9d25f790133c80857d44b5f19aacca0b5dc3be4892f5961f"
+    },
+    {
+      "id": "test/159843145-medium-png.png",
+      "sourceId": "159843145",
+      "scene": "forest path",
+      "role": "query",
+      "transform": "medium-png",
+      "band": "medium",
+      "cropPixels": [
+        34,
+        31,
+        341,
+        213
+      ],
+      "width": 307,
+      "height": 182,
+      "sha256": "4a9151b94db4c7880e2d3ef65d6ccd0c5402d4d9f7d7a901088125b40a37d31f"
+    },
+    {
+      "id": "test/159843145-medium-resize-jpeg75.png",
+      "sourceId": "159843145",
+      "scene": "forest path",
+      "role": "query",
+      "transform": "medium-resize-jpeg75",
+      "band": "medium",
+      "cropPixels": [
+        23,
+        79,
+        284,
+        244
+      ],
+      "width": 384,
+      "height": 243,
+      "sha256": "d6ab635140970e0c1a6ed9f14235868543e3155b958d685c7d0b0c18e0998d5b"
+    },
+    {
+      "id": "test/159843145-large-png.png",
+      "sourceId": "159843145",
+      "scene": "forest path",
+      "role": "query",
+      "transform": "large-png",
+      "band": "large",
+      "cropPixels": [
+        19,
+        43,
+        372,
+        251
+      ],
+      "width": 353,
+      "height": 208,
+      "sha256": "e909a521d55738258cf12ec98ae357937ad11bfaec4f39b357b6f605e212ec66"
+    },
+    {
+      "id": "test/159843145-large-resize-jpeg75.png",
+      "sourceId": "159843145",
+      "scene": "forest path",
+      "role": "query",
+      "transform": "large-resize-jpeg75",
+      "band": "large",
+      "cropPixels": [
+        1,
+        2,
+        319,
+        205
+      ],
+      "width": 384,
+      "height": 245,
+      "sha256": "782a2c8d9fefddc766ddeb19cf3e9d67deb96eae2a70162c6abe56c695806301"
+    }
+  ],
+  "groundTruth": "Only original-gallery versus transformed-query pairs; same source ID is positive, other source files are negatives. No human semantic adjudication."
+}

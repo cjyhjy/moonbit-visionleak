@@ -1,0 +1,248 @@
+{
+  "status": "returned",
+  "auditId": "655c7d890e0e70428af6f6656ab36d37b4faf30f011f0d1b7f88653547d22fd5",
+  "complete": false,
+  "gateExitCode": 2,
+  "images": 5000,
+  "pairs": 12,
+  "errors": [],
+  "phases": {
+    "deterministic": {
+      "enabled": true,
+      "complete": true,
+      "status": "complete",
+      "inputImages": 5000,
+      "processedImages": 5000,
+      "comparisons": 0,
+      "maxComparisons": 10000000,
+      "distanceEvaluations": 0,
+      "pairChecks": 0,
+      "indexOperations": 0,
+      "indexOperationLimit": 160000000,
+      "emittedPairs": 0,
+      "reason": ""
+    },
+    "perceptual": {
+      "enabled": true,
+      "complete": true,
+      "status": "complete",
+      "inputImages": 5000,
+      "processedImages": 5000,
+      "comparisons": 113642,
+      "maxComparisons": 10000000,
+      "distanceEvaluations": 113634,
+      "pairChecks": 8,
+      "indexOperations": 550608,
+      "indexOperationLimit": 160000000,
+      "emittedPairs": 8,
+      "reason": ""
+    },
+    "local": {
+      "enabled": false,
+      "complete": false,
+      "status": "disabled",
+      "inputImages": 5000,
+      "processedImages": 0,
+      "comparisons": 0,
+      "maxComparisons": 10000000,
+      "distanceEvaluations": 0,
+      "pairChecks": 0,
+      "indexOperations": 0,
+      "indexOperationLimit": 160000000,
+      "emittedPairs": 0,
+      "reason": ""
+    },
+    "orb": {
+      "enabled": true,
+      "status": "incomplete",
+      "complete": false,
+      "inputImages": 5000,
+      "processedImages": 2500,
+      "featureImages": 5000,
+      "featurePixels": 1368653453,
+      "pairChecks": 9948,
+      "descriptorComparisons": 12555573876,
+      "emittedPairs": 4,
+      "reason": "ORB_APPROXIMATE_COVERAGE",
+      "eligibleInputPairs": 6249992,
+      "eligibleFeaturePairs": 6249992,
+      "processedPairs": 4975,
+      "searchMode": "retrieval",
+      "candidateQueueComplete": true,
+      "exhaustivePairsComplete": false,
+      "searchProcessedImages": 5000,
+      "retrieval": {
+        "mode": "retrieval",
+        "profile": "vl-orb-lsh-24x4-top1-v1",
+        "inputImages": 5000,
+        "descriptors": 3964144,
+        "queryImages": 5000,
+        "postingVisits": 377239017,
+        "selectedPairs": 4975,
+        "complete": true
+      }
+    }
+  },
+  "coverage": {
+    "splits": {
+      "train": {
+        "audited": 0,
+        "fingerprinted": 2500,
+        "rejectedByCode": {},
+        "ignored": 0,
+        "unprocessed": 2500
+      },
+      "validation": {
+        "audited": 0,
+        "fingerprinted": 0,
+        "rejectedByCode": {},
+        "ignored": 0,
+        "unprocessed": 0
+      },
+      "test": {
+        "audited": 2500,
+        "fingerprinted": 2500,
+        "rejectedByCode": {},
+        "ignored": 0,
+        "unprocessed": 0
+      },
+      "unknown": {
+        "audited": 0,
+        "fingerprinted": 0,
+        "rejectedByCode": {},
+        "ignored": 0,
+        "unprocessed": 0
+      }
+    },
+    "budgetExhaustion": [],
+    "enumerationComplete": true,
+    "rejectedOrErrorCount": 0,
+    "ignoredFiles": 0,
+    "unprocessedKnownFiles": 2500,
+    "summary": "已审计 train 0 / validation 0 / test 2500；拒收/错误 0；忽略 0；已发现但未审计 2500；结论只覆盖已审计输入与已完成比较。",
+    "phases": {
+      "deterministic": {
+        "enabled": true,
+        "complete": true,
+        "status": "complete",
+        "inputImages": 5000,
+        "processedImages": 5000,
+        "comparisons": 0,
+        "maxComparisons": 10000000,
+        "distanceEvaluations": 0,
+        "pairChecks": 0,
+        "indexOperations": 0,
+        "indexOperationLimit": 160000000,
+        "emittedPairs": 0,
+        "reason": ""
+      },
+      "perceptual": {
+        "enabled": true,
+        "complete": true,
+        "status": "complete",
+        "inputImages": 5000,
+        "processedImages": 5000,
+        "comparisons": 113642,
+        "maxComparisons": 10000000,
+        "distanceEvaluations": 113634,
+        "pairChecks": 8,
+        "indexOperations": 550608,
+        "indexOperationLimit": 160000000,
+        "emittedPairs": 8,
+        "reason": ""
+      },
+      "local": {
+        "enabled": false,
+        "complete": false,
+        "status": "disabled",
+        "inputImages": 5000,
+        "processedImages": 0,
+        "comparisons": 0,
+        "maxComparisons": 10000000,
+        "distanceEvaluations": 0,
+        "pairChecks": 0,
+        "indexOperations": 0,
+        "indexOperationLimit": 160000000,
+        "emittedPairs": 0,
+        "reason": ""
+      },
+      "orb": {
+        "enabled": true,
+        "status": "incomplete",
+        "complete": false,
+        "inputImages": 5000,
+        "processedImages": 2500,
+        "featureImages": 5000,
+        "featurePixels": 1368653453,
+        "pairChecks": 9948,
+        "descriptorComparisons": 12555573876,
+        "emittedPairs": 4,
+        "reason": "ORB_APPROXIMATE_COVERAGE",
+        "eligibleInputPairs": 6249992,
+        "eligibleFeaturePairs": 6249992,
+        "processedPairs": 4975,
+        "searchMode": "retrieval",
+        "candidateQueueComplete": true,
+        "exhaustivePairsComplete": false,
+        "searchProcessedImages": 5000,
+        "retrieval": {
+          "mode": "retrieval",
+          "profile": "vl-orb-lsh-24x4-top1-v1",
+          "inputImages": 5000,
+          "descriptors": 3964144,
+          "queryImages": 5000,
+          "postingVisits": 377239017,
+          "selectedPairs": 4975,
+          "complete": true
+        }
+      }
+    },
+    "deterministicInputComplete": true,
+    "orbSearch": {
+      "mode": "approximate-retrieval",
+      "candidateQueueComplete": true,
+      "exhaustivePairsComplete": false,
+      "eligiblePairs": 6249992,
+      "selectedPairs": 4975,
+      "verifiedPairs": 4975
+    }
+  },
+  "timing": {
+    "orb": {
+      "elapsedMs": 23801,
+      "workerPeakRssBytes": 66977792,
+      "memorySamplingMs": 100,
+      "featureCacheHits": 5000,
+      "matchCacheHits": 4,
+      "executedPairChecks": 440,
+      "executedDescriptorComparisons": 557831888,
+      "residentFeaturePeak": 2,
+      "checkpointImages": 4891,
+      "checkpointDirections": 9504,
+      "featureStageMs": 20011,
+      "featureWorkerRequestMs": 0,
+      "executedFeatureExtractions": 0,
+      "geometryStageMs": 3684,
+      "geometryWorkerRequestMs": 2141,
+      "retrieval": {
+        "elapsedMs": 4,
+        "workerPeakRssBytes": 0,
+        "executedVisits": 0,
+        "reusedQueries": 5000,
+        "indexedDescriptors": 0
+      }
+    },
+    "cache": {
+      "hits": 5000,
+      "misses": 0,
+      "invalid": 0,
+      "writes": 0,
+      "writeErrors": 0
+    },
+    "elapsedMs": 27127
+  },
+  "elapsedMilliseconds": 27190,
+  "sourceDigest": "07e63417181d0bf8cb11f1f02e06cb2ca9a7f891579cbf8d52e89593e67f6c70",
+  "hostPeakRssBytes": 427458560,
+  "hostRssScope": "OS per-invocation Node high-water RSS; Python/index children measured separately in report timing. Not process-tree sum or simultaneous peak."
+}

@@ -1,0 +1,22 @@
+{
+  "id": "151373961",
+  "title": "File:Bicycles parked in Amsterdam.jpg",
+  "family": "parked bicycles",
+  "bucket": "same-scene",
+  "partition": "holdout",
+  "author": "WCmmns",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Bicycles_parked_in_Amsterdam.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Bicycles_parked_in_Amsterdam.jpg/960px-Bicycles_parked_in_Amsterdam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Bicycles_parked_in_Amsterdam.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "da5e24c691f41ca55e6dc95e273368f2b3a5ad0d",
+  "width": 1600,
+  "height": 1200,
+  "downloadSha256": "7872950244f82846eb6a75837d4df18d3ec57a0a37b7e88d13f3bbf717b01d91",
+  "sha256": "0c231093a2e7925e339226e47dce9c0fabb0757b58fe48fc4dc8aa8faa60cc4b",
+  "storedFile": "research/new-source-0.9.0/holdout/151373961.png",
+  "storedWidth": 384,
+  "storedHeight": 288,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

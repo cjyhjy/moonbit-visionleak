@@ -1,0 +1,34 @@
+{
+  "status": "partially_verified",
+  "browser": "Google Chrome",
+  "url": "http://127.0.0.1:4393/",
+  "auditId": "25dec6086c3c7f247e67eb18e3d8f9381034a69fd3618a2174d92dc14d90fbba",
+  "passed": {
+    "selectVisible": 100,
+    "batchUnsureReviewed": 100,
+    "batchUndoReviewed": 0,
+    "sharedImageFilterPairs": 6,
+    "sharedImageFilterReviewed": 0,
+    "resetFilterPairs": 143,
+    "finalReviewed": 0,
+    "desktopPanel": true,
+    "singleCheckboxSelection": 1,
+    "keyboardDetailNavigation": "1/143 to 2/143, image changed",
+    "mobileWidth": 390,
+    "mobileCardsReadable": true,
+    "mobileQueueLocalHorizontalScroll": true,
+    "mobilePageHorizontalOverflowObserved": false,
+    "mobileCardSelectionDetail": "2/143 with matching images/path"
+  },
+  "unverified": [
+    "native-file migration preview/apply/undo after final WebCrypto implementation"
+  ],
+  "limitation": "Native chooser CUA inspection blocked and was interrupted; no file selected. Migration remains Node-tested, browser file end-to-end unverified. No permissions/settings changed.",
+  "scope": "Scripted functional QA only, no human review timing; isolated local fixture.",
+  "fixedRegression": "Initial mobile flex wrapper shrank cards into vertical strips; fixed wrapper basis/width/min-width220px, refreshed390px and rechecked.",
+  "cleanup": {
+    "testSelectionCleared": true,
+    "defaultViewportRestored": true,
+    "taskLocalServerStopped": true
+  }
+}

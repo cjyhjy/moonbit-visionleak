@@ -1,0 +1,254 @@
+{
+  "status": "returned",
+  "auditId": "4d1d9a5c5b3642dd98ef6e0ea594f611fc2ce5af2c178cb8e749fedae96d3565",
+  "complete": false,
+  "gateExitCode": 2,
+  "images": 1000,
+  "pairs": 0,
+  "errors": [],
+  "phases": {
+    "deterministic": {
+      "enabled": true,
+      "complete": true,
+      "status": "complete",
+      "inputImages": 1000,
+      "processedImages": 1000,
+      "comparisons": 0,
+      "maxComparisons": 10000000,
+      "distanceEvaluations": 0,
+      "pairChecks": 0,
+      "indexOperations": 0,
+      "indexOperationLimit": 160000000,
+      "emittedPairs": 0,
+      "reason": ""
+    },
+    "perceptual": {
+      "enabled": true,
+      "complete": true,
+      "status": "complete",
+      "inputImages": 1000,
+      "processedImages": 1000,
+      "comparisons": 11426,
+      "maxComparisons": 10000000,
+      "distanceEvaluations": 11426,
+      "pairChecks": 0,
+      "indexOperations": 68489,
+      "indexOperationLimit": 160000000,
+      "emittedPairs": 0,
+      "reason": ""
+    },
+    "local": {
+      "enabled": false,
+      "complete": false,
+      "status": "disabled",
+      "inputImages": 1000,
+      "processedImages": 0,
+      "comparisons": 0,
+      "maxComparisons": 10000000,
+      "distanceEvaluations": 0,
+      "pairChecks": 0,
+      "indexOperations": 0,
+      "indexOperationLimit": 160000000,
+      "emittedPairs": 0,
+      "reason": ""
+    },
+    "orb": {
+      "enabled": true,
+      "status": "incomplete",
+      "complete": false,
+      "inputImages": 1000,
+      "processedImages": 500,
+      "featureImages": 1000,
+      "featurePixels": 105250016,
+      "pairChecks": 1630,
+      "descriptorComparisons": 1999047872,
+      "emittedPairs": 0,
+      "reason": "ORB_WORK_BUDGET",
+      "eligibleInputPairs": 250000,
+      "eligibleFeaturePairs": 250000,
+      "processedPairs": 815,
+      "searchMode": "retrieval",
+      "candidateQueueComplete": false,
+      "exhaustivePairsComplete": false,
+      "searchProcessedImages": 907,
+      "retrieval": {
+        "mode": "retrieval",
+        "profile": "vl-orb-lsh-24x4-top1-v1",
+        "inputImages": 1000,
+        "descriptors": 776931,
+        "queryImages": 1000,
+        "postingVisits": 16213701,
+        "selectedPairs": 987,
+        "complete": true
+      }
+    }
+  },
+  "coverage": {
+    "splits": {
+      "train": {
+        "audited": 0,
+        "fingerprinted": 500,
+        "rejectedByCode": {},
+        "ignored": 0,
+        "unprocessed": 500
+      },
+      "validation": {
+        "audited": 0,
+        "fingerprinted": 0,
+        "rejectedByCode": {},
+        "ignored": 0,
+        "unprocessed": 0
+      },
+      "test": {
+        "audited": 500,
+        "fingerprinted": 500,
+        "rejectedByCode": {},
+        "ignored": 0,
+        "unprocessed": 0
+      },
+      "unknown": {
+        "audited": 0,
+        "fingerprinted": 0,
+        "rejectedByCode": {},
+        "ignored": 0,
+        "unprocessed": 0
+      }
+    },
+    "budgetExhaustion": [
+      {
+        "code": "ORB_WORK_BUDGET",
+        "stage": "orb-comparison",
+        "processedImages": 500,
+        "emittedPairs": 0,
+        "atImage": "train/000000000139.png",
+        "phase": "orb"
+      }
+    ],
+    "enumerationComplete": true,
+    "rejectedOrErrorCount": 0,
+    "ignoredFiles": 0,
+    "unprocessedKnownFiles": 500,
+    "summary": "已审计 train 0 / validation 0 / test 500；拒收/错误 0；忽略 0；已发现但未审计 500；结论只覆盖已审计输入与已完成比较。",
+    "phases": {
+      "deterministic": {
+        "enabled": true,
+        "complete": true,
+        "status": "complete",
+        "inputImages": 1000,
+        "processedImages": 1000,
+        "comparisons": 0,
+        "maxComparisons": 10000000,
+        "distanceEvaluations": 0,
+        "pairChecks": 0,
+        "indexOperations": 0,
+        "indexOperationLimit": 160000000,
+        "emittedPairs": 0,
+        "reason": ""
+      },
+      "perceptual": {
+        "enabled": true,
+        "complete": true,
+        "status": "complete",
+        "inputImages": 1000,
+        "processedImages": 1000,
+        "comparisons": 11426,
+        "maxComparisons": 10000000,
+        "distanceEvaluations": 11426,
+        "pairChecks": 0,
+        "indexOperations": 68489,
+        "indexOperationLimit": 160000000,
+        "emittedPairs": 0,
+        "reason": ""
+      },
+      "local": {
+        "enabled": false,
+        "complete": false,
+        "status": "disabled",
+        "inputImages": 1000,
+        "processedImages": 0,
+        "comparisons": 0,
+        "maxComparisons": 10000000,
+        "distanceEvaluations": 0,
+        "pairChecks": 0,
+        "indexOperations": 0,
+        "indexOperationLimit": 160000000,
+        "emittedPairs": 0,
+        "reason": ""
+      },
+      "orb": {
+        "enabled": true,
+        "status": "incomplete",
+        "complete": false,
+        "inputImages": 1000,
+        "processedImages": 500,
+        "featureImages": 1000,
+        "featurePixels": 105250016,
+        "pairChecks": 1630,
+        "descriptorComparisons": 1999047872,
+        "emittedPairs": 0,
+        "reason": "ORB_WORK_BUDGET",
+        "eligibleInputPairs": 250000,
+        "eligibleFeaturePairs": 250000,
+        "processedPairs": 815,
+        "searchMode": "retrieval",
+        "candidateQueueComplete": false,
+        "exhaustivePairsComplete": false,
+        "searchProcessedImages": 907,
+        "retrieval": {
+          "mode": "retrieval",
+          "profile": "vl-orb-lsh-24x4-top1-v1",
+          "inputImages": 1000,
+          "descriptors": 776931,
+          "queryImages": 1000,
+          "postingVisits": 16213701,
+          "selectedPairs": 987,
+          "complete": true
+        }
+      }
+    },
+    "deterministicInputComplete": true,
+    "orbSearch": {
+      "mode": "approximate-retrieval",
+      "candidateQueueComplete": false,
+      "exhaustivePairsComplete": false,
+      "eligiblePairs": 250000,
+      "selectedPairs": 987,
+      "verifiedPairs": 815
+    }
+  },
+  "timing": {
+    "orb": {
+      "elapsedMs": 20751,
+      "workerPeakRssBytes": 80183296,
+      "memorySamplingMs": 100,
+      "featureCacheHits": 39,
+      "matchCacheHits": 0,
+      "executedPairChecks": 1630,
+      "executedDescriptorComparisons": 1999047872,
+      "residentFeaturePeak": 2,
+      "checkpointImages": 0,
+      "checkpointDirections": 0,
+      "retrieval": {
+        "elapsedMs": 2268,
+        "workerPeakRssBytes": 100696064,
+        "executedVisits": 16213701,
+        "reusedQueries": 0,
+        "indexedDescriptors": 776931,
+        "allocatedBytes": 24861792,
+        "postings": 3056285
+      }
+    },
+    "cache": {
+      "hits": 1000,
+      "misses": 0,
+      "invalid": 0,
+      "writes": 0,
+      "writeErrors": 0
+    },
+    "elapsedMs": 21393
+  },
+  "elapsedMilliseconds": 21418,
+  "sourceDigest": "e1c8b4f2b3cad7c5115bb35d211ccf6a6969c4066bbc04acd6296fad2edf0c4d",
+  "hostPeakRssBytes": 232734720,
+  "hostRssScope": "OS per-invocation Node high-water RSS; Python/index children measured separately in report timing. Not process-tree sum or simultaneous peak."
+}

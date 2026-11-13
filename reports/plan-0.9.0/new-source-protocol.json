@@ -1,0 +1,14 @@
+{
+ "schemaVersion":"vl-new-source-protocol-v1",
+ "status":"protocol-frozen-before-new-source-results",
+ "developmentSources":24,
+ "holdoutSources":24,
+ "sourcePolicy":"New source IDs and byte digests must be disjoint from research/photos-v1, photos-v2, photos-v3 and followup-quality. Source families stay in one partition. Record URL, license, raw SHA256, stored SHA256, dimensions, transformation seed and lineage.",
+ "transformPolicy":"Original, JPEG quality45, two non-window-aligned crops with independently seeded offsets and dimensions 58..86%, watermark, screenshot border. Freeze parameters before fetching holdout.",
+ "hardNegatives":"At least 8 source families each of repetitive textures, similar buildings and same-scene distinct photographs. Different files are not automatically unrelated; adjudicate uncertain lineage.",
+ "modes":["Core default","Core plus exhaustive ORB","retrieval baseline k=1,5,10,25 against exhaustive ORB"],
+ "metrics":["TP","FP","FN","feature coverage","pair coverage","candidate recall versus exhaustive ORB","pairs per 1000 images","wall seconds","cache bytes","sampled worker RSS"],
+ "naturalContamination":"Separate observational dataset; labels require provenance or manual adjudication. Reviewing emitted candidates alone cannot establish recall.",
+ "humanReview":"Record active review seconds, total elapsed seconds, candidate pairs inspected, valid findings and reviewer count. Currently not measured.",
+ "dataStatus":"New sources not yet acquired or evaluated; existing sources permitted only as explicitly labelled regression smoke tests."
+}

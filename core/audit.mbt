@@ -576,7 +576,8 @@ pub fn audit_json(source : String) -> String {
   if !(opts is Object(_) || opts is Null) {
     return error_json("InvalidOptions", "options must be an object").stringify()
   }
-  if field(opts, "includeOrb") == Json(true) {
+  if field(opts, "includeOrb") == Json(true) ||
+    field(opts, "includeOrbRetrieval") == Json(true) {
     return error_json(
       "HostFeatureRequired", "ORB needs the optional Node/Python host worker; use runAudit or the CLI",
     ).stringify()

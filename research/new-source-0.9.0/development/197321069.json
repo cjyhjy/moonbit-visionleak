@@ -1,0 +1,22 @@
+{
+  "id": "197321069",
+  "title": "File:View of Avermaat and Meerskant from a hot air balloon, Zele, 2026.jpg",
+  "family": "hot air balloons",
+  "bucket": "same-scene",
+  "partition": "development",
+  "author": "DimiTalen",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:View_of_Avermaat_and_Meerskant_from_a_hot_air_balloon,_Zele,_2026.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/View_of_Avermaat_and_Meerskant_from_a_hot_air_balloon%2C_Zele%2C_2026.jpg/960px-View_of_Avermaat_and_Meerskant_from_a_hot_air_balloon%2C_Zele%2C_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/View_of_Avermaat_and_Meerskant_from_a_hot_air_balloon%2C_Zele%2C_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "55bc683d57fd358d4348c4fc03b13449c1ee2014",
+  "width": 5279,
+  "height": 3520,
+  "downloadSha256": "1bb1a229627d7c1e80d71c0508f9b1b45c9952611ddc27daa0e680f666066108",
+  "sha256": "cab93744a1ae9b60766b09f8a8c398ce2170ea5e7075d439ebcf6afacb89f294",
+  "storedFile": "research/new-source-0.9.0/development/197321069.png",
+  "storedWidth": 384,
+  "storedHeight": 256,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "visionleak-browser-followup-v1",
+  "status": "awaiting-user-native-file-check",
+  "browser": "Google Chrome via CUA",
+  "coreArtifactSha256": "ec93ead0ab016a676dc98a109824a6ec4ebf3779f8ae8bd563611e5ff7349097",
+  "sourceHashes": {
+    "demo/app.mjs": "ad748df0e8bf6a7843f65eb745e95b20215404fe212ba7d918095d65cd2a9623",
+    "demo/index.html": "b722595c0a10247ab8047c77c67656de2cb8485d74ac465f286d0a28e1f3b16b",
+    "demo/report-identity.mjs": "559039cb991ad6f22e508fd230871721774f19398c6b86b2005e2fd34e7d3cdc",
+    "demo/review-transfer.mjs": "54352287ba9d34a3c46194970b5d4813fc5690edcb330d99df3215ba88ff8395",
+    "demo/review-validation.mjs": "4ad9b2d25a1be962084e88807ef2d0deee00702d800723d03478f774c5c41f40",
+    "demo/review-workflow.mjs": "883bf0c45ffa879b739632b97e8ae0008bcb56fb929f2a9e1a92131c7d7852b3",
+    "demo/styles.css": "cb6b563a10079094ca45b6598b648769d943b58855c2ed9bd167fd1660bb42e7",
+    "dist/visionleak.js": "ec93ead0ab016a676dc98a109824a6ec4ebf3779f8ae8bd563611e5ff7349097"
+  },
+  "auditIds": [
+    "aaf909d75c7b7ae435edc962d54a18cfdb9a99016971940d1c0f80ef3f549397"
+  ],
+  "checks": {
+    "exactFirst": true,
+    "orbFilterTwoPairs": true,
+    "geometryTextObserved": "198/267 inliers, projection and sampled points visible",
+    "bulkMark3Undo0": true,
+    "sharedImage2PairsNoMark": true,
+    "desktopVisualInspection": true,
+    "mobile390VisualInspection": true,
+    "mobileQueueLocalHorizontalScroll": true,
+    "pageHorizontalOverflowObserved": false,
+    "defaultViewportRestored": true,
+    "finalReviewedBeforeHandoff": "0/3",
+    "nativeFileTransferPreviewApplyUndo": false
+  },
+  "handoff": {
+    "url": "http://127.0.0.1:4397/",
+    "file": "/private/tmp/visionleak-090-transfer-3.json",
+    "expected": "preview3 -> reviewed3/3 -> undo0/3",
+    "waitingForUser": true
+  },
+  "screenshots": [],
+  "limitations": [
+    "Tool filechooser event times out; native-file step is not stamped passed.",
+    "Observed screenshots via CUA; no screenshot file-saving method used.",
+    "Scripted functional QA, not a human-review timing or natural-contamination study."
+  ]
+}

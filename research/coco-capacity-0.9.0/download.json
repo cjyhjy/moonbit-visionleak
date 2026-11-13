@@ -1,0 +1,11 @@
+{
+  "status": "downloaded-and-zip-integrity-checked",
+  "archive": ".cache/public-data/coco-val2017.zip",
+  "url": "https://s3.amazonaws.com/images.cocodataset.org/zips/val2017.zip",
+  "bytes": 815585330,
+  "sha256": "4f7e2ccb2866ec5041993c9cf2a952bbed69647b115d0f74da7ce8f4bef82f05",
+  "etag": "\"d366be60d3dc737327160d62453e3973-98\"",
+  "protocolSha256": "c2bfd11e05d5e178e026ff990571859554e0d3e6d3eb359821ea156c3fd8786b",
+  "downloaderSha256": "daf492fab5767880fb8a3f63ba6b3668f2190760e19b32d5398f0a6545d4c182",
+  "experimentStatus": "not_run"
+}

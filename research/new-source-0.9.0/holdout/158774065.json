@@ -1,0 +1,22 @@
+{
+  "id": "158774065",
+  "title": "File:Red Tokyo Tower.jpg",
+  "family": "Tokyo Tower",
+  "bucket": "similar-building",
+  "partition": "holdout",
+  "author": "Syced",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Red_Tokyo_Tower.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Red_Tokyo_Tower.jpg/960px-Red_Tokyo_Tower.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Red_Tokyo_Tower.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "043b093381d1dbd9e6a0c851e4f6a3e6cd1f49f8",
+  "width": 4080,
+  "height": 3072,
+  "downloadSha256": "8a4f4e0a823a817b568eb7773d2ef1ab9b25b7871185d3e668a00c627d4deb5f",
+  "sha256": "ae9a2a189954a3e1c51c50ff832f9ccbcba6b1ec57bb1bfd7e94ca2eb020f9c1",
+  "storedFile": "research/new-source-0.9.0/holdout/158774065.png",
+  "storedWidth": 384,
+  "storedHeight": 289,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

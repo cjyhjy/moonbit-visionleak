@@ -1,0 +1,13 @@
+{
+  "status": "failed",
+  "reason": "ORB_PROTOCOL",
+  "featureImages": 1911,
+  "failingImage": "test/000000445365.png",
+  "rawOpenCvFeatureCount": 801,
+  "expectedHardCap": 800,
+  "defaultCoreComplete": true,
+  "remediation": "Deterministic detector-order first800 points/aligned descriptor rows; policy and worker digest invalidate old feature namespace. Budget and cohort unchanged; fresh-cache reruns required.",
+  "scope": "Retained real capacity failure. No candidate indexing/geometric matching executed in this failed cold run.",
+  "upstreamReasonSource": "https://github.com/opencv/opencv/blob/4.13.0/modules/features2d/src/keypoint.cpp#L66-L85",
+  "upstreamBehavior": "retainBest preserves all keypoints at the boundary response, so requested nfeatures does not establish the application hard cap."
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "vl-original-photo-capacity-protocol-v1",
+  "status": "frozen-before-original-byte-materialization-and-runs",
+  "dataset": "All 5000 COCO val2017 photos, sorted by original numeric filename, without selection by matches",
+  "officialDownloadPage": "https://cocodataset.org/#download",
+  "officialArchiveUrl": "http://images.cocodataset.org/zips/val2017.zip",
+  "httpsSameBucketUrl": "https://s3.amazonaws.com/images.cocodataset.org/zips/val2017.zip",
+  "expectedBytes": 815585330,
+  "expectedEtag": "\"d366be60d3dc737327160d62453e3973-98\"",
+  "integrity": "HTTPS same public S3 bucket; bind bytes/ETag observed from official HTTP URL and HTTPS path-style bucket URL, record SHA256 and verify ZIP CRC. Multipart ETag is not an MD5 checksum or signed provenance.",
+  "terms": "https://cocodataset.org/dataset/termsofuse.htm",
+  "imageRights": "Images remain owned by respective copyright holders and subject to applicable Flickr terms. Local research cache only; no image redistribution or claim of CC0/CC-BY4 image licensing.",
+  "preprocessing": "None: original JPEG bytes unchanged, original EXIF/source resolution retained for Core; ORB alone explicitly samples at max131072pixels/image under total1b feature pixels.",
+  "split": "Within each sorted prefix, even positions train and odd positions test; synthetic audit splits only, not COCO official train/test or contamination ground truth.",
+  "sizes": [
+    100,
+    1000,
+    5000
+  ],
+  "modes": [
+    "default-Core",
+    "retrieval-cold",
+    "retrieval-warm",
+    "retrieval-resume-new-cache"
+  ],
+  "experimentalOptions": {
+    "includeOrb": true,
+    "includeOrbRetrieval": true,
+    "maxImages": 5000,
+    "maxTotalPixels": 2000000000,
+    "maxComparisons": 10000000,
+    "maxExactComparisons": 10000000,
+    "maxPairs": 10000,
+    "maxOrbImages": 5000,
+    "maxOrbTotalPixels": 1000000000,
+    "maxOrbComparisons": 2000000000,
+    "maxOrbPairChecks": 100000,
+    "maxOrbCandidates": 1000,
+    "maxOrbMilliseconds": 300000,
+    "maxOrbIndexDescriptors": 4000000,
+    "maxOrbIndexVisits": 100000000,
+    "maxOrbIndexMemoryMiB": 256,
+    "maxOrbMemoryMiB": 256,
+    "maxOrbPixels": 131072
+  },
+  "runBounds": "At most 30 invocations per size/mode with one cache per size and separate cache for resume. Retain all stopping reasons/failures. No configuration tuning after results; any changed protocol is a new disclosed experiment.",
+  "acceptance": [
+    "Default Core covers complete selected input under explicit finite budgets; otherwise record capacity failure.",
+    "Retrieval checks all selected candidate directions within bounded resumed calls, with candidateQueueComplete true; approximate pruned pairs still require complete false and exit2.",
+    "Cold/warm/final-resumed evidence identity equal, no dropped known witnesses, actual executed work and logical coverage separate.",
+    "Record wall time, cache payload bytes, host and child sampled RSS plus documented sampling limitations; do not claim process-tree hard isolation.",
+    "Force one process interruption on new resume cache after committed work; demonstrate actual feature/direction/query reuse and final identity parity."
+  ],
+  "scopeLimits": "Original-resolution Core input plus explicitly bounded sampled ORB. Capacity/recovery only; artificial splits and unlabelled natural relations, no accuracy/population recall/human timing claim. Same public cohort as earlier normalized study, not a new unseen holdout.",
+  "invocationWatchdogSeconds": 600,
+  "previousNormalizedStudy": "reports/plan-0.9.0/coco-capacity-summary.json",
+  "originalSourcePixels": 1368653453,
+  "compiledArtifactSha256AtFreeze": "2a420b057f912e78830ff7353a9452be80b86f33eaf72678726ca4270a903f7e"
+}

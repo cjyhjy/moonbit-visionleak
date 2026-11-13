@@ -1,0 +1,122 @@
+{
+  "schemaVersion": "vl-orb-lsh-feasibility-v1",
+  "reportSha256": "7f0afc2588f21aaae24fc432823a249a3e4a38422b8a67718a422f688d4120d6",
+  "configuration": {
+    "bits": 12,
+    "tables": 4,
+    "seed": "vl-orb-lsh-v1",
+    "minimumVotes": 1,
+    "selection": "symmetric union top-k, one vote per query descriptor/image across all tables; Core pairs excluded"
+  },
+  "measurements": {
+    "buildMs": 26.57133399999998,
+    "queryMs": 1245.3362499999998,
+    "descriptors": 119837,
+    "buckets": 14670,
+    "postingVisits": 26590576,
+    "lookups": 479348,
+    "hostPeakRssBytes": 114098176
+  },
+  "results": [
+    {
+      "k": 1,
+      "eligiblePairs": 3385,
+      "selectedPairs": 146,
+      "pairReduction": 23.184931506849313,
+      "referencePositivePairs": 73,
+      "recalled": 67,
+      "recall": 0.9178082191780822,
+      "pairWilson95DescriptiveOnly": [
+        0.8320560452006283,
+        0.961786249521295
+      ],
+      "missed": [
+        [
+          "test/137334104-jpeg45.jpg",
+          "train/137334104-original.png"
+        ],
+        [
+          "test/45607455-random-crop-a.png",
+          "train/45607455-original.png"
+        ],
+        [
+          "test/59356852-random-crop-a.png",
+          "train/59356852-original.png"
+        ],
+        [
+          "test/117737593-screenshot-border.png",
+          "train/117737593-original.png"
+        ],
+        [
+          "test/145562084-random-crop-a.png",
+          "train/145562084-original.png"
+        ],
+        [
+          "test/145562084-random-crop-b.png",
+          "train/145562084-original.png"
+        ]
+      ]
+    },
+    {
+      "k": 5,
+      "eligiblePairs": 3385,
+      "selectedPairs": 766,
+      "pairReduction": 4.419060052219321,
+      "referencePositivePairs": 73,
+      "recalled": 71,
+      "recall": 0.9726027397260274,
+      "pairWilson95DescriptiveOnly": [
+        0.9054985182830946,
+        0.9924542413203923
+      ],
+      "missed": [
+        [
+          "test/145562084-random-crop-a.png",
+          "train/145562084-original.png"
+        ],
+        [
+          "test/145562084-random-crop-b.png",
+          "train/145562084-original.png"
+        ]
+      ]
+    },
+    {
+      "k": 10,
+      "eligiblePairs": 3385,
+      "selectedPairs": 1522,
+      "pairReduction": 2.224047306176084,
+      "referencePositivePairs": 73,
+      "recalled": 71,
+      "recall": 0.9726027397260274,
+      "pairWilson95DescriptiveOnly": [
+        0.9054985182830946,
+        0.9924542413203923
+      ],
+      "missed": [
+        [
+          "test/145562084-random-crop-a.png",
+          "train/145562084-original.png"
+        ],
+        [
+          "test/145562084-random-crop-b.png",
+          "train/145562084-original.png"
+        ]
+      ]
+    },
+    {
+      "k": 25,
+      "eligiblePairs": 3385,
+      "selectedPairs": 3385,
+      "pairReduction": 1,
+      "referencePositivePairs": 73,
+      "recalled": 73,
+      "recall": 1,
+      "pairWilson95DescriptiveOnly": [
+        0.9500079920442688,
+        0.9999999999999998
+      ],
+      "missed": []
+    }
+  ],
+  "scope": "Research-only fixed bit projections; complete ORB-only emitted positives are reference. Pair-level Wilson intervals are descriptive and ignore same-source correlation; not source-population confidence. No product acceleration or natural-contamination claim. Run each configuration in a fresh Node process."
+}

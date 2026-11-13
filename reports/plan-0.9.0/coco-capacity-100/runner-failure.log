@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak/research/coco-capacity-0.9.0/run.py", line 84, in <module>
+    default = run('default-Core', 0)
+  File "/Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak/research/coco-capacity-0.9.0/run.py", line 74, in run
+    raise RuntimeError('No invocation receipt; see ' + str(work / (name + '.log')))
+RuntimeError: No invocation receipt; see /Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak/.cache/coco-production-100/default-Core-0.log

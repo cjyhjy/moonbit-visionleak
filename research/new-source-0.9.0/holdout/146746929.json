@@ -1,0 +1,22 @@
+{
+  "id": "146746929",
+  "title": "File:Gravel Stones.jpg",
+  "family": "gravel",
+  "bucket": "repeated-texture",
+  "partition": "holdout",
+  "author": "Saral Shots",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Gravel_Stones.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Gravel_Stones.jpg/960px-Gravel_Stones.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Gravel_Stones.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "17ea0d73c61de0cb2eed8bbe1459f50e84a6fee8",
+  "width": 4608,
+  "height": 3456,
+  "downloadSha256": "92b4f14af4ea873cc57242e23b3a96f179ed130e766bb7139aa9725b6bf64f29",
+  "sha256": "244fe7a3bf08259111069c8ee3702153b6534b0280b62a325321c42ab32592d8",
+  "storedFile": "research/new-source-0.9.0/holdout/146746929.png",
+  "storedWidth": 384,
+  "storedHeight": 288,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

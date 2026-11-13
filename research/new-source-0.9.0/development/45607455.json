@@ -1,0 +1,22 @@
+{
+  "id": "45607455",
+  "title": "File:Cobblestones street Pompeii.jpg",
+  "family": "cobblestone",
+  "bucket": "repeated-texture",
+  "partition": "development",
+  "author": "Jebulon",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Cobblestones_street_Pompeii.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Cobblestones_street_Pompeii.jpg/960px-Cobblestones_street_Pompeii.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Cobblestones_street_Pompeii.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "4018ee3e2e359005af8ed54665ca385adeebd6f1",
+  "width": 4592,
+  "height": 2888,
+  "downloadSha256": "86a51608e7806fe79378129cd8e7ace3ae768433c600f662933ca7164ea0cc9b",
+  "sha256": "78e5e0cfc292981b26c3f1c92acc5b2d77c5ea8d647d388ab8bb73ca7aec5e1d",
+  "storedFile": "research/new-source-0.9.0/development/45607455.png",
+  "storedWidth": 384,
+  "storedHeight": 242,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

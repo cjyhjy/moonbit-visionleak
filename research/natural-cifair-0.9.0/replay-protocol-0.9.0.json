@@ -1,0 +1,24 @@
+{
+  "status": "frozen-before-known-data-candidate-replay",
+  "annotationUrl": "https://raw.githubusercontent.com/cvjena/cifair/master/meta/duplicates_cifar10.csv",
+  "annotationSha256": "4cb7e99a7dfff346082c9d8fa4c2989a196e4a37d1e58f75936046696f1ba6a4",
+  "annotationMeaningUrl": "https://github.com/cvjena/cifair/tree/master/meta",
+  "datasetPage": "https://cave.cs.toronto.edu/kriz/cifar.html",
+  "archiveUrl": "https://cave.cs.toronto.edu/kriz/cifar-10-binary.tar.gz",
+  "officialArchiveMd5": "c32a1d4ab5d03f1284b67883e8d87530",
+  "judgments": {
+    "0": "author-labelled approximate pixel duplicate",
+    "1": "author-labelled same-shot near duplicate",
+    "2": "author-labelled different content, visually similar"
+  },
+  "selection": "All author-provided cross-train/test rows, without dropping difficult cases. Other pair relationships remain unlabelled.",
+  "frozenEvaluationOptions": {
+    "threshold": 6,
+    "includeCrops": false,
+    "includeOrb": false
+  },
+  "compiledArtifactSha256": "ec93ead0ab016a676dc98a109824a6ec4ebf3779f8ae8bd563611e5ff7349097",
+  "scope": "Known public author-annotated natural32px cases replayed at unchanged frozen threshold6 for0.9.0 candidate; not new sources or another blind holdout. No human timing.",
+  "originalProtocolSha256": "a1742a8ade8f2327f06a5a90c89ef077f9b19cfebde2fa71b009c0c6217c7b00",
+  "candidateVersion": "0.9.0"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "117737593",
+  "title": "File:Wood Texture Background.jpg",
+  "family": "wood texture",
+  "bucket": "repeated-texture",
+  "partition": "development",
+  "author": "Bango Textures",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Wood_Texture_Background.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Wood_Texture_Background.jpg/960px-Wood_Texture_Background.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Wood_Texture_Background.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "ac1d1e49c32578bd69060a7bb425f8f17a84589a",
+  "width": 8192,
+  "height": 5464,
+  "downloadSha256": "1333544aa34c4474d7e0a6ae443ae7bf2d97c5aa05e20d632078564a180cf591",
+  "sha256": "0bae07b211e819b44ecfe164514f68db1190f077194f4b0b73a7d11f568a8bba",
+  "storedFile": "research/new-source-0.9.0/development/117737593.png",
+  "storedWidth": 384,
+  "storedHeight": 256,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

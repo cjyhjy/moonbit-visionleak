@@ -1,0 +1,22 @@
+{
+  "id": "197291635",
+  "title": "File:View of Donkmeer from a hot air balloon, Berlare, 2026 (1).jpg",
+  "family": "hot air balloons",
+  "bucket": "same-scene",
+  "partition": "development",
+  "author": "DimiTalen",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:View_of_Donkmeer_from_a_hot_air_balloon,_Berlare,_2026_(1).jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/View_of_Donkmeer_from_a_hot_air_balloon%2C_Berlare%2C_2026_%281%29.jpg/960px-View_of_Donkmeer_from_a_hot_air_balloon%2C_Berlare%2C_2026_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/View_of_Donkmeer_from_a_hot_air_balloon%2C_Berlare%2C_2026_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "10b3a05bac269790f29f97606d8ddb759796f1d0",
+  "width": 5454,
+  "height": 3636,
+  "downloadSha256": "0f248db4b6fc907ec90a13e2dea4a2876a9cf7b5fbfbc4657940707e8965169e",
+  "sha256": "a7dffa1ab1c121a66d30b7c7723db5193be2e071b194fdb5325e0f29a41baed7",
+  "storedFile": "research/new-source-0.9.0/development/197291635.png",
+  "storedWidth": 384,
+  "storedHeight": 256,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

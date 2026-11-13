@@ -1,11 +1,13 @@
 import { workflow_json } from '../dist/visionleak.js';
 import { EVIDENCE, DECISIONS, TRANSFORMS, orientationDescription, validateReport, validateReview, thumbnailURL, reviewDocument, filterPairs, canShowThumbnails, workbenchScope } from './review-validation.mjs';
 import { verifyReportIdentity } from './report-identity.mjs';
-import { reviewProgress, nextPendingPair, selectionAfterFilter, changeDecision, undoDecision } from './review-workflow.mjs';
+import { reviewProgress, nextPendingPair, selectionAfterFilter, changeDecision, undoDecision,changeDecisions,undoDecisions,sharedImageGroups,imageAnchor } from './review-workflow.mjs';
+
+import {reviewTransferDocument,planReviewTransfer,applyReviewTransfer} from './review-transfer.mjs';
 
 const $ = id => document.getElementById(id);
 const MAX_FILE_BYTES = 32 * 1024 * 1024;
-const state = { report: null, servedAuditId: null, reviews: new Map(), selected: null, filtered: [], visibleLimit: 100, loadSequence: 0, storageOK: true, undo: null, reviewOrder: null };
+const state = { report: null, servedAuditId: null, reviews: new Map(), selected: null, filtered: [], visibleLimit: 100, loadSequence: 0, storageOK: true, undo: null, reviewOrder: null, batchKeys:new Set(),transferPlan:null,transferSequence:0 };
 const formatCount = number => number.toLocaleString('zh-CN');
 const storageKey = report => `visionleak:reviews:v1:${encodeURIComponent(report.auditId)}`;
 
@@ -24,9 +26,11 @@ function resetFilters() {
   $('decision-filter').value = 'all';
   $('split-filter').value = 'all';
   $('group-filter').value = '';
+  $('anchor-filter').value = '';
   $('show-low-contrast').checked = false;
   $('distance-filter').value = $('distance-filter').max;
   $('distance-output').value = $('distance-filter').value;
+  state.batchKeys.clear();
   state.visibleLimit = 100;
 }
 function mergeReviews(base, incoming) {
@@ -59,14 +63,19 @@ async function installReport(raw, source, served = false, sequence = state.loadS
   state.filtered = [];
   state.undo = null;
   state.reviewOrder = null;
+  state.batchKeys.clear();state.transferSequence++;state.transferPlan=null;$('apply-transfer').disabled=true;$('transfer-preview').textContent='';
+  const anchors=sharedImageGroups(report);$('anchor-filter').replaceChildren(new Option('全部共享图像',''),...anchors.slice(0,500).map(g=>new Option(`${g.path} · ${g.split} · ${g.keys.size}对`,g.key)));
+  $('anchor-note').textContent=`共享图像仅用于导航，不合并证据或传播结论。${anchors.length>500?'仅列出前500组，其余可用路径搜索。':''}`;
   $('workspace').hidden = false;
   $('empty-state').hidden = true;
   $('audit-id').textContent = report.auditId;
   $('audit-id').title = report.auditId;
   $('audit-status').className = `status-pill ${report.complete ? 'complete' : 'incomplete'}`;
-  $('audit-status').textContent = report.complete ? '扫描完成 · 限本次配置' : '扫描不完整';
+  const otherIncomplete=Object.entries(raw.phases??{}).some(([name,phase])=>name!=='orb'&&phase.status==='incomplete')||raw.coverage?.deterministicInputComplete===false;
+  const retrievalDone=raw.phases?.orb?.candidateQueueComplete===true && raw.phases?.orb?.exhaustivePairsComplete===false;
+  $('audit-status').textContent = retrievalDone ? (otherIncomplete?'候选检索完成 · 其他检查未完成':'候选检索完成 · 未穷举') : report.complete ? '扫描完成 · 限本次配置' : '扫描不完整';
   $('incomplete-banner').hidden = report.complete;
-  $('incomplete-reason').textContent = `报告状态：${typeof raw.status === 'string' ? raw.status : '未声明'}。预算或输入限制可能使部分图像或候选未被处理；请展开「运行信息与覆盖范围」检查统计与错误。已完成的人工标记仍可独立导出。`;
+  $('incomplete-reason').textContent = retrievalDone ? 'ORB 候选队列已处理完成，但粗筛未召回的配对没有经过几何验证。不能将零候选视为无泄漏；可使用不带 --include-orb-retrieval 的穷举模式对照。'+(otherIncomplete?'其他阶段或输入仍未完整处理，请检查下方覆盖统计与错误。':'') : `报告状态：${typeof raw.status === 'string' ? raw.status : '未声明'}。预算或输入限制可能使部分图像或候选未被处理；请展开「运行信息与覆盖范围」检查统计与错误。已完成的人工标记仍可独立导出。`;
   $('metric-images').textContent = formatCount(report.images.size);
   for (const [id, evidence] of [['byte', 'byte-identical'], ['pixel', 'pixel-identical'], ['candidate', 'perceptual-candidate'], ['local', 'local-candidate'], ['orb', 'orb-candidate']]) {
     $(`metric-${id}`).textContent = formatCount(report.pairs.filter(pair => pair.evidence === evidence).length);
@@ -81,7 +90,7 @@ async function installReport(raw, source, served = false, sequence = state.loadS
   const phaseNames = { deterministic: '确定性检查', perceptual: '感知检索', local: '裁切检索', orb: 'ORB 几何检索' };
   const phaseStatus = { complete: '完成', incomplete: '未完成', skipped: '未执行', disabled: '关闭' };
   $('phase-summary').hidden = !raw.phases;
-  $('phase-summary').textContent = Object.entries(raw.phases ?? {}).map(([key, phase]) => `${phaseNames[key] ?? key}：${phaseStatus[phase.status] ?? phase.status} ${phase.processedImages}/${phase.inputImages}`).join(' · ') + (raw.phases ? (raw.coverage?.deterministicInputComplete ? '。确定性检查覆盖本次全部输入。' : '。各阶段只覆盖已接收的图像；请检查拒收和输入范围。') : '');
+  $('phase-summary').textContent = (raw.phases?.orb?.searchMode==='retrieval' ? `ORB 检索：队列${raw.phases.orb.candidateQueueComplete?'完成':'未完成'}，几何检查 ${raw.phases.orb.processedPairs??0}/${raw.phases.orb.retrieval?.selectedPairs??0} 对，全部应检 ${raw.phases.orb.eligibleInputPairs??0} 对；以下前缀仍按穷举覆盖统计。` : '') + Object.entries(raw.phases ?? {}).map(([key, phase]) => `${phaseNames[key] ?? key}：${phaseStatus[phase.status] ?? phase.status} ${phase.processedImages}/${phase.inputImages}`).join(' · ') + (raw.phases ? (raw.coverage?.deterministicInputComplete ? '。确定性检查覆盖本次全部输入。' : '。各阶段只覆盖已接收的图像；请检查拒收和输入范围。') : '');
   $('coverage-summary').textContent = raw.coverage?.summary ?? '历史报告未记录逐集合覆盖统计；结论仅覆盖此报告的输入与已完成比较。';
   $('split-filter').replaceChildren(new Option('全部集合', 'all'));
   for (const split of [...new Set([...report.images.values()].map(image => image.split))].sort()) $('split-filter').add(new Option(split, split));
@@ -113,6 +122,7 @@ function renderWorkflow() {
   $('queue-progress').textContent = `当前筛选 ${formatCount(counts.total)} 对 · 未复核 ${formatCount(counts.pending)} · 暂不确定 ${formatCount(counts.unsure)}`;
   $('next-pending').disabled = !nextPendingPair(state.filtered, state.reviews, state.selected);
   $('undo-review').disabled = !state.undo;
+  $('batch-count').textContent=`已选择 ${state.batchKeys.size} 对`;for(const button of document.querySelectorAll('[data-batch-decision]'))button.disabled=!state.batchKeys.size;
 }
 function element(tag, className, content) {
   const node = document.createElement(tag);
@@ -140,7 +150,7 @@ function renderQueue() {
     bottom.append(element('span', '', `${left.split} ↔ ${right.split}`), element('span', `queue-review${review ? '' : ' pending'}`, review ? DECISIONS[review.decision] : '○ 未复核'));
     button.append(top, element('code', 'queue-path', left.path), element('code', 'queue-path', right.path), bottom);
     button.addEventListener('click', () => selectPair(pair.key));
-    fragment.append(button);
+    const row=element('div','queue-selection-row'),checkbox=element('input');checkbox.type='checkbox';checkbox.checked=state.batchKeys.has(pair.key);checkbox.setAttribute('aria-label',`批量选择 ${left.path} 与 ${right.path}`);checkbox.addEventListener('change',()=>{if(checkbox.checked&&state.batchKeys.size>=200){checkbox.checked=false;notice('每批最多选择200对。',true);return;}if(checkbox.checked)state.batchKeys.add(pair.key);else state.batchKeys.delete(pair.key);renderWorkflow();});row.append(checkbox,button);fragment.append(row);
   }
   if (state.filtered.length > state.visibleLimit) {
     const more = element('button', 'button quiet', `再显示 ${Math.min(100, state.filtered.length - state.visibleLimit)} 对`);
@@ -243,7 +253,7 @@ function renderSavedState(review) {
 function render() {
   if (!state.report) return;
   const previous = state.filtered;
-  state.filtered = filterPairs(state.report, state.reviews, filters());
+  state.filtered = filterPairs(state.report, state.reviews, filters()).filter(pair=>!$('anchor-filter').value||[pair.left,pair.right].some(id=>imageAnchor(state.report.images.get(id))===$('anchor-filter').value));
   const prioritize = $('queue-order').value === 'support';
   $('ranking-note').hidden = !prioritize;
   if (prioritize) {
@@ -284,14 +294,14 @@ function setDecision(decision) {
 function undoLastDecision() {
   if (!state.report) return;
   const undo = state.undo;
-  const restored = undoDecision(state.report, state.reviews, undo);
+  const restored = undoDecisions(state.report, state.reviews, undo);
   state.undo = null;
   if (!restored) { renderWorkflow(); return; }
   state.reviews = restored;
-  state.selected = undo.key;
+  state.selected = undo.key??state.selected;
   saveReviews();
   render();
-  if (state.storageOK) notice(`已撤销上次标记，恢复为「${undo.previous ? DECISIONS[undo.previous.decision] : '未复核'}」。`);
+  if (state.storageOK) notice(undo.changes?`已撤销 ${undo.changes.length} 条批量标记。`:`已撤销上次标记，恢复为「${undo.previous ? DECISIONS[undo.previous.decision] : '未复核'}」。`);
 }
 function ensureSelectionVisible() {
   const index = state.filtered.findIndex(pair => pair.key === state.selected);
@@ -374,11 +384,30 @@ $('review-file').addEventListener('change', async event => {
   } catch (error) { notice(error.message, true); }
   finally { event.target.value = ''; }
 });
+$('select-visible').addEventListener('click',()=>{state.batchKeys=new Set(state.filtered.slice(0,Math.min(state.visibleLimit,200)).map(p=>p.key));renderQueue();renderWorkflow();});
+$('clear-batch').addEventListener('click',()=>{state.batchKeys.clear();renderQueue();renderWorkflow();});
+for(const button of document.querySelectorAll('[data-batch-decision]'))button.addEventListener('click',()=>{
+ if(!state.report)return;const allowed=new Set(state.filtered.map(p=>p.key));const keys=[...state.batchKeys].filter(k=>allowed.has(k));
+ const change=changeDecisions(state.report,state.reviews,keys,button.dataset.batchDecision);if(!change)return;
+ state.reviews=change.reviews;state.undo=change.undo;state.batchKeys.clear();saveReviews();render();notice(`已批量标记 ${change.changed} 对，可撤销。`);
+});
+$('export-transfer').addEventListener('click',()=>{if(state.report)downloadJSON(reviewTransferDocument(state.report,state.reviews),'review-transfer.json');});
+$('transfer-file').addEventListener('change',async event=>{
+ const file=event.target.files[0],report=state.report;if(!file||!report)return;
+ const sequence=++state.transferSequence;state.transferPlan=null;$('apply-transfer').disabled=true;$('transfer-preview').textContent='正在校验迁移包…';
+ try{const plan=await planReviewTransfer(await parseFile(file),report);if(sequence!==state.transferSequence)return;if(report!==state.report)throw new Error('目标报告已切换。');state.transferPlan=plan;$('transfer-preview').textContent=`可匹配 ${plan.proposals.length} 条；内容或证据不符 ${plan.unmatched} 条；多义匹配 ${plan.ambiguous} 条。只填补未复核配对，保留现有结论。`;$('apply-transfer').disabled=!plan.proposals.length;}
+ catch(error){if(sequence===state.transferSequence){state.transferPlan=null;$('apply-transfer').disabled=true;$('transfer-preview').textContent='';notice(error.message,true);}}finally{if(sequence===state.transferSequence)event.target.value='';}
+});
+$('apply-transfer').addEventListener('click',()=>{
+ if(!state.report||!state.transferPlan)return;
+ const result=applyReviewTransfer(state.report,state.reviews,state.transferPlan);state.reviews=result.reviews;state.undo=result.undo;if(!result.remaining)state.transferPlan=null;$('apply-transfer').disabled=!result.remaining;saveReviews();render();$('transfer-preview').textContent=`已迁移 ${result.applied} 条，保留已有结论 ${result.existing} 条，待下一批 ${result.remaining} 条。${result.applied?'可撤销本批迁移。':'未更改已有记录。'}`;
+});
 $('export-review').addEventListener('click', () => { if (state.report) downloadJSON(reviewDocument(state.report, state.reviews), 'review.json'); });
 $('export-report').addEventListener('click', () => { if (state.report) downloadJSON({ ...state.report.raw, review: reviewDocument(state.report, state.reviews) }, 'report-reviewed.json'); });
 $('load-default').addEventListener('click', loadDefault);
-for (const id of ['search', 'evidence-filter', 'decision-filter', 'split-filter', 'distance-filter','show-low-contrast','group-filter']) $(id).addEventListener('input', () => {
+for (const id of ['search', 'evidence-filter', 'decision-filter', 'split-filter', 'distance-filter','show-low-contrast','group-filter','anchor-filter']) $(id).addEventListener('input', () => {
   $('distance-output').value = $('distance-filter').value;
+  state.batchKeys.clear();
   state.visibleLimit = 100;
   render();
 });

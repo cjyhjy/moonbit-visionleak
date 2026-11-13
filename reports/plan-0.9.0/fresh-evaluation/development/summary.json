@@ -1,0 +1,717 @@
+{
+  "schemaVersion": "vl-new-source-evaluation-v1",
+  "protocol": {
+    "sourcesSha256": "800ee5c98e7f5011216aa5ee54bb193327f663b63a74894239379a70bf07f1dd",
+    "generatorSha256": "6a0af0a866a8e93b43a007063683df39638e59652ab276930c70c6bd65d6ccb8",
+    "sourcePartition": "development",
+    "transforms": [
+      "byte-copy",
+      "jpeg45",
+      "random-crop-a",
+      "random-crop-b",
+      "watermark",
+      "screenshot-border"
+    ],
+    "cropSeed": "vl090:{sourceId}:{variant}",
+    "cropPolicy": "independent width/height 58..86%; uniform non-window-aligned integer offsets",
+    "queryBatchSize": 24,
+    "gallery": "all 24 originals in every invocation",
+    "groundTruth": "Known same-source-file anchor relation; cross-file candidates are unadjudicated. File-lineage metrics are surrogate labels, not natural contamination accuracy.",
+    "scope": "New file IDs and byte hashes, controlled transformations. Not naturally occurring contamination or a human review study."
+  },
+  "sourceCount": 24,
+  "imageCount": 168,
+  "batches": [
+    {
+      "batch": "0",
+      "queries": 24,
+      "allOriginalQueryRelations": 576,
+      "report": "orb-0/report.json",
+      "cache": "cache",
+      "scores": {
+        "core": {
+          "tp": 11,
+          "fn": 13,
+          "crossFileCandidates": 0,
+          "missing": [
+            {
+              "sourceId": "59356852",
+              "variant": "random-crop-a",
+              "path": "test/59356852-random-crop-a.png"
+            },
+            {
+              "sourceId": "59356852",
+              "variant": "random-crop-b",
+              "path": "test/59356852-random-crop-b.png"
+            },
+            {
+              "sourceId": "59356852",
+              "variant": "screenshot-border",
+              "path": "test/59356852-screenshot-border.png"
+            },
+            {
+              "sourceId": "59356847",
+              "variant": "random-crop-a",
+              "path": "test/59356847-random-crop-a.png"
+            },
+            {
+              "sourceId": "59356847",
+              "variant": "random-crop-b",
+              "path": "test/59356847-random-crop-b.png"
+            },
+            {
+              "sourceId": "59356847",
+              "variant": "screenshot-border",
+              "path": "test/59356847-screenshot-border.png"
+            },
+            {
+              "sourceId": "45607455",
+              "variant": "random-crop-a",
+              "path": "test/45607455-random-crop-a.png"
+            },
+            {
+              "sourceId": "45607455",
+              "variant": "random-crop-b",
+              "path": "test/45607455-random-crop-b.png"
+            },
+            {
+              "sourceId": "45607455",
+              "variant": "screenshot-border",
+              "path": "test/45607455-screenshot-border.png"
+            },
+            {
+              "sourceId": "137334104",
+              "variant": "jpeg45",
+              "path": "test/137334104-jpeg45.jpg"
+            },
+            {
+              "sourceId": "137334104",
+              "variant": "random-crop-a",
+              "path": "test/137334104-random-crop-a.png"
+            },
+            {
+              "sourceId": "137334104",
+              "variant": "random-crop-b",
+              "path": "test/137334104-random-crop-b.png"
+            },
+            {
+              "sourceId": "137334104",
+              "variant": "screenshot-border",
+              "path": "test/137334104-screenshot-border.png"
+            }
+          ],
+          "crossFile": []
+        },
+        "orbUnion": {
+          "tp": 24,
+          "fn": 0,
+          "crossFileCandidates": 0,
+          "missing": [],
+          "crossFile": []
+        }
+      },
+      "orbPhase": {
+        "enabled": true,
+        "status": "complete",
+        "complete": true,
+        "inputImages": 48,
+        "processedImages": 48,
+        "featureImages": 48,
+        "featurePixels": 4779810,
+        "pairChecks": 1117,
+        "descriptorComparisons": 1199992612,
+        "emittedPairs": 13,
+        "reason": "",
+        "eligibleInputPairs": 565,
+        "eligibleFeaturePairs": 565,
+        "processedPairs": 565
+      },
+      "orbTiming": {
+        "elapsedMs": 8053,
+        "workerPeakRssBytes": 80625664,
+        "memorySamplingMs": 100,
+        "featureCacheHits": 4,
+        "matchCacheHits": 0,
+        "executedPairChecks": 1117,
+        "executedDescriptorComparisons": 1199992612,
+        "residentFeaturePeak": 2,
+        "checkpointImages": 0,
+        "checkpointDirections": 0
+      }
+    },
+    {
+      "batch": "1",
+      "queries": 24,
+      "allOriginalQueryRelations": 576,
+      "report": "orb-1/report.json",
+      "cache": "cache",
+      "scores": {
+        "core": {
+          "tp": 12,
+          "fn": 12,
+          "crossFileCandidates": 0,
+          "missing": [
+            {
+              "sourceId": "117737593",
+              "variant": "random-crop-a",
+              "path": "test/117737593-random-crop-a.png"
+            },
+            {
+              "sourceId": "117737593",
+              "variant": "random-crop-b",
+              "path": "test/117737593-random-crop-b.png"
+            },
+            {
+              "sourceId": "117737593",
+              "variant": "screenshot-border",
+              "path": "test/117737593-screenshot-border.png"
+            },
+            {
+              "sourceId": "32178383",
+              "variant": "random-crop-a",
+              "path": "test/32178383-random-crop-a.png"
+            },
+            {
+              "sourceId": "32178383",
+              "variant": "random-crop-b",
+              "path": "test/32178383-random-crop-b.png"
+            },
+            {
+              "sourceId": "32178383",
+              "variant": "screenshot-border",
+              "path": "test/32178383-screenshot-border.png"
+            },
+            {
+              "sourceId": "105786230",
+              "variant": "random-crop-a",
+              "path": "test/105786230-random-crop-a.png"
+            },
+            {
+              "sourceId": "105786230",
+              "variant": "random-crop-b",
+              "path": "test/105786230-random-crop-b.png"
+            },
+            {
+              "sourceId": "105786230",
+              "variant": "screenshot-border",
+              "path": "test/105786230-screenshot-border.png"
+            },
+            {
+              "sourceId": "61901676",
+              "variant": "random-crop-a",
+              "path": "test/61901676-random-crop-a.png"
+            },
+            {
+              "sourceId": "61901676",
+              "variant": "random-crop-b",
+              "path": "test/61901676-random-crop-b.png"
+            },
+            {
+              "sourceId": "61901676",
+              "variant": "screenshot-border",
+              "path": "test/61901676-screenshot-border.png"
+            }
+          ],
+          "crossFile": []
+        },
+        "orbUnion": {
+          "tp": 24,
+          "fn": 0,
+          "crossFileCandidates": 0,
+          "missing": [],
+          "crossFile": []
+        }
+      },
+      "orbPhase": {
+        "enabled": true,
+        "status": "complete",
+        "complete": true,
+        "inputImages": 48,
+        "processedImages": 48,
+        "featureImages": 48,
+        "featurePixels": 4655762,
+        "pairChecks": 1116,
+        "descriptorComparisons": 884940520,
+        "emittedPairs": 12,
+        "reason": "",
+        "eligibleInputPairs": 564,
+        "eligibleFeaturePairs": 564,
+        "processedPairs": 564
+      },
+      "orbTiming": {
+        "elapsedMs": 6282,
+        "workerPeakRssBytes": 78495744,
+        "memorySamplingMs": 100,
+        "featureCacheHits": 28,
+        "matchCacheHits": 0,
+        "executedPairChecks": 1116,
+        "executedDescriptorComparisons": 884940520,
+        "residentFeaturePeak": 2,
+        "checkpointImages": 0,
+        "checkpointDirections": 0
+      }
+    },
+    {
+      "batch": "2",
+      "queries": 24,
+      "allOriginalQueryRelations": 576,
+      "report": "orb-2/report.json",
+      "cache": "cache",
+      "scores": {
+        "core": {
+          "tp": 12,
+          "fn": 12,
+          "crossFileCandidates": 0,
+          "missing": [
+            {
+              "sourceId": "61753368",
+              "variant": "random-crop-a",
+              "path": "test/61753368-random-crop-a.png"
+            },
+            {
+              "sourceId": "61753368",
+              "variant": "random-crop-b",
+              "path": "test/61753368-random-crop-b.png"
+            },
+            {
+              "sourceId": "61753368",
+              "variant": "screenshot-border",
+              "path": "test/61753368-screenshot-border.png"
+            },
+            {
+              "sourceId": "61899412",
+              "variant": "random-crop-a",
+              "path": "test/61899412-random-crop-a.png"
+            },
+            {
+              "sourceId": "61899412",
+              "variant": "random-crop-b",
+              "path": "test/61899412-random-crop-b.png"
+            },
+            {
+              "sourceId": "61899412",
+              "variant": "screenshot-border",
+              "path": "test/61899412-screenshot-border.png"
+            },
+            {
+              "sourceId": "101204995",
+              "variant": "random-crop-a",
+              "path": "test/101204995-random-crop-a.png"
+            },
+            {
+              "sourceId": "101204995",
+              "variant": "random-crop-b",
+              "path": "test/101204995-random-crop-b.png"
+            },
+            {
+              "sourceId": "101204995",
+              "variant": "screenshot-border",
+              "path": "test/101204995-screenshot-border.png"
+            },
+            {
+              "sourceId": "101205039",
+              "variant": "random-crop-a",
+              "path": "test/101205039-random-crop-a.png"
+            },
+            {
+              "sourceId": "101205039",
+              "variant": "random-crop-b",
+              "path": "test/101205039-random-crop-b.png"
+            },
+            {
+              "sourceId": "101205039",
+              "variant": "screenshot-border",
+              "path": "test/101205039-screenshot-border.png"
+            }
+          ],
+          "crossFile": []
+        },
+        "orbUnion": {
+          "tp": 24,
+          "fn": 0,
+          "crossFileCandidates": 0,
+          "missing": [],
+          "crossFile": []
+        }
+      },
+      "orbPhase": {
+        "enabled": true,
+        "status": "complete",
+        "complete": true,
+        "inputImages": 48,
+        "processedImages": 48,
+        "featureImages": 48,
+        "featurePixels": 4561660,
+        "pairChecks": 1116,
+        "descriptorComparisons": 1256970292,
+        "emittedPairs": 12,
+        "reason": "",
+        "eligibleInputPairs": 564,
+        "eligibleFeaturePairs": 564,
+        "processedPairs": 564
+      },
+      "orbTiming": {
+        "elapsedMs": 7658,
+        "workerPeakRssBytes": 78987264,
+        "memorySamplingMs": 100,
+        "featureCacheHits": 28,
+        "matchCacheHits": 0,
+        "executedPairChecks": 1116,
+        "executedDescriptorComparisons": 1256970292,
+        "residentFeaturePeak": 2,
+        "checkpointImages": 0,
+        "checkpointDirections": 0
+      }
+    },
+    {
+      "batch": "3",
+      "queries": 24,
+      "allOriginalQueryRelations": 576,
+      "report": "orb-3/report.json",
+      "cache": "cache",
+      "scores": {
+        "core": {
+          "tp": 12,
+          "fn": 12,
+          "crossFileCandidates": 0,
+          "missing": [
+            {
+              "sourceId": "22865373",
+              "variant": "random-crop-a",
+              "path": "test/22865373-random-crop-a.png"
+            },
+            {
+              "sourceId": "22865373",
+              "variant": "random-crop-b",
+              "path": "test/22865373-random-crop-b.png"
+            },
+            {
+              "sourceId": "22865373",
+              "variant": "screenshot-border",
+              "path": "test/22865373-screenshot-border.png"
+            },
+            {
+              "sourceId": "22865377",
+              "variant": "random-crop-a",
+              "path": "test/22865377-random-crop-a.png"
+            },
+            {
+              "sourceId": "22865377",
+              "variant": "random-crop-b",
+              "path": "test/22865377-random-crop-b.png"
+            },
+            {
+              "sourceId": "22865377",
+              "variant": "screenshot-border",
+              "path": "test/22865377-screenshot-border.png"
+            },
+            {
+              "sourceId": "145562084",
+              "variant": "random-crop-a",
+              "path": "test/145562084-random-crop-a.png"
+            },
+            {
+              "sourceId": "145562084",
+              "variant": "random-crop-b",
+              "path": "test/145562084-random-crop-b.png"
+            },
+            {
+              "sourceId": "145562084",
+              "variant": "screenshot-border",
+              "path": "test/145562084-screenshot-border.png"
+            },
+            {
+              "sourceId": "175885756",
+              "variant": "random-crop-a",
+              "path": "test/175885756-random-crop-a.png"
+            },
+            {
+              "sourceId": "175885756",
+              "variant": "random-crop-b",
+              "path": "test/175885756-random-crop-b.png"
+            },
+            {
+              "sourceId": "175885756",
+              "variant": "screenshot-border",
+              "path": "test/175885756-screenshot-border.png"
+            }
+          ],
+          "crossFile": []
+        },
+        "orbUnion": {
+          "tp": 24,
+          "fn": 0,
+          "crossFileCandidates": 0,
+          "missing": [],
+          "crossFile": []
+        }
+      },
+      "orbPhase": {
+        "enabled": true,
+        "status": "complete",
+        "complete": true,
+        "inputImages": 48,
+        "processedImages": 48,
+        "featureImages": 48,
+        "featurePixels": 4894870,
+        "pairChecks": 1116,
+        "descriptorComparisons": 1280051920,
+        "emittedPairs": 12,
+        "reason": "",
+        "eligibleInputPairs": 564,
+        "eligibleFeaturePairs": 564,
+        "processedPairs": 564
+      },
+      "orbTiming": {
+        "elapsedMs": 7870,
+        "workerPeakRssBytes": 78905344,
+        "memorySamplingMs": 100,
+        "featureCacheHits": 28,
+        "matchCacheHits": 0,
+        "executedPairChecks": 1116,
+        "executedDescriptorComparisons": 1280051920,
+        "residentFeaturePeak": 2,
+        "checkpointImages": 0,
+        "checkpointDirections": 0
+      }
+    },
+    {
+      "batch": "4",
+      "queries": 24,
+      "allOriginalQueryRelations": 576,
+      "report": "orb-4/report.json",
+      "cache": "cache",
+      "scores": {
+        "core": {
+          "tp": 12,
+          "fn": 12,
+          "crossFileCandidates": 0,
+          "missing": [
+            {
+              "sourceId": "152774970",
+              "variant": "random-crop-a",
+              "path": "test/152774970-random-crop-a.png"
+            },
+            {
+              "sourceId": "152774970",
+              "variant": "random-crop-b",
+              "path": "test/152774970-random-crop-b.png"
+            },
+            {
+              "sourceId": "152774970",
+              "variant": "screenshot-border",
+              "path": "test/152774970-screenshot-border.png"
+            },
+            {
+              "sourceId": "132130882",
+              "variant": "random-crop-a",
+              "path": "test/132130882-random-crop-a.png"
+            },
+            {
+              "sourceId": "132130882",
+              "variant": "random-crop-b",
+              "path": "test/132130882-random-crop-b.png"
+            },
+            {
+              "sourceId": "132130882",
+              "variant": "screenshot-border",
+              "path": "test/132130882-screenshot-border.png"
+            },
+            {
+              "sourceId": "197321069",
+              "variant": "random-crop-a",
+              "path": "test/197321069-random-crop-a.png"
+            },
+            {
+              "sourceId": "197321069",
+              "variant": "random-crop-b",
+              "path": "test/197321069-random-crop-b.png"
+            },
+            {
+              "sourceId": "197321069",
+              "variant": "screenshot-border",
+              "path": "test/197321069-screenshot-border.png"
+            },
+            {
+              "sourceId": "197291635",
+              "variant": "random-crop-a",
+              "path": "test/197291635-random-crop-a.png"
+            },
+            {
+              "sourceId": "197291635",
+              "variant": "random-crop-b",
+              "path": "test/197291635-random-crop-b.png"
+            },
+            {
+              "sourceId": "197291635",
+              "variant": "screenshot-border",
+              "path": "test/197291635-screenshot-border.png"
+            }
+          ],
+          "crossFile": []
+        },
+        "orbUnion": {
+          "tp": 24,
+          "fn": 0,
+          "crossFileCandidates": 0,
+          "missing": [],
+          "crossFile": []
+        }
+      },
+      "orbPhase": {
+        "enabled": true,
+        "status": "complete",
+        "complete": true,
+        "inputImages": 48,
+        "processedImages": 48,
+        "featureImages": 48,
+        "featurePixels": 4613897,
+        "pairChecks": 1116,
+        "descriptorComparisons": 1193922874,
+        "emittedPairs": 12,
+        "reason": "",
+        "eligibleInputPairs": 564,
+        "eligibleFeaturePairs": 564,
+        "processedPairs": 564
+      },
+      "orbTiming": {
+        "elapsedMs": 7723,
+        "workerPeakRssBytes": 78479360,
+        "memorySamplingMs": 100,
+        "featureCacheHits": 28,
+        "matchCacheHits": 0,
+        "executedPairChecks": 1116,
+        "executedDescriptorComparisons": 1193922874,
+        "residentFeaturePeak": 2,
+        "checkpointImages": 0,
+        "checkpointDirections": 0
+      }
+    },
+    {
+      "batch": "5",
+      "queries": 24,
+      "allOriginalQueryRelations": 576,
+      "report": "orb-5/report.json",
+      "cache": "cache",
+      "scores": {
+        "core": {
+          "tp": 12,
+          "fn": 12,
+          "crossFileCandidates": 0,
+          "missing": [
+            {
+              "sourceId": "179278744",
+              "variant": "random-crop-a",
+              "path": "test/179278744-random-crop-a.png"
+            },
+            {
+              "sourceId": "179278744",
+              "variant": "random-crop-b",
+              "path": "test/179278744-random-crop-b.png"
+            },
+            {
+              "sourceId": "179278744",
+              "variant": "screenshot-border",
+              "path": "test/179278744-screenshot-border.png"
+            },
+            {
+              "sourceId": "79403802",
+              "variant": "random-crop-a",
+              "path": "test/79403802-random-crop-a.png"
+            },
+            {
+              "sourceId": "79403802",
+              "variant": "random-crop-b",
+              "path": "test/79403802-random-crop-b.png"
+            },
+            {
+              "sourceId": "79403802",
+              "variant": "screenshot-border",
+              "path": "test/79403802-screenshot-border.png"
+            },
+            {
+              "sourceId": "182505159",
+              "variant": "random-crop-a",
+              "path": "test/182505159-random-crop-a.png"
+            },
+            {
+              "sourceId": "182505159",
+              "variant": "random-crop-b",
+              "path": "test/182505159-random-crop-b.png"
+            },
+            {
+              "sourceId": "182505159",
+              "variant": "screenshot-border",
+              "path": "test/182505159-screenshot-border.png"
+            },
+            {
+              "sourceId": "198047784",
+              "variant": "random-crop-a",
+              "path": "test/198047784-random-crop-a.png"
+            },
+            {
+              "sourceId": "198047784",
+              "variant": "random-crop-b",
+              "path": "test/198047784-random-crop-b.png"
+            },
+            {
+              "sourceId": "198047784",
+              "variant": "screenshot-border",
+              "path": "test/198047784-screenshot-border.png"
+            }
+          ],
+          "crossFile": []
+        },
+        "orbUnion": {
+          "tp": 24,
+          "fn": 0,
+          "crossFileCandidates": 0,
+          "missing": [],
+          "crossFile": []
+        }
+      },
+      "orbPhase": {
+        "enabled": true,
+        "status": "complete",
+        "complete": true,
+        "inputImages": 48,
+        "processedImages": 48,
+        "featureImages": 48,
+        "featurePixels": 4470926,
+        "pairChecks": 1116,
+        "descriptorComparisons": 1256664076,
+        "emittedPairs": 12,
+        "reason": "",
+        "eligibleInputPairs": 564,
+        "eligibleFeaturePairs": 564,
+        "processedPairs": 564
+      },
+      "orbTiming": {
+        "elapsedMs": 8208,
+        "workerPeakRssBytes": 78299136,
+        "memorySamplingMs": 100,
+        "featureCacheHits": 28,
+        "matchCacheHits": 0,
+        "executedPairChecks": 1116,
+        "executedDescriptorComparisons": 1256664076,
+        "residentFeaturePeak": 2,
+        "checkpointImages": 0,
+        "checkpointDirections": 0
+      }
+    }
+  ],
+  "scores": {
+    "core": {
+      "tp": 71,
+      "fn": 73,
+      "crossFileCandidates": 0
+    },
+    "orbUnion": {
+      "tp": 144,
+      "fn": 0,
+      "crossFileCandidates": 0
+    }
+  },
+  "scope": "New file IDs and byte hashes, controlled transformations. Not naturally occurring contamination or a human review study.",
+  "negativeLabelCaveat": "Known same-source-file anchor relation; cross-file candidates are unadjudicated. File-lineage metrics are surrogate labels, not natural contamination accuracy."
+}

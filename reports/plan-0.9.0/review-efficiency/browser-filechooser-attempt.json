@@ -1,0 +1,34 @@
+{
+  "status": "unverified-tool-timeout",
+  "url": "http://127.0.0.1:4395/",
+  "initialReviewed": "0/143",
+  "auditId": "25dec6086c3c7f247e67eb18e3d8f9381034a69fd3618a2174d92dc14d90fbba",
+  "documentedMethod": "playwright.waitForEvent(filechooser) then chooser.setFiles(absolutePath)",
+  "attempts": [
+    {
+      "trigger": "AX t.click(transfer-file index)",
+      "timeoutMs": 10000,
+      "clickReturned": "not proved",
+      "chooserObtained": false,
+      "setFilesCompleted": false
+    },
+    {
+      "trigger": "Playwright locator(#transfer-file).click",
+      "timeoutMs": 10000,
+      "clickReturned": true,
+      "chooserObtained": false,
+      "setFilesCompleted": false
+    }
+  ],
+  "previewApplyUndoVerified": false,
+  "error": "Timed out after10000ms waiting for file chooser",
+  "permissionChanges": false,
+  "causeLimit": "Not evidence of product failure or missing file-URL access permission; chooser was never obtained and setFiles never ran. Do not promote transfer Node tests to full browser import evidence.",
+  "qaServerStopped": true,
+  "scope": "Same prepared public QA fixture; no real user report changes. Small GUI checks overlapped early original-photo capacity steps; no timing or human-study inference from GUI work.",
+  "cleanup": {
+    "newTaskTabAutomaticallyClosed": true,
+    "noOtherTabOrNativeWindowOperated": true,
+    "qaServerStopped": true
+  }
+}

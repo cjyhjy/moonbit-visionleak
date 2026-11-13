@@ -1,0 +1,779 @@
+
+> visionleak@0.8.0 verify:ci
+> node tools/ci.mjs
+
+moon 0.1.20261012 (748b63c 2026-10-12) ~/Documents/ChatGPT/黑客松新项目/projects/visionleak/.toolchain/bin/moon
+moonc v0.10.15+943464bfa (2026-10-12) ~/Documents/ChatGPT/黑客松新项目/projects/visionleak/.toolchain/bin/moonc
+moonrun 0.1.20261012 (748b63c 2026-10-12) ~/Documents/ChatGPT/黑客松新项目/projects/visionleak/.toolchain/bin/moonrun
+
+Feature flags enabled: rr_moon_mod,rr_moon_pkg
+Finished. moon: no work to do
+Finished. moon: no work to do
+Finished. moon: no work to do
+Total tests: 84, passed: 84, failed: 0.
+Finished. moon: no work to do
+Finished. moon: no work to do
+Total tests: 84, passed: 84, failed: 0.
+Finished. moon: no work to do
+{"artifacts_path":["./_build/native/release/test/core/core.whitebox_test.exe"]}
+Total tests: 84, passed: 84, failed: 0.
+Total tests: 84, passed: 84, failed: 0.
+Built dist/visionleak.js from MoonBit.
+Finished. moon: no work to do
+
+> visionleak@0.8.0 test
+> node --test tests/*.test.mjs
+
+✔ installed capability contract agrees with real parser bounds, artifact and package (200.143291ms)
+✔ real CLI separates byte equality from decoded pixel equality, preserves input, and binds stable audit IDs (359.888583ms)
+✔ decode plus real core follows EXIF orientation and canonical white alpha semantics (13.793958ms)
+✔ a bad image and a symlink leave reviewable partial evidence and explicit errors (96.024667ms)
+✔ image, pixel, file, total-pixel, comparison, and output budgets are observable (480.268125ms)
+✔ fatal arguments and empty roots return structured errors without creating a report (364.848208ms)
+✔ overwrite is explicit and refuses unrelated files even with --force (306.984167ms)
+✔ exported API merges partial options, validates them, and audit identity includes scan scope and errors (45.374708ms)
+✖ loopback server serves only fixed assets and one report, and denies traversal, symlinks, writes, and foreign hosts (89.469792ms)
+✔ symlinked output ancestry is rejected before creating directories in the dataset (5.25075ms)
+✔ server rejects altered stable report fields even when the old auditId is retained (15.233708ms)
+✔ opt-in mirror CLI emits review candidates from actual reflected files and binds mode to identity (107.313667ms)
+✔ opt-in rotations audit physical rotated and rotated-reflected files without making exact groups (111.303958ms)
+✔ compiled JSON and bytes exports preserve the host protocol (3.926083ms)
+✔ incremental SHA-256 opaque JS state accepts Buffer chunks and matches Node crypto (6.071458ms)
+✔ 20 local integral-image fingerprints match independent direct pixel box sums (12.176458ms)
+✔ actual CLI offset/aspect crops remain candidates, enter gate, validate and never form exact groups (397.061792ms)
+✔ local-only evidence is skipped by deterministic verify and cannot trigger the pixel gate (3.566375ms)
+✔ thumbnail sources are local and cannot traverse or execute URLs (0.633667ms)
+✔ validation is atomic and review export roundtrips without modifying machine evidence (4.22725ms)
+✔ filters compose evidence, human decision, path, split, and maximum distance (2.056375ms)
+✔ an imported report cannot reuse another audit server thumbnails (0.200166ms)
+✔ progress distinguishes unreviewed and unsure pairs inside the current scope (1.428333ms)
+✔ next pending navigation wraps inside the filtered queue and skips reviewed/current pairs (1.71925ms)
+✔ marking a filtered pair continues after its old position instead of returning to the beginning (1.234458ms)
+✔ one-step undo removes a new mark and restores an earlier decision including its note (0.397625ms)
+✔ undo cannot erase later notes, imported changes, another audit, or unrelated pair reviews (0.861833ms)
+✔ doctor default checks installed runtime without optional Python (76.259125ms)
+✔ doctor diagnoses absent Sharp and Core from dependency-free bootstrap (55.80425ms)
+✔ doctor gives executable environment setup for missing Python (5.241042ms)
+✔ public audit API remains importable from Node stdin entry point (90.852542ms)
+✔ 12MP JPEG byte copy and lossless reencoding keep full-resolution pixel identity (2768.5285ms)
+✔ sampling budget changes perception size while source decode and total budgets remain hard bounds (24.937583ms)
+✔ released 0.7.0: identical ordered full/partial outputs, accounting and independent candidates (2616.117542ms)
+✔ mirror host adapter routes to the compiled optional export (8.516ms)
+✔ MIH active path matches independent exhaustive pairs for every radius 0..7, including edits spread across all segments (111.869584ms)
+✔ MIH local index retains cross-scale witnesses and exact evidence precedence (54.396667ms)
+✔ combined scan preserves legacy local API and independent canonical digest across block boundaries (73.750209ms)
+✔ ORB cache binds configuration and rejects damaged entries (55.374125ms)
+✔ ORB cache enforces disk quota without discarding completed work (37.887125ms)
+✔ OS cache lock releases after a writer dies and serializes competing processes (1290.408917ms)
+✔ independent OS lock brokers cannot overcommit a shared cache shard (21.007791ms)
+✔ packed index selections match frozen Map-posting research semantics, ties and exclusions (12.500875ms)
+✔ packed index rejects incomplete input and stops before spending beyond posting budget (1.983583ms)
+✔ research LSH postings agree with independent descriptor-pair bucket enumeration (10.628833ms)
+✔ posting-budget recovery advances durable query cursor and reuses a completed queue (294.551ms)
+✔ ORB grayscale uses product white-alpha composition and integer BT.601 (0.8045ms)
+✔ default audit needs no ORB dependency; missing opt-in worker preserves exact evidence (204.364041ms)
+✖ worker deadline and cancellation kill an unresponsive process; memory guard is fail-closed (1471.397292ms)
+✖ real ORB audit binds witnesses, cache-independent identity, review, export and exact-only verify (247.5465ms)
+✖ real ORB obeys each independent budget and keeps deterministic coverage (146.017791ms)
+✖ ORB cached scans resume completed negative directions and retain final witnesses (1373.341292ms)
+✖ disk-backed ORB crosses the 512-image boundary without losing late cross-batch evidence (950.249875ms)
+✖ production retrieval verifies its selected queue while preserving non-exhaustive coverage, identity and export (131.601792ms)
+✖ retrieval direction budget resumes selected geometry without losing completed queue work (1396.945875ms)
+✔ complete staged MIH results preserve ordered evidence, tied witnesses and groups (1202.874917ms)
+✔ known photo regressions preserve each ordered pair and local witness (563.9385ms)
+✔ orientation host adapter routes booleans and bytes to the optional core export (9.047625ms)
+✔ staged mirror audit preserves the complete 0.3.0 evidence set and exact components (22.805792ms)
+✔ fail-on implements fatal > hit > incomplete > complete and preserves default behavior (806.087208ms)
+✔ fail-on exact ignores pixel-only pairs and pixel ignores candidate-only pairs (241.3855ms)
+✔ verify detects changed and missing evidence and refuses a tampered report before dataset access (318.345208ms)
+✔ verify never follows a report traversal or a symlink to a file outside the dataset (167.761375ms)
+✔ coverage binds canonical splits, rejected codes, ignored files, and budget exhaustion (28.086958ms)
+✔ CSV matches the manually enumerated exact-group keep/remove plan (150.919209ms)
+✔ candidate suggestions require a validated confirmed review and HTML safely includes current review (302.757791ms)
+✔ the committed GitHub Action leak fixture fails the actual local audit command (75.6755ms)
+✔ late exact duplicates survive zero perceptual budget; exact and output budgets remain binding (4.814083ms)
+✔ overall coverage excludes skipped phases while exhaustion names the actual phase and input (6.568166ms)
+✔ CSV quoted paths, aliases, file scope, raw identity binding and revalidation (160.638667ms)
+✔ cache is content/config keyed, result-identical, corruption-tolerant and budget-aware (108.221083ms)
+✔ experimental review ordering preserves every evidence pair, prioritizes support, and bounds work (45.514458ms)
+✔ content identity accepts v0.1.0 reports and reviewed exports without rebinding evidence (6.315583ms)
+✔ v2 canonical identity survives object-key reorder but binds array order and unknown fields (0.935583ms)
+✔ MoonBit identity matches an independent ECMAScript canonicalization oracle for extension fields (12.50025ms)
+✔ batch review is atomic, preserves notes, and undo refuses intervening edits (6.933042ms)
+✔ transfer accepts content-preserving renames across audit IDs and refuses changed content, split or evidence (20.598208ms)
+✔ ORB review binding retains the full witness, not just pair IDs or inlier count (16.292209ms)
+✔ public JS pixel adapter rejects inputs that the compiled ABI could coerce (0.557875ms)
+✔ public JS pixel adapter accepts Uint8Array and the Buffer decoder output (6.890375ms)
+✔ all split alias combinations normalize splits while preserving actual paths and directory scope (209.072833ms)
+✔ simultaneous aliases are fatal before output creation instead of merging dataset splits (6.823959ms)
+ℹ tests 82
+ℹ suites 0
+ℹ pass 74
+ℹ fail 8
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6092.199292
+
+✖ failing tests:
+
+test at tests/cli.test.mjs:188:1
+✖ loopback server serves only fixed assets and one report, and denies traversal, symlinks, writes, and foreign hosts (89.469792ms)
+  Error [VisionLeakError]: Could not bind the loopback port; check local permissions or choose another --port
+      at file:///Users/cjy/Documents/ChatGPT/%E9%BB%91%E5%AE%A2%E6%9D%BE%E6%96%B0%E9%A1%B9%E7%9B%AE/projects/visionleak/tools/server.mjs:110:31
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async startServer (file:///Users/cjy/Documents/ChatGPT/%E9%BB%91%E5%AE%A2%E6%9D%BE%E6%96%B0%E9%A1%B9%E7%9B%AE/projects/visionleak/tools/server.mjs:107:3)
+      at async TestContext.<anonymous> (file:///Users/cjy/Documents/ChatGPT/%E9%BB%91%E5%AE%A2%E6%9D%BE%E6%96%B0%E9%A1%B9%E7%9B%AE/projects/visionleak/tests/cli.test.mjs:191:27)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    code: 'LISTEN_ERROR',
+    details: { cause: 'EPERM' }
+  }
+
+test at tests/orb.test.mjs:46:1
+✖ worker deadline and cancellation kill an unresponsive process; memory guard is fail-closed (1471.397292ms)
+  AssertionError [ERR_ASSERTION]: The validation function is expected to return "true". Received false
+  
+  Caught error:
+  
+  VisionLeakError: Cannot supervise ORB resident memory
+      at async TestContext.<anonymous> (file:///Users/cjy/Documents/ChatGPT/%E9%BB%91%E5%AE%A2%E6%9D%BE%E6%96%B0%E9%A1%B9%E7%9B%AE/projects/visionleak/tests/orb.test.mjs:59:47)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: VisionLeakError: Cannot supervise ORB resident memory
+        at OrbWorker.stop (file:///Users/cjy/Documents/ChatGPT/%E9%BB%91%E5%AE%A2%E6%9D%BE%E6%96%B0%E9%A1%B9%E7%9B%AE/projects/visionleak/tools/orb.mjs:73:22)
+        at Timeout.<anonymous> (file:///Users/cjy/Documents/ChatGPT/%E9%BB%91%E5%AE%A2%E6%9D%BE%E6%96%B0%E9%A1%B9%E7%9B%AE/projects/visionleak/tools/orb.mjs:60:40)
+        at listOnTimeout (node:internal/timers:685:17)
+        at process.processTimers (node:internal/timers:618:7),
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/orb.test.mjs:63:1
+✖ real ORB audit binds witnesses, cache-independent identity, review, export and exact-only verify (247.5465ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///Users/cjy/Documents/ChatGPT/%E9%BB%91%E5%AE%A2%E6%9D%BE%E6%96%B0%E9%A1%B9%E7%9B%AE/projects/visionleak/tests/orb.test.mjs:67:31)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/orb.test.mjs:86:1
+✖ real ORB obeys each independent budget and keeps deterministic coverage (146.017791ms)
+  AssertionError [ERR_ASSERTION]: maxOrbImages
+  + actual - expected
+  
+  + 'ORB_MEMORY_MONITOR'
+  - 'ORB_IMAGE_BUDGET'
+         ^
+  
+      at TestContext.<anonymous> (file:///Users/cjy/Documents/ChatGPT/%E9%BB%91%E5%AE%A2%E6%9D%BE%E6%96%B0%E9%A1%B9%E7%9B%AE/projects/visionleak/tests/orb.test.mjs:90:47)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'ORB_MEMORY_MONITOR',
+    expected: 'ORB_IMAGE_BUDGET',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/orb.test.mjs:98:1
+✖ ORB cached scans resume completed negative directions and retain final witnesses (1373.341292ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  ... Skipped lines
+  
+    [
+      {
+        distance: 0,
+        evidence: 'byte-identical',
+        left: 'train/170072252-original.png',
+  ...
+      },
+  +   {
+  +     distance: null,
+  +     evidence: 'orb-candidate',
+  +     left: 'test/170072252-small-png.png',
+  +     matchOrb: {
+  +       allCoordinatesDigest: '9cc08c416d85ee89a45fa24fa9e18f5f59dbc934d50848918374f6388a5cfa7a',
+  +       contained: true,
+  +       coordinateCount: 198,
+  +       coordinatesTruncated: true,
+  +       inlierCoordinates: [
+  +         [
+  +           123,
+  +           120,
+  +           137,
+  +           154
+  +         ],
+  +         [
+  +           75,
+  +           73,
+  +           89,
+  +           107
+  +         ],
+  +         [
+  +           72,
+  +           72,
+  +           86,
+  +           106
+  +         ],
+  +         [
+  +           70,
+  +           70,
+  +           84,
+  +           104
+  +         ],
+  +         [
+  +           75,
+  +           65,
+  +           89,
+  +           99
+  +         ],
+  +         [
+  +           67,
+  +           64,
+  +           81,
+  +           98
+  +         ],
+  +         [
+  +           70,
+  +           63,
+  +           84,
+  +           97
+  +         ],
+  +         [
+  +           78,
+  +           94,
+  +           92,
+  +           128
+  +         ],
+  +         [
+  +           74,
+  +           61,
+  +           88,
+  +           95
+  +         ],
+  +         [
+  +           67,
+  +           61,
+  +           81,
+  +           95
+  +         ],
+  +         [
+  +           58,
+  +           54,
+  +           72,
+  +           88
+  +         ],
+  +         [
+  +           73,
+  +           116,
+  +           87,
+  +           150
+  +         ],
+  +         [
+  +           71,
+  +           50,
+  +           85,
+  +           84
+  +         ],
+  +         [
+  +           71,
+  +           48,
+  +           85,
+  +           82
+  +         ],
+  +         [
+  +           66,
+  +           45,
+  +           80,
+  +           79
+  +         ],
+  +         [
+  +           72,
+  +           87,
+  +           86,
+  +           121
+  +         ],
+  +         [
+  +           79,
+  +           87,
+  +           93,
+  +           121
+  +         ],
+  +         [
+  +           76,
+  +           88,
+  +           90,
+  +           122
+  +         ],
+  +         [
+  +           76,
+  +           81,
+  +           90,
+  +           115
+  +         ],
+  +         [
+  +           40,
+  +           75,
+  +           54,
+  +           109
+  +         ],
+  +         [
+  +           84,
+  +           144,
+  +           98,
+  +           178
+  +         ],
+  +         [
+  +           87,
+  +           105,
+  +           101,
+  +           139
+  +         ],
+  +         [
+  +           94,
+  +           143,
+  +           108,
+  +           177
+  +         ],
+  +         [
+  +           68,
+  +           87,
+  +           82,
+  +           121
+  +         ],
+  +         [
+  +           43,
+  +           76,
+  +           57,
+  +           110
+  +         ],
+  +         [
+  +           69,
+  +           93,
+  +           83,
+  +           127
+  +         ],
+  +         [
+  +           95,
+  +           141,
+  +           109,
+  +           175
+  +         ],
+  +         [
+  +           84,
+  +           74,
+  +           98,
+  +           108
+  +         ],
+  +         [
+  +           44,
+  +           74,
+  +           58,
+  +           108
+  +         ],
+  +         [
+  +           93,
+  +           104,
+  +           107,
+  +           138
+  +         ],
+  +         [
+  +           98,
+  +           139,
+  +           112,
+  +           173
+  +         ],
+  +         [
+  +           60,
+  +           85,
+  +           74,
+  +           119
+  +         ]
+  +       ],
+  +       inlierRatio: 0.7415730337078652,
+  +       inliers: 198,
+  +       matches: 267,
+  +       original: 'train/170072252-original.png',
+  +       originalSize: [
+  +         288,
+  +         384
+  +       ],
+  +       profile: 'vl-orb-geometry-v1',
+  +       projectedQueryCorners: [
+  +         [
+  +           13.6729302105577,
+  +           33.43963174174989
+  +         ],
+  +         [
+  +           160.34434299345833,
+  +           33.44878617291651
+  +         ],
+  +         [
+  +           160.33380912745838,
+  +           202.22137074502132
+  +         ],
+  +         [
+  +           13.662396344557754,
+  +           202.21221631385475
+  +         ]
+  +       ],
+  +       query: 'test/170072252-small-png.png',
+  +       querySize: [
+  +         146,
+  +         168
+  +       ],
+  +       querySpan: [
+  +         0.7602739726027398,
+  +         0.6642951965332031
+  +       ],
+  +       queryToOriginal: [
+  +         [
+  +           1.0045987176911002,
+  +           -0.00006270158333300848,
+  +           13.6729302105577
+  +         ],
+  +         [
+  +           0.00006270158333300848,
+  +           1.0045987176911002,
+  +           33.43963174174989
+  +         ]
+  +       ],
+  +       scale: 1.0045987196478459
+  +     },
+  +     right: 'train/170072252-original.png'
+  +   },
+  +   {
+  +     distance: null,
+  +     evidence: 'orb-candidate',
+  +     left: 'test/170072252-small-png.png',
+  +     matchOrb: {
+  +       allCoordinatesDigest: '9cc08c416d85ee89a45fa24fa9e18f5f59dbc934d50848918374f6388a5cfa7a',
+  +       contained: true,
+  +       coordinateCount: 198,
+  +       coordinatesTruncated: true,
+  +       inlierCoordinates: [
+  +         [
+  +           123,
+  +           120,
+  +           137,
+  +           154
+  +         ],
+  +         [
+  +           75,
+  +           73,
+  +           89,
+  +           107
+  +         ],
+  +         [
+  +           72,
+  +           72,
+  +           86,
+  +           106
+  +         ],
+  +         [
+  +           70,
+  +           70,
+  +           84,
+  +           104
+  +         ],
+  +         [
+  +           75,
+  +           65,
+  +           89,
+  +           99
+  +         ],
+  +         [
+  +           67,
+  +           64,
+  +           81,
+  +           98
+  +         ],
+  +         [
+  +           70,
+  +           63,
+  +           84,
+  +           97
+  +         ],
+  +         [
+  +           78,
+  +           94,
+  +           92,
+  +           128
+  +         ],
+  +         [
+  +           74,
+  +           61,
+  +           88,
+  +           95
+  +         ],
+  +         [
+  +           67,
+  +           61,
+  +           81,
+  +           95
+  +         ],
+  +         [
+  +           58,
+  +           54,
+  +           72,
+  +           88
+  +         ],
+  +         [
+  +           73,
+  +           116,
+  +           87,
+  +           150
+  +         ],
+  +         [
+  +           71,
+  +           50,
+  +           85,
+  +           84
+  +         ],
+  +         [
+  +           71,
+  +           48,
+  +           85,
+  +           82
+  +         ],
+  +         [
+  +           66,
+  +           45,
+  +           80,
+  +           79
+  +         ],
+  +         [
+  +           72,
+  +           87,
+  +           86,
+  +           121
+  +         ],
+  +         [
+  +           79,
+  +           87,
+  +           93,
+  +           121
+  +         ],
+  +         [
+  +           76,
+  +           88,
+  +           90,
+  +           122
+  +         ],
+  +         [
+  +           76,
+  +           81,
+  +           90,
+  +           115
+  +         ],
+  +         [
+  +           40,
+  +           75,
+  +           54,
+  +           109
+  +         ],
+  +         [
+  +           84,
+  +           144,
+  +           98,
+  +           178
+  +         ],
+  +         [
+  +           87,
+  +           105,
+  +           101,
+  +           139
+  +         ],
+  +         [
+  +           94,
+  +           143,
+  +           108,
+  +           177
+  +         ],
+  +         [
+  +           68,
+  +           87,
+  +           82,
+  +           121
+  +         ],
+  +         [
+  +           43,
+  +           76,
+  +           57,
+  +           110
+  +         ],
+  +         [
+  +           69,
+  +           93,
+  +           83,
+  +           127
+  +         ],
+  +         [
+  +           95,
+  +           141,
+  +           109,
+  +           175
+  +         ],
+  +         [
+  +           84,
+  +           74,
+  +           98,
+  +           108
+  +         ],
+  +         [
+  +           44,
+  +           74,
+  +           58,
+  +           108
+  +         ],
+  +         [
+  +           93,
+  +           104,
+  +           107,
+  +           138
+  +         ],
+  +         [
+  +           98,
+  +           139,
+  +           112,
+  +           173
+  +         ],
+  +         [
+  +           60,
+  +           85,
+  +           74,
+  +           119
+  +         ]
+  +       ],
+  +       inlierRatio: 0.7415730337078652,
+  +       inliers: 198,
+  +       matches: 267,
+  +       original: 'validation/exact-copy.png',
+  +       originalSize: [
+  +         288,
+  +         384
+  +       ],
+  +       profile: 'vl-orb-geometry-v1',
+  +       projectedQueryCorners: [
+  +         [
+  +           13.6729302105577,
+  +           33.43963174174989
+  +         ],
+  +         [
+  +           160.34434299345833,
+  +           33.44878617291651
+  +         ],
+  +         [
+  +           160.33380912745838,
+  +           202.22137074502132
+  +         ],
+  +         [
+  +           13.662396344557754,
+  +           202.21221631385475
+  +         ]
+  +       ],
+  +       query: 'test/170072252-small-png.png',
+  +       querySize: [
+  +         146,
+  +         168
+  +       ],
+  +       querySpan: [
+  +         0.7602739726027398,
+  +         0.6642951965332031
+  +       ],
+  +       queryToOriginal: [
+  +         [
+  +           1.0045987176911002,
+  +           -0.00006270158333300848,
+  +           13.6729302105577
+  +         ],
+  +         [
+  +           0.00006270158333300848,
+  +           1.0045987176911002,
+  +           33.43963174174989
+  +         ]
+  +       ],
+  +       scale: 1.0045987196478459
+  +     },
+  +     right: 'validation/exact-copy.png'
+  +   }
+    ]
+  
+      at TestContext.<anonymous> (file:///Users/cjy/Documents/ChatGPT/%E9%BB%91%E5%AE%A2%E6%9D%BE%E6%96%B0%E9%A1%B9%E7%9B%AE/projects/visionleak/tests/orb.test.mjs:111:10)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ { left: 'train/170072252-original.png', right: 'validation/exact-copy.png', evidence: 'byte-identical', distance: 0, lowContrast: false, review: 'unreviewed' }, { left: 'test/170072252-small-png.png', right: 'train/170072252-original.png', evidence: 'orb-candidate', distance: null, matchOrb: [Object] }, { left: 'test/170072252-small-png.png', right: 'validation/exact-copy.png', evidence: 'orb-candidate', distance: null, matchOrb: [Object] } ],
+    expected: [ { left: 'train/170072252-original.png', right: 'validation/exact-copy.png', evidence: 'byte-identical', distance: 0, lowContrast: false, review: 'unreviewed' } ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests/orb.test.mjs:136:1
+✖ disk-backed ORB crosses the 512-image boundary without losing late cross-batch evidence (950.249875ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 513
+  
+      at TestContext.<anonymous> (file:///Users/cjy/Documents/ChatGPT/%E9%BB%91%E5%AE%A2%E6%9D%BE%E6%96%B0%E9%A1%B9%E7%9B%AE/projects/visionleak/tests/orb.test.mjs:145:9)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 513,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/orb.test.mjs:152:1
+✖ production retrieval verifies its selected queue while preserving non-exhaustive coverage, identity and export (131.601792ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - true
+  
+      at TestContext.<anonymous> (file:///Users/cjy/Documents/ChatGPT/%E9%BB%91%E5%AE%A2%E6%9D%BE%E6%96%B0%E9%A1%B9%E7%9B%AE/projects/visionleak/tests/orb.test.mjs:156:9)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/orb.test.mjs:173:1
+✖ retrieval direction budget resumes selected geometry without losing completed queue work (1396.945875ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///Users/cjy/Documents/ChatGPT/%E9%BB%91%E5%AE%A2%E6%9D%BE%E6%96%B0%E9%A1%B9%E7%9B%AE/projects/visionleak/tests/orb.test.mjs:182:9)
+      at async Test.run (node:internal/test_runner/test:1404:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:969:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+CI acceptance: failed; .ci-artifacts/verification.json

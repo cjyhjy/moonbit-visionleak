@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "vl-source-lineage-check-v1",
+  "oldSources": 66,
+  "newSources": 48,
+  "exactOverlapCount": 0,
+  "exact": [],
+  "perceptualTriage": [],
+  "scope": "Checks IDs, upstream hashes, byte hashes and exact 128px normalized pixels. Does not prove absence of transformed source reuse; dHash triage retained without exclusion. No examples removed."
+}

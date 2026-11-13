@@ -460,7 +460,9 @@ fn workflow_coverage(request : Json) -> Json {
   } else {
     processed_value
   }
-  if reason != "" && reason != "no-decodable-images" {
+  if reason != "" &&
+    reason != "no-decodable-images" &&
+    reason != "ORB_APPROXIMATE_COVERAGE" {
     let mut stopped_phase = ""
     let mut stopped_processed = processed
     for name in ["deterministic", "perceptual", "local", "orb"] {
@@ -475,7 +477,11 @@ fn workflow_coverage(request : Json) -> Json {
       "code": Json(reason),
       "stage": Json(
         if stopped_phase == "orb" {
-          "orb-comparison"
+          if reason.has_prefix("ORB_INDEX_") {
+            "orb-retrieval"
+          } else {
+            "orb-comparison"
+          }
         } else {
           "core-comparison"
         },
@@ -566,7 +572,7 @@ fn workflow_coverage(request : Json) -> Json {
     unprocessed_total.to_string(),
   )
   summary.write_string("；结论只覆盖已审计输入与已完成比较。")
-  {
+  let result : Json = {
     "ok": true,
     "coverage": {
       "splits": Json::object(splits),
@@ -590,6 +596,20 @@ fn workflow_coverage(request : Json) -> Json {
       ),
     },
   }
+  let orb = field(field(report, "phases"), "orb")
+  if field(orb, "searchMode") == Json("retrieval") {
+    if field(result, "coverage") is Object(fields) {
+      fields["orbSearch"] = {
+        "mode": "approximate-retrieval",
+        "candidateQueueComplete": field(orb, "candidateQueueComplete"),
+        "exhaustivePairsComplete": field(orb, "exhaustivePairsComplete"),
+        "eligiblePairs": field(orb, "eligibleInputPairs"),
+        "selectedPairs": field(field(orb, "retrieval"), "selectedPairs"),
+        "verifiedPairs": field(orb, "processedPairs"),
+      }
+    }
+  }
+  result
 }
 
 ///|

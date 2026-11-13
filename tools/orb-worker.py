@@ -100,14 +100,40 @@ def main():
                 raise ValueError('gray dimensions')
             gray = np.frombuffer(raw, dtype=np.uint8).reshape(height, width)
             points, descriptors = detector.detectAndCompute(gray, None)
+            # OpenCV's requested nfeatures is not a hard bound: score ties may
+            # retain extra points. Keep the declared deterministic prefix and
+            # its aligned descriptor rows before hashing, caching or matching.
             if len(points) > PROFILE['features']:
-                raise ValueError('feature cap exceeded')
+                points = points[:PROFILE['features']]
+                descriptors = descriptors[:PROFILE['features']]
             features[identifier] = points, descriptors, gray.shape
             feature_bytes = json.dumps([list(p.pt) for p in points], separators=(',', ':')).encode()
             if descriptors is not None:
                 feature_bytes += descriptors.tobytes()
             reply({'ok': True, 'keypoints': len(points), 'featureDigest': hashlib.sha256(feature_bytes).hexdigest(),
-                   'grayDigest': hashlib.sha256(raw).hexdigest()})
+                   'grayDigest': hashlib.sha256(raw).hexdigest(),
+                   'payload': {'points': [list(p.pt) for p in points], 'descriptors': base64.b64encode(descriptors.tobytes()).decode() if descriptors is not None else '', 'shape': list(gray.shape)}})
+        elif op == 'load':
+            from types import SimpleNamespace
+            payload = req['payload']
+            points = payload['points']
+            shape = payload['shape']
+            raw = base64.b64decode(payload['descriptors'], validate=True)
+            if (len(points) > 800 or len(raw) != len(points) * 32
+                    or len(shape) != 2 or any(type(x) is not int or x < 1 for x in shape)
+                    or shape[0] * shape[1] > 4194304
+                    or any(len(p) != 2 or not all(isinstance(x, (float, int)) and np.isfinite(x) for x in p) for p in points)):
+                raise ValueError('invalid cached features')
+            if req.get('clear'):
+                features.clear()
+            if len(features) >= 512:
+                raise ValueError('feature input budget')
+            descriptors = np.frombuffer(raw, dtype=np.uint8).reshape(-1, 32) if points else None
+            features[req['id']] = [SimpleNamespace(pt=tuple(p)) for p in points], descriptors, tuple(shape)
+            reply({'ok': True})
+        elif op == 'clear':
+            features.clear()
+            reply({'ok': True})
         elif op == 'match':
             a, b = features[req['original']], features[req['query']]
             cost = 2 * len(a[0]) * len(b[0]) if min(len(a[0]), len(b[0])) >= 8 else 0

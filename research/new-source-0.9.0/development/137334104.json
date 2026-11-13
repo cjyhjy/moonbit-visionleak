@@ -1,0 +1,22 @@
+{
+  "id": "137334104",
+  "title": "File:Patterned cobblestone nor dx 8k (Rob Tuytel via Poly Haven).png",
+  "family": "cobblestone",
+  "bucket": "repeated-texture",
+  "partition": "development",
+  "author": "Rob Tuytel (https://polyhaven.com/all?a=Rob%20Tuytel / https://web.archive.org/web/20230910162834/https://polyhaven.com/all?a=Rob%20Tuytel) via Poly Haven",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Patterned_cobblestone_nor_dx_8k_(Rob_Tuytel_via_Poly_Haven).png",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Patterned_cobblestone_nor_dx_8k_%28Rob_Tuytel_via_Poly_Haven%29.png/960px-Patterned_cobblestone_nor_dx_8k_%28Rob_Tuytel_via_Poly_Haven%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Patterned_cobblestone_nor_dx_8k_%28Rob_Tuytel_via_Poly_Haven%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "cb67c2121d99da5ea80ea479f51e41f90dde57cd",
+  "width": 8192,
+  "height": 8192,
+  "downloadSha256": "9593a25b84904cf2710d02adfafbe5bbc32d371c9ebf63e42c5983b447c5be29",
+  "sha256": "2a2a130f66c727a394cdce4070430a6667535af839ec9184256a11042da2c6fd",
+  "storedFile": "research/new-source-0.9.0/development/137334104.png",
+  "storedWidth": 384,
+  "storedHeight": 384,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "153128355",
+  "title": "File:Sunset and wind turbines at Akhisar Train Station.jpg",
+  "family": "wind turbines",
+  "bucket": "same-scene",
+  "partition": "holdout",
+  "author": "Pragdon",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Sunset_and_wind_turbines_at_Akhisar_Train_Station.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Sunset_and_wind_turbines_at_Akhisar_Train_Station.jpg/960px-Sunset_and_wind_turbines_at_Akhisar_Train_Station.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Sunset_and_wind_turbines_at_Akhisar_Train_Station.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "4d8fc717349a695b337caca20c11b29606b8edd7",
+  "width": 4032,
+  "height": 3024,
+  "downloadSha256": "3388e428ed1f68a30df0ed396292f028b675caabbdb8ca9225691f2091e30d58",
+  "sha256": "9b10df9761220efa8a56d954190c04f1604fe0707fe841660448141d01c1ebdd",
+  "storedFile": "research/new-source-0.9.0/holdout/153128355.png",
+  "storedWidth": 384,
+  "storedHeight": 288,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

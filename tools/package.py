@@ -21,6 +21,35 @@ REPORTS=['mirror-evaluation.json','mirror-evaluation-audit.json','README.md','co
 
 def sha(data): return hashlib.sha256(data).hexdigest()
 
+def evidence_files(root, relative, visual_roots=()):
+    """Ship provenance text; only declared visual QA/demo trees may add pixels."""
+    folder = root / relative
+    if not folder.exists():
+        return []
+    folder.resolve().relative_to(root.resolve())
+    if folder.is_symlink():
+        raise ValueError('Evidence directory symlink not allowed')
+    files = []
+    for path in folder.rglob('*'):
+        parts = path.relative_to(folder).parts
+        if any(part.startswith('.') or part == '__pycache__' for part in parts):
+            continue
+        if not path.is_file():
+            continue
+        visual = parts[0] in visual_roots and path.suffix.lower() in {'.png', '.jpg', '.jpeg'}
+        text = path.suffix.lower() in {'.json', '.log', '.md', '.csv', '.txt', '.html', '.mjs', '.py'} or path.name == 'Dockerfile'
+        if not text and not visual:
+            continue
+        if path.is_symlink():
+            raise ValueError('Evidence symlink not allowed')
+        if text:
+            path.read_bytes().decode('utf-8')
+        files.append(path)
+    return files
+
+def development_evidence(root):
+    return evidence_files(root, 'reports/plan-0.9.0')
+
 def main(verification_path=None):
     version=release_version(ROOT)
     verification=json.loads((verification_path or ROOT/'reports/verification.json').read_text())
@@ -42,13 +71,17 @@ def main(verification_path=None):
     for tree in TREES:
         candidates.extend(p for p in (ROOT/tree).rglob('*') if p.is_file() and not any(part.startswith('.') or part=='__pycache__' for part in p.relative_to(ROOT/tree).parts))
     candidates.extend(ROOT/'reports'/p for p in REPORTS)
+    candidates.extend(development_evidence(ROOT))
     candidates.extend(p for p in (ROOT/'reports/logs').glob('*.log') if not p.name.startswith('release-'))
     candidates.extend(p for p in (ROOT/'reports/demo').rglob('*') if p.is_file() and not p.name.startswith('.'))
     candidates.extend(p for p in (ROOT/'reports/mirror-demo').rglob('*') if p.is_file() and not p.name.startswith('.'))
     for folder in ['reports/photos-v1','reports/photos-demo']:
         candidates.extend(p for p in (ROOT/folder).rglob('*') if p.is_file() and not p.name.startswith('.'))
     for folder in ['reports/plan-0.5.0','reports/plan-0.6.0','reports/optimization','reports/post-review','reports/followup-0.7.0','reports/integration-0.7.1','reports/followup-quality',f'reports/integration-{version}']:
-        candidates.extend(p for p in (ROOT/folder).rglob('*') if p.is_file() and not p.name.startswith('.'))
+        if folder == 'reports/integration-0.9.0':
+            candidates.extend(evidence_files(ROOT, folder, ('walkthrough', 'ui-screenshots')))
+        else:
+            candidates.extend(p for p in (ROOT/folder).rglob('*') if p.is_file() and not p.name.startswith('.'))
     locations=json.loads((ROOT/'research/photos-v1/freeze/archive-locations.json').read_text())
     candidates.extend(ROOT/name for version in locations.values() for name in version.values())
     payload={}

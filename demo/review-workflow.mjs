@@ -60,3 +60,27 @@ export function undoDecision(report, reviews, undo) {
   else updated.delete(undo.key);
   return updated;
 }
+
+export function changeDecisions(report,reviews,keys,decision,updatedAt=new Date().toISOString()) {
+  if(!Array.isArray(keys)||keys.length>200||new Set(keys).size!==keys.length||keys.some(key=>!report.pairMap.has(key))||!Object.hasOwn(DECISIONS,decision))throw new Error('批量标记必须为当前报告中最多200个不同配对。');
+  let next=new Map(reviews);const changes=[];
+  for(const key of keys){const change=changeDecision(report,next,key,decision,updatedAt);if(change){next=change.reviews;changes.push(change.undo);}}
+  return changes.length?{reviews:next,changed:changes.length,undo:{auditId:report.auditId,changes}}:null;
+}
+export function undoDecisions(report,reviews,undo) {
+  if(!undo?.changes)return undoDecision(report,reviews,undo);
+  if(undo.auditId!==report.auditId||undo.changes.length>200)return null;
+  // Check every row before changing any row: intervening edits cancel the undo.
+  for(const change of undo.changes)if(!undoDecision(report,reviews,change))return null;
+  let restored=new Map(reviews);for(const change of undo.changes)restored=undoDecision(report,restored,change);
+  return restored;
+}
+export function imageAnchor(image){return JSON.stringify([image.split,image.byteDigest||'id:'+image.id]);}
+export function sharedImageGroups(report){
+  const groups=new Map();
+  for(const pair of report.pairs)for(const id of [pair.left,pair.right]){
+    const image=report.images.get(id),key=imageAnchor(image);
+    if(!groups.has(key))groups.set(key,{key,path:image.path,split:image.split,keys:new Set()});groups.get(key).keys.add(pair.key);
+  }
+  return [...groups.values()].filter(g=>g.keys.size>1).sort((a,b)=>b.keys.size-a.keys.size||a.path.localeCompare(b.path));
+}

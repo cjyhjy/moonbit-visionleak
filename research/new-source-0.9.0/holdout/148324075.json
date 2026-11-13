@@ -1,0 +1,22 @@
+{
+  "id": "148324075",
+  "title": "File:Neuschwanstein Castle 2024-02.jpg",
+  "family": "Neuschwanstein Castle",
+  "bucket": "similar-building",
+  "partition": "holdout",
+  "author": "Wilfredor",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Neuschwanstein_Castle_2024-02.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Neuschwanstein_Castle_2024-02.jpg/960px-Neuschwanstein_Castle_2024-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Neuschwanstein_Castle_2024-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "2c84ad5232328bd5c87800b9e0cbd94c8f662aa8",
+  "width": 15083,
+  "height": 10270,
+  "downloadSha256": "777eca688b6f4bb7d2b6467157470ca50bf6bb1b775f1a28ef3936c7faa91da3",
+  "sha256": "3fde3c6771346b8aac385c7f0e0697ac9999e349b50b11325ec5cafb3d80a085",
+  "storedFile": "research/new-source-0.9.0/holdout/148324075.png",
+  "storedWidth": 384,
+  "storedHeight": 262,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

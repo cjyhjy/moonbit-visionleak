@@ -1,0 +1,34 @@
+[
+  {
+    "left": "test/02369.png",
+    "right": "train/29555.png",
+    "evidence": "perceptual-candidate",
+    "distance": 5,
+    "lowContrast": false,
+    "review": "unreviewed"
+  },
+  {
+    "left": "test/05394.png",
+    "right": "train/29555.png",
+    "evidence": "perceptual-candidate",
+    "distance": 4,
+    "lowContrast": false,
+    "review": "unreviewed"
+  },
+  {
+    "left": "test/02929.png",
+    "right": "train/44097.png",
+    "evidence": "perceptual-candidate",
+    "distance": 6,
+    "lowContrast": false,
+    "review": "unreviewed"
+  },
+  {
+    "left": "test/03520.png",
+    "right": "train/46237.png",
+    "evidence": "perceptual-candidate",
+    "distance": 5,
+    "lowContrast": false,
+    "review": "unreviewed"
+  }
+]

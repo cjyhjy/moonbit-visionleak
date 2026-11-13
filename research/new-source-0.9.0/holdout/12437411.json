@@ -1,0 +1,22 @@
+{
+  "id": "12437411",
+  "title": "File:Notre Dame de Paris main gate.jpg",
+  "family": "Notre Dame Paris",
+  "bucket": "similar-building",
+  "partition": "holdout",
+  "author": "Jebulon",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Notre_Dame_de_Paris_main_gate.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Notre_Dame_de_Paris_main_gate.jpg/960px-Notre_Dame_de_Paris_main_gate.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Notre_Dame_de_Paris_main_gate.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "b39d85e83b3ed3269dfb5ff2f6869af2c7ff6b03",
+  "width": 1575,
+  "height": 2090,
+  "downloadSha256": "eea91e743aad38dd656473d3559769db0f9e6f78442d70d91f4d75918f8de897",
+  "sha256": "484ed20e0d23a4edf9c43178fc2084b9a59c6a3f76b69d761e0dc77c39cf68a4",
+  "storedFile": "research/new-source-0.9.0/holdout/12437411.png",
+  "storedWidth": 289,
+  "storedHeight": 384,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

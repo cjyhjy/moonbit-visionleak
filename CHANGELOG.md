@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.9.0 — release candidate, unpublished
+
+- Reuse content/config/runtime-bound ORB features and completed positive/negative direction checks; add bounded disk batching, OS cache locks and durable completed-prefix recovery.
+- Add opt-in supervised compact descriptor retrieval with separate resource budgets and explicit candidate-queue versus exhaustive coverage.
+- Add a dependency-free doctor entry point, bounded bulk review, shared-image navigation and strict previewed cross-audit review transfer.
+- Record fresh-source controlled evaluations and an independently checked public natural-duplicate/hard-negative baseline, including all misses. Human review timing and release gates remain incomplete; see the 0.9.0 plan and progress receipts.
+
 ## 0.8.0
 
 - Add opt-in, bounded ORB geometry candidates through a supervised optional Python/OpenCV worker.

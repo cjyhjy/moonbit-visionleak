@@ -1,0 +1,26 @@
+{
+  "source": {
+    "id": "usgs-candor-PSP_001641_1735",
+    "page": "https://www.usgs.gov/media/images/candor-colles-candor-chasma-mars",
+    "download": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/PSP_001641_1735_RGB.NOMAP_50percent.jpg",
+    "license": "Public Domain (source page)",
+    "rawSha256": "49add4a648d7ce572f08aac156a027a4fdfc6d4d9a6382e89a88f2fe2cf327d5",
+    "partition": "development-pilot"
+  },
+  "crops": [
+    [
+      0.07,
+      0.1,
+      0.6,
+      0.61
+    ],
+    [
+      0.2,
+      0.15,
+      0.55,
+      0.59
+    ]
+  ],
+  "normalization": "resize inside 512x512; remove metadata; PNG; product decoder used by audit",
+  "scope": "Single-source controlled development pilot. Two anchor crop relationships. No hard-negative, holdout, natural contamination or human time claim."
+}

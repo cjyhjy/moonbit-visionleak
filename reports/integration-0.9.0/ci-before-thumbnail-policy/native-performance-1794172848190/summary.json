@@ -1,0 +1,182 @@
+{
+  "status": "passed",
+  "protocol": {
+    "samples": 5,
+    "warmups": 1,
+    "backend": "native-release",
+    "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+    "inputDigests": {
+      "sparse1600": "c82bd6ed33ed2b462aaa27ebb1f4842badba9a90772a56c10c22173afb29b864",
+      "knownPhotos": "e70135cf2d797046eb5d03f6873fb5aab7b82768f4d258c1f8cdb99268ec75da"
+    },
+    "variants": [
+      "released-map",
+      "generation-marks"
+    ],
+    "scope": "Core only; fixed budget, includes JSON parse/serialization, excludes build/decode/I/O. Sequential variant runs, no randomized timing claim."
+  },
+  "results": {
+    "released-map": [
+      {
+        "kind": "vl-native-sample",
+        "case": "sparse1600",
+        "repetition": 0,
+        "elapsedUs": 13974.75,
+        "outputDigest": "afd716bfb21358986b7a7b626282cfd424b1710fdb86f342ab738732bd212587"
+      },
+      {
+        "kind": "vl-native-sample",
+        "case": "sparse1600",
+        "repetition": 1,
+        "elapsedUs": 12205.5,
+        "outputDigest": "afd716bfb21358986b7a7b626282cfd424b1710fdb86f342ab738732bd212587"
+      },
+      {
+        "kind": "vl-native-sample",
+        "case": "sparse1600",
+        "repetition": 2,
+        "elapsedUs": 11265.5,
+        "outputDigest": "afd716bfb21358986b7a7b626282cfd424b1710fdb86f342ab738732bd212587"
+      },
+      {
+        "kind": "vl-native-sample",
+        "case": "sparse1600",
+        "repetition": 3,
+        "elapsedUs": 10588.208,
+        "outputDigest": "afd716bfb21358986b7a7b626282cfd424b1710fdb86f342ab738732bd212587"
+      },
+      {
+        "kind": "vl-native-sample",
+        "case": "sparse1600",
+        "repetition": 4,
+        "elapsedUs": 10056.125,
+        "outputDigest": "afd716bfb21358986b7a7b626282cfd424b1710fdb86f342ab738732bd212587"
+      },
+      {
+        "kind": "vl-native-sample",
+        "case": "knownPhotos",
+        "repetition": 0,
+        "elapsedUs": 7899.041,
+        "outputDigest": "1d766ed6a96dea9d506da40983b4941f5dff2fa0e0a52053b310e0598304fe07"
+      },
+      {
+        "kind": "vl-native-sample",
+        "case": "knownPhotos",
+        "repetition": 1,
+        "elapsedUs": 8133.8330000000005,
+        "outputDigest": "1d766ed6a96dea9d506da40983b4941f5dff2fa0e0a52053b310e0598304fe07"
+      },
+      {
+        "kind": "vl-native-sample",
+        "case": "knownPhotos",
+        "repetition": 2,
+        "elapsedUs": 7872.75,
+        "outputDigest": "1d766ed6a96dea9d506da40983b4941f5dff2fa0e0a52053b310e0598304fe07"
+      },
+      {
+        "kind": "vl-native-sample",
+        "case": "knownPhotos",
+        "repetition": 3,
+        "elapsedUs": 7812.917,
+        "outputDigest": "1d766ed6a96dea9d506da40983b4941f5dff2fa0e0a52053b310e0598304fe07"
+      },
+      {
+        "kind": "vl-native-sample",
+        "case": "knownPhotos",
+        "repetition": 4,
+        "elapsedUs": 7871.625,
+        "outputDigest": "1d766ed6a96dea9d506da40983b4941f5dff2fa0e0a52053b310e0598304fe07"
+      }
+    ],
+    "generation-marks": [
+      {
+        "kind": "vl-native-sample",
+        "case": "sparse1600",
+        "repetition": 0,
+        "elapsedUs": 13851.916000000001,
+        "outputDigest": "afd716bfb21358986b7a7b626282cfd424b1710fdb86f342ab738732bd212587"
+      },
+      {
+        "kind": "vl-native-sample",
+        "case": "sparse1600",
+        "repetition": 1,
+        "elapsedUs": 12153.334,
+        "outputDigest": "afd716bfb21358986b7a7b626282cfd424b1710fdb86f342ab738732bd212587"
+      },
+      {
+        "kind": "vl-native-sample",
+        "case": "sparse1600",
+        "repetition": 2,
+        "elapsedUs": 11214.75,
+        "outputDigest": "afd716bfb21358986b7a7b626282cfd424b1710fdb86f342ab738732bd212587"
+      },
+      {
+        "kind": "vl-native-sample",
+        "case": "sparse1600",
+        "repetition": 3,
+        "elapsedUs": 10429.334,
+        "outputDigest": "afd716bfb21358986b7a7b626282cfd424b1710fdb86f342ab738732bd212587"
+      },
+      {
+        "kind": "vl-native-sample",
+        "case": "sparse1600",
+        "repetition": 4,
+        "elapsedUs": 10020.958,
+        "outputDigest": "afd716bfb21358986b7a7b626282cfd424b1710fdb86f342ab738732bd212587"
+      },
+      {
+        "kind": "vl-native-sample",
+        "case": "knownPhotos",
+        "repetition": 0,
+        "elapsedUs": 6064.292,
+        "outputDigest": "1d766ed6a96dea9d506da40983b4941f5dff2fa0e0a52053b310e0598304fe07"
+      },
+      {
+        "kind": "vl-native-sample",
+        "case": "knownPhotos",
+        "repetition": 1,
+        "elapsedUs": 6075.541,
+        "outputDigest": "1d766ed6a96dea9d506da40983b4941f5dff2fa0e0a52053b310e0598304fe07"
+      },
+      {
+        "kind": "vl-native-sample",
+        "case": "knownPhotos",
+        "repetition": 2,
+        "elapsedUs": 5975.8330000000005,
+        "outputDigest": "1d766ed6a96dea9d506da40983b4941f5dff2fa0e0a52053b310e0598304fe07"
+      },
+      {
+        "kind": "vl-native-sample",
+        "case": "knownPhotos",
+        "repetition": 3,
+        "elapsedUs": 6014.9580000000005,
+        "outputDigest": "1d766ed6a96dea9d506da40983b4941f5dff2fa0e0a52053b310e0598304fe07"
+      },
+      {
+        "kind": "vl-native-sample",
+        "case": "knownPhotos",
+        "repetition": 4,
+        "elapsedUs": 6059.542,
+        "outputDigest": "1d766ed6a96dea9d506da40983b4941f5dff2fa0e0a52053b310e0598304fe07"
+      }
+    ]
+  },
+  "summary": {
+    "sparse1600": {
+      "medianMicroseconds": {
+        "released-map": 11265.5,
+        "generation-marks": 11214.75
+      },
+      "speedup": 1.004525290354221,
+      "sameFullOutputDigest": "afd716bfb21358986b7a7b626282cfd424b1710fdb86f342ab738732bd212587"
+    },
+    "knownPhotos": {
+      "medianMicroseconds": {
+        "released-map": 7872.75,
+        "generation-marks": 6059.542
+      },
+      "speedup": 1.299231856136982,
+      "sameFullOutputDigest": "1d766ed6a96dea9d506da40983b4941f5dff2fa0e0a52053b310e0598304fe07"
+    }
+  }
+}

@@ -63,6 +63,33 @@ test "CLI every numeric budget accepts both inclusive boundaries and rejects adj
 }
 
 ///|
+test "original photo input can explicitly exceed one billion pixels without changing defaults" {
+  let supplied = cli_validate_options({
+    "maxTotalPixels": 1368653453,
+    "maxOrbTotalPixels": 1368653453,
+  })
+  assert_eq(field(supplied, "ok"), Json(true))
+  assert_eq(
+    field(field(supplied, "options"), "maxTotalPixels"),
+    Json(1368653453),
+  )
+  assert_eq(field(cli_defaults(), "maxTotalPixels"), Json(100000000))
+  assert_eq(field(cli_defaults(), "maxOrbTotalPixels"), Json(33554432))
+  assert_eq(
+    field(field(supplied, "options"), "maxOrbTotalPixels"),
+    Json(1368653453),
+  )
+  assert_eq(
+    field(cli_validate_options({ "maxTotalPixels": 2000000001 }), "ok"),
+    Json(false),
+  )
+  assert_eq(
+    field(cli_validate_options({ "maxOrbTotalPixels": 2000000001 }), "ok"),
+    Json(false),
+  )
+}
+
+///|
 test "CLI rejects coercion fractional exponential signed empty and overflow numeric strings" {
   for row in cli_limits() {
     for

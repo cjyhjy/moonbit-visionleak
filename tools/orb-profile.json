@@ -4,6 +4,7 @@
   "enabledByDefault": false,
   "normalization": "vl-rgb-v1, sampled RGBA composited on white, integer BT.601 gray",
   "features": 800,
+  "featureCapPolicy": "retain first 800 detector-ordered points and aligned descriptor rows when OpenCV nfeatures overshoots on score ties",
   "scaleFactor": 1.2,
   "nlevels": 8,
   "edgeThreshold": 15,

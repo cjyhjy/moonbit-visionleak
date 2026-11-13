@@ -1,0 +1,22 @@
+{
+  "id": "162245082",
+  "title": "File:A native prairie perennial sunflower crop at Thune lands ,Bobonong.jpg",
+  "family": "sunflower field",
+  "bucket": "same-scene",
+  "partition": "holdout",
+  "author": "Lucrucia98",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:A_native_prairie_perennial_sunflower_crop_at_Thune_lands_,Bobonong.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/A_native_prairie_perennial_sunflower_crop_at_Thune_lands_%2CBobonong.jpg/960px-A_native_prairie_perennial_sunflower_crop_at_Thune_lands_%2CBobonong.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/A_native_prairie_perennial_sunflower_crop_at_Thune_lands_%2CBobonong.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "886f5ee11be820b2b9ead8b6377f68e537d76d6e",
+  "width": 3120,
+  "height": 4160,
+  "downloadSha256": "1849788962449cfce667700e5cd41db86239dd82563b2ffc579d961fc9d7bd6c",
+  "sha256": "dafc34e5adeaa0b5968f6d4d1dfeba504e24a69825d90fa1150f4fa94178919c",
+  "storedFile": "research/new-source-0.9.0/holdout/162245082.png",
+  "storedWidth": 288,
+  "storedHeight": 384,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

@@ -1,0 +1,6 @@
+group_id,evidence_level,split,path,review_status,suggestion
+"exact-cc7061c9c2324bbd6a9ac79407d316ee8f2b955bb078781435db2c0af47c5197","byte-identical","train","train/170072252-original.png","pending","keep"
+"exact-cc7061c9c2324bbd6a9ac79407d316ee8f2b955bb078781435db2c0af47c5197","byte-identical","validation","validation/exact-copy.png","pending","remove-from-validation"
+"reviewed-candidate-533a15f8b6bb3b4ee4fb190540b032c47e9fdf4bc47eceb67b66c3335015a897","orb-candidate","train","train/170072252-original.png","confirmed","keep"
+"reviewed-candidate-533a15f8b6bb3b4ee4fb190540b032c47e9fdf4bc47eceb67b66c3335015a897","orb-candidate","validation","validation/exact-copy.png","confirmed","remove-from-validation"
+"reviewed-candidate-533a15f8b6bb3b4ee4fb190540b032c47e9fdf4bc47eceb67b66c3335015a897","orb-candidate","test","test/170072252-small-png.png","confirmed","remove-from-test"

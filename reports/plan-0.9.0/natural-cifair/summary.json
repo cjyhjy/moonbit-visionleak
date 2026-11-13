@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "vl-natural-cifair-evaluation-v1",
+  "status": "passed-execution",
+  "protocol": {
+    "status": "sources-acquired-experiment-not-run",
+    "annotationUrl": "https://raw.githubusercontent.com/cvjena/cifair/master/meta/duplicates_cifar10.csv",
+    "annotationSha256": "4cb7e99a7dfff346082c9d8fa4c2989a196e4a37d1e58f75936046696f1ba6a4",
+    "annotationMeaningUrl": "https://github.com/cvjena/cifair/tree/master/meta",
+    "datasetPage": "https://cave.cs.toronto.edu/kriz/cifar.html",
+    "archiveUrl": "https://cave.cs.toronto.edu/kriz/cifar-10-binary.tar.gz",
+    "officialArchiveMd5": "c32a1d4ab5d03f1284b67883e8d87530",
+    "judgments": {
+      "0": "author-labelled approximate pixel duplicate",
+      "1": "author-labelled same-shot near duplicate",
+      "2": "author-labelled different content, visually similar"
+    },
+    "selection": "All author-provided cross-train/test rows, without dropping difficult cases. Other pair relationships remain unlabelled.",
+    "frozenEvaluationOptions": {
+      "threshold": 6,
+      "includeCrops": false,
+      "includeOrb": false
+    },
+    "compiledArtifactSha256": "6756037841f407f9afabfeb290bdd805b6f3909df237ea91bdfc9afb07e64d16",
+    "scope": "Public naturally occurring CIFAR-10 duplicate/hard-negative annotations. 32x32 images cannot establish large-photo ORB capacity or new human review timing. No results yet."
+  },
+  "sourceDigest": "864fe31bac9ced5a4c4c61d47a43e4a8d417f03b9b0dceadbf26e31913719811",
+  "runnerSha256": "bae9d5d98c921886f8f5dd4a39db96a76d8f52c86534f80eec0ce13a96b4f723",
+  "protocolSha256": "a1742a8ade8f2327f06a5a90c89ef077f9b19cfebde2fa71b009c0c6217c7b00",
+  "datasetSha256": "879288c0a51baf5884b7fd2fef07347b89f5085623725b6e9022d584994fd097",
+  "reportSha256": "e4530611ed19715c0683862bd7cb0e92cc29cc406d306d9291ec1d9334db0b24",
+  "auditId": "e2127fcde568ca7629c881678ec2b780054c48cc4acfde7dbb22755ff601f163",
+  "images": 565,
+  "annotatedRelationships": 286,
+  "counts": {
+    "tp": 79,
+    "fn": 170,
+    "fp": 3,
+    "tn": 34
+  },
+  "recall": 0.3172690763052209,
+  "hardNegativeFalsePositiveRate": 0.08108108108108109,
+  "annotatedCandidatePrecision": 0.9634146341463414,
+  "annotatedCoverage": 1,
+  "returnedPairs": 86,
+  "unlabelledReturnedPairs": 4,
+  "elapsedMilliseconds": 696,
+  "complete": true,
+  "humanReviewTimeMeasured": false,
+  "limits": [
+    "Curated author-found duplicate/similar pair list, not a random corpus sample or exhaustive ground truth.",
+    "Unlabelled returned pairs are not false positives; annotated candidate precision is conditional on these labels.",
+    "32x32 images and default Core only; does not test photo-scale ORB, retrieval recall, or end-to-end capacity.",
+    "Uses prior public human annotations; no new participant review timing."
+  ]
+}

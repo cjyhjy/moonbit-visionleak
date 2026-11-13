@@ -1,0 +1,22 @@
+{
+  "id": "59356852",
+  "title": "File:Broken red roof tiles 3.jpg",
+  "family": "roof tiles",
+  "bucket": "repeated-texture",
+  "partition": "development",
+  "author": "W.carter",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Broken_red_roof_tiles_3.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Broken_red_roof_tiles_3.jpg/960px-Broken_red_roof_tiles_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Broken_red_roof_tiles_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "a44b23fe5874a91a4c56d2e62393a7bc11fed11b",
+  "width": 5472,
+  "height": 3648,
+  "downloadSha256": "653a7bb7e9ea50fc80f98960f4c79c26700924ba920b7467b09e8f10c5d92c17",
+  "sha256": "84fee481ceb443e4441ec00e6923d729fb2a06250cf60aa7b94c307ab8d2acb5",
+  "storedFile": "research/new-source-0.9.0/development/59356852.png",
+  "storedWidth": 384,
+  "storedHeight": 256,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

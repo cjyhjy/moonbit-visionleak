@@ -1,0 +1,14 @@
+{
+  "status": "preparing-local-candidate",
+  "version": "0.9.0",
+  "githubRepository": "cjyhjy/moonbit-visionleak",
+  "tag": "v0.9.0",
+  "remoteDefaultPackageVersionObserved": "0.8.0",
+  "latestPublicReleaseObserved": "v0.8.0",
+  "latestPublicReleasePublishedAt": "2026-11-04T07:10:10Z",
+  "targetTagObserved": "not-found-HTTP404",
+  "publicPublicationPerformed": false,
+  "publicationApprovalReceivedFor090": false,
+  "localCandidateRepository": "/private/tmp/visionleak-0.9.0-publication",
+  "scope": "Prepare a concrete reviewable candidate and final acceptance before asking for irreversible publication approval. Prior0.8 approval is not reused."
+}

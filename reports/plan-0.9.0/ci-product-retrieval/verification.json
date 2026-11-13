@@ -1,0 +1,404 @@
+{
+  "schemaVersion": "visionleak-ci-v1",
+  "startedAt": "2026-11-08T18:52:20.005Z",
+  "status": "passed",
+  "environment": {
+    "node": "v26.7.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "moon": "moon 0.1.20261012 (748b63c 2026-10-12) ~/Documents/ChatGPT/黑客松新项目/projects/visionleak/.toolchain/bin/moon\nmoonc v0.10.15+943464bfa (2026-10-12) ~/Documents/ChatGPT/黑客松新项目/projects/visionleak/.toolchain/bin/moonc\nmoonrun 0.1.20261012 (748b63c 2026-10-12) ~/Documents/ChatGPT/黑客松新项目/projects/visionleak/.toolchain/bin/moonrun\n\nFeature flags enabled: rr_moon_mod,rr_moon_pkg"
+  },
+  "commit": null,
+  "runUrl": null,
+  "checks": [
+    {
+      "id": "toolchain",
+      "command": [
+        "./tools/moon",
+        "version",
+        "--all"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 54,
+      "log": "toolchain.log"
+    },
+    {
+      "id": "format",
+      "command": [
+        "./tools/moon",
+        "fmt",
+        "--check"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 143,
+      "log": "format.log"
+    },
+    {
+      "id": "check-js",
+      "command": [
+        "./tools/moon",
+        "check",
+        "--target",
+        "js"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 153,
+      "log": "check-js.log"
+    },
+    {
+      "id": "build-js",
+      "command": [
+        "./tools/moon",
+        "build",
+        "--target",
+        "js",
+        "--release"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 74,
+      "log": "build-js.log"
+    },
+    {
+      "id": "test-js",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "js"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 1409,
+      "log": "test-js.log"
+    },
+    {
+      "id": "check-wasm-gc",
+      "command": [
+        "./tools/moon",
+        "check",
+        "--target",
+        "wasm-gc"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 140,
+      "log": "check-wasm-gc.log"
+    },
+    {
+      "id": "build-wasm-gc",
+      "command": [
+        "./tools/moon",
+        "build",
+        "--target",
+        "wasm-gc",
+        "--release"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 197,
+      "log": "build-wasm-gc.log"
+    },
+    {
+      "id": "test-wasm-gc",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "wasm-gc"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 1155,
+      "log": "test-wasm-gc.log"
+    },
+    {
+      "id": "check-native",
+      "command": [
+        "./tools/moon",
+        "check",
+        "--target",
+        "native"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 140,
+      "log": "check-native.log"
+    },
+    {
+      "id": "build-native-test-executable",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "native",
+        "--release",
+        "--build-only"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 3674,
+      "log": "build-native-test-executable.log"
+    },
+    {
+      "id": "test-native-release",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "native",
+        "--release"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 1836,
+      "log": "test-native-release.log"
+    },
+    {
+      "id": "test-native",
+      "command": [
+        "./tools/moon",
+        "test",
+        "--target",
+        "native"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 2836,
+      "log": "test-native.log"
+    },
+    {
+      "id": "runtime-build",
+      "command": [
+        "node",
+        "tools/build.mjs"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 104,
+      "log": "runtime-build.log"
+    },
+    {
+      "id": "node-integration",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 6704,
+      "log": "node-integration.log"
+    },
+    {
+      "id": "orb-integration",
+      "command": [
+        "/private/tmp/visionleak-orb-090/bin/python",
+        "tools/validate-orb-integration.py",
+        "--out",
+        ".ci-artifacts/orb-regression-1794163958739"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 65083,
+      "log": "orb-integration.log"
+    },
+    {
+      "id": "native-retrieval-performance",
+      "command": [
+        "/private/tmp/visionleak-orb-090/bin/python",
+        "tools/benchmark-native.py",
+        "--out",
+        ".ci-artifacts/native-performance-1794164023822"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 15314,
+      "log": "native-retrieval-performance.log"
+    },
+    {
+      "id": "bounded-scale",
+      "command": [
+        "node",
+        "tools/benchmark-integration.mjs",
+        ".ci-artifacts/scale-1794164039136",
+        "1000"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 4651,
+      "log": "bounded-scale.log"
+    },
+    {
+      "id": "mooncakes-compatibility",
+      "command": [
+        "/private/tmp/visionleak-orb-090/bin/python",
+        "tests/mooncakes-dry-run.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 33,
+      "log": "mooncakes-compatibility.log"
+    },
+    {
+      "id": "mooncakes-package",
+      "command": [
+        "/private/tmp/visionleak-orb-090/bin/python",
+        "tests/mooncakes-package.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 141,
+      "log": "mooncakes-package.log"
+    },
+    {
+      "id": "release-contract",
+      "command": [
+        "/private/tmp/visionleak-orb-090/bin/python",
+        "tests/release-contract.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 60,
+      "log": "release-contract.log"
+    },
+    {
+      "id": "evaluation-compatibility",
+      "command": [
+        "/private/tmp/visionleak-orb-090/bin/python",
+        "tests/evaluation-compatibility.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 50,
+      "log": "evaluation-compatibility.log"
+    },
+    {
+      "id": "report-history",
+      "command": [
+        "/private/tmp/visionleak-orb-090/bin/python",
+        "tests/report-history.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 1133,
+      "log": "report-history.log"
+    },
+    {
+      "id": "metric-regression",
+      "command": [
+        "/private/tmp/visionleak-orb-090/bin/python",
+        "tests/oracle-metrics.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 1022,
+      "log": "metric-regression.log"
+    },
+    {
+      "id": "crop-reference",
+      "command": [
+        "/private/tmp/visionleak-orb-090/bin/python",
+        "tests/crop-reference.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 252,
+      "log": "crop-reference.log"
+    },
+    {
+      "id": "frozen-source-integrity",
+      "command": [
+        "/private/tmp/visionleak-orb-090/bin/python",
+        "tools/frozen_post_review.py"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 27,
+      "log": "frozen-source-integrity.log"
+    },
+    {
+      "id": "known-source-regression",
+      "command": [
+        "/private/tmp/visionleak-orb-090/bin/python",
+        "tools/evaluate-post-review.py",
+        "--regression",
+        "--out",
+        ".ci-artifacts/post-review-regression-1794164046506"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 6910,
+      "log": "known-source-regression.log"
+    },
+    {
+      "id": "imagehash-oracle",
+      "command": [
+        "/private/tmp/visionleak-orb-090/bin/python",
+        "tools/evaluate.py",
+        "--out",
+        ".ci-artifacts/evaluation.json"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 3250,
+      "log": "imagehash-oracle.log"
+    },
+    {
+      "id": "mirror-oracle",
+      "command": [
+        "/private/tmp/visionleak-orb-090/bin/python",
+        "tools/evaluate-mirrors.py",
+        "--out",
+        ".ci-artifacts/mirror-evaluation.json"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 1715,
+      "log": "mirror-oracle.log"
+    },
+    {
+      "id": "photo-development",
+      "command": [
+        "/private/tmp/visionleak-orb-090/bin/python",
+        "tools/evaluate-photos.py",
+        "--partition",
+        "development",
+        "--out",
+        ".ci-artifacts/photos-development",
+        "--include-orientations",
+        "--replace"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 14691,
+      "log": "photo-development.log"
+    },
+    {
+      "id": "photo-holdout",
+      "command": [
+        "/private/tmp/visionleak-orb-090/bin/python",
+        "tools/evaluate-photos.py",
+        "--partition",
+        "holdout",
+        "--out",
+        ".ci-artifacts/photos-holdout",
+        "--include-orientations",
+        "--replace"
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "elapsedMs": 14392,
+      "log": "photo-holdout.log"
+    }
+  ],
+  "scope": "Fresh source build, three MoonBit backends, Node CLI/HTTP, independent ImageHash and exhaustive index oracle. Browser screenshots and ZIP reports remain historical.",
+  "sourceDigest": "3bf9beecf951bbbdc7a181ca7dde5385444fa55f3bf524fe44bd2f5acb0177bf",
+  "compiledArtifact": {
+    "sha256": "6756037841f407f9afabfeb290bdd805b6f3909df237ea91bdfc9afb07e64d16",
+    "matchesCommitted": true
+  },
+  "finishedAt": "2026-11-08T18:54:47.493Z"
+}

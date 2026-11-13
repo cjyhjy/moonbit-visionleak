@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "count": 1000,
+  "sourceDigest": "cb0bfa505359fd70fb6704b87a33ee17c5c2a464522fc8e21bf9d27e1f6f2f56",
+  "reportHashes": {
+    "default": "50a4f33fad33c42dc76a74bfda672b10801689a3c8e84308490c0f94013eb015",
+    "retrieval-cold-final": "baaf3cbef5f9cd40a1d4d8f2cf0971905d85c82ff77f4d64e492c21c03df07be",
+    "retrieval-warm": "9d7a3dfc9e783d66fd36575848f35cc2e25fc96dd24aa7c19dcde401e1a32610",
+    "retrieval-resumed-final": "287b1aaeb7ee52d4e9d363891a86c17ee66fbc6eb7cc55fa649f2df67bab91a5"
+  },
+  "identities": {
+    "default": "8ea7f03fba205bd308aa4302fb571690d09581433f3d810d848a71cc33161bc7",
+    "retrieval-cold-final": "62b22a6ff3902e9c1c293ce77fbda37a74f8f2ac7f2230b1fec12ae469e4df44",
+    "retrieval-warm": "62b22a6ff3902e9c1c293ce77fbda37a74f8f2ac7f2230b1fec12ae469e4df44",
+    "retrieval-resumed-final": "62b22a6ff3902e9c1c293ce77fbda37a74f8f2ac7f2230b1fec12ae469e4df44"
+  },
+  "verifierSha256": "a037ce0fae2d401f6f6d4eb91aaebdc3576d2f074ceb4198a4efc27f6edb87f0",
+  "scope": "Full report validation/identity, manifest image binding, final identity parity, conservative coverage and real interrupted-host/feature reuse receipts. No accuracy or new mid-geometry crash guarantee."
+}

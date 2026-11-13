@@ -1,0 +1,512 @@
+
+> visionleak@0.9.0 test
+> node --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: installed capability contract agrees with real parser bounds, artifact and package
+ok 1 - installed capability contract agrees with real parser bounds, artifact and package
+  ---
+  duration_ms: 1039.21203
+  type: 'test'
+  ...
+# Subtest: real CLI separates byte equality from decoded pixel equality, preserves input, and binds stable audit IDs
+ok 2 - real CLI separates byte equality from decoded pixel equality, preserves input, and binds stable audit IDs
+  ---
+  duration_ms: 1851.027864
+  type: 'test'
+  ...
+# Subtest: decode plus real core follows EXIF orientation and canonical white alpha semantics
+ok 3 - decode plus real core follows EXIF orientation and canonical white alpha semantics
+  ---
+  duration_ms: 43.119829
+  type: 'test'
+  ...
+# Subtest: a bad image and a symlink leave reviewable partial evidence and explicit errors
+ok 4 - a bad image and a symlink leave reviewable partial evidence and explicit errors
+  ---
+  duration_ms: 615.380018
+  type: 'test'
+  ...
+# Subtest: image, pixel, file, total-pixel, comparison, and output budgets are observable
+ok 5 - image, pixel, file, total-pixel, comparison, and output budgets are observable
+  ---
+  duration_ms: 3451.539658
+  type: 'test'
+  ...
+# Subtest: fatal arguments and empty roots return structured errors without creating a report
+ok 6 - fatal arguments and empty roots return structured errors without creating a report
+  ---
+  duration_ms: 2915.536713
+  type: 'test'
+  ...
+# Subtest: overwrite is explicit and refuses unrelated files even with --force
+ok 7 - overwrite is explicit and refuses unrelated files even with --force
+  ---
+  duration_ms: 2480.900334
+  type: 'test'
+  ...
+# Subtest: exported API merges partial options, validates them, and audit identity includes scan scope and errors
+ok 8 - exported API merges partial options, validates them, and audit identity includes scan scope and errors
+  ---
+  duration_ms: 192.018572
+  type: 'test'
+  ...
+# Subtest: loopback server serves only fixed assets and one report, and denies traversal, symlinks, writes, and foreign hosts
+ok 9 - loopback server serves only fixed assets and one report, and denies traversal, symlinks, writes, and foreign hosts
+  ---
+  duration_ms: 662.654341
+  type: 'test'
+  ...
+# Subtest: symlinked output ancestry is rejected before creating directories in the dataset
+ok 10 - symlinked output ancestry is rejected before creating directories in the dataset
+  ---
+  duration_ms: 9.630913
+  type: 'test'
+  ...
+# Subtest: server rejects altered stable report fields even when the old auditId is retained
+ok 11 - server rejects altered stable report fields even when the old auditId is retained
+  ---
+  duration_ms: 31.282687
+  type: 'test'
+  ...
+# Subtest: opt-in mirror CLI emits review candidates from actual reflected files and binds mode to identity
+ok 12 - opt-in mirror CLI emits review candidates from actual reflected files and binds mode to identity
+  ---
+  duration_ms: 724.501044
+  type: 'test'
+  ...
+# Subtest: opt-in rotations audit physical rotated and rotated-reflected files without making exact groups
+ok 13 - opt-in rotations audit physical rotated and rotated-reflected files without making exact groups
+  ---
+  duration_ms: 656.944246
+  type: 'test'
+  ...
+# Subtest: compiled JSON and bytes exports preserve the host protocol
+ok 14 - compiled JSON and bytes exports preserve the host protocol
+  ---
+  duration_ms: 16.446506
+  type: 'test'
+  ...
+# Subtest: incremental SHA-256 opaque JS state accepts Buffer chunks and matches Node crypto
+ok 15 - incremental SHA-256 opaque JS state accepts Buffer chunks and matches Node crypto
+  ---
+  duration_ms: 29.982314
+  type: 'test'
+  ...
+# Subtest: 20 local integral-image fingerprints match independent direct pixel box sums
+ok 16 - 20 local integral-image fingerprints match independent direct pixel box sums
+  ---
+  duration_ms: 42.030318
+  type: 'test'
+  ...
+# Subtest: actual CLI offset/aspect crops remain candidates, enter gate, validate and never form exact groups
+ok 17 - actual CLI offset/aspect crops remain candidates, enter gate, validate and never form exact groups
+  ---
+  duration_ms: 1983.433475
+  type: 'test'
+  ...
+# Subtest: local-only evidence is skipped by deterministic verify and cannot trigger the pixel gate
+ok 18 - local-only evidence is skipped by deterministic verify and cannot trigger the pixel gate
+  ---
+  duration_ms: 14.431424
+  type: 'test'
+  ...
+# Subtest: thumbnail sources are local and cannot traverse or execute URLs
+ok 19 - thumbnail sources are local and cannot traverse or execute URLs
+  ---
+  duration_ms: 5.13594
+  type: 'test'
+  ...
+# Subtest: validation is atomic and review export roundtrips without modifying machine evidence
+ok 20 - validation is atomic and review export roundtrips without modifying machine evidence
+  ---
+  duration_ms: 31.179038
+  type: 'test'
+  ...
+# Subtest: filters compose evidence, human decision, path, split, and maximum distance
+ok 21 - filters compose evidence, human decision, path, split, and maximum distance
+  ---
+  duration_ms: 30.588922
+  type: 'test'
+  ...
+# Subtest: an imported report cannot reuse another audit server thumbnails
+ok 22 - an imported report cannot reuse another audit server thumbnails
+  ---
+  duration_ms: 2.193156
+  type: 'test'
+  ...
+# Subtest: progress distinguishes unreviewed and unsure pairs inside the current scope
+ok 23 - progress distinguishes unreviewed and unsure pairs inside the current scope
+  ---
+  duration_ms: 2.792993
+  type: 'test'
+  ...
+# Subtest: next pending navigation wraps inside the filtered queue and skips reviewed/current pairs
+ok 24 - next pending navigation wraps inside the filtered queue and skips reviewed/current pairs
+  ---
+  duration_ms: 4.446313
+  type: 'test'
+  ...
+# Subtest: marking a filtered pair continues after its old position instead of returning to the beginning
+ok 25 - marking a filtered pair continues after its old position instead of returning to the beginning
+  ---
+  duration_ms: 24.328939
+  type: 'test'
+  ...
+# Subtest: one-step undo removes a new mark and restores an earlier decision including its note
+ok 26 - one-step undo removes a new mark and restores an earlier decision including its note
+  ---
+  duration_ms: 10.646758
+  type: 'test'
+  ...
+# Subtest: undo cannot erase later notes, imported changes, another audit, or unrelated pair reviews
+ok 27 - undo cannot erase later notes, imported changes, another audit, or unrelated pair reviews
+  ---
+  duration_ms: 3.263736
+  type: 'test'
+  ...
+# Subtest: doctor default checks installed runtime without optional Python
+ok 28 - doctor default checks installed runtime without optional Python
+  ---
+  duration_ms: 307.75276
+  type: 'test'
+  ...
+# Subtest: doctor diagnoses absent Sharp and Core from dependency-free bootstrap
+ok 29 - doctor diagnoses absent Sharp and Core from dependency-free bootstrap
+  ---
+  duration_ms: 212.049261
+  type: 'test'
+  ...
+# Subtest: doctor gives executable environment setup for missing Python
+ok 30 - doctor gives executable environment setup for missing Python
+  ---
+  duration_ms: 11.449802
+  type: 'test'
+  ...
+# Subtest: public audit API remains importable from Node stdin entry point
+ok 31 - public audit API remains importable from Node stdin entry point
+  ---
+  duration_ms: 503.300709
+  type: 'test'
+  ...
+# Subtest: 12MP JPEG byte copy and lossless reencoding keep full-resolution pixel identity
+ok 32 - 12MP JPEG byte copy and lossless reencoding keep full-resolution pixel identity
+  ---
+  duration_ms: 6021.206673
+  type: 'test'
+  ...
+# Subtest: sampling budget changes perception size while source decode and total budgets remain hard bounds
+ok 33 - sampling budget changes perception size while source decode and total budgets remain hard bounds
+  ---
+  duration_ms: 84.716015
+  type: 'test'
+  ...
+# Subtest: released 0.7.0: identical ordered full/partial outputs, accounting and independent candidates
+ok 34 - released 0.7.0: identical ordered full/partial outputs, accounting and independent candidates
+  ---
+  duration_ms: 3655.895971
+  type: 'test'
+  ...
+# Subtest: mirror host adapter routes to the compiled optional export
+ok 35 - mirror host adapter routes to the compiled optional export
+  ---
+  duration_ms: 25.545547
+  type: 'test'
+  ...
+# Subtest: MIH active path matches independent exhaustive pairs for every radius 0..7, including edits spread across all segments
+ok 36 - MIH active path matches independent exhaustive pairs for every radius 0..7, including edits spread across all segments
+  ---
+  duration_ms: 408.286672
+  type: 'test'
+  ...
+# Subtest: MIH local index retains cross-scale witnesses and exact evidence precedence
+ok 37 - MIH local index retains cross-scale witnesses and exact evidence precedence
+  ---
+  duration_ms: 71.836476
+  type: 'test'
+  ...
+# Subtest: combined scan preserves legacy local API and independent canonical digest across block boundaries
+ok 38 - combined scan preserves legacy local API and independent canonical digest across block boundaries
+  ---
+  duration_ms: 108.714022
+  type: 'test'
+  ...
+# Subtest: ORB cache binds configuration and rejects damaged entries
+ok 39 - ORB cache binds configuration and rejects damaged entries
+  ---
+  duration_ms: 104.683095
+  type: 'test'
+  ...
+# Subtest: ORB cache enforces disk quota without discarding completed work
+ok 40 - ORB cache enforces disk quota without discarding completed work
+  ---
+  duration_ms: 85.024112
+  type: 'test'
+  ...
+# Subtest: OS cache lock releases after a writer dies and serializes competing processes
+ok 41 - OS cache lock releases after a writer dies and serializes competing processes
+  ---
+  duration_ms: 1506.078873
+  type: 'test'
+  ...
+# Subtest: independent OS lock brokers cannot overcommit a shared cache shard
+ok 42 - independent OS lock brokers cannot overcommit a shared cache shard
+  ---
+  duration_ms: 105.613674
+  type: 'test'
+  ...
+# Subtest: packed index selections match frozen Map-posting research semantics, ties and exclusions
+ok 43 - packed index selections match frozen Map-posting research semantics, ties and exclusions
+  ---
+  duration_ms: 55.200338
+  type: 'test'
+  ...
+# Subtest: packed index rejects incomplete input and stops before spending beyond posting budget
+ok 44 - packed index rejects incomplete input and stops before spending beyond posting budget
+  ---
+  duration_ms: 13.452784
+  type: 'test'
+  ...
+# Subtest: research LSH postings agree with independent descriptor-pair bucket enumeration
+ok 45 - research LSH postings agree with independent descriptor-pair bucket enumeration
+  ---
+  duration_ms: 71.316483
+  type: 'test'
+  ...
+# Subtest: posting-budget recovery advances durable query cursor and reuses a completed queue
+ok 46 - posting-budget recovery advances durable query cursor and reuses a completed queue
+  ---
+  duration_ms: 1323.470955
+  type: 'test'
+  ...
+# Subtest: ORB grayscale uses product white-alpha composition and integer BT.601
+ok 47 - ORB grayscale uses product white-alpha composition and integer BT.601
+  ---
+  duration_ms: 2.732852
+  type: 'test'
+  ...
+# Subtest: actual OpenCV feature overshoot is capped before worker hashing and cache transport
+ok 48 - actual OpenCV feature overshoot is capped before worker hashing and cache transport
+  ---
+  duration_ms: 677.951276
+  type: 'test'
+  ...
+# Subtest: default audit needs no ORB dependency; missing opt-in worker preserves exact evidence
+ok 49 - default audit needs no ORB dependency; missing opt-in worker preserves exact evidence
+  ---
+  duration_ms: 276.181528
+  type: 'test'
+  ...
+# Subtest: worker deadline and cancellation kill an unresponsive process; memory guard is fail-closed
+ok 50 - worker deadline and cancellation kill an unresponsive process; memory guard is fail-closed
+  ---
+  duration_ms: 226.105263
+  type: 'test'
+  ...
+# Subtest: real ORB audit binds witnesses, cache-independent identity, review, export and exact-only verify
+ok 51 - real ORB audit binds witnesses, cache-independent identity, review, export and exact-only verify
+  ---
+  duration_ms: 1060.564236
+  type: 'test'
+  ...
+# Subtest: real ORB obeys each independent budget and keeps deterministic coverage
+ok 52 - real ORB obeys each independent budget and keeps deterministic coverage
+  ---
+  duration_ms: 1788.705063
+  type: 'test'
+  ...
+# Subtest: ORB cached scans resume completed negative directions and retain final witnesses
+ok 53 - ORB cached scans resume completed negative directions and retain final witnesses
+  ---
+  duration_ms: 3602.654402
+  type: 'test'
+  ...
+# Subtest: disk-backed ORB crosses the 512-image boundary without losing late cross-batch evidence
+ok 54 - disk-backed ORB crosses the 512-image boundary without losing late cross-batch evidence
+  ---
+  duration_ms: 3430.464577
+  type: 'test'
+  ...
+# Subtest: production retrieval verifies its selected queue while preserving non-exhaustive coverage, identity and export
+ok 55 - production retrieval verifies its selected queue while preserving non-exhaustive coverage, identity and export
+  ---
+  duration_ms: 2364.409224
+  type: 'test'
+  ...
+# Subtest: retrieval direction budget resumes selected geometry without losing completed queue work
+ok 56 - retrieval direction budget resumes selected geometry without losing completed queue work
+  ---
+  duration_ms: 2808.426736
+  type: 'test'
+  ...
+# Subtest: complete staged MIH results preserve ordered evidence, tied witnesses and groups
+ok 57 - complete staged MIH results preserve ordered evidence, tied witnesses and groups
+  ---
+  duration_ms: 2329.683004
+  type: 'test'
+  ...
+# Subtest: known photo regressions preserve each ordered pair and local witness
+ok 58 - known photo regressions preserve each ordered pair and local witness
+  ---
+  duration_ms: 958.573721
+  type: 'test'
+  ...
+# Subtest: orientation host adapter routes booleans and bytes to the optional core export
+ok 59 - orientation host adapter routes booleans and bytes to the optional core export
+  ---
+  duration_ms: 25.806892
+  type: 'test'
+  ...
+# Subtest: staged mirror audit preserves the complete 0.3.0 evidence set and exact components
+ok 60 - staged mirror audit preserves the complete 0.3.0 evidence set and exact components
+  ---
+  duration_ms: 129.75121
+  type: 'test'
+  ...
+# Subtest: fail-on implements fatal > hit > incomplete > complete and preserves default behavior
+ok 61 - fail-on implements fatal > hit > incomplete > complete and preserves default behavior
+  ---
+  duration_ms: 5379.365486
+  type: 'test'
+  ...
+# Subtest: fail-on exact ignores pixel-only pairs and pixel ignores candidate-only pairs
+ok 62 - fail-on exact ignores pixel-only pairs and pixel ignores candidate-only pairs
+  ---
+  duration_ms: 1885.818301
+  type: 'test'
+  ...
+# Subtest: verify detects changed and missing evidence and refuses a tampered report before dataset access
+ok 63 - verify detects changed and missing evidence and refuses a tampered report before dataset access
+  ---
+  duration_ms: 2408.993314
+  type: 'test'
+  ...
+# Subtest: verify never follows a report traversal or a symlink to a file outside the dataset
+ok 64 - verify never follows a report traversal or a symlink to a file outside the dataset
+  ---
+  duration_ms: 1263.978697
+  type: 'test'
+  ...
+# Subtest: coverage binds canonical splits, rejected codes, ignored files, and budget exhaustion
+ok 65 - coverage binds canonical splits, rejected codes, ignored files, and budget exhaustion
+  ---
+  duration_ms: 86.321227
+  type: 'test'
+  ...
+# Subtest: CSV matches the manually enumerated exact-group keep/remove plan
+ok 66 - CSV matches the manually enumerated exact-group keep/remove plan
+  ---
+  duration_ms: 1163.413493
+  type: 'test'
+  ...
+# Subtest: candidate suggestions require a validated confirmed review and HTML safely includes current review
+ok 67 - candidate suggestions require a validated confirmed review and HTML safely includes current review
+  ---
+  duration_ms: 2231.98414
+  type: 'test'
+  ...
+# Subtest: the committed GitHub Action leak fixture fails the actual local audit command
+ok 68 - the committed GitHub Action leak fixture fails the actual local audit command
+  ---
+  duration_ms: 589.607166
+  type: 'test'
+  ...
+# Subtest: late exact duplicates survive zero perceptual budget; exact and output budgets remain binding
+ok 69 - late exact duplicates survive zero perceptual budget; exact and output budgets remain binding
+  ---
+  duration_ms: 26.201946
+  type: 'test'
+  ...
+# Subtest: overall coverage excludes skipped phases while exhaustion names the actual phase and input
+ok 70 - overall coverage excludes skipped phases while exhaustion names the actual phase and input
+  ---
+  duration_ms: 21.392492
+  type: 'test'
+  ...
+# Subtest: CSV quoted paths, aliases, file scope, raw identity binding and revalidation
+ok 71 - CSV quoted paths, aliases, file scope, raw identity binding and revalidation
+  ---
+  duration_ms: 160.897584
+  type: 'test'
+  ...
+# Subtest: cache is content/config keyed, result-identical, corruption-tolerant and budget-aware
+ok 72 - cache is content/config keyed, result-identical, corruption-tolerant and budget-aware
+  ---
+  duration_ms: 243.537788
+  type: 'test'
+  ...
+# Subtest: experimental review ordering preserves every evidence pair, prioritizes support, and bounds work
+ok 73 - experimental review ordering preserves every evidence pair, prioritizes support, and bounds work
+  ---
+  duration_ms: 69.100482
+  type: 'test'
+  ...
+# Subtest: content identity accepts v0.1.0 reports and reviewed exports without rebinding evidence
+ok 74 - content identity accepts v0.1.0 reports and reviewed exports without rebinding evidence
+  ---
+  duration_ms: 56.187103
+  type: 'test'
+  ...
+# Subtest: v2 canonical identity survives object-key reorder but binds array order and unknown fields
+ok 75 - v2 canonical identity survives object-key reorder but binds array order and unknown fields
+  ---
+  duration_ms: 23.960692
+  type: 'test'
+  ...
+# Subtest: MoonBit identity matches an independent ECMAScript canonicalization oracle for extension fields
+ok 76 - MoonBit identity matches an independent ECMAScript canonicalization oracle for extension fields
+  ---
+  duration_ms: 86.814462
+  type: 'test'
+  ...
+# Subtest: batch review is atomic, preserves notes, and undo refuses intervening edits
+ok 77 - batch review is atomic, preserves notes, and undo refuses intervening edits
+  ---
+  duration_ms: 45.385428
+  type: 'test'
+  ...
+# Subtest: transfer accepts content-preserving renames across audit IDs and refuses changed content, split or evidence
+ok 78 - transfer accepts content-preserving renames across audit IDs and refuses changed content, split or evidence
+  ---
+  duration_ms: 203.761157
+  type: 'test'
+  ...
+# Subtest: ORB review binding retains the full witness, not just pair IDs or inlier count
+ok 79 - ORB review binding retains the full witness, not just pair IDs or inlier count
+  ---
+  duration_ms: 70.51111
+  type: 'test'
+  ...
+# Subtest: public JS pixel adapter rejects inputs that the compiled ABI could coerce
+ok 80 - public JS pixel adapter rejects inputs that the compiled ABI could coerce
+  ---
+  duration_ms: 6.279062
+  type: 'test'
+  ...
+# Subtest: public JS pixel adapter accepts Uint8Array and the Buffer decoder output
+ok 81 - public JS pixel adapter accepts Uint8Array and the Buffer decoder output
+  ---
+  duration_ms: 23.644113
+  type: 'test'
+  ...
+# Subtest: all split alias combinations normalize splits while preserving actual paths and directory scope
+ok 82 - all split alias combinations normalize splits while preserving actual paths and directory scope
+  ---
+  duration_ms: 419.476432
+  type: 'test'
+  ...
+# Subtest: simultaneous aliases are fatal before output creation instead of merging dataset splits
+ok 83 - simultaneous aliases are fatal before output creation instead of merging dataset splits
+  ---
+  duration_ms: 14.427301
+  type: 'test'
+  ...
+1..83
+# tests 83
+# suites 0
+# pass 83
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 30261.050592

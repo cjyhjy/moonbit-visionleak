@@ -1,0 +1,7 @@
+{
+  "status": "prepared-not-pushed",
+  "branch": "codex/release-0.9.0",
+  "path": "/private/tmp/visionleak-0.9.0-publication",
+  "copiedFiles": 5191,
+  "scope": "Only currentVisionLeak project files; no parent projects/.git/cache/dependencies. Natural benchmark image files filtered by candidate packaging rules. Explicit compiledCore copied. No remote mutation."
+}

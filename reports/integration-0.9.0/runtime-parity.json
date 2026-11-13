@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "fullResolutionTrialSourceDigest": "07e63417181d0bf8cb11f1f02e06cb2ca9a7f891579cbf8d52e89593e67f6c70",
+  "candidateSourceDigest": "79317cd6b05ad364a00efc0bc26c250fbf91ba977cf18594e4b602bf81be033c",
+  "coveredRuntimeFiles": {
+    "dist/visionleak.js": "ec93ead0ab016a676dc98a109824a6ec4ebf3779f8ae8bd563611e5ff7349097",
+    "tools/orb-worker.py": "5d18de7349aad5b8de01e6a66af81cbc9fb0dd03320d5a0054637419a414a11d",
+    "tools/orb.mjs": "61460c5fcb453b4d88a585153afcf1c9dd5acf11b21cb9741f633fc1b0db56ec",
+    "tools/orb-cache.mjs": "b1df31f3c7ea2ba06a7cd924f0cb768b2603400fd0b353caec4386da6cc5b0a5",
+    "tools/orb-cache-lock.mjs": "b7b89ea11d5053c1c58e823d867ae7c23f7e78b23947b2ac3ab2b2c72514f2b8",
+    "tools/orb-cache-lock.py": "e085b9d0b4359bd42d757a65386ce7a832d63be5742902e6aceb09aae2450730",
+    "tools/audit-cli.mjs": "7099cf4358eabdefbdf4299f4f9e658878b3b2a51d49ebf0f75c9bbf7e31967b",
+    "tools/cli.mjs": "c75712183b8b5e202a26feec8bde5960d1c26650baaa5015e77692020bb8141a",
+    "tools/orb-profile.json": "08e291f33dd229862e277955fe2bb8bfddb39c1b21b92821a83e4e7a4db7e255",
+    "tools/decode.mjs": "c2198fb88e64e7ca24b6253cac9780d6b18af51757c2dcf1621921ceec7f9300",
+    "tools/validate-orb-integration.py": "751861a740f164adac9ecd4d065261cf05ceccd03d1d4bf0943f85e929a7ea1c",
+    "research/followup-quality/experiment.py": "b7c77554258efff12cb8f43330a3ebb907dd470db1c662d46227f3ad9502ff75",
+    "research/followup-quality/protocol.json": "cfa4f86c3ae2bd60f511144660a2f165aa421ff1385ec98dd498da5e66ba2d18"
+  },
+  "scope": "Critical Core/host/decoder/cache/profile bytes are identical between actual full-resolution trial and0.9.0 candidate CI; source changes are release metadata and packaging contract. Retrieval implementation separately checked against full-trial report profile.",
+  "retrievalImplementationDigest": "d792405ee788d7f833044d06e26681198e87b3d4b057b96dfe94c7d542180462"
+}

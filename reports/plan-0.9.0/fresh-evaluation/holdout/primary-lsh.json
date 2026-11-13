@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "vl-orb-lsh-feasibility-v1",
+  "reportSha256": "15b3993ce60d044ee94c7e9f0833113e5b9260495a2d68d7d89a47d6adcb0e64",
+  "configuration": {
+    "bits": 24,
+    "tables": 4,
+    "seed": "vl-orb-lsh-v1",
+    "minimumVotes": 1,
+    "selection": "symmetric union top-k, one vote per query descriptor/image across all tables; Core pairs excluded"
+  },
+  "measurements": {
+    "buildMs": 46.85012500000005,
+    "queryMs": 151.77949999999998,
+    "descriptors": 130128,
+    "buckets": 261055,
+    "postingVisits": 1726622,
+    "lookups": 520512,
+    "hostPeakRssBytes": 177209344
+  },
+  "results": [
+    {
+      "k": 1,
+      "eligiblePairs": 3384,
+      "selectedPairs": 144,
+      "pairReduction": 23.5,
+      "referencePositivePairs": 71,
+      "recalled": 71,
+      "recall": 1,
+      "pairWilson95DescriptiveOnly": [
+        0.9486720478031097,
+        1
+      ],
+      "missed": []
+    },
+    {
+      "k": 5,
+      "eligiblePairs": 3384,
+      "selectedPairs": 734,
+      "pairReduction": 4.610354223433243,
+      "referencePositivePairs": 71,
+      "recalled": 71,
+      "recall": 1,
+      "pairWilson95DescriptiveOnly": [
+        0.9486720478031097,
+        1
+      ],
+      "missed": []
+    },
+    {
+      "k": 10,
+      "eligiblePairs": 3384,
+      "selectedPairs": 1446,
+      "pairReduction": 2.340248962655602,
+      "referencePositivePairs": 71,
+      "recalled": 71,
+      "recall": 1,
+      "pairWilson95DescriptiveOnly": [
+        0.9486720478031097,
+        1
+      ],
+      "missed": []
+    },
+    {
+      "k": 25,
+      "eligiblePairs": 3384,
+      "selectedPairs": 3256,
+      "pairReduction": 1.0393120393120394,
+      "referencePositivePairs": 71,
+      "recalled": 71,
+      "recall": 1,
+      "pairWilson95DescriptiveOnly": [
+        0.9486720478031097,
+        1
+      ],
+      "missed": []
+    }
+  ],
+  "scope": "Research-only fixed bit projections; complete ORB-only emitted positives are reference. Pair-level Wilson intervals are descriptive and ignore same-source correlation; not source-population confidence. No product acceleration or natural-contamination claim. Run each configuration in a fresh Node process."
+}

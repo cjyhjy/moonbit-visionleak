@@ -53,7 +53,7 @@ fn workflow_offline_metadata(report : Json, maximum : Int32) -> Json {
   } else {
     report
   }
-  {
+  let result : Json = {
     "ok": true,
     "metadata": {
       "schemaVersion": "visionleak-offline-v1",
@@ -65,4 +65,11 @@ fn workflow_offline_metadata(report : Json, maximum : Int32) -> Json {
       "report": embedded,
     },
   }
+  let orb_search = field(field(report, "coverage"), "orbSearch")
+  if orb_search is Object(_) {
+    if field(result, "metadata") is Object(fields) {
+      fields["orbSearch"] = orb_search
+    }
+  }
+  result
 }

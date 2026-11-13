@@ -1,0 +1,6 @@
+{"mode": "default-Core", "attempt": 0, "processExitCode": 0, "interrupted": false, "externalWallMilliseconds": 48492, "cacheFileBytes": 0, "reason": null}
+{"mode": "retrieval-cold", "attempt": 0, "processExitCode": 0, "interrupted": false, "externalWallMilliseconds": 64150, "cacheFileBytes": 282837654, "reason": "ORB_PROTOCOL"}
+Traceback (most recent call last):
+  File "/Users/cjy/Documents/ChatGPT/黑客松新项目/projects/visionleak/research/coco-capacity-0.9.0/run.py", line 95, in <module>
+    raise RuntimeError('Non-progress stopping reason retained: ' + str(phase.get('reason')))
+RuntimeError: Non-progress stopping reason retained: ORB_PROTOCOL

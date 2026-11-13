@@ -1,0 +1,22 @@
+{
+  "id": "175885756",
+  "title": "File:Altar of the Pantheon, Rome, Italy.jpg",
+  "family": "Pantheon Rome",
+  "bucket": "similar-building",
+  "partition": "development",
+  "author": "Julian Lupyan",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Altar_of_the_Pantheon,_Rome,_Italy.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Altar_of_the_Pantheon%2C_Rome%2C_Italy.jpg/960px-Altar_of_the_Pantheon%2C_Rome%2C_Italy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/54/Altar_of_the_Pantheon%2C_Rome%2C_Italy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "f1585388382bb0f46e81f7110dcf07a87112f958",
+  "width": 4961,
+  "height": 3915,
+  "downloadSha256": "89ffa6faaa9405b9a80292fa1ff5bc925b0d6d5f601d40965a163327cd3b508c",
+  "sha256": "eea90002ebff4fd695f944967fb21d0dd148ab7a763e6f203162dd543dfb1cc2",
+  "storedFile": "research/new-source-0.9.0/development/175885756.png",
+  "storedWidth": 384,
+  "storedHeight": 303,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

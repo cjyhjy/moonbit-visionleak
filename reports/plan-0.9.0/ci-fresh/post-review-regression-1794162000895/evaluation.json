@@ -1,0 +1,2386 @@
+{
+  "schemaVersion": "visionleak-post-review-evaluation-v1",
+  "evaluatedAt": "2026-11-08T18:20:07.673427+00:00",
+  "freezeSha256": "ed1043e412c352504089dbf569d6f378bc5c35bdfe846b9dc79e1123a36b177a",
+  "sourcesSha256": "1ccdc683fc2e748bcc7006026f23fb34fd0f4920eb7ee6d0e4a60bb8d7054a94",
+  "newSourceFiles": 0,
+  "images": 108,
+  "scores": {
+    "default": {
+      "exact": {
+        "tp": 36,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3276,
+        "precision": 1.0,
+        "recall": 1.0,
+        "falsePositiveRate": 0.0,
+        "falsePositives": [],
+        "falseNegatives": []
+      },
+      "nearOnly": {
+        "tp": 96,
+        "fp": 0,
+        "fn": 144,
+        "tn": 3036,
+        "precision": 1.0,
+        "recall": 0.4,
+        "falsePositiveRate": 0.0,
+        "falsePositives": [],
+        "falseNegatives": [
+          [
+            "test/105538175-byte-copy.png",
+            "validation/105538175-random-crop-b.png"
+          ],
+          [
+            "test/105538175-jpeg45.jpg",
+            "validation/105538175-random-crop-b.png"
+          ],
+          [
+            "test/105538175-random-crop-a.png",
+            "train/105538175-original.png"
+          ],
+          [
+            "test/105538175-random-crop-a.png",
+            "validation/105538175-color.png"
+          ],
+          [
+            "test/105538175-random-crop-a.png",
+            "validation/105538175-pixel-repack.png"
+          ],
+          [
+            "test/105538175-random-crop-a.png",
+            "validation/105538175-random-crop-b.png"
+          ],
+          [
+            "test/105538175-screenshot-border.png",
+            "train/105538175-original.png"
+          ],
+          [
+            "test/105538175-screenshot-border.png",
+            "validation/105538175-color.png"
+          ],
+          [
+            "test/105538175-screenshot-border.png",
+            "validation/105538175-pixel-repack.png"
+          ],
+          [
+            "test/105538175-screenshot-border.png",
+            "validation/105538175-random-crop-b.png"
+          ],
+          [
+            "test/105538175-watermark.png",
+            "validation/105538175-random-crop-b.png"
+          ],
+          [
+            "test/117737596-byte-copy.png",
+            "validation/117737596-random-crop-b.png"
+          ],
+          [
+            "test/117737596-jpeg45.jpg",
+            "validation/117737596-random-crop-b.png"
+          ],
+          [
+            "test/117737596-random-crop-a.png",
+            "train/117737596-original.png"
+          ],
+          [
+            "test/117737596-random-crop-a.png",
+            "validation/117737596-color.png"
+          ],
+          [
+            "test/117737596-random-crop-a.png",
+            "validation/117737596-pixel-repack.png"
+          ],
+          [
+            "test/117737596-random-crop-a.png",
+            "validation/117737596-random-crop-b.png"
+          ],
+          [
+            "test/117737596-screenshot-border.png",
+            "train/117737596-original.png"
+          ],
+          [
+            "test/117737596-screenshot-border.png",
+            "validation/117737596-color.png"
+          ],
+          [
+            "test/117737596-screenshot-border.png",
+            "validation/117737596-pixel-repack.png"
+          ],
+          [
+            "test/117737596-screenshot-border.png",
+            "validation/117737596-random-crop-b.png"
+          ],
+          [
+            "test/117737596-watermark.png",
+            "validation/117737596-random-crop-b.png"
+          ],
+          [
+            "test/147065481-byte-copy.png",
+            "validation/147065481-random-crop-b.png"
+          ],
+          [
+            "test/147065481-jpeg45.jpg",
+            "validation/147065481-random-crop-b.png"
+          ],
+          [
+            "test/147065481-random-crop-a.png",
+            "train/147065481-original.png"
+          ],
+          [
+            "test/147065481-random-crop-a.png",
+            "validation/147065481-color.png"
+          ],
+          [
+            "test/147065481-random-crop-a.png",
+            "validation/147065481-pixel-repack.png"
+          ],
+          [
+            "test/147065481-random-crop-a.png",
+            "validation/147065481-random-crop-b.png"
+          ],
+          [
+            "test/147065481-screenshot-border.png",
+            "train/147065481-original.png"
+          ],
+          [
+            "test/147065481-screenshot-border.png",
+            "validation/147065481-color.png"
+          ],
+          [
+            "test/147065481-screenshot-border.png",
+            "validation/147065481-pixel-repack.png"
+          ],
+          [
+            "test/147065481-screenshot-border.png",
+            "validation/147065481-random-crop-b.png"
+          ],
+          [
+            "test/147065481-watermark.png",
+            "validation/147065481-random-crop-b.png"
+          ],
+          [
+            "test/147381266-byte-copy.png",
+            "validation/147381266-random-crop-b.png"
+          ],
+          [
+            "test/147381266-jpeg45.jpg",
+            "validation/147381266-random-crop-b.png"
+          ],
+          [
+            "test/147381266-random-crop-a.png",
+            "train/147381266-original.png"
+          ],
+          [
+            "test/147381266-random-crop-a.png",
+            "validation/147381266-color.png"
+          ],
+          [
+            "test/147381266-random-crop-a.png",
+            "validation/147381266-pixel-repack.png"
+          ],
+          [
+            "test/147381266-random-crop-a.png",
+            "validation/147381266-random-crop-b.png"
+          ],
+          [
+            "test/147381266-screenshot-border.png",
+            "train/147381266-original.png"
+          ],
+          [
+            "test/147381266-screenshot-border.png",
+            "validation/147381266-color.png"
+          ],
+          [
+            "test/147381266-screenshot-border.png",
+            "validation/147381266-pixel-repack.png"
+          ],
+          [
+            "test/147381266-screenshot-border.png",
+            "validation/147381266-random-crop-b.png"
+          ],
+          [
+            "test/147381266-watermark.png",
+            "validation/147381266-random-crop-b.png"
+          ],
+          [
+            "test/147659458-byte-copy.png",
+            "validation/147659458-random-crop-b.png"
+          ],
+          [
+            "test/147659458-jpeg45.jpg",
+            "validation/147659458-random-crop-b.png"
+          ],
+          [
+            "test/147659458-random-crop-a.png",
+            "train/147659458-original.png"
+          ],
+          [
+            "test/147659458-random-crop-a.png",
+            "validation/147659458-color.png"
+          ],
+          [
+            "test/147659458-random-crop-a.png",
+            "validation/147659458-pixel-repack.png"
+          ],
+          [
+            "test/147659458-random-crop-a.png",
+            "validation/147659458-random-crop-b.png"
+          ],
+          [
+            "test/147659458-screenshot-border.png",
+            "train/147659458-original.png"
+          ],
+          [
+            "test/147659458-screenshot-border.png",
+            "validation/147659458-color.png"
+          ],
+          [
+            "test/147659458-screenshot-border.png",
+            "validation/147659458-pixel-repack.png"
+          ],
+          [
+            "test/147659458-screenshot-border.png",
+            "validation/147659458-random-crop-b.png"
+          ],
+          [
+            "test/147659458-watermark.png",
+            "validation/147659458-random-crop-b.png"
+          ],
+          [
+            "test/153007046-byte-copy.png",
+            "validation/153007046-random-crop-b.png"
+          ],
+          [
+            "test/153007046-jpeg45.jpg",
+            "validation/153007046-random-crop-b.png"
+          ],
+          [
+            "test/153007046-random-crop-a.png",
+            "train/153007046-original.png"
+          ],
+          [
+            "test/153007046-random-crop-a.png",
+            "validation/153007046-color.png"
+          ],
+          [
+            "test/153007046-random-crop-a.png",
+            "validation/153007046-pixel-repack.png"
+          ],
+          [
+            "test/153007046-random-crop-a.png",
+            "validation/153007046-random-crop-b.png"
+          ],
+          [
+            "test/153007046-screenshot-border.png",
+            "train/153007046-original.png"
+          ],
+          [
+            "test/153007046-screenshot-border.png",
+            "validation/153007046-color.png"
+          ],
+          [
+            "test/153007046-screenshot-border.png",
+            "validation/153007046-pixel-repack.png"
+          ],
+          [
+            "test/153007046-screenshot-border.png",
+            "validation/153007046-random-crop-b.png"
+          ],
+          [
+            "test/153007046-watermark.png",
+            "validation/153007046-random-crop-b.png"
+          ],
+          [
+            "test/153007056-byte-copy.png",
+            "validation/153007056-random-crop-b.png"
+          ],
+          [
+            "test/153007056-jpeg45.jpg",
+            "validation/153007056-random-crop-b.png"
+          ],
+          [
+            "test/153007056-random-crop-a.png",
+            "train/153007056-original.png"
+          ],
+          [
+            "test/153007056-random-crop-a.png",
+            "validation/153007056-color.png"
+          ],
+          [
+            "test/153007056-random-crop-a.png",
+            "validation/153007056-pixel-repack.png"
+          ],
+          [
+            "test/153007056-random-crop-a.png",
+            "validation/153007056-random-crop-b.png"
+          ],
+          [
+            "test/153007056-screenshot-border.png",
+            "train/153007056-original.png"
+          ],
+          [
+            "test/153007056-screenshot-border.png",
+            "validation/153007056-color.png"
+          ],
+          [
+            "test/153007056-screenshot-border.png",
+            "validation/153007056-pixel-repack.png"
+          ],
+          [
+            "test/153007056-screenshot-border.png",
+            "validation/153007056-random-crop-b.png"
+          ],
+          [
+            "test/153007056-watermark.png",
+            "validation/153007056-random-crop-b.png"
+          ],
+          [
+            "test/175882787-byte-copy.png",
+            "validation/175882787-random-crop-b.png"
+          ],
+          [
+            "test/175882787-jpeg45.jpg",
+            "validation/175882787-random-crop-b.png"
+          ],
+          [
+            "test/175882787-random-crop-a.png",
+            "train/175882787-original.png"
+          ],
+          [
+            "test/175882787-random-crop-a.png",
+            "validation/175882787-color.png"
+          ],
+          [
+            "test/175882787-random-crop-a.png",
+            "validation/175882787-pixel-repack.png"
+          ],
+          [
+            "test/175882787-random-crop-a.png",
+            "validation/175882787-random-crop-b.png"
+          ],
+          [
+            "test/175882787-screenshot-border.png",
+            "train/175882787-original.png"
+          ],
+          [
+            "test/175882787-screenshot-border.png",
+            "validation/175882787-color.png"
+          ],
+          [
+            "test/175882787-screenshot-border.png",
+            "validation/175882787-pixel-repack.png"
+          ],
+          [
+            "test/175882787-screenshot-border.png",
+            "validation/175882787-random-crop-b.png"
+          ],
+          [
+            "test/175882787-watermark.png",
+            "validation/175882787-random-crop-b.png"
+          ],
+          [
+            "test/27959644-byte-copy.png",
+            "validation/27959644-random-crop-b.png"
+          ],
+          [
+            "test/27959644-jpeg45.jpg",
+            "validation/27959644-random-crop-b.png"
+          ],
+          [
+            "test/27959644-random-crop-a.png",
+            "train/27959644-original.png"
+          ],
+          [
+            "test/27959644-random-crop-a.png",
+            "validation/27959644-color.png"
+          ],
+          [
+            "test/27959644-random-crop-a.png",
+            "validation/27959644-pixel-repack.png"
+          ],
+          [
+            "test/27959644-random-crop-a.png",
+            "validation/27959644-random-crop-b.png"
+          ],
+          [
+            "test/27959644-screenshot-border.png",
+            "train/27959644-original.png"
+          ],
+          [
+            "test/27959644-screenshot-border.png",
+            "validation/27959644-color.png"
+          ],
+          [
+            "test/27959644-screenshot-border.png",
+            "validation/27959644-pixel-repack.png"
+          ],
+          [
+            "test/27959644-screenshot-border.png",
+            "validation/27959644-random-crop-b.png"
+          ],
+          [
+            "test/27959644-watermark.png",
+            "validation/27959644-random-crop-b.png"
+          ],
+          [
+            "test/28305582-byte-copy.png",
+            "validation/28305582-random-crop-b.png"
+          ],
+          [
+            "test/28305582-jpeg45.jpg",
+            "validation/28305582-random-crop-b.png"
+          ],
+          [
+            "test/28305582-random-crop-a.png",
+            "train/28305582-original.png"
+          ],
+          [
+            "test/28305582-random-crop-a.png",
+            "validation/28305582-color.png"
+          ],
+          [
+            "test/28305582-random-crop-a.png",
+            "validation/28305582-pixel-repack.png"
+          ],
+          [
+            "test/28305582-random-crop-a.png",
+            "validation/28305582-random-crop-b.png"
+          ],
+          [
+            "test/28305582-screenshot-border.png",
+            "train/28305582-original.png"
+          ],
+          [
+            "test/28305582-screenshot-border.png",
+            "validation/28305582-color.png"
+          ],
+          [
+            "test/28305582-screenshot-border.png",
+            "validation/28305582-pixel-repack.png"
+          ],
+          [
+            "test/28305582-screenshot-border.png",
+            "validation/28305582-random-crop-b.png"
+          ],
+          [
+            "test/28305582-watermark.png",
+            "validation/28305582-random-crop-b.png"
+          ],
+          [
+            "test/28818900-byte-copy.png",
+            "validation/28818900-random-crop-b.png"
+          ],
+          [
+            "test/28818900-jpeg45.jpg",
+            "validation/28818900-random-crop-b.png"
+          ],
+          [
+            "test/28818900-random-crop-a.png",
+            "train/28818900-original.png"
+          ],
+          [
+            "test/28818900-random-crop-a.png",
+            "validation/28818900-color.png"
+          ],
+          [
+            "test/28818900-random-crop-a.png",
+            "validation/28818900-pixel-repack.png"
+          ],
+          [
+            "test/28818900-random-crop-a.png",
+            "validation/28818900-random-crop-b.png"
+          ],
+          [
+            "test/28818900-screenshot-border.png",
+            "train/28818900-original.png"
+          ],
+          [
+            "test/28818900-screenshot-border.png",
+            "validation/28818900-color.png"
+          ],
+          [
+            "test/28818900-screenshot-border.png",
+            "validation/28818900-pixel-repack.png"
+          ],
+          [
+            "test/28818900-screenshot-border.png",
+            "validation/28818900-random-crop-b.png"
+          ],
+          [
+            "test/28818900-watermark.png",
+            "validation/28818900-random-crop-b.png"
+          ],
+          [
+            "test/90293410-byte-copy.png",
+            "validation/90293410-random-crop-b.png"
+          ],
+          [
+            "test/90293410-jpeg45.jpg",
+            "validation/90293410-random-crop-b.png"
+          ],
+          [
+            "test/90293410-random-crop-a.png",
+            "train/90293410-original.png"
+          ],
+          [
+            "test/90293410-random-crop-a.png",
+            "validation/90293410-color.png"
+          ],
+          [
+            "test/90293410-random-crop-a.png",
+            "validation/90293410-pixel-repack.png"
+          ],
+          [
+            "test/90293410-random-crop-a.png",
+            "validation/90293410-random-crop-b.png"
+          ],
+          [
+            "test/90293410-screenshot-border.png",
+            "train/90293410-original.png"
+          ],
+          [
+            "test/90293410-screenshot-border.png",
+            "validation/90293410-color.png"
+          ],
+          [
+            "test/90293410-screenshot-border.png",
+            "validation/90293410-pixel-repack.png"
+          ],
+          [
+            "test/90293410-screenshot-border.png",
+            "validation/90293410-random-crop-b.png"
+          ],
+          [
+            "test/90293410-watermark.png",
+            "validation/90293410-random-crop-b.png"
+          ],
+          [
+            "train/105538175-original.png",
+            "validation/105538175-random-crop-b.png"
+          ],
+          [
+            "train/117737596-original.png",
+            "validation/117737596-random-crop-b.png"
+          ],
+          [
+            "train/147065481-original.png",
+            "validation/147065481-random-crop-b.png"
+          ],
+          [
+            "train/147381266-original.png",
+            "validation/147381266-random-crop-b.png"
+          ],
+          [
+            "train/147659458-original.png",
+            "validation/147659458-random-crop-b.png"
+          ],
+          [
+            "train/153007046-original.png",
+            "validation/153007046-random-crop-b.png"
+          ],
+          [
+            "train/153007056-original.png",
+            "validation/153007056-random-crop-b.png"
+          ],
+          [
+            "train/175882787-original.png",
+            "validation/175882787-random-crop-b.png"
+          ],
+          [
+            "train/27959644-original.png",
+            "validation/27959644-random-crop-b.png"
+          ],
+          [
+            "train/28305582-original.png",
+            "validation/28305582-random-crop-b.png"
+          ],
+          [
+            "train/28818900-original.png",
+            "validation/28818900-random-crop-b.png"
+          ],
+          [
+            "train/90293410-original.png",
+            "validation/90293410-random-crop-b.png"
+          ]
+        ]
+      },
+      "nearCommonTransforms": {
+        "tp": 96,
+        "fp": 0,
+        "fn": 144,
+        "tn": 3036,
+        "precision": 1.0,
+        "recall": 0.4,
+        "falsePositiveRate": 0.0,
+        "falsePositives": [],
+        "falseNegatives": [
+          [
+            "test/105538175-byte-copy.png",
+            "validation/105538175-random-crop-b.png"
+          ],
+          [
+            "test/105538175-jpeg45.jpg",
+            "validation/105538175-random-crop-b.png"
+          ],
+          [
+            "test/105538175-random-crop-a.png",
+            "train/105538175-original.png"
+          ],
+          [
+            "test/105538175-random-crop-a.png",
+            "validation/105538175-color.png"
+          ],
+          [
+            "test/105538175-random-crop-a.png",
+            "validation/105538175-pixel-repack.png"
+          ],
+          [
+            "test/105538175-random-crop-a.png",
+            "validation/105538175-random-crop-b.png"
+          ],
+          [
+            "test/105538175-screenshot-border.png",
+            "train/105538175-original.png"
+          ],
+          [
+            "test/105538175-screenshot-border.png",
+            "validation/105538175-color.png"
+          ],
+          [
+            "test/105538175-screenshot-border.png",
+            "validation/105538175-pixel-repack.png"
+          ],
+          [
+            "test/105538175-screenshot-border.png",
+            "validation/105538175-random-crop-b.png"
+          ],
+          [
+            "test/105538175-watermark.png",
+            "validation/105538175-random-crop-b.png"
+          ],
+          [
+            "test/117737596-byte-copy.png",
+            "validation/117737596-random-crop-b.png"
+          ],
+          [
+            "test/117737596-jpeg45.jpg",
+            "validation/117737596-random-crop-b.png"
+          ],
+          [
+            "test/117737596-random-crop-a.png",
+            "train/117737596-original.png"
+          ],
+          [
+            "test/117737596-random-crop-a.png",
+            "validation/117737596-color.png"
+          ],
+          [
+            "test/117737596-random-crop-a.png",
+            "validation/117737596-pixel-repack.png"
+          ],
+          [
+            "test/117737596-random-crop-a.png",
+            "validation/117737596-random-crop-b.png"
+          ],
+          [
+            "test/117737596-screenshot-border.png",
+            "train/117737596-original.png"
+          ],
+          [
+            "test/117737596-screenshot-border.png",
+            "validation/117737596-color.png"
+          ],
+          [
+            "test/117737596-screenshot-border.png",
+            "validation/117737596-pixel-repack.png"
+          ],
+          [
+            "test/117737596-screenshot-border.png",
+            "validation/117737596-random-crop-b.png"
+          ],
+          [
+            "test/117737596-watermark.png",
+            "validation/117737596-random-crop-b.png"
+          ],
+          [
+            "test/147065481-byte-copy.png",
+            "validation/147065481-random-crop-b.png"
+          ],
+          [
+            "test/147065481-jpeg45.jpg",
+            "validation/147065481-random-crop-b.png"
+          ],
+          [
+            "test/147065481-random-crop-a.png",
+            "train/147065481-original.png"
+          ],
+          [
+            "test/147065481-random-crop-a.png",
+            "validation/147065481-color.png"
+          ],
+          [
+            "test/147065481-random-crop-a.png",
+            "validation/147065481-pixel-repack.png"
+          ],
+          [
+            "test/147065481-random-crop-a.png",
+            "validation/147065481-random-crop-b.png"
+          ],
+          [
+            "test/147065481-screenshot-border.png",
+            "train/147065481-original.png"
+          ],
+          [
+            "test/147065481-screenshot-border.png",
+            "validation/147065481-color.png"
+          ],
+          [
+            "test/147065481-screenshot-border.png",
+            "validation/147065481-pixel-repack.png"
+          ],
+          [
+            "test/147065481-screenshot-border.png",
+            "validation/147065481-random-crop-b.png"
+          ],
+          [
+            "test/147065481-watermark.png",
+            "validation/147065481-random-crop-b.png"
+          ],
+          [
+            "test/147381266-byte-copy.png",
+            "validation/147381266-random-crop-b.png"
+          ],
+          [
+            "test/147381266-jpeg45.jpg",
+            "validation/147381266-random-crop-b.png"
+          ],
+          [
+            "test/147381266-random-crop-a.png",
+            "train/147381266-original.png"
+          ],
+          [
+            "test/147381266-random-crop-a.png",
+            "validation/147381266-color.png"
+          ],
+          [
+            "test/147381266-random-crop-a.png",
+            "validation/147381266-pixel-repack.png"
+          ],
+          [
+            "test/147381266-random-crop-a.png",
+            "validation/147381266-random-crop-b.png"
+          ],
+          [
+            "test/147381266-screenshot-border.png",
+            "train/147381266-original.png"
+          ],
+          [
+            "test/147381266-screenshot-border.png",
+            "validation/147381266-color.png"
+          ],
+          [
+            "test/147381266-screenshot-border.png",
+            "validation/147381266-pixel-repack.png"
+          ],
+          [
+            "test/147381266-screenshot-border.png",
+            "validation/147381266-random-crop-b.png"
+          ],
+          [
+            "test/147381266-watermark.png",
+            "validation/147381266-random-crop-b.png"
+          ],
+          [
+            "test/147659458-byte-copy.png",
+            "validation/147659458-random-crop-b.png"
+          ],
+          [
+            "test/147659458-jpeg45.jpg",
+            "validation/147659458-random-crop-b.png"
+          ],
+          [
+            "test/147659458-random-crop-a.png",
+            "train/147659458-original.png"
+          ],
+          [
+            "test/147659458-random-crop-a.png",
+            "validation/147659458-color.png"
+          ],
+          [
+            "test/147659458-random-crop-a.png",
+            "validation/147659458-pixel-repack.png"
+          ],
+          [
+            "test/147659458-random-crop-a.png",
+            "validation/147659458-random-crop-b.png"
+          ],
+          [
+            "test/147659458-screenshot-border.png",
+            "train/147659458-original.png"
+          ],
+          [
+            "test/147659458-screenshot-border.png",
+            "validation/147659458-color.png"
+          ],
+          [
+            "test/147659458-screenshot-border.png",
+            "validation/147659458-pixel-repack.png"
+          ],
+          [
+            "test/147659458-screenshot-border.png",
+            "validation/147659458-random-crop-b.png"
+          ],
+          [
+            "test/147659458-watermark.png",
+            "validation/147659458-random-crop-b.png"
+          ],
+          [
+            "test/153007046-byte-copy.png",
+            "validation/153007046-random-crop-b.png"
+          ],
+          [
+            "test/153007046-jpeg45.jpg",
+            "validation/153007046-random-crop-b.png"
+          ],
+          [
+            "test/153007046-random-crop-a.png",
+            "train/153007046-original.png"
+          ],
+          [
+            "test/153007046-random-crop-a.png",
+            "validation/153007046-color.png"
+          ],
+          [
+            "test/153007046-random-crop-a.png",
+            "validation/153007046-pixel-repack.png"
+          ],
+          [
+            "test/153007046-random-crop-a.png",
+            "validation/153007046-random-crop-b.png"
+          ],
+          [
+            "test/153007046-screenshot-border.png",
+            "train/153007046-original.png"
+          ],
+          [
+            "test/153007046-screenshot-border.png",
+            "validation/153007046-color.png"
+          ],
+          [
+            "test/153007046-screenshot-border.png",
+            "validation/153007046-pixel-repack.png"
+          ],
+          [
+            "test/153007046-screenshot-border.png",
+            "validation/153007046-random-crop-b.png"
+          ],
+          [
+            "test/153007046-watermark.png",
+            "validation/153007046-random-crop-b.png"
+          ],
+          [
+            "test/153007056-byte-copy.png",
+            "validation/153007056-random-crop-b.png"
+          ],
+          [
+            "test/153007056-jpeg45.jpg",
+            "validation/153007056-random-crop-b.png"
+          ],
+          [
+            "test/153007056-random-crop-a.png",
+            "train/153007056-original.png"
+          ],
+          [
+            "test/153007056-random-crop-a.png",
+            "validation/153007056-color.png"
+          ],
+          [
+            "test/153007056-random-crop-a.png",
+            "validation/153007056-pixel-repack.png"
+          ],
+          [
+            "test/153007056-random-crop-a.png",
+            "validation/153007056-random-crop-b.png"
+          ],
+          [
+            "test/153007056-screenshot-border.png",
+            "train/153007056-original.png"
+          ],
+          [
+            "test/153007056-screenshot-border.png",
+            "validation/153007056-color.png"
+          ],
+          [
+            "test/153007056-screenshot-border.png",
+            "validation/153007056-pixel-repack.png"
+          ],
+          [
+            "test/153007056-screenshot-border.png",
+            "validation/153007056-random-crop-b.png"
+          ],
+          [
+            "test/153007056-watermark.png",
+            "validation/153007056-random-crop-b.png"
+          ],
+          [
+            "test/175882787-byte-copy.png",
+            "validation/175882787-random-crop-b.png"
+          ],
+          [
+            "test/175882787-jpeg45.jpg",
+            "validation/175882787-random-crop-b.png"
+          ],
+          [
+            "test/175882787-random-crop-a.png",
+            "train/175882787-original.png"
+          ],
+          [
+            "test/175882787-random-crop-a.png",
+            "validation/175882787-color.png"
+          ],
+          [
+            "test/175882787-random-crop-a.png",
+            "validation/175882787-pixel-repack.png"
+          ],
+          [
+            "test/175882787-random-crop-a.png",
+            "validation/175882787-random-crop-b.png"
+          ],
+          [
+            "test/175882787-screenshot-border.png",
+            "train/175882787-original.png"
+          ],
+          [
+            "test/175882787-screenshot-border.png",
+            "validation/175882787-color.png"
+          ],
+          [
+            "test/175882787-screenshot-border.png",
+            "validation/175882787-pixel-repack.png"
+          ],
+          [
+            "test/175882787-screenshot-border.png",
+            "validation/175882787-random-crop-b.png"
+          ],
+          [
+            "test/175882787-watermark.png",
+            "validation/175882787-random-crop-b.png"
+          ],
+          [
+            "test/27959644-byte-copy.png",
+            "validation/27959644-random-crop-b.png"
+          ],
+          [
+            "test/27959644-jpeg45.jpg",
+            "validation/27959644-random-crop-b.png"
+          ],
+          [
+            "test/27959644-random-crop-a.png",
+            "train/27959644-original.png"
+          ],
+          [
+            "test/27959644-random-crop-a.png",
+            "validation/27959644-color.png"
+          ],
+          [
+            "test/27959644-random-crop-a.png",
+            "validation/27959644-pixel-repack.png"
+          ],
+          [
+            "test/27959644-random-crop-a.png",
+            "validation/27959644-random-crop-b.png"
+          ],
+          [
+            "test/27959644-screenshot-border.png",
+            "train/27959644-original.png"
+          ],
+          [
+            "test/27959644-screenshot-border.png",
+            "validation/27959644-color.png"
+          ],
+          [
+            "test/27959644-screenshot-border.png",
+            "validation/27959644-pixel-repack.png"
+          ],
+          [
+            "test/27959644-screenshot-border.png",
+            "validation/27959644-random-crop-b.png"
+          ],
+          [
+            "test/27959644-watermark.png",
+            "validation/27959644-random-crop-b.png"
+          ],
+          [
+            "test/28305582-byte-copy.png",
+            "validation/28305582-random-crop-b.png"
+          ],
+          [
+            "test/28305582-jpeg45.jpg",
+            "validation/28305582-random-crop-b.png"
+          ],
+          [
+            "test/28305582-random-crop-a.png",
+            "train/28305582-original.png"
+          ],
+          [
+            "test/28305582-random-crop-a.png",
+            "validation/28305582-color.png"
+          ],
+          [
+            "test/28305582-random-crop-a.png",
+            "validation/28305582-pixel-repack.png"
+          ],
+          [
+            "test/28305582-random-crop-a.png",
+            "validation/28305582-random-crop-b.png"
+          ],
+          [
+            "test/28305582-screenshot-border.png",
+            "train/28305582-original.png"
+          ],
+          [
+            "test/28305582-screenshot-border.png",
+            "validation/28305582-color.png"
+          ],
+          [
+            "test/28305582-screenshot-border.png",
+            "validation/28305582-pixel-repack.png"
+          ],
+          [
+            "test/28305582-screenshot-border.png",
+            "validation/28305582-random-crop-b.png"
+          ],
+          [
+            "test/28305582-watermark.png",
+            "validation/28305582-random-crop-b.png"
+          ],
+          [
+            "test/28818900-byte-copy.png",
+            "validation/28818900-random-crop-b.png"
+          ],
+          [
+            "test/28818900-jpeg45.jpg",
+            "validation/28818900-random-crop-b.png"
+          ],
+          [
+            "test/28818900-random-crop-a.png",
+            "train/28818900-original.png"
+          ],
+          [
+            "test/28818900-random-crop-a.png",
+            "validation/28818900-color.png"
+          ],
+          [
+            "test/28818900-random-crop-a.png",
+            "validation/28818900-pixel-repack.png"
+          ],
+          [
+            "test/28818900-random-crop-a.png",
+            "validation/28818900-random-crop-b.png"
+          ],
+          [
+            "test/28818900-screenshot-border.png",
+            "train/28818900-original.png"
+          ],
+          [
+            "test/28818900-screenshot-border.png",
+            "validation/28818900-color.png"
+          ],
+          [
+            "test/28818900-screenshot-border.png",
+            "validation/28818900-pixel-repack.png"
+          ],
+          [
+            "test/28818900-screenshot-border.png",
+            "validation/28818900-random-crop-b.png"
+          ],
+          [
+            "test/28818900-watermark.png",
+            "validation/28818900-random-crop-b.png"
+          ],
+          [
+            "test/90293410-byte-copy.png",
+            "validation/90293410-random-crop-b.png"
+          ],
+          [
+            "test/90293410-jpeg45.jpg",
+            "validation/90293410-random-crop-b.png"
+          ],
+          [
+            "test/90293410-random-crop-a.png",
+            "train/90293410-original.png"
+          ],
+          [
+            "test/90293410-random-crop-a.png",
+            "validation/90293410-color.png"
+          ],
+          [
+            "test/90293410-random-crop-a.png",
+            "validation/90293410-pixel-repack.png"
+          ],
+          [
+            "test/90293410-random-crop-a.png",
+            "validation/90293410-random-crop-b.png"
+          ],
+          [
+            "test/90293410-screenshot-border.png",
+            "train/90293410-original.png"
+          ],
+          [
+            "test/90293410-screenshot-border.png",
+            "validation/90293410-color.png"
+          ],
+          [
+            "test/90293410-screenshot-border.png",
+            "validation/90293410-pixel-repack.png"
+          ],
+          [
+            "test/90293410-screenshot-border.png",
+            "validation/90293410-random-crop-b.png"
+          ],
+          [
+            "test/90293410-watermark.png",
+            "validation/90293410-random-crop-b.png"
+          ],
+          [
+            "train/105538175-original.png",
+            "validation/105538175-random-crop-b.png"
+          ],
+          [
+            "train/117737596-original.png",
+            "validation/117737596-random-crop-b.png"
+          ],
+          [
+            "train/147065481-original.png",
+            "validation/147065481-random-crop-b.png"
+          ],
+          [
+            "train/147381266-original.png",
+            "validation/147381266-random-crop-b.png"
+          ],
+          [
+            "train/147659458-original.png",
+            "validation/147659458-random-crop-b.png"
+          ],
+          [
+            "train/153007046-original.png",
+            "validation/153007046-random-crop-b.png"
+          ],
+          [
+            "train/153007056-original.png",
+            "validation/153007056-random-crop-b.png"
+          ],
+          [
+            "train/175882787-original.png",
+            "validation/175882787-random-crop-b.png"
+          ],
+          [
+            "train/27959644-original.png",
+            "validation/27959644-random-crop-b.png"
+          ],
+          [
+            "train/28305582-original.png",
+            "validation/28305582-random-crop-b.png"
+          ],
+          [
+            "train/28818900-original.png",
+            "validation/28818900-random-crop-b.png"
+          ],
+          [
+            "train/90293410-original.png",
+            "validation/90293410-random-crop-b.png"
+          ]
+        ]
+      },
+      "nearChallengeTransforms": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "precision": null,
+        "recall": null,
+        "falsePositiveRate": null,
+        "falsePositives": [],
+        "falseNegatives": []
+      },
+      "exactEvidenceTierMismatches": [],
+      "exactPairsEmittedAsCandidates": 0,
+      "pairUniverse": 3312,
+      "nearOnlyUniverse": 3276
+    },
+    "crops": {
+      "exact": {
+        "tp": 36,
+        "fp": 0,
+        "fn": 0,
+        "tn": 3276,
+        "precision": 1.0,
+        "recall": 1.0,
+        "falsePositiveRate": 0.0,
+        "falsePositives": [],
+        "falseNegatives": []
+      },
+      "nearOnly": {
+        "tp": 123,
+        "fp": 0,
+        "fn": 117,
+        "tn": 3036,
+        "precision": 1.0,
+        "recall": 0.5125,
+        "falsePositiveRate": 0.0,
+        "falsePositives": [],
+        "falseNegatives": [
+          [
+            "test/105538175-byte-copy.png",
+            "validation/105538175-random-crop-b.png"
+          ],
+          [
+            "test/105538175-jpeg45.jpg",
+            "validation/105538175-random-crop-b.png"
+          ],
+          [
+            "test/105538175-random-crop-a.png",
+            "train/105538175-original.png"
+          ],
+          [
+            "test/105538175-random-crop-a.png",
+            "validation/105538175-color.png"
+          ],
+          [
+            "test/105538175-random-crop-a.png",
+            "validation/105538175-pixel-repack.png"
+          ],
+          [
+            "test/105538175-random-crop-a.png",
+            "validation/105538175-random-crop-b.png"
+          ],
+          [
+            "test/105538175-screenshot-border.png",
+            "train/105538175-original.png"
+          ],
+          [
+            "test/105538175-screenshot-border.png",
+            "validation/105538175-color.png"
+          ],
+          [
+            "test/105538175-screenshot-border.png",
+            "validation/105538175-pixel-repack.png"
+          ],
+          [
+            "test/105538175-screenshot-border.png",
+            "validation/105538175-random-crop-b.png"
+          ],
+          [
+            "test/105538175-watermark.png",
+            "validation/105538175-random-crop-b.png"
+          ],
+          [
+            "test/117737596-byte-copy.png",
+            "validation/117737596-random-crop-b.png"
+          ],
+          [
+            "test/117737596-jpeg45.jpg",
+            "validation/117737596-random-crop-b.png"
+          ],
+          [
+            "test/117737596-random-crop-a.png",
+            "train/117737596-original.png"
+          ],
+          [
+            "test/117737596-random-crop-a.png",
+            "validation/117737596-color.png"
+          ],
+          [
+            "test/117737596-random-crop-a.png",
+            "validation/117737596-pixel-repack.png"
+          ],
+          [
+            "test/117737596-random-crop-a.png",
+            "validation/117737596-random-crop-b.png"
+          ],
+          [
+            "test/117737596-screenshot-border.png",
+            "train/117737596-original.png"
+          ],
+          [
+            "test/117737596-screenshot-border.png",
+            "validation/117737596-color.png"
+          ],
+          [
+            "test/117737596-screenshot-border.png",
+            "validation/117737596-pixel-repack.png"
+          ],
+          [
+            "test/117737596-screenshot-border.png",
+            "validation/117737596-random-crop-b.png"
+          ],
+          [
+            "test/117737596-watermark.png",
+            "validation/117737596-random-crop-b.png"
+          ],
+          [
+            "test/147065481-byte-copy.png",
+            "validation/147065481-random-crop-b.png"
+          ],
+          [
+            "test/147065481-jpeg45.jpg",
+            "validation/147065481-random-crop-b.png"
+          ],
+          [
+            "test/147065481-random-crop-a.png",
+            "train/147065481-original.png"
+          ],
+          [
+            "test/147065481-random-crop-a.png",
+            "validation/147065481-color.png"
+          ],
+          [
+            "test/147065481-random-crop-a.png",
+            "validation/147065481-pixel-repack.png"
+          ],
+          [
+            "test/147065481-random-crop-a.png",
+            "validation/147065481-random-crop-b.png"
+          ],
+          [
+            "test/147065481-screenshot-border.png",
+            "validation/147065481-random-crop-b.png"
+          ],
+          [
+            "test/147065481-watermark.png",
+            "validation/147065481-random-crop-b.png"
+          ],
+          [
+            "test/147381266-byte-copy.png",
+            "validation/147381266-random-crop-b.png"
+          ],
+          [
+            "test/147381266-jpeg45.jpg",
+            "validation/147381266-random-crop-b.png"
+          ],
+          [
+            "test/147381266-random-crop-a.png",
+            "train/147381266-original.png"
+          ],
+          [
+            "test/147381266-random-crop-a.png",
+            "validation/147381266-color.png"
+          ],
+          [
+            "test/147381266-random-crop-a.png",
+            "validation/147381266-pixel-repack.png"
+          ],
+          [
+            "test/147381266-random-crop-a.png",
+            "validation/147381266-random-crop-b.png"
+          ],
+          [
+            "test/147381266-screenshot-border.png",
+            "validation/147381266-random-crop-b.png"
+          ],
+          [
+            "test/147381266-watermark.png",
+            "validation/147381266-random-crop-b.png"
+          ],
+          [
+            "test/147659458-byte-copy.png",
+            "validation/147659458-random-crop-b.png"
+          ],
+          [
+            "test/147659458-jpeg45.jpg",
+            "validation/147659458-random-crop-b.png"
+          ],
+          [
+            "test/147659458-random-crop-a.png",
+            "train/147659458-original.png"
+          ],
+          [
+            "test/147659458-random-crop-a.png",
+            "validation/147659458-color.png"
+          ],
+          [
+            "test/147659458-random-crop-a.png",
+            "validation/147659458-pixel-repack.png"
+          ],
+          [
+            "test/147659458-random-crop-a.png",
+            "validation/147659458-random-crop-b.png"
+          ],
+          [
+            "test/147659458-screenshot-border.png",
+            "validation/147659458-random-crop-b.png"
+          ],
+          [
+            "test/147659458-watermark.png",
+            "validation/147659458-random-crop-b.png"
+          ],
+          [
+            "test/153007046-byte-copy.png",
+            "validation/153007046-random-crop-b.png"
+          ],
+          [
+            "test/153007046-jpeg45.jpg",
+            "validation/153007046-random-crop-b.png"
+          ],
+          [
+            "test/153007046-random-crop-a.png",
+            "train/153007046-original.png"
+          ],
+          [
+            "test/153007046-random-crop-a.png",
+            "validation/153007046-color.png"
+          ],
+          [
+            "test/153007046-random-crop-a.png",
+            "validation/153007046-pixel-repack.png"
+          ],
+          [
+            "test/153007046-random-crop-a.png",
+            "validation/153007046-random-crop-b.png"
+          ],
+          [
+            "test/153007046-screenshot-border.png",
+            "validation/153007046-random-crop-b.png"
+          ],
+          [
+            "test/153007046-watermark.png",
+            "validation/153007046-random-crop-b.png"
+          ],
+          [
+            "test/153007056-byte-copy.png",
+            "validation/153007056-random-crop-b.png"
+          ],
+          [
+            "test/153007056-jpeg45.jpg",
+            "validation/153007056-random-crop-b.png"
+          ],
+          [
+            "test/153007056-random-crop-a.png",
+            "train/153007056-original.png"
+          ],
+          [
+            "test/153007056-random-crop-a.png",
+            "validation/153007056-color.png"
+          ],
+          [
+            "test/153007056-random-crop-a.png",
+            "validation/153007056-pixel-repack.png"
+          ],
+          [
+            "test/153007056-random-crop-a.png",
+            "validation/153007056-random-crop-b.png"
+          ],
+          [
+            "test/153007056-screenshot-border.png",
+            "validation/153007056-random-crop-b.png"
+          ],
+          [
+            "test/153007056-watermark.png",
+            "validation/153007056-random-crop-b.png"
+          ],
+          [
+            "test/175882787-byte-copy.png",
+            "validation/175882787-random-crop-b.png"
+          ],
+          [
+            "test/175882787-jpeg45.jpg",
+            "validation/175882787-random-crop-b.png"
+          ],
+          [
+            "test/175882787-random-crop-a.png",
+            "train/175882787-original.png"
+          ],
+          [
+            "test/175882787-random-crop-a.png",
+            "validation/175882787-color.png"
+          ],
+          [
+            "test/175882787-random-crop-a.png",
+            "validation/175882787-pixel-repack.png"
+          ],
+          [
+            "test/175882787-random-crop-a.png",
+            "validation/175882787-random-crop-b.png"
+          ],
+          [
+            "test/175882787-screenshot-border.png",
+            "validation/175882787-random-crop-b.png"
+          ],
+          [
+            "test/175882787-watermark.png",
+            "validation/175882787-random-crop-b.png"
+          ],
+          [
+            "test/27959644-byte-copy.png",
+            "validation/27959644-random-crop-b.png"
+          ],
+          [
+            "test/27959644-jpeg45.jpg",
+            "validation/27959644-random-crop-b.png"
+          ],
+          [
+            "test/27959644-random-crop-a.png",
+            "train/27959644-original.png"
+          ],
+          [
+            "test/27959644-random-crop-a.png",
+            "validation/27959644-color.png"
+          ],
+          [
+            "test/27959644-random-crop-a.png",
+            "validation/27959644-pixel-repack.png"
+          ],
+          [
+            "test/27959644-random-crop-a.png",
+            "validation/27959644-random-crop-b.png"
+          ],
+          [
+            "test/27959644-screenshot-border.png",
+            "validation/27959644-random-crop-b.png"
+          ],
+          [
+            "test/27959644-watermark.png",
+            "validation/27959644-random-crop-b.png"
+          ],
+          [
+            "test/28305582-byte-copy.png",
+            "validation/28305582-random-crop-b.png"
+          ],
+          [
+            "test/28305582-jpeg45.jpg",
+            "validation/28305582-random-crop-b.png"
+          ],
+          [
+            "test/28305582-random-crop-a.png",
+            "train/28305582-original.png"
+          ],
+          [
+            "test/28305582-random-crop-a.png",
+            "validation/28305582-color.png"
+          ],
+          [
+            "test/28305582-random-crop-a.png",
+            "validation/28305582-pixel-repack.png"
+          ],
+          [
+            "test/28305582-random-crop-a.png",
+            "validation/28305582-random-crop-b.png"
+          ],
+          [
+            "test/28305582-screenshot-border.png",
+            "validation/28305582-random-crop-b.png"
+          ],
+          [
+            "test/28305582-watermark.png",
+            "validation/28305582-random-crop-b.png"
+          ],
+          [
+            "test/28818900-byte-copy.png",
+            "validation/28818900-random-crop-b.png"
+          ],
+          [
+            "test/28818900-jpeg45.jpg",
+            "validation/28818900-random-crop-b.png"
+          ],
+          [
+            "test/28818900-random-crop-a.png",
+            "train/28818900-original.png"
+          ],
+          [
+            "test/28818900-random-crop-a.png",
+            "validation/28818900-color.png"
+          ],
+          [
+            "test/28818900-random-crop-a.png",
+            "validation/28818900-pixel-repack.png"
+          ],
+          [
+            "test/28818900-random-crop-a.png",
+            "validation/28818900-random-crop-b.png"
+          ],
+          [
+            "test/28818900-screenshot-border.png",
+            "train/28818900-original.png"
+          ],
+          [
+            "test/28818900-screenshot-border.png",
+            "validation/28818900-color.png"
+          ],
+          [
+            "test/28818900-screenshot-border.png",
+            "validation/28818900-pixel-repack.png"
+          ],
+          [
+            "test/28818900-screenshot-border.png",
+            "validation/28818900-random-crop-b.png"
+          ],
+          [
+            "test/28818900-watermark.png",
+            "validation/28818900-random-crop-b.png"
+          ],
+          [
+            "test/90293410-byte-copy.png",
+            "validation/90293410-random-crop-b.png"
+          ],
+          [
+            "test/90293410-jpeg45.jpg",
+            "validation/90293410-random-crop-b.png"
+          ],
+          [
+            "test/90293410-random-crop-a.png",
+            "train/90293410-original.png"
+          ],
+          [
+            "test/90293410-random-crop-a.png",
+            "validation/90293410-color.png"
+          ],
+          [
+            "test/90293410-random-crop-a.png",
+            "validation/90293410-pixel-repack.png"
+          ],
+          [
+            "test/90293410-random-crop-a.png",
+            "validation/90293410-random-crop-b.png"
+          ],
+          [
+            "test/90293410-screenshot-border.png",
+            "validation/90293410-random-crop-b.png"
+          ],
+          [
+            "test/90293410-watermark.png",
+            "validation/90293410-random-crop-b.png"
+          ],
+          [
+            "train/105538175-original.png",
+            "validation/105538175-random-crop-b.png"
+          ],
+          [
+            "train/117737596-original.png",
+            "validation/117737596-random-crop-b.png"
+          ],
+          [
+            "train/147065481-original.png",
+            "validation/147065481-random-crop-b.png"
+          ],
+          [
+            "train/147381266-original.png",
+            "validation/147381266-random-crop-b.png"
+          ],
+          [
+            "train/147659458-original.png",
+            "validation/147659458-random-crop-b.png"
+          ],
+          [
+            "train/153007046-original.png",
+            "validation/153007046-random-crop-b.png"
+          ],
+          [
+            "train/153007056-original.png",
+            "validation/153007056-random-crop-b.png"
+          ],
+          [
+            "train/175882787-original.png",
+            "validation/175882787-random-crop-b.png"
+          ],
+          [
+            "train/27959644-original.png",
+            "validation/27959644-random-crop-b.png"
+          ],
+          [
+            "train/28305582-original.png",
+            "validation/28305582-random-crop-b.png"
+          ],
+          [
+            "train/28818900-original.png",
+            "validation/28818900-random-crop-b.png"
+          ],
+          [
+            "train/90293410-original.png",
+            "validation/90293410-random-crop-b.png"
+          ]
+        ]
+      },
+      "nearCommonTransforms": {
+        "tp": 123,
+        "fp": 0,
+        "fn": 117,
+        "tn": 3036,
+        "precision": 1.0,
+        "recall": 0.5125,
+        "falsePositiveRate": 0.0,
+        "falsePositives": [],
+        "falseNegatives": [
+          [
+            "test/105538175-byte-copy.png",
+            "validation/105538175-random-crop-b.png"
+          ],
+          [
+            "test/105538175-jpeg45.jpg",
+            "validation/105538175-random-crop-b.png"
+          ],
+          [
+            "test/105538175-random-crop-a.png",
+            "train/105538175-original.png"
+          ],
+          [
+            "test/105538175-random-crop-a.png",
+            "validation/105538175-color.png"
+          ],
+          [
+            "test/105538175-random-crop-a.png",
+            "validation/105538175-pixel-repack.png"
+          ],
+          [
+            "test/105538175-random-crop-a.png",
+            "validation/105538175-random-crop-b.png"
+          ],
+          [
+            "test/105538175-screenshot-border.png",
+            "train/105538175-original.png"
+          ],
+          [
+            "test/105538175-screenshot-border.png",
+            "validation/105538175-color.png"
+          ],
+          [
+            "test/105538175-screenshot-border.png",
+            "validation/105538175-pixel-repack.png"
+          ],
+          [
+            "test/105538175-screenshot-border.png",
+            "validation/105538175-random-crop-b.png"
+          ],
+          [
+            "test/105538175-watermark.png",
+            "validation/105538175-random-crop-b.png"
+          ],
+          [
+            "test/117737596-byte-copy.png",
+            "validation/117737596-random-crop-b.png"
+          ],
+          [
+            "test/117737596-jpeg45.jpg",
+            "validation/117737596-random-crop-b.png"
+          ],
+          [
+            "test/117737596-random-crop-a.png",
+            "train/117737596-original.png"
+          ],
+          [
+            "test/117737596-random-crop-a.png",
+            "validation/117737596-color.png"
+          ],
+          [
+            "test/117737596-random-crop-a.png",
+            "validation/117737596-pixel-repack.png"
+          ],
+          [
+            "test/117737596-random-crop-a.png",
+            "validation/117737596-random-crop-b.png"
+          ],
+          [
+            "test/117737596-screenshot-border.png",
+            "train/117737596-original.png"
+          ],
+          [
+            "test/117737596-screenshot-border.png",
+            "validation/117737596-color.png"
+          ],
+          [
+            "test/117737596-screenshot-border.png",
+            "validation/117737596-pixel-repack.png"
+          ],
+          [
+            "test/117737596-screenshot-border.png",
+            "validation/117737596-random-crop-b.png"
+          ],
+          [
+            "test/117737596-watermark.png",
+            "validation/117737596-random-crop-b.png"
+          ],
+          [
+            "test/147065481-byte-copy.png",
+            "validation/147065481-random-crop-b.png"
+          ],
+          [
+            "test/147065481-jpeg45.jpg",
+            "validation/147065481-random-crop-b.png"
+          ],
+          [
+            "test/147065481-random-crop-a.png",
+            "train/147065481-original.png"
+          ],
+          [
+            "test/147065481-random-crop-a.png",
+            "validation/147065481-color.png"
+          ],
+          [
+            "test/147065481-random-crop-a.png",
+            "validation/147065481-pixel-repack.png"
+          ],
+          [
+            "test/147065481-random-crop-a.png",
+            "validation/147065481-random-crop-b.png"
+          ],
+          [
+            "test/147065481-screenshot-border.png",
+            "validation/147065481-random-crop-b.png"
+          ],
+          [
+            "test/147065481-watermark.png",
+            "validation/147065481-random-crop-b.png"
+          ],
+          [
+            "test/147381266-byte-copy.png",
+            "validation/147381266-random-crop-b.png"
+          ],
+          [
+            "test/147381266-jpeg45.jpg",
+            "validation/147381266-random-crop-b.png"
+          ],
+          [
+            "test/147381266-random-crop-a.png",
+            "train/147381266-original.png"
+          ],
+          [
+            "test/147381266-random-crop-a.png",
+            "validation/147381266-color.png"
+          ],
+          [
+            "test/147381266-random-crop-a.png",
+            "validation/147381266-pixel-repack.png"
+          ],
+          [
+            "test/147381266-random-crop-a.png",
+            "validation/147381266-random-crop-b.png"
+          ],
+          [
+            "test/147381266-screenshot-border.png",
+            "validation/147381266-random-crop-b.png"
+          ],
+          [
+            "test/147381266-watermark.png",
+            "validation/147381266-random-crop-b.png"
+          ],
+          [
+            "test/147659458-byte-copy.png",
+            "validation/147659458-random-crop-b.png"
+          ],
+          [
+            "test/147659458-jpeg45.jpg",
+            "validation/147659458-random-crop-b.png"
+          ],
+          [
+            "test/147659458-random-crop-a.png",
+            "train/147659458-original.png"
+          ],
+          [
+            "test/147659458-random-crop-a.png",
+            "validation/147659458-color.png"
+          ],
+          [
+            "test/147659458-random-crop-a.png",
+            "validation/147659458-pixel-repack.png"
+          ],
+          [
+            "test/147659458-random-crop-a.png",
+            "validation/147659458-random-crop-b.png"
+          ],
+          [
+            "test/147659458-screenshot-border.png",
+            "validation/147659458-random-crop-b.png"
+          ],
+          [
+            "test/147659458-watermark.png",
+            "validation/147659458-random-crop-b.png"
+          ],
+          [
+            "test/153007046-byte-copy.png",
+            "validation/153007046-random-crop-b.png"
+          ],
+          [
+            "test/153007046-jpeg45.jpg",
+            "validation/153007046-random-crop-b.png"
+          ],
+          [
+            "test/153007046-random-crop-a.png",
+            "train/153007046-original.png"
+          ],
+          [
+            "test/153007046-random-crop-a.png",
+            "validation/153007046-color.png"
+          ],
+          [
+            "test/153007046-random-crop-a.png",
+            "validation/153007046-pixel-repack.png"
+          ],
+          [
+            "test/153007046-random-crop-a.png",
+            "validation/153007046-random-crop-b.png"
+          ],
+          [
+            "test/153007046-screenshot-border.png",
+            "validation/153007046-random-crop-b.png"
+          ],
+          [
+            "test/153007046-watermark.png",
+            "validation/153007046-random-crop-b.png"
+          ],
+          [
+            "test/153007056-byte-copy.png",
+            "validation/153007056-random-crop-b.png"
+          ],
+          [
+            "test/153007056-jpeg45.jpg",
+            "validation/153007056-random-crop-b.png"
+          ],
+          [
+            "test/153007056-random-crop-a.png",
+            "train/153007056-original.png"
+          ],
+          [
+            "test/153007056-random-crop-a.png",
+            "validation/153007056-color.png"
+          ],
+          [
+            "test/153007056-random-crop-a.png",
+            "validation/153007056-pixel-repack.png"
+          ],
+          [
+            "test/153007056-random-crop-a.png",
+            "validation/153007056-random-crop-b.png"
+          ],
+          [
+            "test/153007056-screenshot-border.png",
+            "validation/153007056-random-crop-b.png"
+          ],
+          [
+            "test/153007056-watermark.png",
+            "validation/153007056-random-crop-b.png"
+          ],
+          [
+            "test/175882787-byte-copy.png",
+            "validation/175882787-random-crop-b.png"
+          ],
+          [
+            "test/175882787-jpeg45.jpg",
+            "validation/175882787-random-crop-b.png"
+          ],
+          [
+            "test/175882787-random-crop-a.png",
+            "train/175882787-original.png"
+          ],
+          [
+            "test/175882787-random-crop-a.png",
+            "validation/175882787-color.png"
+          ],
+          [
+            "test/175882787-random-crop-a.png",
+            "validation/175882787-pixel-repack.png"
+          ],
+          [
+            "test/175882787-random-crop-a.png",
+            "validation/175882787-random-crop-b.png"
+          ],
+          [
+            "test/175882787-screenshot-border.png",
+            "validation/175882787-random-crop-b.png"
+          ],
+          [
+            "test/175882787-watermark.png",
+            "validation/175882787-random-crop-b.png"
+          ],
+          [
+            "test/27959644-byte-copy.png",
+            "validation/27959644-random-crop-b.png"
+          ],
+          [
+            "test/27959644-jpeg45.jpg",
+            "validation/27959644-random-crop-b.png"
+          ],
+          [
+            "test/27959644-random-crop-a.png",
+            "train/27959644-original.png"
+          ],
+          [
+            "test/27959644-random-crop-a.png",
+            "validation/27959644-color.png"
+          ],
+          [
+            "test/27959644-random-crop-a.png",
+            "validation/27959644-pixel-repack.png"
+          ],
+          [
+            "test/27959644-random-crop-a.png",
+            "validation/27959644-random-crop-b.png"
+          ],
+          [
+            "test/27959644-screenshot-border.png",
+            "validation/27959644-random-crop-b.png"
+          ],
+          [
+            "test/27959644-watermark.png",
+            "validation/27959644-random-crop-b.png"
+          ],
+          [
+            "test/28305582-byte-copy.png",
+            "validation/28305582-random-crop-b.png"
+          ],
+          [
+            "test/28305582-jpeg45.jpg",
+            "validation/28305582-random-crop-b.png"
+          ],
+          [
+            "test/28305582-random-crop-a.png",
+            "train/28305582-original.png"
+          ],
+          [
+            "test/28305582-random-crop-a.png",
+            "validation/28305582-color.png"
+          ],
+          [
+            "test/28305582-random-crop-a.png",
+            "validation/28305582-pixel-repack.png"
+          ],
+          [
+            "test/28305582-random-crop-a.png",
+            "validation/28305582-random-crop-b.png"
+          ],
+          [
+            "test/28305582-screenshot-border.png",
+            "validation/28305582-random-crop-b.png"
+          ],
+          [
+            "test/28305582-watermark.png",
+            "validation/28305582-random-crop-b.png"
+          ],
+          [
+            "test/28818900-byte-copy.png",
+            "validation/28818900-random-crop-b.png"
+          ],
+          [
+            "test/28818900-jpeg45.jpg",
+            "validation/28818900-random-crop-b.png"
+          ],
+          [
+            "test/28818900-random-crop-a.png",
+            "train/28818900-original.png"
+          ],
+          [
+            "test/28818900-random-crop-a.png",
+            "validation/28818900-color.png"
+          ],
+          [
+            "test/28818900-random-crop-a.png",
+            "validation/28818900-pixel-repack.png"
+          ],
+          [
+            "test/28818900-random-crop-a.png",
+            "validation/28818900-random-crop-b.png"
+          ],
+          [
+            "test/28818900-screenshot-border.png",
+            "train/28818900-original.png"
+          ],
+          [
+            "test/28818900-screenshot-border.png",
+            "validation/28818900-color.png"
+          ],
+          [
+            "test/28818900-screenshot-border.png",
+            "validation/28818900-pixel-repack.png"
+          ],
+          [
+            "test/28818900-screenshot-border.png",
+            "validation/28818900-random-crop-b.png"
+          ],
+          [
+            "test/28818900-watermark.png",
+            "validation/28818900-random-crop-b.png"
+          ],
+          [
+            "test/90293410-byte-copy.png",
+            "validation/90293410-random-crop-b.png"
+          ],
+          [
+            "test/90293410-jpeg45.jpg",
+            "validation/90293410-random-crop-b.png"
+          ],
+          [
+            "test/90293410-random-crop-a.png",
+            "train/90293410-original.png"
+          ],
+          [
+            "test/90293410-random-crop-a.png",
+            "validation/90293410-color.png"
+          ],
+          [
+            "test/90293410-random-crop-a.png",
+            "validation/90293410-pixel-repack.png"
+          ],
+          [
+            "test/90293410-random-crop-a.png",
+            "validation/90293410-random-crop-b.png"
+          ],
+          [
+            "test/90293410-screenshot-border.png",
+            "validation/90293410-random-crop-b.png"
+          ],
+          [
+            "test/90293410-watermark.png",
+            "validation/90293410-random-crop-b.png"
+          ],
+          [
+            "train/105538175-original.png",
+            "validation/105538175-random-crop-b.png"
+          ],
+          [
+            "train/117737596-original.png",
+            "validation/117737596-random-crop-b.png"
+          ],
+          [
+            "train/147065481-original.png",
+            "validation/147065481-random-crop-b.png"
+          ],
+          [
+            "train/147381266-original.png",
+            "validation/147381266-random-crop-b.png"
+          ],
+          [
+            "train/147659458-original.png",
+            "validation/147659458-random-crop-b.png"
+          ],
+          [
+            "train/153007046-original.png",
+            "validation/153007046-random-crop-b.png"
+          ],
+          [
+            "train/153007056-original.png",
+            "validation/153007056-random-crop-b.png"
+          ],
+          [
+            "train/175882787-original.png",
+            "validation/175882787-random-crop-b.png"
+          ],
+          [
+            "train/27959644-original.png",
+            "validation/27959644-random-crop-b.png"
+          ],
+          [
+            "train/28305582-original.png",
+            "validation/28305582-random-crop-b.png"
+          ],
+          [
+            "train/28818900-original.png",
+            "validation/28818900-random-crop-b.png"
+          ],
+          [
+            "train/90293410-original.png",
+            "validation/90293410-random-crop-b.png"
+          ]
+        ]
+      },
+      "nearChallengeTransforms": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "precision": null,
+        "recall": null,
+        "falsePositiveRate": null,
+        "falsePositives": [],
+        "falseNegatives": []
+      },
+      "exactEvidenceTierMismatches": [],
+      "exactPairsEmittedAsCandidates": 0,
+      "pairUniverse": 3312,
+      "nearOnlyUniverse": 3276
+    }
+  },
+  "independentGlobalIndexParity": true,
+  "independentLocalIndexParity": true,
+  "exactGroupsUnchanged": true,
+  "sameSceneNegativePairs": 552,
+  "sameSceneFalsePositivePairs": 0,
+  "anchorRetrievalByTransform": {
+    "jpeg45": {
+      "targets": 12,
+      "found": 12
+    },
+    "random-crop-a": {
+      "targets": 12,
+      "found": 0
+    },
+    "random-crop-b": {
+      "targets": 12,
+      "found": 0
+    },
+    "watermark": {
+      "targets": 12,
+      "found": 12
+    },
+    "color": {
+      "targets": 12,
+      "found": 12
+    },
+    "screenshot-border": {
+      "targets": 12,
+      "found": 9
+    }
+  },
+  "reviewLoad": {
+    "candidatePairs": 123,
+    "pairsPer1000Images": 1138.888888888889,
+    "originalOrderTopK": {
+      "25": {
+        "reviewed": 25,
+        "truePositive": 25,
+        "precision": 1.0
+      },
+      "50": {
+        "reviewed": 50,
+        "truePositive": 50,
+        "precision": 1.0
+      },
+      "100": {
+        "reviewed": 100,
+        "truePositive": 100,
+        "precision": 1.0
+      }
+    },
+    "experimentalOrderTopK": {
+      "25": {
+        "reviewed": 25,
+        "truePositive": 25,
+        "precision": 1.0
+      },
+      "50": {
+        "reviewed": 50,
+        "truePositive": 50,
+        "precision": 1.0
+      },
+      "100": {
+        "reviewed": 100,
+        "truePositive": 100,
+        "precision": 1.0
+      }
+    },
+    "scoredLocalPairs": 27,
+    "unscoredLocalPairs": 0,
+    "humanReviewSeconds": null,
+    "humanReviewStatus": "not-measured"
+  },
+  "automatedWallSeconds": {
+    "default": 1.0375860831700265,
+    "crops": 1.0717499582096934
+  },
+  "phases": {
+    "default": {
+      "deterministic": {
+        "enabled": true,
+        "complete": true,
+        "status": "complete",
+        "inputImages": 108,
+        "processedImages": 108,
+        "comparisons": 36,
+        "maxComparisons": 1000000,
+        "distanceEvaluations": 0,
+        "pairChecks": 36,
+        "indexOperations": 0,
+        "indexOperationLimit": 16000000,
+        "emittedPairs": 36,
+        "reason": ""
+      },
+      "perceptual": {
+        "enabled": true,
+        "complete": true,
+        "status": "complete",
+        "inputImages": 108,
+        "processedImages": 108,
+        "comparisons": 1900,
+        "maxComparisons": 10000000,
+        "distanceEvaluations": 1804,
+        "pairChecks": 96,
+        "indexOperations": 0,
+        "indexOperationLimit": 160000000,
+        "emittedPairs": 96,
+        "reason": ""
+      },
+      "local": {
+        "enabled": false,
+        "complete": false,
+        "status": "disabled",
+        "inputImages": 108,
+        "processedImages": 0,
+        "comparisons": 0,
+        "maxComparisons": 10000000,
+        "distanceEvaluations": 0,
+        "pairChecks": 0,
+        "indexOperations": 0,
+        "indexOperationLimit": 160000000,
+        "emittedPairs": 0,
+        "reason": ""
+      }
+    },
+    "crops": {
+      "deterministic": {
+        "enabled": true,
+        "complete": true,
+        "status": "complete",
+        "inputImages": 108,
+        "processedImages": 108,
+        "comparisons": 36,
+        "maxComparisons": 1000000,
+        "distanceEvaluations": 0,
+        "pairChecks": 36,
+        "indexOperations": 0,
+        "indexOperationLimit": 16000000,
+        "emittedPairs": 36,
+        "reason": ""
+      },
+      "perceptual": {
+        "enabled": true,
+        "complete": true,
+        "status": "complete",
+        "inputImages": 108,
+        "processedImages": 108,
+        "comparisons": 1900,
+        "maxComparisons": 10000000,
+        "distanceEvaluations": 1804,
+        "pairChecks": 96,
+        "indexOperations": 0,
+        "indexOperationLimit": 160000000,
+        "emittedPairs": 96,
+        "reason": ""
+      },
+      "local": {
+        "enabled": true,
+        "complete": true,
+        "status": "complete",
+        "inputImages": 108,
+        "processedImages": 108,
+        "comparisons": 36030,
+        "maxComparisons": 10000000,
+        "distanceEvaluations": 36003,
+        "pairChecks": 27,
+        "indexOperations": 184992,
+        "indexOperationLimit": 160000000,
+        "emittedPairs": 27,
+        "reason": ""
+      }
+    }
+  },
+  "scope": "Current implementation on already-known photos-v3; unchanged source bytes, transforms and labels; strict ordered evidence and window-witness comparison to the frozen staged baseline. Not a new holdout; natural contamination and human review time untested.",
+  "transformParity": {
+    "decodedPixelsAndLabelsUnchanged": true,
+    "encodedByteChanges": [],
+    "scope": "Generated file encodings may vary; source bytes, decoded pixels, transform metadata and all pair identity labels remain fixed."
+  },
+  "evaluationRole": "known-source-regression",
+  "sourceFiles": 12,
+  "currentSourceDigest": "a9ce26864825e019c170c4bb9ba9d8cf6a9ded89d804ad1ab454aa7438aa15b6",
+  "currentArtifactSha256": "12a4576ac97b61f20f9efe6362e4977e171768556838aad77220414032abeeeb",
+  "orderedBaselineParity": true
+}

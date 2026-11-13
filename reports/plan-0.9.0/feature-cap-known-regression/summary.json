@@ -1,0 +1,61 @@
+{
+  "status": "passed",
+  "sourceDigest": "cb0bfa505359fd70fb6704b87a33ee17c5c2a464522fc8e21bf9d27e1f6f2f56",
+  "scriptSha256": "191c6c8fb537a873c9e3535b6aee1b35eec3600c50188ddc77b33fde91ba3dd9",
+  "previousReportSha256": "61898bd56605aeebe960954c00448117ce62d419f565f2a1379398ce9a016181",
+  "records": [
+    {
+      "mode": "cold",
+      "auditId": "43f8ca83befeb8b23ef34c0d9277aab42fb18c341fd68d36e254dd0fed7f1de8",
+      "orbPairs": 71,
+      "allEvidencePairs": 143,
+      "timing": {
+        "elapsedMs": 3024,
+        "workerPeakRssBytes": 80658432,
+        "memorySamplingMs": 100,
+        "featureCacheHits": 24,
+        "matchCacheHits": 0,
+        "executedPairChecks": 217,
+        "executedDescriptorComparisons": 268386738,
+        "residentFeaturePeak": 2,
+        "checkpointImages": 0,
+        "checkpointDirections": 0,
+        "retrieval": {
+          "elapsedMs": 340,
+          "workerPeakRssBytes": 68632576,
+          "executedVisits": 1726622,
+          "reusedQueries": 0,
+          "indexedDescriptors": 130128,
+          "allocatedBytes": 4164096,
+          "postings": 514354
+        }
+      }
+    },
+    {
+      "mode": "warm",
+      "auditId": "43f8ca83befeb8b23ef34c0d9277aab42fb18c341fd68d36e254dd0fed7f1de8",
+      "orbPairs": 71,
+      "allEvidencePairs": 143,
+      "timing": {
+        "elapsedMs": 430,
+        "workerPeakRssBytes": 64225280,
+        "memorySamplingMs": 100,
+        "featureCacheHits": 168,
+        "matchCacheHits": 0,
+        "executedPairChecks": 0,
+        "executedDescriptorComparisons": 0,
+        "residentFeaturePeak": 1,
+        "checkpointImages": 168,
+        "checkpointDirections": 217,
+        "retrieval": {
+          "elapsedMs": 0,
+          "workerPeakRssBytes": 0,
+          "executedVisits": 0,
+          "reusedQueries": 168,
+          "indexedDescriptors": 0
+        }
+      }
+    }
+  ],
+  "scope": "All71 same-platform former-holdout ORB witnesses and all168 image feature digests unchanged after overflow cap fix; known-data regression, not new accuracy evidence."
+}

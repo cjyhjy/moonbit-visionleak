@@ -1,0 +1,115 @@
+
+> visionleak@0.8.0 verify:ci
+> node tools/ci.mjs
+
+moon 0.1.20261012 (748b63c 2026-10-12) ~/Documents/ChatGPT/黑客松新项目/projects/visionleak/.toolchain/bin/moon
+moonc v0.10.15+943464bfa (2026-10-12) ~/Documents/ChatGPT/黑客松新项目/projects/visionleak/.toolchain/bin/moonc
+moonrun 0.1.20261012 (748b63c 2026-10-12) ~/Documents/ChatGPT/黑客松新项目/projects/visionleak/.toolchain/bin/moonrun
+
+Feature flags enabled: rr_moon_mod,rr_moon_pkg
+Finished. moon: ran 1 task, now up to date
+Finished. moon: ran 3 tasks, now up to date
+Finished. moon: no work to do
+Total tests: 83, passed: 83, failed: 0.
+Finished. moon: ran 3 tasks, now up to date
+Finished. moon: ran 2 tasks, now up to date
+Total tests: 83, passed: 83, failed: 0.
+Finished. moon: ran 3 tasks, now up to date
+{"artifacts_path":["./_build/native/release/test/core/core.whitebox_test.exe"]}
+Total tests: 83, passed: 83, failed: 0.
+Total tests: 83, passed: 83, failed: 0.
+Built dist/visionleak.js from MoonBit.
+Finished. moon: no work to do
+
+> visionleak@0.8.0 test
+> node --test tests/*.test.mjs
+
+✔ installed capability contract agrees with real parser bounds, artifact and package (218.872458ms)
+✔ real CLI separates byte equality from decoded pixel equality, preserves input, and binds stable audit IDs (389.367792ms)
+✔ decode plus real core follows EXIF orientation and canonical white alpha semantics (14.708917ms)
+✔ a bad image and a symlink leave reviewable partial evidence and explicit errors (95.690917ms)
+✔ image, pixel, file, total-pixel, comparison, and output budgets are observable (560.585458ms)
+✔ fatal arguments and empty roots return structured errors without creating a report (421.643416ms)
+✔ overwrite is explicit and refuses unrelated files even with --force (330.371959ms)
+✔ exported API merges partial options, validates them, and audit identity includes scan scope and errors (49.23375ms)
+✔ loopback server serves only fixed assets and one report, and denies traversal, symlinks, writes, and foreign hosts (117.357167ms)
+✔ symlinked output ancestry is rejected before creating directories in the dataset (3.863292ms)
+✔ server rejects altered stable report fields even when the old auditId is retained (14.935167ms)
+✔ opt-in mirror CLI emits review candidates from actual reflected files and binds mode to identity (112.655791ms)
+✔ opt-in rotations audit physical rotated and rotated-reflected files without making exact groups (118.311208ms)
+✔ compiled JSON and bytes exports preserve the host protocol (4.158ms)
+✔ incremental SHA-256 opaque JS state accepts Buffer chunks and matches Node crypto (3.994958ms)
+✔ 20 local integral-image fingerprints match independent direct pixel box sums (16.620375ms)
+✔ actual CLI offset/aspect crops remain candidates, enter gate, validate and never form exact groups (374.08375ms)
+✔ local-only evidence is skipped by deterministic verify and cannot trigger the pixel gate (4.40725ms)
+✔ thumbnail sources are local and cannot traverse or execute URLs (0.818041ms)
+✔ validation is atomic and review export roundtrips without modifying machine evidence (5.688334ms)
+✔ filters compose evidence, human decision, path, split, and maximum distance (2.697334ms)
+✔ an imported report cannot reuse another audit server thumbnails (0.153875ms)
+✔ progress distinguishes unreviewed and unsure pairs inside the current scope (0.644416ms)
+✔ next pending navigation wraps inside the filtered queue and skips reviewed/current pairs (1.443041ms)
+✔ marking a filtered pair continues after its old position instead of returning to the beginning (1.384625ms)
+✔ one-step undo removes a new mark and restores an earlier decision including its note (0.398042ms)
+✔ undo cannot erase later notes, imported changes, another audit, or unrelated pair reviews (0.5295ms)
+✔ doctor default checks installed runtime without optional Python (104.880084ms)
+✔ doctor diagnoses absent Sharp and Core from dependency-free bootstrap (68.839541ms)
+✔ doctor gives executable environment setup for missing Python (12.291083ms)
+✔ 12MP JPEG byte copy and lossless reencoding keep full-resolution pixel identity (3103.299875ms)
+✔ sampling budget changes perception size while source decode and total budgets remain hard bounds (23.03425ms)
+✔ released 0.7.0: identical ordered full/partial outputs, accounting and independent candidates (2892.7925ms)
+✔ mirror host adapter routes to the compiled optional export (8.456583ms)
+✔ MIH active path matches independent exhaustive pairs for every radius 0..7, including edits spread across all segments (121.52125ms)
+✔ MIH local index retains cross-scale witnesses and exact evidence precedence (47.492833ms)
+✔ combined scan preserves legacy local API and independent canonical digest across block boundaries (61.436833ms)
+✔ ORB cache binds configuration and rejects damaged entries (62.573959ms)
+✔ ORB cache enforces disk quota without discarding completed work (32.138959ms)
+✔ ORB grayscale uses product white-alpha composition and integer BT.601 (1.145917ms)
+✔ default audit needs no ORB dependency; missing opt-in worker preserves exact evidence (225.519375ms)
+✔ worker deadline and cancellation kill an unresponsive process; memory guard is fail-closed (1046.327541ms)
+✔ real ORB audit binds witnesses, cache-independent identity, review, export and exact-only verify (533.743792ms)
+✔ real ORB obeys each independent budget and keeps deterministic coverage (884.268167ms)
+✔ ORB cached scans resume completed negative directions and retain final witnesses (977.7285ms)
+✔ disk-backed ORB crosses the 512-image boundary without losing late cross-batch evidence (1275.596667ms)
+✔ complete staged MIH results preserve ordered evidence, tied witnesses and groups (1580.144709ms)
+✔ known photo regressions preserve each ordered pair and local witness (765.375125ms)
+✔ orientation host adapter routes booleans and bytes to the optional core export (10.489625ms)
+✔ staged mirror audit preserves the complete 0.3.0 evidence set and exact components (23.59725ms)
+✔ fail-on implements fatal > hit > incomplete > complete and preserves default behavior (904.500375ms)
+✔ fail-on exact ignores pixel-only pairs and pixel ignores candidate-only pairs (276.907958ms)
+✔ verify detects changed and missing evidence and refuses a tampered report before dataset access (362.680209ms)
+✔ verify never follows a report traversal or a symlink to a file outside the dataset (184.270542ms)
+✔ coverage binds canonical splits, rejected codes, ignored files, and budget exhaustion (32.692125ms)
+✔ CSV matches the manually enumerated exact-group keep/remove plan (168.851041ms)
+✔ candidate suggestions require a validated confirmed review and HTML safely includes current review (335.002291ms)
+✔ the committed GitHub Action leak fixture fails the actual local audit command (83.747125ms)
+✔ late exact duplicates survive zero perceptual budget; exact and output budgets remain binding (6.36575ms)
+✔ overall coverage excludes skipped phases while exhaustion names the actual phase and input (7.019583ms)
+✔ CSV quoted paths, aliases, file scope, raw identity binding and revalidation (108.603791ms)
+✔ cache is content/config keyed, result-identical, corruption-tolerant and budget-aware (122.558333ms)
+✔ experimental review ordering preserves every evidence pair, prioritizes support, and bounds work (52.386083ms)
+✔ content identity accepts v0.1.0 reports and reviewed exports without rebinding evidence (8.008833ms)
+✔ v2 canonical identity survives object-key reorder but binds array order and unknown fields (0.753125ms)
+✔ MoonBit identity matches an independent ECMAScript canonicalization oracle for extension fields (14.347833ms)
+✔ public JS pixel adapter rejects inputs that the compiled ABI could coerce (0.696042ms)
+✔ public JS pixel adapter accepts Uint8Array and the Buffer decoder output (10.158083ms)
+✔ all split alias combinations normalize splits while preserving actual paths and directory scope (286.085625ms)
+✔ simultaneous aliases are fatal before output creation instead of merging dataset splits (8.631333ms)
+ℹ tests 70
+ℹ suites 0
+ℹ pass 70
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5091.173
+{"sourceFiles": 24, "images": 168, "queries": 144}
+{"sourceFiles": 12, "images": 84, "queries": 72}
+Traceback (most recent call last):
+  File "./tools/validate-orb-integration.py", line 147, in <module>
+    main(parser.parse_args().out)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "./tools/validate-orb-integration.py", line 137, in main
+    assert bindings == {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in bound_files}, 'Implementation changed during regression'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Implementation changed during regression
+CI acceptance: failed; .ci-artifacts/verification.json

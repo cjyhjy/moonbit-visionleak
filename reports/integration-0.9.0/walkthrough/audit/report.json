@@ -1,0 +1,943 @@
+{
+  "orbProfile": {
+    "id": "vl-orb-geometry-v1",
+    "experimental": true,
+    "enabledByDefault": false,
+    "normalization": "vl-rgb-v1, sampled RGBA composited on white, integer BT.601 gray",
+    "features": 800,
+    "featureCapPolicy": "retain first 800 detector-ordered points and aligned descriptor rows when OpenCV nfeatures overshoots on score ties",
+    "scaleFactor": 1.2,
+    "nlevels": 8,
+    "edgeThreshold": 15,
+    "patchSize": 31,
+    "fastThreshold": 20,
+    "WTA_K": 2,
+    "maxDistance": 48,
+    "ratio": 0.75,
+    "minimumInliers": 8,
+    "minimumInlierRatio": 0.5,
+    "minimumQuerySpan": 0.15,
+    "scaleRange": [
+      0.15,
+      5
+    ],
+    "containmentTolerance": 0.1,
+    "ransacReprojectionThreshold": 3,
+    "ransacIterations": 1000,
+    "ransacConfidence": 0.99,
+    "refineIterations": 5,
+    "witnessPointLimit": 32,
+    "opencv": "4.13.0",
+    "numpy": "2.3.3",
+    "evidence": "orb-candidate; geometric support, not identity or leakage probability",
+    "pairOrder": "input prefix, earlier partners first; smaller sampled image is query first, opposite direction if no hit; existing Core pairs retained without replacement",
+    "prefilter": "none",
+    "opencvWheel": "4.13.0.92",
+    "profileDigest": "08e291f33dd229862e277955fe2bb8bfddb39c1b21b92821a83e4e7a4db7e255",
+    "workerDigest": "5d18de7349aad5b8de01e6a66af81cbc9fb0dd03320d5a0054637419a414a11d",
+    "runtime": {
+      "python": "3.13.15",
+      "opencv": "4.13.0",
+      "opencvWheel": "4.13.0.92",
+      "numpy": "2.3.3",
+      "opencvBuildDigest": "6ccbe122ee5d14ea2d8760dca96fb750d6827986280867d6fa5a703b46bc6ab2"
+    }
+  },
+  "schemaVersion": "visionleak-report-v1",
+  "identityVersion": "vl-report-sha256-v2",
+  "normalization": "vl-rgb-v1",
+  "decoder": {
+    "name": "sharp",
+    "version": "0.35.5",
+    "libvips": "8.18.7"
+  },
+  "engine": {
+    "name": "visionleak-moonbit",
+    "artifactDigest": "ec93ead0ab016a676dc98a109824a6ec4ebf3779f8ae8bd563611e5ff7349097"
+  },
+  "ok": true,
+  "complete": true,
+  "status": "complete",
+  "auditStrategy": "exact-first-v1",
+  "phases": {
+    "deterministic": {
+      "enabled": true,
+      "complete": true,
+      "status": "complete",
+      "inputImages": 3,
+      "processedImages": 3,
+      "comparisons": 1,
+      "maxComparisons": 1000000,
+      "distanceEvaluations": 0,
+      "pairChecks": 1,
+      "indexOperations": 0,
+      "indexOperationLimit": 16000000,
+      "emittedPairs": 1,
+      "reason": ""
+    },
+    "perceptual": {
+      "enabled": true,
+      "complete": true,
+      "status": "complete",
+      "inputImages": 3,
+      "processedImages": 3,
+      "comparisons": 6,
+      "maxComparisons": 1000000,
+      "distanceEvaluations": 6,
+      "pairChecks": 0,
+      "indexOperations": 0,
+      "indexOperationLimit": 16000000,
+      "emittedPairs": 0,
+      "reason": ""
+    },
+    "local": {
+      "enabled": false,
+      "complete": false,
+      "status": "disabled",
+      "inputImages": 3,
+      "processedImages": 0,
+      "comparisons": 0,
+      "maxComparisons": 1000000,
+      "distanceEvaluations": 0,
+      "pairChecks": 0,
+      "indexOperations": 0,
+      "indexOperationLimit": 16000000,
+      "emittedPairs": 0,
+      "reason": ""
+    },
+    "orb": {
+      "enabled": true,
+      "status": "complete",
+      "complete": true,
+      "inputImages": 3,
+      "processedImages": 3,
+      "featureImages": 3,
+      "featurePixels": 245712,
+      "pairChecks": 2,
+      "descriptorComparisons": 2294400,
+      "emittedPairs": 2,
+      "reason": "",
+      "eligibleInputPairs": 2,
+      "eligibleFeaturePairs": 2,
+      "processedPairs": 2
+    }
+  },
+  "pairs": [
+    {
+      "left": "train/170072252-original.png",
+      "right": "validation/exact-copy.png",
+      "evidence": "byte-identical",
+      "distance": 0,
+      "lowContrast": false,
+      "review": "unreviewed"
+    },
+    {
+      "left": "test/170072252-small-png.png",
+      "right": "train/170072252-original.png",
+      "evidence": "orb-candidate",
+      "distance": null,
+      "matchOrb": {
+        "profile": "vl-orb-geometry-v1",
+        "original": "train/170072252-original.png",
+        "query": "test/170072252-small-png.png",
+        "originalSize": [
+          288,
+          384
+        ],
+        "querySize": [
+          146,
+          168
+        ],
+        "matches": 267,
+        "inliers": 198,
+        "inlierRatio": 0.7415730337078652,
+        "querySpan": [
+          0.7602739726027398,
+          0.6642951965332031
+        ],
+        "queryToOriginal": [
+          [
+            1.0045987176911002,
+            -0.00006270158333300848,
+            13.6729302105577
+          ],
+          [
+            0.00006270158333300848,
+            1.0045987176911002,
+            33.43963174174989
+          ]
+        ],
+        "projectedQueryCorners": [
+          [
+            13.6729302105577,
+            33.43963174174989
+          ],
+          [
+            160.34434299345833,
+            33.44878617291651
+          ],
+          [
+            160.33380912745838,
+            202.22137074502132
+          ],
+          [
+            13.662396344557754,
+            202.21221631385475
+          ]
+        ],
+        "contained": true,
+        "scale": 1.0045987196478459,
+        "inlierCoordinates": [
+          [
+            123,
+            120,
+            137,
+            154
+          ],
+          [
+            75,
+            73,
+            89,
+            107
+          ],
+          [
+            72,
+            72,
+            86,
+            106
+          ],
+          [
+            70,
+            70,
+            84,
+            104
+          ],
+          [
+            75,
+            65,
+            89,
+            99
+          ],
+          [
+            67,
+            64,
+            81,
+            98
+          ],
+          [
+            70,
+            63,
+            84,
+            97
+          ],
+          [
+            78,
+            94,
+            92,
+            128
+          ],
+          [
+            74,
+            61,
+            88,
+            95
+          ],
+          [
+            67,
+            61,
+            81,
+            95
+          ],
+          [
+            58,
+            54,
+            72,
+            88
+          ],
+          [
+            73,
+            116,
+            87,
+            150
+          ],
+          [
+            71,
+            50,
+            85,
+            84
+          ],
+          [
+            71,
+            48,
+            85,
+            82
+          ],
+          [
+            66,
+            45,
+            80,
+            79
+          ],
+          [
+            72,
+            87,
+            86,
+            121
+          ],
+          [
+            79,
+            87,
+            93,
+            121
+          ],
+          [
+            76,
+            88,
+            90,
+            122
+          ],
+          [
+            76,
+            81,
+            90,
+            115
+          ],
+          [
+            40,
+            75,
+            54,
+            109
+          ],
+          [
+            84,
+            144,
+            98,
+            178
+          ],
+          [
+            87,
+            105,
+            101,
+            139
+          ],
+          [
+            94,
+            143,
+            108,
+            177
+          ],
+          [
+            68,
+            87,
+            82,
+            121
+          ],
+          [
+            43,
+            76,
+            57,
+            110
+          ],
+          [
+            69,
+            93,
+            83,
+            127
+          ],
+          [
+            95,
+            141,
+            109,
+            175
+          ],
+          [
+            84,
+            74,
+            98,
+            108
+          ],
+          [
+            44,
+            74,
+            58,
+            108
+          ],
+          [
+            93,
+            104,
+            107,
+            138
+          ],
+          [
+            98,
+            139,
+            112,
+            173
+          ],
+          [
+            60,
+            85,
+            74,
+            119
+          ]
+        ],
+        "coordinateCount": 198,
+        "coordinatesTruncated": true,
+        "allCoordinatesDigest": "9cc08c416d85ee89a45fa24fa9e18f5f59dbc934d50848918374f6388a5cfa7a"
+      }
+    },
+    {
+      "left": "test/170072252-small-png.png",
+      "right": "validation/exact-copy.png",
+      "evidence": "orb-candidate",
+      "distance": null,
+      "matchOrb": {
+        "profile": "vl-orb-geometry-v1",
+        "original": "validation/exact-copy.png",
+        "query": "test/170072252-small-png.png",
+        "originalSize": [
+          288,
+          384
+        ],
+        "querySize": [
+          146,
+          168
+        ],
+        "matches": 267,
+        "inliers": 198,
+        "inlierRatio": 0.7415730337078652,
+        "querySpan": [
+          0.7602739726027398,
+          0.6642951965332031
+        ],
+        "queryToOriginal": [
+          [
+            1.0045987176911002,
+            -0.00006270158333300848,
+            13.6729302105577
+          ],
+          [
+            0.00006270158333300848,
+            1.0045987176911002,
+            33.43963174174989
+          ]
+        ],
+        "projectedQueryCorners": [
+          [
+            13.6729302105577,
+            33.43963174174989
+          ],
+          [
+            160.34434299345833,
+            33.44878617291651
+          ],
+          [
+            160.33380912745838,
+            202.22137074502132
+          ],
+          [
+            13.662396344557754,
+            202.21221631385475
+          ]
+        ],
+        "contained": true,
+        "scale": 1.0045987196478459,
+        "inlierCoordinates": [
+          [
+            123,
+            120,
+            137,
+            154
+          ],
+          [
+            75,
+            73,
+            89,
+            107
+          ],
+          [
+            72,
+            72,
+            86,
+            106
+          ],
+          [
+            70,
+            70,
+            84,
+            104
+          ],
+          [
+            75,
+            65,
+            89,
+            99
+          ],
+          [
+            67,
+            64,
+            81,
+            98
+          ],
+          [
+            70,
+            63,
+            84,
+            97
+          ],
+          [
+            78,
+            94,
+            92,
+            128
+          ],
+          [
+            74,
+            61,
+            88,
+            95
+          ],
+          [
+            67,
+            61,
+            81,
+            95
+          ],
+          [
+            58,
+            54,
+            72,
+            88
+          ],
+          [
+            73,
+            116,
+            87,
+            150
+          ],
+          [
+            71,
+            50,
+            85,
+            84
+          ],
+          [
+            71,
+            48,
+            85,
+            82
+          ],
+          [
+            66,
+            45,
+            80,
+            79
+          ],
+          [
+            72,
+            87,
+            86,
+            121
+          ],
+          [
+            79,
+            87,
+            93,
+            121
+          ],
+          [
+            76,
+            88,
+            90,
+            122
+          ],
+          [
+            76,
+            81,
+            90,
+            115
+          ],
+          [
+            40,
+            75,
+            54,
+            109
+          ],
+          [
+            84,
+            144,
+            98,
+            178
+          ],
+          [
+            87,
+            105,
+            101,
+            139
+          ],
+          [
+            94,
+            143,
+            108,
+            177
+          ],
+          [
+            68,
+            87,
+            82,
+            121
+          ],
+          [
+            43,
+            76,
+            57,
+            110
+          ],
+          [
+            69,
+            93,
+            83,
+            127
+          ],
+          [
+            95,
+            141,
+            109,
+            175
+          ],
+          [
+            84,
+            74,
+            98,
+            108
+          ],
+          [
+            44,
+            74,
+            58,
+            108
+          ],
+          [
+            93,
+            104,
+            107,
+            138
+          ],
+          [
+            98,
+            139,
+            112,
+            173
+          ],
+          [
+            60,
+            85,
+            74,
+            119
+          ]
+        ],
+        "coordinateCount": 198,
+        "coordinatesTruncated": true,
+        "allCoordinatesDigest": "9cc08c416d85ee89a45fa24fa9e18f5f59dbc934d50848918374f6388a5cfa7a"
+      }
+    }
+  ],
+  "groups": [
+    {
+      "members": [
+        "train/170072252-original.png",
+        "validation/exact-copy.png"
+      ],
+      "evidence": "exact-component"
+    }
+  ],
+  "options": {
+    "threshold": 0,
+    "maxImages": 1000,
+    "maxDecodePixels": 64000000,
+    "maxPixels": 4194304,
+    "maxTotalPixels": 100000000,
+    "maxFileBytes": 33554432,
+    "maxComparisons": 1000000,
+    "maxExactComparisons": 1000000,
+    "maxPairs": 10000,
+    "maxOrbImages": 256,
+    "maxOrbPixels": 1048576,
+    "maxOrbTotalPixels": 33554432,
+    "maxOrbComparisons": 100000000,
+    "maxOrbPairChecks": 10000,
+    "maxOrbCandidates": 200,
+    "maxOrbMilliseconds": 60000,
+    "maxOrbIndexDescriptors": 4000000,
+    "maxOrbIndexVisits": 100000000,
+    "maxOrbIndexMemoryMiB": 256,
+    "maxOrbMemoryMiB": 256,
+    "includeMirrors": false,
+    "includeRotations": false,
+    "includeCrops": false,
+    "includeOrb": true,
+    "includeOrbRetrieval": false
+  },
+  "stats": {
+    "inputImages": 3,
+    "processedImages": 3,
+    "comparisons": 7,
+    "distanceEvaluations": 6,
+    "pairChecks": 1,
+    "emittedPairs": 3,
+    "indexNodes": 2,
+    "reason": "",
+    "orbCandidatePairs": 2
+  },
+  "images": [
+    {
+      "id": "test/170072252-small-png.png",
+      "path": "test/170072252-small-png.png",
+      "split": "test",
+      "byteDigest": "37842db12489ae72329dc5df11ba832c45ae79a32909de291f952176c6cecc00",
+      "pixelDigest": "2ea5ddb475606b83b16065efffa64d2d4550a45a5b1f73eae6059f0085422620",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 146,
+        "height": 168,
+        "downsampled": false
+      },
+      "dhash": "1101111010111110110111111110111011001110101101001110001011000110",
+      "width": 146,
+      "height": 168,
+      "contrast": 255,
+      "thumbnailDigest": "2d357b4df0c376cab0dd51d11b86af7b46a06880690ded9345fc1216af3fcd20",
+      "format": "png",
+      "thumbnail": "thumbnails/9be6308cbd70251d5127e1a8507dcdf8ff4eb9f3ddbe06e50ca411d05e6e7346.jpg",
+      "orb": {
+        "width": 146,
+        "height": 168,
+        "keypoints": 717,
+        "grayDigest": "c46ea6e17fe076eac6f99dee36299a5390629b194e09c08692070fbabd22bc5f",
+        "featureDigest": "04dc95630a8b2dc4035d87ab406eb2fd58850d129930b880acaed5998b54f210"
+      }
+    },
+    {
+      "id": "train/170072252-original.png",
+      "path": "train/170072252-original.png",
+      "split": "train",
+      "byteDigest": "5a018ffe53b7130e33cb2d8fd24a479b1ac6269248ee87a39ba27b03ce1cb6be",
+      "pixelDigest": "248040ed1a7925530a813e57baad1086596f93ca17d30381367bff2f94431689",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 288,
+        "height": 384,
+        "downsampled": false
+      },
+      "dhash": "1011000011110001111100011101010000110011001100010110000110000000",
+      "width": 288,
+      "height": 384,
+      "contrast": 255,
+      "thumbnailDigest": "32ceb1b47040f0f08a1cf2b04e2a2606e6e5f0060c064e284d46dc3a332d261c",
+      "format": "png",
+      "thumbnail": "thumbnails/76b50ba1874b2d44456980bd00b9c9baaa43a768a9f1dd208f7ba5f16a4d1f95.jpg",
+      "orb": {
+        "width": 288,
+        "height": 384,
+        "keypoints": 800,
+        "grayDigest": "fca39ab2e7f6a6e336a41d311a7c8d1ad43d37c9f4923834e7c8ab9aa450ac73",
+        "featureDigest": "40018b35a57ade143a9c448d09f41b5f03943329dcf47d6b8bef4ec7ef63256f"
+      }
+    },
+    {
+      "id": "validation/exact-copy.png",
+      "path": "validation/exact-copy.png",
+      "split": "validation",
+      "byteDigest": "5a018ffe53b7130e33cb2d8fd24a479b1ac6269248ee87a39ba27b03ce1cb6be",
+      "pixelDigest": "248040ed1a7925530a813e57baad1086596f93ca17d30381367bff2f94431689",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 288,
+        "height": 384,
+        "downsampled": false
+      },
+      "dhash": "1011000011110001111100011101010000110011001100010110000110000000",
+      "width": 288,
+      "height": 384,
+      "contrast": 255,
+      "thumbnailDigest": "32ceb1b47040f0f08a1cf2b04e2a2606e6e5f0060c064e284d46dc3a332d261c",
+      "format": "png",
+      "thumbnail": "thumbnails/3b0c241cb736f3c639891dce2d89c6729345f325a9784e6ce3e4de61fb3e9cad.jpg",
+      "orb": {
+        "width": 288,
+        "height": 384,
+        "keypoints": 800,
+        "grayDigest": "fca39ab2e7f6a6e336a41d311a7c8d1ad43d37c9f4923834e7c8ab9aa450ac73",
+        "featureDigest": "40018b35a57ade143a9c448d09f41b5f03943329dcf47d6b8bef4ec7ef63256f"
+      }
+    }
+  ],
+  "errors": [],
+  "scope": {
+    "splits": [
+      "train",
+      "validation",
+      "test"
+    ],
+    "splitDirectories": {
+      "train": "train",
+      "validation": "validation",
+      "test": "test"
+    },
+    "missingSplits": [],
+    "supportedExtensions": [
+      ".png",
+      ".jpg",
+      ".jpeg",
+      ".webp",
+      ".avif",
+      ".tif",
+      ".tiff",
+      ".gif"
+    ],
+    "ignoredFiles": 0,
+    "entriesScanned": 3,
+    "discoveredAtLeast": 3,
+    "acceptedImages": 3,
+    "totalDecodedPixels": 245712,
+    "maxDirectoryEntries": 100000,
+    "source": "local-files",
+    "allPairsAreCrossSplit": true,
+    "perceptualMatchesRequireReview": true
+  },
+  "coverage": {
+    "splits": {
+      "train": {
+        "audited": 1,
+        "fingerprinted": 1,
+        "rejectedByCode": {},
+        "ignored": 0,
+        "unprocessed": 0
+      },
+      "validation": {
+        "audited": 1,
+        "fingerprinted": 1,
+        "rejectedByCode": {},
+        "ignored": 0,
+        "unprocessed": 0
+      },
+      "test": {
+        "audited": 1,
+        "fingerprinted": 1,
+        "rejectedByCode": {},
+        "ignored": 0,
+        "unprocessed": 0
+      },
+      "unknown": {
+        "audited": 0,
+        "fingerprinted": 0,
+        "rejectedByCode": {},
+        "ignored": 0,
+        "unprocessed": 0
+      }
+    },
+    "budgetExhaustion": [],
+    "enumerationComplete": true,
+    "rejectedOrErrorCount": 0,
+    "ignoredFiles": 0,
+    "unprocessedKnownFiles": 0,
+    "summary": "已审计 train 1 / validation 1 / test 1；拒收/错误 0；忽略 0；已发现但未审计 0；结论只覆盖已审计输入与已完成比较。",
+    "phases": {
+      "deterministic": {
+        "enabled": true,
+        "complete": true,
+        "status": "complete",
+        "inputImages": 3,
+        "processedImages": 3,
+        "comparisons": 1,
+        "maxComparisons": 1000000,
+        "distanceEvaluations": 0,
+        "pairChecks": 1,
+        "indexOperations": 0,
+        "indexOperationLimit": 16000000,
+        "emittedPairs": 1,
+        "reason": ""
+      },
+      "perceptual": {
+        "enabled": true,
+        "complete": true,
+        "status": "complete",
+        "inputImages": 3,
+        "processedImages": 3,
+        "comparisons": 6,
+        "maxComparisons": 1000000,
+        "distanceEvaluations": 6,
+        "pairChecks": 0,
+        "indexOperations": 0,
+        "indexOperationLimit": 16000000,
+        "emittedPairs": 0,
+        "reason": ""
+      },
+      "local": {
+        "enabled": false,
+        "complete": false,
+        "status": "disabled",
+        "inputImages": 3,
+        "processedImages": 0,
+        "comparisons": 0,
+        "maxComparisons": 1000000,
+        "distanceEvaluations": 0,
+        "pairChecks": 0,
+        "indexOperations": 0,
+        "indexOperationLimit": 16000000,
+        "emittedPairs": 0,
+        "reason": ""
+      },
+      "orb": {
+        "enabled": true,
+        "status": "complete",
+        "complete": true,
+        "inputImages": 3,
+        "processedImages": 3,
+        "featureImages": 3,
+        "featurePixels": 245712,
+        "pairChecks": 2,
+        "descriptorComparisons": 2294400,
+        "emittedPairs": 2,
+        "reason": "",
+        "eligibleInputPairs": 2,
+        "eligibleFeaturePairs": 2,
+        "processedPairs": 2
+      }
+    },
+    "deterministicInputComplete": true
+  },
+  "candidateGroups": [
+    {
+      "id": "candidate-533a15f8b6bb3b4ee4fb190540b032c47e9fdf4bc47eceb67b66c3335015a897",
+      "members": [
+        "test/170072252-small-png.png",
+        "train/170072252-original.png",
+        "validation/exact-copy.png"
+      ],
+      "evidence": "perceptual-component"
+    }
+  ],
+  "auditId": "3bc36db6a7618b8d7074064950490054651ef42caa4e5838769368ebd8a6a74d",
+  "createdAt": "2026-11-08T21:24:29.219Z",
+  "timing": {
+    "orb": {
+      "elapsedMs": 131,
+      "workerPeakRssBytes": 74006528,
+      "memorySamplingMs": 100,
+      "featureCacheHits": 0,
+      "matchCacheHits": 0,
+      "executedPairChecks": 2,
+      "executedDescriptorComparisons": 2294400,
+      "residentFeaturePeak": 3,
+      "checkpointImages": 0,
+      "checkpointDirections": 0,
+      "featureStageMs": 50,
+      "featureWorkerRequestMs": 41,
+      "executedFeatureExtractions": 3,
+      "geometryStageMs": 10,
+      "geometryWorkerRequestMs": 10
+    },
+    "elapsedMs": 176
+  }
+}

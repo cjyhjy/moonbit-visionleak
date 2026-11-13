@@ -1,0 +1,1535 @@
+{
+  "protocol": {
+    "sourcesSha256": "35883356d835b61bfd24f49ce1af22ec9138138ad5b18ec1b4869a7b88611660",
+    "generatorSha256": "6a0af0a866a8e93b43a007063683df39638e59652ab276930c70c6bd65d6ccb8",
+    "sourcePartition": "holdout",
+    "transforms": [
+      "byte-copy",
+      "jpeg45",
+      "random-crop-a",
+      "random-crop-b",
+      "watermark",
+      "screenshot-border"
+    ],
+    "cropSeed": "vl090:{sourceId}:{variant}",
+    "cropPolicy": "independent width/height 58..86%; uniform non-window-aligned integer offsets",
+    "queryBatchSize": 24,
+    "gallery": "all 24 originals in every invocation",
+    "groundTruth": "Known same-source-file anchor relation; cross-file candidates are unadjudicated. File-lineage metrics are surrogate labels, not natural contamination accuracy.",
+    "scope": "New file IDs and byte hashes, controlled transformations. Not naturally occurring contamination or a human review study."
+  },
+  "records": [
+    {
+      "path": "train/89847949-original.png",
+      "sourceId": "89847949",
+      "role": "gallery",
+      "family": "woven fabric",
+      "bucket": "repeated-texture",
+      "variant": "original",
+      "sha256": "64c4c0b8347535ae4516b6925f0c2b4869a1b22de5d8bac55a82a29b27e976a9"
+    },
+    {
+      "path": "test/89847949-byte-copy.png",
+      "sourceId": "89847949",
+      "role": "query",
+      "family": "woven fabric",
+      "bucket": "repeated-texture",
+      "variant": "byte-copy",
+      "sha256": "64c4c0b8347535ae4516b6925f0c2b4869a1b22de5d8bac55a82a29b27e976a9"
+    },
+    {
+      "path": "test/89847949-jpeg45.jpg",
+      "sourceId": "89847949",
+      "role": "query",
+      "family": "woven fabric",
+      "bucket": "repeated-texture",
+      "variant": "jpeg45",
+      "sha256": "1447f2d48f30e16e7bb6490ec4f9fe5aad8e941197399ae623b4a8ce8d8f418b"
+    },
+    {
+      "path": "test/89847949-random-crop-a.png",
+      "sourceId": "89847949",
+      "role": "query",
+      "family": "woven fabric",
+      "bucket": "repeated-texture",
+      "variant": "random-crop-a",
+      "sha256": "44c8c845c0921b4028baa4c178e316be7f47240ce7dc42e3a1338be966494643"
+    },
+    {
+      "path": "test/89847949-random-crop-b.png",
+      "sourceId": "89847949",
+      "role": "query",
+      "family": "woven fabric",
+      "bucket": "repeated-texture",
+      "variant": "random-crop-b",
+      "sha256": "c3399b8cb0783293d9a30623417859d4226591ce677e654c67801ce49737c688"
+    },
+    {
+      "path": "test/89847949-watermark.png",
+      "sourceId": "89847949",
+      "role": "query",
+      "family": "woven fabric",
+      "bucket": "repeated-texture",
+      "variant": "watermark",
+      "sha256": "dc641f6e9b06293f58194a6605d79ff34d5551d5a76cdfa51528816500063b50"
+    },
+    {
+      "path": "test/89847949-screenshot-border.png",
+      "sourceId": "89847949",
+      "role": "query",
+      "family": "woven fabric",
+      "bucket": "repeated-texture",
+      "variant": "screenshot-border",
+      "sha256": "e723b90e495cf23647a79f2fb7005b6d5b718993a05b469b48039f575f86dd6d"
+    },
+    {
+      "path": "train/148712526-original.png",
+      "sourceId": "148712526",
+      "role": "gallery",
+      "family": "woven fabric",
+      "bucket": "repeated-texture",
+      "variant": "original",
+      "sha256": "da6081dd065f79a16125c0c21bca2e45b6b78df255646c9bdf3ebcf4dcc90c16"
+    },
+    {
+      "path": "test/148712526-byte-copy.png",
+      "sourceId": "148712526",
+      "role": "query",
+      "family": "woven fabric",
+      "bucket": "repeated-texture",
+      "variant": "byte-copy",
+      "sha256": "da6081dd065f79a16125c0c21bca2e45b6b78df255646c9bdf3ebcf4dcc90c16"
+    },
+    {
+      "path": "test/148712526-jpeg45.jpg",
+      "sourceId": "148712526",
+      "role": "query",
+      "family": "woven fabric",
+      "bucket": "repeated-texture",
+      "variant": "jpeg45",
+      "sha256": "c3d4617ce20334266f2e8e75821b1e8c061863ef3e036e87f374062a0b7ca860"
+    },
+    {
+      "path": "test/148712526-random-crop-a.png",
+      "sourceId": "148712526",
+      "role": "query",
+      "family": "woven fabric",
+      "bucket": "repeated-texture",
+      "variant": "random-crop-a",
+      "sha256": "0b1fb0a3c5dda328378bc344aa76eb4c14aeabc1dfea1e3525506f711b66e93e"
+    },
+    {
+      "path": "test/148712526-random-crop-b.png",
+      "sourceId": "148712526",
+      "role": "query",
+      "family": "woven fabric",
+      "bucket": "repeated-texture",
+      "variant": "random-crop-b",
+      "sha256": "c88f63a4d7c1f5207820256bb4cc19d860679a7601f83bd8f4c8da5d551c2b5a"
+    },
+    {
+      "path": "test/148712526-watermark.png",
+      "sourceId": "148712526",
+      "role": "query",
+      "family": "woven fabric",
+      "bucket": "repeated-texture",
+      "variant": "watermark",
+      "sha256": "d59f29264d72eee4c2278b772f0ed8d601ee9a04c7c016d65c52c404cf9dd4dd"
+    },
+    {
+      "path": "test/148712526-screenshot-border.png",
+      "sourceId": "148712526",
+      "role": "query",
+      "family": "woven fabric",
+      "bucket": "repeated-texture",
+      "variant": "screenshot-border",
+      "sha256": "0b31c3002e93c69b783a00658132bfc9fc65a9939f80fa21aac60a50ad20dcee"
+    },
+    {
+      "path": "train/126436371-original.png",
+      "sourceId": "126436371",
+      "role": "gallery",
+      "family": "gravel",
+      "bucket": "repeated-texture",
+      "variant": "original",
+      "sha256": "53e143d23644e9516d04e8fcc3256787b9ef21fa6d7f0a620e2528a8cee039b5"
+    },
+    {
+      "path": "test/126436371-byte-copy.png",
+      "sourceId": "126436371",
+      "role": "query",
+      "family": "gravel",
+      "bucket": "repeated-texture",
+      "variant": "byte-copy",
+      "sha256": "53e143d23644e9516d04e8fcc3256787b9ef21fa6d7f0a620e2528a8cee039b5"
+    },
+    {
+      "path": "test/126436371-jpeg45.jpg",
+      "sourceId": "126436371",
+      "role": "query",
+      "family": "gravel",
+      "bucket": "repeated-texture",
+      "variant": "jpeg45",
+      "sha256": "c7c9ee498ca65e12f82dc9153deb934ceb390427226a76d3278dbd59b63c7ab5"
+    },
+    {
+      "path": "test/126436371-random-crop-a.png",
+      "sourceId": "126436371",
+      "role": "query",
+      "family": "gravel",
+      "bucket": "repeated-texture",
+      "variant": "random-crop-a",
+      "sha256": "63635e65e55594449e37886ca0cde1e283c906e3fa49497cba71aa5536af76fd"
+    },
+    {
+      "path": "test/126436371-random-crop-b.png",
+      "sourceId": "126436371",
+      "role": "query",
+      "family": "gravel",
+      "bucket": "repeated-texture",
+      "variant": "random-crop-b",
+      "sha256": "b221f195c295ec156da6f274e6bd2783bde623aaf67249ec5ebfb7bc495e05fe"
+    },
+    {
+      "path": "test/126436371-watermark.png",
+      "sourceId": "126436371",
+      "role": "query",
+      "family": "gravel",
+      "bucket": "repeated-texture",
+      "variant": "watermark",
+      "sha256": "794abc485010be5c371243e64cce118af0d14afa71eb0b57d090d8852bf30d27"
+    },
+    {
+      "path": "test/126436371-screenshot-border.png",
+      "sourceId": "126436371",
+      "role": "query",
+      "family": "gravel",
+      "bucket": "repeated-texture",
+      "variant": "screenshot-border",
+      "sha256": "befd9770f9847ec60c61258b8f4958f04ee540fb465c16ec5c87117bbade63a2"
+    },
+    {
+      "path": "train/146746929-original.png",
+      "sourceId": "146746929",
+      "role": "gallery",
+      "family": "gravel",
+      "bucket": "repeated-texture",
+      "variant": "original",
+      "sha256": "0d3e6c8015c5839c9631a37390d01ca9d50cd5dc750e641fb0b8807487785efa"
+    },
+    {
+      "path": "test/146746929-byte-copy.png",
+      "sourceId": "146746929",
+      "role": "query",
+      "family": "gravel",
+      "bucket": "repeated-texture",
+      "variant": "byte-copy",
+      "sha256": "0d3e6c8015c5839c9631a37390d01ca9d50cd5dc750e641fb0b8807487785efa"
+    },
+    {
+      "path": "test/146746929-jpeg45.jpg",
+      "sourceId": "146746929",
+      "role": "query",
+      "family": "gravel",
+      "bucket": "repeated-texture",
+      "variant": "jpeg45",
+      "sha256": "9021e7927c40f5c5f527628dd08736e280cf449fde9e0e50363da0f29cb14480"
+    },
+    {
+      "path": "test/146746929-random-crop-a.png",
+      "sourceId": "146746929",
+      "role": "query",
+      "family": "gravel",
+      "bucket": "repeated-texture",
+      "variant": "random-crop-a",
+      "sha256": "60978e11c09d53c50e83fe3acda0d11337fba38184a9f30646dce3057721ed89"
+    },
+    {
+      "path": "test/146746929-random-crop-b.png",
+      "sourceId": "146746929",
+      "role": "query",
+      "family": "gravel",
+      "bucket": "repeated-texture",
+      "variant": "random-crop-b",
+      "sha256": "fa27b3c933daab2b7e68f8f50c35fed2edad2ae03f0da4cd757af476e97afd81"
+    },
+    {
+      "path": "test/146746929-watermark.png",
+      "sourceId": "146746929",
+      "role": "query",
+      "family": "gravel",
+      "bucket": "repeated-texture",
+      "variant": "watermark",
+      "sha256": "78e39cecff227ed1a1abe341e53f893915f7f85db059a81e0f107496d7a01db3"
+    },
+    {
+      "path": "test/146746929-screenshot-border.png",
+      "sourceId": "146746929",
+      "role": "query",
+      "family": "gravel",
+      "bucket": "repeated-texture",
+      "variant": "screenshot-border",
+      "sha256": "f83152f8a68e78adbd3e2d0b21be316b15f4d0ce421342f5949d3f7b82f50d60"
+    },
+    {
+      "path": "train/175821475-original.png",
+      "sourceId": "175821475",
+      "role": "gallery",
+      "family": "ceramic tiles",
+      "bucket": "repeated-texture",
+      "variant": "original",
+      "sha256": "5857892a8abeac6ec9e190ffe63d797061c48c874a0e73d5f053d1f67eeb6150"
+    },
+    {
+      "path": "test/175821475-byte-copy.png",
+      "sourceId": "175821475",
+      "role": "query",
+      "family": "ceramic tiles",
+      "bucket": "repeated-texture",
+      "variant": "byte-copy",
+      "sha256": "5857892a8abeac6ec9e190ffe63d797061c48c874a0e73d5f053d1f67eeb6150"
+    },
+    {
+      "path": "test/175821475-jpeg45.jpg",
+      "sourceId": "175821475",
+      "role": "query",
+      "family": "ceramic tiles",
+      "bucket": "repeated-texture",
+      "variant": "jpeg45",
+      "sha256": "528ea80f63f6ac0d6e36bfb4d313f168b2b12c46d55dfac4b49e9b413225227e"
+    },
+    {
+      "path": "test/175821475-random-crop-a.png",
+      "sourceId": "175821475",
+      "role": "query",
+      "family": "ceramic tiles",
+      "bucket": "repeated-texture",
+      "variant": "random-crop-a",
+      "sha256": "3b8bbbfe41a8cdc792de99d8079b5346eff7c9e8e077193325345f4dd2aabc86"
+    },
+    {
+      "path": "test/175821475-random-crop-b.png",
+      "sourceId": "175821475",
+      "role": "query",
+      "family": "ceramic tiles",
+      "bucket": "repeated-texture",
+      "variant": "random-crop-b",
+      "sha256": "3f36f1d86fa25499db5cec7d67a5331162f68f051eff06c1019568228644fb4d"
+    },
+    {
+      "path": "test/175821475-watermark.png",
+      "sourceId": "175821475",
+      "role": "query",
+      "family": "ceramic tiles",
+      "bucket": "repeated-texture",
+      "variant": "watermark",
+      "sha256": "5ecf3c91e0b8e8914640e309d8c2816854706d712fac61f4c7c300fdc59ac5fd"
+    },
+    {
+      "path": "test/175821475-screenshot-border.png",
+      "sourceId": "175821475",
+      "role": "query",
+      "family": "ceramic tiles",
+      "bucket": "repeated-texture",
+      "variant": "screenshot-border",
+      "sha256": "5ec693a5c92ae7cd3ab90dc4bdd7e774afbb204668b839bbc344374d5f3adb00"
+    },
+    {
+      "path": "train/175821476-original.png",
+      "sourceId": "175821476",
+      "role": "gallery",
+      "family": "ceramic tiles",
+      "bucket": "repeated-texture",
+      "variant": "original",
+      "sha256": "dae28876d225125a8637430409a6c5a8b4bae3e17a5861dd5f3a3b982ab0bcf7"
+    },
+    {
+      "path": "test/175821476-byte-copy.png",
+      "sourceId": "175821476",
+      "role": "query",
+      "family": "ceramic tiles",
+      "bucket": "repeated-texture",
+      "variant": "byte-copy",
+      "sha256": "dae28876d225125a8637430409a6c5a8b4bae3e17a5861dd5f3a3b982ab0bcf7"
+    },
+    {
+      "path": "test/175821476-jpeg45.jpg",
+      "sourceId": "175821476",
+      "role": "query",
+      "family": "ceramic tiles",
+      "bucket": "repeated-texture",
+      "variant": "jpeg45",
+      "sha256": "9605c5b7a6fff5fa19740248db959b4406157579999b72711dc5f0057e828751"
+    },
+    {
+      "path": "test/175821476-random-crop-a.png",
+      "sourceId": "175821476",
+      "role": "query",
+      "family": "ceramic tiles",
+      "bucket": "repeated-texture",
+      "variant": "random-crop-a",
+      "sha256": "3d364017997fc865bf2fd7f69240c5f4b6ca294650a14652450a221031378f8f"
+    },
+    {
+      "path": "test/175821476-random-crop-b.png",
+      "sourceId": "175821476",
+      "role": "query",
+      "family": "ceramic tiles",
+      "bucket": "repeated-texture",
+      "variant": "random-crop-b",
+      "sha256": "74f62006e4d27173098f9e04f81ceb3b9016067584e596a5e772fdd682ff3694"
+    },
+    {
+      "path": "test/175821476-watermark.png",
+      "sourceId": "175821476",
+      "role": "query",
+      "family": "ceramic tiles",
+      "bucket": "repeated-texture",
+      "variant": "watermark",
+      "sha256": "397ddf1149338b5f974555137dd21e1dc25d3b681729bcd281721ee13df9b3a4"
+    },
+    {
+      "path": "test/175821476-screenshot-border.png",
+      "sourceId": "175821476",
+      "role": "query",
+      "family": "ceramic tiles",
+      "bucket": "repeated-texture",
+      "variant": "screenshot-border",
+      "sha256": "e65c000368fee1a0e0bc169da0d2aaf5dce1309bbb1571b14df311ab8219536d"
+    },
+    {
+      "path": "train/171747487-original.png",
+      "sourceId": "171747487",
+      "role": "gallery",
+      "family": "tree bark",
+      "bucket": "repeated-texture",
+      "variant": "original",
+      "sha256": "1630dd82db7a15e2d9baac3c23ddaeebb02fb31d82fb41f0d8fcfc27369b0366"
+    },
+    {
+      "path": "test/171747487-byte-copy.png",
+      "sourceId": "171747487",
+      "role": "query",
+      "family": "tree bark",
+      "bucket": "repeated-texture",
+      "variant": "byte-copy",
+      "sha256": "1630dd82db7a15e2d9baac3c23ddaeebb02fb31d82fb41f0d8fcfc27369b0366"
+    },
+    {
+      "path": "test/171747487-jpeg45.jpg",
+      "sourceId": "171747487",
+      "role": "query",
+      "family": "tree bark",
+      "bucket": "repeated-texture",
+      "variant": "jpeg45",
+      "sha256": "f2735bf3e53cd511b9f8df7b1c79d0b625425f4da444321e0668d09f5de15a0d"
+    },
+    {
+      "path": "test/171747487-random-crop-a.png",
+      "sourceId": "171747487",
+      "role": "query",
+      "family": "tree bark",
+      "bucket": "repeated-texture",
+      "variant": "random-crop-a",
+      "sha256": "0060d06c575cbbb18288f62c4341279c62ca7a26afee63a43460d8f44309bc28"
+    },
+    {
+      "path": "test/171747487-random-crop-b.png",
+      "sourceId": "171747487",
+      "role": "query",
+      "family": "tree bark",
+      "bucket": "repeated-texture",
+      "variant": "random-crop-b",
+      "sha256": "f26568c4c3ebfda9f09a6c52a1ad601a2f5ec5f4de894780f67760403b0c7ac2"
+    },
+    {
+      "path": "test/171747487-watermark.png",
+      "sourceId": "171747487",
+      "role": "query",
+      "family": "tree bark",
+      "bucket": "repeated-texture",
+      "variant": "watermark",
+      "sha256": "d26036ef8ccce78e9e66e40018373de0c13392b1ac1c474573c54632cde8c2a8"
+    },
+    {
+      "path": "test/171747487-screenshot-border.png",
+      "sourceId": "171747487",
+      "role": "query",
+      "family": "tree bark",
+      "bucket": "repeated-texture",
+      "variant": "screenshot-border",
+      "sha256": "64f1a3ef74fec2cc9ad724b87cad299021b35eb0d8186f57ea2053bc20fb9621"
+    },
+    {
+      "path": "train/171747486-original.png",
+      "sourceId": "171747486",
+      "role": "gallery",
+      "family": "tree bark",
+      "bucket": "repeated-texture",
+      "variant": "original",
+      "sha256": "793ed6fad0593accc34b5bb86794bb27c93e19ff5c7a8c9730058ffe6a137ce8"
+    },
+    {
+      "path": "test/171747486-byte-copy.png",
+      "sourceId": "171747486",
+      "role": "query",
+      "family": "tree bark",
+      "bucket": "repeated-texture",
+      "variant": "byte-copy",
+      "sha256": "793ed6fad0593accc34b5bb86794bb27c93e19ff5c7a8c9730058ffe6a137ce8"
+    },
+    {
+      "path": "test/171747486-jpeg45.jpg",
+      "sourceId": "171747486",
+      "role": "query",
+      "family": "tree bark",
+      "bucket": "repeated-texture",
+      "variant": "jpeg45",
+      "sha256": "3bdb6f0669b60739490801d5bcf568ad3f5dcaccd1413bf644a16e12393f130f"
+    },
+    {
+      "path": "test/171747486-random-crop-a.png",
+      "sourceId": "171747486",
+      "role": "query",
+      "family": "tree bark",
+      "bucket": "repeated-texture",
+      "variant": "random-crop-a",
+      "sha256": "684a98c2a3f09e221bab5bf231921770f5086cddcbec8742e075b0a92f6f35e6"
+    },
+    {
+      "path": "test/171747486-random-crop-b.png",
+      "sourceId": "171747486",
+      "role": "query",
+      "family": "tree bark",
+      "bucket": "repeated-texture",
+      "variant": "random-crop-b",
+      "sha256": "df01424f13d5b1e9104cb79d0df33faeeda5ed2ccaef70ef9fab966a0ea9ee85"
+    },
+    {
+      "path": "test/171747486-watermark.png",
+      "sourceId": "171747486",
+      "role": "query",
+      "family": "tree bark",
+      "bucket": "repeated-texture",
+      "variant": "watermark",
+      "sha256": "cb1979515d376c60cbceb4009912d6e0d24c576afeba98c9eb98873172b49f85"
+    },
+    {
+      "path": "test/171747486-screenshot-border.png",
+      "sourceId": "171747486",
+      "role": "query",
+      "family": "tree bark",
+      "bucket": "repeated-texture",
+      "variant": "screenshot-border",
+      "sha256": "df2c8b7100716e3cbf4dc68507e5ea72184635874a10948418b1f9388a5e9af7"
+    },
+    {
+      "path": "train/148324075-original.png",
+      "sourceId": "148324075",
+      "role": "gallery",
+      "family": "Neuschwanstein Castle",
+      "bucket": "similar-building",
+      "variant": "original",
+      "sha256": "c533960bf88024867f110deb63533d94342782ab907c64e2e2d210210c80fda0"
+    },
+    {
+      "path": "test/148324075-byte-copy.png",
+      "sourceId": "148324075",
+      "role": "query",
+      "family": "Neuschwanstein Castle",
+      "bucket": "similar-building",
+      "variant": "byte-copy",
+      "sha256": "c533960bf88024867f110deb63533d94342782ab907c64e2e2d210210c80fda0"
+    },
+    {
+      "path": "test/148324075-jpeg45.jpg",
+      "sourceId": "148324075",
+      "role": "query",
+      "family": "Neuschwanstein Castle",
+      "bucket": "similar-building",
+      "variant": "jpeg45",
+      "sha256": "c3fe76e64bdd5fd871d844c375cbcdf5866f2976aa1468a08360bc363ba4fa53"
+    },
+    {
+      "path": "test/148324075-random-crop-a.png",
+      "sourceId": "148324075",
+      "role": "query",
+      "family": "Neuschwanstein Castle",
+      "bucket": "similar-building",
+      "variant": "random-crop-a",
+      "sha256": "dbf5bf33db7c19761bd00e316236cf0c961e2c425f9610a0ea0ef22dbd344d37"
+    },
+    {
+      "path": "test/148324075-random-crop-b.png",
+      "sourceId": "148324075",
+      "role": "query",
+      "family": "Neuschwanstein Castle",
+      "bucket": "similar-building",
+      "variant": "random-crop-b",
+      "sha256": "996977db4405302fca3aee64a7a8d20392c1507ca26960a9d94ba98b2d070a24"
+    },
+    {
+      "path": "test/148324075-watermark.png",
+      "sourceId": "148324075",
+      "role": "query",
+      "family": "Neuschwanstein Castle",
+      "bucket": "similar-building",
+      "variant": "watermark",
+      "sha256": "99e3312dff474e410151a2f2766accff77fe84753e3b05e15e32521471a3bb2d"
+    },
+    {
+      "path": "test/148324075-screenshot-border.png",
+      "sourceId": "148324075",
+      "role": "query",
+      "family": "Neuschwanstein Castle",
+      "bucket": "similar-building",
+      "variant": "screenshot-border",
+      "sha256": "b87752eb5d6b530941a510116a50c4b5691a43b2a9a61cce7a503f69b731b087"
+    },
+    {
+      "path": "train/145478855-original.png",
+      "sourceId": "145478855",
+      "role": "gallery",
+      "family": "Neuschwanstein Castle",
+      "bucket": "similar-building",
+      "variant": "original",
+      "sha256": "b83b8b4dc4bfad912954f69233d804adee29e13220cb18b9ff5d4f151f828393"
+    },
+    {
+      "path": "test/145478855-byte-copy.png",
+      "sourceId": "145478855",
+      "role": "query",
+      "family": "Neuschwanstein Castle",
+      "bucket": "similar-building",
+      "variant": "byte-copy",
+      "sha256": "b83b8b4dc4bfad912954f69233d804adee29e13220cb18b9ff5d4f151f828393"
+    },
+    {
+      "path": "test/145478855-jpeg45.jpg",
+      "sourceId": "145478855",
+      "role": "query",
+      "family": "Neuschwanstein Castle",
+      "bucket": "similar-building",
+      "variant": "jpeg45",
+      "sha256": "ba488f9427d5ce6d90508a58fc325e42e713452019058e6f7ece81b8e5462c37"
+    },
+    {
+      "path": "test/145478855-random-crop-a.png",
+      "sourceId": "145478855",
+      "role": "query",
+      "family": "Neuschwanstein Castle",
+      "bucket": "similar-building",
+      "variant": "random-crop-a",
+      "sha256": "7838dc826605626672c690b8a5e8b9378802649a56edb5b1c2517539b68ced3d"
+    },
+    {
+      "path": "test/145478855-random-crop-b.png",
+      "sourceId": "145478855",
+      "role": "query",
+      "family": "Neuschwanstein Castle",
+      "bucket": "similar-building",
+      "variant": "random-crop-b",
+      "sha256": "2f51257d37a7ac7fba77ef3bdf2d6e530dda7761caacee865784c786f99c420a"
+    },
+    {
+      "path": "test/145478855-watermark.png",
+      "sourceId": "145478855",
+      "role": "query",
+      "family": "Neuschwanstein Castle",
+      "bucket": "similar-building",
+      "variant": "watermark",
+      "sha256": "24bd89bfaab821f51388b34e4c77776ccd7fdcdbac7745d0cad027dc234eac3d"
+    },
+    {
+      "path": "test/145478855-screenshot-border.png",
+      "sourceId": "145478855",
+      "role": "query",
+      "family": "Neuschwanstein Castle",
+      "bucket": "similar-building",
+      "variant": "screenshot-border",
+      "sha256": "3c2fcd793fa032a1166af0b016b59ec9b016b981d2ce8563d149315f47e13d7b"
+    },
+    {
+      "path": "train/20081452-original.png",
+      "sourceId": "20081452",
+      "role": "gallery",
+      "family": "Palace of Versailles",
+      "bucket": "similar-building",
+      "variant": "original",
+      "sha256": "e6c9ffb2a0ee314a1ab5b63679dd1023e4a08050b9ade729105d7455818f3da3"
+    },
+    {
+      "path": "test/20081452-byte-copy.png",
+      "sourceId": "20081452",
+      "role": "query",
+      "family": "Palace of Versailles",
+      "bucket": "similar-building",
+      "variant": "byte-copy",
+      "sha256": "e6c9ffb2a0ee314a1ab5b63679dd1023e4a08050b9ade729105d7455818f3da3"
+    },
+    {
+      "path": "test/20081452-jpeg45.jpg",
+      "sourceId": "20081452",
+      "role": "query",
+      "family": "Palace of Versailles",
+      "bucket": "similar-building",
+      "variant": "jpeg45",
+      "sha256": "4949a2a93e412dcb1cee53e17a51e67425c2165340b33b4448070a728c9acbdc"
+    },
+    {
+      "path": "test/20081452-random-crop-a.png",
+      "sourceId": "20081452",
+      "role": "query",
+      "family": "Palace of Versailles",
+      "bucket": "similar-building",
+      "variant": "random-crop-a",
+      "sha256": "59f146beecc0a0b96f6ec366a61869a6f3b34ebebcbacd008a75dff4fff3e671"
+    },
+    {
+      "path": "test/20081452-random-crop-b.png",
+      "sourceId": "20081452",
+      "role": "query",
+      "family": "Palace of Versailles",
+      "bucket": "similar-building",
+      "variant": "random-crop-b",
+      "sha256": "3d90d3cfce0d0de5770617feea84521f65961f59ebaa06a40d63de574460420e"
+    },
+    {
+      "path": "test/20081452-watermark.png",
+      "sourceId": "20081452",
+      "role": "query",
+      "family": "Palace of Versailles",
+      "bucket": "similar-building",
+      "variant": "watermark",
+      "sha256": "2482fb8e495e2b24bf93763f2594cf12d4b7fce35039fcc10f0f8fbd70ef45c5"
+    },
+    {
+      "path": "test/20081452-screenshot-border.png",
+      "sourceId": "20081452",
+      "role": "query",
+      "family": "Palace of Versailles",
+      "bucket": "similar-building",
+      "variant": "screenshot-border",
+      "sha256": "eea175d26dea8795f064356e2551a02fed8fa0c8d124ba6364933ba2e55f1d1c"
+    },
+    {
+      "path": "train/18316479-original.png",
+      "sourceId": "18316479",
+      "role": "gallery",
+      "family": "Palace of Versailles",
+      "bucket": "similar-building",
+      "variant": "original",
+      "sha256": "4a7e6728d1727feefb557e6331928de24df4fde2c46109818e752370a3df45da"
+    },
+    {
+      "path": "test/18316479-byte-copy.png",
+      "sourceId": "18316479",
+      "role": "query",
+      "family": "Palace of Versailles",
+      "bucket": "similar-building",
+      "variant": "byte-copy",
+      "sha256": "4a7e6728d1727feefb557e6331928de24df4fde2c46109818e752370a3df45da"
+    },
+    {
+      "path": "test/18316479-jpeg45.jpg",
+      "sourceId": "18316479",
+      "role": "query",
+      "family": "Palace of Versailles",
+      "bucket": "similar-building",
+      "variant": "jpeg45",
+      "sha256": "c0b575b502badde080b421bfd982cd0fa9f21c519101c376e3332b9db8f3cdac"
+    },
+    {
+      "path": "test/18316479-random-crop-a.png",
+      "sourceId": "18316479",
+      "role": "query",
+      "family": "Palace of Versailles",
+      "bucket": "similar-building",
+      "variant": "random-crop-a",
+      "sha256": "ce77a34387b723ebfe56b89c763f31fe2dc4f6c03fc7fcdacdeaf8f8c93ecbd7"
+    },
+    {
+      "path": "test/18316479-random-crop-b.png",
+      "sourceId": "18316479",
+      "role": "query",
+      "family": "Palace of Versailles",
+      "bucket": "similar-building",
+      "variant": "random-crop-b",
+      "sha256": "b4609da850371cf6e05d0add042896a63bc455b85ac6eefb50373ca642a893c9"
+    },
+    {
+      "path": "test/18316479-watermark.png",
+      "sourceId": "18316479",
+      "role": "query",
+      "family": "Palace of Versailles",
+      "bucket": "similar-building",
+      "variant": "watermark",
+      "sha256": "07b2ca1bcab1800dee6bca552fa4287234a45192b20caecca279ac0442626d94"
+    },
+    {
+      "path": "test/18316479-screenshot-border.png",
+      "sourceId": "18316479",
+      "role": "query",
+      "family": "Palace of Versailles",
+      "bucket": "similar-building",
+      "variant": "screenshot-border",
+      "sha256": "4a2873da53ab8d93962d1ac9b4b43851dbcfdc2cd8c8f728c78a6bb493225b0b"
+    },
+    {
+      "path": "train/12442576-original.png",
+      "sourceId": "12442576",
+      "role": "gallery",
+      "family": "Notre Dame Paris",
+      "bucket": "similar-building",
+      "variant": "original",
+      "sha256": "8ec3480234137250488e007cc79a21699c01018dced2cc469288866e79b60354"
+    },
+    {
+      "path": "test/12442576-byte-copy.png",
+      "sourceId": "12442576",
+      "role": "query",
+      "family": "Notre Dame Paris",
+      "bucket": "similar-building",
+      "variant": "byte-copy",
+      "sha256": "8ec3480234137250488e007cc79a21699c01018dced2cc469288866e79b60354"
+    },
+    {
+      "path": "test/12442576-jpeg45.jpg",
+      "sourceId": "12442576",
+      "role": "query",
+      "family": "Notre Dame Paris",
+      "bucket": "similar-building",
+      "variant": "jpeg45",
+      "sha256": "c5199a499afcaafa7b3a3434578f5595485db604e54e4bc19688c6a0322a97f4"
+    },
+    {
+      "path": "test/12442576-random-crop-a.png",
+      "sourceId": "12442576",
+      "role": "query",
+      "family": "Notre Dame Paris",
+      "bucket": "similar-building",
+      "variant": "random-crop-a",
+      "sha256": "f517d641d73b698d46211a6262aa64ea8973214cc0c1a217fa440fb288b44255"
+    },
+    {
+      "path": "test/12442576-random-crop-b.png",
+      "sourceId": "12442576",
+      "role": "query",
+      "family": "Notre Dame Paris",
+      "bucket": "similar-building",
+      "variant": "random-crop-b",
+      "sha256": "01e6b1a864269d184e4100c50181ce4b2fa3eba355ae6714f56accd669fc2a93"
+    },
+    {
+      "path": "test/12442576-watermark.png",
+      "sourceId": "12442576",
+      "role": "query",
+      "family": "Notre Dame Paris",
+      "bucket": "similar-building",
+      "variant": "watermark",
+      "sha256": "8f69a8a4a4f74e82db6e9a82d80d2312c6f1eecb87121d624c8e58adc98a9d60"
+    },
+    {
+      "path": "test/12442576-screenshot-border.png",
+      "sourceId": "12442576",
+      "role": "query",
+      "family": "Notre Dame Paris",
+      "bucket": "similar-building",
+      "variant": "screenshot-border",
+      "sha256": "216c9a364d18c4dfcbaa21d90a9ddfcb95fbf3bf28707d748a0f176f01d0201b"
+    },
+    {
+      "path": "train/12437411-original.png",
+      "sourceId": "12437411",
+      "role": "gallery",
+      "family": "Notre Dame Paris",
+      "bucket": "similar-building",
+      "variant": "original",
+      "sha256": "6152c31c356e433d1345fcef52b2b86adac68c91feadc3b8949d5a2f3d667f15"
+    },
+    {
+      "path": "test/12437411-byte-copy.png",
+      "sourceId": "12437411",
+      "role": "query",
+      "family": "Notre Dame Paris",
+      "bucket": "similar-building",
+      "variant": "byte-copy",
+      "sha256": "6152c31c356e433d1345fcef52b2b86adac68c91feadc3b8949d5a2f3d667f15"
+    },
+    {
+      "path": "test/12437411-jpeg45.jpg",
+      "sourceId": "12437411",
+      "role": "query",
+      "family": "Notre Dame Paris",
+      "bucket": "similar-building",
+      "variant": "jpeg45",
+      "sha256": "a053b6b024d70ea3660fe72163e70863f5c5a10e50bd76efc0f9b31e5e090b05"
+    },
+    {
+      "path": "test/12437411-random-crop-a.png",
+      "sourceId": "12437411",
+      "role": "query",
+      "family": "Notre Dame Paris",
+      "bucket": "similar-building",
+      "variant": "random-crop-a",
+      "sha256": "f458d36e1bb6870f663beee4089dec61dcbb49e45c2f41e0050c025320d8fe86"
+    },
+    {
+      "path": "test/12437411-random-crop-b.png",
+      "sourceId": "12437411",
+      "role": "query",
+      "family": "Notre Dame Paris",
+      "bucket": "similar-building",
+      "variant": "random-crop-b",
+      "sha256": "0013afcfd7087939be7abc13addede37e6d0a9df0ddfb53f514a774d841bbed0"
+    },
+    {
+      "path": "test/12437411-watermark.png",
+      "sourceId": "12437411",
+      "role": "query",
+      "family": "Notre Dame Paris",
+      "bucket": "similar-building",
+      "variant": "watermark",
+      "sha256": "24cdbe8d5864d6a0ab5e12fd7545381e5c3a34481792e7b565c8038d83f09240"
+    },
+    {
+      "path": "test/12437411-screenshot-border.png",
+      "sourceId": "12437411",
+      "role": "query",
+      "family": "Notre Dame Paris",
+      "bucket": "similar-building",
+      "variant": "screenshot-border",
+      "sha256": "0a2a04e093488a151be12e1954e8b7d10486392d6f9a99890583702898d9ff28"
+    },
+    {
+      "path": "train/158774065-original.png",
+      "sourceId": "158774065",
+      "role": "gallery",
+      "family": "Tokyo Tower",
+      "bucket": "similar-building",
+      "variant": "original",
+      "sha256": "fda88a9cc2ed14f50c4d78c3d7863440590e881cdef8486931d8250aa197b41b"
+    },
+    {
+      "path": "test/158774065-byte-copy.png",
+      "sourceId": "158774065",
+      "role": "query",
+      "family": "Tokyo Tower",
+      "bucket": "similar-building",
+      "variant": "byte-copy",
+      "sha256": "fda88a9cc2ed14f50c4d78c3d7863440590e881cdef8486931d8250aa197b41b"
+    },
+    {
+      "path": "test/158774065-jpeg45.jpg",
+      "sourceId": "158774065",
+      "role": "query",
+      "family": "Tokyo Tower",
+      "bucket": "similar-building",
+      "variant": "jpeg45",
+      "sha256": "5d86932edb70a2ec28345056ce7ff7c1b87d3d349abeb67157fadd9ee467615c"
+    },
+    {
+      "path": "test/158774065-random-crop-a.png",
+      "sourceId": "158774065",
+      "role": "query",
+      "family": "Tokyo Tower",
+      "bucket": "similar-building",
+      "variant": "random-crop-a",
+      "sha256": "c12f74955e742977305cf693ebcbd4162d20c9f7d83cd7deb5338a8485d79afa"
+    },
+    {
+      "path": "test/158774065-random-crop-b.png",
+      "sourceId": "158774065",
+      "role": "query",
+      "family": "Tokyo Tower",
+      "bucket": "similar-building",
+      "variant": "random-crop-b",
+      "sha256": "349908cac2bd124a0d72a383b0cfdc30e0429b9181ec62057e23229889a94975"
+    },
+    {
+      "path": "test/158774065-watermark.png",
+      "sourceId": "158774065",
+      "role": "query",
+      "family": "Tokyo Tower",
+      "bucket": "similar-building",
+      "variant": "watermark",
+      "sha256": "c37d424fe5787617c72e9aa5ea96be9eebf5d2d55e671ffba92567748dc86673"
+    },
+    {
+      "path": "test/158774065-screenshot-border.png",
+      "sourceId": "158774065",
+      "role": "query",
+      "family": "Tokyo Tower",
+      "bucket": "similar-building",
+      "variant": "screenshot-border",
+      "sha256": "f8b3cc290214b7c80d96b54d531b549c2f021ec30099d35f1bf39cb5b4833434"
+    },
+    {
+      "path": "train/98486744-original.png",
+      "sourceId": "98486744",
+      "role": "gallery",
+      "family": "Tokyo Tower",
+      "bucket": "similar-building",
+      "variant": "original",
+      "sha256": "0e5032286117425b553fe0a132183905176ebd2b59c9c71c6c16fc23ff6090c2"
+    },
+    {
+      "path": "test/98486744-byte-copy.png",
+      "sourceId": "98486744",
+      "role": "query",
+      "family": "Tokyo Tower",
+      "bucket": "similar-building",
+      "variant": "byte-copy",
+      "sha256": "0e5032286117425b553fe0a132183905176ebd2b59c9c71c6c16fc23ff6090c2"
+    },
+    {
+      "path": "test/98486744-jpeg45.jpg",
+      "sourceId": "98486744",
+      "role": "query",
+      "family": "Tokyo Tower",
+      "bucket": "similar-building",
+      "variant": "jpeg45",
+      "sha256": "827c8e10df102d2a9da4292a05e55b4ac96eb5e00615e307a4f2cd885f2cf05d"
+    },
+    {
+      "path": "test/98486744-random-crop-a.png",
+      "sourceId": "98486744",
+      "role": "query",
+      "family": "Tokyo Tower",
+      "bucket": "similar-building",
+      "variant": "random-crop-a",
+      "sha256": "2059879e96ab62a0f5125ae45c0e7e4da8b3d068aec84957c0233ac6954d4094"
+    },
+    {
+      "path": "test/98486744-random-crop-b.png",
+      "sourceId": "98486744",
+      "role": "query",
+      "family": "Tokyo Tower",
+      "bucket": "similar-building",
+      "variant": "random-crop-b",
+      "sha256": "7cc1da01b07a260606e91336c579b8125f1ba6567ffa683c3a6f3a239cd8ab8b"
+    },
+    {
+      "path": "test/98486744-watermark.png",
+      "sourceId": "98486744",
+      "role": "query",
+      "family": "Tokyo Tower",
+      "bucket": "similar-building",
+      "variant": "watermark",
+      "sha256": "894a7511800614751db0efe0e55b75ae8fc97466175eb2b8bc1ae91067074313"
+    },
+    {
+      "path": "test/98486744-screenshot-border.png",
+      "sourceId": "98486744",
+      "role": "query",
+      "family": "Tokyo Tower",
+      "bucket": "similar-building",
+      "variant": "screenshot-border",
+      "sha256": "9f0c6152985f80e08ece91fe697f7cfa19e79c8859429c7fd822e7da6fd407ed"
+    },
+    {
+      "path": "train/146427740-original.png",
+      "sourceId": "146427740",
+      "role": "gallery",
+      "family": "sunflower field",
+      "bucket": "same-scene",
+      "variant": "original",
+      "sha256": "7a19e01955a55fb0ee6f8f0b84b8dc1a88e75ebd817cd0b5ff7083eed31f6564"
+    },
+    {
+      "path": "test/146427740-byte-copy.png",
+      "sourceId": "146427740",
+      "role": "query",
+      "family": "sunflower field",
+      "bucket": "same-scene",
+      "variant": "byte-copy",
+      "sha256": "7a19e01955a55fb0ee6f8f0b84b8dc1a88e75ebd817cd0b5ff7083eed31f6564"
+    },
+    {
+      "path": "test/146427740-jpeg45.jpg",
+      "sourceId": "146427740",
+      "role": "query",
+      "family": "sunflower field",
+      "bucket": "same-scene",
+      "variant": "jpeg45",
+      "sha256": "0e8b1639b6f5c33684e1e566d9e302ae59f9e30d44e037dc3972f5c2d81d09e1"
+    },
+    {
+      "path": "test/146427740-random-crop-a.png",
+      "sourceId": "146427740",
+      "role": "query",
+      "family": "sunflower field",
+      "bucket": "same-scene",
+      "variant": "random-crop-a",
+      "sha256": "ae50156f7c1f6dcabd1490402394b4a3d014965eadbf0cffae867bc0ef7f1803"
+    },
+    {
+      "path": "test/146427740-random-crop-b.png",
+      "sourceId": "146427740",
+      "role": "query",
+      "family": "sunflower field",
+      "bucket": "same-scene",
+      "variant": "random-crop-b",
+      "sha256": "8dd320ff07efec90cf1c6006dec7ac0d8d618d72ca1a63774940eacddacbd1e9"
+    },
+    {
+      "path": "test/146427740-watermark.png",
+      "sourceId": "146427740",
+      "role": "query",
+      "family": "sunflower field",
+      "bucket": "same-scene",
+      "variant": "watermark",
+      "sha256": "c054ce4df3a7cc53b99eeea19be5d0c20e704f40d1afcf72ae855a1ce458f860"
+    },
+    {
+      "path": "test/146427740-screenshot-border.png",
+      "sourceId": "146427740",
+      "role": "query",
+      "family": "sunflower field",
+      "bucket": "same-scene",
+      "variant": "screenshot-border",
+      "sha256": "55c2c2115db9f1eaab2ab3b5e215ef7785595c332aa9e5e43abea28df82bb12b"
+    },
+    {
+      "path": "train/162245082-original.png",
+      "sourceId": "162245082",
+      "role": "gallery",
+      "family": "sunflower field",
+      "bucket": "same-scene",
+      "variant": "original",
+      "sha256": "0199909e0b583053fe4259736ef5d0d0157c68cfddbfa82781fa56c4bcb91e95"
+    },
+    {
+      "path": "test/162245082-byte-copy.png",
+      "sourceId": "162245082",
+      "role": "query",
+      "family": "sunflower field",
+      "bucket": "same-scene",
+      "variant": "byte-copy",
+      "sha256": "0199909e0b583053fe4259736ef5d0d0157c68cfddbfa82781fa56c4bcb91e95"
+    },
+    {
+      "path": "test/162245082-jpeg45.jpg",
+      "sourceId": "162245082",
+      "role": "query",
+      "family": "sunflower field",
+      "bucket": "same-scene",
+      "variant": "jpeg45",
+      "sha256": "795aaf6b36fe273c88de37783bfedbcbf87c9a5bfc58ff2f110c5a5bbb48b9db"
+    },
+    {
+      "path": "test/162245082-random-crop-a.png",
+      "sourceId": "162245082",
+      "role": "query",
+      "family": "sunflower field",
+      "bucket": "same-scene",
+      "variant": "random-crop-a",
+      "sha256": "bef79deb63ef396ab134fa1146473a469e26cc23ecedd2a1bb1bfd41b6139d45"
+    },
+    {
+      "path": "test/162245082-random-crop-b.png",
+      "sourceId": "162245082",
+      "role": "query",
+      "family": "sunflower field",
+      "bucket": "same-scene",
+      "variant": "random-crop-b",
+      "sha256": "33fa13447444cbee0563f0449a6c0a9286b59f864239946bb557e838c863e73c"
+    },
+    {
+      "path": "test/162245082-watermark.png",
+      "sourceId": "162245082",
+      "role": "query",
+      "family": "sunflower field",
+      "bucket": "same-scene",
+      "variant": "watermark",
+      "sha256": "72cf4637d19b4c59e771b5bbadb7acb5b923309918fdadc066cc226acf658dea"
+    },
+    {
+      "path": "test/162245082-screenshot-border.png",
+      "sourceId": "162245082",
+      "role": "query",
+      "family": "sunflower field",
+      "bucket": "same-scene",
+      "variant": "screenshot-border",
+      "sha256": "f26ad8c54026acbd0c07f8850d869e09caae6848f8c7a2a70231db778a9e04c3"
+    },
+    {
+      "path": "train/151373961-original.png",
+      "sourceId": "151373961",
+      "role": "gallery",
+      "family": "parked bicycles",
+      "bucket": "same-scene",
+      "variant": "original",
+      "sha256": "584da548f8ce57f8f038abac47664b7d2ce8e80e5b19884ab9ff84f793e764e7"
+    },
+    {
+      "path": "test/151373961-byte-copy.png",
+      "sourceId": "151373961",
+      "role": "query",
+      "family": "parked bicycles",
+      "bucket": "same-scene",
+      "variant": "byte-copy",
+      "sha256": "584da548f8ce57f8f038abac47664b7d2ce8e80e5b19884ab9ff84f793e764e7"
+    },
+    {
+      "path": "test/151373961-jpeg45.jpg",
+      "sourceId": "151373961",
+      "role": "query",
+      "family": "parked bicycles",
+      "bucket": "same-scene",
+      "variant": "jpeg45",
+      "sha256": "5445dbb304b4d4b711c09245e4ed76aa6d9f2b01e1e590185069659c8b95efe0"
+    },
+    {
+      "path": "test/151373961-random-crop-a.png",
+      "sourceId": "151373961",
+      "role": "query",
+      "family": "parked bicycles",
+      "bucket": "same-scene",
+      "variant": "random-crop-a",
+      "sha256": "fb46d68ad36e496753e9836bb131ec1275689604665f229f8490581baeaa0e96"
+    },
+    {
+      "path": "test/151373961-random-crop-b.png",
+      "sourceId": "151373961",
+      "role": "query",
+      "family": "parked bicycles",
+      "bucket": "same-scene",
+      "variant": "random-crop-b",
+      "sha256": "a448b2a7a4bbdd0e566226e3b117a514e740ac3542dd621ffd709dad006cdfc4"
+    },
+    {
+      "path": "test/151373961-watermark.png",
+      "sourceId": "151373961",
+      "role": "query",
+      "family": "parked bicycles",
+      "bucket": "same-scene",
+      "variant": "watermark",
+      "sha256": "3a3417577da33f1df6f2d276082027320ca435f80fc980efd6e2fa61e21c3709"
+    },
+    {
+      "path": "test/151373961-screenshot-border.png",
+      "sourceId": "151373961",
+      "role": "query",
+      "family": "parked bicycles",
+      "bucket": "same-scene",
+      "variant": "screenshot-border",
+      "sha256": "3c1e49a76ac938e23b2bd519f87468f750c69e64b75f5f056d2898dc81328c70"
+    },
+    {
+      "path": "train/92487532-original.png",
+      "sourceId": "92487532",
+      "role": "gallery",
+      "family": "parked bicycles",
+      "bucket": "same-scene",
+      "variant": "original",
+      "sha256": "2c54891a0763e2d2245f8f80bb90a0263453355abcb95fc0cf8a46ec4866f05c"
+    },
+    {
+      "path": "test/92487532-byte-copy.png",
+      "sourceId": "92487532",
+      "role": "query",
+      "family": "parked bicycles",
+      "bucket": "same-scene",
+      "variant": "byte-copy",
+      "sha256": "2c54891a0763e2d2245f8f80bb90a0263453355abcb95fc0cf8a46ec4866f05c"
+    },
+    {
+      "path": "test/92487532-jpeg45.jpg",
+      "sourceId": "92487532",
+      "role": "query",
+      "family": "parked bicycles",
+      "bucket": "same-scene",
+      "variant": "jpeg45",
+      "sha256": "7060a2dc6c62709d2277ae15e0a2b530bb3c841fbf70bd2e65198b295c54581c"
+    },
+    {
+      "path": "test/92487532-random-crop-a.png",
+      "sourceId": "92487532",
+      "role": "query",
+      "family": "parked bicycles",
+      "bucket": "same-scene",
+      "variant": "random-crop-a",
+      "sha256": "1a5db7c4849e0b4115562018af4a96822fc997ead8c22bd33f8ae6f05d0292e5"
+    },
+    {
+      "path": "test/92487532-random-crop-b.png",
+      "sourceId": "92487532",
+      "role": "query",
+      "family": "parked bicycles",
+      "bucket": "same-scene",
+      "variant": "random-crop-b",
+      "sha256": "b35e5d3f644308942b8a9d699d86f7ef99432d67cb5d2a0ed7edd44cc2b2bbac"
+    },
+    {
+      "path": "test/92487532-watermark.png",
+      "sourceId": "92487532",
+      "role": "query",
+      "family": "parked bicycles",
+      "bucket": "same-scene",
+      "variant": "watermark",
+      "sha256": "5c1c00da9757e2cedb6dd810f9f7d07e31e26a1240a97b98519b21a0f5bd4c0a"
+    },
+    {
+      "path": "test/92487532-screenshot-border.png",
+      "sourceId": "92487532",
+      "role": "query",
+      "family": "parked bicycles",
+      "bucket": "same-scene",
+      "variant": "screenshot-border",
+      "sha256": "bd1d7586320d182cbbd379f530f428af18816c8b7c0a54f4eef433784d73c079"
+    },
+    {
+      "path": "train/57670842-original.png",
+      "sourceId": "57670842",
+      "role": "gallery",
+      "family": "water lilies",
+      "bucket": "same-scene",
+      "variant": "original",
+      "sha256": "4793388f9a6d9f456301022c700c2d5e050a325705fbd0d9cecec5e9b199b9ab"
+    },
+    {
+      "path": "test/57670842-byte-copy.png",
+      "sourceId": "57670842",
+      "role": "query",
+      "family": "water lilies",
+      "bucket": "same-scene",
+      "variant": "byte-copy",
+      "sha256": "4793388f9a6d9f456301022c700c2d5e050a325705fbd0d9cecec5e9b199b9ab"
+    },
+    {
+      "path": "test/57670842-jpeg45.jpg",
+      "sourceId": "57670842",
+      "role": "query",
+      "family": "water lilies",
+      "bucket": "same-scene",
+      "variant": "jpeg45",
+      "sha256": "d1196403f36eb43192aba7058f9d23438dc347a16fcbad36a8d1f5904ae9ce83"
+    },
+    {
+      "path": "test/57670842-random-crop-a.png",
+      "sourceId": "57670842",
+      "role": "query",
+      "family": "water lilies",
+      "bucket": "same-scene",
+      "variant": "random-crop-a",
+      "sha256": "d2c84f5ef30bcfdd4063d2d39e7e5f59e4e1b37d92a08565f146364ae78956fe"
+    },
+    {
+      "path": "test/57670842-random-crop-b.png",
+      "sourceId": "57670842",
+      "role": "query",
+      "family": "water lilies",
+      "bucket": "same-scene",
+      "variant": "random-crop-b",
+      "sha256": "cbc014303ab8725061feca5281387bd185c8325006751a5a501bf4019a13a60b"
+    },
+    {
+      "path": "test/57670842-watermark.png",
+      "sourceId": "57670842",
+      "role": "query",
+      "family": "water lilies",
+      "bucket": "same-scene",
+      "variant": "watermark",
+      "sha256": "d6117f69c1a6ab9eeb005f376d94d5eebe81943628d17cd2fbd97db6b36eeb14"
+    },
+    {
+      "path": "test/57670842-screenshot-border.png",
+      "sourceId": "57670842",
+      "role": "query",
+      "family": "water lilies",
+      "bucket": "same-scene",
+      "variant": "screenshot-border",
+      "sha256": "e0608fabe6af8654bd405882acaa639871ad204dee016e01bf03a647a8e2884c"
+    },
+    {
+      "path": "train/57673345-original.png",
+      "sourceId": "57673345",
+      "role": "gallery",
+      "family": "water lilies",
+      "bucket": "same-scene",
+      "variant": "original",
+      "sha256": "0ed677bd88791c77ee40b537ad7b94e4acf123df4c404c840516914b07f3a9cf"
+    },
+    {
+      "path": "test/57673345-byte-copy.png",
+      "sourceId": "57673345",
+      "role": "query",
+      "family": "water lilies",
+      "bucket": "same-scene",
+      "variant": "byte-copy",
+      "sha256": "0ed677bd88791c77ee40b537ad7b94e4acf123df4c404c840516914b07f3a9cf"
+    },
+    {
+      "path": "test/57673345-jpeg45.jpg",
+      "sourceId": "57673345",
+      "role": "query",
+      "family": "water lilies",
+      "bucket": "same-scene",
+      "variant": "jpeg45",
+      "sha256": "51a92ac9a001bce03324c65937713d9cd3526fcb3c403a61c70a7736bb137d48"
+    },
+    {
+      "path": "test/57673345-random-crop-a.png",
+      "sourceId": "57673345",
+      "role": "query",
+      "family": "water lilies",
+      "bucket": "same-scene",
+      "variant": "random-crop-a",
+      "sha256": "f439bc9ac1ad55df4f5eb8d0712514ad8e5d93109d517dce0f5e360244e41e26"
+    },
+    {
+      "path": "test/57673345-random-crop-b.png",
+      "sourceId": "57673345",
+      "role": "query",
+      "family": "water lilies",
+      "bucket": "same-scene",
+      "variant": "random-crop-b",
+      "sha256": "b66968d5332bd697184e07adeb97f0a8dfefb67ffb0f91690656b7c17b477e15"
+    },
+    {
+      "path": "test/57673345-watermark.png",
+      "sourceId": "57673345",
+      "role": "query",
+      "family": "water lilies",
+      "bucket": "same-scene",
+      "variant": "watermark",
+      "sha256": "46d51ce9a9d209c3bd893a7e913bb6ae6de7ae041a4dc534a6b2964b1b096aaf"
+    },
+    {
+      "path": "test/57673345-screenshot-border.png",
+      "sourceId": "57673345",
+      "role": "query",
+      "family": "water lilies",
+      "bucket": "same-scene",
+      "variant": "screenshot-border",
+      "sha256": "a6616ec5af805328869480c19820d2a7239d43a0bbd038ba7c1cb289f050d1a3"
+    },
+    {
+      "path": "train/153128355-original.png",
+      "sourceId": "153128355",
+      "role": "gallery",
+      "family": "wind turbines",
+      "bucket": "same-scene",
+      "variant": "original",
+      "sha256": "bb9ac474ece2be0850dfc0766e25ddc9e2999048f3c07bea642bd894353c28df"
+    },
+    {
+      "path": "test/153128355-byte-copy.png",
+      "sourceId": "153128355",
+      "role": "query",
+      "family": "wind turbines",
+      "bucket": "same-scene",
+      "variant": "byte-copy",
+      "sha256": "bb9ac474ece2be0850dfc0766e25ddc9e2999048f3c07bea642bd894353c28df"
+    },
+    {
+      "path": "test/153128355-jpeg45.jpg",
+      "sourceId": "153128355",
+      "role": "query",
+      "family": "wind turbines",
+      "bucket": "same-scene",
+      "variant": "jpeg45",
+      "sha256": "7ca9139b08a6ee3c36acff68dc8579c9ede325a03f366187fe77090e22450ee6"
+    },
+    {
+      "path": "test/153128355-random-crop-a.png",
+      "sourceId": "153128355",
+      "role": "query",
+      "family": "wind turbines",
+      "bucket": "same-scene",
+      "variant": "random-crop-a",
+      "sha256": "3d62ea6832965b32d716e06b94a594fdf59a8a7c6e4b245635f2bc7ced2ab7eb"
+    },
+    {
+      "path": "test/153128355-random-crop-b.png",
+      "sourceId": "153128355",
+      "role": "query",
+      "family": "wind turbines",
+      "bucket": "same-scene",
+      "variant": "random-crop-b",
+      "sha256": "64e3d3c582a1ddc2a5f38a910708df97929ee5f9fed3fd4e00f94e053a08be61"
+    },
+    {
+      "path": "test/153128355-watermark.png",
+      "sourceId": "153128355",
+      "role": "query",
+      "family": "wind turbines",
+      "bucket": "same-scene",
+      "variant": "watermark",
+      "sha256": "8c262d9f1985d391bb0f7f5f9c93d6dc442adee36b02f4cfb256c4330785a2d5"
+    },
+    {
+      "path": "test/153128355-screenshot-border.png",
+      "sourceId": "153128355",
+      "role": "query",
+      "family": "wind turbines",
+      "bucket": "same-scene",
+      "variant": "screenshot-border",
+      "sha256": "690bed9451850bb264e9718198ae0b755bf68c5e50495abe448a535d4b6e5276"
+    },
+    {
+      "path": "train/149205672-original.png",
+      "sourceId": "149205672",
+      "role": "gallery",
+      "family": "wind turbines",
+      "bucket": "same-scene",
+      "variant": "original",
+      "sha256": "959ed73acae56ba1d693bc4809459937b5199a6cb1198aa5e4e33e136c30d4eb"
+    },
+    {
+      "path": "test/149205672-byte-copy.png",
+      "sourceId": "149205672",
+      "role": "query",
+      "family": "wind turbines",
+      "bucket": "same-scene",
+      "variant": "byte-copy",
+      "sha256": "959ed73acae56ba1d693bc4809459937b5199a6cb1198aa5e4e33e136c30d4eb"
+    },
+    {
+      "path": "test/149205672-jpeg45.jpg",
+      "sourceId": "149205672",
+      "role": "query",
+      "family": "wind turbines",
+      "bucket": "same-scene",
+      "variant": "jpeg45",
+      "sha256": "7d3a5a15316df94ff45be0b2cf79575acda397a31a01762e0bc0514787156b9c"
+    },
+    {
+      "path": "test/149205672-random-crop-a.png",
+      "sourceId": "149205672",
+      "role": "query",
+      "family": "wind turbines",
+      "bucket": "same-scene",
+      "variant": "random-crop-a",
+      "sha256": "ca2e31e783063fc9f68877588eaa7127ab062a25bb8578c506b4224d4c1ee287"
+    },
+    {
+      "path": "test/149205672-random-crop-b.png",
+      "sourceId": "149205672",
+      "role": "query",
+      "family": "wind turbines",
+      "bucket": "same-scene",
+      "variant": "random-crop-b",
+      "sha256": "06453daa57ea8947db7b472a6e4fd1c33e7937f42ce0732f31d942adec926df6"
+    },
+    {
+      "path": "test/149205672-watermark.png",
+      "sourceId": "149205672",
+      "role": "query",
+      "family": "wind turbines",
+      "bucket": "same-scene",
+      "variant": "watermark",
+      "sha256": "cf6dcd54334dc7c2aae5c0fa775fa319487e0ab651205a3cae6898d542bd5191"
+    },
+    {
+      "path": "test/149205672-screenshot-border.png",
+      "sourceId": "149205672",
+      "role": "query",
+      "family": "wind turbines",
+      "bucket": "same-scene",
+      "variant": "screenshot-border",
+      "sha256": "476a433898e4246b022b5fd8443214ad8c18cb2a55ee3bbfb67dd9428a937aed"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "sourcesSha256": "35883356d835b61bfd24f49ce1af22ec9138138ad5b18ec1b4869a7b88611660",
+  "generatorSha256": "6a0af0a866a8e93b43a007063683df39638e59652ab276930c70c6bd65d6ccb8",
+  "sourcePartition": "holdout",
+  "transforms": [
+    "byte-copy",
+    "jpeg45",
+    "random-crop-a",
+    "random-crop-b",
+    "watermark",
+    "screenshot-border"
+  ],
+  "cropSeed": "vl090:{sourceId}:{variant}",
+  "cropPolicy": "independent width/height 58..86%; uniform non-window-aligned integer offsets",
+  "queryBatchSize": 24,
+  "gallery": "all 24 originals in every invocation",
+  "groundTruth": "Known same-source-file anchor relation; cross-file candidates are unadjudicated. File-lineage metrics are surrogate labels, not natural contamination accuracy.",
+  "scope": "New file IDs and byte hashes, controlled transformations. Not naturally occurring contamination or a human review study."
+}

@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "sourceDigest": "d84189de589eb7bbd61e0920627da8891245db43ae51306d6a36666a080f2d0c",
+  "sourceFilesComparedAgainstStagedBlobs": 605,
+  "changedFilesStaged": 1831,
+  "naturalAndCocoImageFilesStaged": false,
+  "rawCsvByteChecks": [
+    {
+      "path": "research/natural-cifair-0.9.0/duplicates_cifar10.csv",
+      "sha256": "4cb7e99a7dfff346082c9d8fa4c2989a196e4a37d1e58f75936046696f1ba6a4",
+      "crlfCount": 287,
+      "stagedBytesEqual": true
+    }
+  ],
+  "scope": "Private local branch/index only; no commit or push. Not final archive acceptance.",
+  "codeAndDocsWhitespaceCheck": "passed",
+  "rawEvidenceWhitespaceScope": "Full staged diff --check flags preserved raw logs containing terminal spacing/CRLF; no raw evidence normalization performed.",
+  "stagedTree": "d2fa72ca926933c343c60fc9233477d2f3305bea",
+  "branch": "codex/release-0.9.0",
+  "localCommitCreated": false,
+  "remoteWritePerformed": false
+}

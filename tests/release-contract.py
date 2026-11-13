@@ -27,9 +27,29 @@ def load_module(name, filename):
 METADATA = load_module('visionleak_release_metadata_test_target', 'release_metadata.py')
 with patch.dict(sys.modules, {'release_metadata': METADATA}):
     ACCEPT = load_module('visionleak_accept_release_test_target', 'accept-release.py')
+    PACKAGE = load_module('visionleak_package_test_target', 'package.py')
 
 
 class ReleaseContractTests(unittest.TestCase):
+    def test_development_provenance_ships_without_benchmark_pixels_or_hidden_local_state(self):
+        folder = self.root / 'reports/plan-0.9.0'
+        for name, content in [('README.md', b'provenance'), ('run/summary.json', b'{}'), ('run/a.jpg', b'pixel'), ('run/a.png', b'pixel'), ('.env', b'local'), ('run/__pycache__/x.py', b'cache'), ('run/reproduce.py', b'print(1)')]:
+            path = folder / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(content)
+        actual = {str(p.relative_to(folder)) for p in PACKAGE.development_evidence(self.root)}
+        self.assertEqual(actual, {'README.md', 'run/summary.json', 'run/reproduce.py'})
+
+    def test_candidate_release_keeps_declared_cc0_visuals_but_excludes_natural_benchmark_thumbnails(self):
+        folder = self.root / 'reports/integration-0.9.0'
+        names = ['natural-cifair/summary.json', 'natural-cifair/audit/thumbnails/x.jpg', 'coco/audit/thumbnails/y.png', 'walkthrough/audit/thumbnails/a.jpg', 'ui-screenshots/desktop.png', 'arbitrary/pixels.jpg']
+        for name in names:
+            path = folder / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(b'{}' if name.endswith('.json') else b'pixel')
+        actual = {str(p.relative_to(folder)) for p in PACKAGE.evidence_files(self.root, 'reports/integration-0.9.0', ('walkthrough', 'ui-screenshots'))}
+        self.assertEqual(actual, {'natural-cifair/summary.json', 'walkthrough/audit/thumbnails/a.jpg', 'ui-screenshots/desktop.png'})
+
     def setUp(self):
         temporary = tempfile.TemporaryDirectory(prefix='visionleak-release-contract-', dir='/tmp')
         self.addCleanup(temporary.cleanup)

@@ -1,0 +1,79 @@
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  135.8MB
+Step 1/11 : FROM --platform=linux/amd64 python:3.13.7-slim-bookworm
+ ---> adafcc17694d
+Step 2/11 : RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates curl xz-utils build-essential clang git libglib2.0-0 && rm -rf /var/lib/apt/lists/*
+ ---> Using cache
+ ---> b3e6d1956ce7
+Step 3/11 : RUN set -eu; cd /tmp; curl -fsSLO https://nodejs.org/dist/v22.22.0/node-v22.22.0-linux-x64.tar.xz; curl -fsSLO https://nodejs.org/dist/v22.22.0/SHASUMS256.txt; awk '$2 == "node-v22.22.0-linux-x64.tar.xz" {print}' SHASUMS256.txt | sha256sum -c -; tar -xJf node-v22.22.0-linux-x64.tar.xz --strip-components=1 -C /usr/local; rm node-v22.22.0-linux-x64.tar.xz SHASUMS256.txt
+ ---> Using cache
+ ---> 39cb320da0a5
+Step 4/11 : WORKDIR /workspace/visionleak
+ ---> Using cache
+ ---> 16e4cd5dbddb
+Step 5/11 : ADD source.tar.gz /workspace/visionleak/
+ ---> Using cache
+ ---> 2f7775426dff
+Step 6/11 : RUN npm ci --no-audit --no-fund && python -m pip install --no-cache-dir pip==25.2 && python -m pip install --no-cache-dir -r requirements-oracle.txt -r requirements-orb.txt
+ ---> Using cache
+ ---> 39697974c81e
+Step 7/11 : RUN python tools/bootstrap.py
+ ---> Using cache
+ ---> 3ac5bcbd3369
+Step 8/11 : RUN node --input-type=module -e 'import{sourceDigest}from"./tools/source-digest.mjs";if(sourceDigest(process.cwd())!=="399a2d11bd966529f0e771bb7abfce7244255bc72df5144f5039c60bafa5ccf2")throw Error("Linux snapshot source mismatch")'
+ ---> Using cache
+ ---> 14bd2edbe861
+Step 9/11 : RUN apt-get update && apt-get install -y --no-install-recommends procps && rm -rf /var/lib/apt/lists/* && test -x /bin/ps
+ ---> [Warning] The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+ ---> Running in c60feb4a30ff
+Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [34.8 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8790 kB]
+Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [363 kB]
+Fetched 9402 kB in 4s (2395 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libproc2-0
+Recommended packages:
+  psmisc
+The following NEW packages will be installed:
+  libproc2-0 procps
+0 upgraded, 2 newly installed, 0 to remove and 21 not upgraded.
+Need to get 772 kB of archives.
+After this operation, 2379 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian bookworm/main amd64 libproc2-0 amd64 2:4.0.2-3 [62.8 kB]
+Get:2 http://deb.debian.org/debian bookworm/main amd64 procps amd64 2:4.0.2-3 [709 kB]
+[91mdebconf: delaying package configuration, since apt-utils is not installed
+[0mFetched 772 kB in 2s (422 kB/s)
+Selecting previously unselected package libproc2-0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 14289 files and directories currently installed.)
+Preparing to unpack .../libproc2-0_2%3a4.0.2-3_amd64.deb ...
+Unpacking libproc2-0:amd64 (2:4.0.2-3) ...
+Selecting previously unselected package procps.
+Preparing to unpack .../procps_2%3a4.0.2-3_amd64.deb ...
+Unpacking procps (2:4.0.2-3) ...
+Setting up libproc2-0:amd64 (2:4.0.2-3) ...
+Setting up procps (2:4.0.2-3) ...
+Processing triggers for libc-bin (2.36-9+deb12u14) ...
+ ---> Removed intermediate container c60feb4a30ff
+ ---> 57eeb75a6f94
+Step 10/11 : ENV VISIONLEAK_ORACLE_PYTHON=python VISIONLEAK_ORB_PYTHON=python PYTHONDONTWRITEBYTECODE=1
+ ---> [Warning] The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+ ---> Running in ef18de198c45
+ ---> Removed intermediate container ef18de198c45
+ ---> 933f51c7020c
+Step 11/11 : CMD ["npm", "run", "verify:ci"]
+ ---> [Warning] The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+ ---> Running in 3835ade33b1b
+ ---> Removed intermediate container 3835ade33b1b
+ ---> af9c553f7c48
+Successfully built af9c553f7c48
+Successfully tagged visionleak-090-acceptance:original-budget

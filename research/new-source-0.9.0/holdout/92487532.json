@@ -1,0 +1,22 @@
+{
+  "id": "92487532",
+  "title": "File:Fixed bollard bicycle stand.jpg",
+  "family": "parked bicycles",
+  "bucket": "same-scene",
+  "partition": "holdout",
+  "author": "Jeroen Hoek",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Fixed_bollard_bicycle_stand.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Fixed_bollard_bicycle_stand.jpg/960px-Fixed_bollard_bicycle_stand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/Fixed_bollard_bicycle_stand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "a2289aaf45346aa56a50bb72fa52991948e759c7",
+  "width": 2500,
+  "height": 1796,
+  "downloadSha256": "152f8a6f212fd74080cc4f9849e7388f2d6364e57cd268e392b1aef1a6e48515",
+  "sha256": "dc65c772b44c03f196e9fe2ce8b0056a2b3e1d5982a9e260954af433fa405036",
+  "storedFile": "research/new-source-0.9.0/holdout/92487532.png",
+  "storedWidth": 384,
+  "storedHeight": 276,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

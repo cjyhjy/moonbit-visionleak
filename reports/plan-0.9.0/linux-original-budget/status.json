@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "profile": "visionleak090",
+  "dockerContext": "colima-visionleak090",
+  "preexistingDefaultContext": "colima-uni-agent",
+  "activate": false,
+  "mounts": "none",
+  "sshConfigChanged": false,
+  "sourceDigest": "399a2d11bd966529f0e771bb7abfce7244255bc72df5144f5039c60bafa5ccf2",
+  "prematureAttempt": "Interrupted own build before trusting any result; final snapshot checksum verified before restart.",
+  "environmentCorrection": "Official Python slim image lacked /bin/ps. Add procps for actual RSS supervision before CI; no test or guard bypass.",
+  "containerId": "b8c893e9fac6ac2f723b3f05c9333b72979b251ef650bdc2682734bed0453338",
+  "containerName": "visionleak-090-ci-original-budget",
+  "network": "none",
+  "containerMemoryGiB": 3,
+  "runtimeScope": "Linux x86_64 userland under existing Rosetta in isolated ARM64 Colima VM, not native x86 hardware or GitHub runner performance.",
+  "checks": 30,
+  "nodeTests": 83,
+  "moonBitTestsPerBackend": 85,
+  "doctorStatus": "passed",
+  "collectorPathCorrection": "First collector rejected relative bounded-scale path; fixed by anchoring at actual Linux project directory. Same immutable container, no CI rerun.",
+  "cleanup": {
+    "taskVmStopped": true,
+    "diskRetainedForLaterPackageChecks": true,
+    "defaultDockerContextAfterStop": "colima-uni-agent"
+  }
+}

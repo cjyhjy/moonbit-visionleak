@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "browser": "Google Chrome",
+  "method": "CUA GUI by terra_operator, reviewed against generated report and HTML/CSS by main agent",
+  "reportAuditId": "e34b27c86d2da5b1e4871ff735e1686cf42f1e2e6f776663f49ca2ff4c55811d",
+  "surfaces": [
+    "loopback workbench",
+    "generated offline HTML served unchanged on loopback"
+  ],
+  "viewports": [
+    "desktop",
+    "390x844"
+  ],
+  "observed": {
+    "images": 168,
+    "evidencePairs": 143,
+    "orbPairs": 71,
+    "selectedVerifiedPairs": 144,
+    "eligiblePairs": 3384,
+    "candidateQueueComplete": true,
+    "exhaustivePairsComplete": false,
+    "orbFilter": true,
+    "geometryProjection": true,
+    "sampledInliers": true
+  },
+  "initialFailure": "390px offline HTML auditId caused horizontal scrolling and clipped summary",
+  "fix": "p overflow-wrap:anywhere; regenerated actual offline snapshot",
+  "retest": "desktop and 390px auditId/summary wrapped; no observed horizontal scrollbar; image evidence visible",
+  "humanReviewRecordsWritten": false,
+  "screenshotsPersisted": false,
+  "screenshotLimitation": "Current CUA documentation did not expose writing screenshot images to the requested directory; visual observations were inspected in the tool conversation.",
+  "scope": "Chrome on macOS only; not a human-review timing study"
+}

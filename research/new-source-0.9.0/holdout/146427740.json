@@ -1,0 +1,22 @@
+{
+  "id": "146427740",
+  "title": "File:Sunflower field in late afternoon sun with cloudy sky in Munich, Germany.jpg",
+  "family": "sunflower field",
+  "bucket": "same-scene",
+  "partition": "holdout",
+  "author": "Pittigrilli",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Sunflower_field_in_late_afternoon_sun_with_cloudy_sky_in_Munich,_Germany.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Sunflower_field_in_late_afternoon_sun_with_cloudy_sky_in_Munich%2C_Germany.jpg/960px-Sunflower_field_in_late_afternoon_sun_with_cloudy_sky_in_Munich%2C_Germany.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/46/Sunflower_field_in_late_afternoon_sun_with_cloudy_sky_in_Munich%2C_Germany.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "ac72cfc99c3d89aaf123265f2843ac6e710b8a2e",
+  "width": 3264,
+  "height": 2448,
+  "downloadSha256": "ce67aaf0574a90b32d8bcc9ea4526b1b5dc8e62fc1c53045b28879cd15bc3e96",
+  "sha256": "88feab133839ee181ed322bff7e78a8a9bcb6d9f0ffca02c8b516223d5e1a2cc",
+  "storedFile": "research/new-source-0.9.0/holdout/146427740.png",
+  "storedWidth": 384,
+  "storedHeight": 288,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

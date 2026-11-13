@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "version": "0.9.0",
+  "sourceDigest": "79317cd6b05ad364a00efc0bc26c250fbf91ba977cf18594e4b602bf81be033c",
+  "auditId": "655c7d890e0e70428af6f6656ab36d37b4faf30f011f0d1b7f88653547d22fd5",
+  "images": 5000,
+  "pairs": 12,
+  "fullSourceAndFeaturePixels": 1368653453,
+  "actualNewExtractions": 0,
+  "actualNewDirections": 0,
+  "featureAndGeometryRequestMs": 0,
+  "scope": "Current0.9.0 warm replay, full identity and pair/witness parity with completed full-resolution trial. Not an additional cold-performance replicate."
+}

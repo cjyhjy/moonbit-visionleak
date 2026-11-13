@@ -1,0 +1,22 @@
+{
+  "id": "149205672",
+  "title": "File:Polente lighthouse in Bozcaada, under a wind turbine.jpg",
+  "family": "wind turbines",
+  "bucket": "same-scene",
+  "partition": "holdout",
+  "author": "Raicem",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Polente_lighthouse_in_Bozcaada,_under_a_wind_turbine.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Polente_lighthouse_in_Bozcaada%2C_under_a_wind_turbine.jpg/960px-Polente_lighthouse_in_Bozcaada%2C_under_a_wind_turbine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Polente_lighthouse_in_Bozcaada%2C_under_a_wind_turbine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "6d0333a3c7a7e8928a47e5aafea054b851ac54ba",
+  "width": 4032,
+  "height": 3024,
+  "downloadSha256": "5cab9ac6cb97455991eda8bebdbaceccaea0bf2f09e15bee402425b9278fd10b",
+  "sha256": "2c927f8b1c823c966e93c3a077a98237ff4b5d417039b733a58c23dbac0d3d8f",
+  "storedFile": "research/new-source-0.9.0/holdout/149205672.png",
+  "storedWidth": 384,
+  "storedHeight": 288,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

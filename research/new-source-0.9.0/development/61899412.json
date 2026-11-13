@@ -1,0 +1,22 @@
+{
+  "id": "61899412",
+  "title": "File:Chrysler Building, New York, United States (Unsplash duzqs13jvGc).jpg",
+  "family": "Chrysler Building",
+  "bucket": "similar-building",
+  "partition": "development",
+  "author": "Andres Garcia andresgarcia",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Chrysler_Building,_New_York,_United_States_(Unsplash_duzqs13jvGc).jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Chrysler_Building%2C_New_York%2C_United_States_%28Unsplash_duzqs13jvGc%29.jpg/960px-Chrysler_Building%2C_New_York%2C_United_States_%28Unsplash_duzqs13jvGc%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Chrysler_Building%2C_New_York%2C_United_States_%28Unsplash_duzqs13jvGc%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "6f0f6bacc20cf2c742f0a733da823b64011cf09b",
+  "width": 7318,
+  "height": 4888,
+  "downloadSha256": "16041ede675d28f9446d9aceae68176426f67d883cbfde50289ee02c4ff642ce",
+  "sha256": "1c5e66568bfa463e11a694f8f93e0488f8f73cd4523fd110ea9c483af76b9d96",
+  "storedFile": "research/new-source-0.9.0/development/61899412.png",
+  "storedWidth": 384,
+  "storedHeight": 256,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

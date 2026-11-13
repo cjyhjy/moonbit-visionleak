@@ -1,0 +1,22 @@
+{
+  "id": "61753368",
+  "title": "File:Low angle view of the Chrysler Building, NYC (Unsplash).jpg",
+  "family": "Chrysler Building",
+  "bucket": "similar-building",
+  "partition": "development",
+  "author": "Andres Garcia andresgarcia",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Low_angle_view_of_the_Chrysler_Building,_NYC_(Unsplash).jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Low_angle_view_of_the_Chrysler_Building%2C_NYC_%28Unsplash%29.jpg/960px-Low_angle_view_of_the_Chrysler_Building%2C_NYC_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/Low_angle_view_of_the_Chrysler_Building%2C_NYC_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "3b68322f73ed861559bd0202205429b73adbc4ef",
+  "width": 6080,
+  "height": 4061,
+  "downloadSha256": "b65b974bfe5be3a3831a75950ce5b4f1d75c613f3884152ed5b2c85d47d3bf9d",
+  "sha256": "c90f8cda1994d48aeef423924b481d058c9177ff3f7b2c9883f03a424b8aea37",
+  "storedFile": "research/new-source-0.9.0/development/61753368.png",
+  "storedWidth": 384,
+  "storedHeight": 256,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

@@ -1,0 +1,20 @@
+{
+  "version": "0.9.0",
+  "status": "candidate-in-progress",
+  "published": false,
+  "lastFullCiSourceDigest": "d84189de589eb7bbd61e0920627da8891245db43ae51306d6a36666a080f2d0c",
+  "lastFullCiChecks": 30,
+  "packagingPolicyAfterThatCi": "Verified by final same-source macOS and Linux full CI, including12 release contract tests.",
+  "browser": "Native file preview/apply/undo passed on retry via native accessibility click + documented chooser; no user action required. Thumbnail delivery during current rerender remains to recheck before final package.",
+  "qaUrl": "http://127.0.0.1:4397/",
+  "qaServerSessionId": null,
+  "linuxLiveSessionId": null,
+  "linuxSourceDigest": "d84189de589eb7bbd61e0920627da8891245db43ae51306d6a36666a080f2d0c",
+  "fullResolutionCapacity": "passed100/1000/5000cold/warm/actualSIGKILL recovery;current0.9.0warm identity/witness replay passed",
+  "naturalReplay": "79TP/170FN,3FP/34TN,4unlabelled; independent check passed",
+  "publicPublicationApprovalReceived": false,
+  "linuxStatus": "passed",
+  "linuxReceipt": "linux/ci/verification.json",
+  "browserReceipt": "native-file-retry.json",
+  "qaServerStatus": "Prior handle83444 missing; no server restart performed as part of migration-only retry."
+}

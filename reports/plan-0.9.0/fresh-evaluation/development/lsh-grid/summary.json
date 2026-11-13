@@ -1,0 +1,62 @@
+{
+  "referenceSha256": "7f0afc2588f21aaae24fc432823a249a3e4a38422b8a67718a422f688d4120d6",
+  "selected": {
+    "bits": 24,
+    "tables": 4,
+    "k": 1,
+    "recall": 1,
+    "pairReduction": 23.506944444444443,
+    "postingVisits": 1775638
+  },
+  "qualifying": [
+    {
+      "bits": 24,
+      "tables": 4,
+      "k": 1,
+      "recall": 1,
+      "pairReduction": 23.506944444444443,
+      "postingVisits": 1775638
+    },
+    {
+      "bits": 20,
+      "tables": 4,
+      "k": 1,
+      "recall": 1,
+      "pairReduction": 23.506944444444443,
+      "postingVisits": 2710112
+    },
+    {
+      "bits": 24,
+      "tables": 8,
+      "k": 1,
+      "recall": 1,
+      "pairReduction": 23.506944444444443,
+      "postingVisits": 3552023
+    },
+    {
+      "bits": 20,
+      "tables": 8,
+      "k": 1,
+      "recall": 1,
+      "pairReduction": 23.506944444444443,
+      "postingVisits": 5511732
+    },
+    {
+      "bits": 16,
+      "tables": 4,
+      "k": 1,
+      "recall": 1,
+      "pairReduction": 23.506944444444443,
+      "postingVisits": 6834829
+    },
+    {
+      "bits": 16,
+      "tables": 8,
+      "k": 1,
+      "recall": 1,
+      "pairReduction": 23.506944444444443,
+      "postingVisits": 13564330
+    }
+  ],
+  "scope": "Development selection only; independent holdout required before product integration."
+}

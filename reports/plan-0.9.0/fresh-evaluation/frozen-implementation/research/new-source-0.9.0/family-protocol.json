@@ -1,0 +1,46 @@
+{
+  "families": {
+    "development": {
+      "repeated-texture": [
+        "roof tiles",
+        "cobblestone",
+        "wood texture",
+        "chain link fence"
+      ],
+      "similar-building": [
+        "Chrysler Building",
+        "Brandenburg Gate",
+        "Helsinki Cathedral",
+        "Pantheon Rome"
+      ],
+      "same-scene": [
+        "tulip garden",
+        "hot air balloons",
+        "sailboats",
+        "railway station"
+      ]
+    },
+    "holdout": {
+      "repeated-texture": [
+        "woven fabric",
+        "gravel",
+        "ceramic tiles",
+        "tree bark"
+      ],
+      "similar-building": [
+        "Neuschwanstein Castle",
+        "Palace of Versailles",
+        "Notre Dame Paris",
+        "Tokyo Tower"
+      ],
+      "same-scene": [
+        "sunflower field",
+        "parked bicycles",
+        "water lilies",
+        "wind turbines"
+      ]
+    }
+  },
+  "perFamily": 2,
+  "policy": "First two eligible CC0 bitmap API results, metadata only. Preserve family partition. Source-file lineage labels require later adjudication; not natural contamination truth."
+}

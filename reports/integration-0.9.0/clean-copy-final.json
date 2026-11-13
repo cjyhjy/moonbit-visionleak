@@ -1,0 +1,284 @@
+{
+  "schemaVersion": "visionleak-release-verification-v1",
+  "status": "passed",
+  "startedAt": "2026-11-13T18:48:09.710938+00:00",
+  "archive": "release/visionleak-0.9.0.zip",
+  "archiveSha256": "2fab6078e31482493ebcbc74c16121aec8f24ae4db7dfa4a0c007f747e2af200",
+  "checks": [
+    {
+      "name": "sha256sums",
+      "status": "passed"
+    },
+    {
+      "name": "archive-manifest",
+      "status": "passed",
+      "files": 3365
+    },
+    {
+      "name": "npm-ci",
+      "command": [
+        "npm",
+        "ci",
+        "--cache",
+        "<source-project>/.cache/npm-release",
+        "--no-audit",
+        "--no-fund"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.29615304200000003,
+      "status": "passed",
+      "log": "reports/integration-0.9.0/clean-copy-logs/release-npm-ci.log"
+    },
+    {
+      "name": "rebuild",
+      "command": [
+        "node",
+        "tools/build.mjs"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.5677970829999999,
+      "status": "passed",
+      "log": "reports/integration-0.9.0/clean-copy-logs/release-rebuild.log"
+    },
+    {
+      "name": "compiled-artifact-reproducible",
+      "status": "passed",
+      "sha256": "ec93ead0ab016a676dc98a109824a6ec4ebf3779f8ae8bd563611e5ff7349097"
+    },
+    {
+      "name": "node-tests",
+      "command": [
+        "node",
+        "--test",
+        "tests/capabilities.test.mjs",
+        "tests/cli.test.mjs",
+        "tests/core.test.mjs",
+        "tests/crops.test.mjs",
+        "tests/demo-validation.test.mjs",
+        "tests/doctor.test.mjs",
+        "tests/large-images.test.mjs",
+        "tests/mih-generation.test.mjs",
+        "tests/mirror.test.mjs",
+        "tests/optimization.test.mjs",
+        "tests/orb-cache.test.mjs",
+        "tests/orb-compact-index.test.mjs",
+        "tests/orb-lsh.test.mjs",
+        "tests/orb-retrieval.test.mjs",
+        "tests/orb.test.mjs",
+        "tests/ordered-regression.test.mjs",
+        "tests/orientation.test.mjs",
+        "tests/phase2.test.mjs",
+        "tests/post-review.test.mjs",
+        "tests/report-identity.test.mjs",
+        "tests/review-efficiency.test.mjs",
+        "tests/runtime.test.mjs",
+        "tests/split-aliases.test.mjs"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 7.543873374999999,
+      "status": "passed",
+      "log": "reports/integration-0.9.0/clean-copy-logs/release-node-tests.log"
+    },
+    {
+      "name": "actual-images",
+      "command": [
+        "node",
+        "tools/cli.mjs",
+        "audit",
+        "--root",
+        "fixtures/benchmark",
+        "--out",
+        "acceptance-output"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.2587638329999997,
+      "status": "passed",
+      "log": "reports/integration-0.9.0/clean-copy-logs/release-actual-images.log"
+    },
+    {
+      "name": "clean-report-parity",
+      "status": "passed",
+      "images": 59,
+      "pairs": 96,
+      "auditId": "9926e962d1c89e79ebbf1e56f7fc8982ec1f5e2df37651874943824804708f8b"
+    },
+    {
+      "name": "mirror-images",
+      "command": [
+        "node",
+        "tools/cli.mjs",
+        "audit",
+        "--root",
+        "fixtures/benchmark",
+        "--out",
+        "mirror-output",
+        "--include-mirrors"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.3035463749999998,
+      "status": "passed",
+      "log": "reports/integration-0.9.0/clean-copy-logs/release-mirror-images.log"
+    },
+    {
+      "name": "clean-mirror-report-parity",
+      "status": "passed",
+      "pairs": 107,
+      "auditId": "4adcb6f46fb160bae62ded9085a0f8aaacb29ce42d971d81317b2344cf6dfcec"
+    },
+    {
+      "name": "photos-development-default",
+      "command": [
+        "node",
+        "tools/cli.mjs",
+        "audit",
+        "--root",
+        "fixtures/photos-v1/development",
+        "--out",
+        "photo-output-development-default"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.3978181250000006,
+      "status": "passed",
+      "log": "reports/integration-0.9.0/clean-copy-logs/release-photos-development-default.log"
+    },
+    {
+      "name": "photo-parity-development-default",
+      "status": "passed",
+      "auditId": "3b9d07460f7ac0ff62d6f38d27ced3e296596316b2a49b553d049f9fe377621f",
+      "pairs": 57
+    },
+    {
+      "name": "photos-development-mirrors",
+      "command": [
+        "node",
+        "tools/cli.mjs",
+        "audit",
+        "--root",
+        "fixtures/photos-v1/development",
+        "--out",
+        "photo-output-development-mirrors",
+        "--include-mirrors"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.40678120900000003,
+      "status": "passed",
+      "log": "reports/integration-0.9.0/clean-copy-logs/release-photos-development-mirrors.log"
+    },
+    {
+      "name": "photo-parity-development-mirrors",
+      "status": "passed",
+      "auditId": "de891036deed0fac52c55e2ef4fab213cb07a8db39ebeda0765503628ab87022",
+      "pairs": 99
+    },
+    {
+      "name": "photos-development-orientations",
+      "command": [
+        "node",
+        "tools/cli.mjs",
+        "audit",
+        "--root",
+        "fixtures/photos-v1/development",
+        "--out",
+        "photo-output-development-orientations",
+        "--include-mirrors",
+        "--include-rotations"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.594361000000001,
+      "status": "passed",
+      "log": "reports/integration-0.9.0/clean-copy-logs/release-photos-development-orientations.log"
+    },
+    {
+      "name": "photo-parity-development-orientations",
+      "status": "passed",
+      "auditId": "6c4237211b3319a733a16ae127727c1c3e368231085aaa7dac21e06d4f8dc075",
+      "pairs": 124
+    },
+    {
+      "name": "photos-holdout-default",
+      "command": [
+        "node",
+        "tools/cli.mjs",
+        "audit",
+        "--root",
+        "fixtures/photos-v1/holdout",
+        "--out",
+        "photo-output-holdout-default"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.3564697920000004,
+      "status": "passed",
+      "log": "reports/integration-0.9.0/clean-copy-logs/release-photos-holdout-default.log"
+    },
+    {
+      "name": "photo-parity-holdout-default",
+      "status": "passed",
+      "auditId": "1e4fca77fe8a03cb0639f04bde7ee9cfecadfa989cfab031421df001749ad774",
+      "pairs": 62
+    },
+    {
+      "name": "photos-holdout-mirrors",
+      "command": [
+        "node",
+        "tools/cli.mjs",
+        "audit",
+        "--root",
+        "fixtures/photos-v1/holdout",
+        "--out",
+        "photo-output-holdout-mirrors",
+        "--include-mirrors"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.37883229100000015,
+      "status": "passed",
+      "log": "reports/integration-0.9.0/clean-copy-logs/release-photos-holdout-mirrors.log"
+    },
+    {
+      "name": "photo-parity-holdout-mirrors",
+      "status": "passed",
+      "auditId": "23f07715b11ce5ed20552d18f0e4c680d8080e2392974b29efb5204420604098",
+      "pairs": 106
+    },
+    {
+      "name": "photos-holdout-orientations",
+      "command": [
+        "node",
+        "tools/cli.mjs",
+        "audit",
+        "--root",
+        "fixtures/photos-v1/holdout",
+        "--out",
+        "photo-output-holdout-orientations",
+        "--include-mirrors",
+        "--include-rotations"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.5857553749999997,
+      "status": "passed",
+      "log": "reports/integration-0.9.0/clean-copy-logs/release-photos-holdout-orientations.log"
+    },
+    {
+      "name": "photo-parity-holdout-orientations",
+      "status": "passed",
+      "auditId": "1b5dda264a8b0c12ed193aaa1636bdd8a0e7029d2548981b5302757cd4843715",
+      "pairs": 131
+    },
+    {
+      "name": "source-digest",
+      "command": [
+        "node",
+        "--input-type=module",
+        "-e",
+        "import{sourceDigest}from'./tools/source-digest.mjs';console.log(sourceDigest(process.cwd()))"
+      ],
+      "exitCode": 0,
+      "elapsedSeconds": 0.05995037499999967,
+      "status": "passed",
+      "log": "reports/integration-0.9.0/clean-copy-logs/release-source-digest.log"
+    }
+  ],
+  "sourceDigest": "d84189de589eb7bbd61e0920627da8891245db43ae51306d6a36666a080f2d0c",
+  "extractedDirectory": "reports/clean-room/075b1b57-e045-4814-ac27-74f67044580c/visionleak",
+  "extractedCopyRetained": false,
+  "finishedAt": "2026-11-13T18:48:22.891221+00:00"
+}

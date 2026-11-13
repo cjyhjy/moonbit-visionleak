@@ -1,0 +1,370 @@
+{
+  "schemaVersion": "visionleak-report-v1",
+  "normalization": "vl-rgb-v1",
+  "complete": true,
+  "status": "complete",
+  "options": {
+    "includeOrb": true
+  },
+  "orbProfile": {
+    "id": "vl-orb-geometry-v1",
+    "experimental": true,
+    "enabledByDefault": false,
+    "normalization": "vl-rgb-v1, sampled RGBA composited on white, integer BT.601 gray",
+    "features": 800,
+    "scaleFactor": 1.2,
+    "nlevels": 8,
+    "edgeThreshold": 15,
+    "patchSize": 31,
+    "fastThreshold": 20,
+    "WTA_K": 2,
+    "maxDistance": 48,
+    "ratio": 0.75,
+    "minimumInliers": 8,
+    "minimumInlierRatio": 0.5,
+    "minimumQuerySpan": 0.15,
+    "scaleRange": [
+      0.15,
+      5
+    ],
+    "containmentTolerance": 0.1,
+    "ransacReprojectionThreshold": 3,
+    "ransacIterations": 1000,
+    "ransacConfidence": 0.99,
+    "refineIterations": 5,
+    "witnessPointLimit": 32,
+    "opencv": "4.13.0",
+    "numpy": "2.3.3",
+    "evidence": "orb-candidate; geometric support, not identity or leakage probability",
+    "pairOrder": "input prefix, earlier partners first; smaller sampled image is query first, opposite direction if no hit; existing Core pairs retained without replacement",
+    "prefilter": "none",
+    "opencvWheel": "4.13.0.92",
+    "profileDigest": "969c6d587e735764a39e09259bc3b92f7df3823a4b7765e371ac1abd82ce02f1",
+    "workerDigest": "6749851da71320bafaee8ce03f10f27e4a8d11f92439fc86476026385f36b218",
+    "runtime": {
+      "python": "3.13.15",
+      "opencv": "4.13.0",
+      "opencvWheel": "4.13.0.92",
+      "numpy": "2.3.3",
+      "opencvBuildDigest": "6ccbe122ee5d14ea2d8760dca96fb750d6827986280867d6fa5a703b46bc6ab2"
+    }
+  },
+  "scope": {
+    "fixture": true
+  },
+  "images": [
+    {
+      "id": "test/12437411-random-crop-a.png",
+      "path": "test/12437411-random-crop-a.png",
+      "split": "test",
+      "byteDigest": "f458d36e1bb6870f663beee4089dec61dcbb49e45c2f41e0050c025320d8fe86",
+      "pixelDigest": "8580a7c4bef7d30620b9587e32e23c103a40766d4e2a03a45cec72c5d8b17cb1",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 186,
+        "height": 314,
+        "downsampled": false
+      },
+      "dhash": "1001011011000011000000110000000100011110001110100010010100100101",
+      "width": 186,
+      "height": 314,
+      "contrast": 240,
+      "thumbnailDigest": "534971c0f6e2f98b194ee9914b994bfb78728dfe9b93097715f3c3c8454f429c",
+      "format": "png",
+      "thumbnail": "thumbnails/66a07466a91cf95407cd0ad526577875cf6d23c21f0ecc683d47f037102e0fe8.jpg",
+      "orb": {
+        "width": 186,
+        "height": 314,
+        "keypoints": 753,
+        "grayDigest": "0c0f86a998623e30d165c76b804d324d240edef1e9b5d2f1dd082bed57bde372",
+        "featureDigest": "0feb6094d62a2bf4e2379572ad095b686c1599bf28416e466ba2a4dc03d910cf"
+      }
+    },
+    {
+      "id": "train/12437411-original.png",
+      "path": "train/12437411-original.png",
+      "split": "train",
+      "byteDigest": "6152c31c356e433d1345fcef52b2b86adac68c91feadc3b8949d5a2f3d667f15",
+      "pixelDigest": "5950b8653940cd364846ece81a6f8070401867e995ebbc30625ce6165184476d",
+      "pixelDigestBasis": "full",
+      "dhashBasis": {
+        "width": 289,
+        "height": 384,
+        "downsampled": false
+      },
+      "dhash": "0110110001111001100011100000111100000111001100110101010101010101",
+      "width": 289,
+      "height": 384,
+      "contrast": 251,
+      "thumbnailDigest": "73f6a4bfae6f093902d0507e93cc0fbf8544e28ddc62ec1d97a82648a8a0497e",
+      "format": "png",
+      "thumbnail": "thumbnails/f4bb62dbd431879be1d84b2215adc11e06a3632ac688ffbef1a24fa6f3cb8441.jpg",
+      "orb": {
+        "width": 289,
+        "height": 384,
+        "keypoints": 800,
+        "grayDigest": "4103b03964cdf34bbe69b3e2bbae3e89f43b7467cc99f54dcae6717d9c3876c8",
+        "featureDigest": "f3b834d06d03f6e2ebc59bc667830e5593fd4944a7a773f7ac0ba1ba039b07ce"
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "left": "test/12437411-random-crop-a.png",
+      "right": "train/12437411-original.png",
+      "evidence": "orb-candidate",
+      "distance": null,
+      "matchOrb": {
+        "profile": "vl-orb-geometry-v1",
+        "original": "train/12437411-original.png",
+        "query": "test/12437411-random-crop-a.png",
+        "originalSize": [
+          289,
+          384
+        ],
+        "querySize": [
+          186,
+          314
+        ],
+        "matches": 148,
+        "inliers": 145,
+        "inlierRatio": 0.9797297297297297,
+        "querySpan": [
+          0.8279569892473119,
+          0.8598726114649682
+        ],
+        "queryToOriginal": [
+          [
+            0.9999068035316413,
+            -0.0002117667039631915,
+            12.023279967305296
+          ],
+          [
+            0.0002117667039631915,
+            0.9999068035316413,
+            68.99490212681332
+          ]
+        ],
+        "projectedQueryCorners": [
+          [
+            12.023279967305296,
+            68.99490212681332
+          ],
+          [
+            198.00594542419057,
+            69.03429073375047
+          ],
+          [
+            197.93945067914612,
+            383.0050270426858
+          ],
+          [
+            11.956785222260853,
+            382.9656384357487
+          ]
+        ],
+        "contained": true,
+        "scale": 0.9999068259562994,
+        "inlierCoordinates": [
+          [
+            65,
+            15,
+            77,
+            84
+          ],
+          [
+            83,
+            15,
+            95,
+            84
+          ],
+          [
+            21,
+            16,
+            33,
+            85
+          ],
+          [
+            36,
+            16,
+            48,
+            85
+          ],
+          [
+            95,
+            16,
+            107,
+            85
+          ],
+          [
+            122,
+            16,
+            134,
+            85
+          ],
+          [
+            21,
+            257,
+            33,
+            326
+          ],
+          [
+            136,
+            17,
+            148,
+            86
+          ],
+          [
+            142,
+            17,
+            154,
+            86
+          ],
+          [
+            61,
+            244,
+            73,
+            313
+          ],
+          [
+            85,
+            243,
+            97,
+            312
+          ],
+          [
+            40,
+            243,
+            52,
+            312
+          ],
+          [
+            135,
+            241,
+            147,
+            310
+          ],
+          [
+            29,
+            241,
+            41,
+            310
+          ],
+          [
+            138,
+            18,
+            150,
+            87
+          ],
+          [
+            131,
+            239,
+            143,
+            308
+          ],
+          [
+            107,
+            19,
+            119,
+            88
+          ],
+          [
+            153,
+            19,
+            165,
+            88
+          ],
+          [
+            16,
+            20,
+            28,
+            89
+          ],
+          [
+            127,
+            239,
+            139,
+            308
+          ],
+          [
+            120,
+            238,
+            132,
+            307
+          ],
+          [
+            87,
+            238,
+            99,
+            307
+          ],
+          [
+            90,
+            237,
+            102,
+            306
+          ],
+          [
+            170,
+            236,
+            182,
+            305
+          ],
+          [
+            146,
+            235,
+            158,
+            304
+          ],
+          [
+            159,
+            20,
+            171,
+            89
+          ],
+          [
+            167,
+            20,
+            179,
+            89
+          ],
+          [
+            44,
+            122,
+            56,
+            191
+          ],
+          [
+            65,
+            21,
+            77,
+            90
+          ],
+          [
+            74,
+            21,
+            86,
+            90
+          ],
+          [
+            92,
+            235,
+            104,
+            304
+          ],
+          [
+            135,
+            21,
+            147,
+            90
+          ]
+        ],
+        "coordinateCount": 145,
+        "coordinatesTruncated": true,
+        "allCoordinatesDigest": "103c687a09604326e96e0c3bd4b1ba947e5661894df226aee860cda77c476237"
+      }
+    }
+  ],
+  "fixtureScope": "Protocol fixture extracted from a CC0 controlled crop; not an independent evaluation.",
+  "auditId": "34f7f65b25ea85e7b9b99187efca8046f37a0305ca7c3c4bcdd1b1e31e38e285"
+}

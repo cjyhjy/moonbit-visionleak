@@ -1,0 +1,44 @@
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon    181MB
+Step 1/8 : FROM --platform=linux/amd64 visionleak-090-acceptance:original-budget
+ ---> af9c553f7c48
+Step 2/8 : WORKDIR /workspace/visionleak
+ ---> [Warning] The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+ ---> Running in f8ce0b7b567f
+ ---> Removed intermediate container f8ce0b7b567f
+ ---> 8df5bf285c4e
+Step 3/8 : ADD source.tar.gz /workspace/visionleak/
+ ---> c46a3a92c79c
+Step 4/8 : RUN npm ci --offline --no-audit --no-fund
+ ---> [Warning] The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+ ---> Running in 33e3210e3d4e
+
+added 9 packages in 538ms
+ ---> Removed intermediate container 33e3210e3d4e
+ ---> 2c3fe6510b53
+Step 5/8 : RUN python -c 'from pathlib import Path; from importlib.metadata import version; lines=(Path("requirements-oracle.txt").read_text()+"\n"+Path("requirements-orb.txt").read_text()).splitlines(); pins=[s.split("==") for s in lines if s.strip() and not s.lstrip().startswith("#")]; assert all(version(n)==v for n,v in pins)'
+ ---> [Warning] The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+ ---> Running in 52d9628daa10
+ ---> Removed intermediate container 52d9628daa10
+ ---> 7cb8a24d8d52
+Step 6/8 : RUN python tools/bootstrap.py && test -x /bin/ps
+ ---> [Warning] The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+ ---> Running in e01981c9a5b5
+Pinned toolchain already installed.
+ ---> Removed intermediate container e01981c9a5b5
+ ---> 52daee57f684
+Step 7/8 : RUN node --input-type=module -e 'import{sourceDigest}from"./tools/source-digest.mjs";if(sourceDigest(process.cwd())!=="79317cd6b05ad364a00efc0bc26c250fbf91ba977cf18594e4b602bf81be033c")throw Error("Candidate source mismatch")'
+ ---> [Warning] The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+ ---> Running in b964a57f9067
+ ---> Removed intermediate container b964a57f9067
+ ---> eef45cd78442
+Step 8/8 : CMD ["npm", "run", "verify:ci"]
+ ---> [Warning] The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+ ---> Running in 1cacdc750dae
+ ---> Removed intermediate container 1cacdc750dae
+ ---> 93a3d84a41c3
+Successfully built 93a3d84a41c3
+Successfully tagged visionleak-090-acceptance:candidate

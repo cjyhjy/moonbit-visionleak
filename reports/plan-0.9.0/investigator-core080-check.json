@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "existingIntegration": true,
+  "sourceChangedByThisTask": false,
+  "investigatorCodeDigestBefore": "71642fffe5ef7aa6b1be709dcb757f956debe350a4ce6546da1476a03e582218",
+  "investigatorCodeDigestAfter": "71642fffe5ef7aa6b1be709dcb757f956debe350a4ce6546da1476a03e582218",
+  "coreVersion": "0.8.0",
+  "coreCommit": "a66c773622b86d54b333e534900ef501a600a1c1",
+  "compiledArtifactSha256": "5e8f83e3f09afd11393a3218e3e5ddbd8e66c90702059f85feaf36aea3fcd856",
+  "coreCliSha256": "240901df3fee8a45d068ce20cf9c6d3e3b07b3ce5c5b4ad79ba1174985382459",
+  "contractTests": 9,
+  "skipped": 0,
+  "log": "investigator-core080-check.log",
+  "lockSha256": "4d6be20eacc6d2f159415be6a6152f177d00380f5357ed27d4906c2edf20db5a",
+  "scope": "Read-only verification of existing local Core 0.8.0 migration; actual pinned Core tests. No provider/model requests, no remote publication check, no migration to unreleased Core 0.9.0."
+}

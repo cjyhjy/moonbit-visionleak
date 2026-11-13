@@ -1,0 +1,22 @@
+{
+  "id": "148712526",
+  "title": "File:Woven fabric (Weave) 4.jpg",
+  "family": "woven fabric",
+  "bucket": "repeated-texture",
+  "partition": "holdout",
+  "author": "MohammedT10",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Woven_fabric_(Weave)_4.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Woven_fabric_%28Weave%29_4.jpg/960px-Woven_fabric_%28Weave%29_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Woven_fabric_%28Weave%29_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "f72321257d2609c5b852a5635a0775a6c97ba158",
+  "width": 3024,
+  "height": 4032,
+  "downloadSha256": "668c90b09a1d374ceb66fe8b5c59d668a3dc128344ac41d19fed668a6f067127",
+  "sha256": "bdaadebfddb42dce15275e28d4645155f337b724df9b09d9794e0122bb175693",
+  "storedFile": "research/new-source-0.9.0/holdout/148712526.png",
+  "storedWidth": 288,
+  "storedHeight": 384,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

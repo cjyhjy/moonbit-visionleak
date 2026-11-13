@@ -1,0 +1,22 @@
+{
+  "id": "132130882",
+  "title": "File:Tulips from Chișinău Botanical Garden.jpg",
+  "family": "tulip garden",
+  "bucket": "same-scene",
+  "partition": "development",
+  "author": "Iurie Nistor",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Tulips_from_Chi%C8%99in%C4%83u_Botanical_Garden.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Tulips_from_Chi%C8%99in%C4%83u_Botanical_Garden.jpg/960px-Tulips_from_Chi%C8%99in%C4%83u_Botanical_Garden.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Tulips_from_Chi%C8%99in%C4%83u_Botanical_Garden.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "462823d8367f1d08a22eeae64c946a1aae9d7660",
+  "width": 6016,
+  "height": 4012,
+  "downloadSha256": "c9f65057b2ef53434a816259213c456e7cca45c96e1ba4d3b175c84b705cb1a8",
+  "sha256": "5884ff95a379c775b622b835fc8b6525e283e5fae2b5c64fa505157a1a41baa7",
+  "storedFile": "research/new-source-0.9.0/development/132130882.png",
+  "storedWidth": 384,
+  "storedHeight": 256,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

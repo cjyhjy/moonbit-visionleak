@@ -435,3 +435,13 @@ test "standalone Core refuses a host-only ORB request instead of silently comple
   assert_eq(field(report, "ok"), Json(false))
   assert_eq(field(field(report, "error"), "code"), Json("HostFeatureRequired"))
 }
+
+///|
+test "pure Core rejects retrieval without its host even if includeOrb is omitted" {
+  let result = @json.parse(
+    audit_json("{\"images\":[],\"options\":{\"includeOrbRetrieval\":true}}"),
+  ) catch {
+    _ => Json::null()
+  }
+  assert_eq(field(field(result, "error"), "code"), Json("HostFeatureRequired"))
+}

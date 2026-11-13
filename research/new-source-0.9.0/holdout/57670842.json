@@ -1,0 +1,22 @@
+{
+  "id": "57670842",
+  "title": "File:Water Lilies MET DT1856.jpg",
+  "family": "water lilies",
+  "bucket": "same-scene",
+  "partition": "holdout",
+  "author": "Claude Monet",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Water_Lilies_MET_DT1856.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Water_Lilies_MET_DT1856.jpg/960px-Water_Lilies_MET_DT1856.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Water_Lilies_MET_DT1856.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "625cd065fbcf422c0f20e70581a2b88f11bc8131",
+  "width": 3811,
+  "height": 2486,
+  "downloadSha256": "adeed889918294c88887b496e9ebdd09a51a99d257a7f95bdcefbe9ea8eec6ac",
+  "sha256": "6c00799dbfd14ef82d604ee9bb877845449762ef4aad49a0123080d81a159cc9",
+  "storedFile": "research/new-source-0.9.0/holdout/57670842.png",
+  "storedWidth": 384,
+  "storedHeight": 250,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

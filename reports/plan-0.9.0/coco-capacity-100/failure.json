@@ -1,0 +1,6 @@
+{
+  "status": "failed-before-audit",
+  "cause": "research harness imports workflow from wrong module; corrected to tools/workflow.mjs",
+  "productAuditExecuted": false,
+  "scope": "Harness error, not capacity result. Preserve failure; retry in distinct fresh output/cache."
+}

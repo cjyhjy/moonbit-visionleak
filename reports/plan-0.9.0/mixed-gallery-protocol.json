@@ -1,0 +1,124 @@
+{
+  "source": {
+    "id": "usgs-candor-PSP_001641_1735",
+    "page": "https://www.usgs.gov/media/images/candor-colles-candor-chasma-mars",
+    "download": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/PSP_001641_1735_RGB.NOMAP_50percent.jpg",
+    "license": "Public Domain (source page)",
+    "rawSha256": "49add4a648d7ce572f08aac156a027a4fdfc6d4d9a6382e89a88f2fe2cf327d5",
+    "partition": "development-pilot"
+  },
+  "backgrounds": [
+    {
+      "id": "89995572",
+      "sha256": "2b46a1e1f7fa60bc09792a1e82eb05d61c52849f829eea5ffe2256f4e5189ef3",
+      "storedFile": "research/photos-v2/originals/89995572.jpg",
+      "partition": "previously-used-development"
+    },
+    {
+      "id": "145082531",
+      "sha256": "8f90cd84755c219305a90b9a79e24fc61418474bdd6dfc0cbe191acdb9df2526",
+      "storedFile": "research/photos-v2/originals/145082531.jpg",
+      "partition": "previously-used-development"
+    },
+    {
+      "id": "89995718",
+      "sha256": "943e860e8d7e781ee45daafad05cdbb60616bf1348ccab5a690f200b0a9ac4dd",
+      "storedFile": "research/photos-v2/originals/89995718.jpg",
+      "partition": "previously-used-development"
+    },
+    {
+      "id": "150973840",
+      "sha256": "0e41e34bf647efb9b213de50606ef855fc8808fea65bbcffa3f77bc006476dfe",
+      "storedFile": "research/photos-v2/originals/150973840.jpg",
+      "partition": "previously-used-development"
+    },
+    {
+      "id": "17093098",
+      "sha256": "fa85467a2ae172a236b68774f8a983c51194b234c40afc6270f05fba5ed597be",
+      "storedFile": "research/photos-v2/originals/17093098.jpg",
+      "partition": "previously-used-development"
+    },
+    {
+      "id": "17192579",
+      "sha256": "cda1661882426dd254e83222805fa1e2585cdf025dc2713cac98cff80048ac3e",
+      "storedFile": "research/photos-v2/originals/17192579.jpg",
+      "partition": "previously-used-development"
+    },
+    {
+      "id": "17093390",
+      "sha256": "7595afe2df61294b37b3449b6e4fac2cff965e53c07067ef491198110cd34691",
+      "storedFile": "research/photos-v2/originals/17093390.jpg",
+      "partition": "previously-used-development"
+    },
+    {
+      "id": "17126513",
+      "sha256": "480ac59559578711d6eaac1beaaf6f474e9bc286f3c89272ebaf2120cc55fb56",
+      "storedFile": "research/photos-v2/originals/17126513.jpg",
+      "partition": "previously-used-development"
+    },
+    {
+      "id": "29757973",
+      "sha256": "4ec008723c625e01c7f0ef95b993f427fba2f0352c9ca7f05d7a3ff9d03801cf",
+      "storedFile": "research/photos-v2/originals/29757973.jpg",
+      "partition": "previously-used-development"
+    },
+    {
+      "id": "145489226",
+      "sha256": "8bddb735cf2a5a27c40cdc4c1cd5944e395edb9a35dfb090eefdf92b08e666bd",
+      "storedFile": "research/photos-v2/originals/145489226.jpg",
+      "partition": "previously-used-development"
+    },
+    {
+      "id": "145562154",
+      "sha256": "0c8efcafa6bef5aff9e8eca793f9635b961d55f2403140f3e53c6c558a187cd5",
+      "storedFile": "research/photos-v2/originals/145562154.jpg",
+      "partition": "previously-used-development"
+    },
+    {
+      "id": "147036471",
+      "sha256": "6396249bc3e4ff9744154d373ace59546dcaed43747868a61f71a5f82d628b22",
+      "storedFile": "research/photos-v2/originals/147036471.jpg",
+      "partition": "previously-used-development"
+    },
+    {
+      "id": "153492197",
+      "sha256": "02759ad71a4d14dd258931dcee30b27bbd2e7c42df088fd353f429e8db75d8a1",
+      "storedFile": "research/photos-v2/originals/153492197.jpg",
+      "partition": "previously-used-development"
+    },
+    {
+      "id": "153492198",
+      "sha256": "0e69f423f3fb953a62dc9f36028978ab3a04c76c9cec10f06aef6efebbeaaac2",
+      "storedFile": "research/photos-v2/originals/153492198.jpg",
+      "partition": "previously-used-development"
+    },
+    {
+      "id": "153492199",
+      "sha256": "c80ee0c2ef8045bb6110039d10e9eec324a607ab67c211b6d7189b15b61342d1",
+      "storedFile": "research/photos-v2/originals/153492199.jpg",
+      "partition": "previously-used-development"
+    },
+    {
+      "id": "99643759",
+      "sha256": "da4545fb3fefefeebbfafc98237c4c6ace2390d5ec391fe02d953bc3237e1ffd",
+      "storedFile": "research/photos-v2/originals/99643759.jpg",
+      "partition": "previously-used-development"
+    }
+  ],
+  "crops": [
+    [
+      0.07,
+      0.1,
+      0.6,
+      0.61
+    ],
+    [
+      0.2,
+      0.15,
+      0.55,
+      0.59
+    ]
+  ],
+  "normalization": "resize inside 512x512; remove metadata; PNG; product decoder used by audit",
+  "scope": "Single-source controlled development pilot. Two anchor crop relationships. No hard-negative, holdout, natural contamination or human time claim."
+}

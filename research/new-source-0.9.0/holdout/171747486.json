@@ -1,0 +1,22 @@
+{
+  "id": "171747486",
+  "title": "File:Bark of Mango tree.jpg",
+  "family": "tree bark",
+  "bucket": "repeated-texture",
+  "partition": "holdout",
+  "author": "Saral Shots",
+  "license": "CC0-1.0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "licenseEvidence": "https://commons.wikimedia.org/wiki/File:Bark_of_Mango_tree.jpg",
+  "downloadUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Bark_of_Mango_tree.jpg/960px-Bark_of_Mango_tree.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+  "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Bark_of_Mango_tree.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "upstreamSha1": "f88efb75d77c184d3c5d2d35d22d8e8286905eda",
+  "width": 6000,
+  "height": 4000,
+  "downloadSha256": "78c8c136e1d8f5c38a2c338c7048c270a42df6a8c61a76293eda0d786b574b5c",
+  "sha256": "bfc5e3d0011e0112f77637469e6717f27d5b587f6466f0bd084e674983ef13f5",
+  "storedFile": "research/new-source-0.9.0/holdout/171747486.png",
+  "storedWidth": 384,
+  "storedHeight": 256,
+  "normalization": "EXIF transpose, RGB, longest edge <=384 Pillow LANCZOS, PNG; product normalization applied downstream"
+}

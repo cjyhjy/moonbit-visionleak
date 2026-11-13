@@ -1,0 +1,198 @@
+{
+  "schemaVersion": "vl-new-source-final-evaluation-v1",
+  "freezeSha256": "7a1bdfa2c66f9b2770cbde442bca6b624e501faafcf031b9440d2cdf7b216cce",
+  "selectedConfiguration": {
+    "bits": 24,
+    "tables": 4,
+    "k": 1
+  },
+  "primaryGates": {
+    "referenceOrbRecall": 0.99,
+    "pairReduction": 10
+  },
+  "partitions": {
+    "development": {
+      "scores": {
+        "core": {
+          "tp": 71,
+          "fn": 73,
+          "crossFileCandidates": 0
+        },
+        "orbUnion": {
+          "tp": 144,
+          "fn": 0,
+          "crossFileCandidates": 0
+        }
+      },
+      "perVariant": {
+        "byte-copy": {
+          "queries": 24,
+          "coreTp": 24,
+          "coreFn": 0,
+          "orbUnionTp": 24,
+          "orbUnionFn": 0
+        },
+        "jpeg45": {
+          "queries": 24,
+          "coreTp": 23,
+          "coreFn": 1,
+          "orbUnionTp": 24,
+          "orbUnionFn": 0
+        },
+        "random-crop-a": {
+          "queries": 24,
+          "coreTp": 0,
+          "coreFn": 24,
+          "orbUnionTp": 24,
+          "orbUnionFn": 0
+        },
+        "random-crop-b": {
+          "queries": 24,
+          "coreTp": 0,
+          "coreFn": 24,
+          "orbUnionTp": 24,
+          "orbUnionFn": 0
+        },
+        "watermark": {
+          "queries": 24,
+          "coreTp": 24,
+          "coreFn": 0,
+          "orbUnionTp": 24,
+          "orbUnionFn": 0
+        },
+        "screenshot-border": {
+          "queries": 24,
+          "coreTp": 0,
+          "coreFn": 24,
+          "orbUnionTp": 24,
+          "orbUnionFn": 0
+        }
+      },
+      "relativeRetrieval": {
+        "k": 1,
+        "eligiblePairs": 3385,
+        "selectedPairs": 144,
+        "pairReduction": 23.506944444444443,
+        "referencePositivePairs": 73,
+        "recalled": 73,
+        "recall": 1,
+        "pairWilson95DescriptiveOnly": [
+          0.9500079920442688,
+          0.9999999999999998
+        ],
+        "missed": []
+      },
+      "measurements": {
+        "buildMs": 43.08079200000003,
+        "queryMs": 183.83437500000002,
+        "descriptors": 119837,
+        "buckets": 222905,
+        "postingVisits": 1775638,
+        "lookups": 479348,
+        "hostPeakRssBytes": 135200768
+      },
+      "primaryGatePassed": true,
+      "missingOrbUnion": [],
+      "relationshipCount": 3456
+    },
+    "holdout": {
+      "scores": {
+        "core": {
+          "tp": 72,
+          "fn": 72,
+          "crossFileCandidates": 0
+        },
+        "orbUnion": {
+          "tp": 143,
+          "fn": 1,
+          "crossFileCandidates": 0
+        }
+      },
+      "perVariant": {
+        "byte-copy": {
+          "queries": 24,
+          "coreTp": 24,
+          "coreFn": 0,
+          "orbUnionTp": 24,
+          "orbUnionFn": 0
+        },
+        "jpeg45": {
+          "queries": 24,
+          "coreTp": 24,
+          "coreFn": 0,
+          "orbUnionTp": 24,
+          "orbUnionFn": 0
+        },
+        "random-crop-a": {
+          "queries": 24,
+          "coreTp": 0,
+          "coreFn": 24,
+          "orbUnionTp": 24,
+          "orbUnionFn": 0
+        },
+        "random-crop-b": {
+          "queries": 24,
+          "coreTp": 0,
+          "coreFn": 24,
+          "orbUnionTp": 23,
+          "orbUnionFn": 1
+        },
+        "watermark": {
+          "queries": 24,
+          "coreTp": 24,
+          "coreFn": 0,
+          "orbUnionTp": 24,
+          "orbUnionFn": 0
+        },
+        "screenshot-border": {
+          "queries": 24,
+          "coreTp": 0,
+          "coreFn": 24,
+          "orbUnionTp": 24,
+          "orbUnionFn": 0
+        }
+      },
+      "relativeRetrieval": {
+        "k": 1,
+        "eligiblePairs": 3384,
+        "selectedPairs": 144,
+        "pairReduction": 23.5,
+        "referencePositivePairs": 71,
+        "recalled": 71,
+        "recall": 1,
+        "pairWilson95DescriptiveOnly": [
+          0.9486720478031097,
+          1
+        ],
+        "missed": []
+      },
+      "measurements": {
+        "buildMs": 46.85012500000005,
+        "queryMs": 151.77949999999998,
+        "descriptors": 130128,
+        "buckets": 261055,
+        "postingVisits": 1726622,
+        "lookups": 520512,
+        "hostPeakRssBytes": 177209344
+      },
+      "primaryGatePassed": true,
+      "missingOrbUnion": [
+        {
+          "sourceId": "89847949",
+          "variant": "random-crop-b",
+          "path": "test/89847949-random-crop-b.png"
+        }
+      ],
+      "relationshipCount": 3456
+    }
+  },
+  "scope": "Controlled file-lineage recall on 24+24 new source files. Cross-file candidates have not been independently adjudicated. Not natural contamination, human review, production integration or large-scale capacity evidence.",
+  "primaryHoldoutGatePassed": true,
+  "caveats": [
+    "Primary gate uses observed recall, not a 99% population recall guarantee. Pair intervals ignore within-source dependence.",
+    "Family labels are metadata queries; semantic hard-negative labels are not independently adjudicated.",
+    "Development includes one Poly Haven cobblestone normal map; cohort is images, not exclusively natural photographs. No images removed after outcomes.",
+    "The remaining holdout ORB miss (non-woven fabric crop) is retained; retrieval did not recover a match that exhaustive geometry itself missed.",
+    "Research index caps descriptors at 200000 and samples RSS; no 5000-image production index or end-to-end acceleration result."
+  ]
+}
