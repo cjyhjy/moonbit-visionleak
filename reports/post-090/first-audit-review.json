@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "visionleak-review-v1",
+  "auditId": "3bc36db6a7618b8d7074064950490054651ef42caa4e5838769368ebd8a6a74d",
+  "exportedAt": "2026-11-13T18:50:51.715Z",
+  "reviews": [
+    {
+      "pairKey": "[\"train/170072252-original.png\",\"validation/exact-copy.png\"]",
+      "left": "train/170072252-original.png",
+      "right": "validation/exact-copy.png",
+      "decision": "confirmed",
+      "note": "",
+      "updatedAt": "2026-11-13T18:50:46.114Z"
+    }
+  ]
+}

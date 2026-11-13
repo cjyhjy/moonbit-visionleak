@@ -196,12 +196,35 @@ export async function runOrb({root,images,computed,options,signal,cacheDirectory
         timing.checkpointImages=scanCursor;timing.checkpointDirections=phase.pairChecks;
       }
     }
+    // Group the symmetric retrieval queue by its later endpoint. Exhaustive
+    // coverage still counts every eligible partner, including omitted ones.
+    let selectedRows, eligibleByRow;
+    if (selectedPairs) {
+      selectedRows = Array.from({length: phase.featureImages}, () => []);
+      for (const ordinal of selectedPairs) {
+        selectedRows[Math.floor(ordinal / 16384)].push(ordinal % 16384);
+      }
+      for (const row of selectedRows) row.sort((a, b) => a - b);
+      const seenSplits = new Map();
+      const positions = new Map();
+      eligibleByRow = images.slice(0, phase.featureImages).map((image, index) => {
+        const sameSplit = seenSplits.get(image.split) ?? 0;
+        seenSplits.set(image.split, sameSplit + 1);
+        positions.set(image.id, index);
+        return index - sameSplit;
+      });
+      for (const encoded of existing) {
+        const [a,b] = JSON.parse(encoded).map(id => positions.get(id));
+        if (a !== undefined && b !== undefined) eligibleByRow[Math.max(a,b)]--;
+      }
+    }
     outer:for(let i=scanCursor;i<phase.featureImages;i++){
-      let rowExhaustive=true;
-      for(let j=0;j<i;j++){
+      const row = selectedRows?.[i];
+      const rowExhaustive = !row || row.length === eligibleByRow[i];
+      for(let partner=0;partner<(row?.length ?? i);partner++){
+        const j = row ? row[partner] : partner;
         const a=images[j],b=images[i];
-        if(a.split===b.split || existing.has(key(a.id,b.id)))continue;
-        if(selectedPairs&&!selectedPairs.has(i*16384+j)){rowExhaustive=false;continue;}
+        if(!row && (a.split===b.split || existing.has(key(a.id,b.id))))continue;
         if(computed.pairs.length>=options.maxPairs || phase.emittedPairs>=options.maxOrbCandidates){phase.reason='ORB_PAIR_BUDGET';break outer;}
         const smallerFirst=a.orb.width*a.orb.height<=b.orb.width*b.orb.height?[[b,a],[a,b]]:[[a,b],[b,a]];
         for(const [original,query] of smallerFirst){

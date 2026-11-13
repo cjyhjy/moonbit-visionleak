@@ -22,6 +22,12 @@ node tools/server.mjs --report reports/my-demo/report.json --port 4173
 5. 在「未复核」筛选下标记后自动续到后续证据；「下一待复核」在当前筛选中循环查找。顶部把未复核和暂不确定分别计数。「撤销上次标记」恢复之前的决定或未复核状态；编辑备注、导入或切换报告后撤销失效，避免覆盖新内容。J/K 切换前后证据，N 跳下一待复核；输入、输入法组合或修饰键期间不触发。撤销只作用于当前本地记录，不能撤回已经导出的副本；旧副本重新合并仍按时间规则处理。
 6. 点击「导出复核」下载 `review.json`；点击「导出完整报告」下载保留全部原始字段并附加 `review` 字段的 `report-reviewed.json`。浏览器本地存储不是备份，换浏览器、端口、隐私模式或清理站点数据可能无法恢复，建议及时导出。
 
+选择「导出处理建议 CSV」，打开下载的 suggestions.csv 查看每个集合的建议。用 CLI 重现相同输出可执行以下命令。
+
+```sh
+node tools/cli.mjs export-fixes --report reports/my-demo/report.json --review ~/Downloads/review.json --out suggestions.csv
+```
+
 ## 证据含义
 
 | 等级 | 说明 | 复核边界 |

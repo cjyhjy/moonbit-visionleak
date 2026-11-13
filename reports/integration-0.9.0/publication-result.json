@@ -1,0 +1,10 @@
+{
+  "github": "https://github.com/cjyhjy/moonbit-visionleak/releases/tag/v0.9.0",
+  "commit": "54187bb1a8d3cdc5c16c406358d0b45bd4e0cf29",
+  "ci": "https://github.com/cjyhjy/moonbit-visionleak/actions/runs/43486283488",
+  "ciResult": "success",
+  "zipSha256": "2fab6078e31482493ebcbc74c16121aec8f24ae4db7dfa4a0c007f747e2af200",
+  "bytes": 122425306,
+  "archiveDigestMatchesGithub": true,
+  "cleanRebuild": "clean-copy-final.json"
+}

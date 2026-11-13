@@ -1,3 +1,7 @@
+# VisionLeak 0.9.0 delivery
+
+[GitHub release](https://github.com/cjyhjy/moonbit-visionleak/releases/tag/v0.9.0) · [remote asset and CI checks](reports/integration-0.9.0/publication-result.json) · [clean install and rebuild](reports/integration-0.9.0/clean-copy-final.json). The following sections preserve earlier deliveries.
+
 # VisionLeak 0.8.0 delivery
 
 Published from a66c773 after explicit approval; GitHub Release and Mooncakes 0.8.0 were independently downloaded/imported and verified. See reports/integration-0.8.0/publication/completion.json. Source includes the independently accepted 0.7.1 retrieval optimization and opt-in ORB host integration. See `docs/changes-0.8.0.md`, `docs/followup-2026-11-03.md` and `reports/integration-0.8.0/README.md` for exact acceptance/publication state.

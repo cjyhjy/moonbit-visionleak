@@ -1,0 +1,82 @@
+[
+  {
+    "part": "development",
+    "config": "default",
+    "positivePairs": 16,
+    "found": 13,
+    "candidates": 13,
+    "foundInFirst50": 13,
+    "unlabelled": 0,
+    "auditId": "c0c26641b47b5338270a5ee2c20e6bc79e98d8a7adfe49970acfb92501d6f36e"
+  },
+  {
+    "part": "development",
+    "config": "mirror",
+    "positivePairs": 16,
+    "found": 14,
+    "candidates": 14,
+    "foundInFirst50": 14,
+    "unlabelled": 0,
+    "auditId": "cdd0ecf3145bff195a75d0b2368d003888c970aa0f16c641177e637af2009695"
+  },
+  {
+    "part": "development",
+    "config": "threshold10",
+    "positivePairs": 16,
+    "found": 15,
+    "candidates": 15,
+    "foundInFirst50": 15,
+    "unlabelled": 0,
+    "auditId": "90d3b9c9611a67780cfaf8a5d176180bd1afd9c4f9677d378fd0dcae2ff28e02"
+  },
+  {
+    "part": "development",
+    "config": "orb",
+    "positivePairs": 16,
+    "found": 15,
+    "candidates": 15,
+    "foundInFirst50": 15,
+    "unlabelled": 0,
+    "auditId": "6ea17c9d124d67cae6b07280772a4fc618289a651a18fc798503bb9197a08923"
+  },
+  {
+    "part": "holdout",
+    "config": "default",
+    "positivePairs": 64,
+    "found": 50,
+    "candidates": 50,
+    "foundInFirst50": 50,
+    "unlabelled": 0,
+    "auditId": "d5ca692beba0f841af484b48409e8e806157bfed9f63e7905d6f0553f923bb71"
+  },
+  {
+    "part": "holdout",
+    "config": "mirror",
+    "positivePairs": 64,
+    "found": 53,
+    "candidates": 53,
+    "foundInFirst50": 50,
+    "unlabelled": 0,
+    "auditId": "ace361421e5fbc69b16eaa3f595011fb04aec8edf83054bd384a698b7198ba61"
+  },
+  {
+    "part": "holdout",
+    "config": "threshold10",
+    "positivePairs": 64,
+    "found": 59,
+    "candidates": 59,
+    "foundInFirst50": 50,
+    "unlabelled": 0,
+    "auditId": "a747e26572ace28786c4ecdc1d377cae63a944f2a2308cb82fbd9941261b1ef9"
+  },
+  {
+    "part": "holdout",
+    "config": "orb",
+    "positivePairs": 64,
+    "found": 60,
+    "candidates": 60,
+    "foundInFirst50": 50,
+    "unlabelled": 0,
+    "auditId": "fd6d4d698316fe11531d912e6b5eef4b8dc59c47ec8c9a5aa36476ae0e3c0c65"
+  }
+]
