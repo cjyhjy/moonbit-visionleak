@@ -7,6 +7,8 @@ python3 research/mfnd-review-budget/prepare.py
 VISIONLEAK_ORB_PYTHON=/path/to/pinned/python node research/mfnd-review-budget/evaluate.mjs
 ```
 
+每次运行使用独立目录，所有配置完成后在该目录写入 summary.json 并打印路径。
+
 四种配置分别是默认 Core、默认加镜像、阈值 10、默认 Core 加穷举 ORB。全队列按证据等级、dHash 距离、ORB 内点数和路径排序。评测统计已标注同源配对，以及前 50 对里的已标注命中数。未标注配对单列。样本富集双图重复簇，未加入随机图库或专门的难负例，其他图库上的误报率和审阅负担仍需实测。
 
 [原始标注](https://mfnd.similarity.eu/) · [照片分卷](https://press.liacs.nl/mirflickr/mirdownload.html)

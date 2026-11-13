@@ -6,5 +6,19 @@
   "zipSha256": "2fab6078e31482493ebcbc74c16121aec8f24ae4db7dfa4a0c007f747e2af200",
   "bytes": 122425306,
   "archiveDigestMatchesGithub": true,
-  "cleanRebuild": "clean-copy-final.json"
+  "cleanRebuild": "clean-copy-final.json",
+  "mooncakes": {
+    "module": "cjyhjy/visionleak@0.9.0",
+    "commit": "54187bb1a8d3cdc5c16c406358d0b45bd4e0cf29",
+    "preflightHTTP": 202,
+    "publishHTTP": 200,
+    "zipSha256": "4b3811ae9524496a9cab13fd655905f8b3b85d8266af8257adb1e463418b675e",
+    "registryInstalledFilesByteIdentical": 21,
+    "passedConsumerTests": {
+      "js": 4,
+      "wasm-gc": 4,
+      "native": 4
+    },
+    "testScope": "Public registry install; SHA-256, hamming, empty audit, fingerprints, capabilities and 0.9 retrieval budget."
+  }
 }

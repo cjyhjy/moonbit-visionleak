@@ -10,6 +10,7 @@ const work = await mkdtemp(join(dataset,'run-'));
 const results = [];
 const rank = { 'byte-identical':0, 'pixel-identical':1, 'perceptual-candidate':2, 'orb-candidate':3 };
 for (const [part, groups] of Object.entries(sample.groups)) {
+  const expectedImages = new Set(groups.flatMap(([a,b]) => ['train/'+a+'.jpg', 'test/'+b+'.jpg']));
   const positives = new Set(groups.map(([a,b]) => 'test/'+b+'.jpg|train/'+a+'.jpg'));
   for (const [config, flags] of Object.entries({default:{},mirror:{includeMirrors:true},threshold10:{threshold:10},orb:{includeOrb:true},threshold10OrbExploratory:{threshold:10,includeOrb:true}})) {
     let report;
@@ -23,6 +24,10 @@ for (const [part, groups] of Object.entries(sample.groups)) {
       if(report.phases.orb?.reason!=='ORB_WORK_BUDGET')throw Error(JSON.stringify(report.errors)+report.phases.orb?.reason);
     }
     if (!report.complete) throw Error('Incomplete gallery');
+    if (report.images.length !== expectedImages.size ||
+        !report.images.every(image => expectedImages.has(image.id))) {
+      throw Error('Audited gallery differs from the frozen sample');
+    }
     const key=p=>[p.left,p.right].sort().join('|');
     const order=[...report.pairs].sort((a,b)=>(rank[a.evidence]-rank[b.evidence])||
       ((a.distance??0)-(b.distance??0))||((b.matchOrb?.inliers??0)-(a.matchOrb?.inliers??0))||key(a).localeCompare(key(b)));
@@ -32,6 +37,8 @@ for (const [part, groups] of Object.entries(sample.groups)) {
       foundInFirst50:order.slice(0,50).filter(p=>positives.has(key(p))).length,
       unlabelled:order.length-labelled,auditId:report.auditId};
     results.push(row); console.log(row);
-    await writeFile('reports/post-090/mfnd.json',JSON.stringify(results,null,2)+'\n');
   }
 }
+const resultPath = join(work, 'summary.json');
+await writeFile(resultPath, JSON.stringify(results,null,2)+'\n', {flag:'wx'});
+console.log('Completed evaluation:', resultPath);
